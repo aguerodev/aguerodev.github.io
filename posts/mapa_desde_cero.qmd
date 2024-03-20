@@ -1,0 +1,39 @@
+---
+title: "Creación de Mapas de Costa Rica con ggplot2"
+description: "Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional"
+date: 2024-01-15
+categories: ['Guías Paso a Paso']
+lang: "es"
+image: images/mapa_cr_ggplot2.png
+comments:
+  utterances:
+    repo: quarto-dev/quarto-docs
+margin-header: |
+     ![](images/logo.png){style="width: 600px; height: 150px; object-fit: cover;"}
+toc: true
+format:
+  html:
+    other-links:
+      - text: Instituto Geográfico Nacional
+        href: https://data.nasa.gov/
+---
+
+![](images/mapa_cr_ggplot2.png)
+
+## Descargar datos
+
+<script src="https://giscus.app/client.js"
+        data-repo="aguerodev/aguerodev.github.io"
+        data-repo-id="R_kgDOLYhGtA"
+        data-category="General"
+        data-category-id="DIC_kwDOLYhGtM4CeD_i"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="es"
+        crossorigin="anonymous"
+        async>
+</script>

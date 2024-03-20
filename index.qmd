@@ -1,0 +1,172 @@
+---
+lang: "es"
+toc: true
+comments: false
+author: ""
+pagetitle: Aprende Tidyverse
+---
+
+![](images/logo.png){style="width: 600px; height: 150px; object-fit: cover;"}
+
+Aprende Tidyverse es una iniciativa que busca desarrollar material de calidad para la comunidad latinoamericana en su idioma. En internet existen muchos recursos fantásticos, pero en el contexto latinoamericano existen dos barreras importantes: el lenguaje y el poder adquisitivo. Por lo que hemos decidido desarrollar este curso <mark>**en español de forma totalmente gratuita.**</mark> Existe una lista de precios sugeridos; quienes puedan pagarlo ayudarán a mantener este proyecto vivo y a hacer accesible el curso a otros, pero el dinero no es nuestra principal motivación.
+
+## Estructura de curso
+
+Haremos un repaso guiado por el contenido del fantástico libro [R for Data Science](https://r4ds.hadley.nz/). Te comento cómo es la estructura de nuestro curso: tiene una <mark>**duración de 12 semanas;**</mark> cada semana ofrecemos una clase en vivo con una duración de aproximadamente 2 horas (quedará grabada por si no puedes asistir a la lección). Después de cada clase, los estudiantes se autoevalúan resolviendo una serie de ejercicios interactivos cortos, y en caso de tener dudas, pueden asistir a <mark>**sesión de práctica grupales**</mark> en donde junto con el instructor se resuelven dudas y ejercicios para verificar que están comprendiendo el material y aclarar dudas. <mark>**El curso es 100% online y puedes verlo en vivo o en diferido.**</mark>
+
+
+::: {.callout-tip}
+## Recomendación del instructor
+Recomendamos participar en las sesiones en vivo, ya que durante estas se realizan ejercicios en grupo asistidos por el instructor. Debido a limitaciones de Zoom, estos ejercicios en grupo no quedan grabados.
+:::
+
+## ¿Cómo inscribirme?
+
+<mark>**Puedes inscribirte totalmente gratis**</mark>. Nuestro instructor y asistentes están listo para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.
+
++ **Próxima apertura:** <mark>**Sábado 20 de abril del 2024**</mark>
+    + Costa Rica/México: 4:30 p.m. 
+    + Colombia: 5:30 p.m. 
+    + Argentina: 7:30 p.m.
+    
+[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
+
+*Para garantizar la calidad el curso hay un limite de 25 estudiantes por grupo.*
+
+## Conoce al instructor
+
+Mi nombre es [Carlos Agüero B](www.linkedin.com/in/carlos-aguero-cr), desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R. 
+
+He tenido la increíble oportunidad de formarme como [instructor certificado por RStudio](https://education.rstudio.com/trainers/people/aguero+carlos/) para la enseñanza de [Tidyverse](https://www.tidyverse.org/) y [Shiny](https://shiny.posit.co/) y, recientemente, unirme la comunidad de instructores de [The Carpentries](https://carpentries.org/instructors/). En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 600 estudiantes a lo largo de toda América Latina. 
+
+Después de varios años trabajando en el sector privado, ahora tengo el privilegio de tomar un respiro y quiero ofrecer este curso de forma abierta y gratuita. *No tengo claro impacto que esta iniciativa pueda o no tener para el beneficio de otras personas, pero en este punto de mi vida, esto es lo que siento que es lo correcto.*
+
+## Comentarios de otros estudintes
+
+<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
+<iframe id='testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light' src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&autoplay=off&showmore=off&one-row=on&same-height=off&tag=all&arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%"></iframe>
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
+
+Puedes leer los comentarios originales y otros más en mi perfil de [linkedin](https://www.linkedin.com/in/carlos-aguero-cr/details/recommendations/?detailScreenTabIndex=2)
+
+## Preguntas Frecuentes (FAQ)
+
+Si tienes dudas puedes escribir a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a> o programar una [🎥 Reunión en Zoom de 15 minutos](https://cal.com/aprendetidyverse/15min) para resolver dudas y revisar temas de interés. ¡Asegura que el curso cumpla con tus expectativas!
+
+<details open>
+  <summary>¿Debo tener conocimientos de R para llevar el curso?</summary>
+Es recomendable tener una mínima experiencia en el lenguaje. Si no la tienes, no te preocupes, puedes empezar aquí y tanto el instructor como los asistentes harán lo posible por ayudarte a ponerte al día. No será fácil, pero nos comprometemos a estar disponibles para apoyarte en este proceso.
+
+</details>
+
+<details>
+  <summary> ¿Cuánto cuesta el curso?</summary>
+  El curso es <mark>**completamente gratuito**</mark>. Sin embargo, para quienes estén en una situación económica que les permita apoyar el proyecto, hemos establecido una lista de precios sugeridos: 
+  
++ Profesionales con trabajo estable **$120 USD**
++ Académicos que utilizan el lenguaje R para investigación o enseñanza **$60 USD**
++ Estudiantes de grado de universidades públicas o privadas **$30 USD.**
+
+</details>
+
+<details>
+  <summary>Si accedo al curso gratis, ¿hay algo a lo que no tendré acceso?</summary>
+  No, todos los estudiantes, independientemente de si realizan un pago o no, reciben la misma cantidad de horas de atención, recursos, y disponibilidad para hacer consultas y recibir soporte.
+
+</details>
+
+<details>
+  <summary>¿Qué pasa si debo abandonar el curso?</summary>
+Entendemos que pueden surgir imprevistos. No te preocupes, puedes dejar el curso en cualquier momento y retomarlo en la siguiente apertura.
+
+</details>
+
+
+
+<details>
+  <summary>¿Qué temas puedo preguntar en las sesiones con el instructor?</summary>
+Los temas en las sesiones de seguimiento deben estar relacionados estrictamente con el contenido del curso. Si deseas revisar temas de tu trabajo o algún proyecto universitario, este no sería el espacio adecuado. Sin embargo, puedes escribir a carlos.aguero@aprendetidyverse.com y con gusto veremos cómo podemos ayudarte.
+
+</details>
+
+
+
+
+---
+
+## Contenido del curso 
+
+<details open>
+  <summary> Clase 1: Descubriendo R y el Tidyverse</summary>
+  Esta clase te introduce a R y el conjunto de herramientas del Tidyverse. Aquí aprenderás a configurar tu espacio de trabajo en RStudio, cómo leer archivos .csv y empezarás a jugar con tus datos, dándoles un primer vistazo y creando visualizaciones sencillas.
+</details>
+
+
+<details>
+  <summary> Clase 2: Comenzamos a explorar los datos</summary>
+  En esta clase, te adentrarás en el corazón de `dplyr` y `tidyr`, donde la magia de la manipulación de datos realmente sucede. Aprenderás a filtrar, seleccionar, y transformar tus datos para revelar las historias ocultas que tienen para contar.
+</details>
+
+
+<details>
+  <summary> Clase 3: Inicia en la visualización de Datos</summary>
+  Aquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando `ggplot2` para crear tus primeros gráfico. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapte a tus necesidades.
+</details>
+
+<details>
+  <summary> Clase 4: Lectura y limpieza de datos</summary>
+  Esta clase te enseñará a ser capaz de leer datos almacenados en `CSV`, `Excel`, `SPSS`, entre otros. Ya sea que estés trabajando con `texto`, `números`, `fechas`, o cualquier otro tipo, aprenderás las habilidades para manejarlos todos con eficiencia.
+</details>
+
+<details>
+  <summary> Clase 5: El arte de trabajar con textos y fechas</summary>
+Las **expresiones regulares** y el **manejo de fechas** pueden parecer hechizos complicados, pero después de esta clase, serán herramientas poderosas en tu arsenal. Aprenderás a limpiar y filtrar tus datos de manera eficiente con los paquetes `stringr` y `lubridate` convirtiendo el caos en orden con solo unas pocas líneas de código.
+</details>
+
+
+<details>
+  <summary>Clase 6: Entendiendo los datos relacionales</summary>
+En esta clase te enseña a unir diferentes conjuntos de datos para descubrir conexiones ocultas. Dominarás los `joins` y aprenderás sobre las `llaves` y las `relaciones`, lo que te permitirá combinar datos de fuentes diversas para obtener insights más profundos.
+</details>
+
+<details>
+  <summary>Clase 7: Explorando con gráficos avanzados</summary>
+Con `ggplot2` y `plotly`, esta clase aprenderás a crear gráficos interactivos y explorar **datos geoespaciales**, llevando tus habilidades narrativas a nuevas dimensiones.
+</details>
+
+<details>
+  <summary>Clase 8: Conecta R con el mundo las bases de datos SQL</summary>
+Aquí, R se encuentra con el poder de las bases de datos SQL. Aprenderás a realizar consultas SQL directamente desde R, lo que te permite acceder a y manipular grandes conjuntos de datos almacenados en bases de datos de manera eficiente.
+</details>
+
+<details>
+  <summary>Clase 9: La Elegancia de la programación funcional</summary>
+Con `purrr`, transformarás tu enfoque de manejar datos. Aprenderás a escribir funciones personalizadas y a iterar sobre tus datos de formas que hacen que el código no solo sea más limpio, sino también más expresivo.
+</details>
+
+<details>
+  <summary>Clase 10: Extrayendo datos de la web</summary>
+El web scraping y las APIs abren un universo de datos disponibles en internet. Esta clase te equipará con las herramientas para recoger estos datos como `rvest` y `httr2`, permitiéndote responder preguntas que antes parecían inalcanzables.
+</details>
+
+<details>
+  <summary>Clase 11: Creando documento con quarto</summary>
+Con `Quarto`, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.
+</details>
+
+<details>
+  <summary>Clase 12: Administrando tus proyectos en RStudio</summary>
+Finalmente, dominarás el arte de gestionar proyectos de datos con `Git`, `GitHub`, y entornos virtuales `renv.` Esto te asegura que tus proyectos sean reproducibles, colaborativos, y organizados.
+</details>
+
+
+
+
+---
+
+## Ponte en contacto
+
+La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
+
+
+Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr) o en [Twitter](https://twitter.com/dev_aguero) (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!

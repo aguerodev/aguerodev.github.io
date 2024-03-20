@@ -1,0 +1,46 @@
+---
+title: "3. Tomando porciones de los datos"
+toc: true
+subtitle: "Comenzamos la exploración de datos"
+description: "Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional"
+date: 2024-01-15
+categories: [clase]
+lang: "es"
+filters:
+  - webr
+webr: 
+  show-startup-message: false 
+  packages: ['ggplot2','datos'] 
+format:
+  html:
+    include-in-header: header.html
+    code-links:
+      - text: Descargar Código
+        icon: file-code
+        href: data-import.py
+    other-links:
+      - text: Libro R for data science
+        href: https://data.nasa.gov/      
+      - text: Presentación de la clase
+        href: https://docs.google.com/presentation/d/1P3cozq5JBw-Ca9d3khClp5XBv-Up5MdG0phCMUVJcTA/edit#slide=id.g1f2ef55d2d5_0_101
+---
+
+## ¿Qué es tidyverse?
+
+## Lectura de datos CSV
+
+## Filtrado de datos con filter
+
+## Ordenado de datos con arrage
+
+## Selección de datos con select
+
+## Ejercicios
+
+
+<iframe style="margin:0 auto; min-width: 100%;" id="myIframe1" class="interactive" src="https://aguero.shinyapps.io/class_01" scrolling="no" frameborder="no"></iframe>
+
+
+<script>
+  iFrameResize({}, ".interactive");
+</script>

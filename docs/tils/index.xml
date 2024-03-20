@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Aprende Tidyverse</title>
+<link>https://aprendetidyverse.com/tils/</link>
+<atom:link href="https://aprendetidyverse.com/tils/index.xml" rel="self" type="application/rss+xml"/>
+<description>Recent TILs on aprendetidyverse.com</description>
+<generator>quarto-1.4.549</generator>
+<lastBuildDate>Sat, 06 Jan 2024 06:00:00 GMT</lastBuildDate>
+<item>
+  <title>Overpass API una forma rápida y sencilla de descargar datos de openstreetmap</title>
+  <link>https://aprendetidyverse.com/tils/overpass_turbo.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I’m super impressed with the quality of Dreambooth using <a href="https://huggingface.co/docs/diffusers/training/dreambooth">HuggingFace Diffusers</a> 🚀 — with only 14 images of myself! These four images are created by Stable Diffusion using the same fine-tuned model with different prompts:<sup>1</sup></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://aprendetidyverse.com/tils/images/dreambooth.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+<figcaption>Four AI-generated pictures of me.</figcaption>
+</figure>
+</div>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notas</h2>
+
+<ol>
+<li id="fn1"><p>Here are the exact prompts I used for each of the above images:</p>
+<ul>
+<li><strong>Top-left:</strong> a photo of &lt;dreambooth token&gt;</li>
+<li><strong>Top-right:</strong> Hypnotic illustration of &lt;dreambooth token&gt;, hypnotic psychedelic art by Dan Mumford, pop surrealism, dark glow neon paint, mystical, Behance (<a href="https://publicprompts.art/psychedelic-pop-art/">PublicPrompts source</a>)</li>
+<li><strong>Bottom-left:</strong> Hypnotic illustration of &lt;dreambooth token&gt;, anime illustration by makoto shinkai, stanley artgerm lau, wlop, rossdraws, concept art, digital painting (<a href="https://publicprompts.art/hyper-realistic-anime-portraits/">PublicPrompts source</a>)</li>
+<li><strong>Bottom-right:</strong> Toy Story’s Woody as &lt;dreambooth token&gt;, 4k, artstation, cgsociety, award-winning, masterpiece, stunning, beautiful, glorious, powerful, fantasy art by Greg Rutkowski, octane render, unreal engine, high (<a href="https://lexica.art/prompt/6c0dd61e-3d90-49ac-b32f-07f19b1a7d84">Lexica source</a>)</li>
+</ul>
+↩︎</li>
+</ol>
+</section></div> ]]></description>
+  <category>geospatial</category>
+  <guid>https://aprendetidyverse.com/tils/overpass_turbo.html</guid>
+  <pubDate>Sat, 06 Jan 2024 06:00:00 GMT</pubDate>
+  <media:content url="https://aprendetidyverse.com/tils/images/dreambooth.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+</channel>
+</rss>

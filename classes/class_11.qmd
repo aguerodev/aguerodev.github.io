@@ -1,0 +1,8 @@
+---
+title: "11. Datos Limpios (tidydata)"
+toc: true
+description: "Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional"
+date: 2024-01-15
+categories: [clase]
+lang: "es"
+---

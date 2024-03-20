@@ -1,0 +1,26 @@
+---
+title: Proyectos
+toc: true
+comments: false
+author: ''
+---
+
+Mis proyectos abarcan análisis de datos, exploración de datos geoespaciales, lenguajes de programación (en especial R), análisis de datos personales y herramientas para apoyar mis flujos de trabajo. Trabajo en proyectos por diversión, para aprender o para resolver un problema específico que tenga. Los proyectos más recientes se enumeran primero.
+
+Haz clic en el título de un proyecto para ir a su repositorio en github.
+
+## 2024
+
+### [Monitor Precios Supermercados Costa Rica](https://github.com/aguerodev/monitorprecioscr)
+
+Monitor Precios CR es un proyecto destinado a monitorear semanalmente los precios de una lista seleccionada de productos en diferentes supermercados de Costa Rica. El objetivo principal es recopilar estos datos de manera sistemática para almacenarlos en un archivo .csv, facilitando su posterior análisis y comprensión de las tendencias de precios en el tiempo.
+
+### [Noticias CR](https://nbdev.fast.ai)
+
+Este proyecto de webscraping, desarrollado en R con `rvest` y `httr2`, es una iniciativa sin fines de lucro enfocada en extraer contenido de los principales medios de comunicación de Costa Rica. Su propósito principal es facilitar el acceso a la información mediante la creación de **feeds RSS** para medios que no disponen de esta tecnología, como La Nación y El Financiero, y la recolección de datos de artículos de noticias para almacenarlos en un formato accesible. Este repositorio de información busca promover el análisis y la investigación de contenidos mediáticos en el país.
+
+
+### [Alquileres GAM Costa Rica](https://github.com/aguerodev/alquileres_cr)
+
+La idea detrás de este proyecto nace porque un amigo me pide ayuda para encontrar alquiler. Entre mis amigos, soy conocido por mudarme muy seguido y tener ideas sobre cómo encontrar alquiler, así que nace la idea. Y si puedo sistematizar mis reglas para buscar alquiler de forma que se pueda tener un filtro más avanzado para buscar buenos lugares, bueno, ese es el origen de este experimento donde jugamos con webscraping, análisis de datos geoespaciales, conexiones a APIs, clustering y métodos de reducción de la dimensión.
+
