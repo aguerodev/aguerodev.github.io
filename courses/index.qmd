@@ -1,11 +1,12 @@
 ---
 title: "Curso R para ciencia de datos"
+description: "De principiante a practicante competente en 6 semanas. Clases en vivo, ejercicios interactivos. Inscríbete desde $0 a $120 USD."
 toc: true
 subtitle: "Modalidad intensida, 6 semanas clases 2 veces a la semana"
 lang: "es"
 author: ""
-code-line-numbers: true
-code-copy: true
+pagetitle: "Curso: R para ciencia de datos"
+image: ../images/logo.jpg
 ---
 
 Queremos iniciar con una premisa fundamental: <mark>**cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero.**</mark> Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos para la excelencia ni caminos rápidos hacia la verdadera maestría.

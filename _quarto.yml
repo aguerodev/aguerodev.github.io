@@ -28,7 +28,7 @@ website:
     left:
       - text: "Cursos R Intensivo"
         file: courses/index.qmd
-      - text: "Sesiones de Consultas (gratis)"
+      - text: "Lunes de Consultas"
         file: lunes_pr.qmd
       - text: Blog
         file: posts.qmd
