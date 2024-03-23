@@ -2,14 +2,14 @@
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/101_ggplot2/01_bar_plot_explicado.html",
+      "/posts/101_ggplot2/plot_01.html",
       "/posts/mapa_desde_cero.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
-      "/posts/101_ggplot2/01_bar_plot_explicado.html",
+      "/posts/101_ggplot2/plot_01.html",
       "/posts/mapa_desde_cero.html"
     ]
   },

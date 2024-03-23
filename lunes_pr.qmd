@@ -2,15 +2,14 @@
 title: "Lunes de preguntas y respuesta"
 subtitle: "Resuelve tus dudas de R cada lunes a las 7:00 p.m. ¡Únete a nuestras sesiones de preguntas y respuestas para recibir asesoría personalizada y consejos prácticos que te ayudarán a avanzar en tu aprendizaje de R!"
 lang: "es"
-toc: true
 comments: false
 author: "Carlos Aguero B."
 date: "2024/03/23"
 pagetitle: Aprende Tidyverse - lunes de preguntas y respuestas
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg/800px-Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg
+image: images/the_stonebreakers.jpg
 ---
 
-!["Los Forjadores" de Gustave Courbet, 1853.](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg/800px-Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg){.preview-image}
+!["Los Forjadores" de Gustave Courbet, 1853.](images/the_stonebreakers.jpg)
 
 ¿Estás lidiando con problemas en R o simplemente tienes dudas que no puedes resolver? ¡Estoy aquí para ayudarte! Todos los lunes a las 7:00 p.m., dedicaré una hora completa para contestar preguntas y brindar asistencia con cualquier desafío que estés enfrentando en R. Esta es tu oportunidad de obtener ayuda personalizada y consejos prácticos para superar esos obstáculos que te impiden avanzar.
 
@@ -20,7 +19,7 @@ image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Gustave_Courbet
 + **¿Dónde?** Las sesiones se realizan en la plataforma Zoom.
 
 
-[Registrate gratis](https://cal.com/aprendetidyverse/lunes-preguntas-y-respuestas){.btn .btn-outline-primary .btn role="button"} 
+[Regístrate gratis](https://cal.com/aprendetidyverse/lunes-preguntas-y-respuestas){.btn .btn-outline-primary .btn role="button"} 
 
 Únete a la sesión y aprovecha la oportunidad de aprender y avanzar en tu dominio de R.
 ¡No importa si eres un completo novato o alguien con experiencia buscando aclarar dudas específicas! Este espacio está abierto para todos, con el objetivo de fomentar el aprendizaje y la colaboración dentro de la comunidad de usuarios de R.

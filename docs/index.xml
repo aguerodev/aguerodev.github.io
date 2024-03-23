@@ -13,7 +13,7 @@
 <lastBuildDate>Mon, 15 Jan 2024 06:00:00 GMT</lastBuildDate>
 <item>
   <title>101 gráficos con ggplot2: 1/101</title>
-  <link>https://aprendetidyverse.com/posts/101_ggplot2/01_bar_plot_explicado.html</link>
+  <link>https://aprendetidyverse.com/posts/101_ggplot2/plot_01.html</link>
   <description><![CDATA[ 
 
 
@@ -31,7 +31,7 @@
  ]]></description>
   <category>Tutorial</category>
   <category>ggplot2</category>
-  <guid>https://aprendetidyverse.com/posts/101_ggplot2/01_bar_plot_explicado.html</guid>
+  <guid>https://aprendetidyverse.com/posts/101_ggplot2/plot_01.html</guid>
   <pubDate>Mon, 15 Jan 2024 06:00:00 GMT</pubDate>
   <media:content url="https://aprendetidyverse.com/posts/101_ggplot2/images/mapa_cr_ggplot2.png" medium="image" type="image/png"/>
 </item>
