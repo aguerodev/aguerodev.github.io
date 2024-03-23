@@ -1,12 +1,5 @@
 [
   {
-    "listing": "/posts.html",
-    "items": [
-      "/posts/101_ggplot2/plot_01.html",
-      "/posts/mapa_desde_cero.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/posts/101_ggplot2/plot_01.html",
@@ -14,9 +7,10 @@
     ]
   },
   {
-    "listing": "/tils/index.html",
+    "listing": "/posts.html",
     "items": [
-      "/tils/overpass_turbo.html"
+      "/posts/101_ggplot2/plot_01.html",
+      "/posts/mapa_desde_cero.html"
     ]
   }
 ]

@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Carlos Aguero B">
+<meta name="author" content="Carlos Aguero B.">
+<meta name="description" content="Resuelve tus dudas de R cada lunes a las 7:00 p.m. ¡Únete a nuestras sesiones de preguntas y respuestas para recibir asesoría personalizada y consejos prácticos que te ayudarán a avanzar en tu aprendizaje de R!">
 
-<title>Overpass API una forma rápida y sencilla de descargar datos de openstreetmap</title>
+<title>Aprende Tidyverse - lunes de preguntas y respuestas</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,25 +25,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../favicon.ico" rel="icon">
-<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./favicon.ico" rel="icon">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -99,31 +100,27 @@ cookieconsent.run({
   
 
 
-<meta property="og:title" content="Overpass API una forma rápida y sencilla de descargar datos de openstreetmap">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://aprendetidyverse.com/tils/images/dreambooth.png">
+<meta property="og:title" content="Aprende Tidyverse - lunes de preguntas y respuestas">
+<meta property="og:description" content="Resuelve tus dudas de R cada lunes a las 7:00 p.m. ¡Únete a nuestras sesiones de preguntas y respuestas para recibir asesoría personalizada y consejos prácticos que te ayudarán a avanzar en tu aprendizaje de R!">
+<meta property="og:image" content="https://aprendetidyverse.com/images/the_stonebreakers.jpg">
 <meta property="og:site_name" content="aprendetidyverse.com">
 <meta property="og:locale" content="es_ES">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="Overpass API una forma rápida y sencilla de descargar datos de openstreetmap">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://aprendetidyverse.com/tils/images/dreambooth.png">
+<meta name="twitter:title" content="Aprende Tidyverse - lunes de preguntas y respuestas">
+<meta name="twitter:description" content="Resuelve tus dudas de R cada lunes a las 7:00 p.m. ¡Únete a nuestras sesiones de preguntas y respuestas para recibir asesoría personalizada y consejos prácticos que te ayudarán a avanzar en tu aprendizaje de R!">
+<meta name="twitter:image" content="https://aprendetidyverse.com/images/the_stonebreakers.jpg">
 <meta name="twitter:creator" content="@dev_aguero">
 <meta name="twitter:site" content="@dev_aguero">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Aprende Tidyverse</span>
     </a>
   </div>
@@ -134,61 +131,15 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../classes/index.qmd"> 
-<span class="menu-text">Cursos</span></a>
+    <a class="nav-link" href="./courses/index.html"> 
+<span class="menu-text">Cursos R Intensivo</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-entendiendo-ggplot2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Entendiendo ggplot2</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-entendiendo-ggplot2">    
-        <li class="dropdown-header">Antes de comenzar</li>
-        <li>
-    <a class="dropdown-item" href="../courses/entendiento_ggplot2/class_01.html">
- <span class="dropdown-text">1. Introducción a Tidyverse</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semana-1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Semana 1</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-semana-1">    
-        <li class="dropdown-header">Antes de comenzar</li>
-        <li>
-    <a class="dropdown-item" href="../classes/intro.html">
- <span class="dropdown-text">Presentación del curso</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../classes/prep.html">
- <span class="dropdown-text">Instalar R, RStudio y Quarto</span></a>
-  </li>  
-        <li><hr class="dropdown-divider"></li>
-        <li class="dropdown-header">Semana 1</li>
-        <li>
-    <a class="dropdown-item" href="../classes/semana_1/class_01.html">
- <span class="dropdown-text">1. Introducción a Tidyverse</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../classes/semana_1/class_01.2.html">
- <span class="dropdown-text">2. Filtrar y ordenar datos</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../classes/semana_1/class_01.3.html">
- <span class="dropdown-text">3. Tomando porciones de los datos</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../classes/semana_1/class_01.4.html">
- <span class="dropdown-text">4. Trabajando con datos agrupados</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../classes/semana_1/class_01.5.html">
- <span class="dropdown-text">5. Evaluación</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../posts.html"> 
+    <a class="nav-link active" href="./lunes_pr.html" aria-current="page"> 
+<span class="menu-text">Sesiones de Consultas (gratis)</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./posts.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -224,17 +175,21 @@ cookieconsent.run({
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Overpass API una forma rápida y sencilla de descargar datos de openstreetmap</h1>
-  </div>
+<h1 class="title">¿Estás lidiando con problemas en R?</h1>
+<p class="subtitle lead">Unete a nuestros lunes de preguntas y respuesta</p>
+</div>
 
+<div>
+  <div class="description">
+    Resuelve tus dudas de R cada lunes a las 7:00 p.m. ¡Únete a nuestras sesiones de preguntas y respuestas para recibir asesoría personalizada y consejos prácticos que te ayudarán a avanzar en tu aprendizaje de R!
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -242,14 +197,14 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Autor/a</div>
     <div class="quarto-title-meta-contents">
-             <p>Carlos Aguero B </p>
+             <p>Carlos Aguero B. </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">6 de enero de 2024</p>
+      <p class="date">23 de marzo de 2024</p>
     </div>
   </div>
   
@@ -261,30 +216,27 @@ cookieconsent.run({
 </header>
 
 
-<p>I’m super impressed with the quality of Dreambooth using <a href="https://huggingface.co/docs/diffusers/training/dreambooth">HuggingFace Diffusers</a> 🚀 — with only 14 images of myself! These four images are created by Stable Diffusion using the same fine-tuned model with different prompts:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/dreambooth.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
-<figcaption>Four AI-generated pictures of me.</figcaption>
+<p><img src="images/the_stonebreakers.jpg" class="img-fluid figure-img"></p>
+<figcaption>“Los Forjadores” de Gustave Courbet, 1853.</figcaption>
 </figure>
 </div>
-
-
-
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas</h2>
-
-<ol>
-<li id="fn1"><p>Here are the exact prompts I used for each of the above images:</p>
+<p>¿Estás lidiando con problemas en R o simplemente tienes dudas que no puedes resolver? ¡Estoy aquí para ayudarte! Todos los lunes a las 7:00 p.m., dedicaré una hora completa para contestar preguntas y brindar asistencia con cualquier desafío que estés enfrentando en R. Esta es tu oportunidad de obtener ayuda personalizada y consejos prácticos para superar esos obstáculos que te impiden avanzar.</p>
+<section id="detalles-del-evento" class="level2">
+<h2 class="anchored" data-anchor-id="detalles-del-evento">Detalles del Evento:</h2>
 <ul>
-<li><strong>Top-left:</strong> a photo of &lt;dreambooth token&gt;</li>
-<li><strong>Top-right:</strong> Hypnotic illustration of &lt;dreambooth token&gt;, hypnotic psychedelic art by Dan Mumford, pop surrealism, dark glow neon paint, mystical, Behance (<a href="https://publicprompts.art/psychedelic-pop-art/">PublicPrompts source</a>)</li>
-<li><strong>Bottom-left:</strong> Hypnotic illustration of &lt;dreambooth token&gt;, anime illustration by makoto shinkai, stanley artgerm lau, wlop, rossdraws, concept art, digital painting (<a href="https://publicprompts.art/hyper-realistic-anime-portraits/">PublicPrompts source</a>)</li>
-<li><strong>Bottom-right:</strong> Toy Story’s Woody as &lt;dreambooth token&gt;, 4k, artstation, cgsociety, award-winning, masterpiece, stunning, beautiful, glorious, powerful, fantasy art by Greg Rutkowski, octane render, unreal engine, high (<a href="https://lexica.art/prompt/6c0dd61e-3d90-49ac-b32f-07f19b1a7d84">Lexica source</a>)</li>
+<li><strong>¿Cuándo?</strong> Todos los lunes, de 7:00 p.m. a 8:00 p.m. hora de Costa Rica (UTC-6)</li>
+<li><strong>¿Dónde?</strong> Las sesiones se realizan en la plataforma Zoom.</li>
 </ul>
-<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></li>
-</ol>
-</section></div></main> <!-- /main -->
+<p><a href="https://cal.com/aprendetidyverse/lunes-preguntas-y-respuestas" class="btn btn-outline-primary" role="button">Regístrate gratis</a></p>
+<p>Únete a la sesión y aprovecha la oportunidad de aprender y avanzar en tu dominio de R. ¡No importa si eres un completo novato o alguien con experiencia buscando aclarar dudas específicas! Este espacio está abierto para todos, con el objetivo de fomentar el aprendizaje y la colaboración dentro de la comunidad de usuarios de R.</p>
+<p>Espero verte ahí y ayudarte a desbloquear tu potencial con R. ¡Trae tus preguntas y prepara para una sesión productiva!</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

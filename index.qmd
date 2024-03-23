@@ -17,18 +17,11 @@ pagetitle: Aprende Tidyverse
 ![](images/logo.png){style="width: 600px; height: 150px; object-fit: cover;"}
 
 
-Queremos iniciar con una premisa fundamental: <mark>**cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero.**</mark> Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos para la excelencia ni caminos rápidos hacia la verdadera maestría.
-
-### Nuestro Curso: Un Punto de Partida, No un Destino Final
-
-En Aprende Tidyverse, estamos comprometidos con ofrecerte una perspectiva realista y pragmática sobre el aprendizaje de R. <mark>**Este curso de 6 semanas ha sido cuidadosamente diseñado para equiparte con un conjunto sólido de habilidades fundamentales en la manipulación, análisis y visualización de datos.**</mark> A través de clases dos veces por semana, ejercicios interactivos y evaluación constante con el instructor te guiaremos desde los conceptos más básicos hasta el manejo competente del paquete Tidyverse, sentando las bases para que, con práctica y dedicación continuas, puedas avanzar en tu camino hacia la experticia.
 
 
-Nuestro objetivo es claro: <mark>**transformarte de un principiante absoluto en un practicante competente que comprenda los principios básicos del lenguaje R y pueda aplicar estos conocimientos a problemas del mundo real.**</mark> Más que memorizar comandos o seguir tutoriales de manera mecánica, te enseñaremos a pensar como un programador, a enfrentarte a los desafíos de manera analítica y a desarrollar soluciones efectivas.
+Aprende Tidyverse es una iniciativa que busca contribuir a la comunidad hispanohablante de usuarios de R, ofreciendo de forma gratuita cursos, tutoriales, guías paso a paso y todo lo que se nos ocurra por el camino. ¿Lo mejor? Aprendemos juntos y, ¿por qué no?, nos divertimos en el proceso.
 
-[Ver los detalles del curso](/courses/index.html){.btn .btn-outline-primary role="button"} 
-
-## ¿Cómo inscribirme?
+## Curso R para ciencia de datos
 
 Puedes inscribirte por un precio <mark>**desde los $0 USD hasta los $120 USD**.</mark> Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.
 
@@ -40,9 +33,14 @@ Puedes inscribirte por un precio <mark>**desde los $0 USD hasta los $120 USD**.<
     
 *Descuentos de hasta el 75% para estudiantes y académicos. Si tu situación económica o restricciones de tu país no te permiten hacer un pago en línea por el curso, siéntete en total libertad de llevarlo <mark>**totalmente gratis.**</mark>*
 
-[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary role="button"} 
+[Ver los detalles del curso](/courses/index.html){.btn .btn-outline-primary role="button"} 
+
+## Ponte en contacto
+
+La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
 
 
+Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr) o en [Twitter](https://twitter.com/dev_aguero) (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!
 
 ---
 

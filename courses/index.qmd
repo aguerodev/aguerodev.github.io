@@ -8,6 +8,12 @@ code-line-numbers: true
 code-copy: true
 ---
 
+Queremos iniciar con una premisa fundamental: <mark>**cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero.**</mark> Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos para la excelencia ni caminos rápidos hacia la verdadera maestría.
+
+
+Nuestro objetivo es claro: <mark>**transformarte de un principiante absoluto en un practicante competente que comprenda los principios básicos del lenguaje R y pueda aplicar estos conocimientos a problemas del mundo real.**</mark> Más que memorizar comandos o seguir tutoriales de manera mecánica, te enseñaremos a pensar como un programador, a enfrentarte a los desafíos de manera analítica y a desarrollar soluciones efectivas.
+
+
 El curso tiene una <mark>**duración de 6 semanas;**</mark> cada semana ofrecemos <mark>**dos clase en vivo**</mark> con una duración de aproximadamente 2 horas (quedará grabada por si no puedes asistir a la lección). Después de cada clase, los estudiantes se autoevalúan resolviendo una serie de ejercicios interactivos cortos, y en caso de tener dudas, pueden asistir a <mark>**sesión de práctica grupales**</mark> en donde junto con el instructor se resuelven dudas y ejercicios para verificar que están comprendiendo el material y aclarar dudas. <mark>**El curso es 100% online y puedes verlo en vivo o en diferido.**</mark>
 
 
