@@ -1,5 +1,5 @@
 ---
-title: "Entendiendo `ggplot2` a fondo: Gráfico 1/101"
+title: "101 gráficos con ggplot2: 1/101"
 subtitle: "Ma"
 description: "Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional"
 date: 2024-01-15
@@ -10,7 +10,7 @@ comments:
   utterances:
     repo: quarto-dev/quarto-docs
 margin-header: |
-     ![](images/logo.png){style="width: 600px; height: 150px; object-fit: cover;"}
+     ![](../images/logo.png){style="width: 600px; height: 150px; object-fit: cover;"}
 toc: true
 format:
   html:
@@ -19,7 +19,7 @@ format:
         href: https://data.nasa.gov/
 ---
 
-![](images/mapa_cr_ggplot2.png)
+![](../images/mapa_cr_ggplot2.png)
 
 ## Descargar datos
 

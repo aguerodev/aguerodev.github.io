@@ -12,14 +12,14 @@
 <generator>quarto-1.4.549</generator>
 <lastBuildDate>Mon, 15 Jan 2024 06:00:00 GMT</lastBuildDate>
 <item>
-  <title>Entendiendo ggplot2 a fondo: Gráfico 1/101</title>
+  <title>101 gráficos con ggplot2: 1/101</title>
   <link>https://aprendetidyverse.com/posts/101_ggplot2/01_bar_plot_explicado.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p><img src="https://aprendetidyverse.com/posts/101_ggplot2/images/mapa_cr_ggplot2.png" class="img-fluid"></p>
+<p><img src="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png" class="img-fluid"></p>
 <section id="descargar-datos" class="level2">
 <h2 class="anchored" data-anchor-id="descargar-datos">Descargar datos</h2>
 <script src="https://giscus.app/client.js" data-repo="aguerodev/aguerodev.github.io" data-repo-id="R_kgDOLYhGtA" data-category="General" data-category-id="DIC_kwDOLYhGtM4CeD_i" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="es" crossorigin="anonymous" async="">
