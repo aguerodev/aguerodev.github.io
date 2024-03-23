@@ -37,49 +37,49 @@
   {
     "objectID": "courses/index.html",
     "href": "courses/index.html",
-    "title": "Curso R para ciencia de datos",
+    "title": "Curso: R para ciencia de datos",
     "section": "",
     "text": "Queremos iniciar con una premisa fundamental: cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero. Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos para la excelencia ni caminos rápidos hacia la verdadera maestría.\nNuestro objetivo es claro: transformarte de un principiante absoluto en un practicante competente que comprenda los principios básicos del lenguaje R y pueda aplicar estos conocimientos a problemas del mundo real. Más que memorizar comandos o seguir tutoriales de manera mecánica, te enseñaremos a pensar como un programador, a enfrentarte a los desafíos de manera analítica y a desarrollar soluciones efectivas.\nEl curso tiene una duración de 6 semanas; cada semana ofrecemos dos clase en vivo con una duración de aproximadamente 2 horas (quedará grabada por si no puedes asistir a la lección). Después de cada clase, los estudiantes se autoevalúan resolviendo una serie de ejercicios interactivos cortos, y en caso de tener dudas, pueden asistir a sesión de práctica grupales en donde junto con el instructor se resuelven dudas y ejercicios para verificar que están comprendiendo el material y aclarar dudas. El curso es 100% online y puedes verlo en vivo o en diferido."
   },
   {
     "objectID": "courses/index.html#cómo-inscribirme",
     "href": "courses/index.html#cómo-inscribirme",
-    "title": "Curso R para ciencia de datos",
+    "title": "Curso: R para ciencia de datos",
     "section": "¿Cómo inscribirme?",
     "text": "¿Cómo inscribirme?\nPuedes inscribirte por un precio desde los $0 USD hasta los $120 USD. Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.\n\nPróxima apertura: jueves 25 de abril del 2024\n\nLecciones: jueves y sábados\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\nDescuentos de hasta el 75% para estudiantes y académicos. Si tu situación económica o restricciones de tu país no te permiten hacer un pago en línea por el curso, siéntete en total libertad de llevarlo totalmente gratis.\nInscribirte ahora"
   },
   {
     "objectID": "courses/index.html#conoce-al-instructor",
     "href": "courses/index.html#conoce-al-instructor",
-    "title": "Curso R para ciencia de datos",
+    "title": "Curso: R para ciencia de datos",
     "section": "Conoce al instructor",
     "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 600 estudiantes a lo largo de toda América Latina."
   },
   {
     "objectID": "courses/index.html#comentarios-de-otros-estudintes",
     "href": "courses/index.html#comentarios-de-otros-estudintes",
-    "title": "Curso R para ciencia de datos",
+    "title": "Curso: R para ciencia de datos",
     "section": "Comentarios de otros estudintes",
     "text": "Comentarios de otros estudintes\n\n\n\n\nPuedes leer los comentarios originales y otros más en mi perfil de linkedin"
   },
   {
     "objectID": "courses/index.html#preguntas-frecuentes-faq",
     "href": "courses/index.html#preguntas-frecuentes-faq",
-    "title": "Curso R para ciencia de datos",
+    "title": "Curso: R para ciencia de datos",
     "section": "Preguntas Frecuentes (FAQ)",
     "text": "Preguntas Frecuentes (FAQ)\nSi tienes dudas puedes escribir a carlos.aguero@aprendetidyverse.com o programar una 🎥 Reunión en Zoom de 15 minutos para resolver dudas y revisar temas de interés. ¡Asegura que el curso cumpla con tus expectativas!\n\n\n¿Debo tener conocimientos de R para llevar el curso?\n\nEs recomendable tener una mínima experiencia en el lenguaje. Si no la tienes, no te preocupes, puedes empezar aquí y tanto el instructor como los asistentes harán lo posible por ayudarte a ponerte al día. No será fácil, pero nos comprometemos a estar disponibles para apoyarte en este proceso.\n\n\n\n¿Qué pasa si debo abandonar el curso?\n\nEntendemos que pueden surgir imprevistos. No te preocupes, puedes dejar el curso en cualquier momento y retomarlo en la siguiente apertura.\n\n\n\n¿Qué temas puedo preguntar en las sesiones con el instructor?\n\nLos temas en las sesiones de seguimiento deben estar relacionados estrictamente con el contenido del curso. Si deseas revisar temas de tu trabajo o algún proyecto universitario, este no sería el espacio adecuado. Sin embargo, puedes escribir a carlos.aguero@aprendetidyverse.com y con gusto veremos cómo podemos ayudarte."
   },
   {
     "objectID": "courses/index.html#contenido-del-curso",
     "href": "courses/index.html#contenido-del-curso",
-    "title": "Curso R para ciencia de datos",
+    "title": "Curso: R para ciencia de datos",
     "section": "Contenido del curso",
     "text": "Contenido del curso\n\n\nClase 1: Descubriendo R y el Tidyverse\n\nEsta clase te introduce a R y el conjunto de herramientas del Tidyverse. Aquí aprenderás a configurar tu espacio de trabajo en RStudio, cómo leer archivos .csv y empezarás a jugar con tus datos, dándoles un primer vistazo y creando visualizaciones sencillas.\n\n\n\nClase 2: Comenzamos a explorar los datos\n\nEn esta clase, te adentrarás en el corazón de dplyr y tidyr, donde la magia de la manipulación de datos realmente sucede. Aprenderás a filtrar, seleccionar, y transformar tus datos para revelar las historias ocultas que tienen para contar.\n\n\n\nClase 3: Inicia en la visualización de Datos\n\nAquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando ggplot2 para crear tus primeros gráfico. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapte a tus necesidades.\n\n\n\nClase 4: Lectura y limpieza de datos\n\nEsta clase te enseñará a ser capaz de leer datos almacenados en CSV, Excel, SPSS, entre otros. Ya sea que estés trabajando con texto, números, fechas, o cualquier otro tipo, aprenderás las habilidades para manejarlos todos con eficiencia.\n\n\n\nClase 5: El arte de trabajar con textos y fechas\n\nLas expresiones regulares y el manejo de fechas pueden parecer hechizos complicados, pero después de esta clase, serán herramientas poderosas en tu arsenal. Aprenderás a limpiar y filtrar tus datos de manera eficiente con los paquetes stringr y lubridate convirtiendo el caos en orden con solo unas pocas líneas de código.\n\n\n\nClase 6: Entendiendo los datos relacionales\n\nEn esta clase te enseña a unir diferentes conjuntos de datos para descubrir conexiones ocultas. Dominarás los joins y aprenderás sobre las llaves y las relaciones, lo que te permitirá combinar datos de fuentes diversas para obtener insights más profundos.\n\n\n\nClase 7: Explorando con gráficos avanzados\n\nCon ggplot2 y plotly, esta clase aprenderás a crear gráficos interactivos y explorar datos geoespaciales, llevando tus habilidades narrativas a nuevas dimensiones.\n\n\n\nClase 8: Conecta R con el mundo las bases de datos SQL\n\nAquí, R se encuentra con el poder de las bases de datos SQL. Aprenderás a realizar consultas SQL directamente desde R, lo que te permite acceder a y manipular grandes conjuntos de datos almacenados en bases de datos de manera eficiente.\n\n\n\nClase 9: La Elegancia de la programación funcional\n\nCon purrr, transformarás tu enfoque de manejar datos. Aprenderás a escribir funciones personalizadas y a iterar sobre tus datos de formas que hacen que el código no solo sea más limpio, sino también más expresivo.\n\n\n\nClase 10: Extrayendo datos de la web\n\nEl web scraping y las APIs abren un universo de datos disponibles en internet. Esta clase te equipará con las herramientas para recoger estos datos como rvest y httr2, permitiéndote responder preguntas que antes parecían inalcanzables.\n\n\n\nClase 11: Creando documento con quarto\n\nCon Quarto, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.\n\n\n\nClase 12: Administrando tus proyectos en RStudio\n\nFinalmente, dominarás el arte de gestionar proyectos de datos con Git, GitHub, y entornos virtuales renv. Esto te asegura que tus proyectos sean reproducibles, colaborativos, y organizados."
   },
   {
     "objectID": "courses/index.html#ponte-en-contacto",
     "href": "courses/index.html#ponte-en-contacto",
-    "title": "Curso R para ciencia de datos",
+    "title": "Curso: R para ciencia de datos",
     "section": "Ponte en contacto",
     "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
   },
