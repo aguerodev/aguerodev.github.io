@@ -7,8 +7,6 @@ comments: false
 author: "Carlos Aguero B."
 date: "2024/03/23"
 pagetitle: Aprende Tidyverse - lunes de preguntas y respuestas
-open-graph:
-  description: "Resuelve tus dudas de R cada lunes a las 7:00 p.m. ¡Únete a nuestras sesiones de preguntas y respuestas para recibir asesoría personalizada y consejos prácticos que te ayudarán a avanzar en tu aprendizaje de R!"
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg/800px-Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg
 ---
 
