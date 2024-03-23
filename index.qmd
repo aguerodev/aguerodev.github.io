@@ -24,21 +24,21 @@ Queremos iniciar con una premisa fundamental: <mark>**cualquiera que te prometa 
 En Aprende Tidyverse, estamos comprometidos con ofrecerte una perspectiva realista y pragmática sobre el aprendizaje de R. <mark>**Este curso de 6 semanas ha sido cuidadosamente diseñado para equiparte con un conjunto sólido de habilidades fundamentales en la manipulación, análisis y visualización de datos.**</mark> A través de clases dos veces por semana, ejercicios interactivos y evaluación constante con el instructor te guiaremos desde los conceptos más básicos hasta el manejo competente del paquete Tidyverse, sentando las bases para que, con práctica y dedicación continuas, puedas avanzar en tu camino hacia la experticia.
 
 
-
 Nuestro objetivo es claro: <mark>**transformarte de un principiante absoluto en un practicante competente que comprenda los principios básicos del lenguaje R y pueda aplicar estos conocimientos a problemas del mundo real.**</mark> Más que memorizar comandos o seguir tutoriales de manera mecánica, te enseñaremos a pensar como un programador, a enfrentarte a los desafíos de manera analítica y a desarrollar soluciones efectivas.
 
 [Ver los detalles del curso](/courses/index.html){.btn .btn-outline-primary role="button"} 
 
 ## ¿Cómo inscribirme?
 
-Puedes inscribirte por un precio de <mark>**$120 USD**.</mark> Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.
+Puedes inscribirte por un precio <mark>**desde los $0 USD hasta los $120 USD**.</mark> Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.
 
-+ **Próxima apertura:** <mark>**Martes 23 de abril del 2024**</mark>
++ **Próxima apertura:** <mark>**jueves 25 de abril del 2024**</mark>
+    + Lecciones: jueves y sábados
     + Costa Rica/México: 6:00 p.m. 
     + Colombia: 7:00 p.m. 
     + Argentina: 9:00 p.m.
     
-*Descuentos de hasta el 75% para estudiantes y académicos.*
+*Descuentos de hasta el 75% para estudiantes y académicos. Si tu situación económica o restricciones de tu país no te permiten hacer un pago en línea por el curso, siéntete en total libertad de llevarlo <mark>**totalmente gratis.**</mark>*
 
 [Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary role="button"} 
 
