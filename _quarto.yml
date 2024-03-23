@@ -26,8 +26,10 @@ website:
   navbar:
     background: dark
     left:
-      - text: "Curso R para ciencia de datos"
-        file: classes/intro.qmd
+      - text: "Cursos R Intensivo"
+        file: courses/index.qmd
+      - text: "Sesiones de Consultas (gratis)"
+        file: lunes_pr.qmd
       - text: Blog
         file: posts.qmd
     right:
@@ -40,7 +42,16 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/in/carlos-aguero-cr/
   sidebar:
-    - id: semana_1 
+    - id: entendiendo_ggplot2 
+      background: light
+      title: "Entendiendo ggplot2"
+      sidebar: false
+      collapse-level: 1
+      contents:
+        - section: "Antes de comenzar"
+          contents:
+            - href: courses/entendiento_ggplot2/class_01.qmd
+    - id: r4ds
       background: light
       title: "Semana 1"
       collapse-level: 1
@@ -52,67 +63,11 @@ website:
         - text: "---"
         - section: "Semana 1"
           contents:
-            - href: classes/class_01.qmd
-            - href: classes/class_01.2.qmd
-            - href: classes/class_01.3.qmd
-            - href: classes/class_01.4.qmd
-            - href: classes/class_01.5.qmd
-            - href: classes/cal_com.qmd
-        - text: "---"
-        - section: "Semana 2"
-          contents:
-            - href: classes/class_02.qmd
-            - href: classes/cal_com.qmd
-        - text: "---"
-        - section: "Semana 3"
-          contents:
-            - href: classes/class_03.qmd
-            - href: classes/cal_com.qmd
-        - text: "---"
-        - section: "Semana 4"
-          contents:
-            - href: classes/class_04.qmd
-            - href: classes/cal_com.qmd
-        - text: "---"
-        - section: "Semana 5"
-          contents:
-            - href: classes/class_05.qmd
-            - href: classes/cal_com.qmd
-        - text: "---"
-        - section: "Semana 6"
-          contents:
-            - href: classes/class_06.qmd
-            - href: classes/cal_com.qmd
-        - text: "---"
-        - section: "Semana 7"
-          contents:
-            - href: classes/class_07.qmd
-            - href: classes/cal_com.qmd
-        - text: "---"
-        - section: "Semana 8"
-          contents:
-            - href: classes/class_08.qmd
-            - href: classes/cal_com.qmd
-        - text: "---"
-        - section: "Semana 9"
-          contents:
-            - href: classes/class_09.qmd
-            - href: classes/cal_com.qmd
-        - text: "---"
-        - section: "Semana 10"
-          contents:
-            - href: classes/class_10.qmd
-            - href: classes/cal_com.qmd
-        - text: "---"
-        - section: "Semana 11"
-          contents:
-            - href: classes/class_11.qmd
-            - href: classes/cal_com.qmd
-        - text: "---"
-        - section: "Semana 12"
-          contents:
-            - href: classes/class_12.qmd
-            - href: classes/cal_com.qmd
+            - href: classes/semana_1/class_01.qmd
+            - href: classes/semana_1/class_01.2.qmd
+            - href: classes/semana_1/class_01.3.qmd
+            - href: classes/semana_1/class_01.4.qmd
+            - href: classes/semana_1/class_01.5.qmd
   site-url: https://aprendetidyverse.com
   repo-url: https://github.com/aguerodev/aguerodev.github.io
 

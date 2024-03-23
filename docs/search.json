@@ -1,45 +1,10 @@
 [
   {
-    "objectID": "tils/overpass_turbo.html",
-    "href": "tils/overpass_turbo.html",
-    "title": "Overpass API una forma rápida y sencilla de descargar datos de openstreetmap",
-    "section": "",
-    "text": "I’m super impressed with the quality of Dreambooth using HuggingFace Diffusers 🚀 — with only 14 images of myself! These four images are created by Stable Diffusion using the same fine-tuned model with different prompts:1"
-  },
-  {
-    "objectID": "tils/overpass_turbo.html#footnotes",
-    "href": "tils/overpass_turbo.html#footnotes",
-    "title": "Overpass API una forma rápida y sencilla de descargar datos de openstreetmap",
-    "section": "Notas",
-    "text": "Notas\n\n\nHere are the exact prompts I used for each of the above images:\n\nTop-left: a photo of &lt;dreambooth token&gt;\nTop-right: Hypnotic illustration of &lt;dreambooth token&gt;, hypnotic psychedelic art by Dan Mumford, pop surrealism, dark glow neon paint, mystical, Behance (PublicPrompts source)\nBottom-left: Hypnotic illustration of &lt;dreambooth token&gt;, anime illustration by makoto shinkai, stanley artgerm lau, wlop, rossdraws, concept art, digital painting (PublicPrompts source)\nBottom-right: Toy Story’s Woody as &lt;dreambooth token&gt;, 4k, artstation, cgsociety, award-winning, masterpiece, stunning, beautiful, glorious, powerful, fantasy art by Greg Rutkowski, octane render, unreal engine, high (Lexica source)\n\n↩︎"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Proyectos",
-    "section": "",
-    "text": "Mis proyectos abarcan análisis de datos, exploración de datos geoespaciales, lenguajes de programación (en especial R), análisis de datos personales y herramientas para apoyar mis flujos de trabajo. Trabajo en proyectos por diversión, para aprender o para resolver un problema específico que tenga. Los proyectos más recientes se enumeran primero.\nHaz clic en el título de un proyecto para ir a su repositorio en github."
-  },
-  {
-    "objectID": "projects.html#section",
-    "href": "projects.html#section",
-    "title": "Proyectos",
-    "section": "2024",
-    "text": "2024\n\nMonitor Precios Supermercados Costa Rica\nMonitor Precios CR es un proyecto destinado a monitorear semanalmente los precios de una lista seleccionada de productos en diferentes supermercados de Costa Rica. El objetivo principal es recopilar estos datos de manera sistemática para almacenarlos en un archivo .csv, facilitando su posterior análisis y comprensión de las tendencias de precios en el tiempo.\n\n\nNoticias CR\nEste proyecto de webscraping, desarrollado en R con rvest y httr2, es una iniciativa sin fines de lucro enfocada en extraer contenido de los principales medios de comunicación de Costa Rica. Su propósito principal es facilitar el acceso a la información mediante la creación de feeds RSS para medios que no disponen de esta tecnología, como La Nación y El Financiero, y la recolección de datos de artículos de noticias para almacenarlos en un formato accesible. Este repositorio de información busca promover el análisis y la investigación de contenidos mediáticos en el país.\n\n\nAlquileres GAM Costa Rica\nLa idea detrás de este proyecto nace porque un amigo me pide ayuda para encontrar alquiler. Entre mis amigos, soy conocido por mudarme muy seguido y tener ideas sobre cómo encontrar alquiler, así que nace la idea. Y si puedo sistematizar mis reglas para buscar alquiler de forma que se pueda tener un filtro más avanzado para buscar buenos lugares, bueno, ese es el origen de este experimento donde jugamos con webscraping, análisis de datos geoespaciales, conexiones a APIs, clustering y métodos de reducción de la dimensión."
-  },
-  {
-    "objectID": "posts/101_ggplot2/01_bar_plot_explicado.html#descargar-datos",
-    "href": "posts/101_ggplot2/01_bar_plot_explicado.html#descargar-datos",
-    "title": "Entendiendo ggplot2 a fondo: Gráfico 1/101",
-    "section": "Descargar datos",
-    "text": "Descargar datos"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Aprende Tidyverse",
     "section": "",
-    "text": "Aprende Tidyverse es una iniciativa que busca desarrollar material de calidad para la comunidad latinoamericana en su idioma. En internet existen muchos recursos fantásticos, pero en el contexto latinoamericano existen dos barreras importantes: el lenguaje y el poder adquisitivo. Por lo que hemos decidido desarrollar este curso en español de forma totalmente gratuita. Existe una lista de precios sugeridos; quienes puedan pagarlo ayudarán a mantener este proyecto vivo y a hacer accesible el curso a otros, pero el dinero no es nuestra principal motivación."
+    "text": "Queremos iniciar con una premisa fundamental: cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero. Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos para la excelencia ni caminos rápidos hacia la verdadera maestría."
   },
   {
     "objectID": "index.html#estructura-de-curso",
@@ -53,7 +18,7 @@
     "href": "index.html#cómo-inscribirme",
     "title": "Aprende Tidyverse",
     "section": "¿Cómo inscribirme?",
-    "text": "¿Cómo inscribirme?\nPuedes inscribirte totalmente gratis. Nuestro instructor y asistentes están listo para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.\n\nPróxima apertura: Sábado 20 de abril del 2024\n\nCosta Rica/México: 4:30 p.m.\nColombia: 5:30 p.m.\nArgentina: 7:30 p.m.\n\n\nInscribirte ahora\nPara garantizar la calidad el curso hay un limite de 25 estudiantes por grupo."
+    "text": "¿Cómo inscribirme?\nPuedes inscribirte por un precio de $120 USD. Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.\n\nPróxima apertura: Martes 23 de abril del 2024\n\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\nDescuentos de hasta el 75% para estudiantes y académicos.\nInscribirte ahora"
   },
   {
     "objectID": "index.html#conoce-al-instructor",
@@ -91,377 +56,6 @@
     "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
   },
   {
-    "objectID": "classes/prep.html#instalación-en-windows-11",
-    "href": "classes/prep.html#instalación-en-windows-11",
-    "title": "Instalar R, RStudio y Quarto",
-    "section": "Instalación en Windows 11",
-    "text": "Instalación en Windows 11",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Antes de comenzar",
-      "Instalar R, RStudio y Quarto"
-    ]
-  },
-  {
-    "objectID": "classes/prep.html#instalación-en-mac",
-    "href": "classes/prep.html#instalación-en-mac",
-    "title": "Instalar R, RStudio y Quarto",
-    "section": "Instalación en Mac",
-    "text": "Instalación en Mac\n\n\nEl contenido de AprendeTidyverse.com se libera bajo CC0 1.0 Universal (CC0 1.0) Declaración de Dedicación al Dominio Público. No se requiere atribución. Usa y comparte sin límites.",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Antes de comenzar",
-      "Instalar R, RStudio y Quarto"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.5.html#lectura-de-datos-csv",
-    "href": "classes/class_01.5.html#lectura-de-datos-csv",
-    "title": "5. Evaluación",
-    "section": "Lectura de datos CSV",
-    "text": "Lectura de datos CSV",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "5. Evaluación"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.5.html#filtrado-de-datos-con-filter",
-    "href": "classes/class_01.5.html#filtrado-de-datos-con-filter",
-    "title": "5. Evaluación",
-    "section": "Filtrado de datos con filter",
-    "text": "Filtrado de datos con filter",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "5. Evaluación"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.5.html#ordenado-de-datos-con-arrage",
-    "href": "classes/class_01.5.html#ordenado-de-datos-con-arrage",
-    "title": "5. Evaluación",
-    "section": "Ordenado de datos con arrage",
-    "text": "Ordenado de datos con arrage",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "5. Evaluación"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.5.html#selección-de-datos-con-select",
-    "href": "classes/class_01.5.html#selección-de-datos-con-select",
-    "title": "5. Evaluación",
-    "section": "Selección de datos con select",
-    "text": "Selección de datos con select",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "5. Evaluación"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.5.html#ejercicios",
-    "href": "classes/class_01.5.html#ejercicios",
-    "title": "5. Evaluación",
-    "section": "Ejercicios",
-    "text": "Ejercicios",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "5. Evaluación"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.3.html#lectura-de-datos-csv",
-    "href": "classes/class_01.3.html#lectura-de-datos-csv",
-    "title": "3. Tomando porciones de los datos",
-    "section": "Lectura de datos CSV",
-    "text": "Lectura de datos CSV",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "3. Tomando porciones de los datos"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.3.html#filtrado-de-datos-con-filter",
-    "href": "classes/class_01.3.html#filtrado-de-datos-con-filter",
-    "title": "3. Tomando porciones de los datos",
-    "section": "Filtrado de datos con filter",
-    "text": "Filtrado de datos con filter",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "3. Tomando porciones de los datos"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.3.html#ordenado-de-datos-con-arrage",
-    "href": "classes/class_01.3.html#ordenado-de-datos-con-arrage",
-    "title": "3. Tomando porciones de los datos",
-    "section": "Ordenado de datos con arrage",
-    "text": "Ordenado de datos con arrage",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "3. Tomando porciones de los datos"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.3.html#selección-de-datos-con-select",
-    "href": "classes/class_01.3.html#selección-de-datos-con-select",
-    "title": "3. Tomando porciones de los datos",
-    "section": "Selección de datos con select",
-    "text": "Selección de datos con select",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "3. Tomando porciones de los datos"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.3.html#ejercicios",
-    "href": "classes/class_01.3.html#ejercicios",
-    "title": "3. Tomando porciones de los datos",
-    "section": "Ejercicios",
-    "text": "Ejercicios",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "3. Tomando porciones de los datos"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.2.html#lectura-de-datos-csv",
-    "href": "classes/class_01.2.html#lectura-de-datos-csv",
-    "title": "2. Filtrar y ordenar datos",
-    "section": "Lectura de datos CSV",
-    "text": "Lectura de datos CSV",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "2. Filtrar y ordenar datos"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.2.html#filtrado-de-datos-con-filter",
-    "href": "classes/class_01.2.html#filtrado-de-datos-con-filter",
-    "title": "2. Filtrar y ordenar datos",
-    "section": "Filtrado de datos con filter",
-    "text": "Filtrado de datos con filter",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "2. Filtrar y ordenar datos"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.2.html#ordenado-de-datos-con-arrage",
-    "href": "classes/class_01.2.html#ordenado-de-datos-con-arrage",
-    "title": "2. Filtrar y ordenar datos",
-    "section": "Ordenado de datos con arrage",
-    "text": "Ordenado de datos con arrage",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "2. Filtrar y ordenar datos"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.2.html#selección-de-datos-con-select",
-    "href": "classes/class_01.2.html#selección-de-datos-con-select",
-    "title": "2. Filtrar y ordenar datos",
-    "section": "Selección de datos con select",
-    "text": "Selección de datos con select",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "2. Filtrar y ordenar datos"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.2.html#ejercicios",
-    "href": "classes/class_01.2.html#ejercicios",
-    "title": "2. Filtrar y ordenar datos",
-    "section": "Ejercicios",
-    "text": "Ejercicios",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "2. Filtrar y ordenar datos"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.4.html#lectura-de-datos-csv",
-    "href": "classes/class_01.4.html#lectura-de-datos-csv",
-    "title": "4. Datos agrupados",
-    "section": "Lectura de datos CSV",
-    "text": "Lectura de datos CSV",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "4. Datos agrupados"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.4.html#filtrado-de-datos-con-filter",
-    "href": "classes/class_01.4.html#filtrado-de-datos-con-filter",
-    "title": "4. Datos agrupados",
-    "section": "Filtrado de datos con filter",
-    "text": "Filtrado de datos con filter",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "4. Datos agrupados"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.4.html#ordenado-de-datos-con-arrage",
-    "href": "classes/class_01.4.html#ordenado-de-datos-con-arrage",
-    "title": "4. Datos agrupados",
-    "section": "Ordenado de datos con arrage",
-    "text": "Ordenado de datos con arrage",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "4. Datos agrupados"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.4.html#selección-de-datos-con-select",
-    "href": "classes/class_01.4.html#selección-de-datos-con-select",
-    "title": "4. Datos agrupados",
-    "section": "Selección de datos con select",
-    "text": "Selección de datos con select",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "4. Datos agrupados"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.4.html#ejercicios",
-    "href": "classes/class_01.4.html#ejercicios",
-    "title": "4. Datos agrupados",
-    "section": "Ejercicios",
-    "text": "Ejercicios",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "4. Datos agrupados"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.html#lectura-de-datos-csv",
-    "href": "classes/class_01.html#lectura-de-datos-csv",
-    "title": "1. Introducción a Tidyverse",
-    "section": "Lectura de datos CSV",
-    "text": "Lectura de datos CSV",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "1. Introducción a Tidyverse"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.html#filtrado-de-datos-con-filter",
-    "href": "classes/class_01.html#filtrado-de-datos-con-filter",
-    "title": "1. Introducción a Tidyverse",
-    "section": "Filtrado de datos con filter",
-    "text": "Filtrado de datos con filter",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "1. Introducción a Tidyverse"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.html#ordenado-de-datos-con-arrage",
-    "href": "classes/class_01.html#ordenado-de-datos-con-arrage",
-    "title": "1. Introducción a Tidyverse",
-    "section": "Ordenado de datos con arrage",
-    "text": "Ordenado de datos con arrage",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "1. Introducción a Tidyverse"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.html#selección-de-datos-con-select",
-    "href": "classes/class_01.html#selección-de-datos-con-select",
-    "title": "1. Introducción a Tidyverse",
-    "section": "Selección de datos con select",
-    "text": "Selección de datos con select",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "1. Introducción a Tidyverse"
-    ]
-  },
-  {
-    "objectID": "classes/class_01.html#ejercicios",
-    "href": "classes/class_01.html#ejercicios",
-    "title": "1. Introducción a Tidyverse",
-    "section": "Ejercicios",
-    "text": "Ejercicios\n\n\n\n  \n   Objetivos de la clase\n  \n  \n  \n      \n          Questions",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "1. Introducción a Tidyverse"
-    ]
-  },
-  {
-    "objectID": "classes/intro.html",
-    "href": "classes/intro.html",
-    "title": "Presentación del curso",
-    "section": "",
-    "text": "uno",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Antes de comenzar",
-      "Presentación del curso"
-    ]
-  },
-  {
-    "objectID": "course.html",
-    "href": "course.html",
-    "title": "R para ciencia de datos",
-    "section": "",
-    "text": "En mi último año de carrera en ingeniería en sistemas de información, descubrí un tesoro: “R for Data Science” de Hadley Wickham y Garrett Grolemund en su primera edición. Este libro no era simplemente un manual; era una revelación, mostrándome un universo completamente nuevo dentro del lenguaje R, conocido como tidyverse. A lo largo de los años, he tenido el privilegio de enseñar ciencia de datos a más de 400 estudiantes de más de 5 países de América Latina, viendo cómo este enfoque transformaba la manera en que abordamos los datos.\nHoy, 8 años más tarde, el cambio es palpable. Tidyverse ha madurado de forma sorprendente, democratizando el análisis de datos. Permite a aquellos sin un trasfondo en programación adentrarse en la lectura, limpieza, análisis, y visualización de datos con una lógica coherente y un código diseñado para ser fácilmente comprensible. Durante el 2020, en el apogeo de la pandemia, fui parte de una iniciativa de RStudio que buscaba formar instructores capacitados para enseñar R, especialmente a no programadores. Tuve el honor de ser alumno de Greg Wilson, cofundador de The Carpentries y autor de Teaching Tech Together, una obra que considero esencial para quien desee enseñar programación de manera efectiva.\nCon estos pilares de conocimiento y experiencia, hemos diseñado este curso dirigido especialmente a no informáticos. Este programa no solo busca impartir habilidades prácticas y aplicables en ciencia de datos de manera intuitiva y sencilla, sino que también se enfoca en la resolución de problemas cotidianos. Desde fútbol hasta películas, música y cuestiones sociales, exploraremos cómo utilizar R y tidyverse como herramientas para convertirnos en solucionadores de problemas. Este es más que un curso; es una invitación a cambiar la forma en que ves el mundo a través de los datos."
-  },
-  {
-    "objectID": "course.html#descripción-del-curso",
-    "href": "course.html#descripción-del-curso",
-    "title": "R para ciencia de datos",
-    "section": "Descripción del curso",
-    "text": "Descripción del curso\n\n\n\n🚀 Características del Curso\n\nDuración: 6 semanas.\nModalidad: En vivo, a través de Zoom, promoviendo la interacción y el aprendizaje activo.\nFrecuencia: Clases 2 veces a la semana (miércoles y sábados).\nHorario: 6 p.m. Hora de Costa Rica (UTC -6).\n\n\n\n\n📚 Estructura del Curso\n\nLecciones en Vivo: 12 clases, aproximadamente 2 horas cada una.\nSesiones de Seguimiento Privadas: 6 sesiones de 45 minutos con el instructor para personalizar tu aprendizaje.\nGrabaciones: Acceso a grabaciones de cada clase, enviadas por correo electrónico 24 horas después.\n\n\n\n\n💳 Costo e Información de Pago\n\nCosto: $300 USD.\nMétodos de Pago: Aceptamos pagos vía tarjeta de crédito o débito via Stripe, la plataforma de pagos en linea más utilizada por grantes empresas.\nMétodos de Pago Alternativos: En el caso de los estudiantes de Costa Rica puede hacer el pago de forma manual mediente una tranferencia bancaria para esto escribe a info@aprendetidyverse.com para solicitar hacer el pago por este medio.\nInscríbete ahora: Enlace de pago.\n\n\n\n\nSi tienes dudas programa una 🎥 sesión de 15 minutos con el instructor via zoom para resolver dudas y revisar temas de interés. ¡Asegura que el curso cumpla con tus expectativas!"
-  },
-  {
-    "objectID": "course.html#testimonios-y-comentarios",
-    "href": "course.html#testimonios-y-comentarios",
-    "title": "R para ciencia de datos",
-    "section": "Testimonios y comentarios",
-    "text": "Testimonios y comentarios\n\n\nPuedes leer más comentarios en mi perfil de linkedin"
-  },
-  {
-    "objectID": "course.html#temario-del-curso",
-    "href": "course.html#temario-del-curso",
-    "title": "R para ciencia de datos",
-    "section": "Temario del curso",
-    "text": "Temario del curso\n\n\nClase 1: Descubriendo R y el Tidyverse\n\nEsta clase te introduce a R y el conjunto de herramientas del Tidyverse. Aquí aprenderás a configurar tu espacio de trabajo en RStudio, cómo leer archivos .csv y empezarás a jugar con tus datos, dándoles un primer vistazo y creando visualizaciones sencillas.\n\n\n\nClase 2: Comenzamos a explorar los datos\n\nEn esta clase, te adentrarás en el corazón de dplyr y tidyr, donde la magia de la manipulación de datos realmente sucede. Aprenderás a filtrar, seleccionar, y transformar tus datos para revelar las historias ocultas que tienen para contar.\n\n\n\nClase 3: Inicia en la visualización de Datos\n\nAquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando ggplot2 para crear tus primeros gráfico. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapte a tus necesidades.\n\n\n\nClase 4: Lectura y limpieza de datos\n\nEsta clase te enseñará a ser capaz de leer datos almacenados en CSV, Excel, SPSS, entre otros. Ya sea que estés trabajando con texto, números, fechas, o cualquier otro tipo, aprenderás las habilidades para manejarlos todos con eficiencia.\n\n\n\nClase 5: El arte de trabajar con textos y techas\n\nLas expresiones regulares y el manejo de fechas pueden parecer hechizos complicados, pero después de esta clase, serán herramientas poderosas en tu arsenal. Aprenderás a limpiar y filtrar tus datos de manera eficiente con los paquetes stringr y lubridate convirtiendo el caos en orden con solo unas pocas líneas de código.\n\n\n\nClase 6: Entendiendo los datos relacionales\n\nEn esta clase te enseña a unir diferentes conjuntos de datos para descubrir conexiones ocultas. Dominarás los joins y aprenderás sobre las llaves y las relaciones, lo que te permitirá combinar datos de fuentes diversas para obtener insights más profundos.\n\n\n\nClase 7: Explorando con gráficos avanzados\n\nCon ggplot2 y plotly, esta clase aprenderás a crear gráficos interactivos y explorar datos geoespaciales, llevando tus habilidades narrativas a nuevas dimensiones.\n\n\n\nClase 8: Conecta R con el mundo las bases de datos SQL\n\nAquí, R se encuentra con el poder de las bases de datos SQL. Aprenderás a realizar consultas SQL directamente desde R, lo que te permite acceder a y manipular grandes conjuntos de datos almacenados en bases de datos de manera eficiente.\n\n\n\nClase 9: La Elegancia de la programación funcional\n\nCon purrr, transformarás tu enfoque de manejar datos. Aprenderás a escribir funciones personalizadas y a iterar sobre tus datos de formas que hacen que el código no solo sea más limpio, sino también más expresivo.\n\n\n\nClase 10: Extrayendo datos de la web\n\nEl web scraping y las APIs abren un universo de datos disponibles en internet. Esta clase te equipará con las herramientas para recoger estos datos como rvest y httr2, permitiéndote responder preguntas que antes parecían inalcanzables.\n\n\n\nClase 11: Creando documento con quarto\n\nCon Quarto, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.\n\n\n\nClase 12: Manejo de proyectos de datos\n\nFinalmente, dominarás el arte de gestionar proyectos de datos con Git, GitHub, y entornos virtuales renv. Esto te asegura que tus proyectos sean reproducibles, colaborativos, y organizados."
-  },
-  {
-    "objectID": "course.html#inscripción",
-    "href": "course.html#inscripción",
-    "title": "R para ciencia de datos",
-    "section": "Inscripción",
-    "text": "Inscripción\n📅 Comienza Tu Aventura: Recuerda que el inicio de clases es el miércoles 6 de marzo de 2024, Inscríbete ahora.\nUna vez hayas confirmado el pago, recibirás por correo electrónico (al correo que utilizaste para realizar el pago) la confirmación junto con todos los datos relevantes, incluyendo los enlaces de acceso y fechas importantes.\nSi tienes dudas programa una sesión de 15 minutos con el instructor para resolver dudas y revisar temas de interés. ¡Asegura que el curso cumpla con tus expectativas!\nPuedes escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter"
-  },
-  {
     "objectID": "posts.html",
     "href": "posts.html",
     "title": "Aprende Tidyverse",
@@ -483,11 +77,154 @@
     "text": "Post Recientes"
   },
   {
-    "objectID": "posts/mapa_desde_cero.html#descargar-datos",
-    "href": "posts/mapa_desde_cero.html#descargar-datos",
-    "title": "Creación de Mapas de Costa Rica con ggplot2",
-    "section": "Descargar datos",
-    "text": "Descargar datos"
+    "objectID": "courses/index.html",
+    "href": "courses/index.html",
+    "title": "Curso R para ciencia de datos",
+    "section": "",
+    "text": "El curso tiene una duración de 6 semanas; cada semana ofrecemos dos clase en vivo con una duración de aproximadamente 2 horas (quedará grabada por si no puedes asistir a la lección). Después de cada clase, los estudiantes se autoevalúan resolviendo una serie de ejercicios interactivos cortos, y en caso de tener dudas, pueden asistir a sesión de práctica grupales en donde junto con el instructor se resuelven dudas y ejercicios para verificar que están comprendiendo el material y aclarar dudas. El curso es 100% online y puedes verlo en vivo o en diferido."
+  },
+  {
+    "objectID": "courses/index.html#cursos-gratuitos",
+    "href": "courses/index.html#cursos-gratuitos",
+    "title": "Cursos",
+    "section": "",
+    "text": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.\n        Last updated 3 mins ago\n        Ir al curso"
+  },
+  {
+    "objectID": "courses/entendiento_ggplot2/class_01.html#qué-es-tidyverse",
+    "href": "courses/entendiento_ggplot2/class_01.html#qué-es-tidyverse",
+    "title": "1. Introducción a Tidyverse",
+    "section": "¿Qué es tidyverse?",
+    "text": "¿Qué es tidyverse?",
+    "crumbs": [
+      "Antes de comenzar",
+      "1. Introducción a Tidyverse"
+    ]
+  },
+  {
+    "objectID": "courses/entendiento_ggplot2/class_01.html#lectura-de-datos-csv",
+    "href": "courses/entendiento_ggplot2/class_01.html#lectura-de-datos-csv",
+    "title": "1. Introducción a Tidyverse",
+    "section": "Lectura de datos CSV",
+    "text": "Lectura de datos CSV",
+    "crumbs": [
+      "Antes de comenzar",
+      "1. Introducción a Tidyverse"
+    ]
+  },
+  {
+    "objectID": "courses/entendiento_ggplot2/class_01.html#filtrado-de-datos-con-filter",
+    "href": "courses/entendiento_ggplot2/class_01.html#filtrado-de-datos-con-filter",
+    "title": "1. Introducción a Tidyverse",
+    "section": "Filtrado de datos con filter",
+    "text": "Filtrado de datos con filter",
+    "crumbs": [
+      "Antes de comenzar",
+      "1. Introducción a Tidyverse"
+    ]
+  },
+  {
+    "objectID": "courses/entendiento_ggplot2/class_01.html#ordenado-de-datos-con-arrage",
+    "href": "courses/entendiento_ggplot2/class_01.html#ordenado-de-datos-con-arrage",
+    "title": "1. Introducción a Tidyverse",
+    "section": "Ordenado de datos con arrage",
+    "text": "Ordenado de datos con arrage",
+    "crumbs": [
+      "Antes de comenzar",
+      "1. Introducción a Tidyverse"
+    ]
+  },
+  {
+    "objectID": "courses/entendiento_ggplot2/class_01.html#selección-de-datos-con-select",
+    "href": "courses/entendiento_ggplot2/class_01.html#selección-de-datos-con-select",
+    "title": "1. Introducción a Tidyverse",
+    "section": "Selección de datos con select",
+    "text": "Selección de datos con select",
+    "crumbs": [
+      "Antes de comenzar",
+      "1. Introducción a Tidyverse"
+    ]
+  },
+  {
+    "objectID": "courses/entendiento_ggplot2/class_01.html#ejercicios",
+    "href": "courses/entendiento_ggplot2/class_01.html#ejercicios",
+    "title": "1. Introducción a Tidyverse",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Antes de comenzar",
+      "1. Introducción a Tidyverse"
+    ]
+  },
+  {
+    "objectID": "index.html#cursos-gratuitos",
+    "href": "index.html#cursos-gratuitos",
+    "title": "Aprende Tidyverse",
+    "section": "Cursos gratuitos",
+    "text": "Cursos gratuitos\n\n  \n    \n      \n    \n    \n      \n        Primeros pasos con Tidyverse\n        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.\n        Last updated 3 mins ago\n        Ir al curso\n      \n    \n  \n\n\n  \n    \n      \n    \n    \n      \n        Fundamentos de ggplot2\n        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.\n        Last updated 3 mins ago\n        Ir al curso\n      \n    \n  \n\n\n  \n    \n      \n    \n    \n      \n        Guía básica para el uso de expresiones regulares en R\n        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.\n        Last updated 3 mins ago\n        Ir al curso"
+  },
+  {
+    "objectID": "courses/index.html#estructura-de-curso",
+    "href": "courses/index.html#estructura-de-curso",
+    "title": "Curso R para ciencia de datos",
+    "section": "",
+    "text": "Haremos un repaso guiado por el contenido del fantástico libro R for Data Science. Te comento cómo es la estructura de nuestro curso: tiene una duración de 12 semanas; cada semana ofrecemos una clase en vivo con una duración de aproximadamente 2 horas (quedará grabada por si no puedes asistir a la lección). Después de cada clase, los estudiantes se autoevalúan resolviendo una serie de ejercicios interactivos cortos, y en caso de tener dudas, pueden asistir a sesión de práctica grupales en donde junto con el instructor se resuelven dudas y ejercicios para verificar que están comprendiendo el material y aclarar dudas. El curso es 100% online y puedes verlo en vivo o en diferido.\n\n\n\n\n\n\nRecomendación del instructor\n\n\n\nRecomendamos participar en las sesiones en vivo, ya que durante estas se realizan ejercicios en grupo asistidos por el instructor. Debido a limitaciones de Zoom, estos ejercicios en grupo no quedan grabados."
+  },
+  {
+    "objectID": "courses/index.html#cómo-inscribirme",
+    "href": "courses/index.html#cómo-inscribirme",
+    "title": "Curso R para ciencia de datos",
+    "section": "¿Cómo inscribirme?",
+    "text": "¿Cómo inscribirme?\nPuedes inscribirte por un precio de 120 USD. Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.\n\nPróxima apertura: Martes 23 de abril del 2024\n\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\nInscribirte ahora\nDescuentos de hasta el 75% para estudiantes y académicos."
+  },
+  {
+    "objectID": "courses/index.html#conoce-al-instructor",
+    "href": "courses/index.html#conoce-al-instructor",
+    "title": "Curso R para ciencia de datos",
+    "section": "Conoce al instructor",
+    "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 600 estudiantes a lo largo de toda América Latina."
+  },
+  {
+    "objectID": "courses/index.html#comentarios-de-otros-estudintes",
+    "href": "courses/index.html#comentarios-de-otros-estudintes",
+    "title": "Curso R para ciencia de datos",
+    "section": "Comentarios de otros estudintes",
+    "text": "Comentarios de otros estudintes\n\n\n\n\nPuedes leer los comentarios originales y otros más en mi perfil de linkedin"
+  },
+  {
+    "objectID": "courses/index.html#preguntas-frecuentes-faq",
+    "href": "courses/index.html#preguntas-frecuentes-faq",
+    "title": "Curso R para ciencia de datos",
+    "section": "Preguntas Frecuentes (FAQ)",
+    "text": "Preguntas Frecuentes (FAQ)\nSi tienes dudas puedes escribir a carlos.aguero@aprendetidyverse.com o programar una 🎥 Reunión en Zoom de 15 minutos para resolver dudas y revisar temas de interés. ¡Asegura que el curso cumpla con tus expectativas!\n\n\n¿Debo tener conocimientos de R para llevar el curso?\n\nEs recomendable tener una mínima experiencia en el lenguaje. Si no la tienes, no te preocupes, puedes empezar aquí y tanto el instructor como los asistentes harán lo posible por ayudarte a ponerte al día. No será fácil, pero nos comprometemos a estar disponibles para apoyarte en este proceso.\n\n\n\n¿Qué pasa si debo abandonar el curso?\n\nEntendemos que pueden surgir imprevistos. No te preocupes, puedes dejar el curso en cualquier momento y retomarlo en la siguiente apertura.\n\n\n\n¿Qué temas puedo preguntar en las sesiones con el instructor?\n\nLos temas en las sesiones de seguimiento deben estar relacionados estrictamente con el contenido del curso. Si deseas revisar temas de tu trabajo o algún proyecto universitario, este no sería el espacio adecuado. Sin embargo, puedes escribir a carlos.aguero@aprendetidyverse.com y con gusto veremos cómo podemos ayudarte."
+  },
+  {
+    "objectID": "courses/index.html#contenido-del-curso",
+    "href": "courses/index.html#contenido-del-curso",
+    "title": "Curso R para ciencia de datos",
+    "section": "Contenido del curso",
+    "text": "Contenido del curso\n\n\nClase 1: Descubriendo R y el Tidyverse\n\nEsta clase te introduce a R y el conjunto de herramientas del Tidyverse. Aquí aprenderás a configurar tu espacio de trabajo en RStudio, cómo leer archivos .csv y empezarás a jugar con tus datos, dándoles un primer vistazo y creando visualizaciones sencillas.\n\n\n\nClase 2: Comenzamos a explorar los datos\n\nEn esta clase, te adentrarás en el corazón de dplyr y tidyr, donde la magia de la manipulación de datos realmente sucede. Aprenderás a filtrar, seleccionar, y transformar tus datos para revelar las historias ocultas que tienen para contar.\n\n\n\nClase 3: Inicia en la visualización de Datos\n\nAquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando ggplot2 para crear tus primeros gráfico. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapte a tus necesidades.\n\n\n\nClase 4: Lectura y limpieza de datos\n\nEsta clase te enseñará a ser capaz de leer datos almacenados en CSV, Excel, SPSS, entre otros. Ya sea que estés trabajando con texto, números, fechas, o cualquier otro tipo, aprenderás las habilidades para manejarlos todos con eficiencia.\n\n\n\nClase 5: El arte de trabajar con textos y fechas\n\nLas expresiones regulares y el manejo de fechas pueden parecer hechizos complicados, pero después de esta clase, serán herramientas poderosas en tu arsenal. Aprenderás a limpiar y filtrar tus datos de manera eficiente con los paquetes stringr y lubridate convirtiendo el caos en orden con solo unas pocas líneas de código.\n\n\n\nClase 6: Entendiendo los datos relacionales\n\nEn esta clase te enseña a unir diferentes conjuntos de datos para descubrir conexiones ocultas. Dominarás los joins y aprenderás sobre las llaves y las relaciones, lo que te permitirá combinar datos de fuentes diversas para obtener insights más profundos.\n\n\n\nClase 7: Explorando con gráficos avanzados\n\nCon ggplot2 y plotly, esta clase aprenderás a crear gráficos interactivos y explorar datos geoespaciales, llevando tus habilidades narrativas a nuevas dimensiones.\n\n\n\nClase 8: Conecta R con el mundo las bases de datos SQL\n\nAquí, R se encuentra con el poder de las bases de datos SQL. Aprenderás a realizar consultas SQL directamente desde R, lo que te permite acceder a y manipular grandes conjuntos de datos almacenados en bases de datos de manera eficiente.\n\n\n\nClase 9: La Elegancia de la programación funcional\n\nCon purrr, transformarás tu enfoque de manejar datos. Aprenderás a escribir funciones personalizadas y a iterar sobre tus datos de formas que hacen que el código no solo sea más limpio, sino también más expresivo.\n\n\n\nClase 10: Extrayendo datos de la web\n\nEl web scraping y las APIs abren un universo de datos disponibles en internet. Esta clase te equipará con las herramientas para recoger estos datos como rvest y httr2, permitiéndote responder preguntas que antes parecían inalcanzables.\n\n\n\nClase 11: Creando documento con quarto\n\nCon Quarto, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.\n\n\n\nClase 12: Administrando tus proyectos en RStudio\n\nFinalmente, dominarás el arte de gestionar proyectos de datos con Git, GitHub, y entornos virtuales renv. Esto te asegura que tus proyectos sean reproducibles, colaborativos, y organizados."
+  },
+  {
+    "objectID": "courses/index.html#ponte-en-contacto",
+    "href": "courses/index.html#ponte-en-contacto",
+    "title": "Curso R para ciencia de datos",
+    "section": "Ponte en contacto",
+    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "index.html#post-recientes",
+    "href": "index.html#post-recientes",
+    "title": "Aprende Tidyverse",
+    "section": "Post Recientes",
+    "text": "Post Recientes"
+  },
+  {
+    "objectID": "index.html#cursos-de-pago",
+    "href": "index.html#cursos-de-pago",
+    "title": "Aprende Tidyverse",
+    "section": "Cursos de pago",
+    "text": "Cursos de pago\n\n  \n    \n      \n    \n    \n      \n        R para ciencia de datos\n        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.\n        Last updated 3 mins ago\n        Ir al curso\n      \n    \n  \n\n\n  \n    \n      \n    \n    \n      \n        Entendiendo ggplot2 a fondo\n        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.\n        Last updated 3 mins ago\n        Ir al curso\n      \n    \n  \n\n\n  \n    \n      \n    \n    \n      \n        Web Scraping con R\n        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.\n        Last updated 3 mins ago\n        Ir al curso"
   },
   {
     "objectID": "tils/index.html",
@@ -497,15 +234,31 @@
     "text": "Encuentro increíblemente útil escribir mientras programo, pero la mayoría de esos apuntes nunca han salido de mis cuadernos. Los TILs (Today I Learned) son mi intento de documentar y compartir mis aprendizajes diarios por si pudieran ayudar a otros. Son apuntes, recordatorios, dibujos de loquito, no buscan ser estructurados ni tiene fines pedagógicos,me gusta el formato se sienten mucho menos intimidante que escribir una entrada de blog completa.\n\n\n\n\n\n\n\n\n\nOverpass API una forma rápida y sencilla de descargar datos de openstreetmap\n\n\n\n\n\n\ngeospatial\n\n\n\n\n\n\n\n\n\n2024-01-06\n\n\n\n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "classes/class_01.html#objetivos-de-la-clase",
-    "href": "classes/class_01.html#objetivos-de-la-clase",
-    "title": "1. Introducción a Tidyverse",
-    "section": "Objetivos de la clase",
-    "text": "Objetivos de la clase",
-    "crumbs": [
-      "Curso R para ciencia de datos",
-      "Semana 1",
-      "1. Introducción a Tidyverse"
-    ]
+    "objectID": "lunes_pr.html",
+    "href": "lunes_pr.html",
+    "title": "Lunes de preguntas y respuesta",
+    "section": "",
+    "text": "“Los Forjadores” de Gustave Courbet, 1853.\n¿Estás lidiando con problemas en R o simplemente tienes dudas que no puedes resolver? ¡Estoy aquí para ayudarte! Todos los lunes a las 7:00 p.m., dedicaré una hora completa para contestar preguntas y brindar asistencia con cualquier desafío que estés enfrentando en R. Esta es tu oportunidad de obtener ayuda personalizada y consejos prácticos para superar esos obstáculos que te impiden avanzar."
+  },
+  {
+    "objectID": "lunes_pr.html#detalles-del-evento",
+    "href": "lunes_pr.html#detalles-del-evento",
+    "title": "Lunes de preguntas y respuesta",
+    "section": "Detalles del Evento:",
+    "text": "Detalles del Evento:\n\n¿Cuándo? Todos los lunes, de 7:00 p.m. a 8:00 p.m. hora de Costa Rica (UTC-6)\n¿Dónde? Las sesiones se realizan en la plataforma Zoom.\n\nRegistrate gratis\nÚnete a la sesión y aprovecha la oportunidad de aprender y avanzar en tu dominio de R. ¡No importa si eres un completo novato o alguien con experiencia buscando aclarar dudas específicas! Este espacio está abierto para todos, con el objetivo de fomentar el aprendizaje y la colaboración dentro de la comunidad de usuarios de R.\nEspero verte ahí y ayudarte a desbloquear tu potencial con R. ¡Trae tus preguntas y prepara para una sesión productiva!"
+  },
+  {
+    "objectID": "lunes_pr.html#cómo-participar",
+    "href": "lunes_pr.html#cómo-participar",
+    "title": "Lunes de preguntas y respuesta",
+    "section": "¿Cómo Participar?",
+    "text": "¿Cómo Participar?\nRegístrate [opcional: incluir un enlace de registro si es necesario]. Prepara tus preguntas o los problemas con los que necesitas ayuda. Únete a la sesión y aprovecha la oportunidad de aprender y avanzar en tu dominio de R. ¡No importa si eres un completo novato o alguien con experiencia buscando aclarar dudas específicas! Este espacio está abierto para todos, con el objetivo de fomentar el aprendizaje y la colaboración dentro de la comunidad de usuarios de R.\nEspero verte ahí y ayudarte a desbloquear tu potencial con R. ¡Trae tus preguntas y prepara para una sesión productiva!"
+  },
+  {
+    "objectID": "posts/mapa_desde_cero.html#descargar-datos",
+    "href": "posts/mapa_desde_cero.html#descargar-datos",
+    "title": "Creación de Mapas de Costa Rica con ggplot2",
+    "section": "Descargar datos",
+    "text": "Descargar datos"
   }
 ]

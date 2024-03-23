@@ -1,0 +1,26 @@
+---
+title: "Lunes de preguntas y respuesta"
+subtitle: "Resuelve tus Dudas y Avanza en tu Aprendizaje"
+lang: "es"
+toc: true
+comments: false
+author: ""
+pagetitle: Aprende Tidyverse
+---
+
+!["Los Forjadores" de Gustave Courbet, 1853.](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg/800px-Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg)
+
+¿Estás lidiando con problemas en R o simplemente tienes dudas que no puedes resolver? ¡Estoy aquí para ayudarte! Todos los lunes a las 7:00 p.m., dedicaré una hora completa para contestar preguntas y brindar asistencia con cualquier desafío que estés enfrentando en R. Esta es tu oportunidad de obtener ayuda personalizada y consejos prácticos para superar esos obstáculos que te impiden avanzar.
+
+## Detalles del Evento:
+
++ **¿Cuándo?** Todos los lunes, de 7:00 p.m. a 8:00 p.m. hora de Costa Rica (UTC-6)
++ **¿Dónde?** Las sesiones se realizan en la plataforma Zoom.
+
+
+[Registrate gratis](https://cal.com/aprendetidyverse/lunes-preguntas-y-respuestas){.btn .btn-outline-primary .btn role="button"} 
+
+Únete a la sesión y aprovecha la oportunidad de aprender y avanzar en tu dominio de R.
+¡No importa si eres un completo novato o alguien con experiencia buscando aclarar dudas específicas! Este espacio está abierto para todos, con el objetivo de fomentar el aprendizaje y la colaboración dentro de la comunidad de usuarios de R.
+
+Espero verte ahí y ayudarte a desbloquear tu potencial con R. ¡Trae tus preguntas y prepara para una sesión productiva!

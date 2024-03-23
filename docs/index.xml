@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Aprende Tidyverse</title>
+<link>https://aprendetidyverse.com/</link>
+<atom:link href="https://aprendetidyverse.com/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.4.549</generator>
+<lastBuildDate>Mon, 15 Jan 2024 06:00:00 GMT</lastBuildDate>
+<item>
+  <title>Entendiendo ggplot2 a fondo: Gráfico 1/101</title>
+  <link>https://aprendetidyverse.com/posts/101_ggplot2/01_bar_plot_explicado.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://aprendetidyverse.com/posts/101_ggplot2/images/mapa_cr_ggplot2.png" class="img-fluid"></p>
+<section id="descargar-datos" class="level2">
+<h2 class="anchored" data-anchor-id="descargar-datos">Descargar datos</h2>
+<script src="https://giscus.app/client.js" data-repo="aguerodev/aguerodev.github.io" data-repo-id="R_kgDOLYhGtA" data-category="General" data-category-id="DIC_kwDOLYhGtM4CeD_i" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="es" crossorigin="anonymous" async="">
+</script>
+
+
+</section>
+
+ ]]></description>
+  <category>Tutorial</category>
+  <category>ggplot2</category>
+  <guid>https://aprendetidyverse.com/posts/101_ggplot2/01_bar_plot_explicado.html</guid>
+  <pubDate>Mon, 15 Jan 2024 06:00:00 GMT</pubDate>
+  <media:content url="https://aprendetidyverse.com/posts/101_ggplot2/images/mapa_cr_ggplot2.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Creación de Mapas de Costa Rica con ggplot2</title>
+  <link>https://aprendetidyverse.com/posts/mapa_desde_cero.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png" class="img-fluid"></p>
+<section id="descargar-datos" class="level2">
+<h2 class="anchored" data-anchor-id="descargar-datos">Descargar datos</h2>
+<script src="https://giscus.app/client.js" data-repo="aguerodev/aguerodev.github.io" data-repo-id="R_kgDOLYhGtA" data-category="General" data-category-id="DIC_kwDOLYhGtM4CeD_i" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="es" crossorigin="anonymous" async="">
+</script>
+
+
+</section>
+
+ ]]></description>
+  <category>Guías Paso a Paso</category>
+  <guid>https://aprendetidyverse.com/posts/mapa_desde_cero.html</guid>
+  <pubDate>Mon, 15 Jan 2024 06:00:00 GMT</pubDate>
+  <media:content url="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png" medium="image" type="image/png" height="75" width="144"/>
+</item>
+</channel>
+</rss>

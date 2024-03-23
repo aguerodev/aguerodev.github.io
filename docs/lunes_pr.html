@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Carlos Aguero B">
-<meta name="description" content="Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional">
+<meta name="author" content="">
 
-<title>Creación de Mapas de Costa Rica con ggplot2</title>
+<title>Aprende Tidyverse</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,25 +24,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../favicon.ico" rel="icon">
-<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./favicon.ico" rel="icon">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -100,21 +99,15 @@ cookieconsent.run({
   
 
 
-<meta property="og:title" content="Creación de Mapas de Costa Rica con ggplot2">
-<meta property="og:description" content="Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional">
-<meta property="og:image" content="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png">
+<meta property="og:title" content="Aprende Tidyverse">
+<meta property="og:description" content="Resuelve tus Dudas y Avanza en tu Aprendizaje">
 <meta property="og:site_name" content="aprendetidyverse.com">
 <meta property="og:locale" content="es_ES">
-<meta property="og:image:height" content="663">
-<meta property="og:image:width" content="1280">
-<meta name="twitter:title" content="Creación de Mapas de Costa Rica con ggplot2">
-<meta name="twitter:description" content="Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional">
-<meta name="twitter:image" content="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png">
+<meta name="twitter:title" content="Aprende Tidyverse">
+<meta name="twitter:description" content="Resuelve tus Dudas y Avanza en tu Aprendizaje">
 <meta name="twitter:creator" content="@dev_aguero">
 <meta name="twitter:site" content="@dev_aguero">
-<meta name="twitter:image-height" content="663">
-<meta name="twitter:image-width" content="1280">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -124,7 +117,7 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Aprende Tidyverse</span>
     </a>
   </div>
@@ -135,15 +128,15 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../courses/index.html"> 
+    <a class="nav-link" href="./courses/index.html"> 
 <span class="menu-text">Cursos R Intensivo</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../lunes_pr.html"> 
+    <a class="nav-link active" href="./lunes_pr.html" aria-current="page"> 
 <span class="menu-text">Sesiones de Consultas (gratis)</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../posts.html"> 
+    <a class="nav-link" href="./posts.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -179,47 +172,29 @@ cookieconsent.run({
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="images/logo.png" class="img-fluid" style="width: 600px; height: 150px; object-fit: cover;"></p>
-</div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#descargar-datos" id="toc-descargar-datos" class="nav-link active" data-scroll-target="#descargar-datos">Descargar datos</a></li>
+  <li><a href="#detalles-del-evento" id="toc-detalles-del-evento" class="nav-link active" data-scroll-target="#detalles-del-evento">Detalles del Evento:</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Otros Enlaces</h2><ul><li><a href="https://data.nasa.gov/"><i class="bi bi-link-45deg"></i>Instituto Geográfico Nacional</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Creación de Mapas de Costa Rica con ggplot2</h1>
-  </div>
-
-<div>
-  <div class="description">
-    Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional
-  </div>
+<h1 class="title">Lunes de preguntas y respuesta</h1>
+<p class="subtitle lead">Resuelve tus Dudas y Avanza en tu Aprendizaje</p>
 </div>
+
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Carlos Aguero B </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">15 de enero de 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -229,11 +204,22 @@ cookieconsent.run({
 </header>
 
 
-<p><img src="images/mapa_cr_ggplot2.png" class="img-fluid"></p>
-<section id="descargar-datos" class="level2">
-<h2 class="anchored" data-anchor-id="descargar-datos">Descargar datos</h2>
-<script src="https://giscus.app/client.js" data-repo="aguerodev/aguerodev.github.io" data-repo-id="R_kgDOLYhGtA" data-category="General" data-category-id="DIC_kwDOLYhGtM4CeD_i" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="es" crossorigin="anonymous" async="">
-</script>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg/800px-Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg" class="img-fluid figure-img"></p>
+<figcaption>“Los Forjadores” de Gustave Courbet, 1853.</figcaption>
+</figure>
+</div>
+<p>¿Estás lidiando con problemas en R o simplemente tienes dudas que no puedes resolver? ¡Estoy aquí para ayudarte! Todos los lunes a las 7:00 p.m., dedicaré una hora completa para contestar preguntas y brindar asistencia con cualquier desafío que estés enfrentando en R. Esta es tu oportunidad de obtener ayuda personalizada y consejos prácticos para superar esos obstáculos que te impiden avanzar.</p>
+<section id="detalles-del-evento" class="level2">
+<h2 class="anchored" data-anchor-id="detalles-del-evento">Detalles del Evento:</h2>
+<ul>
+<li><strong>¿Cuándo?</strong> Todos los lunes, de 7:00 p.m. a 8:00 p.m. hora de Costa Rica (UTC-6)</li>
+<li><strong>¿Dónde?</strong> Las sesiones se realizan en la plataforma Zoom.</li>
+</ul>
+<p><a href="https://cal.com/aprendetidyverse/lunes-preguntas-y-respuestas" class="btn btn-outline-primary" role="button">Registrate gratis</a></p>
+<p>Únete a la sesión y aprovecha la oportunidad de aprender y avanzar en tu dominio de R. ¡No importa si eres un completo novato o alguien con experiencia buscando aclarar dudas específicas! Este espacio está abierto para todos, con el objetivo de fomentar el aprendizaje y la colaboración dentro de la comunidad de usuarios de R.</p>
+<p>Espero verte ahí y ayudarte a desbloquear tu potencial con R. ¡Trae tus preguntas y prepara para una sesión productiva!</p>
 
 
 </section>
@@ -625,8 +611,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<script src="https://utteranc.es/client.js" repo="quarto-dev/quarto-docs" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

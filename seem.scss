@@ -303,12 +303,12 @@ details>summary {
 }
 
 .qwebr-editor-toolbar {
-  background-color: #F7EEDD !important;
+  background-color: #F4EDCC !important;
   padding: 0.2rem 0.5rem;
 }
 
 .qwebr-button{
-  background-color: #74E291 !important;
+  background-color: #5cb85c !important;
   color:white !important;
   
 }
@@ -334,6 +334,12 @@ code{
   color:#29ADB2;
 }
 
+.cell-output>pre, .cell-output>.sourceCode>pre, .cell-output-stdout>pre {
+  
+margin-left: 0rem;
+margin-top: 15px;
+background: none;
+}
 
 
 

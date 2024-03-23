@@ -32,6 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./favicon.ico" rel="icon">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -70,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7HH46G4FS3"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -98,8 +129,37 @@ cookieconsent.run({
 </script> 
   
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Aprende Tidyverse">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="alternate" type="application/rss+xml" title="Aprende Tidyverse" href="index.xml" data-external="1"><meta property="og:title" content="Aprende Tidyverse">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="aprendetidyverse.com">
 <meta property="og:locale" content="es_ES">
@@ -128,8 +188,12 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./classes/intro.html"> 
-<span class="menu-text">Curso R para ciencia de datos</span></a>
+    <a class="nav-link" href="./courses/index.html"> 
+<span class="menu-text">Cursos R Intensivo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lunes_pr.html"> 
+<span class="menu-text">Sesiones Café y R</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./posts.html"> 
@@ -173,13 +237,9 @@ cookieconsent.run({
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#estructura-de-curso" id="toc-estructura-de-curso" class="nav-link active" data-scroll-target="#estructura-de-curso">Estructura de curso</a></li>
+  <li><a href="#nuestro-curso-un-punto-de-partida-no-un-destino-final" id="toc-nuestro-curso-un-punto-de-partida-no-un-destino-final" class="nav-link active" data-scroll-target="#nuestro-curso-un-punto-de-partida-no-un-destino-final">Nuestro Curso: Un Punto de Partida, No un Destino Final</a></li>
   <li><a href="#cómo-inscribirme" id="toc-cómo-inscribirme" class="nav-link" data-scroll-target="#cómo-inscribirme">¿Cómo inscribirme?</a></li>
-  <li><a href="#conoce-al-instructor" id="toc-conoce-al-instructor" class="nav-link" data-scroll-target="#conoce-al-instructor">Conoce al instructor</a></li>
-  <li><a href="#comentarios-de-otros-estudintes" id="toc-comentarios-de-otros-estudintes" class="nav-link" data-scroll-target="#comentarios-de-otros-estudintes">Comentarios de otros estudintes</a></li>
-  <li><a href="#preguntas-frecuentes-faq" id="toc-preguntas-frecuentes-faq" class="nav-link" data-scroll-target="#preguntas-frecuentes-faq">Preguntas Frecuentes (FAQ)</a></li>
-  <li><a href="#contenido-del-curso" id="toc-contenido-del-curso" class="nav-link" data-scroll-target="#contenido-del-curso">Contenido del curso</a></li>
-  <li><a href="#ponte-en-contacto" id="toc-ponte-en-contacto" class="nav-link" data-scroll-target="#ponte-en-contacto">Ponte en contacto</a></li>
+  <li><a href="#post-recientes" id="toc-post-recientes" class="nav-link" data-scroll-target="#post-recientes">Post Recientes</a></li>
   </ul>
 </nav>
     </div>
@@ -190,177 +250,105 @@ cookieconsent.run({
 
 
 <p><img src="images/logo.png" class="img-fluid" style="width: 600px; height: 150px; object-fit: cover;"></p>
-<p>Aprende Tidyverse es una iniciativa que busca desarrollar material de calidad para la comunidad latinoamericana en su idioma. En internet existen muchos recursos fantásticos, pero en el contexto latinoamericano existen dos barreras importantes: el lenguaje y el poder adquisitivo. Por lo que hemos decidido desarrollar este curso <mark><strong>en español de forma totalmente gratuita.</strong></mark> Existe una lista de precios sugeridos; quienes puedan pagarlo ayudarán a mantener este proyecto vivo y a hacer accesible el curso a otros, pero el dinero no es nuestra principal motivación.</p>
-<section id="estructura-de-curso" class="level2">
-<h2 class="anchored" data-anchor-id="estructura-de-curso">Estructura de curso</h2>
-<p>Haremos un repaso guiado por el contenido del fantástico libro <a href="https://r4ds.hadley.nz/">R for Data Science</a>. Te comento cómo es la estructura de nuestro curso: tiene una <mark><strong>duración de 12 semanas;</strong></mark> cada semana ofrecemos una clase en vivo con una duración de aproximadamente 2 horas (quedará grabada por si no puedes asistir a la lección). Después de cada clase, los estudiantes se autoevalúan resolviendo una serie de ejercicios interactivos cortos, y en caso de tener dudas, pueden asistir a <mark><strong>sesión de práctica grupales</strong></mark> en donde junto con el instructor se resuelven dudas y ejercicios para verificar que están comprendiendo el material y aclarar dudas. <mark><strong>El curso es 100% online y puedes verlo en vivo o en diferido.</strong></mark></p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Recomendación del instructor
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Recomendamos participar en las sesiones en vivo, ya que durante estas se realizan ejercicios en grupo asistidos por el instructor. Debido a limitaciones de Zoom, estos ejercicios en grupo no quedan grabados.</p>
-</div>
-</div>
+<p>Queremos iniciar con una premisa fundamental: <mark><strong>cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero.</strong></mark> Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos para la excelencia ni caminos rápidos hacia la verdadera maestría.</p>
+<section id="nuestro-curso-un-punto-de-partida-no-un-destino-final" class="level3">
+<h3 class="anchored" data-anchor-id="nuestro-curso-un-punto-de-partida-no-un-destino-final">Nuestro Curso: Un Punto de Partida, No un Destino Final</h3>
+<p>En Aprende Tidyverse, estamos comprometidos con ofrecerte una perspectiva realista y pragmática sobre el aprendizaje de R. <mark><strong>Este curso de 6 semanas ha sido cuidadosamente diseñado para equiparte con un conjunto sólido de habilidades fundamentales en la manipulación, análisis y visualización de datos.</strong></mark> A través de clases dos veces por semana, ejercicios interactivos y evaluación constante con el instructor te guiaremos desde los conceptos más básicos hasta el manejo competente del paquete Tidyverse, sentando las bases para que, con práctica y dedicación continuas, puedas avanzar en tu camino hacia la experticia.</p>
+<p>Nuestro objetivo es claro: <mark><strong>transformarte de un principiante absoluto en un practicante competente que comprenda los principios básicos del lenguaje R y pueda aplicar estos conocimientos a problemas del mundo real.</strong></mark> Más que memorizar comandos o seguir tutoriales de manera mecánica, te enseñaremos a pensar como un programador, a enfrentarte a los desafíos de manera analítica y a desarrollar soluciones efectivas.</p>
+<p><a href="./courses/index.html" class="btn btn-outline-primary" role="button">Ver los detalles del curso</a></p>
 </section>
 <section id="cómo-inscribirme" class="level2">
 <h2 class="anchored" data-anchor-id="cómo-inscribirme">¿Cómo inscribirme?</h2>
-<p><mark><strong>Puedes inscribirte totalmente gratis</strong></mark>. Nuestro instructor y asistentes están listo para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.</p>
+<p>Puedes inscribirte por un precio de <mark><strong>$120 USD</strong>.</mark> Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.</p>
 <ul>
-<li><strong>Próxima apertura:</strong> <mark><strong>Sábado 20 de abril del 2024</strong></mark>
+<li><strong>Próxima apertura:</strong> <mark><strong>Martes 23 de abril del 2024</strong></mark>
 <ul>
-<li>Costa Rica/México: 4:30 p.m.</li>
-<li>Colombia: 5:30 p.m.</li>
-<li>Argentina: 7:30 p.m.</li>
+<li>Costa Rica/México: 6:00 p.m.</li>
+<li>Colombia: 7:00 p.m.</li>
+<li>Argentina: 9:00 p.m.</li>
 </ul></li>
 </ul>
+<p><em>Descuentos de hasta el 75% para estudiantes y académicos.</em></p>
 <p><a href="https://tally.so/r/woy9qe" class="btn btn-outline-primary" role="button">Inscribirte ahora</a></p>
-<p><em>Para garantizar la calidad el curso hay un limite de 25 estudiantes por grupo.</em></p>
-</section>
-<section id="conoce-al-instructor" class="level2">
-<h2 class="anchored" data-anchor-id="conoce-al-instructor">Conoce al instructor</h2>
-<p>Mi nombre es <a href="www.linkedin.com/in/carlos-aguero-cr">Carlos Agüero B</a>, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.</p>
-<p>He tenido la increíble oportunidad de formarme como <a href="https://education.rstudio.com/trainers/people/aguero+carlos/">instructor certificado por RStudio</a> para la enseñanza de <a href="https://www.tidyverse.org/">Tidyverse</a> y <a href="https://shiny.posit.co/">Shiny</a> y, recientemente, unirme la comunidad de instructores de <a href="https://carpentries.org/instructors/">The Carpentries</a>. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 600 estudiantes a lo largo de toda América Latina.</p>
-<p>Después de varios años trabajando en el sector privado, ahora tengo el privilegio de tomar un respiro y quiero ofrecer este curso de forma abierta y gratuita. <em>No tengo claro impacto que esta iniciativa pueda o no tener para el beneficio de otras personas, pero en este punto de mi vida, esto es lo que siento que es lo correcto.</em></p>
-</section>
-<section id="comentarios-de-otros-estudintes" class="level2">
-<h2 class="anchored" data-anchor-id="comentarios-de-otros-estudintes">Comentarios de otros estudintes</h2>
-<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
-<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=on&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
-</iframe>
-<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
-<p>Puedes leer los comentarios originales y otros más en mi perfil de <a href="https://www.linkedin.com/in/carlos-aguero-cr/details/recommendations/?detailScreenTabIndex=2">linkedin</a></p>
-</section>
-<section id="preguntas-frecuentes-faq" class="level2">
-<h2 class="anchored" data-anchor-id="preguntas-frecuentes-faq">Preguntas Frecuentes (FAQ)</h2>
-<p>Si tienes dudas puedes escribir a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a> o programar una <a href="https://cal.com/aprendetidyverse/15min">🎥 Reunión en Zoom de 15 minutos</a> para resolver dudas y revisar temas de interés. ¡Asegura que el curso cumpla con tus expectativas!</p>
-<details open="">
-<summary>
-¿Debo tener conocimientos de R para llevar el curso?
-</summary>
-<p>Es recomendable tener una mínima experiencia en el lenguaje. Si no la tienes, no te preocupes, puedes empezar aquí y tanto el instructor como los asistentes harán lo posible por ayudarte a ponerte al día. No será fácil, pero nos comprometemos a estar disponibles para apoyarte en este proceso.</p>
-</details>
-<details>
-<summary>
-¿Cuánto cuesta el curso?
-</summary>
-<p>El curso es <mark><strong>completamente gratuito</strong></mark>. Sin embargo, para quienes estén en una situación económica que les permita apoyar el proyecto, hemos establecido una lista de precios sugeridos:</p>
-<ul>
-<li>Profesionales con trabajo estable <strong>$120 USD</strong></li>
-<li>Académicos que utilizan el lenguaje R para investigación o enseñanza <strong>$60 USD</strong></li>
-<li>Estudiantes de grado de universidades públicas o privadas <strong>$30 USD.</strong></li>
-</ul>
-</details>
-<details>
-<summary>
-Si accedo al curso gratis, ¿hay algo a lo que no tendré acceso?
-</summary>
-<p>No, todos los estudiantes, independientemente de si realizan un pago o no, reciben la misma cantidad de horas de atención, recursos, y disponibilidad para hacer consultas y recibir soporte.</p>
-</details>
-<details>
-<summary>
-¿Qué pasa si debo abandonar el curso?
-</summary>
-<p>Entendemos que pueden surgir imprevistos. No te preocupes, puedes dejar el curso en cualquier momento y retomarlo en la siguiente apertura.</p>
-</details>
-<details>
-<summary>
-¿Qué temas puedo preguntar en las sesiones con el instructor?
-</summary>
-<p>Los temas en las sesiones de seguimiento deben estar relacionados estrictamente con el contenido del curso. Si deseas revisar temas de tu trabajo o algún proyecto universitario, este no sería el espacio adecuado. Sin embargo, puedes escribir a carlos.aguero@aprendetidyverse.com y con gusto veremos cómo podemos ayudarte.</p>
-</details>
 <hr>
 </section>
-<section id="contenido-del-curso" class="level2">
-<h2 class="anchored" data-anchor-id="contenido-del-curso">Contenido del curso</h2>
-<details open="">
-<summary>
-Clase 1: Descubriendo R y el Tidyverse
-</summary>
-Esta clase te introduce a R y el conjunto de herramientas del Tidyverse. Aquí aprenderás a configurar tu espacio de trabajo en RStudio, cómo leer archivos .csv y empezarás a jugar con tus datos, dándoles un primer vistazo y creando visualizaciones sencillas.
-</details>
-<details>
-<summary>
-Clase 2: Comenzamos a explorar los datos
-</summary>
-En esta clase, te adentrarás en el corazón de <code>dplyr</code> y <code>tidyr</code>, donde la magia de la manipulación de datos realmente sucede. Aprenderás a filtrar, seleccionar, y transformar tus datos para revelar las historias ocultas que tienen para contar.
-</details>
-<details>
-<summary>
-Clase 3: Inicia en la visualización de Datos
-</summary>
-Aquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando <code>ggplot2</code> para crear tus primeros gráfico. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapte a tus necesidades.
-</details>
-<details>
-<summary>
-Clase 4: Lectura y limpieza de datos
-</summary>
-Esta clase te enseñará a ser capaz de leer datos almacenados en <code>CSV</code>, <code>Excel</code>, <code>SPSS</code>, entre otros. Ya sea que estés trabajando con <code>texto</code>, <code>números</code>, <code>fechas</code>, o cualquier otro tipo, aprenderás las habilidades para manejarlos todos con eficiencia.
-</details>
-<details>
-<summary>
-Clase 5: El arte de trabajar con textos y fechas
-</summary>
-Las <strong>expresiones regulares</strong> y el <strong>manejo de fechas</strong> pueden parecer hechizos complicados, pero después de esta clase, serán herramientas poderosas en tu arsenal. Aprenderás a limpiar y filtrar tus datos de manera eficiente con los paquetes <code>stringr</code> y <code>lubridate</code> convirtiendo el caos en orden con solo unas pocas líneas de código.
-</details>
-<details>
-<summary>
-Clase 6: Entendiendo los datos relacionales
-</summary>
-En esta clase te enseña a unir diferentes conjuntos de datos para descubrir conexiones ocultas. Dominarás los <code>joins</code> y aprenderás sobre las <code>llaves</code> y las <code>relaciones</code>, lo que te permitirá combinar datos de fuentes diversas para obtener insights más profundos.
-</details>
-<details>
-<summary>
-Clase 7: Explorando con gráficos avanzados
-</summary>
-Con <code>ggplot2</code> y <code>plotly</code>, esta clase aprenderás a crear gráficos interactivos y explorar <strong>datos geoespaciales</strong>, llevando tus habilidades narrativas a nuevas dimensiones.
-</details>
-<details>
-<summary>
-Clase 8: Conecta R con el mundo las bases de datos SQL
-</summary>
-Aquí, R se encuentra con el poder de las bases de datos SQL. Aprenderás a realizar consultas SQL directamente desde R, lo que te permite acceder a y manipular grandes conjuntos de datos almacenados en bases de datos de manera eficiente.
-</details>
-<details>
-<summary>
-Clase 9: La Elegancia de la programación funcional
-</summary>
-Con <code>purrr</code>, transformarás tu enfoque de manejar datos. Aprenderás a escribir funciones personalizadas y a iterar sobre tus datos de formas que hacen que el código no solo sea más limpio, sino también más expresivo.
-</details>
-<details>
-<summary>
-Clase 10: Extrayendo datos de la web
-</summary>
-El web scraping y las APIs abren un universo de datos disponibles en internet. Esta clase te equipará con las herramientas para recoger estos datos como <code>rvest</code> y <code>httr2</code>, permitiéndote responder preguntas que antes parecían inalcanzables.
-</details>
-<details>
-<summary>
-Clase 11: Creando documento con quarto
-</summary>
-Con <code>Quarto</code>, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.
-</details>
-<details>
-<summary>
-Clase 12: Administrando tus proyectos en RStudio
-</summary>
-Finalmente, dominarás el arte de gestionar proyectos de datos con <code>Git</code>, <code>GitHub</code>, y entornos virtuales <code>renv.</code> Esto te asegura que tus proyectos sean reproducibles, colaborativos, y organizados.
-</details>
-<hr>
-</section>
-<section id="ponte-en-contacto" class="level2">
-<h2 class="anchored" data-anchor-id="ponte-en-contacto">Ponte en contacto</h2>
-<p>La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.</p>
-<p>Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en <a href="https://www.linkedin.com/in/carlos-aguero-cr">LinkedIn</a> o en <a href="https://twitter.com/dev_aguero">Twitter</a> (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!</p>
+<section id="post-recientes" class="level2">
+<h2 class="anchored" data-anchor-id="post-recientes">Post Recientes</h2>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Tutorial,ggplot2" data-listing-date-sort="1705298400000" data-listing-file-modified-sort="1710872861929" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="106">
+<div class="thumbnail">
+<p><a href="./posts/101_ggplot2/01_bar_plot_explicado.html" class="no-external"></a></p><a href="./posts/101_ggplot2/01_bar_plot_explicado.html" class="no-external">
+<p><img src="./posts/101_ggplot2/images/mapa_cr_ggplot2.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/101_ggplot2/01_bar_plot_explicado.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/101_ggplot2/01_bar_plot_explicado.html" class="no-external">Entendiendo <code>ggplot2</code> a fondo: Gráfico 1/101</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/101_ggplot2/01_bar_plot_explicado.html" class="no-external">Ma</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
+Tutorial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
+ggplot2
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/101_ggplot2/01_bar_plot_explicado.html" class="no-external">Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/101_ggplot2/01_bar_plot_explicado.html" class="no-external">
+<div class="listing-date">
+2024-01-15
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="Guías Paso a Paso" data-listing-date-sort="1705298400000" data-listing-file-modified-sort="1710872919506" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="106">
+<div class="thumbnail">
+<p><a href="./posts/mapa_desde_cero.html" class="no-external"></a></p><a href="./posts/mapa_desde_cero.html" class="no-external">
+<p><img src="./posts/images/mapa_cr_ggplot2.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/mapa_desde_cero.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/mapa_desde_cero.html" class="no-external">Creación de Mapas de Costa Rica con ggplot2</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/mapa_desde_cero.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
+Guías Paso a Paso
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/mapa_desde_cero.html" class="no-external">Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/mapa_desde_cero.html" class="no-external">
+<div class="listing-date">
+2024-01-15
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No hay resultados
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

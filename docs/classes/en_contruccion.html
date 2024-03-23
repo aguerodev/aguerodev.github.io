@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Carlos Aguero B">
-<meta name="description" content="Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional">
 
-<title>Creación de Mapas de Costa Rica con ggplot2</title>
+<title>Curso en contrucción</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -100,21 +99,15 @@ cookieconsent.run({
   
 
 
-<meta property="og:title" content="Creación de Mapas de Costa Rica con ggplot2">
-<meta property="og:description" content="Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional">
-<meta property="og:image" content="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png">
+<meta property="og:title" content="Curso en contrucción">
+<meta property="og:description" content="Disponible a partir del 14 de abril del 2024">
 <meta property="og:site_name" content="aprendetidyverse.com">
 <meta property="og:locale" content="es_ES">
-<meta property="og:image:height" content="663">
-<meta property="og:image:width" content="1280">
-<meta name="twitter:title" content="Creación de Mapas de Costa Rica con ggplot2">
-<meta name="twitter:description" content="Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional">
-<meta name="twitter:image" content="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png">
+<meta name="twitter:title" content="Curso en contrucción">
+<meta name="twitter:description" content="Disponible a partir del 14 de abril del 2024">
 <meta name="twitter:creator" content="@dev_aguero">
 <meta name="twitter:site" content="@dev_aguero">
-<meta name="twitter:image-height" content="663">
-<meta name="twitter:image-width" content="1280">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -135,13 +128,59 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../courses/index.html"> 
-<span class="menu-text">Cursos R Intensivo</span></a>
+    <a class="nav-link" href="../classes/index.qmd"> 
+<span class="menu-text">Cursos</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../lunes_pr.html"> 
-<span class="menu-text">Sesiones de Consultas (gratis)</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-entendiendo-ggplot2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Entendiendo ggplot2</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-entendiendo-ggplot2">    
+        <li class="dropdown-header">Antes de comenzar</li>
+        <li>
+    <a class="dropdown-item" href="../courses/entendiento_ggplot2/class_01.html">
+ <span class="dropdown-text">1. Introducción a Tidyverse</span></a>
   </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semana-1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Semana 1</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-semana-1">    
+        <li class="dropdown-header">Antes de comenzar</li>
+        <li>
+    <a class="dropdown-item" href="../classes/intro.html">
+ <span class="dropdown-text">Presentación del curso</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../classes/prep.html">
+ <span class="dropdown-text">Instalar R, RStudio y Quarto</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Semana 1</li>
+        <li>
+    <a class="dropdown-item" href="../classes/semana_1/class_01.html">
+ <span class="dropdown-text">1. Introducción a Tidyverse</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../classes/semana_1/class_01.2.html">
+ <span class="dropdown-text">2. Filtrar y ordenar datos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../classes/semana_1/class_01.3.html">
+ <span class="dropdown-text">3. Tomando porciones de los datos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../classes/semana_1/class_01.4.html">
+ <span class="dropdown-text">4. Trabajando con datos agrupados</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../classes/semana_1/class_01.5.html">
+ <span class="dropdown-text">5. Evaluación</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../posts.html"> 
 <span class="menu-text">Blog</span></a>
@@ -179,30 +218,18 @@ cookieconsent.run({
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="images/logo.png" class="img-fluid" style="width: 600px; height: 150px; object-fit: cover;"></p>
-</div></div>
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
-   
-  <ul>
-  <li><a href="#descargar-datos" id="toc-descargar-datos" class="nav-link active" data-scroll-target="#descargar-datos">Descargar datos</a></li>
-  </ul>
-<div class="quarto-other-links"><h2>Otros Enlaces</h2><ul><li><a href="https://data.nasa.gov/"><i class="bi bi-link-45deg"></i>Instituto Geográfico Nacional</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Creación de Mapas de Costa Rica con ggplot2</h1>
-  </div>
-
-<div>
-  <div class="description">
-    Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional
-  </div>
+<h1 class="title">Curso en contrucción</h1>
+<p class="subtitle lead">Disponible a partir del 14 de abril del 2024</p>
 </div>
+
 
 
 <div class="quarto-title-meta">
@@ -214,12 +241,6 @@ cookieconsent.run({
           </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">15 de enero de 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -229,14 +250,8 @@ cookieconsent.run({
 </header>
 
 
-<p><img src="images/mapa_cr_ggplot2.png" class="img-fluid"></p>
-<section id="descargar-datos" class="level2">
-<h2 class="anchored" data-anchor-id="descargar-datos">Descargar datos</h2>
-<script src="https://giscus.app/client.js" data-repo="aguerodev/aguerodev.github.io" data-repo-id="R_kgDOLYhGtA" data-category="General" data-category-id="DIC_kwDOLYhGtM4CeD_i" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="es" crossorigin="anonymous" async="">
-</script>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -625,8 +640,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<script src="https://utteranc.es/client.js" repo="quarto-dev/quarto-docs" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">
