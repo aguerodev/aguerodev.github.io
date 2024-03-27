@@ -1,69 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-<<<<<<< Updated upstream
-    <loc>https://aprendetidyverse.com/projects.html</loc>
-    <lastmod>2024-03-24T00:46:37.167Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/posts/101_ggplot2/plot_01.html</loc>
-    <lastmod>2024-03-24T00:46:37.165Z</lastmod>
-=======
     <loc>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</loc>
-    <lastmod>2024-03-27T04:27:20.747Z</lastmod>
->>>>>>> Stashed changes
+    <lastmod>2024-03-24T14:43:36.180Z</lastmod>
   </url>
   <url>
     <loc>https://aprendetidyverse.com/lunes_pr.html</loc>
-    <lastmod>2024-03-24T00:50:46.637Z</lastmod>
+    <lastmod>2024-03-24T02:59:17.084Z</lastmod>
   </url>
   <url>
     <loc>https://aprendetidyverse.com/courses/index.html</loc>
-    <lastmod>2024-03-24T00:46:37.145Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/course.html</loc>
-    <lastmod>2024-03-24T00:46:37.145Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/classes/semana_1/class_01.5.html</loc>
-    <lastmod>2024-03-24T00:46:37.140Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/classes/semana_1/class_01.3.html</loc>
-    <lastmod>2024-03-24T00:46:37.140Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/classes/prep.html</loc>
-    <lastmod>2024-03-24T00:46:37.139Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/classes/en_contruccion.html</loc>
-    <lastmod>2024-03-24T00:46:37.122Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/classes/cal_com.html</loc>
-    <lastmod>2024-03-24T00:46:37.122Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/classes/intro.html</loc>
-    <lastmod>2024-03-24T00:46:37.130Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/classes/semana_1/class_01.2.html</loc>
-    <lastmod>2024-03-24T00:46:37.140Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/classes/semana_1/class_01.4.html</loc>
-    <lastmod>2024-03-24T00:46:37.140Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/classes/semana_1/class_01.html</loc>
-    <lastmod>2024-03-24T00:46:37.140Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/courses/entendiento_ggplot2/class_01.html</loc>
-    <lastmod>2024-03-24T00:46:37.145Z</lastmod>
+    <lastmod>2024-03-24T01:16:46.498Z</lastmod>
   </url>
   <url>
     <loc>https://aprendetidyverse.com/index.html</loc>
@@ -71,14 +18,6 @@
   </url>
   <url>
     <loc>https://aprendetidyverse.com/posts.html</loc>
-<<<<<<< Updated upstream
-    <lastmod>2024-03-24T00:46:37.163Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/posts/mapa_desde_cero.html</loc>
-    <lastmod>2024-03-24T00:46:37.167Z</lastmod>
-=======
-    <lastmod>2024-03-27T04:27:20.746Z</lastmod>
->>>>>>> Stashed changes
+    <lastmod>2024-03-24T01:06:52.710Z</lastmod>
   </url>
 </urlset>

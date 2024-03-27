@@ -3,6 +3,7 @@ title: "¿Estás lidiando con problemas en R?"
 subtitle: "Unete a nuestros lunes de preguntas y respuesta"
 description: "Resuelve tus dudas de R cada lunes a las 7:00 p.m. ¡Únete a nuestras sesiones de preguntas y respuestas para recibir asesoría personalizada y consejos prácticos que te ayudarán a avanzar en tu aprendizaje de R!"
 lang: "es"
+toc: true
 comments: false
 author: "Carlos Aguero B."
 date: "2024/03/23"

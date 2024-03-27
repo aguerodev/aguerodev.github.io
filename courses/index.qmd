@@ -6,6 +6,8 @@ lang: "es"
 author: ""
 pagetitle: "Curso: R para ciencia de datos"
 image: ../images/logo.png
+margin-header: |
+     ![](../images/logo2.png){style="width: 600px; height: 150px; object-fit: cover;"}
 ---
 
 Queremos iniciar con una premisa fundamental: <mark>**cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero.**</mark> Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos para la excelencia ni caminos rápidos hacia la verdadera maestría.
@@ -151,6 +153,10 @@ Finalmente, dominarás el arte de gestionar proyectos de datos con `Git`, `GitHu
 </details>
 
 
+Aprovecha esta oportunidad única para sumergirte en el mundo de la ciencia de datos con R. Inscríbete ahora y paga un precio justo, acorde a tus posibilidades, desde $120 USD hasta $0.
+
+
+[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
 
 
 ---

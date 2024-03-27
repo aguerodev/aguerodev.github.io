@@ -10,42 +10,184 @@
 <atom:link href="https://aprendetidyverse.com/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.549</generator>
-<lastBuildDate>Mon, 15 Jan 2024 06:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 08 Feb 2024 06:00:00 GMT</lastBuildDate>
 <item>
-  <title>101 gráficos con ggplot2: 1/101</title>
-  <link>https://aprendetidyverse.com/posts/101_ggplot2/plot_01.html</link>
+  <title>Cómo crear mapas de Costa Rica en R con ggplot2</title>
+  <link>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p><img src="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png" class="img-fluid"></p>
-<section id="descargar-datos" class="level2">
-<h2 class="anchored" data-anchor-id="descargar-datos">Descargar datos</h2>
-<script src="https://giscus.app/client.js" data-repo="aguerodev/aguerodev.github.io" data-repo-id="R_kgDOLYhGtA" data-category="General" data-category-id="DIC_kwDOLYhGtM4CeD_i" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="es" crossorigin="anonymous" async="">
-</script>
+<p>En febrero de este año se realizaron en costa rica elecciones municipales y algunos cantones como monteverde y puerto jimenez participan por primera vez,</p>
+<ul>
+<li>Rio Cuarto 2018</li>
+<li>Monteverde 2021</li>
+<li>Puerto Jimenez 2022</li>
+<li>Colorado febrero 2024 <em>(no disponible aun)</em></li>
+</ul>
+<p>¿Qué es exactamente lo que vamos a hacer? Bueno, vamos a usar R para descargar datos de los cantones de Costa Rica del Instituto Geográfico Nacional, vamos a simplificarlos para que puedan correr rápido en una computadora con recursos limitados y, después de algunos ajustes, vamos a hacer un mapa de los cantones de Costa Rica utilizando ggplot2.</p>
+<p>https://sinabi.go.cr/biblioteca%20digital/periodicos/boletin%20oficial/boletin%20oficial%201854/01f-JUNIO%20%20%20%201854%20No.%2025%20al%2029.pdf</p>
 
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Creación del cantón de Río Cuarto, cantón XVI de la provincia de Alajuela. <a href="https://delfino.cr/asamblea/proyecto/20787">leer más</a></p>
+<p>Creación del cantón de Monteverde, cantón XII de la provincia de Puntarenas. <a href="https://delfino.cr/asamblea/proyecto/21618">leer más</a></p>
+<p>Creación del cantón de Puerto Jiménez, cantón XIII de la provincia de Puntarenas. <a href="https://delfino.cr/asamblea/proyecto/22749">leer más</a></p>
+<p>Creación del cantón de Colorado, cantón XII de la provincia de Guanacaste. <a href="https://delfino.cr/asamblea/proyecto/22643">leer más</a> <br> Hay proyectos de ley vigente para la creación de los cantones: Cervantes, Peñas Blancas, Jicaral, Cóbano, Paquera, Ojo de Agua. <a href="https://delfino.cr/2024/02/mideplan-coordinacion-municipal-no-se-resuelve-transformando-las-intendencias-en-cantones">leer más</a></p>
+</div><div class="">
+<p>Cambio de nombre al cantón de Valverde Vega por el de Sarchí. <a href="https://www.nacion.com/el-pais/politica/diputados-cambian-nombre-a-valverde-vega-ahora-se/EFMBKHUUL5EIROIYOVFF3DYVPQ/story/">leer más</a></p>
+</div><div class="">
+<p>Cambio de nombre al cantón de Aguirre, que ahora se conocerá como Quepos. <a href="https://archivo.crhoy.com/diputados-cambian-el-nombre-del-canton-de-aguirre-al-de-quepos/nacionales/">leer más</a></p>
+</div></div>
 
+<section id="ante-de-comenzar" class="level2">
+<h2 class="anchored" data-anchor-id="ante-de-comenzar">Ante de comenzar</h2>
+<p>Verifica que tengas instalados los siguientes paquetes:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyverse)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(sf)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(httr2)</span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ows4R)</span></code></pre></div>
+</div>
 </section>
-
- ]]></description>
-  <category>Tutorial</category>
-  <category>ggplot2</category>
-  <guid>https://aprendetidyverse.com/posts/101_ggplot2/plot_01.html</guid>
-  <pubDate>Mon, 15 Jan 2024 06:00:00 GMT</pubDate>
-  <media:content url="https://aprendetidyverse.com/posts/101_ggplot2/images/mapa_cr_ggplot2.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Creación de Mapas de Costa Rica con ggplot2</title>
-  <link>https://aprendetidyverse.com/posts/mapa_desde_cero.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p><img src="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png" class="img-fluid"></p>
-<section id="descargar-datos" class="level2">
-<h2 class="anchored" data-anchor-id="descargar-datos">Descargar datos</h2>
+<section id="descargar-datos-del-ign" class="level2">
+<h2 class="anchored" data-anchor-id="descargar-datos-del-ign">Descargar datos del IGN</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">wfs_bwk <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"</span></span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">url <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">url_parse</span>(wfs_bwk)</span>
+<span id="cb3-2">url<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>query <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb3-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">service =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"wfs"</span>,</span>
+<span id="cb3-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">request =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"GetCapabilities"</span></span>
+<span id="cb3-5">  )</span>
+<span id="cb3-6">request <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">url_build</span>(url)</span>
+<span id="cb3-7">request</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">bwk_client <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> WFSClient<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">new</span>(wfs_bwk, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">serviceVersion =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2.0.0"</span>)</span>
+<span id="cb4-2">bwk_client<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">getFeatureTypes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">pretty =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">wfs_bwk <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"</span></span>
+<span id="cb5-2">url <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">url_parse</span>(wfs_bwk)</span>
+<span id="cb5-3">url<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>query <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">service =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"wfs"</span>,</span>
+<span id="cb5-4">                  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#version = "2.0.0", # optional</span></span>
+<span id="cb5-5">                  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">request =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"GetFeature"</span>,</span>
+<span id="cb5-6">                  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">typename =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"IGN_5_CO:limitecantonal_5k"</span>,</span>
+<span id="cb5-7">                  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">srsName =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"EPSG:4326"</span></span>
+<span id="cb5-8">                  )</span>
+<span id="cb5-9">request <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">url_build</span>(url)</span>
+<span id="cb5-10"></span>
+<span id="cb5-11">bel_regions <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_sf</span>(request) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#Lambert2008</span></span></code></pre></div>
+</div>
+</section>
+<section id="simplificar-geometias-son-el-paquete-sf" class="level2">
+<h2 class="anchored" data-anchor-id="simplificar-geometias-son-el-paquete-sf">Simplificar geometias son el paquete sf</h2>
+</section>
+<section id="creación-de-un-mapa-utilizando-ggplot2" class="level2">
+<h2 class="anchored" data-anchor-id="creación-de-un-mapa-utilizando-ggplot2">Creación de un mapa utilizando ggplot2</h2>
+<p>Alfaro Ruiz a Zarcero en 2010 https://es.wikipedia.org/wiki/Cant%C3%B3n_de_Zarcero</p>
+<p>aguirre a quepos 2015 https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&amp;nValor1=1&amp;nValor2=79730&amp;nValor3=100935&amp;strTipM=TC</p>
+<p>Valverde Vega por el de Sarchí 2019</p>
+<p>https://delfino.cr/asamblea/proyecto/19469</p>
+</section>
+<section id="consideraciones-importantes" class="level2">
+<h2 class="anchored" data-anchor-id="consideraciones-importantes">Consideraciones importantes</h2>
 <script src="https://giscus.app/client.js" data-repo="aguerodev/aguerodev.github.io" data-repo-id="R_kgDOLYhGtA" data-category="General" data-category-id="DIC_kwDOLYhGtM4CeD_i" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="es" crossorigin="anonymous" async="">
 </script>
 
@@ -54,8 +196,9 @@
 
  ]]></description>
   <category>Guías Paso a Paso</category>
-  <guid>https://aprendetidyverse.com/posts/mapa_desde_cero.html</guid>
-  <pubDate>Mon, 15 Jan 2024 06:00:00 GMT</pubDate>
+  <category>ggplot2</category>
+  <guid>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</guid>
+  <pubDate>Thu, 08 Feb 2024 06:00:00 GMT</pubDate>
   <media:content url="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png" medium="image" type="image/png" height="75" width="144"/>
 </item>
 </channel>

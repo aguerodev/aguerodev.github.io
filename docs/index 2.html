@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.549">
@@ -8,7 +8,7 @@
 
 <meta name="author" content="">
 
-<title>R para ciencia de datos</title>
+<title>Aprende Tidyverse</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,6 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./favicon.ico" rel="icon">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -57,19 +59,48 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7HH46G4FS3"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -92,19 +123,48 @@ cookieconsent.run({
   "preferences_center_close_button_hide":false,
   "website_name":""
   ,
-"language":"en"
+"language":"es"
   });
 });
 </script> 
   
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="R para ciencia de datos">
-<meta property="og:description" content="Convirtiendo datos en decisiones poderosas">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="alternate" type="application/rss+xml" title="Aprende Tidyverse" href="index.xml" data-external="1"><meta property="og:title" content="Aprende Tidyverse">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="aprendetidyverse.com">
 <meta property="og:locale" content="es_ES">
-<meta name="twitter:title" content="R para ciencia de datos">
-<meta name="twitter:description" content="Convirtiendo datos en decisiones poderosas">
+<meta name="twitter:title" content="Aprende Tidyverse">
+<meta name="twitter:description" content="">
 <meta name="twitter:creator" content="@dev_aguero">
 <meta name="twitter:site" content="@dev_aguero">
 <meta name="twitter:card" content="summary">
@@ -121,8 +181,8 @@ cookieconsent.run({
     <span class="navbar-title">Aprende Tidyverse</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -174,174 +234,91 @@ cookieconsent.run({
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#inscríbete-ahora-inicio-de-clases-6-de-marzo." id="toc-inscríbete-ahora-inicio-de-clases-6-de-marzo." class="nav-link active" data-scroll-target="#inscríbete-ahora-inicio-de-clases-6-de-marzo.">Inscríbete ahora inicio de clases 6 de marzo.</a></li>
-  <li><a href="#descripción-del-curso" id="toc-descripción-del-curso" class="nav-link" data-scroll-target="#descripción-del-curso">Descripción del curso</a></li>
-  <li><a href="#testimonios-y-comentarios" id="toc-testimonios-y-comentarios" class="nav-link" data-scroll-target="#testimonios-y-comentarios">Testimonios y comentarios</a></li>
-  <li><a href="#temario-del-curso" id="toc-temario-del-curso" class="nav-link" data-scroll-target="#temario-del-curso">Temario del curso</a></li>
-  <li><a href="#inscripción" id="toc-inscripción" class="nav-link" data-scroll-target="#inscripción">Inscripción</a></li>
+  <li><a href="#curso-r-para-ciencia-de-datos" id="toc-curso-r-para-ciencia-de-datos" class="nav-link active" data-scroll-target="#curso-r-para-ciencia-de-datos">Curso R para ciencia de datos</a></li>
+  <li><a href="#ponte-en-contacto" id="toc-ponte-en-contacto" class="nav-link" data-scroll-target="#ponte-en-contacto">Ponte en contacto</a></li>
+  <li><a href="#post-recientes" id="toc-post-recientes" class="nav-link" data-scroll-target="#post-recientes">Post Recientes</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">R para ciencia de datos</h1>
-<p class="subtitle lead">Convirtiendo datos en decisiones poderosas</p>
+
+
+
+<p><img src="images/logo.png" class="img-fluid" style="width: 600px; height: 150px; object-fit: cover;"></p>
+<p>Aprende Tidyverse es una iniciativa que busca contribuir a la comunidad hispanohablante de usuarios de R, ofreciendo de forma gratuita cursos, tutoriales, guías paso a paso y todo lo que se nos ocurra por el camino. ¿Lo mejor? Aprendemos juntos y, ¿por qué no?, nos divertimos en el proceso.</p>
+<section id="curso-r-para-ciencia-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="curso-r-para-ciencia-de-datos">Curso R para ciencia de datos</h2>
+<p>Puedes inscribirte por un precio <mark><strong>desde los $0 USD hasta los $120 USD</strong>.</mark> Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.</p>
+<ul>
+<li><strong>Próxima apertura:</strong> <mark><strong>jueves 25 de abril del 2024</strong></mark>
+<ul>
+<li>Lecciones: jueves y sábados</li>
+<li>Costa Rica/México: 6:00 p.m.</li>
+<li>Colombia: 7:00 p.m.</li>
+<li>Argentina: 9:00 p.m.</li>
+</ul></li>
+</ul>
+<p><em>Descuentos de hasta el 75% para estudiantes y académicos. Si tu situación económica o restricciones de tu país no te permiten hacer un pago en línea por el curso, siéntete en total libertad de llevarlo <mark><strong>totalmente gratis.</strong></mark></em></p>
+<p><a href="./courses/index.html" class="btn btn-outline-primary" role="button">Ver los detalles del curso</a></p>
+</section>
+<section id="ponte-en-contacto" class="level2">
+<h2 class="anchored" data-anchor-id="ponte-en-contacto">Ponte en contacto</h2>
+<p>La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.</p>
+<p>Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en <a href="https://www.linkedin.com/in/carlos-aguero-cr">LinkedIn</a> o en <a href="https://twitter.com/dev_aguero">Twitter</a> (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!</p>
+<hr>
+</section>
+<section id="post-recientes" class="level2">
+<h2 class="anchored" data-anchor-id="post-recientes">Post Recientes</h2>
+
+
+
+</section>
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Guías Paso a Paso,ggplot2" data-listing-date-sort="1705298400000" data-listing-file-modified-sort="1711253123272" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="364">
+<div class="thumbnail">
+<p><a href="./posts/001_mapa_cantones_cr.html" class="no-external"></a></p><a href="./posts/001_mapa_cantones_cr.html" class="no-external">
+<p><img src="./posts/images/mapa_cr_ggplot2.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/001_mapa_cantones_cr.html" class="no-external"></a></p>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="inscríbete-ahora-inicio-de-clases-6-de-marzo." class="level3">
-<h3 class="anchored" data-anchor-id="inscríbete-ahora-inicio-de-clases-6-de-marzo."><a href="https://buy.stripe.com/3cs7svcVoaVQ1fG8wy">Inscríbete ahora inicio de clases 6 de marzo</a>.</h3>
-<p>En mi último año de carrera en ingeniería en sistemas de información, descubrí un tesoro: “<a href="https://r4ds.hadley.nz">R for Data Science</a>” de Hadley Wickham y Garrett Grolemund en su primera edición. Este libro no era simplemente un manual; era una revelación, mostrándome un universo completamente nuevo dentro del lenguaje R, conocido como tidyverse. A lo largo de los años, he tenido el privilegio de enseñar ciencia de datos a <strong>más de 400 estudiantes de más de 5 países de América Latina</strong>, viendo cómo este enfoque transformaba la manera en que abordamos los datos.</p>
-<p>Hoy, 8 años más tarde, el cambio es palpable. Tidyverse ha madurado de forma sorprendente, democratizando el análisis de datos. Permite a aquellos sin un trasfondo en programación adentrarse en la lectura, limpieza, análisis, y visualización de datos con una lógica coherente y un código diseñado para ser fácilmente comprensible. Durante el 2020, en el apogeo de la pandemia, fui parte de una iniciativa de RStudio que buscaba formar <a href="https://education.rstudio.com/trainers/">instructores capacitados para enseñar R</a>, especialmente a no programadores. Tuve el honor de ser alumno de Greg Wilson, cofundador de <a href="https://carpentries.org">The Carpentries</a> y autor de <a href="https://teachtogether.tech/en/index.html">Teaching Tech Together</a>, una obra que considero esencial para quien desee enseñar programación de manera efectiva.</p>
-<p>Con estos pilares de conocimiento y experiencia, hemos diseñado este curso dirigido <strong>especialmente a no informáticos</strong>. Este programa no solo busca impartir habilidades prácticas y aplicables en ciencia de datos de manera intuitiva y sencilla, sino que también se enfoca en la resolución de problemas cotidianos. Desde fútbol hasta películas, música y cuestiones sociales, exploraremos cómo utilizar R y tidyverse como herramientas para convertirnos en solucionadores de problemas. Este es más que un curso; es una invitación a cambiar la forma en que ves el mundo a través de los datos.</p>
-</section>
-<section id="descripción-del-curso" class="level2">
-<h2 class="anchored" data-anchor-id="descripción-del-curso">Descripción del curso</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<section id="características-del-curso" class="level4">
-<h4 class="anchored" data-anchor-id="características-del-curso">🚀 Características del Curso</h4>
-<ul>
-<li><strong>Duración:</strong> 6 semanas.</li>
-<li><strong>Modalidad:</strong> En vivo, a través de Zoom, promoviendo la interacción y el aprendizaje activo.</li>
-<li><strong>Frecuencia:</strong> Clases 2 veces a la semana (miércoles y sábados).</li>
-<li><strong>Horario:</strong> 6 p.m. Hora de Costa Rica (UTC -6).</li>
-</ul>
-</section>
-</div><div class="column" style="width:50%;">
-<section id="estructura-del-curso" class="level4">
-<h4 class="anchored" data-anchor-id="estructura-del-curso">📚 Estructura del Curso</h4>
-<ul>
-<li><strong>Lecciones en Vivo:</strong> 12 clases, aproximadamente 2 horas cada una.</li>
-<li><strong>Sesiones de Seguimiento Privadas:</strong> 6 sesiones de 45 minutos con el instructor para personalizar tu aprendizaje.</li>
-<li><strong>Grabaciones:</strong> Acceso a grabaciones de cada clase, enviadas por correo electrónico 24 horas después.</li>
-</ul>
-</section>
-</div><div class="column" style="width:100%;">
-<section id="costo-e-información-de-pago" class="level4">
-<h4 class="anchored" data-anchor-id="costo-e-información-de-pago">💳 Costo e Información de Pago</h4>
-<ul>
-<li><strong>Costo:</strong> $300 USD.</li>
-<li><strong>Métodos de Pago:</strong> Aceptamos pagos vía tarjeta de crédito o débito via <a href="https://stripe.com/es-us">Stripe</a>, la plataforma de pagos en linea más utilizada por grantes empresas.</li>
-<li><strong>Métodos de Pago Alternativos:</strong> En el caso de los estudiantes de Costa Rica puede hacer el pago de forma manual mediente una tranferencia bancaria para esto escribe a info@aprendetidyverse.com para solicitar hacer el pago por este medio.</li>
-<li><strong>Inscríbete ahora:</strong> <a href="https://buy.stripe.com/3cs7svcVoaVQ1fG8wy">Enlace de pago</a>.</li>
-</ul>
-</section>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/001_mapa_cantones_cr.html" class="no-external">Cómo crear mapas de Costa Rica en R con ggplot2</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/001_mapa_cantones_cr.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
+Guías Paso a Paso
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
+ggplot2
 </div>
 </div>
-<p>Si tienes dudas programa una 🎥 <a href="https://cal.com/aprendetidyverse/15min">sesión de 15 minutos con el instructor via zoom</a> para resolver dudas y revisar temas de interés. ¡Asegura que el curso cumpla con tus expectativas!</p>
-</section>
-<section id="testimonios-y-comentarios" class="level2">
-<h2 class="anchored" data-anchor-id="testimonios-y-comentarios">Testimonios y comentarios</h2>
-<iframe height="800px" id="testimonialto-r-para-ciencia-de-datos-tag-all-light-animated" src="https://embed-v2.testimonial.to/w/r-para-ciencia-de-datos?animated=on&amp;theme=light&amp;shadowColor=ffffff&amp;speed=1&amp;hideSource&amp;tag=all" frameborder="0" scrolling="no" width="100%">
-</iframe>
-<p>Puedes leer más comentarios en mi <a href="https://www.linkedin.com/in/carlos-aguero-cr/details/recommendations">perfil de linkedin</a></p>
-</section>
-<section id="temario-del-curso" class="level2">
-<h2 class="anchored" data-anchor-id="temario-del-curso">Temario del curso</h2>
-<details open="">
-<summary>
-Clase 1: Descubriendo R y el Tidyverse
-</summary>
-Esta clase te introduce a R y el conjunto de herramientas del Tidyverse. Aquí aprenderás a configurar tu espacio de trabajo en RStudio, cómo leer archivos .csv y empezarás a jugar con tus datos, dándoles un primer vistazo y creando visualizaciones sencillas.
-</details>
-<details>
-<summary>
-Clase 2: Comenzamos a explorar los datos
-</summary>
-En esta clase, te adentrarás en el corazón de <code>dplyr</code> y <code>tidyr</code>, donde la magia de la manipulación de datos realmente sucede. Aprenderás a filtrar, seleccionar, y transformar tus datos para revelar las historias ocultas que tienen para contar.
-</details>
-<details>
-<summary>
-Clase 3: Inicia en la visualización de Datos
-</summary>
-Aquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando <code>ggplot2</code> para crear tus primeros gráfico. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapte a tus necesidades.
-</details>
-<details>
-<summary>
-Clase 4: Lectura y limpieza de datos
-</summary>
-Esta clase te enseñará a ser capaz de leer datos almacenados en <code>CSV</code>, <code>Excel</code>, <code>SPSS</code>, entre otros. Ya sea que estés trabajando con <code>texto</code>, <code>números</code>, <code>fechas</code>, o cualquier otro tipo, aprenderás las habilidades para manejarlos todos con eficiencia.
-</details>
-<details>
-<summary>
-Clase 5: El arte de trabajar con textos y techas
-</summary>
-Las <strong>expresiones regulares</strong> y el <strong>manejo de fechas</strong> pueden parecer hechizos complicados, pero después de esta clase, serán herramientas poderosas en tu arsenal. Aprenderás a limpiar y filtrar tus datos de manera eficiente con los paquetes <code>stringr</code> y <code>lubridate</code> convirtiendo el caos en orden con solo unas pocas líneas de código.
-</details>
-<details>
-<summary>
-Clase 6: Entendiendo los datos relacionales
-</summary>
-En esta clase te enseña a unir diferentes conjuntos de datos para descubrir conexiones ocultas. Dominarás los <code>joins</code> y aprenderás sobre las <code>llaves</code> y las <code>relaciones</code>, lo que te permitirá combinar datos de fuentes diversas para obtener insights más profundos.
-</details>
-<details>
-<summary>
-Clase 7: Explorando con gráficos avanzados
-</summary>
-Con <code>ggplot2</code> y <code>plotly</code>, esta clase aprenderás a crear gráficos interactivos y explorar <strong>datos geoespaciales</strong>, llevando tus habilidades narrativas a nuevas dimensiones.
-</details>
-<details>
-<summary>
-Clase 8: Conecta R con el mundo las bases de datos SQL
-</summary>
-Aquí, R se encuentra con el poder de las bases de datos SQL. Aprenderás a realizar consultas SQL directamente desde R, lo que te permite acceder a y manipular grandes conjuntos de datos almacenados en bases de datos de manera eficiente.
-</details>
-<details>
-<summary>
-Clase 9: La Elegancia de la programación funcional
-</summary>
-Con <code>purrr</code>, transformarás tu enfoque de manejar datos. Aprenderás a escribir funciones personalizadas y a iterar sobre tus datos de formas que hacen que el código no solo sea más limpio, sino también más expresivo.
-</details>
-<details>
-<summary>
-Clase 10: Extrayendo datos de la web
-</summary>
-El web scraping y las APIs abren un universo de datos disponibles en internet. Esta clase te equipará con las herramientas para recoger estos datos como <code>rvest</code> y <code>httr2</code>, permitiéndote responder preguntas que antes parecían inalcanzables.
-</details>
-<details>
-<summary>
-Clase 11: Creando documento con quarto
-</summary>
-Con <code>Quarto</code>, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.
-</details>
-<details>
-<summary>
-Clase 12: Manejo de proyectos de datos
-</summary>
-Finalmente, dominarás el arte de gestionar proyectos de datos con <code>Git</code>, <code>GitHub</code>, y entornos virtuales <code>renv.</code> Esto te asegura que tus proyectos sean reproducibles, colaborativos, y organizados.
-</details>
-</section>
-<section id="inscripción" class="level2">
-<h2 class="anchored" data-anchor-id="inscripción">Inscripción</h2>
-<p>📅 <strong>Comienza Tu Aventura:</strong> Recuerda que el inicio de clases es el miércoles 6 de marzo de 2024, <a href="https://buy.stripe.com/3cs7svcVoaVQ1fG8wy"><strong>Inscríbete ahora</strong></a>.</p>
-<p>Una vez hayas confirmado el pago, recibirás por correo electrónico (al correo que utilizaste para realizar el pago) la confirmación junto con todos los datos relevantes, incluyendo los enlaces de acceso y fechas importantes.</p>
-<p>Si tienes dudas programa una <a href="https://cal.com/aprendetidyverse/15min">sesión de 15 minutos con el instructor</a> para resolver dudas y revisar temas de interés. ¡Asegura que el curso cumpla con tus expectativas!</p>
-<p>Puedes escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en <a href="https://www.linkedin.com/in/carlos-aguero-cr">LinkedIn</a> o en <a href="https://twitter.com/dev_aguero">Twitter</a></p>
-
-
-</section>
-
-</main> <!-- /main -->
+<div class="listing-description">
+<a href="./posts/001_mapa_cantones_cr.html" class="no-external">Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/001_mapa_cantones_cr.html" class="no-external">
+<div class="listing-date">
+2024-01-15
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No hay resultados
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -396,12 +373,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiado");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiado");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

@@ -2,15 +2,13 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/101_ggplot2/plot_01.html",
-      "/posts/mapa_desde_cero.html"
+      "/posts/001_mapa_cantones_cr.html"
     ]
   },
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/101_ggplot2/plot_01.html",
-      "/posts/mapa_desde_cero.html"
+      "/posts/001_mapa_cantones_cr.html"
     ]
   }
 ]
