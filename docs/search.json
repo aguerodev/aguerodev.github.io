@@ -2,44 +2,51 @@
   {
     "objectID": "posts/001_mapa_cantones_cr.html",
     "href": "posts/001_mapa_cantones_cr.html",
-    "title": "Cómo crear mapas de Costa Rica en R con ggplot2",
+    "title": "Actualizando el Mapa: Un repaso de los cambios territoriales y nombres de cantones en Costa Rica",
     "section": "",
-    "text": "En febrero de este año se realizaron en costa rica elecciones municipales y algunos cantones como monteverde y puerto jimenez participan por primera vez,\n¿Qué es exactamente lo que vamos a hacer? Bueno, vamos a usar R para descargar datos de los cantones de Costa Rica del Instituto Geográfico Nacional, vamos a simplificarlos para que puedan correr rápido en una computadora con recursos limitados y, después de algunos ajustes, vamos a hacer un mapa de los cantones de Costa Rica utilizando ggplot2.\nhttps://sinabi.go.cr/biblioteca%20digital/periodicos/boletin%20oficial/boletin%20oficial%201854/01f-JUNIO%20%20%20%201854%20No.%2025%20al%2029.pdf"
+    "text": "A inicios de este año en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con ggplot2 de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Voy rápidamente a mi carpeta de algún curso de la universidad y busco el ejemplo en donde realizábamos un mapa. Al ejecutar el código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que efectivamente en los últimos años se han creado nuevos cantones. Río Cuarto1 se separa del cantón de Grecia, Monteverde2 de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez3 se separa de Golfito y pasa a ser un cantón.\nPasa entonces que la fuente de datos para el mapa (shapefile) que tenia guardados están desactualizados. Yo salí de la Universidad en 2016, y fue justo en 2017 que comenzó la aparición de nuevos cantones de forma un poco acelerada.\nSi a esto le sumamos que algunos cantones que ya existían antes de 2016 han cambiado de nombre, Alfaro Ruiz ahora es conocido como Zarcero4, Valverde Vega se ha transformado en Sarchí5, y Aguirre ha pasado a llamarse Quepos6. En este punto, algo que creí serían 10 líneas de código, un problema de copiar y pegar, se convertía en algo más interesante. Así que en este tutorial veremos cómo realizar un gráfico actualizado de los cantones de Costa Rica, utilizando como fuente de datos los servicios del Instituto Geográfico Nacional."
   },
   {
     "objectID": "posts/001_mapa_cantones_cr.html#ante-de-comenzar",
     "href": "posts/001_mapa_cantones_cr.html#ante-de-comenzar",
-    "title": "Cómo crear mapas de Costa Rica en R con ggplot2",
+    "title": "Actualizando el Mapa: Un repaso de los cambios territoriales y nombres de cantones en Costa Rica",
     "section": "Ante de comenzar",
     "text": "Ante de comenzar\nVerifica que tengas instalados los siguientes paquetes:\n\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(httr2)\nlibrary(ows4R)"
   },
   {
     "objectID": "posts/001_mapa_cantones_cr.html#descargar-datos-del-ign",
     "href": "posts/001_mapa_cantones_cr.html#descargar-datos-del-ign",
-    "title": "Cómo crear mapas de Costa Rica en R con ggplot2",
+    "title": "Actualizando el Mapa: Un repaso de los cambios territoriales y nombres de cantones en Costa Rica",
     "section": "Descargar datos del IGN",
     "text": "Descargar datos del IGN\n\nwfs_bwk &lt;- \"https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?\"\n\n\nurl &lt;- url_parse(wfs_bwk)\nurl$query &lt;- list(\n  service = \"wfs\",\n  request = \"GetCapabilities\"\n  )\nrequest &lt;- url_build(url)\nrequest\n\n\nbwk_client &lt;- WFSClient$new(wfs_bwk, serviceVersion = \"2.0.0\")\nbwk_client$getFeatureTypes(pretty = TRUE)\n\n\nwfs_bwk &lt;- \"https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?\"\nurl &lt;- url_parse(wfs_bwk)\nurl$query &lt;- list(service = \"wfs\",\n                  #version = \"2.0.0\", # optional\n                  request = \"GetFeature\",\n                  typename = \"IGN_5_CO:limitecantonal_5k\",\n                  srsName = \"EPSG:4326\"\n                  )\nrequest &lt;- url_build(url)\n\nbel_regions &lt;- read_sf(request) #Lambert2008"
   },
   {
     "objectID": "posts/001_mapa_cantones_cr.html#simplificar-geometias-son-el-paquete-sf",
     "href": "posts/001_mapa_cantones_cr.html#simplificar-geometias-son-el-paquete-sf",
-    "title": "Cómo crear mapas de Costa Rica en R con ggplot2",
+    "title": "Actualizando el Mapa: Un repaso de los cambios territoriales y nombres de cantones en Costa Rica",
     "section": "Simplificar geometias son el paquete sf",
     "text": "Simplificar geometias son el paquete sf"
   },
   {
     "objectID": "posts/001_mapa_cantones_cr.html#creación-de-un-mapa-utilizando-ggplot2",
     "href": "posts/001_mapa_cantones_cr.html#creación-de-un-mapa-utilizando-ggplot2",
-    "title": "Cómo crear mapas de Costa Rica en R con ggplot2",
+    "title": "Actualizando el Mapa: Un repaso de los cambios territoriales y nombres de cantones en Costa Rica",
     "section": "Creación de un mapa utilizando ggplot2",
-    "text": "Creación de un mapa utilizando ggplot2\nAlfaro Ruiz a Zarcero en 2010 https://es.wikipedia.org/wiki/Cant%C3%B3n_de_Zarcero\naguirre a quepos 2015 https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=79730&nValor3=100935&strTipM=TC\nValverde Vega por el de Sarchí 2019\nhttps://delfino.cr/asamblea/proyecto/19469"
+    "text": "Creación de un mapa utilizando ggplot2"
   },
   {
     "objectID": "posts/001_mapa_cantones_cr.html#consideraciones-importantes",
     "href": "posts/001_mapa_cantones_cr.html#consideraciones-importantes",
-    "title": "Cómo crear mapas de Costa Rica en R con ggplot2",
+    "title": "Actualizando el Mapa: Un repaso de los cambios territoriales y nombres de cantones en Costa Rica",
     "section": "Consideraciones importantes",
     "text": "Consideraciones importantes"
+  },
+  {
+    "objectID": "posts/001_mapa_cantones_cr.html#footnotes",
+    "href": "posts/001_mapa_cantones_cr.html#footnotes",
+    "title": "Actualizando el Mapa: Un repaso de los cambios territoriales y nombres de cantones en Costa Rica",
+    "section": "Notas",
+    "text": "Notas\n\n\nDelfino.cr. (26 de abril de 2018). Expediente 20787: Reforma y Adiciones a la Ley N° 9440, Creación del Cantón XVI Río Cuarto de la Provincia de Alajuela, de 20 de Mayo de 2017. Delfino.cr. Leer más↩︎\nDelfino.cr. (25 de septiembre de 2019). Expediente 21618: Creación del Cantón de Monteverde, Cantón XII de la Provincia de Puntarenas. Delfino.cr. Leer más↩︎\nDelfino.cr. (21 de octubre de 2021). Expediente 22749: Creación del Cantón de Puerto Jiménez, Cantón XIII de la Provincia de Puntarenas. Delfino.cr. Leer más↩︎\nRepública de Costa Rica. (16 de junio de 2010). Ley N° 8808: Declara oficial para efectos administrativos, la aprobación de la División Territorial Administrativa de la República N° 41548-MGP [Cambio de nombre del cantón de Alfaro Ruiz a Zarcero]. La Gaceta, N° 116. Recuperado de https://www.pgrweb.go.cr↩︎\nDelfino.cr. (11 de febrero de 2015). Expediente 19469: Cambio de Denominación del Cantón XII, Valverde Vega, de la Provincia de Alajuela, para que en Adelante se Denomine Sarchí. Delfino.cr. Leer más↩︎\nPresidencia de la República de Costa Rica. (11 de febrero de 2015). Cambio de nombre del Cantón VI de la provincia de Puntarenas para que en adelante se denomine Quepos. Recuperado de Leer más↩︎"
   },
   {
     "objectID": "lunes_pr.html",
@@ -152,19 +159,5 @@
     "title": "Aprende Tidyverse",
     "section": "Post Recientes",
     "text": "Post Recientes"
-  },
-  {
-    "objectID": "posts/001_mapa_cantones_cr.html#notas",
-    "href": "posts/001_mapa_cantones_cr.html#notas",
-    "title": "Cómo crear mapas de Costa Rica en R con ggplot2",
-    "section": "Notas",
-    "text": "Notas"
-  },
-  {
-    "objectID": "posts/001_mapa_cantones_cr.html#footnotes",
-    "href": "posts/001_mapa_cantones_cr.html#footnotes",
-    "title": "Cómo crear mapas de Costa Rica en R con ggplot2",
-    "section": "Notas",
-    "text": "Notas\n\n\nCreación del cantón de Puerto Jiménez, cantón XIII de la provincia de Puntarenas. leer más↩︎"
   }
 ]

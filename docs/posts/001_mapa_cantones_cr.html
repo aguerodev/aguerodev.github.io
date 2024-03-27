@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Carlos Aguero B">
-<meta name="description" content="Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional">
+<meta name="description" content="Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional.">
 
 <title>Mapa de Costa Rica con ggplot2</title>
 <style>
@@ -135,14 +135,14 @@ cookieconsent.run({
 
 
 <meta property="og:title" content="Mapa de Costa Rica con ggplot2">
-<meta property="og:description" content="Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional">
+<meta property="og:description" content="Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional.">
 <meta property="og:image" content="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png">
 <meta property="og:site_name" content="aprendetidyverse.com">
 <meta property="og:locale" content="es_ES">
 <meta property="og:image:height" content="663">
 <meta property="og:image:width" content="1280">
 <meta name="twitter:title" content="Mapa de Costa Rica con ggplot2">
-<meta name="twitter:description" content="Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional">
+<meta name="twitter:description" content="Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional.">
 <meta name="twitter:image" content="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png">
 <meta name="twitter:creator" content="@dev_aguero">
 <meta name="twitter:site" content="@dev_aguero">
@@ -151,7 +151,7 @@ cookieconsent.run({
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed slimcontent">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -230,16 +230,16 @@ cookieconsent.run({
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cómo crear mapas de Costa Rica en R con ggplot2</h1>
+<h1 class="title">Actualizando el Mapa: Un repaso de los cambios territoriales y nombres de cantones en Costa Rica</h1>
   </div>
 
 <div>
   <div class="description">
-    Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional
+    Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional.
   </div>
 </div>
 
@@ -268,27 +268,9 @@ cookieconsent.run({
 </header>
 
 
-<p>En febrero de este año se realizaron en costa rica elecciones municipales y algunos cantones como monteverde y puerto jimenez participan por primera vez,</p>
-<ul>
-<li>Rio Cuarto 2018</li>
-<li>Monteverde 2021</li>
-<li>Puerto Jimenez 2022</li>
-<li>Colorado febrero 2024 <em>(no disponible aun)</em></li>
-</ul>
-<p>¿Qué es exactamente lo que vamos a hacer? Bueno, vamos a usar R para descargar datos de los cantones de Costa Rica del Instituto Geográfico Nacional, vamos a simplificarlos para que puedan correr rápido en una computadora con recursos limitados y, después de algunos ajustes, vamos a hacer un mapa de los cantones de Costa Rica utilizando ggplot2.</p>
-<p>https://sinabi.go.cr/biblioteca%20digital/periodicos/boletin%20oficial/boletin%20oficial%201854/01f-JUNIO%20%20%20%201854%20No.%2025%20al%2029.pdf</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Creación del cantón de Río Cuarto, cantón XVI de la provincia de Alajuela. <a href="https://delfino.cr/asamblea/proyecto/20787">leer más</a></p>
-<p>Creación del cantón de Monteverde, cantón XII de la provincia de Puntarenas. <a href="https://delfino.cr/asamblea/proyecto/21618">leer más</a></p>
-<p>Creación del cantón de Puerto Jiménez, cantón XIII de la provincia de Puntarenas. <a href="https://delfino.cr/asamblea/proyecto/22749">leer más</a></p>
-<p>Creación del cantón de Colorado, cantón XII de la provincia de Guanacaste. <a href="https://delfino.cr/asamblea/proyecto/22643">leer más</a> <br> Hay proyectos de ley vigente para la creación de los cantones: Cervantes, Peñas Blancas, Jicaral, Cóbano, Paquera, Ojo de Agua. <a href="https://delfino.cr/2024/02/mideplan-coordinacion-municipal-no-se-resuelve-transformando-las-intendencias-en-cantones">leer más</a></p>
-</div><div class="">
-<p>Cambio de nombre al cantón de Valverde Vega por el de Sarchí. <a href="https://www.nacion.com/el-pais/politica/diputados-cambian-nombre-a-valverde-vega-ahora-se/EFMBKHUUL5EIROIYOVFF3DYVPQ/story/">leer más</a></p>
-</div><div class="">
-<p>Cambio de nombre al cantón de Aguirre, que ahora se conocerá como Quepos. <a href="https://archivo.crhoy.com/diputados-cambian-el-nombre-del-canton-de-aguirre-al-de-quepos/nacionales/">leer más</a></p>
-</div></div>
-
+<p>A inicios de este año en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con <code>ggplot2</code> de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Voy rápidamente a mi carpeta de algún curso de la universidad y busco el ejemplo en donde realizábamos un mapa. Al ejecutar el código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que efectivamente en los últimos años se han creado nuevos cantones. Río Cuarto<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> se separa del cantón de Grecia, Monteverde<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> se separa de Golfito y pasa a ser un cantón.</p>
+<p>Pasa entonces que la fuente de datos para el mapa (shapefile) que tenia guardados están desactualizados. Yo salí de la Universidad en 2016, y fue justo en 2017 que comenzó la aparición de nuevos cantones de forma un poco acelerada.</p>
+<p>Si a esto le sumamos que algunos cantones que ya existían antes de 2016 han cambiado de nombre, Alfaro Ruiz ahora es conocido como Zarcero<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, Valverde Vega se ha transformado en Sarchí<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, y Aguirre ha pasado a llamarse Quepos<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. En este punto, algo que creí serían 10 líneas de código, un problema de copiar y pegar, se convertía en algo más interesante. Así que en este tutorial veremos cómo realizar un gráfico actualizado de los cantones de Costa Rica, utilizando como fuente de datos los servicios del <a href="https://www.snitcr.go.cr/ign_ign">Instituto Geográfico Nacional</a>.</p>
 <section id="ante-de-comenzar" class="level2">
 <h2 class="anchored" data-anchor-id="ante-de-comenzar">Ante de comenzar</h2>
 <p>Verifica que tengas instalados los siguientes paquetes:</p>
@@ -336,20 +318,25 @@ cookieconsent.run({
 </section>
 <section id="creación-de-un-mapa-utilizando-ggplot2" class="level2">
 <h2 class="anchored" data-anchor-id="creación-de-un-mapa-utilizando-ggplot2">Creación de un mapa utilizando ggplot2</h2>
-<p>Alfaro Ruiz a Zarcero en 2010 https://es.wikipedia.org/wiki/Cant%C3%B3n_de_Zarcero</p>
-<p>aguirre a quepos 2015 https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&amp;nValor1=1&amp;nValor2=79730&amp;nValor3=100935&amp;strTipM=TC</p>
-<p>Valverde Vega por el de Sarchí 2019</p>
-<p>https://delfino.cr/asamblea/proyecto/19469</p>
 </section>
 <section id="consideraciones-importantes" class="level2">
 <h2 class="anchored" data-anchor-id="consideraciones-importantes">Consideraciones importantes</h2>
-<script src="https://giscus.app/client.js" data-repo="aguerodev/aguerodev.github.io" data-repo-id="R_kgDOLYhGtA" data-category="General" data-category-id="DIC_kwDOLYhGtM4CeD_i" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="es" crossorigin="anonymous" async="">
-</script>
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas</h2>
+
+<ol>
+<li id="fn1"><p>Delfino.cr. (26 de abril de 2018). Expediente 20787: Reforma y Adiciones a la Ley N° 9440, Creación del Cantón XVI Río Cuarto de la Provincia de Alajuela, de 20 de Mayo de 2017. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/20787">Leer más</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Delfino.cr. (25 de septiembre de 2019). Expediente 21618: Creación del Cantón de Monteverde, Cantón XII de la Provincia de Puntarenas. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/21618">Leer más</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Delfino.cr. (21 de octubre de 2021). Expediente 22749: Creación del Cantón de Puerto Jiménez, Cantón XIII de la Provincia de Puntarenas. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/22749">Leer más</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>República de Costa Rica. (16 de junio de 2010). Ley N° 8808: Declara oficial para efectos administrativos, la aprobación de la División Territorial Administrativa de la República N° 41548-MGP [Cambio de nombre del cantón de Alfaro Ruiz a Zarcero]. La Gaceta, N° 116. Recuperado de https://www.pgrweb.go.cr<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Delfino.cr. (11 de febrero de 2015). Expediente 19469: Cambio de Denominación del Cantón XII, Valverde Vega, de la Provincia de Alajuela, para que en Adelante se Denomine Sarchí. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/19469">Leer más</a><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Presidencia de la República de Costa Rica. (11 de febrero de 2015). Cambio de nombre del Cantón VI de la provincia de Puntarenas para que en adelante se denomine Quepos. Recuperado de <a href="https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&amp;nValor1=1&amp;nValor2=79730&amp;nValor3=100935&amp;strTipM=TC">Leer más</a><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
