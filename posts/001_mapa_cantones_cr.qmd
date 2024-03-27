@@ -1,6 +1,6 @@
 ---
-title: "Actualizando el Mapa: Un repaso de los cambios territoriales y nombres de cantones en Costa Rica"
-description: "Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional."
+title: "Actualizando el Mapa"
+description: "Un repaso de cambios territoriales y nombres de cantones en Costa Rica, en una guía para crear mapas con ggplot2 usando datos del Instituto Geográfico Nacional."
 date: 2024-02-08
 categories: ['Guías Paso a Paso', 'ggplot2']
 lang: "es"
