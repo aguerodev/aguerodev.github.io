@@ -12,16 +12,16 @@
 <generator>quarto-1.4.549</generator>
 <lastBuildDate>Thu, 08 Feb 2024 06:00:00 GMT</lastBuildDate>
 <item>
-  <title>Actualizando el Mapa</title>
+  <title>Actualizando el mapa de cantones de Costa Rica con R</title>
   <link>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p>A inicios de este año en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con <code>ggplot2</code> de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Voy rápidamente a mi carpeta de algún curso de la universidad y busco el ejemplo en donde realizábamos un mapa. Al ejecutar el código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que efectivamente en los últimos años se han creado nuevos cantones. Río Cuarto<sup>1</sup> se separa del cantón de Grecia, Monteverde<sup>2</sup> de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez<sup>3</sup> se separa de Golfito y pasa a ser un cantón.</p>
-<p>Pasa entonces que la fuente de datos para el mapa (shapefile) que tenia guardados están desactualizados. Yo salí de la Universidad en 2016, y fue justo en 2017 que comenzó la aparición de nuevos cantones de forma un poco acelerada.</p>
-<p>Si a esto le sumamos que algunos cantones que ya existían antes de 2016 han cambiado de nombre, Alfaro Ruiz ahora es conocido como Zarcero<sup>4</sup>, Valverde Vega se ha transformado en Sarchí<sup>5</sup>, y Aguirre ha pasado a llamarse Quepos<sup>6</sup>. En este punto, algo que creí serían 10 líneas de código, un problema de copiar y pegar, se convertía en algo más interesante. Así que en este tutorial veremos cómo realizar un gráfico actualizado de los cantones de Costa Rica, utilizando como fuente de datos los servicios del <a href="https://www.snitcr.go.cr/ign_ign">Instituto Geográfico Nacional</a>.</p>
+<p>A inicios de 2024 en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con <code>ggplot2</code> de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Para ahorrar tiempo voy rápidamente a mi carpeta de algún curso de la universidad y busco el ejemplo en donde realizábamos un mapa. Al ejecutar el código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que en los últimos años se han creado nuevos cantones. Río Cuarto<sup>1</sup> se separa del cantón de Grecia, Monteverde<sup>2</sup> de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez<sup>3</sup> se separa de Golfito y pasa a ser un cantón.</p>
+<p>Pasa entonces que la fuente de datos para el mapa (shapefile) que tenia guardada está desactualizada. Yo salí de la Universidad en 2016, y fue justo en 2017 que comenzó la aparición de nuevos cantones de forma un poco acelerada.</p>
+<p>Si a esto le sumamos que algunos cantones que ya existían antes de 2016 han cambiado de nombre, Alfaro Ruiz ahora es conocido como Zarcero<sup>4</sup>, Valverde Vega se ha transformado en Sarchí<sup>5</sup>, y Aguirre ha pasado a llamarse Quepos<sup>6</sup>. En este punto, algo que creí serían 10 líneas de código, un problema de copiar y pegar, se convertía en algo más interesante. <strong>Así que en esta guia veremos cómo realizar un gráfico actualizado de los cantones de Costa Rica, utilizando como fuente de datos los servicios del <a href="https://www.snitcr.go.cr/ign_ign">Instituto Geográfico Nacional</a>.</strong></p>
 <section id="ante-de-comenzar" class="level2">
 <h2 class="anchored" data-anchor-id="ante-de-comenzar">Ante de comenzar</h2>
 <p>Verifica que tengas instalados los siguientes paquetes:</p>
@@ -37,62 +37,67 @@ background-color: null;
 font-style: inherit;">library</span>(httr2)</span>
 <span id="cb1-4"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(ows4R)</span></code></pre></div>
+font-style: inherit;">library</span>(ows4R)</span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(rmapshaper)</span></code></pre></div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Si en Windows tienes errores al instalar alguno de los paquetes, quizás falte instalar Rtools. Descárgalo de este <a href="https://cran.r-project.org/bin/windows/Rtools/">enlace</a> y reinicia antes de intentar de nuevo.</p>
+</div>
+</div>
 </div>
 </section>
-<section id="descargar-datos-del-ign" class="level2">
+<section id="descargar-datos-del-ign" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="descargar-datos-del-ign">Descargar datos del IGN</h2>
+<p>El Instituto Geográfico Nacional es la principal fuente de cartografía en Costa Rica, ofreciendo datos geoespaciales actualizados. Para obtener un shapefile específico para nuestro mapa, recurriremos al servicio WFS en R, enfocándonos en la división cantonal.</p>
+<ul>
+<li><strong>Paso 1:</strong> Acceder al IGN</li>
+</ul>
+<p>Visita la página de servicios OGC del IGN. En la sección de nodos locales, selecciona el servicio <strong>IGN Cartografía 1:5mil CO.</strong></p>
+<p><img src="https://aprendetidyverse.com/posts/images/ign_01.png" class="img-fluid" style="width:30.0%"></p>
+<ul>
+<li><strong>Paso 2:</strong> Identificar la URL del Servicio WFS</li>
+</ul>
+<p>A continuación, localizaremos la URL del servicio WFS que utilizaremos, tal como se muestra en la imagen adjunta.</p>
+<p><img src="https://aprendetidyverse.com/posts/images/ign_02.png" class="img-fluid" style="width:80.0%"></p>
+<ul>
+<li><strong>Paso 3:</strong> Identificar las capas disponibles</li>
+</ul>
+<p>Mediante el uso del paquete <code>ows4R</code> en R, consultaremos los identificadores de las capas disponibles. Esto nos permitirá seleccionar y descargar la capa adecuada, ya sea a nivel de provincia, cantón o distrito.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">wfs_bwk <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">url_wfs <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"</span></span></code></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">url <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">url_parse</span>(wfs_bwk)</span>
-<span id="cb3-2">url<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>query <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">list</span>(</span>
-<span id="cb3-3">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">service =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"wfs"</span>,</span>
-<span id="cb3-4">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">request =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"GetCapabilities"</span></span>
-<span id="cb3-5">  )</span>
-<span id="cb3-6">request <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">url_build</span>(url)</span>
-<span id="cb3-7">request</span></code></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1">bwk_client <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">bwk_client <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> WFSClient<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">new</span>(wfs_bwk, <span class="at" style="color: #657422;
+font-style: inherit;">new</span>(</span>
+<span id="cb3-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">url =</span> url_wfs,</span>
+<span id="cb3-3">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">serviceVersion =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"2.0.0"</span>)</span>
-<span id="cb4-2">bwk_client<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">"2.0.0"</span></span>
+<span id="cb3-4">)</span>
+<span id="cb3-5"></span>
+<span id="cb3-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as_tibble</span>(bwk_client<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -100,63 +105,229 @@ font-style: inherit;">getFeatureTypes</span>(<span class="at" style="color: #657
 background-color: null;
 font-style: inherit;">pretty =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
-font-style: inherit;">TRUE</span>)</span></code></pre></div>
+font-style: inherit;">TRUE</span>))</span></code></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">wfs_bwk <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"</span></span>
-<span id="cb5-2">url <span class="ot" style="color: #003B4F;
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 2
+  name                         title                                          
+  &lt;chr&gt;                        &lt;chr&gt;                                          
+1 IGN_5_CO:curvas_5000_2017    Curvas de nivel cada 10 metros 1:5.000 año 2017
+2 IGN_5_CO:limitedistrital_5k  DTA (Límite Distrital)                         
+3 IGN_5_CO:limitecantonal_5k   Límite Cantonal                                
+4 IGN_5_CO:limiteprovincial_5k Límite Provincial                              </code></pre>
+</div>
+</div>
+<ul>
+<li><strong>Paso 4:</strong> Descargar los datos</li>
+</ul>
+<p>Para descargar los cantones de Costa Rica, utilizaremos la capa denominada <strong>IGN_5_CO:limitecantonal_5k</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">url <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">url_parse</span>(wfs_bwk)</span>
-<span id="cb5-3">url<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">url_parse</span>(url_wfs)</span>
+<span id="cb5-2">url<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>query <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+font-style: inherit;">list</span>(</span>
+<span id="cb5-3">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">service =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"wfs"</span>,</span>
-<span id="cb5-4">                  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">#version = "2.0.0", # optional</span></span>
-<span id="cb5-5">                  <span class="at" style="color: #657422;
+<span id="cb5-4">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">request =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"GetFeature"</span>,</span>
-<span id="cb5-6">                  <span class="at" style="color: #657422;
+<span id="cb5-5">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">typename =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"IGN_5_CO:limitecantonal_5k"</span>,</span>
-<span id="cb5-7">                  <span class="at" style="color: #657422;
+<span id="cb5-6">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">srsName =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"EPSG:4326"</span></span>
-<span id="cb5-8">                  )</span>
-<span id="cb5-9">request <span class="ot" style="color: #003B4F;
+<span id="cb5-7">  )</span>
+<span id="cb5-8">request <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">url_build</span>(url)</span>
-<span id="cb5-10"></span>
-<span id="cb5-11">bel_regions <span class="ot" style="color: #003B4F;
+<span id="cb5-9"></span>
+<span id="cb5-10">regiones <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">read_sf</span>(request) <span class="co" style="color: #5E5E5E;
+font-style: inherit;">read_sf</span>(request)</span>
+<span id="cb5-11"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">#Lambert2008</span></span></code></pre></div>
+font-style: inherit;">st_crs</span>(regiones) <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">st_crs</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4326</span>)</span></code></pre></div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1">x <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">object.size</span>(regiones)</span>
+<span id="cb6-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(x, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"auto"</span>)</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "20.4 Mb"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb8-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> regiones_simplificadas</span>
+<span id="cb8-3">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb8-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#365486"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb8-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
+</div>
+<p><img src="https://aprendetidyverse.com/posts/images/plot_mapa_01.png" class="img-fluid"></p>
+<p>Al haber descargado los datos en el objeto <code>regiones</code>, notamos que su tamaño es considerablemente grande. Esto se debe a que, para asegurar una cartografía precisa del país, el IGN emplea una precisión mucho mayor de la necesaria para la mayoría de los mapas que crearemos con ggplot2.</p>
+<ul>
+<li><strong>Paso 5:</strong> Simplificar el mapa</li>
+</ul>
+<p>Dado que el mapa está formado por polígonos, podemos simplificar estos polígonos eliminando lados. Esto reduce la precisión, pero a la escala de un mapa común creado con ggplot2, será imperceptible. Sin embargo, lograremos reducir considerablemente el tamaño del objeto, facilitando el trabajo en equipos con recursos limitados.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1">regiones_simplificadas <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ms_simplify</span>(</span>
+<span id="cb9-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">input =</span> regiones,</span>
+<span id="cb9-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">keep =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.05</span>,</span>
+<span id="cb9-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">keep_shapes =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span></span>
+<span id="cb9-5">)</span>
+<span id="cb9-6"></span>
+<span id="cb9-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># eliminar la isla del coco</span></span>
+<span id="cb9-8">regiones_simplificadas <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ms_filter_islands</span>(</span>
+<span id="cb9-9">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">input =</span> regiones_simplificadas,</span>
+<span id="cb9-10">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">min_area =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">24000000</span></span>
+<span id="cb9-11">)</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1">x <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">object.size</span>(regiones_simplificadas)</span>
+<span id="cb10-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(x, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"auto"</span>)</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "1.3 Mb"</code></pre>
+</div>
+</div>
+<ul>
+<li><strong>Paso 6:</strong> Guardar los datos localmente</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Explorá las limitaciones del shapefile y los beneficios del GeoJSON en gisandbeers.com <a href="https://www.gisandbeers.com/limitaciones-e-inconvenientes-del-shapefile/">Leer más</a>. ¡Gracias, Roberto, por tu excelente contenido!</p>
+</div></div><div class="cell">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">write_sf</span>(regiones_simplificadas, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cantones_cr.geojson"</span>)</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb13-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> regiones_simplificadas</span>
+<span id="cb13-3">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb13-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#365486"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb13-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
+</div>
+<p><img src="https://aprendetidyverse.com/posts/images/plot_mapa_01.png" class="img-fluid"></p>
 </section>
 <section id="simplificar-geometias-son-el-paquete-sf" class="level2">
 <h2 class="anchored" data-anchor-id="simplificar-geometias-son-el-paquete-sf">Simplificar geometias son el paquete sf</h2>

@@ -1,6 +1,6 @@
 ---
-title: "Actualizando el Mapa"
-description: "Un repaso de cambios territoriales y nombres de cantones en Costa Rica, en una guía para crear mapas con ggplot2 usando datos del Instituto Geográfico Nacional."
+title: " Actualizando el mapa de cantones de Costa Rica con R"
+description: "Explora los recientes cambios territoriales y de nombres en los cantones de Costa Rica a través de esta guía que te enseñará a crear mapas actualizados con ggplot2, utilizando los datos del Instituto Geográfico Nacional."
 date: 2024-02-08
 categories: ['Guías Paso a Paso', 'ggplot2']
 lang: "es"
@@ -20,7 +20,7 @@ format:
         href: https://www.snitcr.go.cr/ign_ign
 ---
 
-A inicios de este año en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con `ggplot2` de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Voy rápidamente a mi carpeta de algún curso de la universidad y busco el ejemplo en donde realizábamos un mapa. Al ejecutar el código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que efectivamente en los últimos años se han creado nuevos cantones. Río Cuarto[^rio_cuarto] se separa del cantón de Grecia, Monteverde[^monteverde] de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez[^puerto_jimenez] se separa de Golfito y pasa a ser un cantón.
+A inicios de 2024 en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con `ggplot2` de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Para ahorrar tiempo voy rápidamente a mi carpeta de algún curso de la universidad y busco el ejemplo en donde realizábamos un mapa. Al ejecutar el código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que en los últimos años se han creado nuevos cantones. Río Cuarto[^rio_cuarto] se separa del cantón de Grecia, Monteverde[^monteverde] de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez[^puerto_jimenez] se separa de Golfito y pasa a ser un cantón.
 
 [^rio_cuarto]: Delfino.cr. (26 de abril de 2018). Expediente 20787: Reforma y Adiciones a la Ley N° 9440, Creación del Cantón XVI Río Cuarto de la Provincia de Alajuela, de 20 de Mayo de 2017. Delfino.cr. [Leer más](https://delfino.cr/asamblea/proyecto/20787)
 
@@ -29,9 +29,9 @@ A inicios de este año en Costa Rica, se realizaron elecciones municipales. Una 
 
 [^puerto_jimenez]: Delfino.cr. (21 de octubre de 2021). Expediente 22749: Creación del Cantón de Puerto Jiménez, Cantón XIII de la Provincia de Puntarenas. Delfino.cr. [Leer más](https://delfino.cr/asamblea/proyecto/22749)
 
-Pasa entonces que la fuente de datos para el mapa (shapefile) que tenia guardados están desactualizados. Yo salí de la Universidad en 2016, y fue justo en 2017 que comenzó la aparición de nuevos cantones de forma un poco acelerada.
+Pasa entonces que la fuente de datos para el mapa (shapefile) que tenia guardada está desactualizada. Yo salí de la Universidad en 2016, y fue justo en 2017 que comenzó la aparición de nuevos cantones de forma un poco acelerada.
 
-Si a esto le sumamos que algunos cantones que ya existían antes de 2016 han cambiado de nombre, Alfaro Ruiz ahora es conocido como Zarcero[^zarcero], Valverde Vega se ha transformado en Sarchí[^sarchi], y Aguirre ha pasado a llamarse Quepos[^quepos]. En este punto, algo que creí serían 10 líneas de código, un problema de copiar y pegar, se convertía en algo más interesante. Así que en este tutorial veremos cómo realizar un gráfico actualizado de los cantones de Costa Rica, utilizando como fuente de datos los servicios del [Instituto Geográfico Nacional](https://www.snitcr.go.cr/ign_ign).
+Si a esto le sumamos que algunos cantones que ya existían antes de 2016 han cambiado de nombre, Alfaro Ruiz ahora es conocido como Zarcero[^zarcero], Valverde Vega se ha transformado en Sarchí[^sarchi], y Aguirre ha pasado a llamarse Quepos[^quepos]. En este punto, algo que creí serían 10 líneas de código, un problema de copiar y pegar, se convertía en algo más interesante. **Así que en esta guia veremos cómo realizar un gráfico actualizado de los cantones de Costa Rica, utilizando como fuente de datos los servicios del [Instituto Geográfico Nacional](https://www.snitcr.go.cr/ign_ign).**
 
 [^sarchi]: Delfino.cr. (11 de febrero de 2015). Expediente 19469: Cambio de Denominación del Cantón XII, Valverde Vega, de la Provincia de Alajuela, para que en Adelante se Denomine Sarchí. Delfino.cr. [Leer más](https://delfino.cr/asamblea/proyecto/19469)
 
@@ -44,49 +44,152 @@ Si a esto le sumamos que algunos cantones que ya existían antes de 2016 han cam
 
 Verifica que tengas instalados los siguientes paquetes:
 
-```{r, eval=FALSE}
+```{r, message=FALSE}
 library(tidyverse)
 library(sf)
 library(httr2)
 library(ows4R)
+library(rmapshaper)
 ```
 
+::: {.callout-note appearance="simple"}
+
+Si en Windows tienes errores al instalar alguno de los paquetes, quizás falte instalar Rtools. Descárgalo de este [enlace](https://cran.r-project.org/bin/windows/Rtools/) y reinicia antes de intentar de nuevo.
+:::
 
 ## Descargar datos del IGN
 
-```{r, eval=FALSE}
-wfs_bwk <- "https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"
-```
+El Instituto Geográfico Nacional es la principal fuente de cartografía en Costa Rica, ofreciendo datos geoespaciales actualizados. Para obtener un shapefile específico para nuestro mapa, recurriremos al servicio WFS en R, enfocándonos en la división cantonal.
+
++ **Paso 1:** Acceder al IGN
+
+Visita la página de servicios OGC del IGN. En la sección de nodos locales, selecciona el servicio **IGN Cartografía 1:5mil CO.**
+
+![](images/ign_01.png){width=30%}
+
++ **Paso 2:** Identificar la URL del Servicio WFS
+
+A continuación, localizaremos la URL del servicio WFS que utilizaremos, tal como se muestra en la imagen adjunta.
+
+![](images/ign_02.png){width=80%}
+
++ **Paso 3:** Identificar las capas disponibles
+
+Mediante el uso del paquete `ows4R` en R, consultaremos los identificadores de las capas disponibles. Esto nos permitirá seleccionar y descargar la capa adecuada, ya sea a nivel de provincia, cantón o distrito.
+
 
 ```{r, eval=FALSE}
-url <- url_parse(wfs_bwk)
+url_wfs <- "https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"
+```
+
+
+```{r, eval=FALSE}
+bwk_client <- WFSClient$new(
+  url = url_wfs,
+  serviceVersion = "2.0.0"
+)
+
+as_tibble(bwk_client$getFeatureTypes(pretty = TRUE))
+```
+
+```{r, echo=FALSE}
+x <- tribble(
+  ~name ,                        ~title    ,                                        
+  
+  "IGN_5_CO:curvas_5000_2017" ,   "Curvas de nivel cada 10 metros 1:5.000 año 2017",
+  "IGN_5_CO:limitedistrital_5k" , "DTA (Límite Distrital)",                           
+  "IGN_5_CO:limitecantonal_5k" ,  "Límite Cantonal",                                  
+  "IGN_5_CO:limiteprovincial_5k" ,"Límite Provincial"   
+)
+x
+```
+
+
++ **Paso 4:** Descargar los datos 
+
+Para descargar los cantones de Costa Rica, utilizaremos la capa denominada **IGN_5_CO:limitecantonal_5k**.
+
+```{r, eval=FALSE}
+url <- url_parse(url_wfs)
 url$query <- list(
   service = "wfs",
-  request = "GetCapabilities"
+  request = "GetFeature",
+  typename = "IGN_5_CO:limitecantonal_5k",
+  srsName = "EPSG:4326"
   )
 request <- url_build(url)
-request
+
+regiones <- read_sf(request)
+st_crs(regiones) <- st_crs(4326)
+```
+
+```{r, eval=FALSE}
+x <- object.size(regiones)
+print(x, units = "auto")
+```
+```{r, echo=FALSE}
+print("20.4 Mb")
+```
+```{r, eval=FALSE}
+ggplot(
+  data = regiones
+) +
+  geom_sf(color = "white", fill = "#365486") +
+  theme_minimal()
+```
+
+![](images/plot_mapa_01.png)
+
+
+Al haber descargado los datos en el objeto `regiones`, notamos que su tamaño es considerablemente grande. Esto se debe a que, para asegurar una cartografía precisa del país, el IGN emplea una precisión mucho mayor de la necesaria para la mayoría de los mapas que crearemos con ggplot2.
+
++ **Paso 5:** Simplificar el mapa
+
+Dado que el mapa está formado por polígonos, podemos simplificar estos polígonos eliminando lados. Esto reduce la precisión, pero a la escala de un mapa común creado con ggplot2, será imperceptible. Sin embargo, lograremos reducir considerablemente el tamaño del objeto, facilitando el trabajo en equipos con recursos limitados.
+
+```{r, eval=FALSE}
+regiones_simplificadas <- ms_simplify(
+  input = regiones,
+  keep = 0.05,
+  keep_shapes = FALSE
+)
+
+# eliminar la isla del coco
+regiones_simplificadas <- ms_filter_islands(
+  input = regiones_simplificadas,
+  min_area = 24000000
+)
+
+```
+
+```{r, eval=FALSE}
+x <- object.size(regiones_simplificadas)
+print(x, units = "auto")
+```
+```{r, echo=FALSE}
+print("1.3 Mb")
+```
+
++ **Paso 6:** Guardar los datos localmente 
+
+::: {.column-margin}
+Explorá las limitaciones del shapefile y los beneficios del GeoJSON en gisandbeers.com [Leer más](https://www.gisandbeers.com/limitaciones-e-inconvenientes-del-shapefile/). ¡Gracias, Roberto, por tu excelente contenido!
+
+:::
+
+```{r, eval=FALSE}
+write_sf(regiones_simplificadas, "cantones_cr.geojson")
 ```
 
 
 ```{r, eval=FALSE}
-bwk_client <- WFSClient$new(wfs_bwk, serviceVersion = "2.0.0")
-bwk_client$getFeatureTypes(pretty = TRUE)
+ggplot(
+  data = regiones_simplificadas
+) +
+  geom_sf(color = "white", fill = "#365486") +
+  theme_minimal()
 ```
-
-```{r, eval=FALSE}
-wfs_bwk <- "https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"
-url <- url_parse(wfs_bwk)
-url$query <- list(service = "wfs",
-                  #version = "2.0.0", # optional
-                  request = "GetFeature",
-                  typename = "IGN_5_CO:limitecantonal_5k",
-                  srsName = "EPSG:4326"
-                  )
-request <- url_build(url)
-
-bel_regions <- read_sf(request) #Lambert2008
-```
+![](images/plot_mapa_01.png)
 
 
 ## Simplificar geometias son el paquete sf

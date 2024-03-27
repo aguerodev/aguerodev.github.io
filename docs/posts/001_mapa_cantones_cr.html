@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Carlos Aguero B">
-<meta name="description" content="Un repaso de cambios territoriales y nombres de cantones en Costa Rica, en una guía para crear mapas con ggplot2 usando datos del Instituto Geográfico Nacional.">
+<meta name="description" content="Explora los recientes cambios territoriales y de nombres en los cantones de Costa Rica a través de esta guía que te enseñará a crear mapas actualizados con ggplot2, utilizando los datos del Instituto Geográfico Nacional.">
 
 <title>Mapa de Costa Rica con ggplot2</title>
 <style>
@@ -135,14 +135,14 @@ cookieconsent.run({
 
 
 <meta property="og:title" content="Mapa de Costa Rica con ggplot2">
-<meta property="og:description" content="Un repaso de cambios territoriales y nombres de cantones en Costa Rica, en una guía para crear mapas con ggplot2 usando datos del Instituto Geográfico Nacional.">
+<meta property="og:description" content="Explora los recientes cambios territoriales y de nombres en los cantones de Costa Rica a través de esta guía que te enseñará a crear mapas actualizados con ggplot2, utilizando los datos del Instituto Geográfico Nacional.">
 <meta property="og:image" content="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png">
 <meta property="og:site_name" content="aprendetidyverse.com">
 <meta property="og:locale" content="es_ES">
 <meta property="og:image:height" content="663">
 <meta property="og:image:width" content="1280">
 <meta name="twitter:title" content="Mapa de Costa Rica con ggplot2">
-<meta name="twitter:description" content="Un repaso de cambios territoriales y nombres de cantones en Costa Rica, en una guía para crear mapas con ggplot2 usando datos del Instituto Geográfico Nacional.">
+<meta name="twitter:description" content="Explora los recientes cambios territoriales y de nombres en los cantones de Costa Rica a través de esta guía que te enseñará a crear mapas actualizados con ggplot2, utilizando los datos del Instituto Geográfico Nacional.">
 <meta name="twitter:image" content="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png">
 <meta name="twitter:creator" content="@dev_aguero">
 <meta name="twitter:site" content="@dev_aguero">
@@ -151,7 +151,7 @@ cookieconsent.run({
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -230,16 +230,16 @@ cookieconsent.run({
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Actualizando el Mapa</h1>
+<h1 class="title">Actualizando el mapa de cantones de Costa Rica con R</h1>
   </div>
 
 <div>
   <div class="description">
-    Un repaso de cambios territoriales y nombres de cantones en Costa Rica, en una guía para crear mapas con ggplot2 usando datos del Instituto Geográfico Nacional.
+    Explora los recientes cambios territoriales y de nombres en los cantones de Costa Rica a través de esta guía que te enseñará a crear mapas actualizados con ggplot2, utilizando los datos del Instituto Geográfico Nacional.
   </div>
 </div>
 
@@ -268,9 +268,9 @@ cookieconsent.run({
 </header>
 
 
-<p>A inicios de este año en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con <code>ggplot2</code> de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Voy rápidamente a mi carpeta de algún curso de la universidad y busco el ejemplo en donde realizábamos un mapa. Al ejecutar el código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que efectivamente en los últimos años se han creado nuevos cantones. Río Cuarto<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> se separa del cantón de Grecia, Monteverde<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> se separa de Golfito y pasa a ser un cantón.</p>
-<p>Pasa entonces que la fuente de datos para el mapa (shapefile) que tenia guardados están desactualizados. Yo salí de la Universidad en 2016, y fue justo en 2017 que comenzó la aparición de nuevos cantones de forma un poco acelerada.</p>
-<p>Si a esto le sumamos que algunos cantones que ya existían antes de 2016 han cambiado de nombre, Alfaro Ruiz ahora es conocido como Zarcero<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, Valverde Vega se ha transformado en Sarchí<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, y Aguirre ha pasado a llamarse Quepos<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. En este punto, algo que creí serían 10 líneas de código, un problema de copiar y pegar, se convertía en algo más interesante. Así que en este tutorial veremos cómo realizar un gráfico actualizado de los cantones de Costa Rica, utilizando como fuente de datos los servicios del <a href="https://www.snitcr.go.cr/ign_ign">Instituto Geográfico Nacional</a>.</p>
+<p>A inicios de 2024 en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con <code>ggplot2</code> de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Para ahorrar tiempo voy rápidamente a mi carpeta de algún curso de la universidad y busco el ejemplo en donde realizábamos un mapa. Al ejecutar el código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que en los últimos años se han creado nuevos cantones. Río Cuarto<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> se separa del cantón de Grecia, Monteverde<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> se separa de Golfito y pasa a ser un cantón.</p>
+<p>Pasa entonces que la fuente de datos para el mapa (shapefile) que tenia guardada está desactualizada. Yo salí de la Universidad en 2016, y fue justo en 2017 que comenzó la aparición de nuevos cantones de forma un poco acelerada.</p>
+<p>Si a esto le sumamos que algunos cantones que ya existían antes de 2016 han cambiado de nombre, Alfaro Ruiz ahora es conocido como Zarcero<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, Valverde Vega se ha transformado en Sarchí<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, y Aguirre ha pasado a llamarse Quepos<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. En este punto, algo que creí serían 10 líneas de código, un problema de copiar y pegar, se convertía en algo más interesante. <strong>Así que en esta guia veremos cómo realizar un gráfico actualizado de los cantones de Costa Rica, utilizando como fuente de datos los servicios del <a href="https://www.snitcr.go.cr/ign_ign">Instituto Geográfico Nacional</a>.</strong></p>
 <section id="ante-de-comenzar" class="level2">
 <h2 class="anchored" data-anchor-id="ante-de-comenzar">Ante de comenzar</h2>
 <p>Verifica que tengas instalados los siguientes paquetes:</p>
@@ -278,40 +278,137 @@ cookieconsent.run({
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(sf)</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(httr2)</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(ows4R)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(ows4R)</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(rmapshaper)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Si en Windows tienes errores al instalar alguno de los paquetes, quizás falte instalar Rtools. Descárgalo de este <a href="https://cran.r-project.org/bin/windows/Rtools/">enlace</a> y reinicia antes de intentar de nuevo.</p>
+</div>
+</div>
 </div>
 </section>
-<section id="descargar-datos-del-ign" class="level2">
+<section id="descargar-datos-del-ign" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="descargar-datos-del-ign">Descargar datos del IGN</h2>
+<p>El Instituto Geográfico Nacional es la principal fuente de cartografía en Costa Rica, ofreciendo datos geoespaciales actualizados. Para obtener un shapefile específico para nuestro mapa, recurriremos al servicio WFS en R, enfocándonos en la división cantonal.</p>
+<ul>
+<li><strong>Paso 1:</strong> Acceder al IGN</li>
+</ul>
+<p>Visita la página de servicios OGC del IGN. En la sección de nodos locales, selecciona el servicio <strong>IGN Cartografía 1:5mil CO.</strong></p>
+<p><img src="images/ign_01.png" class="img-fluid" style="width:30.0%"></p>
+<ul>
+<li><strong>Paso 2:</strong> Identificar la URL del Servicio WFS</li>
+</ul>
+<p>A continuación, localizaremos la URL del servicio WFS que utilizaremos, tal como se muestra en la imagen adjunta.</p>
+<p><img src="images/ign_02.png" class="img-fluid" style="width:80.0%"></p>
+<ul>
+<li><strong>Paso 3:</strong> Identificar las capas disponibles</li>
+</ul>
+<p>Mediante el uso del paquete <code>ows4R</code> en R, consultaremos los identificadores de las capas disponibles. Esto nos permitirá seleccionar y descargar la capa adecuada, ya sea a nivel de provincia, cantón o distrito.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>wfs_bwk <span class="ot">&lt;-</span> <span class="st">"https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>url_wfs <span class="ot">&lt;-</span> <span class="st">"https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>url <span class="ot">&lt;-</span> <span class="fu">url_parse</span>(wfs_bwk)</span>
-<span id="cb3-2"><a href="#cb3-2"></a>url<span class="sc">$</span>query <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="at">service =</span> <span class="st">"wfs"</span>,</span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="at">request =</span> <span class="st">"GetCapabilities"</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>  )</span>
-<span id="cb3-6"><a href="#cb3-6"></a>request <span class="ot">&lt;-</span> <span class="fu">url_build</span>(url)</span>
-<span id="cb3-7"><a href="#cb3-7"></a>request</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>bwk_client <span class="ot">&lt;-</span> WFSClient<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="at">url =</span> url_wfs,</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="at">serviceVersion =</span> <span class="st">"2.0.0"</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>)</span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="fu">as_tibble</span>(bwk_client<span class="sc">$</span><span class="fu">getFeatureTypes</span>(<span class="at">pretty =</span> <span class="cn">TRUE</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>bwk_client <span class="ot">&lt;-</span> WFSClient<span class="sc">$</span><span class="fu">new</span>(wfs_bwk, <span class="at">serviceVersion =</span> <span class="st">"2.0.0"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2"></a>bwk_client<span class="sc">$</span><span class="fu">getFeatureTypes</span>(<span class="at">pretty =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 2
+  name                         title                                          
+  &lt;chr&gt;                        &lt;chr&gt;                                          
+1 IGN_5_CO:curvas_5000_2017    Curvas de nivel cada 10 metros 1:5.000 año 2017
+2 IGN_5_CO:limitedistrital_5k  DTA (Límite Distrital)                         
+3 IGN_5_CO:limitecantonal_5k   Límite Cantonal                                
+4 IGN_5_CO:limiteprovincial_5k Límite Provincial                              </code></pre>
+</div>
+</div>
+<ul>
+<li><strong>Paso 4:</strong> Descargar los datos</li>
+</ul>
+<p>Para descargar los cantones de Costa Rica, utilizaremos la capa denominada <strong>IGN_5_CO:limitecantonal_5k</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>url <span class="ot">&lt;-</span> <span class="fu">url_parse</span>(url_wfs)</span>
+<span id="cb5-2"><a href="#cb5-2"></a>url<span class="sc">$</span>query <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="at">service =</span> <span class="st">"wfs"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  <span class="at">request =</span> <span class="st">"GetFeature"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="at">typename =</span> <span class="st">"IGN_5_CO:limitecantonal_5k"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6"></a>  <span class="at">srsName =</span> <span class="st">"EPSG:4326"</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>  )</span>
+<span id="cb5-8"><a href="#cb5-8"></a>request <span class="ot">&lt;-</span> <span class="fu">url_build</span>(url)</span>
+<span id="cb5-9"><a href="#cb5-9"></a></span>
+<span id="cb5-10"><a href="#cb5-10"></a>regiones <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(request)</span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="fu">st_crs</span>(regiones) <span class="ot">&lt;-</span> <span class="fu">st_crs</span>(<span class="dv">4326</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>wfs_bwk <span class="ot">&lt;-</span> <span class="st">"https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>url <span class="ot">&lt;-</span> <span class="fu">url_parse</span>(wfs_bwk)</span>
-<span id="cb5-3"><a href="#cb5-3"></a>url<span class="sc">$</span>query <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">service =</span> <span class="st">"wfs"</span>,</span>
-<span id="cb5-4"><a href="#cb5-4"></a>                  <span class="co">#version = "2.0.0", # optional</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>                  <span class="at">request =</span> <span class="st">"GetFeature"</span>,</span>
-<span id="cb5-6"><a href="#cb5-6"></a>                  <span class="at">typename =</span> <span class="st">"IGN_5_CO:limitecantonal_5k"</span>,</span>
-<span id="cb5-7"><a href="#cb5-7"></a>                  <span class="at">srsName =</span> <span class="st">"EPSG:4326"</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>                  )</span>
-<span id="cb5-9"><a href="#cb5-9"></a>request <span class="ot">&lt;-</span> <span class="fu">url_build</span>(url)</span>
-<span id="cb5-10"><a href="#cb5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11"></a>bel_regions <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(request) <span class="co">#Lambert2008</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>x <span class="ot">&lt;-</span> <span class="fu">object.size</span>(regiones)</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">print</span>(x, <span class="at">units =</span> <span class="st">"auto"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "20.4 Mb"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="at">data =</span> regiones_simplificadas</span>
+<span id="cb8-3"><a href="#cb8-3"></a>) <span class="sc">+</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">geom_sf</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">fill =</span> <span class="st">"#365486"</span>) <span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/plot_mapa_01.png" class="img-fluid"></p>
+<p>Al haber descargado los datos en el objeto <code>regiones</code>, notamos que su tamaño es considerablemente grande. Esto se debe a que, para asegurar una cartografía precisa del país, el IGN emplea una precisión mucho mayor de la necesaria para la mayoría de los mapas que crearemos con ggplot2.</p>
+<ul>
+<li><strong>Paso 5:</strong> Simplificar el mapa</li>
+</ul>
+<p>Dado que el mapa está formado por polígonos, podemos simplificar estos polígonos eliminando lados. Esto reduce la precisión, pero a la escala de un mapa común creado con ggplot2, será imperceptible. Sin embargo, lograremos reducir considerablemente el tamaño del objeto, facilitando el trabajo en equipos con recursos limitados.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>regiones_simplificadas <span class="ot">&lt;-</span> <span class="fu">ms_simplify</span>(</span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="at">input =</span> regiones,</span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="at">keep =</span> <span class="fl">0.05</span>,</span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="at">keep_shapes =</span> <span class="cn">FALSE</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>)</span>
+<span id="cb9-6"><a href="#cb9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="co"># eliminar la isla del coco</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a>regiones_simplificadas <span class="ot">&lt;-</span> <span class="fu">ms_filter_islands</span>(</span>
+<span id="cb9-9"><a href="#cb9-9"></a>  <span class="at">input =</span> regiones_simplificadas,</span>
+<span id="cb9-10"><a href="#cb9-10"></a>  <span class="at">min_area =</span> <span class="dv">24000000</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>x <span class="ot">&lt;-</span> <span class="fu">object.size</span>(regiones_simplificadas)</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">print</span>(x, <span class="at">units =</span> <span class="st">"auto"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "1.3 Mb"</code></pre>
+</div>
+</div>
+<ul>
+<li><strong>Paso 6:</strong> Guardar los datos localmente</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Explorá las limitaciones del shapefile y los beneficios del GeoJSON en gisandbeers.com <a href="https://www.gisandbeers.com/limitaciones-e-inconvenientes-del-shapefile/">Leer más</a>. ¡Gracias, Roberto, por tu excelente contenido!</p>
+</div></div><div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">write_sf</span>(regiones_simplificadas, <span class="st">"cantones_cr.geojson"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="at">data =</span> regiones_simplificadas</span>
+<span id="cb13-3"><a href="#cb13-3"></a>) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>  <span class="fu">geom_sf</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">fill =</span> <span class="st">"#365486"</span>) <span class="sc">+</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/plot_mapa_01.png" class="img-fluid"></p>
 </section>
 <section id="simplificar-geometias-son-el-paquete-sf" class="level2">
 <h2 class="anchored" data-anchor-id="simplificar-geometias-son-el-paquete-sf">Simplificar geometias son el paquete sf</h2>
