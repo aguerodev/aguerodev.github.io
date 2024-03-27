@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Carlos Aguero B">
-<meta name="description" content="Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional">
+<meta name="description" content="Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional">
 
-<title>2. Filtrar y ordenar datos</title>
+<title>Mapa de Costa Rica con ggplot2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,28 +22,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../favicon.ico" rel="icon">
-<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.ico" rel="icon">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -98,28 +132,33 @@ cookieconsent.run({
 });
 </script> 
   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js" type="text/javascript"></script>
 
 
-<meta property="og:title" content="2. Filtrar y ordenar datos">
-<meta property="og:description" content="Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional">
+<meta property="og:title" content="Mapa de Costa Rica con ggplot2">
+<meta property="og:description" content="Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional">
+<meta property="og:image" content="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png">
 <meta property="og:site_name" content="aprendetidyverse.com">
 <meta property="og:locale" content="es_ES">
-<meta name="twitter:title" content="2. Filtrar y ordenar datos">
-<meta name="twitter:description" content="Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional">
+<meta property="og:image:height" content="663">
+<meta property="og:image:width" content="1280">
+<meta name="twitter:title" content="Mapa de Costa Rica con ggplot2">
+<meta name="twitter:description" content="Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional">
+<meta name="twitter:image" content="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png">
 <meta name="twitter:creator" content="@dev_aguero">
 <meta name="twitter:site" content="@dev_aguero">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image-height" content="663">
+<meta name="twitter:image-width" content="1280">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Aprende Tidyverse</span>
     </a>
   </div>
@@ -130,15 +169,15 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../courses/index.html"> 
+    <a class="nav-link" href="../courses/index.html"> 
 <span class="menu-text">Cursos R Intensivo</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../lunes_pr.html"> 
+    <a class="nav-link" href="../lunes_pr.html"> 
 <span class="menu-text">Lunes de Consultas</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts.html"> 
+    <a class="nav-link" href="../posts.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -169,119 +208,38 @@ cookieconsent.run({
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../classes/semana_1/class_01.html">Semana 1</a></li><li class="breadcrumb-item"><a href="../../classes/semana_1/class_01.2.html">2. Filtrar y ordenar datos</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
- <span class="menu-text">Antes de comenzar</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../classes/intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Presentación del curso</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../classes/prep.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Instalar R, RStudio y Quarto</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Semana 1</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../classes/semana_1/class_01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. Introducción a Tidyverse</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../classes/semana_1/class_01.2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">2. Filtrar y ordenar datos</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../classes/semana_1/class_01.3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3. Tomando porciones de los datos</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../classes/semana_1/class_01.4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4. Trabajando con datos agrupados</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../classes/semana_1/class_01.5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5. Evaluación</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#ante-de-comenzar" id="toc-ante-de-comenzar" class="nav-link active" data-scroll-target="#ante-de-comenzar">Ante de comenzar</a></li>
+  <li><a href="#descargar-datos-del-ign" id="toc-descargar-datos-del-ign" class="nav-link" data-scroll-target="#descargar-datos-del-ign">Descargar datos del IGN</a></li>
+  <li><a href="#simplificar-geometias-son-el-paquete-sf" id="toc-simplificar-geometias-son-el-paquete-sf" class="nav-link" data-scroll-target="#simplificar-geometias-son-el-paquete-sf">Simplificar geometias son el paquete sf</a></li>
+  <li><a href="#creación-de-un-mapa-utilizando-ggplot2" id="toc-creación-de-un-mapa-utilizando-ggplot2" class="nav-link" data-scroll-target="#creación-de-un-mapa-utilizando-ggplot2">Creación de un mapa utilizando ggplot2</a></li>
+  <li><a href="#consideraciones-importantes" id="toc-consideraciones-importantes" class="nav-link" data-scroll-target="#consideraciones-importantes">Consideraciones importantes</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Otros Enlaces</h2><ul><li><a href="https://www.snitcr.go.cr/ign_ign"><i class="bi bi-link-45deg"></i>Instituto Geográfico Nacional</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
-   
-  <ul>
-  <li><a href="#qué-es-tidyverse" id="toc-qué-es-tidyverse" class="nav-link active" data-scroll-target="#qué-es-tidyverse">¿Qué es tidyverse?</a></li>
-  <li><a href="#lectura-de-datos-csv" id="toc-lectura-de-datos-csv" class="nav-link" data-scroll-target="#lectura-de-datos-csv">Lectura de datos CSV</a></li>
-  <li><a href="#filtrado-de-datos-con-filter" id="toc-filtrado-de-datos-con-filter" class="nav-link" data-scroll-target="#filtrado-de-datos-con-filter">Filtrado de datos con filter</a></li>
-  <li><a href="#ordenado-de-datos-con-arrage" id="toc-ordenado-de-datos-con-arrage" class="nav-link" data-scroll-target="#ordenado-de-datos-con-arrage">Ordenado de datos con arrage</a></li>
-  <li><a href="#selección-de-datos-con-select" id="toc-selección-de-datos-con-select" class="nav-link" data-scroll-target="#selección-de-datos-con-select">Selección de datos con select</a></li>
-  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a></li>
-  </ul>
-<div class="quarto-other-links"><h2>Otros Enlaces</h2><ul><li><a href="https://data.nasa.gov/"><i class="bi bi-link-45deg"></i>Libro R for data science</a></li><li><a href="https://docs.google.com/presentation/d/1P3cozq5JBw-Ca9d3khClp5XBv-Up5MdG0phCMUVJcTA/edit#slide=id.g1f2ef55d2d5_0_101"><i class="bi bi-link-45deg"></i>Presentación de la clase</a></li></ul></div><div class="quarto-code-links"><h2>Enlaces de código</h2><ul><li><a href="data-import.py"><i class="bi bi-file-code"></i>Descargar Código</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../classes/semana_1/class_01.html">Semana 1</a></li><li class="breadcrumb-item"><a href="../../classes/semana_1/class_01.2.html">2. Filtrar y ordenar datos</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">2. Filtrar y ordenar datos</h1>
-<p class="subtitle lead">Comenzamos la exploración de datos</p>
+<h1 class="title">Cómo crear mapas de Costa Rica en R con ggplot2</h1>
   </div>
 
 <div>
   <div class="description">
-    Esta es una guía desde cero y paso a paso para crear mapas de las diferentes regiones de Costa Rica con ggplot2 usando como fuente los datos del Instuto Geografico Nacional
+    Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional
   </div>
 </div>
 
@@ -298,7 +256,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">15 de enero de 2024</p>
+      <p class="date">8 de febrero de 2024</p>
     </div>
   </div>
   
@@ -310,40 +268,82 @@ cookieconsent.run({
 </header>
 
 
-<section id="qué-es-tidyverse" class="level2">
-<h2 class="anchored" data-anchor-id="qué-es-tidyverse">¿Qué es tidyverse?</h2>
-</section>
-<section id="lectura-de-datos-csv" class="level2">
-<h2 class="anchored" data-anchor-id="lectura-de-datos-csv">Lectura de datos CSV</h2>
-</section>
-<section id="filtrado-de-datos-con-filter" class="level2">
-<h2 class="anchored" data-anchor-id="filtrado-de-datos-con-filter">Filtrado de datos con filter</h2>
-</section>
-<section id="ordenado-de-datos-con-arrage" class="level2">
-<h2 class="anchored" data-anchor-id="ordenado-de-datos-con-arrage">Ordenado de datos con arrage</h2>
-</section>
-<section id="selección-de-datos-con-select" class="level2">
-<h2 class="anchored" data-anchor-id="selección-de-datos-con-select">Selección de datos con select</h2>
-</section>
-<section id="ejercicios" class="level2">
-<h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
-<iframe style="margin:0 auto; min-width: 100%;" id="myIframe1" class="interactive" src="https://aguero.shinyapps.io/class_01" scrolling="no" frameborder="no">
-</iframe>
-<div class="card text-dark bg-light mb-3" style="max-width: 100%;">
-  <div class="card-header">
-   <strong style="font-size:22px;">Objetivos de la clase</strong>
-  </div>
-  
-  <div class="row g-0">
-      <div class="col-md-4">
-          <h3 class="card-title anchored">Questions</h3>
-      </div>
-      <div class="col-md-8">
-      </div>
-  </div>
+<p>En febrero de este año se realizaron en costa rica elecciones municipales y algunos cantones como monteverde y puerto jimenez participan por primera vez,</p>
+<ul>
+<li>Rio Cuarto 2018</li>
+<li>Monteverde 2021</li>
+<li>Puerto Jimenez 2022</li>
+<li>Colorado febrero 2024 <em>(no disponible aun)</em></li>
+</ul>
+<p>¿Qué es exactamente lo que vamos a hacer? Bueno, vamos a usar R para descargar datos de los cantones de Costa Rica del Instituto Geográfico Nacional, vamos a simplificarlos para que puedan correr rápido en una computadora con recursos limitados y, después de algunos ajustes, vamos a hacer un mapa de los cantones de Costa Rica utilizando ggplot2.</p>
+<p>https://sinabi.go.cr/biblioteca%20digital/periodicos/boletin%20oficial/boletin%20oficial%201854/01f-JUNIO%20%20%20%201854%20No.%2025%20al%2029.pdf</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Creación del cantón de Río Cuarto, cantón XVI de la provincia de Alajuela. <a href="https://delfino.cr/asamblea/proyecto/20787">leer más</a></p>
+<p>Creación del cantón de Monteverde, cantón XII de la provincia de Puntarenas. <a href="https://delfino.cr/asamblea/proyecto/21618">leer más</a></p>
+<p>Creación del cantón de Puerto Jiménez, cantón XIII de la provincia de Puntarenas. <a href="https://delfino.cr/asamblea/proyecto/22749">leer más</a></p>
+<p>Creación del cantón de Colorado, cantón XII de la provincia de Guanacaste. <a href="https://delfino.cr/asamblea/proyecto/22643">leer más</a> <br> Hay proyectos de ley vigente para la creación de los cantones: Cervantes, Peñas Blancas, Jicaral, Cóbano, Paquera, Ojo de Agua. <a href="https://delfino.cr/2024/02/mideplan-coordinacion-municipal-no-se-resuelve-transformando-las-intendencias-en-cantones">leer más</a></p>
+</div><div class="">
+<p>Cambio de nombre al cantón de Valverde Vega por el de Sarchí. <a href="https://www.nacion.com/el-pais/politica/diputados-cambian-nombre-a-valverde-vega-ahora-se/EFMBKHUUL5EIROIYOVFF3DYVPQ/story/">leer más</a></p>
+</div><div class="">
+<p>Cambio de nombre al cantón de Aguirre, que ahora se conocerá como Quepos. <a href="https://archivo.crhoy.com/diputados-cambian-el-nombre-del-canton-de-aguirre-al-de-quepos/nacionales/">leer más</a></p>
+</div></div>
+
+<section id="ante-de-comenzar" class="level2">
+<h2 class="anchored" data-anchor-id="ante-de-comenzar">Ante de comenzar</h2>
+<p>Verifica que tengas instalados los siguientes paquetes:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(sf)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(httr2)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(ows4R)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<script>
-  iFrameResize({}, ".interactive");
+</section>
+<section id="descargar-datos-del-ign" class="level2">
+<h2 class="anchored" data-anchor-id="descargar-datos-del-ign">Descargar datos del IGN</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>wfs_bwk <span class="ot">&lt;-</span> <span class="st">"https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>url <span class="ot">&lt;-</span> <span class="fu">url_parse</span>(wfs_bwk)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>url<span class="sc">$</span>query <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="at">service =</span> <span class="st">"wfs"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="at">request =</span> <span class="st">"GetCapabilities"</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>  )</span>
+<span id="cb3-6"><a href="#cb3-6"></a>request <span class="ot">&lt;-</span> <span class="fu">url_build</span>(url)</span>
+<span id="cb3-7"><a href="#cb3-7"></a>request</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>bwk_client <span class="ot">&lt;-</span> WFSClient<span class="sc">$</span><span class="fu">new</span>(wfs_bwk, <span class="at">serviceVersion =</span> <span class="st">"2.0.0"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>bwk_client<span class="sc">$</span><span class="fu">getFeatureTypes</span>(<span class="at">pretty =</span> <span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>wfs_bwk <span class="ot">&lt;-</span> <span class="st">"https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>url <span class="ot">&lt;-</span> <span class="fu">url_parse</span>(wfs_bwk)</span>
+<span id="cb5-3"><a href="#cb5-3"></a>url<span class="sc">$</span>query <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">service =</span> <span class="st">"wfs"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>                  <span class="co">#version = "2.0.0", # optional</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>                  <span class="at">request =</span> <span class="st">"GetFeature"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6"></a>                  <span class="at">typename =</span> <span class="st">"IGN_5_CO:limitecantonal_5k"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7"></a>                  <span class="at">srsName =</span> <span class="st">"EPSG:4326"</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a>                  )</span>
+<span id="cb5-9"><a href="#cb5-9"></a>request <span class="ot">&lt;-</span> <span class="fu">url_build</span>(url)</span>
+<span id="cb5-10"><a href="#cb5-10"></a></span>
+<span id="cb5-11"><a href="#cb5-11"></a>bel_regions <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(request) <span class="co">#Lambert2008</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="simplificar-geometias-son-el-paquete-sf" class="level2">
+<h2 class="anchored" data-anchor-id="simplificar-geometias-son-el-paquete-sf">Simplificar geometias son el paquete sf</h2>
+</section>
+<section id="creación-de-un-mapa-utilizando-ggplot2" class="level2">
+<h2 class="anchored" data-anchor-id="creación-de-un-mapa-utilizando-ggplot2">Creación de un mapa utilizando ggplot2</h2>
+<p>Alfaro Ruiz a Zarcero en 2010 https://es.wikipedia.org/wiki/Cant%C3%B3n_de_Zarcero</p>
+<p>aguirre a quepos 2015 https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&amp;nValor1=1&amp;nValor2=79730&amp;nValor3=100935&amp;strTipM=TC</p>
+<p>Valverde Vega por el de Sarchí 2019</p>
+<p>https://delfino.cr/asamblea/proyecto/19469</p>
+</section>
+<section id="consideraciones-importantes" class="level2">
+<h2 class="anchored" data-anchor-id="consideraciones-importantes">Consideraciones importantes</h2>
+<script src="https://giscus.app/client.js" data-repo="aguerodev/aguerodev.github.io" data-repo-id="R_kgDOLYhGtA" data-category="General" data-category-id="DIC_kwDOLYhGtM4CeD_i" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="es" crossorigin="anonymous" async="">
 </script>
 
 
@@ -736,6 +736,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://utteranc.es/client.js" repo="quarto-dev/quarto-docs" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

@@ -1,0 +1,153 @@
+---
+title: "Cómo crear mapas de Costa Rica en R con ggplot2"
+description: "Esta es una guía paso a paso para crear mapas de Costa Rica con ggplot2 usando como fuente los datos del Instituto Geografico Nacional"
+date: 2024-02-08
+categories: ['Guías Paso a Paso', 'ggplot2']
+lang: "es"
+image: images/mapa_cr_ggplot2.png
+pagetitle: "Mapa de Costa Rica con ggplot2"
+comments:
+  utterances:
+    repo: quarto-dev/quarto-docs
+toc: true
+code-line-numbers: true
+code-copy: true
+toc-location: left
+format:
+  html:
+    other-links:
+      - text: Instituto Geográfico Nacional
+        href: https://www.snitcr.go.cr/ign_ign
+---
+
+En febrero de este año se realizaron en costa rica elecciones municipales y algunos cantones como monteverde y puerto jimenez participan por primera vez, 
+
+
+
++ Rio Cuarto 2018
++ Monteverde 2021
++ Puerto Jimenez 2022
++ Colorado febrero 2024 *(no disponible aun)*
+
+¿Qué es exactamente lo que vamos a hacer? Bueno, vamos a usar R para descargar datos de los cantones de Costa Rica del Instituto Geográfico Nacional, vamos a simplificarlos para que puedan correr rápido en una computadora con recursos limitados y, después de algunos ajustes, vamos a hacer un mapa de los cantones de Costa Rica utilizando ggplot2.
+
+https://sinabi.go.cr/biblioteca%20digital/periodicos/boletin%20oficial/boletin%20oficial%201854/01f-JUNIO%20%20%20%201854%20No.%2025%20al%2029.pdf
+    
+::: {.column-margin}
+
+Creación del cantón de Río Cuarto, cantón XVI de la provincia de Alajuela.
+[leer más](https://delfino.cr/asamblea/proyecto/20787)
+
+Creación del cantón de Monteverde, cantón XII de la provincia de Puntarenas. 
+[leer más](https://delfino.cr/asamblea/proyecto/21618)
+
+Creación del cantón de Puerto Jiménez, cantón XIII de la provincia de Puntarenas. 
+[leer más](https://delfino.cr/asamblea/proyecto/22749)
+
+Creación del cantón de Colorado, cantón XII de la provincia de Guanacaste. 
+[leer más](https://delfino.cr/asamblea/proyecto/22643)
+<br>
+Hay proyectos de ley vigente para la creación de los cantones: Cervantes, Peñas Blancas, Jicaral, Cóbano, Paquera, Ojo de Agua.
+[leer más](https://delfino.cr/2024/02/mideplan-coordinacion-municipal-no-se-resuelve-transformando-las-intendencias-en-cantones)
+:::
+
+
+
+
+::: {.column-margin}
+Cambio de nombre al cantón de Valverde Vega por el de Sarchí.
+[leer más](https://www.nacion.com/el-pais/politica/diputados-cambian-nombre-a-valverde-vega-ahora-se/EFMBKHUUL5EIROIYOVFF3DYVPQ/story/)
+:::
+
+::: {.column-margin}
+Cambio de nombre al cantón de Aguirre, que ahora se conocerá como Quepos.
+[leer más](https://archivo.crhoy.com/diputados-cambian-el-nombre-del-canton-de-aguirre-al-de-quepos/nacionales/)
+:::
+
+
+
+
+
+## Ante de comenzar
+
+Verifica que tengas instalados los siguientes paquetes:
+
+```{r, eval=FALSE}
+library(tidyverse)
+library(sf)
+library(httr2)
+library(ows4R)
+```
+
+
+## Descargar datos del IGN
+
+```{r, eval=FALSE}
+wfs_bwk <- "https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"
+```
+
+```{r, eval=FALSE}
+url <- url_parse(wfs_bwk)
+url$query <- list(
+  service = "wfs",
+  request = "GetCapabilities"
+  )
+request <- url_build(url)
+request
+```
+```{r, eval=FALSE}
+bwk_client <- WFSClient$new(wfs_bwk, serviceVersion = "2.0.0")
+bwk_client$getFeatureTypes(pretty = TRUE)
+```
+
+```{r, eval=FALSE}
+wfs_bwk <- "https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"
+url <- url_parse(wfs_bwk)
+url$query <- list(service = "wfs",
+                  #version = "2.0.0", # optional
+                  request = "GetFeature",
+                  typename = "IGN_5_CO:limitecantonal_5k",
+                  srsName = "EPSG:4326"
+                  )
+request <- url_build(url)
+
+bel_regions <- read_sf(request) #Lambert2008
+```
+
+
+## Simplificar geometias son el paquete sf
+
+## Creación de un mapa utilizando ggplot2
+
+
+Alfaro Ruiz a Zarcero en 2010 
+https://es.wikipedia.org/wiki/Cant%C3%B3n_de_Zarcero
+
+
+aguirre a quepos 2015
+https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=79730&nValor3=100935&strTipM=TC
+
+Valverde Vega por el de Sarchí 2019
+
+https://delfino.cr/asamblea/proyecto/19469
+
+
+## Consideraciones importantes 
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="aguerodev/aguerodev.github.io"
+        data-repo-id="R_kgDOLYhGtA"
+        data-category="General"
+        data-category-id="DIC_kwDOLYhGtM4CeD_i"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="es"
+        crossorigin="anonymous"
+        async>
+</script>
