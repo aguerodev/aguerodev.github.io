@@ -18,6 +18,10 @@ format:
     other-links:
       - text: Instituto Geográfico Nacional
         href: https://www.snitcr.go.cr/ign_ign
+    code-links:
+      - text: Datos elecciones municipales 2024
+        icon: file-code
+        href: elecciones_muncipales_2024.csv
 ---
 
 A inicios de 2024 en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con `ggplot2` de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Para ahorrar tiempo voy rápidamente a mi carpeta de algún curso de la universidad y busco el ejemplo en donde realizábamos un mapa. Al ejecutar el código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que en los últimos años se han creado nuevos cantones. Río Cuarto[^rio_cuarto] se separa del cantón de Grecia, Monteverde[^monteverde] de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez[^puerto_jimenez] se separa de Golfito y pasa a ser un cantón.
@@ -40,13 +44,16 @@ Si a esto le sumamos que algunos cantones que ya existían antes de 2016 han cam
 [^zarcero]: República de Costa Rica. (16 de junio de 2010). Ley N° 8808: Declara oficial para efectos administrativos, la aprobación de la División Territorial Administrativa de la República N° 41548-MGP [Cambio de nombre del cantón de Alfaro Ruiz a Zarcero]. La Gaceta, N° 116. Recuperado de https://www.pgrweb.go.cr
 
 
-## Ante de comenzar
+## Obtener datos actualizados del IGN
+
+### Ante de comenzar
 
 Verifica que tengas instalados los siguientes paquetes:
 
 ```{r, message=FALSE}
 library(tidyverse)
 library(sf)
+library(geojsonsf)
 library(httr2)
 library(ows4R)
 library(rmapshaper)
@@ -57,7 +64,7 @@ library(rmapshaper)
 Si en Windows tienes errores al instalar alguno de los paquetes, quizás falte instalar Rtools. Descárgalo de este [enlace](https://cran.r-project.org/bin/windows/Rtools/) y reinicia antes de intentar de nuevo.
 :::
 
-## Descargar datos del IGN
+### Descargar datos del IGN
 
 El Instituto Geográfico Nacional es la principal fuente de cartografía en Costa Rica, ofreciendo datos geoespaciales actualizados. Para obtener un shapefile específico para nuestro mapa, recurriremos al servicio WFS en R, enfocándonos en la división cantonal.
 
@@ -145,7 +152,7 @@ Al haber descargado los datos en el objeto `regiones`, notamos que su tamaño es
 
 + **Paso 5:** Simplificar el mapa
 
-Dado que el mapa está formado por polígonos, podemos simplificar estos polígonos eliminando lados. Esto reduce la precisión, pero a la escala de un mapa común creado con ggplot2, será imperceptible. Sin embargo, lograremos reducir considerablemente el tamaño del objeto, facilitando el trabajo en equipos con recursos limitados.
+Dado que el mapa está formado por polígonos, podemos simplificar estos polígonos eliminando lados. Esto reduce la precisión, pero a la escala de un mapa común creado con `ggplot2`, será imperceptible. Sin embargo, lograremos reducir considerablemente el tamaño del objeto, facilitando el trabajo en equipos con recursos limitados.
 
 ```{r, eval=FALSE}
 regiones_simplificadas <- ms_simplify(
@@ -170,7 +177,10 @@ print(x, units = "auto")
 print("1.3 Mb")
 ```
 
-+ **Paso 6:** Guardar los datos localmente 
+
++ **Paso 6:** Guardar los datos localmente
+
+Con los datos ya listos, procederemos a guardarlos localmente. Aunque es posible usar el formato shapefile o GeoJSON, en este caso optaremos por GeoJSON.
 
 ::: {.column-margin}
 Explorá las limitaciones del shapefile y los beneficios del GeoJSON en gisandbeers.com [Leer más](https://www.gisandbeers.com/limitaciones-e-inconvenientes-del-shapefile/). ¡Gracias, Roberto, por tu excelente contenido!
@@ -182,9 +192,18 @@ write_sf(regiones_simplificadas, "cantones_cr.geojson")
 ```
 
 
++ **Paso 7:** Leer archivos GeoJSON
+
+Si después de un tiempo deseamos utilizar nuevamente los datos, podemos leerlos fácilmente con la función `st_read()` de la librería `sf`, específica para archivos GeoJSON.
+
+```{r, eval=FALSE}
+cantones <- st_read("cantones_cr.geojson", quiet = TRUE)
+```
+
+
 ```{r, eval=FALSE}
 ggplot(
-  data = regiones_simplificadas
+  data = cantones
 ) +
   geom_sf(color = "white", fill = "#365486") +
   theme_minimal()
@@ -192,10 +211,7 @@ ggplot(
 ![](images/plot_mapa_01.png)
 
 
-## Simplificar geometias son el paquete sf
 
-## Creación de un mapa utilizando ggplot2
+## Graficar resultados de las elecciones municipales 2024
 
-
-## Consideraciones importantes 
 

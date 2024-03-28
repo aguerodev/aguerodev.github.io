@@ -22,8 +22,10 @@
 <p>A inicios de 2024 en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con <code>ggplot2</code> de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Para ahorrar tiempo voy rápidamente a mi carpeta de algún curso de la universidad y busco el ejemplo en donde realizábamos un mapa. Al ejecutar el código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que en los últimos años se han creado nuevos cantones. Río Cuarto<sup>1</sup> se separa del cantón de Grecia, Monteverde<sup>2</sup> de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez<sup>3</sup> se separa de Golfito y pasa a ser un cantón.</p>
 <p>Pasa entonces que la fuente de datos para el mapa (shapefile) que tenia guardada está desactualizada. Yo salí de la Universidad en 2016, y fue justo en 2017 que comenzó la aparición de nuevos cantones de forma un poco acelerada.</p>
 <p>Si a esto le sumamos que algunos cantones que ya existían antes de 2016 han cambiado de nombre, Alfaro Ruiz ahora es conocido como Zarcero<sup>4</sup>, Valverde Vega se ha transformado en Sarchí<sup>5</sup>, y Aguirre ha pasado a llamarse Quepos<sup>6</sup>. En este punto, algo que creí serían 10 líneas de código, un problema de copiar y pegar, se convertía en algo más interesante. <strong>Así que en esta guia veremos cómo realizar un gráfico actualizado de los cantones de Costa Rica, utilizando como fuente de datos los servicios del <a href="https://www.snitcr.go.cr/ign_ign">Instituto Geográfico Nacional</a>.</strong></p>
-<section id="ante-de-comenzar" class="level2">
-<h2 class="anchored" data-anchor-id="ante-de-comenzar">Ante de comenzar</h2>
+<section id="obtener-datos-actualizados-del-ign" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="obtener-datos-actualizados-del-ign">Obtener datos actualizados del IGN</h2>
+<section id="ante-de-comenzar" class="level3">
+<h3 class="anchored" data-anchor-id="ante-de-comenzar">Ante de comenzar</h3>
 <p>Verifica que tengas instalados los siguientes paquetes:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
@@ -34,11 +36,14 @@ background-color: null;
 font-style: inherit;">library</span>(sf)</span>
 <span id="cb1-3"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(httr2)</span>
+font-style: inherit;">library</span>(geojsonsf)</span>
 <span id="cb1-4"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(ows4R)</span>
+font-style: inherit;">library</span>(httr2)</span>
 <span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ows4R)</span>
+<span id="cb1-6"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(rmapshaper)</span></code></pre></div>
 </div>
@@ -53,8 +58,8 @@ font-style: inherit;">library</span>(rmapshaper)</span></code></pre></div>
 </div>
 </div>
 </section>
-<section id="descargar-datos-del-ign" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="descargar-datos-del-ign">Descargar datos del IGN</h2>
+<section id="descargar-datos-del-ign" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="descargar-datos-del-ign">Descargar datos del IGN</h3>
 <p>El Instituto Geográfico Nacional es la principal fuente de cartografía en Costa Rica, ofreciendo datos geoespaciales actualizados. Para obtener un shapefile específico para nuestro mapa, recurriremos al servicio WFS en R, enfocándonos en la división cantonal.</p>
 <ul>
 <li><strong>Paso 1:</strong> Acceder al IGN</li>
@@ -202,7 +207,7 @@ background-color: null;
 font-style: inherit;">ggplot</span>(</span>
 <span id="cb8-2">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">data =</span> regiones_simplificadas</span>
+font-style: inherit;">data =</span> regiones</span>
 <span id="cb8-3">) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
@@ -228,7 +233,7 @@ font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
 <ul>
 <li><strong>Paso 5:</strong> Simplificar el mapa</li>
 </ul>
-<p>Dado que el mapa está formado por polígonos, podemos simplificar estos polígonos eliminando lados. Esto reduce la precisión, pero a la escala de un mapa común creado con ggplot2, será imperceptible. Sin embargo, lograremos reducir considerablemente el tamaño del objeto, facilitando el trabajo en equipos con recursos limitados.</p>
+<p>Dado que el mapa está formado por polígonos, podemos simplificar estos polígonos eliminando lados. Esto reduce la precisión, pero a la escala de un mapa común creado con <code>ggplot2</code>, será imperceptible. Sin embargo, lograremos reducir considerablemente el tamaño del objeto, facilitando el trabajo en equipos con recursos limitados.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1">regiones_simplificadas <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -290,6 +295,7 @@ font-style: inherit;">"auto"</span>)</span></code></pre></div>
 <ul>
 <li><strong>Paso 6:</strong> Guardar los datos localmente</li>
 </ul>
+<p>Con los datos ya listos, procederemos a guardarlos localmente. Aunque es posible usar el formato shapefile o GeoJSON, en este caso optaremos por GeoJSON.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Explorá las limitaciones del shapefile y los beneficios del GeoJSON en gisandbeers.com <a href="https://www.gisandbeers.com/limitaciones-e-inconvenientes-del-shapefile/">Leer más</a>. ¡Gracias, Roberto, por tu excelente contenido!</p>
@@ -300,17 +306,34 @@ font-style: inherit;">write_sf</span>(regiones_simplificadas, <span class="st" s
 background-color: null;
 font-style: inherit;">"cantones_cr.geojson"</span>)</span></code></pre></div>
 </div>
+<ul>
+<li><strong>Paso 7:</strong> Leer archivos GeoJSON</li>
+</ul>
+<p>Si después de un tiempo deseamos utilizar nuevamente los datos, podemos leerlos fácilmente con la función <code>st_read()</code> de la librería <code>sf</code>, específica para archivos GeoJSON.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1">cantones <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">st_read</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cantones_cr.geojson"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">quiet =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(</span>
-<span id="cb13-2">  <span class="at" style="color: #657422;
+<span id="cb14-2">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">data =</span> regiones_simplificadas</span>
-<span id="cb13-3">) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">data =</span> cantones</span>
+<span id="cb14-3">) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb13-4">  <span class="fu" style="color: #4758AB;
+<span id="cb14-4">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -323,20 +346,15 @@ background-color: null;
 font-style: inherit;">"#365486"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb13-5">  <span class="fu" style="color: #4758AB;
+<span id="cb14-5">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
 </div>
 <p><img src="https://aprendetidyverse.com/posts/images/plot_mapa_01.png" class="img-fluid"></p>
 </section>
-<section id="simplificar-geometias-son-el-paquete-sf" class="level2">
-<h2 class="anchored" data-anchor-id="simplificar-geometias-son-el-paquete-sf">Simplificar geometias son el paquete sf</h2>
 </section>
-<section id="creación-de-un-mapa-utilizando-ggplot2" class="level2">
-<h2 class="anchored" data-anchor-id="creación-de-un-mapa-utilizando-ggplot2">Creación de un mapa utilizando ggplot2</h2>
-</section>
-<section id="consideraciones-importantes" class="level2">
-<h2 class="anchored" data-anchor-id="consideraciones-importantes">Consideraciones importantes</h2>
+<section id="graficar-resultados-de-las-elecciones-municipales-2024" class="level2">
+<h2 class="anchored" data-anchor-id="graficar-resultados-de-las-elecciones-municipales-2024">Graficar resultados de las elecciones municipales 2024</h2>
 
 
 </section>
