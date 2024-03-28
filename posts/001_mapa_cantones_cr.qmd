@@ -32,8 +32,6 @@ A inicios de 2024 en Costa Rica, se realizaron elecciones municipales. Una vez p
 
 [^puerto_jimenez]: Delfino.cr. (21 de octubre de 2021). Expediente 22749: Creación del Cantón de Puerto Jiménez, Cantón XIII de la Provincia de Puntarenas. Delfino.cr. [Leer más](https://delfino.cr/asamblea/proyecto/22749)
 
-Pasa entonces que la fuente de datos para el mapa (shapefile) que tenia guardada está desactualizada. Yo salí de la Universidad en 2016, y fue justo en 2017 que comenzó la aparición de nuevos cantones de forma un poco acelerada.
-
 Si a esto le sumamos que algunos cantones que ya existían antes de 2016 han cambiado de nombre, Alfaro Ruiz ahora es conocido como Zarcero[^zarcero], Valverde Vega se ha transformado en Sarchí[^sarchi], y Aguirre ha pasado a llamarse Quepos[^quepos]. En este punto, algo que creí serían 10 líneas de código, un problema de copiar y pegar, se convertía en algo más interesante. **Así que en esta guia veremos cómo realizar un gráfico actualizado de los cantones de Costa Rica, utilizando como fuente de datos los servicios del [Instituto Geográfico Nacional](https://www.snitcr.go.cr/ign_ign).**
 
 [^sarchi]: Delfino.cr. (11 de febrero de 2015). Expediente 19469: Cambio de Denominación del Cantón XII, Valverde Vega, de la Provincia de Alajuela, para que en Adelante se Denomine Sarchí. Delfino.cr. [Leer más](https://delfino.cr/asamblea/proyecto/19469)
