@@ -21,7 +21,7 @@ format:
     code-links:
       - text: Datos elecciones municipales 2024
         icon: file-code
-        href: elecciones_muncipales_2024.csv
+        href: elecciones_municipales_2024.csv
 ---
 
 A inicios de 2024 en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con `ggplot2` de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Para ahorrar tiempo voy rápidamente a mi carpeta de algún curso de la universidad y busco el ejemplo en donde realizábamos un mapa. Al ejecutar el código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que en los últimos años se han creado nuevos cantones. Río Cuarto[^rio_cuarto] se separa del cantón de Grecia, Monteverde[^monteverde] de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez[^puerto_jimenez] se separa de Golfito y pasa a ser un cantón.
