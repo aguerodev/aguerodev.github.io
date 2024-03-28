@@ -18,13 +18,12 @@ format:
     other-links:
       - text: Instituto Geográfico Nacional
         href: https://www.snitcr.go.cr/ign_ign
-    code-links:
       - text: Datos elecciones municipales 2024
-        icon: file-code
-        href: elecciones_municipales_2024.csv
+        icon: filetype-csv
+        href: https://github.com/aguerodev/aguerodev.github.io/blob/main/posts/elecciones_municipales_2024.csv
 ---
 
-A inicios de 2024 en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con `ggplot2` de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Para ahorrar tiempo voy rápidamente a mi carpeta de algún curso de la universidad y busco el ejemplo en donde realizábamos un mapa. Al ejecutar el código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que en los últimos años se han creado nuevos cantones. Río Cuarto[^rio_cuarto] se separa del cantón de Grecia, Monteverde[^monteverde] de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez[^puerto_jimenez] se separa de Golfito y pasa a ser un cantón.
+A inicios de 2024 en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con `ggplot2` de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Para ahorrar tiempo hago una búsqueda rápida en google **"shapefile cantones Costa Rica"** al descargar los datos y ejecutar mi código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que en los últimos años se han creado nuevos cantones. Río Cuarto[^rio_cuarto] se separa del cantón de Grecia, Monteverde[^monteverde] de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo y conozco muy bien el lugar, Puerto Jiménez[^puerto_jimenez] se separa de Golfito y pasa a ser un cantón.
 
 [^rio_cuarto]: Delfino.cr. (26 de abril de 2018). Expediente 20787: Reforma y Adiciones a la Ley N° 9440, Creación del Cantón XVI Río Cuarto de la Provincia de Alajuela, de 20 de Mayo de 2017. Delfino.cr. [Leer más](https://delfino.cr/asamblea/proyecto/20787)
 
@@ -41,7 +40,7 @@ Si a esto le sumamos que algunos cantones que ya existían antes de 2016 han cam
 
 [^quepos]: Presidencia de la República de Costa Rica. (11 de febrero de 2015). Cambio de nombre del Cantón VI de la provincia de Puntarenas para que en adelante se denomine Quepos. Recuperado de [Leer más](https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=79730&nValor3=100935&strTipM=TC)
 
-[^zarcero]: República de Costa Rica. (16 de junio de 2010). Ley N° 8808: Declara oficial para efectos administrativos, la aprobación de la División Territorial Administrativa de la República N° 41548-MGP [Cambio de nombre del cantón de Alfaro Ruiz a Zarcero]. La Gaceta, N° 116. Recuperado de https://www.pgrweb.go.cr
+[^zarcero]: República de Costa Rica. (16 de junio de 2010). Ley N° 8808: Declara oficial para efectos administrativos, la aprobación de la División Territorial Administrativa de la República N° 41548-MGP [Cambio de nombre del cantón de Alfaro Ruiz a Zarcero]. La Gaceta, N° 116. [Leer más](https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=88416&nValor3=115607&strTipM=TC)
 
 
 ## Obtener datos actualizados del IGN
@@ -110,6 +109,12 @@ x <- tribble(
 )
 x
 ```
+
+::: {.column-margin}
+El código para usar servicios WFS proviene del post "Spatial WFS Services" por Thierry Onkelinx, Hans Van Calster, y Floris Vanderhaeghe. [Leer más](https://inbo.github.io/tutorials/tutorials/spatial_wfs_services/)
+
+Nota: Adaptamos funciones para migrar a httr2 desde httr. Consulta [httr2](https://httr2.r-lib.org/articles/httr2.html) para detalles.
+:::
 
 
 + **Paso 4:** Descargar los datos 
@@ -183,7 +188,7 @@ print("1.3 Mb")
 Con los datos ya listos, procederemos a guardarlos localmente. Aunque es posible usar el formato shapefile o GeoJSON, en este caso optaremos por GeoJSON.
 
 ::: {.column-margin}
-Explorá las limitaciones del shapefile y los beneficios del GeoJSON en gisandbeers.com [Leer más](https://www.gisandbeers.com/limitaciones-e-inconvenientes-del-shapefile/). ¡Gracias, Roberto, por tu excelente contenido!
+Recomiendo la lectura del post "Limitaciones e inconvenientes del shapefile" [Leer más](https://www.gisandbeers.com/limitaciones-e-inconvenientes-del-shapefile/). ¡Gracias, Roberto, por tu excelente contenido!
 
 :::
 
@@ -214,4 +219,49 @@ ggplot(
 
 ## Graficar resultados de las elecciones municipales 2024
 
+## Obeservaciones finales
 
+Hola, soy yo, Carlos, otra vez. Ya terminado este post, me puse a pensar que realmente no tengo ningún criterio formado sobre el tema de los nuevos cantones. ¿Es bueno para la administración del país? Pues no tengo idea. Me dejé a mí mismo de tarea leer más sobre el tema y creo que todos los residentes del país deberíamos tomar un par de minutos para pensarlo.
+
+Laura Fernández Delgado, Ministra de Planificación Nacional y Política Económica, en un oficio a los diputados, dice:
+
+> Preocupa a este ministerio que se esté fraccionando el territorio nacional en
+ausencia de estudios y análisis técnicos robustos, y que a la vez no se apliquen
+los parámetros contenidos en la Ley sobre División Territorial Administrativa, N°
+4366, donde se establece que para la creación de un nuevo cantón se requiere
+contar con al menos un 1% de la población nacional.
+Las decisiones que tome la Asamblea Legislativa de creación de cantonatos
+pueden derivar en problemas de coordinación, de articulación y fragmentación del
+territorio; y adicionalmente, en ausencia de estudios técnicos y económicos
+pueden repercutir en una afectación a los ciudadanos habitantes de esos
+territorios derivada de la incapacidad para la prestación de los servicios públicos
+municipales por ausencia de sostenibilidad financiera, entre otros de estos nuevos
+cantones. [^mideplan] 
+
+[^mideplan]: San José, 20 de febrero del 2024
+MIDEPLAN-DM-OF-0277-2024
+A: Directorio Legislativo, Jefaturas de Fracción,
+Asamblea Legislativa de Costa Rica
+Asunto: Opinión de MIDEPLAN sobre el Primer Debate del Proyecto de Ley N°22.643, “Creación del Cantón Colorado, Cantón Duodécimo de la Provincia de Guanacaste”.
+Disponible en: [enlace](https://d1qqtien6gys07.cloudfront.net/wp-content/uploads/2024/02/Dictamen_22643TEXTO-ACTUALIZADO-1.pdf)
+
+Justo en febrero del 2024, días despues de las elecciones municipales se aprobo el Expediente 22643: Creación del Cantón Colorado[^colorado] en Guanacaste y existen 7 proyectos de ley vigentes para crear nuevos cantones.
+
+[^colorado]:Delfino.cr. (19 de febrero de 2024). Expediente 22643: Creación del Cantón Colorado, Cantón Duodécimo de la Provincia de Guanacaste. Delfino.cr. [Leer más](https://delfino.cr/asamblea/proyecto/22643)
+
+1. Expediente 24.062: Creación del Cantón de Cervantes, Cantón IX de la Provincia de Cartago.
+
+2. Expediente 23.406: Creación del Cantón XVII de la Provincia de Alajuela, Peñas Blancas.
+
+3. Expediente 23.403: Creación del Cantón Jicaral, Cantón XIV de la Provincia de Puntarenas.
+
+4. Expediente 23.109: Creación del Cantón Cóbano.
+
+5. Expediente 23.055: Creación del Cantón de Paquera, Cantón XIV de la Provincia de Puntarenas.
+
+6. Expediente 22.874: Creación del Cantón Ojo de Agua, Cantón XVII de la Provincia de Alajuela.
+
+7. Expediente 24.153: Creación del Cantón XVII, Provincia de Alajuela, Ojo de Agua.
+
+
+Así que menos mal que ya sabemos cómo tener el mapa actualizado, porque si por la fecha se saca el día, lo vamos a tener que hacer con frecuencia en los próximos años.
