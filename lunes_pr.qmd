@@ -1,0 +1,26 @@
+---
+title: "¿Estás lidiando con problemas en R?"
+subtitle: "Unete a nuestros lunes de preguntas y respuesta"
+description: "Resuelve tus dudas de R cada lunes a las 7:00 p.m. ¡Únete a nuestras sesiones de preguntas y respuestas para recibir asesoría personalizada y consejos prácticos que te ayudarán a avanzar en tu aprendizaje de R!"
+lang: "es"
+toc: true
+comments: false
+author: "Carlos Aguero B."
+date: "2024/03/23"
+pagetitle: Aprende Tidyverse - lunes de preguntas y respuestas
+image: images/the_stonebreakers.jpg
+---
+
+!["Los Forjadores" de Gustave Courbet, 1853.](images/the_stonebreakers.jpg)
+
+¿Estás lidiando con problemas en R o simplemente tienes dudas que no puedes resolver? ¡Estoy aquí para ayudarte! Todos los lunes a las 7:00 p.m., dedicaré una hora completa para contestar preguntas y brindar asistencia con cualquier desafío que estés enfrentando en R. Esta es tu oportunidad de obtener ayuda personalizada y consejos prácticos para superar esos obstáculos que te impiden avanzar.
+
+## Detalles del Evento:
+
++ **¿Cuándo?** Todos los lunes, de 7:00 p.m. a 8:00 p.m. hora de Costa Rica (UTC-6)
++ **¿Dónde?** Las sesiones se realizan en la plataforma Zoom.
+
+
+[Regístrate gratis](https://cal.com/aprendetidyverse/lunes-preguntas-y-respuestas?month=2024-04){.btn .btn-outline-primary .btn role="button"} 
+
+Únete a la sesión y aprovecha la oportunidad de aprender y avanzar en tu dominio del lenguaje R.

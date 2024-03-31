@@ -1,0 +1,65 @@
+project:
+  type: website
+  render: 
+    - "*.qmd"
+  output-dir: docs
+  preview:
+    port: 4200
+
+website:
+  cookie-consent:
+    type: express
+    style: headline
+    palette: light
+  google-analytics:
+    tracking-id: "G-7HH46G4FS3"
+    anonymize-ip: true
+  bread-crumbs: true
+  open-graph:
+    locale: es_ES
+    site-name: aprendetidyverse.com
+  twitter-card:
+    creator: "@dev_aguero"
+    site: "@dev_aguero"
+  title: "Aprende Tidyverse"
+  favicon: favicon.ico
+  navbar:
+    background: dark
+    left:
+      - text: "Cursos R Intensivo"
+        file: courses/index.qmd
+      - text: "Lunes de Consultas"
+        file: lunes_pr.qmd
+      - text: Blog
+        file: posts.qmd
+    right:
+      - icon: twitter
+        href: https://twitter.com/dev_aguero
+      - icon: instagram
+        href: https://www.instagram.com/aprende.tidyverse/
+      - icon: facebook
+        href: https://www.facebook.com/aprende.tidyverse
+      - icon: linkedin
+        href: https://www.linkedin.com/in/carlos-aguero-cr/
+  site-url: https://aprendetidyverse.com
+  repo-url: https://github.com/aguerodev/aguerodev.github.io
+
+format:
+  html:
+    grid:
+      sidebar-width: 280px
+    theme: seem.scss
+    highlight-style: seem.theme
+    metadata:
+      pagetitle: "{{< meta title >}}"
+      freeze: true
+      # Enable banner style title blocks
+      title-block-banner: false
+      author: Carlos Aguero B
+      # Can't yet enable this because it causes "On this page" to appear on index.html
+      # even if I set its post-level `toc: false`
+      # toc: true
+      title-block-categories: false
+      toc-depth: 5
+
+

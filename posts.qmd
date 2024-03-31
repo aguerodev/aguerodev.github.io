@@ -1,0 +1,28 @@
+---
+lang: "es"
+toc: true
+listing:
+  contents: [posts]
+  categories: true
+  sort: "date desc"
+  fields: [date, title, image, description, categories]
+  feed: true
+  filter-ui: false
+  sort-ui: false
+  date-format: YYYY-MM-DD
+author: ""
+pagetitle: Aprende Tidyverse
+margin-header: |
+     ![](images/logo2.png){style="width: 600px; height: 150px; object-fit: cover;"}
+---
+
+
+
+## Ponte en contacto
+
+La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
+
+
+Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr) o en [Twitter](https://twitter.com/dev_aguero) (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!
+
+## Post Recientes
