@@ -5,8 +5,8 @@ description: "Resuelve tus dudas de R cada lunes a las 7:00 p.m. ¡Únete a nues
 lang: "es"
 toc: true
 comments: false
-author: "Carlos Aguero B."
-date: "2024/03/23"
+author: ""
+date: ""
 pagetitle: Aprende Tidyverse - lunes de preguntas y respuestas
 image: images/the_stonebreakers.jpg
 ---
@@ -23,4 +23,3 @@ image: images/the_stonebreakers.jpg
 
 [Regístrate gratis](https://cal.com/aprendetidyverse/lunes-preguntas-y-respuestas?month=2024-04){.btn .btn-outline-primary .btn role="button"} 
 
-Únete a la sesión y aprovecha la oportunidad de aprender y avanzar en tu dominio del lenguaje R.
