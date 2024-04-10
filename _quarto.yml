@@ -62,5 +62,17 @@ format:
       title-block-categories: false
       toc-depth: 5
 
+copyright: 
+  statement: "Copyright Aprende Tidyverse. 2024. Todos los derechos reservados."
+license:
+  text: >
+    Este blog libera su contenido bajo la Licencia Creative Commons CC0,
+    permitiendo a los usuarios copiar, modificar, distribuir y utilizar 
+    todo el trabajo, ya sea para propósitos comerciales o no, sin necesidad
+    de pedir permiso o proporcionar atribución al autor.
+  type: open-access
+  url: https://creativecommons.org/publicdomain/zero/1.0/deed.es
+
+
 metadata-files:
   - drafts.yml

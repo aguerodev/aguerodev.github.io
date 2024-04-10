@@ -4,7 +4,7 @@ description: ""
 author: "<a href = 'www.linkedin.com/in/carlos-aguero-cr' style = 'text-decoration: underline;'>Carlos Aguero B.</a>"
 date: 2024-04-01
 date-modified: "`r Sys.Date()`"
-categories: ['Guías Paso a Paso', 'ggplot2','#30DayChartChallenge']
+categories: ['Borrador','Guías Paso a Paso', 'ggplot2','#30DayChartChallenge']
 lang: "es"
 image: images/portada_d1.png
 comments:
@@ -172,23 +172,4 @@ ggplot(
 ggsave("plot_elecciones_d1.jpg", dpi = 400, width = 8.51, height = 11.3)
 ```
 
-::: {.callout-tip appearance="simple"}
-<mark style = 'font-size:20px'>**Visualización Avanzada con ggplot2: Creando Gráficos Impresionantes**</mark>
-
-Si ya tienes experiencia creando gráficos con ggplot2 y buscas llevar tus habilidades al siguiente nivel, este es el curso que estabas buscando: 
-
-+ Fecha de inicio: **{{< var curso_ggplot2.fecha >}}**.
-+ Precio: **$99 USD**.
-+ Modalidad: 100% online via Zoom.
-+ Duración: 6 semanas, clase todos los lunes 6:00 p.m hora de Costa Rica (UTC-6).
-
-[Leer más sobre el curso](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
-:::
-
-***
-
-
-::: {.callout-tip appearance="simple"}
-Este blog libera su contenido bajo la [Licencia Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.es), permitiendo a los usuarios copiar, modificar, distribuir y utilizar todo el trabajo, ya sea para propósitos comerciales o no, sin necesidad de pedir permiso o proporcionar atribución al autor.
-:::
 

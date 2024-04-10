@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</loc>
-    <lastmod>2024-03-31T05:05:44.844Z</lastmod>
+    <loc>https://aprendetidyverse.com/posts/002_custom_legend_ggplot2.html</loc>
+    <lastmod>2024-04-10T20:09:29.921Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aprendetidyverse.com/posts/003_30_days_chart_challenge_d1.html</loc>
+    <lastmod>2024-04-10T20:10:30.157Z</lastmod>
   </url>
   <url>
     <loc>https://aprendetidyverse.com/posts.html</loc>
@@ -10,22 +14,22 @@
   </url>
   <url>
     <loc>https://aprendetidyverse.com/index.html</loc>
-    <lastmod>2024-03-30T04:07:41.443Z</lastmod>
+    <lastmod>2024-04-10T19:36:57.233Z</lastmod>
   </url>
   <url>
     <loc>https://aprendetidyverse.com/courses/index.html</loc>
-    <lastmod>2024-03-30T23:46:53.115Z</lastmod>
+    <lastmod>2024-04-10T19:36:37.686Z</lastmod>
   </url>
   <url>
     <loc>https://aprendetidyverse.com/lunes_pr.html</loc>
     <lastmod>2024-04-01T02:29:26.167Z</lastmod>
   </url>
   <url>
-    <loc>https://aprendetidyverse.com/posts/003_30_days_chart_challenge_d1.html</loc>
-    <lastmod>2024-04-07T02:29:22.134Z</lastmod>
+    <loc>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</loc>
+    <lastmod>2024-03-31T05:05:44.844Z</lastmod>
   </url>
   <url>
-    <loc>https://aprendetidyverse.com/posts/002_custom_legend_ggplot2.html</loc>
-    <lastmod>2024-04-07T05:58:02.562Z</lastmod>
+    <loc>https://aprendetidyverse.com/posts/004_30_days_chart_challenge_d2.html</loc>
+    <lastmod>2024-04-10T20:09:16.467Z</lastmod>
   </url>
 </urlset>
