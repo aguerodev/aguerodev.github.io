@@ -62,4 +62,5 @@ format:
       title-block-categories: false
       toc-depth: 5
 
-
+metadata-files:
+  - drafts.yml

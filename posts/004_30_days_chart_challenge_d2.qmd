@@ -1,0 +1,137 @@
+---
+title: "30 days chart challenge 2/30"
+description: ""
+author: "<a href = 'www.linkedin.com/in/carlos-aguero-cr' style = 'text-decoration: underline;'>Carlos Aguero B.</a>"
+date: 2024-04-01
+date-modified: "`r Sys.Date()`"
+categories: ['Guías Paso a Paso', 'ggplot2','#30DayChartChallenge']
+lang: "es"
+image: images/portada_d2.png
+comments:
+  utterances:
+    repo: aguerodev/aguerodev.github.io
+toc: true
+code-line-numbers: true
+code-copy: true
+toc-location: left
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, dpi = 400, fig.width = 8, fig.height = 6)
+```
+
+```{r}
+colores <- list(
+  amarillo = "#FFCC70",
+  gris = "#E3E1D9"
+)
+```
+
+
+```{r}
+library(tidyverse)
+library(janitor)
+library(haven)
+library(glue)
+```
+
+
+```{r}
+file <- "datos/DEFU2022PAD.sav"
+datos <- read_sav(file)
+fecha = str_extract(basename(file), "\\d+")
+datos <- datos |>
+  select(des_causa) |>
+  add_column(fecha = fecha, .before = 1) |>
+  separate_wider_delim(
+    cols = des_causa,
+    delim = " - ",
+    names = c("codigo_cie", "descripcion"),
+    too_many = "merge"
+  )
+```
+
+
+```{r}
+df_plot <- datos |>
+  mutate(
+    causa_muerte = case_when(
+      str_detect(codigo_cie, "^I[0-5]") ~ "Enfermedades\ndel corazón",
+      str_detect(codigo_cie, "^(C|D0[0-4])") ~ "Cáncer",
+      str_detect(codigo_cie, "^V|^W|^Y") ~ "Accidentes",
+      str_detect(codigo_cie, "^J(4[0-7]|6[0-6])") ~ "Enfermedades\nrespiratorias",
+      str_detect(codigo_cie, "^I6") ~ "Derrame cerebral",
+      str_detect(codigo_cie, "^G3[0-1]") ~ "Alzheimer",
+      str_detect(codigo_cie, "^E1[0-4]") ~ "Diabetes",
+      str_detect(codigo_cie, "^(J09|J1[0-8])") ~ "Influenza/neumonía",
+      str_detect(codigo_cie, "^N1[7-9]") ~ "Enfermedad renal",
+      str_detect(codigo_cie, "^X7[0-9]") ~ "Suicidio",
+      TRUE ~ "Otras causas\n(836 causas distintas)"
+   )
+  ) |> 
+  count(causa_muerte) |> 
+  mutate(
+    p = n/sum(n),
+    causa_muerte = fct_reorder(causa_muerte, n)
+  )
+```
+
+
+```{r}
+library(scales) 
+
+ggplot(
+  data = df_plot,
+  mapping = aes(
+    y = causa_muerte,
+    x = n,
+    label = comma(n)
+  )
+) +
+  geom_col(
+    fill = "#A34343"
+  ) +
+  geom_text(
+    hjust = if_else(df_plot$n > 1500, 1.2,-.08),
+    color = if_else(df_plot$n > 1500, "white","black"),
+    size = 14/.pt,
+    fontface = "bold"
+  ) +
+  scale_x_continuous(
+    labels = scales::comma_format()
+  ) +
+  labs(
+    y = "",
+    x = "Cantidad de casos",
+    title = "Principales Causas de muerte en Costa Rica",
+    subtitle = "Cantidad de defunciones por causa de muerte ocurridas e inscritas en el país en 2022.",
+    caption = str_wrap('Fuente: Instituto Nacional de Estadística y Censos (INEC), Área de Censos y Encuestas, Unidad de Estadísticas Demográficas. "Costa Rica: Total de defunciones 2022, Defunciones ocurridas e inscritas en el país en 2022".',100)
+  ) +
+  theme_minimal(base_size = 16, base_family = "Roboto") +
+  theme(
+    plot.title = element_text(
+      size = 18,
+      face = "bold",
+      family = "Roboto"
+    ), 
+    legend.text = element_text(size = 16),
+    plot.subtitle = element_text(
+      size = 14
+    ),
+    plot.caption = element_text(
+      hjust = 0
+    )
+  )
+```
+
+```{r, eval=FALSE}
+ggsave("plot_elecciones_d2.jpg", dpi = 400)
+```
+
+
+::: {.callout-tip appearance="simple"}
+Este blog libera su contenido bajo la [Licencia Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.es), permitiendo a los usuarios copiar, modificar, distribuir y utilizar todo el trabajo, ya sea para propósitos comerciales o no, sin necesidad de pedir permiso o proporcionar atribución al autor.
+:::
+

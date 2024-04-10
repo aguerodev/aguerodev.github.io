@@ -87,8 +87,8 @@ div.quarto-post a {
 a {
   color: inherit;
   text-decoration-color: $blue;
-  // text-decoration-thickness: 2px;
-  // text-underline-offset: 0.0625em;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.0625em;
   transition: color .2s;
 }
 
@@ -112,12 +112,9 @@ a sup {
   &.navbar-fixed-bottom { border-width: 1px 0 0; }
 }
 
-.navbar { font-family: $headings-font-family; }
-
-.navbar-brand {
-  padding-top: .5rem;
-  font-size: inherit;
-  font-weight: $headings-font-weight;
+.navbar { 
+  font-family: $headings-font-family;
+  text-decoration: underline !important;
 }
 
 // Buttons
@@ -340,6 +337,4 @@ margin-left: 0rem;
 margin-top: 15px;
 background: none;
 }
-
-
 
