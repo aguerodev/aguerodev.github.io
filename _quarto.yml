@@ -11,6 +11,8 @@ website:
     center:
       - text: "Términos y Condiciones"
         href: terminos.qmd
+      - text: "Código de conducta"
+        href: codigo_conducta.qmd
     left: |
       Contenido {{< fa brands creative-commons >}} 2024 por Aprende Tidyverse<br>
       Todo el contenido está licenciado bajo una Licencia Internacional Creative Commons Atribución-NoComercial 4.0 ([CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.es)).
@@ -44,7 +46,7 @@ website:
       - text: "Cursos"
         menu:
           - text: "Cursos de R"
-          - text: "R para ciencia de datos (básico)"
+          - text: "R para ciencia de datos"
             icon: "graph-up-arrow"
             href: courses/r4ds.qmd
           - text: "Desarrollo de aplicaciones con shiny (intermedio)"

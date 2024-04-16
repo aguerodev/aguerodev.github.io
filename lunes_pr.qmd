@@ -25,7 +25,7 @@ license: ""
 
 ## Normas de conducta
 
-+ **Respeto**: No serán permitidos comportamientos que excluyan o intimiden a otros. Prohibidos los comentarios ofensivos, la intimidación, las amenazas y el uso de imágenes violentas o sexuales.
++ **Respeto**: No serán permitidos comportamientos que excluyan o intimiden a otros. Prohibidos los comentarios ofensivos, la intimidación, las amenazas y el uso de imágenes violentas o sexuales ([Leer Código de conducta](codigo_conducta.qmd)).
 
 + **Participación activa**: Anímate a participar, hacer preguntas y contribuir al diálogo. Las preguntas que parecen simples para uno pueden ser una gran duda para otro.
 
@@ -40,5 +40,5 @@ license: ""
 
 ---
 
-**Privacidad y Protección de Datos:** La información personal, como nombres y correos electrónicos de los participantes recolectados en el formulario de inscripción a este evento, no será utilizada con ningún otro fin distinto de comunicaciones relacionadas con su participación en el evento antes, durante o después del mismo. Nos comprometemos a respetar la privacidad de cada participante y a manejar sus datos personales en conformidad con la [Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales (Ley Nº 8968)](https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=70975&nValor3=85989&strTipM=TC) de la República de Costa Rica.
+**Privacidad y Protección de Datos:** La información personal recolectada, como nombres y correos electrónicos de los participantes en el formulario de inscripción, será utilizada exclusivamente para enviar el enlace de Zoom del evento y un recordatorio 6 horas antes del mismo. Nos comprometemos a respetar la privacidad de cada participante y a manejar sus datos personales en conformidad con la [Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales (Ley Nº 8968)](https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=70975&nValor3=85989&strTipM=TC) de la República de Costa Rica. ([Leer más](terminos.qmd))
 

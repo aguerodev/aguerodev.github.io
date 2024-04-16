@@ -95,17 +95,10 @@ Aprende Tidyverse se esfuerza por ofrecer una experiencia educativa de alta cali
 
 + Excepciones: Los reembolsos no se aplicarán a estudiantes que hayan sido expulsados del curso por violar nuestro código de conducta.
 
-### Descuentos y congelamiento de cursos:
-+ Incompatibilidad: Los estudiantes que se beneficien de un descuento en el costo del curso no tendrán la opción de congelar su participación y continuar en una fecha posterior. El curso deberá ser completado dentro del plazo de 180 días establecido.
+### Congelamiento de cursos:
++ Por causas de fuerza mayor, como problemas de salud, afecciones incapacitantes físicas o psicológicas, o incompatibilidad de horarios, el estudiante puede optar por congelar su inscripción y reanudar el curso en otro momento. Si el precio del curso ha aumentado durante ese tiempo, el estudiante deberá abonar la diferencia, además de los costos asociados al método de pago. Para solicitar el congelamiento, el estudiante debe exponer su caso enviando un correo a soporte@aprendetidyverse.com.
 
-### Código de conducta y expulsión:
 
-+ Cumplimiento: Todos los estudiantes deben adherirse al código de conducta de Aprende Tidyverse, el cual promueve un ambiente de respeto, colaboración y aprendizaje.
-
-+ Expulsión: Los estudiantes que cometan faltas graves según lo establecido en nuestro código de conducta serán expulsados del curso o evento sin derecho a reembolso. Además, no podrán participar en futuras actividades de Aprende Tidyverse, ya sean online o presenciales.
-
-### Modificaciones:
-Aprende Tidyverse se reserva el derecho de modificar estos términos y condiciones en cualquier momento. Las actualizaciones se publicarán en nuestra página web y se notificará a los estudiantes sobre cambios significativos.
 
 
 ## Términos y Condiciones de Uso de Información
@@ -132,3 +125,6 @@ Implementamos medidas de seguridad para proteger tu información del acceso no a
 
 ### Cumplimiento con la ley:
 Nos comprometemos a cumplir con la [Ley de Protección de la Persona frente al tratamiento de sus datos personales (Nº 8968)](https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=70975&nValor3=85989&strTipM=TC) y a proteger tus derechos de privacidad.
+
+## Modificaciones:
+Aprende Tidyverse se reserva el derecho de modificar estos términos y condiciones en cualquier momento. Las actualizaciones se publicarán en nuestra página web y se notificará a los estudiantes sobre cambios significativos.

@@ -1,5 +1,5 @@
 ---
-title: "Curso: ggplot2 avanzado"
+title: "Visualización de datos con ggplot2"
 subtitle: "lleva tus visualizaciones al siguiente nivel"
 description: ""
 toc: true
@@ -50,7 +50,7 @@ Todos comenzamos con ggplot2 creando gráficos básicos, pero llega un punto don
 + Acceso prioritario a cursos avanzados.
 + **Precio: $99 USD.**
 
-[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/w8KvZO){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -141,7 +141,7 @@ Controlarás las escalas en gráficos facetados y utilizarás anotaciones para f
 + Acceso prioritario a cursos avanzados.
 + **Precio: $99 USD.**
 
-[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/w8KvZO){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 

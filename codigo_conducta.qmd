@@ -1,0 +1,66 @@
+---
+title: "Código de Conducta de Aprende Tidyverse"
+subtitle: ""
+description: ""
+lang: "es"
+toc: false
+comments: false
+author: ""
+date: ""
+copyright: ""
+pagetitle: Terminos y condiciones
+license: ""
+---
+
+Aprende Tidyverse se compromete a fomentar un entorno de aprendizaje inclusivo, respetuoso y productivo. Este código de conducta se aplica a todos los miembros de nuestra comunidad, incluyendo estudiantes, profesores e invitados, tanto en espacios online como presenciales. Su objetivo es asegurar una experiencia positiva y enriquecedora para todos.
+
+### Comportamientos esperados:
+
++ Respeto: Trata a todos con consideración y respeto, valorando la diversidad de opiniones, experiencias y orígenes.
+
++ Amabilidad: Sé amable y comprensivo, ofreciendo apoyo y estímulo a tus compañeros.
+Colaboración: Participa activamente en el aprendizaje colaborativo y comparte tus conocimientos generosamente.
+
++ Profesionalismo: Mantén un comportamiento profesional en todo momento, evitando lenguaje ofensivo o acciones inapropiadas.
+
++ Escucha activa: Escucha atentamente a los demás y evita interrumpir o monopolizar las conversaciones.
+
++ Responsabilidad: Asume la responsabilidad de tus acciones y palabras, siendo consciente del impacto que pueden tener en los demás.
+
+### Comportamientos inaceptables:
+Los siguientes comportamientos son inaceptables y pueden resultar en medidas disciplinarias, incluyendo la expulsión del curso o evento y la prohibición de participar en futuras actividades de Aprende Tidyverse:
+
++ Discriminación o acoso: Cualquier forma de discriminación o acoso basada en raza, etnia, género, orientación sexual, identidad de género, religión, edad, discapacidad o cualquier otra característica protegida.
+
++ Violencia o amenazas: Amenazas o lenguaje violento dirigido a cualquier persona, así como la exhibición de imágenes violentas.
+
++ Acoso sexual: Atención sexual no deseada, contacto físico no consensuado o no deseado, o cualquier otro comportamiento de naturaleza sexual que cree un ambiente hostil o intimidante.
+
++ Comportamiento disruptivo: Interrupción constante de clases, eventos o comunicaciones.
+
++ Insultos o humillaciones: Lenguaje abusivo, insultos o humillaciones dirigidas a cualquier persona.
+
++ Lenguaje ofensivo: Chistes o comentarios sexistas, racistas, homofóbicos, transfóbicos, excluyentes o que discriminen a personas con discapacidad.
+Incumplimiento de las normas: Ignorar las instrucciones del instructor, hacer trampa o plagiar el trabajo de otros.
+
++ Compartir información privada: Publicar comunicaciones privadas sin consentimiento.
+
++ Comportamiento inapropiado en línea: Esto incluye, pero no se limita a, trolling, flaming, spamming y doxing.
+
+### Consecuencias de violar el código de conducta:
+
+Las violaciones a este código de conducta serán tomadas con seriedad y pueden resultar en una o más de las siguientes consecuencias:
+
++ Advertencia verbal o escrita.
+
++ Expulsión del curso o evento sin derecho a reembolso.
+
++ Prohibición de participar en futuras actividades de Aprende Tidyverse, tanto online como presenciales.
++ En casos graves, se pueden tomar medidas legales.
+
+### Reportar incidentes:
+
+Si experimentas o presencias algún comportamiento inaceptable, te alentamos a que lo informes de inmediato a un miembro del equipo de Aprende Tidyverse o enviando un correo electrónico a soporte@aprendetidyverse.com. Todos los informes serán tratados con confidencialidad y seriedad.
+
+### Compromiso con la comunidad:
+Al participar en la comunidad de Aprende Tidyverse, aceptas cumplir con este código de conducta y contribuir a un ambiente de aprendizaje positivo e inclusivo para todos.
