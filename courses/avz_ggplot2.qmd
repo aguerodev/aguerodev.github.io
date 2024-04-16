@@ -1,11 +1,11 @@
 ---
 title: "Visualización de datos con ggplot2"
-subtitle: "Lleva tus visualizaciones al siguiente nivel"
+subtitle: ""
 description: "Aprende su funcionamiento a fondo y practica replicando gráficos de grandes medios como The Economist, The New York Times, The Washington Post, entre otros."
 toc: true
 lang: "es"
 author: ""
-pagetitle: "ggplot2 avanzado"
+pagetitle: "Visualización de datos con ggplot2"
 image: ../images/ggplot2.jpg
 ---
 
