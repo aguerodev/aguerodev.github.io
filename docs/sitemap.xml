@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://aprendetidyverse.com/posts/002_custom_legend_ggplot2.html</loc>
+    <lastmod>2024-04-16T19:56:43.192Z</lastmod>
+  </url>
+  <url>
     <loc>https://aprendetidyverse.com/index.html</loc>
     <lastmod>2024-04-16T16:17:35.929Z</lastmod>
   </url>
@@ -46,14 +50,10 @@
   </url>
   <url>
     <loc>https://aprendetidyverse.com/courses/web_scraping.html</loc>
-    <lastmod>2024-04-16T17:46:41.626Z</lastmod>
+    <lastmod>2024-04-16T20:18:49.744Z</lastmod>
   </url>
   <url>
     <loc>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</loc>
     <lastmod>2024-04-13T01:39:09.263Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/posts/002_custom_legend_ggplot2.html</loc>
-    <lastmod>2024-04-16T19:56:43.192Z</lastmod>
   </url>
 </urlset>

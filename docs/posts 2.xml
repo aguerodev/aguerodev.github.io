@@ -2811,32 +2811,6 @@ font-style: inherit;">0.5</span>)</span>
   <media:content url="https://aprendetidyverse.com/posts/images/legend_example.png" medium="image" type="image/png" height="58" width="144"/>
 </item>
 <item>
-  <title></title>
-  <dc:creator>&lt;a href = &#39;www.linkedin.com/in/carlos-aguero-cr&#39; style = &#39;text-decoration: underline;&#39;&gt;Carlos Aguero B.&lt;/a&gt;</dc:creator>
-  <link>https://aprendetidyverse.com/posts/003_30_days_chart_challenge_d1.html</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Borrador</category>
-  <category>Guías Paso a Paso</category>
-  <category>ggplot2</category>
-  <category>#30DayChartChallenge</category>
-  <guid>https://aprendetidyverse.com/posts/003_30_days_chart_challenge_d1.html</guid>
-  <pubDate>Mon, 01 Apr 2024 06:00:00 GMT</pubDate>
-  <media:content url="https://aprendetidyverse.com/posts/images/portada_d1.png" medium="image" type="image/png" height="93" width="144"/>
-</item>
-<item>
-  <title></title>
-  <dc:creator>&lt;a href = &#39;www.linkedin.com/in/carlos-aguero-cr&#39; style = &#39;text-decoration: underline;&#39;&gt;Carlos Aguero B.&lt;/a&gt;</dc:creator>
-  <link>https://aprendetidyverse.com/posts/004_30_days_chart_challenge_d2.html</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Borrador</category>
-  <category>Guías Paso a Paso</category>
-  <category>ggplot2</category>
-  <category>#30DayChartChallenge</category>
-  <guid>https://aprendetidyverse.com/posts/004_30_days_chart_challenge_d2.html</guid>
-  <pubDate>Mon, 01 Apr 2024 06:00:00 GMT</pubDate>
-  <media:content url="https://aprendetidyverse.com/posts/images/portada_d2.png" medium="image" type="image/png" height="93" width="144"/>
-</item>
-<item>
   <title>Actualizando el mapa de cantones de Costa Rica con R</title>
   <dc:creator>Carlos Aguero</dc:creator>
   <link>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</link>

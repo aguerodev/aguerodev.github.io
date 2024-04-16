@@ -6,8 +6,8 @@
       version="2.0">
 <channel>
 <title>Aprende Tidyverse</title>
-<link>https://aprendetidyverse.com/posts.html</link>
-<atom:link href="https://aprendetidyverse.com/posts.xml" rel="self" type="application/rss+xml"/>
+<link>https://aprendetidyverse.com/index2.html</link>
+<atom:link href="https://aprendetidyverse.com/index2.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.5.28</generator>
 <lastBuildDate>Tue, 16 Apr 2024 06:00:00 GMT</lastBuildDate>
@@ -2809,32 +2809,6 @@ font-style: inherit;">0.5</span>)</span>
   <guid>https://aprendetidyverse.com/posts/002_custom_legend_ggplot2.html</guid>
   <pubDate>Tue, 16 Apr 2024 06:00:00 GMT</pubDate>
   <media:content url="https://aprendetidyverse.com/posts/images/legend_example.png" medium="image" type="image/png" height="58" width="144"/>
-</item>
-<item>
-  <title></title>
-  <dc:creator>&lt;a href = &#39;www.linkedin.com/in/carlos-aguero-cr&#39; style = &#39;text-decoration: underline;&#39;&gt;Carlos Aguero B.&lt;/a&gt;</dc:creator>
-  <link>https://aprendetidyverse.com/posts/003_30_days_chart_challenge_d1.html</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Borrador</category>
-  <category>Guías Paso a Paso</category>
-  <category>ggplot2</category>
-  <category>#30DayChartChallenge</category>
-  <guid>https://aprendetidyverse.com/posts/003_30_days_chart_challenge_d1.html</guid>
-  <pubDate>Mon, 01 Apr 2024 06:00:00 GMT</pubDate>
-  <media:content url="https://aprendetidyverse.com/posts/images/portada_d1.png" medium="image" type="image/png" height="93" width="144"/>
-</item>
-<item>
-  <title></title>
-  <dc:creator>&lt;a href = &#39;www.linkedin.com/in/carlos-aguero-cr&#39; style = &#39;text-decoration: underline;&#39;&gt;Carlos Aguero B.&lt;/a&gt;</dc:creator>
-  <link>https://aprendetidyverse.com/posts/004_30_days_chart_challenge_d2.html</link>
-  <description><![CDATA[ undefined ]]></description>
-  <category>Borrador</category>
-  <category>Guías Paso a Paso</category>
-  <category>ggplot2</category>
-  <category>#30DayChartChallenge</category>
-  <guid>https://aprendetidyverse.com/posts/004_30_days_chart_challenge_d2.html</guid>
-  <pubDate>Mon, 01 Apr 2024 06:00:00 GMT</pubDate>
-  <media:content url="https://aprendetidyverse.com/posts/images/portada_d2.png" medium="image" type="image/png" height="93" width="144"/>
 </item>
 <item>
   <title>Actualizando el mapa de cantones de Costa Rica con R</title>
