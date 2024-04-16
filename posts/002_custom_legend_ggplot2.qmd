@@ -1,10 +1,9 @@
 ---
-title: "Creando leyendas personalizadas en ggplot2"
-description: " "
-author: "<a href = 'www.linkedin.com/in/carlos-aguero-cr' style = 'text-decoration: underline;'>Carlos Aguero B.</a>"
-date: 2024-03-30
-date-modified: 2024-04-01
-categories: ['Borrador','Guías Paso a Paso', 'ggplot2']
+title: "Cómo crear leyendas personalizadas en tus gráficos utilizando ggplot2"
+description: "Explora las nuevas funcionalidades de ggplot2 3.5 y lleva tus gráficos al próximo nivel personalizando tus leyendas hasta el último detalle"
+date: 2024-04-16
+author: "Carlos Aguero B"
+categories: ['Guías Paso a Paso', 'ggplot2']
 lang: "es"
 image: images/legend_example.png
 comments:
@@ -20,15 +19,27 @@ editor_options:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, dpi = 400, fig.width = 8.5, fig.height = 6, warning = FALSE, message = FALSE)
-library(tidyverse)
+
 ```
 
+Cada tanto, cuando tengo tiempo libre, me siento a revisar artículos y noticias. En Twitter, me topé con el siguiente artículo del Wall Street Journal, titulado **'The Rough Years That Turned Gen Z Into America’s Most Disillusioned Voters'**[^articulo]. Este habla sobre cómo lo que se puede entender como generación Z tiene menores expectativas de tener una carrera, entre otras cuestiones. Pero lo que me llamó la atención inmediatamente fue este gráfico tan curioso.
 
-::: {.callout-warning appearance="simple"}
-Hola a todos!! una pequeña advertencia: este documento aún está en construcción. Puedes intentar utilizarlo, pero ten en cuenta que algunas cosas aún podrían no funcionar bien. Recomiendo esperar a la versión final.
-:::
+
+[^articulo]: Restuccia, Andrew, y Eliza Collins. 2024. "The Rough Years That Turned Gen Z Into America’s Most Disillusioned Voters." The Wall Street Journal, March 15. https://archive.ph/0E2Bw ([Leer publicación](https://archive.ph/0E2Bw)).
+
+
+![Imagen publicada por [The Wall Street Journal](https://www.wsj.com/politics/elections/gen-z-voters-election-tiktok-5bcdc524)](images/ejemplo_twsj.png){#fig-original}
+
+Resulta que justo en las últimas semanas, el blog de [tidyverse.org](https://www.tidyverse.org) publicaba algunas de las [novedades de ggplot2 3.5](https://www.tidyverse.org/blog/2024/02/ggplot2-3-5-0-legends/), entre las que se encuentran el poder agregar leyendas personalizadas utilizando el paquete grid. Ahora, entonces, me entra la duda de si es posible recrear este gráfico usando código de R, vamos a intentarlo.
+
+Este no es un tutorial; el objetivo no es que entiendas cómo funciona todo, ya que el código es algo largo, sino que lo tengas como referencia y exploremos juntos las capacidades del paquete.
+
+## Paso 1 : Cargar las dependencias
 
 ```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
 library(ggplot2)
 library(grid)
 library(ggh4x)
@@ -36,8 +47,20 @@ library(ggrepel)
 library(colorspace)
 ```
 
+## Paso 2: Crear la primer leyenda
+
+El paquete grid nos permite crear gráficos, pero a diferencia de ggplot2, grid nos provee de funciones más de bajo nivel, como dibujar un círculo, una línea, un rectángulo, lo cual nos da mucha libertad para componer estos elementos de la forma en que queramos.
+
+::: {.column-margin}
+Una de las mejores lecturas para comprender el funcionamiento del paquete grid y su relación con ggplot2 es el libro [R Graphics, Second Edition, de Paul Murrell](https://www.stat.auckland.ac.nz/~paul/RG2e/), el autor del paquete grid.
+:::
+
+
+Usaremos las funciones `circleGrob`, `segmentsGrob` y `textGrob` para replicar la primera leyenda, que en la [@fig-original] se encuentra a la derecha.
 
 ```{r}
+#| fig-height: 2
+#| fig-width: 4
 circulos <- circleGrob(
   r = 0.07,
   x = c(0.5, 0.35),
@@ -64,6 +87,8 @@ legend1 <- gTree(children = gList(circulos, lineas,texto))
 grid.draw(legend1)
 ```
 
+No está mal, se parece bastante. Ahora vamos a utilizar la función `guides` y la nueva función `guide_custom` para agregar este objeto llamado `legend1` a un gráfico de ggplot2. Además, se hacen algunos ajustes de tamaño y márgenes con la función `theme.`
+
 ```{r}
 ggplot() +
   guides(
@@ -81,8 +106,13 @@ ggplot() +
 ```
 
 
-```{r}
+## Paso 3: Crear la segunda leyenda
 
+Vemos que, a diferencia de la primera leyenda, esta segunda [@fig-original], que se encuentra a la izquierda del gráfico, es un poco más compleja; tiene más formas, textos y colores. Sin embargo, aunque requiere más código, no es en sí una tarea complicada.
+
+```{r}
+#| fig-height: 2
+#| fig-width: 6
 rect1 <- roundrectGrob(
   r= unit(0.5, "snpc"),
   x = 0.10,
@@ -152,6 +182,12 @@ legend2 <- gTree(children = gList(rect1, rect2, rect3,rect4,
 grid.draw(legend2)
 ```
 
+Ahora, al igual que en el paso anterior, vamos a agregarlo a un gráfico con ggplot2 para verificar cómo se ve.
+
+::: {.callout-note appearance="simple"}
+Al ajustar la dimensión de los elementos, es mejor verificarla contra la versión que ya está integrada en el plot de ggplot2, porque pueden variar mucho.
+:::
+
 ```{r}
 ggplot() +
   guides(
@@ -167,6 +203,13 @@ ggplot() +
     plot.margin = margin(t = 10,10,10,10)
   )
 ```
+
+
+## Paso 4: Necesitamos los datos
+
+Llega el momento de replicar el gráfico y necesitamos datos. Para esto, después de varios intentos fallidos y un dolor de cabeza de por medio, me topé con esta herramienta: [plot digitizer](https://plotdigitizer.com), que nos facilita el pasar de un plot ya creado a los datos.
+
+A continuación, mucho código de poco valor pero necesario para obtener los datos.
 
 ```{r}
 #| code-fold: true
@@ -409,8 +452,6 @@ df3 <- tibble::tribble(
 
 library(tidyverse)
 
-
-
 df <- bind_rows(df1, df2, df3) |> 
   mutate(
     generacion = case_when(
@@ -440,6 +481,12 @@ df <- df |>
     .by = c(pregunta, generacion)
   ) 
 ```
+
+
+## Paso 5: Crea el gráfico final
+
+Estuve varios días pensando en cómo explicar este código de forma sencilla y mi conclusión, en la que puedo estar equivocado perfectamente, es que si hay una explicación, sería muy larga para un post de este blog. Por lo tanto, hagamos un trato: por ahora, intenta ejecutar el código y experimenta con él. En futuras entregas, iremos agregando gráficos más simples que te ayudarán a entender lo que se necesita para generar este plot.
+
 
 ```{r}
 format_date <- \(x){
@@ -565,6 +612,31 @@ ggsave(
 )
 ```
 
+## Conclusión
 
+Aunque hay diferencias notables, como el uso de las tipografías, colores y otros detalles, creo que logramos una similitud razonable. El gráfico original está hecho con la herramienta [Datawrapper](https://www.datawrapper.de), muy usada por periodistas y una excelente alternativa si te quieres evitar tanto código, pero... como dije al inicio de este post, solo buscamos explorar las capacidades del paquete.
+
+---
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](../images/ggplot2_v2.jpg)
+:::
+
+::: {.column width="50%"}
+
+### Nuevo Curso: Visualización de Datos con ggplot2
+
+
+Si has llegado hasta aquí, permíteme hacerte una invitación a nuestro nuevo curso: '**Visualización de Datos con ggplot2**', que inicia el próximo **martes, 4 de junio de 2024**.
+
+Este curso está diseñado para aquellos que ya tienen experiencia en la creación de gráficos con ggplot2 y desean entender el paquete a fondo ademas de replicar hermosos gráficos que solemos ver en publicaciones como The Economist, The New York Times y otros medios reconocidos.
+
+[Ver el curso](https://aprendetidyverse.com/courses/avz_ggplot2.html){.btn .btn-outline-primary .btn role="button"} 
+:::
+
+::::
 
 

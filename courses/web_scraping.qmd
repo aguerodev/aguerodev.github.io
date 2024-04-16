@@ -4,7 +4,7 @@ description: "LLeve sus análisis a un nuevo nivel dominando técnicas de Web Sc
 toc: true
 lang: "es"
 author: ""
-pagetitle: "Curso: R para ciencia de datos"
+pagetitle: "Web Scraping y Automatización con R"
 image: ../images/web_scraping_v2.jpg
 license: ""
 ---
