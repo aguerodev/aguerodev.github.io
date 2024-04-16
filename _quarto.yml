@@ -44,7 +44,7 @@ website:
       - text: "Cursos"
         menu:
           - text: "Cursos de R"
-          - text: "R para ciencia de datos (novato)"
+          - text: "R para ciencia de datos (básico)"
             icon: "graph-up-arrow"
             href: courses/r4ds.qmd
           - text: "Desarrollo de aplicaciones con shiny (intermedio)"
@@ -53,17 +53,17 @@ website:
           - text: "Web Scraping con R (avanzado)"
             icon: "bug"
             href: courses/web_scraping.qmd
-          - text: "ggplot2 Avanzado"
+          - text: "ggplot2 Avanzado (avanzado)"
             icon: "palette"
             href: courses/avz_ggplot2.qmd
           - text: "---"
-          - text: "Programas especiales"
+          - text: "Programas especiales (muy pronto)"
           - text: "R para la investigación en ciencias sociales"
             icon: "book"
-            href: courses/r4ds.qmd
+            href: index.qmd
           - text: "R para la investigación en ciencias medicas"
             icon: "hospital"
-            href: courses/r4ds.qmd
+            href: index.qmd
       - text: "Sesiones de Consultas"
         file: lunes_pr.qmd
       - text: Blog
