@@ -55,7 +55,7 @@ website:
           - text: "Web Scraping con R (avanzado)"
             icon: "bug"
             href: courses/web_scraping.qmd
-          - text: "ggplot2 Avanzado (avanzado)"
+          - text: "Visualización de datos con ggplot2 (avanzado)"
             icon: "palette"
             href: courses/avz_ggplot2.qmd
           - text: "---"
