@@ -1,236 +1,5 @@
 [
   {
-    "objectID": "courses/r4ds.html",
-    "href": "courses/r4ds.html",
-    "title": "Curso: R para ciencia de datos",
-    "section": "",
-    "text": "Foto de Kenny Eliason en Unsplash\nQueremos iniciar con una premisa fundamental: cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero. Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos, solamente práctica, práctica y más práctica.\nEste curso está diseñado para llevarte de ser un principiante a un practicante competente, equipado no solo con el conocimiento de los comandos esenciales, sino también con una mucho mejor comprensión del proceso de análisis de datos, desde la importación hasta la presentación de resultados. Además, te ofrecemos un entorno de aprendizaje seguro donde podrás hacer preguntas y cometer errores sin miedo. Recibirás retroalimentación constante tanto de tu instructor como de tus compañeros, lo que es crucial para tu desarrollo."
-  },
-  {
-    "objectID": "courses/r4ds.html#próxima-apertura",
-    "href": "courses/r4ds.html#próxima-apertura",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Próxima apertura:",
-    "text": "Próxima apertura:\n\nFecha de inicio: jueves 23 de mayo del 2024\nLecciones: jueves y sábados\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m."
-  },
-  {
-    "objectID": "courses/r4ds.html#cómo-inscribirme",
-    "href": "courses/r4ds.html#cómo-inscribirme",
-    "title": "Curso: R para ciencia de datos",
-    "section": "¿Cómo inscribirme?",
-    "text": "¿Cómo inscribirme?\nNos esforzamos por hacer el acceso a la educación lo más equitativo posible, adaptándonos a tus posibilidades económicas. A continuación, encontrarás una variedad de opciones de precios. Por favor, selecciona la opción que mejor se ajuste a tus circunstancias de manera responsable.\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\nProfesionales\nIdeal para profesionales que trabajan con datos y buscan mejorar sus habilidades en el lenguaje R.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $120 USD.\n\nInscribirte ahora\n\n\n\n\n\n\n\n\n\nFoto de javier trueba en Unsplash\n\n\n\n\nEstudiantes de pregrado\nPensado para estudiantes de pregrado que buscan prepararse desde ya para trabajar en el mundo de los datos.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nPrecio: $30 USD.\n\nInscribirte ahora\n\n\n\n\n\n\n\n\n\nFoto de Chris Montgomery en Unsplash\n\n\n\n\nAcceso de la comunidad\nNos esforzamos por facilitar el acceso a este curso para miembros de la comunidad de R que enfrentan barreras financieras o técnicas para realizar pagos en línea, además de apoyar a personas de grupos históricamente subrepresentados en STEM.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nAsistencia por correo electrónico.\nPrecio: Totalmente Gratis.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/r4ds.html#profesionales",
-    "href": "courses/r4ds.html#profesionales",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Profesionales",
-    "text": "Profesionales\nIdeal para profesionales que trabajan con datos y buscan mejorar sus habilidades en el lenguaje R.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $120 USD.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/r4ds.html#estudiantes-de-pregrado",
-    "href": "courses/r4ds.html#estudiantes-de-pregrado",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Estudiantes de pregrado",
-    "text": "Estudiantes de pregrado\nPensado para estudiantes de pregrado que buscan prepararse desde ya para trabajar en el mundo de los datos.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nPrecio: $30 USD.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/r4ds.html#conoce-al-instructor",
-    "href": "courses/r4ds.html#conoce-al-instructor",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Conoce al instructor",
-    "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina.\n\nSi tienes dudas conversemos:\nPuedes programar una 🎥 videollamada de 15 minutos con el instructor para revisar tus dudas sobre el curso en el siguiente enlace."
-  },
-  {
-    "objectID": "courses/r4ds.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "href": "courses/r4ds.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Conoce lo que dicen nuestros estudiantes",
-    "text": "Conoce lo que dicen nuestros estudiantes"
-  },
-  {
-    "objectID": "courses/r4ds.html#contenido-del-curso",
-    "href": "courses/r4ds.html#contenido-del-curso",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Contenido del curso",
-    "text": "Contenido del curso\n\n\nClase 1: Descubriendo R y el Tidyverse\n\nEsta clase te introduce a R y el conjunto de herramientas del Tidyverse. Aquí aprenderás a configurar tu espacio de trabajo en RStudio, cómo leer archivos .csv y empezarás a jugar con tus datos, dándoles un primer vistazo y creando visualizaciones sencillas.\n\n\n\nClase 2: Comenzamos a explorar los datos\n\nEn esta clase, te adentrarás en el corazón de dplyr y tidyr, donde la magia de la manipulación de datos realmente sucede. Aprenderás a filtrar, seleccionar, y transformar tus datos para revelar las historias ocultas que tienen para contar.\n\n\n\nClase 3: Inicia en la visualización de Datos\n\nAquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando ggplot2 para crear tus primeros gráfico. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapte a tus necesidades.\n\n\n\nClase 4: Lectura y limpieza de datos\n\nEsta clase te enseñará a ser capaz de leer datos almacenados en CSV, Excel, SPSS, entre otros. Ya sea que estés trabajando con texto, números, fechas, o cualquier otro tipo, aprenderás las habilidades para manejarlos todos con eficiencia.\n\n\n\nClase 5: El arte de trabajar con textos y fechas\n\nLas expresiones regulares y el manejo de fechas pueden parecer hechizos complicados, pero después de esta clase, serán herramientas poderosas en tu arsenal. Aprenderás a limpiar y filtrar tus datos de manera eficiente con los paquetes stringr y lubridate convirtiendo el caos en orden con solo unas pocas líneas de código.\n\n\n\nClase 6: Entendiendo los datos relacionales\n\nEn esta clase te enseña a unir diferentes conjuntos de datos para descubrir conexiones ocultas. Dominarás los joins y aprenderás sobre las llaves y las relaciones, lo que te permitirá combinar datos de fuentes diversas para obtener insights más profundos.\n\n\n\nClase 7: Explorando con gráficos avanzados\n\nCon ggplot2 y plotly, esta clase aprenderás a crear gráficos interactivos y explorar datos geoespaciales, llevando tus habilidades narrativas a nuevas dimensiones.\n\n\n\nClase 8: Conecta R con el mundo las bases de datos SQL\n\nAquí, R se encuentra con el poder de las bases de datos SQL. Aprenderás a realizar consultas SQL directamente desde R, lo que te permite acceder a y manipular grandes conjuntos de datos almacenados en bases de datos de manera eficiente.\n\n\n\nClase 9: La Elegancia de la programación funcional\n\nCon purrr, transformarás tu enfoque de manejar datos. Aprenderás a escribir funciones personalizadas y a iterar sobre tus datos de formas que hacen que el código no solo sea más limpio, sino también más expresivo.\n\n\n\nClase 10: Extrayendo datos de la web\n\nEl web scraping y las APIs abren un universo de datos disponibles en internet. Esta clase te equipará con las herramientas para recoger estos datos como rvest y httr2, permitiéndote responder preguntas que antes parecían inalcanzables.\n\n\n\nClase 11: Creando documento con quarto\n\nCon Quarto, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.\n\n\n\nClase 12: Administrando tus proyectos en RStudio\n\nFinalmente, dominarás el arte de gestionar proyectos de datos con Git, GitHub, y entornos virtuales renv. Esto te asegura que tus proyectos sean reproducibles, colaborativos, y organizados."
-  },
-  {
-    "objectID": "courses/r4ds.html#inscribirte-ahora",
-    "href": "courses/r4ds.html#inscribirte-ahora",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Inscribirte ahora",
-    "text": "Inscribirte ahora\n\n12 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $120 USD.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/r4ds.html#ponte-en-contacto",
-    "href": "courses/r4ds.html#ponte-en-contacto",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Ponte en contacto",
-    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
-  },
-  {
-    "objectID": "courses/avz_ggplot2.html",
-    "href": "courses/avz_ggplot2.html",
-    "title": "Visualización de datos con ggplot2",
-    "section": "",
-    "text": "Foto de Markus Spiske en Unsplash\nTodos comenzamos con ggplot2 creando gráficos básicos, pero llega un punto donde deseamos más. ¿Cómo lograr que nuestras visualizaciones luzcan profesionales? ¿Cómo adaptarlas al estilo de nuestra empresa? Este curso te lleva al siguiente nivel con ggplot2. Aprende su funcionamiento a fondo y practica replicando gráficos de grandes medios como The Economist, The New York Times, The Washington Post, entre otros. ¡Prepárate para crear visualizaciones impactantes y con estilo propio!"
-  },
-  {
-    "objectID": "courses/avz_ggplot2.html#en-este-curso-aprenderás-a",
-    "href": "courses/avz_ggplot2.html#en-este-curso-aprenderás-a",
-    "title": "Visualización de datos con ggplot2",
-    "section": "En este curso, aprenderás a:",
-    "text": "En este curso, aprenderás a:\n\nPersonalizar gráficos con themes y anotaciones: Crea estilos únicos, resalta información clave y haz que tus gráficos sean fáciles de leer.\nControlar escalas y guías: Ajusta la apariencia de ejes y leyendas para una comunicación efectiva de la información.\nExplorar sistemas de coordenadas y facetado: Crea visualizaciones especializadas y compara subconjuntos de datos con facilidad.\nAutomatizar tareas con programación funcional: Optimiza tu flujo de trabajo y crea gráficos de forma eficiente.\nReplicar gráficos de medios de renombre: Aprende de los mejores y aplica técnicas avanzadas para visualizaciones impactantes."
-  },
-  {
-    "objectID": "courses/avz_ggplot2.html#próxima-apertura",
-    "href": "courses/avz_ggplot2.html#próxima-apertura",
-    "title": "Visualización de datos con ggplot2",
-    "section": "Próxima apertura",
-    "text": "Próxima apertura\n\nDuración: 6 semanas\nFecha de inicio: martes 4 de junio de 2024\nLecciones: todos los martes\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/avz_ggplot2.html#qué-obtendrás",
-    "href": "courses/avz_ggplot2.html#qué-obtendrás",
-    "title": "Visualización de datos con ggplot2",
-    "section": "¿Qué obtendrás?",
-    "text": "¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/avz_ggplot2.html#conoce-al-instructor",
-    "href": "courses/avz_ggplot2.html#conoce-al-instructor",
-    "title": "Visualización de datos con ggplot2",
-    "section": "Conoce al instructor",
-    "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina."
-  },
-  {
-    "objectID": "courses/avz_ggplot2.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "href": "courses/avz_ggplot2.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "title": "Visualización de datos con ggplot2",
-    "section": "Conoce lo que dicen nuestros estudiantes",
-    "text": "Conoce lo que dicen nuestros estudiantes"
-  },
-  {
-    "objectID": "courses/avz_ggplot2.html#contenido-del-curso",
-    "href": "courses/avz_ggplot2.html#contenido-del-curso",
-    "title": "Visualización de datos con ggplot2",
-    "section": "Contenido del curso",
-    "text": "Contenido del curso\n\n\nSemana 1: Refresca tus conocimientos\n\n\nRecordaremos los fundamentos de ggplot2: cómo construir un gráfico a partir de datos, estética, objetos geométricos (puntos, líneas, barras), transformaciones estadísticas, escalas, sistemas de coordenadas, facetado y temas.\nPracticaremos con diferentes tipos de gráficos, desde los básicos como scatterplots y histogramas, hasta mapas y gráficos más complejos.\nAprenderás a personalizar tus gráficos con themes y etiquetas con labs() para un aspecto más pulido.\n\n\n\n\nSemana 2: Personaliza tu estilo\n\n\nDescubrirás el poder del sistema de themes de ggplot2, controlando cada detalle visual, desde el fondo hasta las fuentes y los colores. Aprenderás a crear tus propios themes para un estilo consistente en tus visualizaciones o para adaptarte a las guías de estilo de publicaciones.\nAgregarás anotaciones como texto, etiquetas, rectángulos y líneas para resaltar información importante y hacer tus gráficos más fáciles de leer.\nDominarás el “direct labelling” para etiquetar directamente puntos o grupos de datos, evitando leyendas abarrotadas.\n\n\n\n\nSemana 3: Dale sentido a tus datos\n\n\nAprenderás cómo las escalas y guías (ejes y leyendas) ayudan a interpretar la información visual y cómo ajustarlas para una mejor comunicación.\nExploraremos diferentes tipos de escalas: continuas, discretas, agrupadas y de fecha/hora, y cómo elegir la adecuada para tus datos.\nPersonalizarás la apariencia de las guías con funciones específicas y controlarás cada detalle, desde el color de los ejes hasta el tamaño de las leyendas.\nAprenderás a transformar escalas para resaltar patrones en tus datos y a combinar o separar leyendas para una mejor claridad.\n\n\n\n\nSemana 4: Ajusta la perspectiva\n\n\nDescubrirás cómo los sistemas de coordenadas cambian la forma en que se visualizan los datos, desde el sistema cartesiano estándar hasta coordenadas polares y proyecciones de mapas.\nAprenderás a utilizar herramientas como coord_cartesian() para hacer zoom, coord_flip() para intercambiar ejes y coord_fixed() para fijar la relación de aspecto.\nDominarás el facetado para dividir tus datos en múltiples gráficos y comparar patrones entre grupos o subconjuntos. Controlarás las escalas en gráficos facetados y utilizarás anotaciones para facilitar las comparaciones.\n\n\n\n\nSemana 5: Automatiza tu flujo de trabajo\n\n\nAprenderás a escribir funciones para generar componentes de ggplot2, como geoms, escalas y themes, para evitar la repetición de código y aumentar la eficiencia.\nCrearás funciones para generar gráficos completos, como gráficos circulares y diagramas de coordenadas paralelas, con un solo comando.\nUtilizaremos el paquete purrr para aplicar la programación funcional a ggplot2, iterando sobre datos y componentes para automatizar tareas.\n\n\n\n\nSemana 6: Inspírate en los mejores\n\n\nAnalizaremos gráficos de medios de renombre como The Economist, The Washington Post y The New York Times para identificar técnicas avanzadas y decisiones de diseño efectivas.\nPondremos en práctica todo lo aprendido para replicar estos gráficos, utilizando herramientas como patchwork para combinar múltiples visualizaciones y purrr para automatizar el proceso.\nTe enfrentarás al desafío de replicar un gráfico complejo de tu elección, mostrando tus habilidades de personalización y automatización."
-  },
-  {
-    "objectID": "courses/avz_ggplot2.html#inscribirte-ahora",
-    "href": "courses/avz_ggplot2.html#inscribirte-ahora",
-    "title": "Visualización de datos con ggplot2",
-    "section": "Inscribirte ahora",
-    "text": "Inscribirte ahora\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/avz_ggplot2.html#ponte-en-contacto",
-    "href": "courses/avz_ggplot2.html#ponte-en-contacto",
-    "title": "Visualización de datos con ggplot2",
-    "section": "Ponte en contacto",
-    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Aprende Tidyverse",
-    "section": "",
-    "text": "La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
-  },
-  {
-    "objectID": "posts.html#ponte-en-contacto",
-    "href": "posts.html#ponte-en-contacto",
-    "title": "Aprende Tidyverse",
-    "section": "",
-    "text": "La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
-  },
-  {
-    "objectID": "posts.html#post-recientes",
-    "href": "posts.html#post-recientes",
-    "title": "Aprende Tidyverse",
-    "section": "Post Recientes",
-    "text": "Post Recientes"
-  },
-  {
-    "objectID": "index2.html",
-    "href": "index2.html",
-    "title": "Aprende Tidyverse",
-    "section": "",
-    "text": "Aprende Tidyverse es una iniciativa que busca contribuir a la comunidad hispanohablante de usuarios de R, ofreciendo de forma gratuita cursos, tutoriales, guías paso a paso y todo lo que se nos ocurra por el camino. ¿Lo mejor? Aprendemos juntos y, ¿por qué no?, nos divertimos en el proceso."
-  },
-  {
-    "objectID": "index2.html#curso-r-para-ciencia-de-datos",
-    "href": "index2.html#curso-r-para-ciencia-de-datos",
-    "title": "Aprende Tidyverse",
-    "section": "Curso R para ciencia de datos",
-    "text": "Curso R para ciencia de datos\nPuedes inscribirte por un precio desde los $0 USD hasta los $120 USD. Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.\n\nPróxima apertura: jueves 23 de mayo del 2024\n\nLecciones: jueves y sábados\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\nDescuentos de hasta el 75% para estudiantes y académicos. Si tu situación económica o restricciones de tu país no te permiten hacer un pago en línea por el curso, siéntete en total libertad de llevarlo totalmente gratis.\nVer los detalles del curso"
-  },
-  {
-    "objectID": "index2.html#ponte-en-contacto",
-    "href": "index2.html#ponte-en-contacto",
-    "title": "Aprende Tidyverse",
-    "section": "Ponte en contacto",
-    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
-  },
-  {
-    "objectID": "index2.html#post-recientes",
-    "href": "index2.html#post-recientes",
-    "title": "Aprende Tidyverse",
-    "section": "Post Recientes",
-    "text": "Post Recientes"
-  },
-  {
-    "objectID": "lunes_pr.html",
-    "href": "lunes_pr.html",
-    "title": "¿Problemas con R? ¡Estamos aquí para ayudarte!",
-    "section": "",
-    "text": "Imagen de “Los picapedreros” por Gustave Courbet, 1849. Imagen almacenada por la Fundación Wikimedia"
-  },
-  {
-    "objectID": "lunes_pr.html#cómo-participar",
-    "href": "lunes_pr.html#cómo-participar",
-    "title": "¿Problemas con R? ¡Estamos aquí para ayudarte!",
-    "section": "¿Cómo participar?",
-    "text": "¿Cómo participar?\n\n¿Cuándo? Todos los domingos, de 6:00 p.m. a 7:00 p.m. (hora de Costa Rica UTC-6)\n¿Dónde? Sesiones en vivo a través de Zoom.\n\nRegístrate gratis"
-  },
-  {
-    "objectID": "lunes_pr.html#normas-de-conducta",
-    "href": "lunes_pr.html#normas-de-conducta",
-    "title": "¿Problemas con R? ¡Estamos aquí para ayudarte!",
-    "section": "Normas de conducta",
-    "text": "Normas de conducta\n\nRespeto: No serán permitidos comportamientos que excluyan o intimiden a otros. Prohibidos los comentarios ofensivos, la intimidación, las amenazas y el uso de imágenes violentas o sexuales (Leer Código de conducta).\nParticipación activa: Anímate a participar, hacer preguntas y contribuir al diálogo. Las preguntas que parecen simples para uno pueden ser una gran duda para otro.\nSilencio durante la sesión: Mantén tu micrófono silenciado a menos que estés hablando.\nPrivacidad: No se grabarán las sesiones para proteger la privacidad de todos los participantes.\nPuntualidad: Sé puntual para respetar el tiempo de todos.\nNo bots 🤖: Las sesiones son exclusivamente para humanos.\n\n\nPrivacidad y Protección de Datos: La información personal recolectada, como nombres y correos electrónicos de los participantes en el formulario de inscripción, será utilizada exclusivamente para enviar el enlace de Zoom del evento y un recordatorio 6 horas antes del mismo. Nos comprometemos a respetar la privacidad de cada participante y a manejar sus datos personales en conformidad con la Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales (Ley Nº 8968) de la República de Costa Rica. (Leer más)"
-  },
-  {
-    "objectID": "terminos.html",
-    "href": "terminos.html",
-    "title": "Terminos y condiciones de Aprende Tidyverse",
-    "section": "",
-    "text": "“Tidyverse” es un término acuñado por la comunidad de usuarios y desarrolladores en torno a la programación en R, y representa un conjunto de paquetes de software diseñados para facilitar la ciencia de datos y la estadística computacional. Este término ha sido ampliamente adoptado gracias al apoyo y la promoción de Posit (anteriormente conocido como RStudio, PBC), cuyas contribuciones han sido fundamentales para el desarrollo y la popularización de estos paquetes.\nAclaramos que, aunque utilizamos el término “tidyverse” para describir, nombrar y promover nuestros cursos, certificados y actividades web, no mantenemos una afiliación directa ni respaldo por parte de Posit. Nuestro uso del término “tidyverse” se adhiere a las leyes aplicables de propiedad intelectual y marcas registradas, y se realiza dentro de un contexto puramente educativo y descriptivo.\nEs importante para nosotros que nuestros usuarios comprendan que, mientras utilizamos este término bajo los principios de uso justo y para fines educativos, Posit no ha expresado de forma oficial su asociación con nuestra empresa, cursos o actividades. Cualquier uso de “tidyverse” en nuestro material es independiente y no implica una conexión formal con Posit."
-  },
-  {
-    "objectID": "terminos.html#código-de-conducta-de-aprende-tidyverse",
-    "href": "terminos.html#código-de-conducta-de-aprende-tidyverse",
-    "title": "Terminos y condiciones de Aprende Tidyverse",
-    "section": "Código de Conducta de Aprende Tidyverse",
-    "text": "Código de Conducta de Aprende Tidyverse\nAprende Tidyverse se compromete a fomentar un entorno de aprendizaje inclusivo, respetuoso y productivo. Este código de conducta se aplica a todos los miembros de nuestra comunidad, incluyendo estudiantes, profesores e invitados, tanto en espacios online como presenciales. Su objetivo es asegurar una experiencia positiva y enriquecedora para todos.\n\nComportamientos esperados:\n\nRespeto: Trata a todos con consideración y respeto, valorando la diversidad de opiniones, experiencias y orígenes.\nAmabilidad: Sé amable y comprensivo, ofreciendo apoyo y estímulo a tus compañeros. Colaboración: Participa activamente en el aprendizaje colaborativo y comparte tus conocimientos generosamente.\nProfesionalismo: Mantén un comportamiento profesional en todo momento, evitando lenguaje ofensivo o acciones inapropiadas.\nEscucha activa: Escucha atentamente a los demás y evita interrumpir o monopolizar las conversaciones.\nResponsabilidad: Asume la responsabilidad de tus acciones y palabras, siendo consciente del impacto que pueden tener en los demás.\n\n\n\nComportamientos inaceptables:\nLos siguientes comportamientos son inaceptables y pueden resultar en medidas disciplinarias, incluyendo la expulsión del curso o evento y la prohibición de participar en futuras actividades de Aprende Tidyverse:\n\nDiscriminación o acoso: Cualquier forma de discriminación o acoso basada en raza, etnia, género, orientación sexual, identidad de género, religión, edad, discapacidad o cualquier otra característica protegida.\nViolencia o amenazas: Amenazas o lenguaje violento dirigido a cualquier persona, así como la exhibición de imágenes violentas.\nAcoso sexual: Atención sexual no deseada, contacto físico no consensuado o no deseado, o cualquier otro comportamiento de naturaleza sexual que cree un ambiente hostil o intimidante.\nComportamiento disruptivo: Interrupción constante de clases, eventos o comunicaciones.\nInsultos o humillaciones: Lenguaje abusivo, insultos o humillaciones dirigidas a cualquier persona.\nLenguaje ofensivo: Chistes o comentarios sexistas, racistas, homofóbicos, transfóbicos, excluyentes o que discriminen a personas con discapacidad. Incumplimiento de las normas: Ignorar las instrucciones del instructor, hacer trampa o plagiar el trabajo de otros.\nCompartir información privada: Publicar comunicaciones privadas sin consentimiento.\nComportamiento inapropiado en línea: Esto incluye, pero no se limita a, trolling, flaming, spamming y doxing.\n\n\n\nConsecuencias de violar el código de conducta:\nLas violaciones a este código de conducta serán tomadas con seriedad y pueden resultar en una o más de las siguientes consecuencias:\n\nAdvertencia verbal o escrita.\nExpulsión del curso o evento sin derecho a reembolso.\nProhibición de participar en futuras actividades de Aprende Tidyverse, tanto online como presenciales.\nEn casos graves, se pueden tomar medidas legales.\n\n\n\nReportar incidentes:\nSi experimentas o presencias algún comportamiento inaceptable, te alentamos a que lo informes de inmediato a un miembro del equipo de Aprende Tidyverse o enviando un correo electrónico a soporte@aprendetidyverse.com. Todos los informes serán tratados con confidencialidad y seriedad.\n\n\nCompromiso con la comunidad:\nAl participar en la comunidad de Aprende Tidyverse, aceptas cumplir con este código de conducta y contribuir a un ambiente de aprendizaje positivo e inclusivo para todos."
-  },
-  {
-    "objectID": "terminos.html#términos-y-condiciones-de-pago",
-    "href": "terminos.html#términos-y-condiciones-de-pago",
-    "title": "Terminos y condiciones de Aprende Tidyverse",
-    "section": "Términos y Condiciones de Pago",
-    "text": "Términos y Condiciones de Pago\nAprende Tidyverse se esfuerza por ofrecer una experiencia educativa de alta calidad y accesible. Para garantizar un proceso fluido y justo para todos, hemos establecido los siguientes términos y condiciones de pago:\n\nValidez del pago:\n\nPlazo de uso: Una vez realizado el pago de un curso, el estudiante tiene un plazo de 180 días para iniciar y completar el curso. Después de este período, el pago expirará y el acceso al curso será desactivado.\n\n\n\nPolítica de reembolso:\n\nPeriodo de reembolso: Los estudiantes tienen derecho a solicitar un reembolso completo dentro de las 2 semanas posteriores al inicio del curso. Para solicitar un reembolso, debes enviar un correo electrónico a soporte@aprendetidyverse.com con la información del curso y el motivo de la solicitud.\nExcepciones: Los reembolsos no se aplicarán a estudiantes que hayan sido expulsados del curso por violar nuestro código de conducta.\n\n\n\nCongelamiento de cursos:\n\nPor causas de fuerza mayor, como problemas de salud, afecciones incapacitantes físicas o psicológicas, o incompatibilidad de horarios, el estudiante puede optar por congelar su inscripción y reanudar el curso en otro momento. Si el precio del curso ha aumentado durante ese tiempo, el estudiante deberá abonar la diferencia, además de los costos asociados al método de pago. Para solicitar el congelamiento, el estudiante debe exponer su caso enviando un correo a soporte@aprendetidyverse.com."
-  },
-  {
-    "objectID": "terminos.html#términos-y-condiciones-de-uso-de-información",
-    "href": "terminos.html#términos-y-condiciones-de-uso-de-información",
-    "title": "Terminos y condiciones de Aprende Tidyverse",
-    "section": "Términos y Condiciones de Uso de Información",
-    "text": "Términos y Condiciones de Uso de Información\nAprende Tidyverse se compromete a proteger tu privacidad y la información que nos brindas. En cumplimiento con la Ley de Protección de la Persona frente al tratamiento de sus datos personales (Nº 8968) de Costa Rica, estos Términos y Condiciones explican cómo recopilamos, usamos y protegemos tu información cuando participas en nuestros eventos online gratuitos o pagas por nuestros cursos.\n\nInformación que recopilamos:\n\nInformación de contacto: Nombre, correo electrónico, número de teléfono (opcional).\nInformación de perfil: Información que proporcionas al crear un perfil, como foto de perfil, intereses y experiencia.\nInformación de participación: Información sobre tu participación en eventos y cursos, como asistencia, progreso y resultados.\nInformación de pago: Si realizas un pago, recopilamos información de facturación y pago.\n\n\n\nCómo usamos tu información:\n\nPara brindarte los servicios que solicitas: Usamos tu información para registrarte en eventos y cursos, procesar pagos, comunicarnos contigo sobre tu participación y brindarte soporte.\nPara mejorar nuestros servicios: Analizamos la información de participación para comprender mejor cómo las personas usan nuestros servicios y cómo podemos mejorarlos.\nPara promocionar eventos y cursos: Podemos utilizar tu información de contacto para enviarte correos electrónicos sobre nuevos eventos y cursos que creemos que te pueden interesar.\n\n\n\nTus opciones:\n\nCancelar suscripción a correos electrónicos promocionales: Puedes cancelar la suscripción a nuestros correos electrónicos promocionales en cualquier momento haciendo clic en el enlace “Cancelar suscripción” que se encuentra en la parte inferior de cada correo electrónico.\nSolicitar la eliminación de tu información: De acuerdo con la Ley de Protección de la Persona frente al tratamiento de sus datos personales (Nº 8968), tienes derecho a solicitar la eliminación de tu información de nuestras bases de datos enviando un correo electrónico a soporte@aprendetidyverse.com.\nProtección de tu información: Implementamos medidas de seguridad para proteger tu información del acceso no autorizado, la divulgación, alteración o destrucción.\n\n\n\nCumplimiento con la ley:\nNos comprometemos a cumplir con la Ley de Protección de la Persona frente al tratamiento de sus datos personales (Nº 8968) y a proteger tus derechos de privacidad."
-  },
-  {
     "objectID": "courses/intro_shiny.html",
     "href": "courses/intro_shiny.html",
     "title": "Introducción al desarrollo de aplicaciones con shiny",
@@ -297,6 +66,363 @@
     "objectID": "courses/intro_shiny.html#ponte-en-contacto",
     "href": "courses/intro_shiny.html#ponte-en-contacto",
     "title": "Introducción al desarrollo de aplicaciones con shiny",
+    "section": "Ponte en contacto",
+    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "courses/r4ds.html",
+    "href": "courses/r4ds.html",
+    "title": "Curso: R para ciencia de datos",
+    "section": "",
+    "text": "Foto de Kenny Eliason en Unsplash\nQueremos iniciar con una premisa fundamental: cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero. Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos, solamente práctica, práctica y más práctica.\nEste curso está diseñado para llevarte de ser un principiante a un practicante competente, equipado no solo con el conocimiento de los comandos esenciales, sino también con una mucho mejor comprensión del proceso de análisis de datos, desde la importación hasta la presentación de resultados. Además, te ofrecemos un entorno de aprendizaje seguro donde podrás hacer preguntas y cometer errores sin miedo. Recibirás retroalimentación constante tanto de tu instructor como de tus compañeros, lo que es crucial para tu desarrollo."
+  },
+  {
+    "objectID": "courses/r4ds.html#próxima-apertura",
+    "href": "courses/r4ds.html#próxima-apertura",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Próxima apertura:",
+    "text": "Próxima apertura:\n\nFecha de inicio: jueves 23 de mayo del 2024\nLecciones: jueves y sábados\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m."
+  },
+  {
+    "objectID": "courses/r4ds.html#cómo-inscribirme",
+    "href": "courses/r4ds.html#cómo-inscribirme",
+    "title": "Curso: R para ciencia de datos",
+    "section": "¿Cómo inscribirme?",
+    "text": "¿Cómo inscribirme?\nNos esforzamos por hacer el acceso a la educación lo más equitativo posible, adaptándonos a tus posibilidades económicas. A continuación, encontrarás una variedad de opciones de precios. Por favor, selecciona la opción que mejor se ajuste a tus circunstancias de manera responsable.\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\nProfesionales\nIdeal para profesionales que trabajan con datos y buscan mejorar sus habilidades en el lenguaje R.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $120 USD.\n\nInscribirte ahora\n\n\n\n\n\n\n\n\n\nFoto de javier trueba en Unsplash\n\n\n\n\nEstudiantes de pregrado\nPensado para estudiantes de pregrado que buscan prepararse desde ya para trabajar en el mundo de los datos.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nPrecio: $30 USD.\n\nInscribirte ahora\n\n\n\n\n\n\n\n\n\nFoto de Chris Montgomery en Unsplash\n\n\n\n\nAcceso de la comunidad\nNos esforzamos por facilitar el acceso a este curso para miembros de la comunidad de R que enfrentan barreras financieras o técnicas para realizar pagos en línea, además de apoyar a personas de grupos históricamente subrepresentados en STEM.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nAsistencia por correo electrónico.\nPrecio: Totalmente Gratis.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/r4ds.html#profesionales",
+    "href": "courses/r4ds.html#profesionales",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Profesionales",
+    "text": "Profesionales\nIdeal para profesionales que trabajan con datos y buscan mejorar sus habilidades en el lenguaje R.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $120 USD.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/r4ds.html#estudiantes-de-pregrado",
+    "href": "courses/r4ds.html#estudiantes-de-pregrado",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Estudiantes de pregrado",
+    "text": "Estudiantes de pregrado\nPensado para estudiantes de pregrado que buscan prepararse desde ya para trabajar en el mundo de los datos.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nPrecio: $30 USD.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/r4ds.html#acceso-de-la-comunidad",
+    "href": "courses/r4ds.html#acceso-de-la-comunidad",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Acceso de la comunidad",
+    "text": "Acceso de la comunidad\nNos esforzamos por facilitar el acceso a este curso para miembros de la comunidad de R que enfrentan barreras financieras o técnicas para realizar pagos en línea, además de apoyar a personas de grupos históricamente subrepresentados en STEM.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nAsistencia por correo electrónico.\nPrecio: Totalmente Gratis.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/r4ds.html#conoce-al-instructor",
+    "href": "courses/r4ds.html#conoce-al-instructor",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Conoce al instructor",
+    "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina.\n\nSi tienes dudas conversemos:\nPuedes programar una 🎥 videollamada de 15 minutos con el instructor para revisar tus dudas sobre el curso en el siguiente enlace."
+  },
+  {
+    "objectID": "courses/r4ds.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "href": "courses/r4ds.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Conoce lo que dicen nuestros estudiantes",
+    "text": "Conoce lo que dicen nuestros estudiantes"
+  },
+  {
+    "objectID": "courses/r4ds.html#contenido-del-curso",
+    "href": "courses/r4ds.html#contenido-del-curso",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Contenido del curso",
+    "text": "Contenido del curso\n\n\nClase 1: Descubriendo R y el Tidyverse\n\nEsta clase te introduce a R y el conjunto de herramientas del Tidyverse. Aquí aprenderás a configurar tu espacio de trabajo en RStudio, cómo leer archivos .csv y empezarás a jugar con tus datos, dándoles un primer vistazo y creando visualizaciones sencillas.\n\n\n\nClase 2: Comenzamos a explorar los datos\n\nEn esta clase, te adentrarás en el corazón de dplyr y tidyr, donde la magia de la manipulación de datos realmente sucede. Aprenderás a filtrar, seleccionar, y transformar tus datos para revelar las historias ocultas que tienen para contar.\n\n\n\nClase 3: Inicia en la visualización de Datos\n\nAquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando ggplot2 para crear tus primeros gráfico. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapte a tus necesidades.\n\n\n\nClase 4: Lectura y limpieza de datos\n\nEsta clase te enseñará a ser capaz de leer datos almacenados en CSV, Excel, SPSS, entre otros. Ya sea que estés trabajando con texto, números, fechas, o cualquier otro tipo, aprenderás las habilidades para manejarlos todos con eficiencia.\n\n\n\nClase 5: El arte de trabajar con textos y fechas\n\nLas expresiones regulares y el manejo de fechas pueden parecer hechizos complicados, pero después de esta clase, serán herramientas poderosas en tu arsenal. Aprenderás a limpiar y filtrar tus datos de manera eficiente con los paquetes stringr y lubridate convirtiendo el caos en orden con solo unas pocas líneas de código.\n\n\n\nClase 6: Entendiendo los datos relacionales\n\nEn esta clase te enseña a unir diferentes conjuntos de datos para descubrir conexiones ocultas. Dominarás los joins y aprenderás sobre las llaves y las relaciones, lo que te permitirá combinar datos de fuentes diversas para obtener insights más profundos.\n\n\n\nClase 7: Explorando con gráficos avanzados\n\nCon ggplot2 y plotly, esta clase aprenderás a crear gráficos interactivos y explorar datos geoespaciales, llevando tus habilidades narrativas a nuevas dimensiones.\n\n\n\nClase 8: Conecta R con el mundo las bases de datos SQL\n\nAquí, R se encuentra con el poder de las bases de datos SQL. Aprenderás a realizar consultas SQL directamente desde R, lo que te permite acceder a y manipular grandes conjuntos de datos almacenados en bases de datos de manera eficiente.\n\n\n\nClase 9: La Elegancia de la programación funcional\n\nCon purrr, transformarás tu enfoque de manejar datos. Aprenderás a escribir funciones personalizadas y a iterar sobre tus datos de formas que hacen que el código no solo sea más limpio, sino también más expresivo.\n\n\n\nClase 10: Extrayendo datos de la web\n\nEl web scraping y las APIs abren un universo de datos disponibles en internet. Esta clase te equipará con las herramientas para recoger estos datos como rvest y httr2, permitiéndote responder preguntas que antes parecían inalcanzables.\n\n\n\nClase 11: Creando documento con quarto\n\nCon Quarto, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.\n\n\n\nClase 12: Administrando tus proyectos en RStudio\n\nFinalmente, dominarás el arte de gestionar proyectos de datos con Git, GitHub, y entornos virtuales renv. Esto te asegura que tus proyectos sean reproducibles, colaborativos, y organizados."
+  },
+  {
+    "objectID": "courses/r4ds.html#inscribirte-ahora",
+    "href": "courses/r4ds.html#inscribirte-ahora",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Inscribirte ahora",
+    "text": "Inscribirte ahora\n\n12 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $120 USD.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/r4ds.html#ponte-en-contacto",
+    "href": "courses/r4ds.html#ponte-en-contacto",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Ponte en contacto",
+    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "terminos.html",
+    "href": "terminos.html",
+    "title": "Terminos y condiciones de Aprende Tidyverse",
+    "section": "",
+    "text": "“Tidyverse” es un término acuñado por la comunidad de usuarios y desarrolladores en torno a la programación en R, y representa un conjunto de paquetes de software diseñados para facilitar la ciencia de datos y la estadística computacional. Este término ha sido ampliamente adoptado gracias al apoyo y la promoción de Posit (anteriormente conocido como RStudio, PBC), cuyas contribuciones han sido fundamentales para el desarrollo y la popularización de estos paquetes.\nAclaramos que, aunque utilizamos el término “tidyverse” para describir, nombrar y promover nuestros cursos, certificados y actividades web, no mantenemos una afiliación directa ni respaldo por parte de Posit. Nuestro uso del término “tidyverse” se adhiere a las leyes aplicables de propiedad intelectual y marcas registradas, y se realiza dentro de un contexto puramente educativo y descriptivo.\nEs importante para nosotros que nuestros usuarios comprendan que, mientras utilizamos este término bajo los principios de uso justo y para fines educativos, Posit no ha expresado de forma oficial su asociación con nuestra empresa, cursos o actividades. Cualquier uso de “tidyverse” en nuestro material es independiente y no implica una conexión formal con Posit."
+  },
+  {
+    "objectID": "terminos.html#descargo-de-responsabilidad-sobre-el-uso-del-término-tidyverse",
+    "href": "terminos.html#descargo-de-responsabilidad-sobre-el-uso-del-término-tidyverse",
+    "title": "Terminos y condiciones de Aprende Tidyverse",
+    "section": "",
+    "text": "“Tidyverse” es un término acuñado por la comunidad de usuarios y desarrolladores en torno a la programación en R, y representa un conjunto de paquetes de software diseñados para facilitar la ciencia de datos y la estadística computacional. Este término ha sido ampliamente adoptado gracias al apoyo y la promoción de Posit (anteriormente conocido como RStudio, PBC), cuyas contribuciones han sido fundamentales para el desarrollo y la popularización de estos paquetes.\nAclaramos que, aunque utilizamos el término “tidyverse” para describir, nombrar y promover nuestros cursos, certificados y actividades web, no mantenemos una afiliación directa ni respaldo por parte de Posit. Nuestro uso del término “tidyverse” se adhiere a las leyes aplicables de propiedad intelectual y marcas registradas, y se realiza dentro de un contexto puramente educativo y descriptivo.\nEs importante para nosotros que nuestros usuarios comprendan que, mientras utilizamos este término bajo los principios de uso justo y para fines educativos, Posit no ha expresado de forma oficial su asociación con nuestra empresa, cursos o actividades. Cualquier uso de “tidyverse” en nuestro material es independiente y no implica una conexión formal con Posit."
+  },
+  {
+    "objectID": "terminos.html#información-legal-y-nombre-comercial",
+    "href": "terminos.html#información-legal-y-nombre-comercial",
+    "title": "Terminos y condiciones de Aprende Tidyverse",
+    "section": "Información Legal y Nombre Comercial",
+    "text": "Información Legal y Nombre Comercial\nNuestro sitio web, aprendetidyverse.com, es operado bajo el nombre comercial “Aprende Tidyverse”, el cual es utilizado para el desarrollo y la promoción de cursos y material educativo relacionado con el software R y el conjunto de paquetes conocidos como tidyverse.\nLegalmente, estamos constituidos como una sociedad de responsabilidad limitada (LLC) bajo las leyes del estado de Nuevo México, Estados Unidos. Nuestra entidad legal registrada es Costa Rica Online Solutions, LLC. Este nombre refleja nuestra estructura organizativa y nuestra operación como entidad comercial.\n“Aprende Tidyverse” es un nombre comercial adoptado por Costa Rica Online Solutions, LLC para facilitar la identificación y el marketing de nuestros servicios educativos en el ámbito de la programación y análisis de datos. Aunque operamos bajo este nombre comercial, todas nuestras actividades comerciales y legales están formalmente bajo el nombre de Costa Rica Online Solutions, LLC."
+  },
+  {
+    "objectID": "terminos.html#código-de-conducta-de-aprende-tidyverse",
+    "href": "terminos.html#código-de-conducta-de-aprende-tidyverse",
+    "title": "Terminos y condiciones de Aprende Tidyverse",
+    "section": "Código de Conducta de Aprende Tidyverse",
+    "text": "Código de Conducta de Aprende Tidyverse\nAprende Tidyverse se compromete a fomentar un entorno de aprendizaje inclusivo, respetuoso y productivo. Este código de conducta se aplica a todos los miembros de nuestra comunidad, incluyendo estudiantes, profesores e invitados, tanto en espacios online como presenciales. Su objetivo es asegurar una experiencia positiva y enriquecedora para todos.\n\nComportamientos esperados:\n\nRespeto: Trata a todos con consideración y respeto, valorando la diversidad de opiniones, experiencias y orígenes.\nAmabilidad: Sé amable y comprensivo, ofreciendo apoyo y estímulo a tus compañeros. Colaboración: Participa activamente en el aprendizaje colaborativo y comparte tus conocimientos generosamente.\nProfesionalismo: Mantén un comportamiento profesional en todo momento, evitando lenguaje ofensivo o acciones inapropiadas.\nEscucha activa: Escucha atentamente a los demás y evita interrumpir o monopolizar las conversaciones.\nResponsabilidad: Asume la responsabilidad de tus acciones y palabras, siendo consciente del impacto que pueden tener en los demás.\n\n\n\nComportamientos inaceptables:\nLos siguientes comportamientos son inaceptables y pueden resultar en medidas disciplinarias, incluyendo la expulsión del curso o evento y la prohibición de participar en futuras actividades de Aprende Tidyverse:\n\nDiscriminación o acoso: Cualquier forma de discriminación o acoso basada en raza, etnia, género, orientación sexual, identidad de género, religión, edad, discapacidad o cualquier otra característica protegida.\nViolencia o amenazas: Amenazas o lenguaje violento dirigido a cualquier persona, así como la exhibición de imágenes violentas.\nAcoso sexual: Atención sexual no deseada, contacto físico no consensuado o no deseado, o cualquier otro comportamiento de naturaleza sexual que cree un ambiente hostil o intimidante.\nComportamiento disruptivo: Interrupción constante de clases, eventos o comunicaciones.\nInsultos o humillaciones: Lenguaje abusivo, insultos o humillaciones dirigidas a cualquier persona.\nLenguaje ofensivo: Chistes o comentarios sexistas, racistas, homofóbicos, transfóbicos, excluyentes o que discriminen a personas con discapacidad. Incumplimiento de las normas: Ignorar las instrucciones del instructor, hacer trampa o plagiar el trabajo de otros.\nCompartir información privada: Publicar comunicaciones privadas sin consentimiento.\nComportamiento inapropiado en línea: Esto incluye, pero no se limita a, trolling, flaming, spamming y doxing.\n\n\n\nConsecuencias de violar el código de conducta:\nLas violaciones a este código de conducta serán tomadas con seriedad y pueden resultar en una o más de las siguientes consecuencias:\n\nAdvertencia verbal o escrita.\nExpulsión del curso o evento sin derecho a reembolso.\nProhibición de participar en futuras actividades de Aprende Tidyverse, tanto online como presenciales.\nEn casos graves, se pueden tomar medidas legales.\n\n\n\nReportar incidentes:\nSi experimentas o presencias algún comportamiento inaceptable, te alentamos a que lo informes de inmediato a un miembro del equipo de Aprende Tidyverse o enviando un correo electrónico a soporte@aprendetidyverse.com. Todos los informes serán tratados con confidencialidad y seriedad.\n\n\nCompromiso con la comunidad:\nAl participar en la comunidad de Aprende Tidyverse, aceptas cumplir con este código de conducta y contribuir a un ambiente de aprendizaje positivo e inclusivo para todos."
+  },
+  {
+    "objectID": "terminos.html#términos-y-condiciones-de-pago",
+    "href": "terminos.html#términos-y-condiciones-de-pago",
+    "title": "Terminos y condiciones de Aprende Tidyverse",
+    "section": "Términos y Condiciones de Pago",
+    "text": "Términos y Condiciones de Pago\nAprende Tidyverse se esfuerza por ofrecer una experiencia educativa de alta calidad y accesible. Para garantizar un proceso fluido y justo para todos, hemos establecido los siguientes términos y condiciones de pago:\n\nValidez del pago:\n\nPlazo de uso: Una vez realizado el pago de un curso, el estudiante tiene un plazo de 180 días para iniciar y completar el curso. Después de este período, el pago expirará y el acceso al curso será desactivado.\n\n\n\nPolítica de reembolso:\n\nPeriodo de reembolso: Los estudiantes tienen derecho a solicitar un reembolso completo dentro de las 2 semanas posteriores al inicio del curso. Para solicitar un reembolso, debes enviar un correo electrónico a soporte@aprendetidyverse.com con la información del curso y el motivo de la solicitud.\nExcepciones: Los reembolsos no se aplicarán a estudiantes que hayan sido expulsados del curso por violar nuestro código de conducta.\n\n\n\nCongelamiento de cursos:\n\nPor causas de fuerza mayor, como problemas de salud, afecciones incapacitantes físicas o psicológicas, o incompatibilidad de horarios, el estudiante puede optar por congelar su inscripción y reanudar el curso en otro momento. Si el precio del curso ha aumentado durante ese tiempo, el estudiante deberá abonar la diferencia, además de los costos asociados al método de pago. Para solicitar el congelamiento, el estudiante debe exponer su caso enviando un correo a soporte@aprendetidyverse.com."
+  },
+  {
+    "objectID": "terminos.html#términos-y-condiciones-de-uso-de-información",
+    "href": "terminos.html#términos-y-condiciones-de-uso-de-información",
+    "title": "Terminos y condiciones de Aprende Tidyverse",
+    "section": "Términos y Condiciones de Uso de Información",
+    "text": "Términos y Condiciones de Uso de Información\nAprende Tidyverse se compromete a proteger tu privacidad y la información que nos brindas. En cumplimiento con la Ley de Protección de la Persona frente al tratamiento de sus datos personales (Nº 8968) de Costa Rica, estos Términos y Condiciones explican cómo recopilamos, usamos y protegemos tu información cuando participas en nuestros eventos online gratuitos o pagas por nuestros cursos.\n\nInformación que recopilamos:\n\nInformación de contacto: Nombre, correo electrónico, número de teléfono (opcional).\nInformación de perfil: Información que proporcionas al crear un perfil, como foto de perfil, intereses y experiencia.\nInformación de participación: Información sobre tu participación en eventos y cursos, como asistencia, progreso y resultados.\nInformación de pago: Si realizas un pago, recopilamos información de facturación y pago.\n\n\n\nCómo usamos tu información:\n\nPara brindarte los servicios que solicitas: Usamos tu información para registrarte en eventos y cursos, procesar pagos, comunicarnos contigo sobre tu participación y brindarte soporte.\nPara mejorar nuestros servicios: Analizamos la información de participación para comprender mejor cómo las personas usan nuestros servicios y cómo podemos mejorarlos.\nPara promocionar eventos y cursos: Podemos utilizar tu información de contacto para enviarte correos electrónicos sobre nuevos eventos y cursos que creemos que te pueden interesar.\n\n\n\nTus opciones:\n\nCancelar suscripción a correos electrónicos promocionales: Puedes cancelar la suscripción a nuestros correos electrónicos promocionales en cualquier momento haciendo clic en el enlace “Cancelar suscripción” que se encuentra en la parte inferior de cada correo electrónico.\nSolicitar la eliminación de tu información: De acuerdo con la Ley de Protección de la Persona frente al tratamiento de sus datos personales (Nº 8968), tienes derecho a solicitar la eliminación de tu información de nuestras bases de datos enviando un correo electrónico a soporte@aprendetidyverse.com.\nProtección de tu información: Implementamos medidas de seguridad para proteger tu información del acceso no autorizado, la divulgación, alteración o destrucción.\n\n\n\nCumplimiento con la ley:\nNos comprometemos a cumplir con la Ley de Protección de la Persona frente al tratamiento de sus datos personales (Nº 8968) y a proteger tus derechos de privacidad."
+  },
+  {
+    "objectID": "terminos.html#modificaciones",
+    "href": "terminos.html#modificaciones",
+    "title": "Terminos y condiciones de Aprende Tidyverse",
+    "section": "Modificaciones:",
+    "text": "Modificaciones:\nAprende Tidyverse se reserva el derecho de modificar estos términos y condiciones en cualquier momento. Las actualizaciones se publicarán en nuestra página web y se notificará a los estudiantes sobre cambios significativos."
+  },
+  {
+    "objectID": "lunes_pr.html",
+    "href": "lunes_pr.html",
+    "title": "¿Problemas con R? ¡Estamos aquí para ayudarte!",
+    "section": "",
+    "text": "Imagen de “Los picapedreros” por Gustave Courbet, 1849. Imagen almacenada por la Fundación Wikimedia"
+  },
+  {
+    "objectID": "lunes_pr.html#cómo-participar",
+    "href": "lunes_pr.html#cómo-participar",
+    "title": "¿Problemas con R? ¡Estamos aquí para ayudarte!",
+    "section": "¿Cómo participar?",
+    "text": "¿Cómo participar?\n\n¿Cuándo? Todos los domingos, de 6:00 p.m. a 7:00 p.m. (hora de Costa Rica UTC-6)\n¿Dónde? Sesiones en vivo a través de Zoom.\n\nRegístrate gratis"
+  },
+  {
+    "objectID": "lunes_pr.html#normas-de-conducta",
+    "href": "lunes_pr.html#normas-de-conducta",
+    "title": "¿Problemas con R? ¡Estamos aquí para ayudarte!",
+    "section": "Normas de conducta",
+    "text": "Normas de conducta\n\nRespeto: No serán permitidos comportamientos que excluyan o intimiden a otros. Prohibidos los comentarios ofensivos, la intimidación, las amenazas y el uso de imágenes violentas o sexuales (Leer Código de conducta).\nParticipación activa: Anímate a participar, hacer preguntas y contribuir al diálogo. Las preguntas que parecen simples para uno pueden ser una gran duda para otro.\nSilencio durante la sesión: Mantén tu micrófono silenciado a menos que estés hablando.\nPrivacidad: No se grabarán las sesiones para proteger la privacidad de todos los participantes.\nPuntualidad: Sé puntual para respetar el tiempo de todos.\nNo bots 🤖: Las sesiones son exclusivamente para humanos.\n\n\nPrivacidad y Protección de Datos: La información personal recolectada, como nombres y correos electrónicos de los participantes en el formulario de inscripción, será utilizada exclusivamente para enviar el enlace de Zoom del evento y un recordatorio 6 horas antes del mismo. Nos comprometemos a respetar la privacidad de cada participante y a manejar sus datos personales en conformidad con la Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales (Ley Nº 8968) de la República de Costa Rica. (Leer más)"
+  },
+  {
+    "objectID": "confirmacion.html",
+    "href": "confirmacion.html",
+    "title": "Inscripción exitosa",
+    "section": "",
+    "text": "Foto de Pineapple Supply Co. en Unsplash"
+  },
+  {
+    "objectID": "confirmacion.html#excelente-tu-formulario-de-inscripción-al-curso-ha-sido-enviado-con-éxito.-en-unos-minutos-recibirás-un-correo-electrónico-con-más-información.-nos-vemos-en-clase",
+    "href": "confirmacion.html#excelente-tu-formulario-de-inscripción-al-curso-ha-sido-enviado-con-éxito.-en-unos-minutos-recibirás-un-correo-electrónico-con-más-información.-nos-vemos-en-clase",
+    "title": "Inscripción exitosa",
+    "section": "",
+    "text": "Foto de Pineapple Supply Co. en Unsplash"
+  },
+  {
+    "objectID": "codigo_conducta.html",
+    "href": "codigo_conducta.html",
+    "title": "Código de Conducta de Aprende Tidyverse",
+    "section": "",
+    "text": "Aprende Tidyverse se compromete a fomentar un entorno de aprendizaje inclusivo, respetuoso y productivo. Este código de conducta se aplica a todos los miembros de nuestra comunidad, incluyendo estudiantes, profesores e invitados, tanto en espacios online como presenciales. Su objetivo es asegurar una experiencia positiva y enriquecedora para todos.\n\nComportamientos esperados:\n\nRespeto: Trata a todos con consideración y respeto, valorando la diversidad de opiniones, experiencias y orígenes.\nAmabilidad: Sé amable y comprensivo, ofreciendo apoyo y estímulo a tus compañeros. Colaboración: Participa activamente en el aprendizaje colaborativo y comparte tus conocimientos generosamente.\nProfesionalismo: Mantén un comportamiento profesional en todo momento, evitando lenguaje ofensivo o acciones inapropiadas.\nEscucha activa: Escucha atentamente a los demás y evita interrumpir o monopolizar las conversaciones.\nResponsabilidad: Asume la responsabilidad de tus acciones y palabras, siendo consciente del impacto que pueden tener en los demás.\n\n\n\nComportamientos inaceptables:\nLos siguientes comportamientos son inaceptables y pueden resultar en medidas disciplinarias, incluyendo la expulsión del curso o evento y la prohibición de participar en futuras actividades de Aprende Tidyverse:\n\nDiscriminación o acoso: Cualquier forma de discriminación o acoso basada en raza, etnia, género, orientación sexual, identidad de género, religión, edad, discapacidad o cualquier otra característica protegida.\nViolencia o amenazas: Amenazas o lenguaje violento dirigido a cualquier persona, así como la exhibición de imágenes violentas.\nAcoso sexual: Atención sexual no deseada, contacto físico no consensuado o no deseado, o cualquier otro comportamiento de naturaleza sexual que cree un ambiente hostil o intimidante.\nComportamiento disruptivo: Interrupción constante de clases, eventos o comunicaciones.\nInsultos o humillaciones: Lenguaje abusivo, insultos o humillaciones dirigidas a cualquier persona.\nLenguaje ofensivo: Chistes o comentarios sexistas, racistas, homofóbicos, transfóbicos, excluyentes o que discriminen a personas con discapacidad. Incumplimiento de las normas: Ignorar las instrucciones del instructor, hacer trampa o plagiar el trabajo de otros.\nCompartir información privada: Publicar comunicaciones privadas sin consentimiento.\nComportamiento inapropiado en línea: Esto incluye, pero no se limita a, trolling, flaming, spamming y doxing.\n\n\n\nConsecuencias de violar el código de conducta:\nLas violaciones a este código de conducta serán tomadas con seriedad y pueden resultar en una o más de las siguientes consecuencias:\n\nAdvertencia verbal o escrita.\nExpulsión del curso o evento sin derecho a reembolso.\nProhibición de participar en futuras actividades de Aprende Tidyverse, tanto online como presenciales.\nEn casos graves, se pueden tomar medidas legales.\n\n\n\nReportar incidentes:\nSi experimentas o presencias algún comportamiento inaceptable, te alentamos a que lo informes de inmediato a un miembro del equipo de Aprende Tidyverse o enviando un correo electrónico a soporte@aprendetidyverse.com. Todos los informes serán tratados con confidencialidad y seriedad.\n\n\nCompromiso con la comunidad:\nAl participar en la comunidad de Aprende Tidyverse, aceptas cumplir con este código de conducta y contribuir a un ambiente de aprendizaje positivo e inclusivo para todos."
+  },
+  {
+    "objectID": "index2.html",
+    "href": "index2.html",
+    "title": "Aprende Tidyverse",
+    "section": "",
+    "text": "Aprende Tidyverse es una iniciativa que busca contribuir a la comunidad hispanohablante de usuarios de R, ofreciendo de forma gratuita cursos, tutoriales, guías paso a paso y todo lo que se nos ocurra por el camino. ¿Lo mejor? Aprendemos juntos y, ¿por qué no?, nos divertimos en el proceso."
+  },
+  {
+    "objectID": "index2.html#curso-r-para-ciencia-de-datos",
+    "href": "index2.html#curso-r-para-ciencia-de-datos",
+    "title": "Aprende Tidyverse",
+    "section": "Curso R para ciencia de datos",
+    "text": "Curso R para ciencia de datos\nPuedes inscribirte por un precio desde los $0 USD hasta los $120 USD. Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.\n\nPróxima apertura: jueves 23 de mayo del 2024\n\nLecciones: jueves y sábados\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\nDescuentos de hasta el 75% para estudiantes y académicos. Si tu situación económica o restricciones de tu país no te permiten hacer un pago en línea por el curso, siéntete en total libertad de llevarlo totalmente gratis.\nVer los detalles del curso"
+  },
+  {
+    "objectID": "index2.html#ponte-en-contacto",
+    "href": "index2.html#ponte-en-contacto",
+    "title": "Aprende Tidyverse",
+    "section": "Ponte en contacto",
+    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "index2.html#post-recientes",
+    "href": "index2.html#post-recientes",
+    "title": "Aprende Tidyverse",
+    "section": "Post Recientes",
+    "text": "Post Recientes"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Aprende Tidyverse",
+    "section": "",
+    "text": "La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "posts.html#ponte-en-contacto",
+    "href": "posts.html#ponte-en-contacto",
+    "title": "Aprende Tidyverse",
+    "section": "",
+    "text": "La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "posts.html#post-recientes",
+    "href": "posts.html#post-recientes",
+    "title": "Aprende Tidyverse",
+    "section": "Post Recientes",
+    "text": "Post Recientes"
+  },
+  {
+    "objectID": "courses/index.html",
+    "href": "courses/index.html",
+    "title": "Curso: R para ciencia de datos",
+    "section": "",
+    "text": "Foto de Kenny Eliason en Unsplash\nQueremos iniciar con una premisa fundamental: cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero. Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos, solamente práctica, práctica y más práctica.\nEste curso está diseñado para llevarte de ser un principiante a un practicante competente, equipado no solo con el conocimiento de los comandos esenciales, sino también con una mucho mejor comprensión del proceso de análisis de datos, desde la importación hasta la presentación de resultados. Además, te ofrecemos un entorno de aprendizaje seguro donde podrás hacer preguntas y cometer errores sin miedo. Recibirás retroalimentación constante tanto de tu instructor como de tus compañeros, lo que es crucial para tu desarrollo."
+  },
+  {
+    "objectID": "courses/index.html#próxima-apertura",
+    "href": "courses/index.html#próxima-apertura",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Próxima apertura:",
+    "text": "Próxima apertura:\n\nFecha de inicio: jueves 23 de mayo del 2024\nLecciones: jueves y sábados\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m."
+  },
+  {
+    "objectID": "courses/index.html#cómo-inscribirme",
+    "href": "courses/index.html#cómo-inscribirme",
+    "title": "Curso: R para ciencia de datos",
+    "section": "¿Cómo inscribirme?",
+    "text": "¿Cómo inscribirme?\nNos esforzamos por hacer el acceso a la educación lo más equitativo posible, adaptándonos a tus posibilidades económicas. A continuación, encontrarás una variedad de opciones de precios. Por favor, selecciona la opción que mejor se ajuste a tus circunstancias de manera responsable.\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\nProfesionales\nIdeal para profesionales que trabajan con datos y buscan mejorar sus habilidades en el lenguaje R.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $120 USD.\n\nInscribirte ahora\n\n\n\n\n\n\n\n\n\nFoto de javier trueba en Unsplash\n\n\n\n\nEstudiantes de pregrado\nPensado para estudiantes de pregrado que buscan prepararse desde ya para trabajar en el mundo de los datos.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nPrecio: $30 USD.\n\nInscribirte ahora\n\n\n\n\n\n\n\n\n\nFoto de Chris Montgomery en Unsplash\n\n\n\n\nAcceso de la comunidad\nNos esforzamos por facilitar el acceso a este curso para miembros de la comunidad de R que enfrentan barreras financieras o técnicas para realizar pagos en línea, además de apoyar a personas de grupos históricamente subrepresentados en STEM.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nAsistencia por correo electrónico.\nPrecio: Totalmente Gratis.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/index.html#profesionales",
+    "href": "courses/index.html#profesionales",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Profesionales",
+    "text": "Profesionales\nIdeal para profesionales que trabajan con datos y buscan mejorar sus habilidades en el lenguaje R.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $120 USD.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/index.html#estudiantes-de-pregrado",
+    "href": "courses/index.html#estudiantes-de-pregrado",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Estudiantes de pregrado",
+    "text": "Estudiantes de pregrado\nPensado para estudiantes de pregrado que buscan prepararse desde ya para trabajar en el mundo de los datos.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nPrecio: $30 USD.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/index.html#acceso-de-la-comunidad",
+    "href": "courses/index.html#acceso-de-la-comunidad",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Acceso de la comunidad",
+    "text": "Acceso de la comunidad\nNos esforzamos por facilitar el acceso a este curso para miembros de la comunidad de R que enfrentan barreras financieras o técnicas para realizar pagos en línea, además de apoyar a personas de grupos históricamente subrepresentados en STEM.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nAsistencia por correo electrónico.\nPrecio: Totalmente Gratis.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/index.html#conoce-al-instructor",
+    "href": "courses/index.html#conoce-al-instructor",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Conoce al instructor",
+    "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina.\n\nSi tienes dudas conversemos:\nPuedes programar una 🎥 videollamada de 15 minutos con el instructor para revisar tus dudas sobre el curso en el siguiente enlace."
+  },
+  {
+    "objectID": "courses/index.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "href": "courses/index.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Conoce lo que dicen nuestros estudiantes",
+    "text": "Conoce lo que dicen nuestros estudiantes"
+  },
+  {
+    "objectID": "courses/index.html#contenido-del-curso",
+    "href": "courses/index.html#contenido-del-curso",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Contenido del curso",
+    "text": "Contenido del curso\n\n\nClase 1: Descubriendo R y el Tidyverse\n\nEsta clase te introduce a R y el conjunto de herramientas del Tidyverse. Aquí aprenderás a configurar tu espacio de trabajo en RStudio, cómo leer archivos .csv y empezarás a jugar con tus datos, dándoles un primer vistazo y creando visualizaciones sencillas.\n\n\n\nClase 2: Comenzamos a explorar los datos\n\nEn esta clase, te adentrarás en el corazón de dplyr y tidyr, donde la magia de la manipulación de datos realmente sucede. Aprenderás a filtrar, seleccionar, y transformar tus datos para revelar las historias ocultas que tienen para contar.\n\n\n\nClase 3: Inicia en la visualización de Datos\n\nAquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando ggplot2 para crear tus primeros gráfico. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapte a tus necesidades.\n\n\n\nClase 4: Lectura y limpieza de datos\n\nEsta clase te enseñará a ser capaz de leer datos almacenados en CSV, Excel, SPSS, entre otros. Ya sea que estés trabajando con texto, números, fechas, o cualquier otro tipo, aprenderás las habilidades para manejarlos todos con eficiencia.\n\n\n\nClase 5: El arte de trabajar con textos y fechas\n\nLas expresiones regulares y el manejo de fechas pueden parecer hechizos complicados, pero después de esta clase, serán herramientas poderosas en tu arsenal. Aprenderás a limpiar y filtrar tus datos de manera eficiente con los paquetes stringr y lubridate convirtiendo el caos en orden con solo unas pocas líneas de código.\n\n\n\nClase 6: Entendiendo los datos relacionales\n\nEn esta clase te enseña a unir diferentes conjuntos de datos para descubrir conexiones ocultas. Dominarás los joins y aprenderás sobre las llaves y las relaciones, lo que te permitirá combinar datos de fuentes diversas para obtener insights más profundos.\n\n\n\nClase 7: Explorando con gráficos avanzados\n\nCon ggplot2 y plotly, esta clase aprenderás a crear gráficos interactivos y explorar datos geoespaciales, llevando tus habilidades narrativas a nuevas dimensiones.\n\n\n\nClase 8: Conecta R con el mundo las bases de datos SQL\n\nAquí, R se encuentra con el poder de las bases de datos SQL. Aprenderás a realizar consultas SQL directamente desde R, lo que te permite acceder a y manipular grandes conjuntos de datos almacenados en bases de datos de manera eficiente.\n\n\n\nClase 9: La Elegancia de la programación funcional\n\nCon purrr, transformarás tu enfoque de manejar datos. Aprenderás a escribir funciones personalizadas y a iterar sobre tus datos de formas que hacen que el código no solo sea más limpio, sino también más expresivo.\n\n\n\nClase 10: Extrayendo datos de la web\n\nEl web scraping y las APIs abren un universo de datos disponibles en internet. Esta clase te equipará con las herramientas para recoger estos datos como rvest y httr2, permitiéndote responder preguntas que antes parecían inalcanzables.\n\n\n\nClase 11: Creando documento con quarto\n\nCon Quarto, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.\n\n\n\nClase 12: Administrando tus proyectos en RStudio\n\nFinalmente, dominarás el arte de gestionar proyectos de datos con Git, GitHub, y entornos virtuales renv. Esto te asegura que tus proyectos sean reproducibles, colaborativos, y organizados."
+  },
+  {
+    "objectID": "courses/index.html#inscribirte-ahora",
+    "href": "courses/index.html#inscribirte-ahora",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Inscribirte ahora",
+    "text": "Inscribirte ahora\n\n12 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $120 USD.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/index.html#ponte-en-contacto",
+    "href": "courses/index.html#ponte-en-contacto",
+    "title": "Curso: R para ciencia de datos",
+    "section": "Ponte en contacto",
+    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html",
+    "href": "courses/avz_ggplot2.html",
+    "title": "Visualización de datos con ggplot2",
+    "section": "",
+    "text": "Foto de Markus Spiske en Unsplash\nTodos comenzamos con ggplot2 creando gráficos básicos, pero llega un punto donde deseamos más. ¿Cómo lograr que nuestras visualizaciones luzcan profesionales? ¿Cómo adaptarlas al estilo de nuestra empresa? Este curso te lleva al siguiente nivel con ggplot2. Aprende su funcionamiento a fondo y practica replicando gráficos de grandes medios como The Economist, The New York Times, The Washington Post, entre otros. ¡Prepárate para crear visualizaciones impactantes y con estilo propio!"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#en-este-curso-aprenderás-a",
+    "href": "courses/avz_ggplot2.html#en-este-curso-aprenderás-a",
+    "title": "Visualización de datos con ggplot2",
+    "section": "En este curso, aprenderás a:",
+    "text": "En este curso, aprenderás a:\n\nPersonalizar gráficos con themes y anotaciones: Crea estilos únicos, resalta información clave y haz que tus gráficos sean fáciles de leer.\nControlar escalas y guías: Ajusta la apariencia de ejes y leyendas para una comunicación efectiva de la información.\nExplorar sistemas de coordenadas y facetado: Crea visualizaciones especializadas y compara subconjuntos de datos con facilidad.\nAutomatizar tareas con programación funcional: Optimiza tu flujo de trabajo y crea gráficos de forma eficiente.\nReplicar gráficos de medios de renombre: Aprende de los mejores y aplica técnicas avanzadas para visualizaciones impactantes."
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#próxima-apertura",
+    "href": "courses/avz_ggplot2.html#próxima-apertura",
+    "title": "Visualización de datos con ggplot2",
+    "section": "Próxima apertura",
+    "text": "Próxima apertura\n\nDuración: 6 semanas\nFecha de inicio: martes 4 de junio de 2024\nLecciones: todos los martes\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#qué-obtendrás",
+    "href": "courses/avz_ggplot2.html#qué-obtendrás",
+    "title": "Visualización de datos con ggplot2",
+    "section": "¿Qué obtendrás?",
+    "text": "¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#conoce-al-instructor",
+    "href": "courses/avz_ggplot2.html#conoce-al-instructor",
+    "title": "Visualización de datos con ggplot2",
+    "section": "Conoce al instructor",
+    "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina."
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "href": "courses/avz_ggplot2.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "title": "Visualización de datos con ggplot2",
+    "section": "Conoce lo que dicen nuestros estudiantes",
+    "text": "Conoce lo que dicen nuestros estudiantes"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#contenido-del-curso",
+    "href": "courses/avz_ggplot2.html#contenido-del-curso",
+    "title": "Visualización de datos con ggplot2",
+    "section": "Contenido del curso",
+    "text": "Contenido del curso\n\n\nSemana 1: Refresca tus conocimientos\n\n\nRecordaremos los fundamentos de ggplot2: cómo construir un gráfico a partir de datos, estética, objetos geométricos (puntos, líneas, barras), transformaciones estadísticas, escalas, sistemas de coordenadas, facetado y temas.\nPracticaremos con diferentes tipos de gráficos, desde los básicos como scatterplots y histogramas, hasta mapas y gráficos más complejos.\nAprenderás a personalizar tus gráficos con themes y etiquetas con labs() para un aspecto más pulido.\n\n\n\n\nSemana 2: Personaliza tu estilo\n\n\nDescubrirás el poder del sistema de themes de ggplot2, controlando cada detalle visual, desde el fondo hasta las fuentes y los colores. Aprenderás a crear tus propios themes para un estilo consistente en tus visualizaciones o para adaptarte a las guías de estilo de publicaciones.\nAgregarás anotaciones como texto, etiquetas, rectángulos y líneas para resaltar información importante y hacer tus gráficos más fáciles de leer.\nDominarás el “direct labelling” para etiquetar directamente puntos o grupos de datos, evitando leyendas abarrotadas.\n\n\n\n\nSemana 3: Dale sentido a tus datos\n\n\nAprenderás cómo las escalas y guías (ejes y leyendas) ayudan a interpretar la información visual y cómo ajustarlas para una mejor comunicación.\nExploraremos diferentes tipos de escalas: continuas, discretas, agrupadas y de fecha/hora, y cómo elegir la adecuada para tus datos.\nPersonalizarás la apariencia de las guías con funciones específicas y controlarás cada detalle, desde el color de los ejes hasta el tamaño de las leyendas.\nAprenderás a transformar escalas para resaltar patrones en tus datos y a combinar o separar leyendas para una mejor claridad.\n\n\n\n\nSemana 4: Ajusta la perspectiva\n\n\nDescubrirás cómo los sistemas de coordenadas cambian la forma en que se visualizan los datos, desde el sistema cartesiano estándar hasta coordenadas polares y proyecciones de mapas.\nAprenderás a utilizar herramientas como coord_cartesian() para hacer zoom, coord_flip() para intercambiar ejes y coord_fixed() para fijar la relación de aspecto.\nDominarás el facetado para dividir tus datos en múltiples gráficos y comparar patrones entre grupos o subconjuntos. Controlarás las escalas en gráficos facetados y utilizarás anotaciones para facilitar las comparaciones.\n\n\n\n\nSemana 5: Automatiza tu flujo de trabajo\n\n\nAprenderás a escribir funciones para generar componentes de ggplot2, como geoms, escalas y themes, para evitar la repetición de código y aumentar la eficiencia.\nCrearás funciones para generar gráficos completos, como gráficos circulares y diagramas de coordenadas paralelas, con un solo comando.\nUtilizaremos el paquete purrr para aplicar la programación funcional a ggplot2, iterando sobre datos y componentes para automatizar tareas.\n\n\n\n\nSemana 6: Inspírate en los mejores\n\n\nAnalizaremos gráficos de medios de renombre como The Economist, The Washington Post y The New York Times para identificar técnicas avanzadas y decisiones de diseño efectivas.\nPondremos en práctica todo lo aprendido para replicar estos gráficos, utilizando herramientas como patchwork para combinar múltiples visualizaciones y purrr para automatizar el proceso.\nTe enfrentarás al desafío de replicar un gráfico complejo de tu elección, mostrando tus habilidades de personalización y automatización."
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#inscribirte-ahora",
+    "href": "courses/avz_ggplot2.html#inscribirte-ahora",
+    "title": "Visualización de datos con ggplot2",
+    "section": "Inscribirte ahora",
+    "text": "Inscribirte ahora\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD.\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#ponte-en-contacto",
+    "href": "courses/avz_ggplot2.html#ponte-en-contacto",
+    "title": "Visualización de datos con ggplot2",
     "section": "Ponte en contacto",
     "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
   },
@@ -397,138 +523,5 @@
     "title": "Actualizando el mapa de cantones de Costa Rica con R",
     "section": "Notas",
     "text": "Notas\n\n\nDelfino.cr. (26 de abril de 2018). Expediente 20787: Reforma y Adiciones a la Ley N° 9440, Creación del Cantón XVI Río Cuarto de la Provincia de Alajuela, de 20 de Mayo de 2017. Delfino.cr. Leer más↩︎\nDelfino.cr. (25 de septiembre de 2019). Expediente 21618: Creación del Cantón de Monteverde, Cantón XII de la Provincia de Puntarenas. Delfino.cr. Leer más↩︎\nDelfino.cr. (21 de octubre de 2021). Expediente 22749: Creación del Cantón de Puerto Jiménez, Cantón XIII de la Provincia de Puntarenas. Delfino.cr. Leer más↩︎\nRepública de Costa Rica. (16 de junio de 2010). Ley N° 8808: Declara oficial para efectos administrativos, la aprobación de la División Territorial Administrativa de la República N° 41548-MGP [Cambio de nombre del cantón de Alfaro Ruiz a Zarcero]. La Gaceta, N° 116. Leer más↩︎\nDelfino.cr. (11 de febrero de 2015). Expediente 19469: Cambio de Denominación del Cantón XII, Valverde Vega, de la Provincia de Alajuela, para que en Adelante se Denomine Sarchí. Delfino.cr. Leer más↩︎\nPresidencia de la República de Costa Rica. (11 de febrero de 2015). Cambio de nombre del Cantón VI de la provincia de Puntarenas para que en adelante se denomine Quepos. Recuperado de Leer más↩︎\nSan José, 20 de febrero del 2024 MIDEPLAN-DM-OF-0277-2024 A: Directorio Legislativo, Jefaturas de Fracción, Asamblea Legislativa de Costa Rica Asunto: Opinión de MIDEPLAN sobre el Primer Debate del Proyecto de Ley N°22.643, “Creación del Cantón Colorado, Cantón Duodécimo de la Provincia de Guanacaste”. Disponible en: enlace↩︎\nDelfino.cr. (19 de febrero de 2024). Expediente 22643: Creación del Cantón Colorado, Cantón Duodécimo de la Provincia de Guanacaste. Delfino.cr. Leer más↩︎"
-  },
-  {
-    "objectID": "terminos.html#descargo-de-responsabilidad-sobre-el-uso-del-término-tidyverse",
-    "href": "terminos.html#descargo-de-responsabilidad-sobre-el-uso-del-término-tidyverse",
-    "title": "Terminos y condiciones de Aprende Tidyverse",
-    "section": "",
-    "text": "“Tidyverse” es un término acuñado por la comunidad de usuarios y desarrolladores en torno a la programación en R, y representa un conjunto de paquetes de software diseñados para facilitar la ciencia de datos y la estadística computacional. Este término ha sido ampliamente adoptado gracias al apoyo y la promoción de Posit (anteriormente conocido como RStudio, PBC), cuyas contribuciones han sido fundamentales para el desarrollo y la popularización de estos paquetes.\nAclaramos que, aunque utilizamos el término “tidyverse” para describir, nombrar y promover nuestros cursos, certificados y actividades web, no mantenemos una afiliación directa ni respaldo por parte de Posit. Nuestro uso del término “tidyverse” se adhiere a las leyes aplicables de propiedad intelectual y marcas registradas, y se realiza dentro de un contexto puramente educativo y descriptivo.\nEs importante para nosotros que nuestros usuarios comprendan que, mientras utilizamos este término bajo los principios de uso justo y para fines educativos, Posit no ha expresado de forma oficial su asociación con nuestra empresa, cursos o actividades. Cualquier uso de “tidyverse” en nuestro material es independiente y no implica una conexión formal con Posit."
-  },
-  {
-    "objectID": "terminos.html#información-legal-y-nombre-comercial",
-    "href": "terminos.html#información-legal-y-nombre-comercial",
-    "title": "Terminos y condiciones de Aprende Tidyverse",
-    "section": "Información Legal y Nombre Comercial",
-    "text": "Información Legal y Nombre Comercial\nNuestro sitio web, aprendetidyverse.com, es operado bajo el nombre comercial “Aprende Tidyverse”, el cual es utilizado para el desarrollo y la promoción de cursos y material educativo relacionado con el software R y el conjunto de paquetes conocidos como tidyverse.\nLegalmente, estamos constituidos como una sociedad de responsabilidad limitada (LLC) bajo las leyes del estado de Nuevo México, Estados Unidos. Nuestra entidad legal registrada es Costa Rica Online Solutions, LLC. Este nombre refleja nuestra estructura organizativa y nuestra operación como entidad comercial.\n“Aprende Tidyverse” es un nombre comercial adoptado por Costa Rica Online Solutions, LLC para facilitar la identificación y el marketing de nuestros servicios educativos en el ámbito de la programación y análisis de datos. Aunque operamos bajo este nombre comercial, todas nuestras actividades comerciales y legales están formalmente bajo el nombre de Costa Rica Online Solutions, LLC."
-  },
-  {
-    "objectID": "courses/r4ds.html#acceso-de-la-comunidad",
-    "href": "courses/r4ds.html#acceso-de-la-comunidad",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Acceso de la comunidad",
-    "text": "Acceso de la comunidad\nNos esforzamos por facilitar el acceso a este curso para miembros de la comunidad de R que enfrentan barreras financieras o técnicas para realizar pagos en línea, además de apoyar a personas de grupos históricamente subrepresentados en STEM.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nAsistencia por correo electrónico.\nPrecio: Totalmente Gratis.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/index.html",
-    "href": "courses/index.html",
-    "title": "Curso: R para ciencia de datos",
-    "section": "",
-    "text": "Foto de Kenny Eliason en Unsplash\nQueremos iniciar con una premisa fundamental: cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero. Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos, solamente práctica, práctica y más práctica.\nEste curso está diseñado para llevarte de ser un principiante a un practicante competente, equipado no solo con el conocimiento de los comandos esenciales, sino también con una mucho mejor comprensión del proceso de análisis de datos, desde la importación hasta la presentación de resultados. Además, te ofrecemos un entorno de aprendizaje seguro donde podrás hacer preguntas y cometer errores sin miedo. Recibirás retroalimentación constante tanto de tu instructor como de tus compañeros, lo que es crucial para tu desarrollo."
-  },
-  {
-    "objectID": "courses/index.html#próxima-apertura",
-    "href": "courses/index.html#próxima-apertura",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Próxima apertura:",
-    "text": "Próxima apertura:\n\nFecha de inicio: jueves 23 de mayo del 2024\nLecciones: jueves y sábados\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m."
-  },
-  {
-    "objectID": "courses/index.html#cómo-inscribirme",
-    "href": "courses/index.html#cómo-inscribirme",
-    "title": "Curso: R para ciencia de datos",
-    "section": "¿Cómo inscribirme?",
-    "text": "¿Cómo inscribirme?\nNos esforzamos por hacer el acceso a la educación lo más equitativo posible, adaptándonos a tus posibilidades económicas. A continuación, encontrarás una variedad de opciones de precios. Por favor, selecciona la opción que mejor se ajuste a tus circunstancias de manera responsable.\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\nProfesionales\nIdeal para profesionales que trabajan con datos y buscan mejorar sus habilidades en el lenguaje R.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $120 USD.\n\nInscribirte ahora\n\n\n\n\n\n\n\n\n\nFoto de javier trueba en Unsplash\n\n\n\n\nEstudiantes de pregrado\nPensado para estudiantes de pregrado que buscan prepararse desde ya para trabajar en el mundo de los datos.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nPrecio: $30 USD.\n\nInscribirte ahora\n\n\n\n\n\n\n\n\n\nFoto de Chris Montgomery en Unsplash\n\n\n\n\nAcceso de la comunidad\nNos esforzamos por facilitar el acceso a este curso para miembros de la comunidad de R que enfrentan barreras financieras o técnicas para realizar pagos en línea, además de apoyar a personas de grupos históricamente subrepresentados en STEM.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nAsistencia por correo electrónico.\nPrecio: Totalmente Gratis.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/index.html#profesionales",
-    "href": "courses/index.html#profesionales",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Profesionales",
-    "text": "Profesionales\nIdeal para profesionales que trabajan con datos y buscan mejorar sus habilidades en el lenguaje R.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $120 USD.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/index.html#estudiantes-de-pregrado",
-    "href": "courses/index.html#estudiantes-de-pregrado",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Estudiantes de pregrado",
-    "text": "Estudiantes de pregrado\nPensado para estudiantes de pregrado que buscan prepararse desde ya para trabajar en el mundo de los datos.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nPrecio: $30 USD.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/index.html#acceso-de-la-comunidad",
-    "href": "courses/index.html#acceso-de-la-comunidad",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Acceso de la comunidad",
-    "text": "Acceso de la comunidad\nNos esforzamos por facilitar el acceso a este curso para miembros de la comunidad de R que enfrentan barreras financieras o técnicas para realizar pagos en línea, además de apoyar a personas de grupos históricamente subrepresentados en STEM.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nAsistencia por correo electrónico.\nPrecio: Totalmente Gratis.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/index.html#conoce-al-instructor",
-    "href": "courses/index.html#conoce-al-instructor",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Conoce al instructor",
-    "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina.\n\nSi tienes dudas conversemos:\nPuedes programar una 🎥 videollamada de 15 minutos con el instructor para revisar tus dudas sobre el curso en el siguiente enlace."
-  },
-  {
-    "objectID": "courses/index.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "href": "courses/index.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Conoce lo que dicen nuestros estudiantes",
-    "text": "Conoce lo que dicen nuestros estudiantes"
-  },
-  {
-    "objectID": "courses/index.html#contenido-del-curso",
-    "href": "courses/index.html#contenido-del-curso",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Contenido del curso",
-    "text": "Contenido del curso\n\n\nClase 1: Descubriendo R y el Tidyverse\n\nEsta clase te introduce a R y el conjunto de herramientas del Tidyverse. Aquí aprenderás a configurar tu espacio de trabajo en RStudio, cómo leer archivos .csv y empezarás a jugar con tus datos, dándoles un primer vistazo y creando visualizaciones sencillas.\n\n\n\nClase 2: Comenzamos a explorar los datos\n\nEn esta clase, te adentrarás en el corazón de dplyr y tidyr, donde la magia de la manipulación de datos realmente sucede. Aprenderás a filtrar, seleccionar, y transformar tus datos para revelar las historias ocultas que tienen para contar.\n\n\n\nClase 3: Inicia en la visualización de Datos\n\nAquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando ggplot2 para crear tus primeros gráfico. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapte a tus necesidades.\n\n\n\nClase 4: Lectura y limpieza de datos\n\nEsta clase te enseñará a ser capaz de leer datos almacenados en CSV, Excel, SPSS, entre otros. Ya sea que estés trabajando con texto, números, fechas, o cualquier otro tipo, aprenderás las habilidades para manejarlos todos con eficiencia.\n\n\n\nClase 5: El arte de trabajar con textos y fechas\n\nLas expresiones regulares y el manejo de fechas pueden parecer hechizos complicados, pero después de esta clase, serán herramientas poderosas en tu arsenal. Aprenderás a limpiar y filtrar tus datos de manera eficiente con los paquetes stringr y lubridate convirtiendo el caos en orden con solo unas pocas líneas de código.\n\n\n\nClase 6: Entendiendo los datos relacionales\n\nEn esta clase te enseña a unir diferentes conjuntos de datos para descubrir conexiones ocultas. Dominarás los joins y aprenderás sobre las llaves y las relaciones, lo que te permitirá combinar datos de fuentes diversas para obtener insights más profundos.\n\n\n\nClase 7: Explorando con gráficos avanzados\n\nCon ggplot2 y plotly, esta clase aprenderás a crear gráficos interactivos y explorar datos geoespaciales, llevando tus habilidades narrativas a nuevas dimensiones.\n\n\n\nClase 8: Conecta R con el mundo las bases de datos SQL\n\nAquí, R se encuentra con el poder de las bases de datos SQL. Aprenderás a realizar consultas SQL directamente desde R, lo que te permite acceder a y manipular grandes conjuntos de datos almacenados en bases de datos de manera eficiente.\n\n\n\nClase 9: La Elegancia de la programación funcional\n\nCon purrr, transformarás tu enfoque de manejar datos. Aprenderás a escribir funciones personalizadas y a iterar sobre tus datos de formas que hacen que el código no solo sea más limpio, sino también más expresivo.\n\n\n\nClase 10: Extrayendo datos de la web\n\nEl web scraping y las APIs abren un universo de datos disponibles en internet. Esta clase te equipará con las herramientas para recoger estos datos como rvest y httr2, permitiéndote responder preguntas que antes parecían inalcanzables.\n\n\n\nClase 11: Creando documento con quarto\n\nCon Quarto, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.\n\n\n\nClase 12: Administrando tus proyectos en RStudio\n\nFinalmente, dominarás el arte de gestionar proyectos de datos con Git, GitHub, y entornos virtuales renv. Esto te asegura que tus proyectos sean reproducibles, colaborativos, y organizados."
-  },
-  {
-    "objectID": "courses/index.html#inscribirte-ahora",
-    "href": "courses/index.html#inscribirte-ahora",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Inscribirte ahora",
-    "text": "Inscribirte ahora\n\n12 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $120 USD.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/index.html#ponte-en-contacto",
-    "href": "courses/index.html#ponte-en-contacto",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Ponte en contacto",
-    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
-  },
-  {
-    "objectID": "codigo_conducta.html",
-    "href": "codigo_conducta.html",
-    "title": "Código de Conducta de Aprende Tidyverse",
-    "section": "",
-    "text": "Aprende Tidyverse se compromete a fomentar un entorno de aprendizaje inclusivo, respetuoso y productivo. Este código de conducta se aplica a todos los miembros de nuestra comunidad, incluyendo estudiantes, profesores e invitados, tanto en espacios online como presenciales. Su objetivo es asegurar una experiencia positiva y enriquecedora para todos.\n\nComportamientos esperados:\n\nRespeto: Trata a todos con consideración y respeto, valorando la diversidad de opiniones, experiencias y orígenes.\nAmabilidad: Sé amable y comprensivo, ofreciendo apoyo y estímulo a tus compañeros. Colaboración: Participa activamente en el aprendizaje colaborativo y comparte tus conocimientos generosamente.\nProfesionalismo: Mantén un comportamiento profesional en todo momento, evitando lenguaje ofensivo o acciones inapropiadas.\nEscucha activa: Escucha atentamente a los demás y evita interrumpir o monopolizar las conversaciones.\nResponsabilidad: Asume la responsabilidad de tus acciones y palabras, siendo consciente del impacto que pueden tener en los demás.\n\n\n\nComportamientos inaceptables:\nLos siguientes comportamientos son inaceptables y pueden resultar en medidas disciplinarias, incluyendo la expulsión del curso o evento y la prohibición de participar en futuras actividades de Aprende Tidyverse:\n\nDiscriminación o acoso: Cualquier forma de discriminación o acoso basada en raza, etnia, género, orientación sexual, identidad de género, religión, edad, discapacidad o cualquier otra característica protegida.\nViolencia o amenazas: Amenazas o lenguaje violento dirigido a cualquier persona, así como la exhibición de imágenes violentas.\nAcoso sexual: Atención sexual no deseada, contacto físico no consensuado o no deseado, o cualquier otro comportamiento de naturaleza sexual que cree un ambiente hostil o intimidante.\nComportamiento disruptivo: Interrupción constante de clases, eventos o comunicaciones.\nInsultos o humillaciones: Lenguaje abusivo, insultos o humillaciones dirigidas a cualquier persona.\nLenguaje ofensivo: Chistes o comentarios sexistas, racistas, homofóbicos, transfóbicos, excluyentes o que discriminen a personas con discapacidad. Incumplimiento de las normas: Ignorar las instrucciones del instructor, hacer trampa o plagiar el trabajo de otros.\nCompartir información privada: Publicar comunicaciones privadas sin consentimiento.\nComportamiento inapropiado en línea: Esto incluye, pero no se limita a, trolling, flaming, spamming y doxing.\n\n\n\nConsecuencias de violar el código de conducta:\nLas violaciones a este código de conducta serán tomadas con seriedad y pueden resultar en una o más de las siguientes consecuencias:\n\nAdvertencia verbal o escrita.\nExpulsión del curso o evento sin derecho a reembolso.\nProhibición de participar en futuras actividades de Aprende Tidyverse, tanto online como presenciales.\nEn casos graves, se pueden tomar medidas legales.\n\n\n\nReportar incidentes:\nSi experimentas o presencias algún comportamiento inaceptable, te alentamos a que lo informes de inmediato a un miembro del equipo de Aprende Tidyverse o enviando un correo electrónico a soporte@aprendetidyverse.com. Todos los informes serán tratados con confidencialidad y seriedad.\n\n\nCompromiso con la comunidad:\nAl participar en la comunidad de Aprende Tidyverse, aceptas cumplir con este código de conducta y contribuir a un ambiente de aprendizaje positivo e inclusivo para todos."
-  },
-  {
-    "objectID": "codigo_conducta.html#código-de-conducta-de-aprende-tidyverse",
-    "href": "codigo_conducta.html#código-de-conducta-de-aprende-tidyverse",
-    "title": "Terminos y condiciones de Aprende Tidyverse",
-    "section": "",
-    "text": "Aprende Tidyverse se compromete a fomentar un entorno de aprendizaje inclusivo, respetuoso y productivo. Este código de conducta se aplica a todos los miembros de nuestra comunidad, incluyendo estudiantes, profesores e invitados, tanto en espacios online como presenciales. Su objetivo es asegurar una experiencia positiva y enriquecedora para todos.\n\n\n\nRespeto: Trata a todos con consideración y respeto, valorando la diversidad de opiniones, experiencias y orígenes.\nAmabilidad: Sé amable y comprensivo, ofreciendo apoyo y estímulo a tus compañeros. Colaboración: Participa activamente en el aprendizaje colaborativo y comparte tus conocimientos generosamente.\nProfesionalismo: Mantén un comportamiento profesional en todo momento, evitando lenguaje ofensivo o acciones inapropiadas.\nEscucha activa: Escucha atentamente a los demás y evita interrumpir o monopolizar las conversaciones.\nResponsabilidad: Asume la responsabilidad de tus acciones y palabras, siendo consciente del impacto que pueden tener en los demás.\n\n\n\n\nLos siguientes comportamientos son inaceptables y pueden resultar en medidas disciplinarias, incluyendo la expulsión del curso o evento y la prohibición de participar en futuras actividades de Aprende Tidyverse:\n\nDiscriminación o acoso: Cualquier forma de discriminación o acoso basada en raza, etnia, género, orientación sexual, identidad de género, religión, edad, discapacidad o cualquier otra característica protegida.\nViolencia o amenazas: Amenazas o lenguaje violento dirigido a cualquier persona, así como la exhibición de imágenes violentas.\nAcoso sexual: Atención sexual no deseada, contacto físico no consensuado o no deseado, o cualquier otro comportamiento de naturaleza sexual que cree un ambiente hostil o intimidante.\nComportamiento disruptivo: Interrupción constante de clases, eventos o comunicaciones.\nInsultos o humillaciones: Lenguaje abusivo, insultos o humillaciones dirigidas a cualquier persona.\nLenguaje ofensivo: Chistes o comentarios sexistas, racistas, homofóbicos, transfóbicos, excluyentes o que discriminen a personas con discapacidad. Incumplimiento de las normas: Ignorar las instrucciones del instructor, hacer trampa o plagiar el trabajo de otros.\nCompartir información privada: Publicar comunicaciones privadas sin consentimiento.\nComportamiento inapropiado en línea: Esto incluye, pero no se limita a, trolling, flaming, spamming y doxing.\n\n\n\n\nLas violaciones a este código de conducta serán tomadas con seriedad y pueden resultar en una o más de las siguientes consecuencias:\n\nAdvertencia verbal o escrita.\nExpulsión del curso o evento sin derecho a reembolso.\nProhibición de participar en futuras actividades de Aprende Tidyverse, tanto online como presenciales.\nEn casos graves, se pueden tomar medidas legales.\n\n\n\n\nSi experimentas o presencias algún comportamiento inaceptable, te alentamos a que lo informes de inmediato a un miembro del equipo de Aprende Tidyverse o enviando un correo electrónico a soporte@aprendetidyverse.com. Todos los informes serán tratados con confidencialidad y seriedad.\n\n\n\nAl participar en la comunidad de Aprende Tidyverse, aceptas cumplir con este código de conducta y contribuir a un ambiente de aprendizaje positivo e inclusivo para todos."
-  },
-  {
-    "objectID": "terminos.html#modificaciones",
-    "href": "terminos.html#modificaciones",
-    "title": "Terminos y condiciones de Aprende Tidyverse",
-    "section": "Modificaciones:",
-    "text": "Modificaciones:\nAprende Tidyverse se reserva el derecho de modificar estos términos y condiciones en cualquier momento. Las actualizaciones se publicarán en nuestra página web y se notificará a los estudiantes sobre cambios significativos."
-  },
-  {
-    "objectID": "confirmacion.html",
-    "href": "confirmacion.html",
-    "title": "Inscripción exitosa",
-    "section": "",
-    "text": "Foto de Pineapple Supply Co. en Unsplash"
-  },
-  {
-    "objectID": "confirmacion.html#excelente-tu-formulario-de-inscripción-al-curso-ha-sido-enviado-con-éxito.-en-unos-minutos-recibirás-un-correo-electrónico-con-más-información.-nos-vemos-en-clase",
-    "href": "confirmacion.html#excelente-tu-formulario-de-inscripción-al-curso-ha-sido-enviado-con-éxito.-en-unos-minutos-recibirás-un-correo-electrónico-con-más-información.-nos-vemos-en-clase",
-    "title": "Inscripción exitosa",
-    "section": "",
-    "text": "Foto de Pineapple Supply Co. en Unsplash"
   }
 ]
