@@ -32,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -45,6 +43,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7HH46G4FS3"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -129,56 +100,26 @@ cookieconsent.run({
 </script> 
   
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="alternate" type="application/rss+xml" title="Aprende Tidyverse" href="index.xml" data-external="1"><meta property="og:title" content="Aprende Tidyverse">
-<meta property="og:description" content="">
+<link rel="stylesheet" href="index.css">
+<meta property="og:title" content="Aprende Tidyverse">
 <meta property="og:site_name" content="aprendetidyverse.com">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:title" content="Aprende Tidyverse">
-<meta name="twitter:description" content="">
 <meta name="twitter:creator" content="@dev_aguero">
 <meta name="twitter:site" content="@dev_aguero">
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Aprende Tidyverse</span>
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/logo.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Buscar"></div>
@@ -188,12 +129,52 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./courses/index.html"> 
-<span class="menu-text">Cursos R Intensivo</span></a>
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Inicio</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cursos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Cursos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cursos">    
+        <li class="dropdown-header">Cursos de R</li>
+        <li>
+    <a class="dropdown-item" href="./courses/r4ds.html"><i class="bi bi-graph-up-arrow" role="img">
+</i> 
+ <span class="dropdown-text">R para ciencia de datos (novato)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/intro_shiny.html"><i class="bi bi-window-split" role="img">
+</i> 
+ <span class="dropdown-text">Desarrollo de aplicaciones con shiny (intermedio)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/web_scraping.html"><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">Web Scraping con R (avanzado)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/avz_ggplot2.html"><i class="bi bi-palette" role="img">
+</i> 
+ <span class="dropdown-text">ggplot2 Avanzado</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Programas especiales</li>
+        <li>
+    <a class="dropdown-item" href="./courses/r4ds.html"><i class="bi bi-book" role="img">
+</i> 
+ <span class="dropdown-text">R para la investigación en ciencias sociales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/r4ds.html"><i class="bi bi-hospital" role="img">
+</i> 
+ <span class="dropdown-text">R para la investigación en ciencias medicas</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./lunes_pr.html"> 
-<span class="menu-text">Lunes de Consultas</span></a>
+<span class="menu-text">Sesiones de Consultas</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./posts.html"> 
@@ -229,216 +210,106 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
-   
-  <ul>
-  <li><a href="#curso-r-para-ciencia-de-datos" id="toc-curso-r-para-ciencia-de-datos" class="nav-link active" data-scroll-target="#curso-r-para-ciencia-de-datos">Curso R para ciencia de datos</a></li>
-  <li><a href="#ponte-en-contacto" id="toc-ponte-en-contacto" class="nav-link" data-scroll-target="#ponte-en-contacto">Ponte en contacto</a></li>
-  <li><a href="#post-recientes" id="toc-post-recientes" class="nav-link" data-scroll-target="#post-recientes">Post Recientes</a></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
 
 
 
-<p><img src="images/logo.png" class="img-fluid" style="width: 600px; height: 150px; object-fit: cover;"></p>
-<p>Aprende Tidyverse es una iniciativa que busca contribuir a la comunidad hispanohablante de usuarios de R, ofreciendo de forma gratuita cursos, tutoriales, guías paso a paso y todo lo que se nos ocurra por el camino. ¿Lo mejor? Aprendemos juntos y, ¿por qué no?, nos divertimos en el proceso.</p>
-<section id="curso-r-para-ciencia-de-datos" class="level2">
-<h2 class="anchored" data-anchor-id="curso-r-para-ciencia-de-datos">Curso R para ciencia de datos</h2>
-<p>Puedes inscribirte por un precio <mark><strong>desde los $0 USD hasta los $120 USD</strong>.</mark> Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.</p>
+<div class="hero-banner">
+<div class="content-block">
+<section id="curso-r-para-ciencia-de-datos" class="hero-text">
+<h1>Curso: R para ciencia de datos</h1>
+<h3 id="tu-puerta-de-entrada-al-mundo-de-la-ciencia-de-datos">Tu puerta de entrada al mundo de la ciencia de datos</h3>
 <ul>
-<li><strong>Próxima apertura:</strong> <mark><strong>jueves 23 de mayo del 2024</strong></mark>
-<ul>
-<li>Lecciones: jueves y sábados</li>
-<li>Costa Rica/México: 6:00 p.m.</li>
-<li>Colombia: 7:00 p.m.</li>
-<li>Argentina: 9:00 p.m.</li>
-</ul></li>
+<li>Importa y manipula datos con herramientas como <a href="https://readr.tidyverse.org">readr</a>, <a href="https://dplyr.tidyverse.org">dplyr</a> y <a href="https://tidyr.tidyverse.org">tidyr</a>.</li>
+<li>Maneja textos, fechas y factores usando los paquetes como <a href="https://lubridate.tidyverse.org">lubridate</a>, <a href="https://stringr.tidyverse.org">stringr</a> y <a href="https://forcats.tidyverse.org">forcats</a>.</li>
+<li>Visualiza resultados con <a href="https://ggplot2.tidyverse.org">ggplot2</a> y <a href="https://plotly.com">plotly</a>.</li>
+<li>Crea documentos y mapas interactivos usando <a href="https://rmarkdown.rstudio.com">rmarkdown</a>, <a href="https://quarto.org">quarto</a>, <a href="https://r-spatial.github.io/sf/">sf</a> y <a href="https://rstudio.github.io/leaflet/">leaflet</a>.</li>
+<li>Extrae datos los sitios web con técnicas de web scraping usando <a href="https://rvest.tidyverse.org">rvest</a> y <a href="https://docs.ropensci.org/RSelenium/">selenium</a>.</li>
+<li>Gestiona proyectos y organiza tu código con <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a> y <a href="https://github.com">GitHub</a>.</li>
 </ul>
-<p><em>Descuentos de hasta el 75% para estudiantes y académicos. Si tu situación económica o restricciones de tu país no te permiten hacer un pago en línea por el curso, siéntete en total libertad de llevarlo <mark><strong>totalmente gratis.</strong></mark></em></p>
-<p><a href="./courses/index.html" class="btn btn-outline-primary" role="button">Ver los detalles del curso</a></p>
+<h3 id="explora-analiza-y-comparte.-tienes-historias-que-contar-haz-de-r-tu-herramienta-para-hacerlo.">Explora, analiza y comparte. Tienes historias que contar haz de R tu herramienta para hacerlo.</h3>
+<div class="hero-buttons">
+<p><a href="https://tally.so/r/m67aKo" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">Inscribirte Hoy</a> <a href="./courses/r4ds.html" id="btn-guide" class="btn-action btn btn-info btn-lg" role="button">Leer Más</a></p>
+</div>
 </section>
-<section id="ponte-en-contacto" class="level2">
-<h2 class="anchored" data-anchor-id="ponte-en-contacto">Ponte en contacto</h2>
-<p>La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.</p>
-<p>Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en <a href="https://www.linkedin.com/in/carlos-aguero-cr">LinkedIn</a> o en <a href="https://twitter.com/dev_aguero">Twitter</a> (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!</p>
-<hr>
+<div class="hero-animation">
+<p><img src="images/rstudio-desktop-screen.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<section id="ya-dominas-r-da-el-siguiente-paso-con-cursos-especializados" class="content-block">
+<h2>¿Ya Dominas R? Da el siguiente paso con cursos especializados</h2>
+<div class="features">
+<section id="ggplot2-avanzado-lleva-tus-visualizaciones-al-siguiente-nivel" class="feature">
+<h3>ggplot2 avanzado: lleva tus visualizaciones al siguiente nivel</h3>
+<p>¿Dominas ggplot2? Lleva tus gráficos al siguiente nivel con técnicas avanzadas de visualización de datos. ¡Explora más!</p>
+<ul>
+<li><strong>Precio</strong>: $99 USD</li>
+<li><strong>Duración</strong>: 6 semanas</li>
+<li><strong>Horario</strong>: martes 6:00 p.m (UTC-6)</li>
+<li><strong>Próxima Apertura</strong>: martes 4 de junio de 2024</li>
+</ul>
+<div class="learn-more">
+<p><a href="./courses/avz_ggplot2.html">Leer más »</a></p>
+</div>
 </section>
-<section id="post-recientes" class="level2">
-<h2 class="anchored" data-anchor-id="post-recientes">Post Recientes</h2>
-
-
-
+<section id="curso-avanzado-de-web-scraping-y-automatización-con-r" class="feature">
+<h3>Curso Avanzado de Web Scraping y Automatización con R</h3>
+<p>Domina el web scraping con R y accede a un mundo de datos que estás desaprovechando.</p>
+<ul>
+<li><strong>Precio</strong>: $99 USD</li>
+<li><strong>Duración</strong>: 6 semanas</li>
+<li><strong>Horario</strong>: martes 6:00 p.m (UTC-6)</li>
+<li><strong>Próxima Apertura</strong>: martes 23 de julio de 2024</li>
+</ul>
+<div class="learn-more">
+<p><a href="./courses/web_scraping.html">Leer más »</a></p>
+</div>
 </section>
+<section id="introducción-al-desarrollo-de-aplicaciones-con-shiny" class="feature">
+<h3>Introducción al desarrollo de aplicaciones con shiny</h3>
+<p>Desarrolla aplicaciones web reactivas y dashboards profesionales usando el lenguaje que ya conoces: R.</p>
+<ul>
+<li><strong>Precio</strong>: $99 USD</li>
+<li><strong>Duración</strong>: 6 semanas</li>
+<li><strong>Horario</strong>: miércoles 6:00 p.m (UTC-6)</li>
+<li><strong>Próxima Apertura</strong>: miércoles 3 de julio de 2024</li>
+</ul>
+<div class="learn-more">
+<p><a href="./courses/intro_shiny.html">Leer más »</a></p>
+</div>
+</section>
+</div>
+</section>
+<div class="content-block">
+<h2 id="conoce-lo-que-dicen-nuestros-estudiantes">Conoce lo que dicen nuestros estudiantes</h2>
+<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
+<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=off&amp;hideSource&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
+</iframe>
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
+<section id="mira-más-comentarios-en-nuestro-perfil-de-linkedin" class="learn-more">
+<h2><a href="https://www.linkedin.com/in/carlos-aguero-cr/details/recommendations">Mira más comentarios en nuestro perfil de linkedin »</a></h2>
+</section>
+</div>
+<div class="email">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h2 id="suscríbete-con-tu-correo-electrónico-para-recibir-información-sobre-nuestros-tutoriales-y-talleres-gratuitos-así-como-detalles-sobre-las-próximas-aperturas-de-nuestros-cursos.">Suscríbete con tu correo electrónico para recibir información sobre nuestros tutoriales y talleres gratuitos, así como detalles sobre las próximas aperturas de nuestros cursos.</h2>
+</div><div class="column" style="width:50%;">
+<iframe data-tally-src="https://tally.so/embed/wd67kV?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="177" frameborder="0" marginheight="0" marginwidth="0" title="Recibe más información">
+</iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+</div>
+</div>
+</div>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Borrador,Guías Paso a Paso,ggplot2,#30DayChartChallenge" data-listing-date-sort="1711951200000" data-listing-file-modified-sort="1712779830157" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="743">
-<div class="thumbnail">
-<p><a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external"></a></p><a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external">
-<p><img src="./posts/images/portada_d1.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external">30 days chart challenge 1/30</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Borrador'); return false;">
-Borrador
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
-Guías Paso a Paso
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('#30DayChartChallenge'); return false;">
-#30DayChartChallenge
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external">Hola a todos!! una pequeña advertencia: este documento aún está en construcción. Puedes intentar utilizarlo, pero ten en cuenta que algunas cosas aún podrían no funcionar…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external">
-<div class="listing-date">
-2024-04-01
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Borrador,Guías Paso a Paso,ggplot2,#30DayChartChallenge" data-listing-date-sort="1711951200000" data-listing-file-modified-sort="1712779756467" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="495">
-<div class="thumbnail">
-<p><a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external"></a></p><a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external">
-<p><img src="./posts/images/portada_d2.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external">30 days chart challenge 2/30</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Borrador'); return false;">
-Borrador
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
-Guías Paso a Paso
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('#30DayChartChallenge'); return false;">
-#30DayChartChallenge
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1">colores <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb1-2">  <span class="at">amarillo =</span> <span class="st">"#FFCC70"</span>,</span>
-<span id="cb1-3">  <span class="at">gris =</span> <span class="st">"#E3E1D9"</span></span>
-<span id="cb1-4">)</span></code></pre></div>
-</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external">
-<div class="listing-date">
-2024-04-01
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Borrador,Guías Paso a Paso,ggplot2" data-listing-date-sort="1711778400000" data-listing-file-modified-sort="1712779769921" data-listing-date-modified-sort="1711951200000" data-listing-reading-time-sort="24" data-listing-word-count-sort="4647">
-<div class="thumbnail">
-<p><a href="./posts/002_custom_legend_ggplot2.html" class="no-external"></a></p><a href="./posts/002_custom_legend_ggplot2.html" class="no-external">
-<p><img src="./posts/images/legend_example.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/002_custom_legend_ggplot2.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_custom_legend_ggplot2.html" class="no-external">Creando leyendas personalizadas en ggplot2</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/002_custom_legend_ggplot2.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Borrador'); return false;">
-Borrador
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
-Guías Paso a Paso
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/002_custom_legend_ggplot2.html" class="no-external">Hola a todos!! una pequeña advertencia: este documento aún está en construcción. Puedes intentar utilizarlo, pero ten en cuenta que algunas cosas aún podrían no funcionar…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/002_custom_legend_ggplot2.html" class="no-external">
-<div class="listing-date">
-2024-03-30
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Guías Paso a Paso,ggplot2" data-listing-date-sort="1707372000000" data-listing-file-modified-sort="1711861544844" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2034">
-<div class="thumbnail">
-<p><a href="./posts/001_mapa_cantones_cr.html" class="no-external"></a></p><a href="./posts/001_mapa_cantones_cr.html" class="no-external">
-<p><img src="./posts/images/mapa_cr_ggplot2.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/001_mapa_cantones_cr.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_mapa_cantones_cr.html" class="no-external">Actualizando el mapa de cantones de Costa Rica con R</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/001_mapa_cantones_cr.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
-Guías Paso a Paso
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/001_mapa_cantones_cr.html" class="no-external">Explora los recientes cambios territoriales y de nombres en los cantones de Costa Rica a través de esta guía que te enseñará a crear mapas actualizados con ggplot2, utilizando los datos del Instituto Geográfico Nacional.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/001_mapa_cantones_cr.html" class="no-external">
-<div class="listing-date">
-2024-02-08
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No hay resultados
-</div>
-</div><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div>Este blog libera su contenido bajo la Licencia Creative Commons CC0, permitiendo a los usuarios copiar, modificar, distribuir y utilizar  todo el trabajo, ya sea para propósitos comerciales o no, sin necesidad de pedir permiso o proporcionar atribución al autor.
-<a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/deed.es">(Ver Licencia)</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Derechos de autor</h2><div class="quarto-appendix-contents"><div>Copyright Aprende Tidyverse. 2024. Todos los derechos reservados.</div></div></section></div></main> <!-- /main -->
+
+
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -863,14 +734,35 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p>Contenido <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2024 por Aprende Tidyverse<br> Todo el contenido está licenciado bajo una Licencia Internacional Creative Commons Atribución-NoComercial 4.0 (<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es">CC BY-NC 4.0</a>).</p>
+</div>   
     <div class="nav-footer-center">
-
-<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./terminos.html">
+<p>Términos y Condiciones</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./docs/faq/index.qmd">
+<p>FAQ</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./license.qmd">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./trademark.qmd">
+<p>Trademark</p>
+</a>
+  </li>  
+</ul>
+    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+<p>Hecho con <i class="fa-solid fa-heart" aria-label="heart"></i> desde Costa Rica usando <i class="fa-brands fa-r-project" aria-label="r-project"></i> y <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/aguerodev/aguerodev.github.io">Revisa el código fuente en <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></p>
+</div>
   </div>
 </footer>
 

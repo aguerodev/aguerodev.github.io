@@ -1,0 +1,134 @@
+---
+title: "Terminos y condiciones de Aprende Tidyverse"
+subtitle: ""
+description: ""
+lang: "es"
+toc: false
+comments: false
+author: ""
+date: ""
+copyright: ""
+pagetitle: Terminos y condiciones
+license: ""
+---
+
+## Descargo de Responsabilidad sobre el Uso del Término "Tidyverse"
+
+"Tidyverse" es un término acuñado por la comunidad de usuarios y desarrolladores en torno a la programación en R, y representa un conjunto de paquetes de software diseñados para facilitar la ciencia de datos y la estadística computacional. Este término ha sido ampliamente adoptado gracias al apoyo y la promoción de Posit (anteriormente conocido como RStudio, PBC), cuyas contribuciones han sido fundamentales para el desarrollo y la popularización de estos paquetes.
+
+Aclaramos que, aunque utilizamos el término "tidyverse" para describir, nombrar y promover nuestros cursos, certificados y actividades web, **no mantenemos una afiliación directa ni respaldo por parte de Posit.** Nuestro uso del término "tidyverse" se adhiere a las leyes aplicables de propiedad intelectual y marcas registradas, y se realiza dentro de un contexto puramente educativo y descriptivo.
+
+Es importante para nosotros que nuestros usuarios comprendan que, mientras utilizamos este término bajo los principios de uso justo y para fines educativos, **Posit no ha expresado de forma oficial su asociación con nuestra empresa, cursos o actividades.** Cualquier uso de "tidyverse" en nuestro material es independiente y no implica una conexión formal con Posit.
+
+## Información Legal y Nombre Comercial
+
+Nuestro sitio web, aprendetidyverse.com, es operado bajo el nombre comercial "Aprende Tidyverse", el cual es utilizado para el desarrollo y la promoción de cursos y material educativo relacionado con el software R y el conjunto de paquetes conocidos como tidyverse.
+
+Legalmente, estamos constituidos como una sociedad de responsabilidad limitada (LLC) bajo las leyes del estado de Nuevo México, Estados Unidos. Nuestra entidad legal registrada es Costa Rica Online Solutions, LLC. Este nombre refleja nuestra estructura organizativa y nuestra operación como entidad comercial.
+
+"Aprende Tidyverse" es un nombre comercial adoptado por Costa Rica Online Solutions, LLC para facilitar la identificación y el marketing de nuestros servicios educativos en el ámbito de la programación y análisis de datos. Aunque operamos bajo este nombre comercial, todas nuestras actividades comerciales y legales están formalmente bajo el nombre de Costa Rica Online Solutions, LLC.
+
+## Código de Conducta de Aprende Tidyverse
+
+Aprende Tidyverse se compromete a fomentar un entorno de aprendizaje inclusivo, respetuoso y productivo. Este código de conducta se aplica a todos los miembros de nuestra comunidad, incluyendo estudiantes, profesores e invitados, tanto en espacios online como presenciales. Su objetivo es asegurar una experiencia positiva y enriquecedora para todos.
+
+### Comportamientos esperados:
+
++ Respeto: Trata a todos con consideración y respeto, valorando la diversidad de opiniones, experiencias y orígenes.
+
++ Amabilidad: Sé amable y comprensivo, ofreciendo apoyo y estímulo a tus compañeros.
+Colaboración: Participa activamente en el aprendizaje colaborativo y comparte tus conocimientos generosamente.
+
++ Profesionalismo: Mantén un comportamiento profesional en todo momento, evitando lenguaje ofensivo o acciones inapropiadas.
+
++ Escucha activa: Escucha atentamente a los demás y evita interrumpir o monopolizar las conversaciones.
+
++ Responsabilidad: Asume la responsabilidad de tus acciones y palabras, siendo consciente del impacto que pueden tener en los demás.
+
+### Comportamientos inaceptables:
+Los siguientes comportamientos son inaceptables y pueden resultar en medidas disciplinarias, incluyendo la expulsión del curso o evento y la prohibición de participar en futuras actividades de Aprende Tidyverse:
+
++ Discriminación o acoso: Cualquier forma de discriminación o acoso basada en raza, etnia, género, orientación sexual, identidad de género, religión, edad, discapacidad o cualquier otra característica protegida.
+
++ Violencia o amenazas: Amenazas o lenguaje violento dirigido a cualquier persona, así como la exhibición de imágenes violentas.
+
++ Acoso sexual: Atención sexual no deseada, contacto físico no consensuado o no deseado, o cualquier otro comportamiento de naturaleza sexual que cree un ambiente hostil o intimidante.
+
++ Comportamiento disruptivo: Interrupción constante de clases, eventos o comunicaciones.
+
++ Insultos o humillaciones: Lenguaje abusivo, insultos o humillaciones dirigidas a cualquier persona.
+
++ Lenguaje ofensivo: Chistes o comentarios sexistas, racistas, homofóbicos, transfóbicos, excluyentes o que discriminen a personas con discapacidad.
+Incumplimiento de las normas: Ignorar las instrucciones del instructor, hacer trampa o plagiar el trabajo de otros.
+
++ Compartir información privada: Publicar comunicaciones privadas sin consentimiento.
+
++ Comportamiento inapropiado en línea: Esto incluye, pero no se limita a, trolling, flaming, spamming y doxing.
+
+### Consecuencias de violar el código de conducta:
+
+Las violaciones a este código de conducta serán tomadas con seriedad y pueden resultar en una o más de las siguientes consecuencias:
+
++ Advertencia verbal o escrita.
+
++ Expulsión del curso o evento sin derecho a reembolso.
+
++ Prohibición de participar en futuras actividades de Aprende Tidyverse, tanto online como presenciales.
++ En casos graves, se pueden tomar medidas legales.
+
+### Reportar incidentes:
+
+Si experimentas o presencias algún comportamiento inaceptable, te alentamos a que lo informes de inmediato a un miembro del equipo de Aprende Tidyverse o enviando un correo electrónico a soporte@aprendetidyverse.com. Todos los informes serán tratados con confidencialidad y seriedad.
+
+### Compromiso con la comunidad:
+Al participar en la comunidad de Aprende Tidyverse, aceptas cumplir con este código de conducta y contribuir a un ambiente de aprendizaje positivo e inclusivo para todos.
+
+
+## Términos y Condiciones de Pago
+Aprende Tidyverse se esfuerza por ofrecer una experiencia educativa de alta calidad y accesible. Para garantizar un proceso fluido y justo para todos, hemos establecido los siguientes términos y condiciones de pago:
+
+### Validez del pago:
++ Plazo de uso: Una vez realizado el pago de un curso, el estudiante tiene un plazo de 180 días para iniciar y completar el curso. Después de este período, el pago expirará y el acceso al curso será desactivado.
+
+### Política de reembolso:
++ Periodo de reembolso: Los estudiantes tienen derecho a solicitar un reembolso completo dentro de las 2 semanas posteriores al inicio del curso. Para solicitar un reembolso, debes enviar un correo electrónico a soporte@aprendetidyverse.com con la información del curso y el motivo de la solicitud.
+
++ Excepciones: Los reembolsos no se aplicarán a estudiantes que hayan sido expulsados del curso por violar nuestro código de conducta.
+
+### Descuentos y congelamiento de cursos:
++ Incompatibilidad: Los estudiantes que se beneficien de un descuento en el costo del curso no tendrán la opción de congelar su participación y continuar en una fecha posterior. El curso deberá ser completado dentro del plazo de 180 días establecido.
+
+### Código de conducta y expulsión:
+
++ Cumplimiento: Todos los estudiantes deben adherirse al código de conducta de Aprende Tidyverse, el cual promueve un ambiente de respeto, colaboración y aprendizaje.
+
++ Expulsión: Los estudiantes que cometan faltas graves según lo establecido en nuestro código de conducta serán expulsados del curso o evento sin derecho a reembolso. Además, no podrán participar en futuras actividades de Aprende Tidyverse, ya sean online o presenciales.
+
+### Modificaciones:
+Aprende Tidyverse se reserva el derecho de modificar estos términos y condiciones en cualquier momento. Las actualizaciones se publicarán en nuestra página web y se notificará a los estudiantes sobre cambios significativos.
+
+
+## Términos y Condiciones de Uso de Información
+Aprende Tidyverse se compromete a proteger tu privacidad y la información que nos brindas. En cumplimiento con la [Ley de Protección de la Persona frente al tratamiento de sus datos personales (Nº 8968) de Costa Rica](https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=70975&nValor3=85989&strTipM=TC), estos Términos y Condiciones explican cómo recopilamos, usamos y protegemos tu información cuando participas en nuestros eventos online gratuitos o pagas por nuestros cursos.
+
+### Información que recopilamos:
+
++ Información de contacto: Nombre, correo electrónico, número de teléfono (opcional).
++ Información de perfil: Información que proporcionas al crear un perfil, como foto de perfil, intereses y experiencia.
++ Información de participación: Información sobre tu participación en eventos y cursos, como asistencia, progreso y resultados.
++ Información de pago: Si realizas un pago, recopilamos información de facturación y pago.
+
+### Cómo usamos tu información:
+
++ Para brindarte los servicios que solicitas: Usamos tu información para registrarte en eventos y cursos, procesar pagos, comunicarnos contigo sobre tu participación y brindarte soporte.
++ Para mejorar nuestros servicios: Analizamos la información de participación para comprender mejor cómo las personas usan nuestros servicios y cómo podemos mejorarlos.
++ Para promocionar eventos y cursos: Podemos utilizar tu información de contacto para enviarte correos electrónicos sobre nuevos eventos y cursos que creemos que te pueden interesar.
+
+### Tus opciones:
++ Cancelar suscripción a correos electrónicos promocionales: Puedes cancelar la suscripción a nuestros correos electrónicos promocionales en cualquier momento haciendo clic en el enlace "Cancelar suscripción" que se encuentra en la parte inferior de cada correo electrónico.
++ Solicitar la eliminación de tu información: De acuerdo con la [Ley de Protección de la Persona frente al tratamiento de sus datos personales (Nº 8968)](https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=70975&nValor3=85989&strTipM=TC), tienes derecho a solicitar la eliminación de tu información de nuestras bases de datos enviando un correo electrónico a soporte@aprendetidyverse.com.
++ Protección de tu información:
+Implementamos medidas de seguridad para proteger tu información del acceso no autorizado, la divulgación, alteración o destrucción.
+
+### Cumplimiento con la ley:
+Nos comprometemos a cumplir con la [Ley de Protección de la Persona frente al tratamiento de sus datos personales (Nº 8968)](https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=70975&nValor3=85989&strTipM=TC) y a proteger tus derechos de privacidad.

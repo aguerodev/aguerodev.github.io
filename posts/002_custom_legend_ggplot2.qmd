@@ -1,6 +1,6 @@
 ---
 title: "Creando leyendas personalizadas en ggplot2"
-description: ""
+description: " "
 author: "<a href = 'www.linkedin.com/in/carlos-aguero-cr' style = 'text-decoration: underline;'>Carlos Aguero B.</a>"
 date: 2024-03-30
 date-modified: 2024-04-01

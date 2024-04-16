@@ -3,4 +3,4 @@ website:
     - posts/002_custom_legend_ggplot2.qmd
     - posts/003_30_days_chart_challenge_d1.qmd
     - posts/004_30_days_chart_challenge_d2.qmd
-  draft-mode: visible
+  draft-mode: gone

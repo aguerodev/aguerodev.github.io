@@ -16,7 +16,7 @@ $gray-800: #333 !default;
 $gray-900: #222 !default;
 $black:    #000 !default;
 
-$blue:    #eb6864 !default;
+$blue:    #1679AB !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -342,3 +342,90 @@ background: none;
 }
 
 
+.navbar-logo {
+max-height: 60px;
+width: auto;
+padding-right: 10px;
+margin-right: 10px;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+color: $gray-100;
+font-weight: 700;
+}
+
+.navbar-nav{
+  font-size: 18px;
+}
+.navbar .nav-link {
+  // Estilos generales para los enlaces dentro de la navbar, si los hay
+  
+  &:hover {
+    text-decoration: underline;
+    color: #074173; // Color al pasar el ratón por encima
+  }
+
+  &.active {
+    font-weight: normal; 
+    text-decoration: underline;
+    color: #074173; 
+  }
+}
+
+.clase-borrador {
+    /* Tus estilos van aquí. Ejemplo: */
+    background-color: #FFEBB2; /* Hace el fondo de los elementos "Borrador" amarillo */
+    font-weight: bold; /* Hace el texto en negritas */
+    color: black;
+}
+
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+color: #074173;
+font-weight: 700;
+}
+
+
+.columns {
+  display: flex !important; // Usamos flexbox para controlar las columnas
+  flex-wrap: wrap; // Permite que las columnas se envuelvan según el tamaño de la pantalla
+
+  .column {
+    flex: 0 0 50%; // Inicialmente cada columna ocupa el 50% del ancho del contenedor
+    box-sizing: border-box; // Asegura que el padding y border estén incluidos en el ancho definido
+    padding: 10px; // Espacio interior para no pegar el contenido a los bordes
+
+    @media (max-width: 768px) {
+      flex: 0 0 100%; // En pantallas pequeñas, cada columna ocupa el 100%
+    }
+  }
+}
+
+.column img {
+  padding-top: 20%;
+}
+
+ .column h3 {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+@media (max-width: 768px) {
+  .column h2 {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  
+  .column img {
+  padding-top: 0px;
+}
+  .column h3 {
+    margin-top: 5px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+.feature h3 {
+  font-size: 20px;
+  color:#074173;
+} 

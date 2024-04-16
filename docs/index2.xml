@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Aprende Tidyverse</title>
+<link>https://aprendetidyverse.com/index2.html</link>
+<atom:link href="https://aprendetidyverse.com/index2.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.5.28</generator>
+<lastBuildDate>Thu, 08 Feb 2024 06:00:00 GMT</lastBuildDate>
+<item>
+  <title>Actualizando el mapa de cantones de Costa Rica con R</title>
+  <dc:creator>Carlos Aguero</dc:creator>
+  <link>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>A inicios de 2024 en Costa Rica, se realizaron elecciones municipales. Una vez publicados los resultados, tuve la idea de replicar un gráfico sencillo: un mapa con <code>ggplot2</code> de los cantones de Costa Rica, y pintar en colores el partido político que ha ganado en cada una de las regiones. Para ahorrar tiempo hago una búsqueda rápida en google <strong>“shapefile cantones Costa Rica”</strong> al descargar los datos y ejecutar mi código, resulta que me hacen falta cantones. Después de un par de segundos de duda, recordé que en los últimos años se han creado nuevos cantones. Río Cuarto<sup>1</sup> se separa del cantón de Grecia, Monteverde<sup>2</sup> de Puntarenas, y uno para mi muy sonado, ya que está muy cerca de donde vivo, Puerto Jiménez<sup>3</sup> se separa de Golfito y pasa a ser un cantón.</p>
+<p>Si a esto le sumamos que algunos cantones han cambiado de nombre, Alfaro Ruiz ahora es conocido como Zarcero<sup>4</sup>, Valverde Vega se ha transformado en Sarchí<sup>5</sup>, y Aguirre ha pasado a llamarse Quepos<sup>6</sup>. En este punto, algo que creí serían 10 líneas de código, un problema de copiar y pegar, se convertía en algo más interesante. <strong>Así que en esta guia veremos cómo realizar un gráfico actualizado de los cantones de Costa Rica, utilizando como fuente de datos los servicios del <a href="https://www.snitcr.go.cr/ign_ign">Instituto Geográfico Nacional</a>.</strong></p>
+<section id="obtener-datos-actualizados-del-ign" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="obtener-datos-actualizados-del-ign">Obtener datos actualizados del IGN</h2>
+<section id="ante-de-comenzar" class="level3">
+<h3 class="anchored" data-anchor-id="ante-de-comenzar">Ante de comenzar</h3>
+<p>Verifica que tengas instalados los siguientes paquetes:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyverse)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(sf)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(httr2)</span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ows4R)</span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(rmapshaper)</span>
+<span id="cb1-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(janitor)</span></code></pre></div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Si en Windows tienes errores al instalar alguno de los paquetes, quizás falte instalar Rtools. Descárgalo de este <a href="https://cran.r-project.org/bin/windows/Rtools/">enlace</a> y reinicia antes de intentar de nuevo.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="descargar-datos-del-ign" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="descargar-datos-del-ign">Descargar datos del IGN</h3>
+<p>El <a href="https://www.snitcr.go.cr/ign_ign">Instituto Geográfico Nacional</a> es la principal fuente de cartografía en Costa Rica, ofreciendo datos geoespaciales actualizados. Para obtener un shapefile específico para nuestro mapa, recurriremos al servicio WFS en R, enfocándonos en la división cantonal.</p>
+<ul>
+<li><strong>Paso 1:</strong> Acceder al IGN</li>
+</ul>
+<p>Visita la página de <a href="https://www.snitcr.go.cr/ico_servicios_ogc">servicios OGC</a> del IGN. En la sección de nodos locales, selecciona el servicio <strong>IGN Cartografía 1:5mil CO.</strong></p>
+<p><img src="https://aprendetidyverse.com/posts/images/ign_01.png" class="img-fluid" style="width:30.0%"></p>
+<ul>
+<li><strong>Paso 2:</strong> Identificar la URL del Servicio WFS</li>
+</ul>
+<p>A continuación, localizaremos la URL del servicio WFS que utilizaremos, tal como se muestra en la imagen adjunta.</p>
+<p><img src="https://aprendetidyverse.com/posts/images/ign_02.png" class="img-fluid" style="width:80.0%"></p>
+<ul>
+<li><strong>Paso 3:</strong> Identificar las capas disponibles</li>
+</ul>
+<p>Mediante el uso del paquete <code>ows4R</code> en R, consultaremos los identificadores de las capas disponibles. Esto nos permitirá seleccionar y descargar la capa adecuada, ya sea a nivel de provincia, cantón o distrito.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">url_wfs <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://geos.snitcr.go.cr/be/IGN_5_CO/wfs?"</span></span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">bwk_client <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> WFSClient<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">new</span>(</span>
+<span id="cb3-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">url =</span> url_wfs,</span>
+<span id="cb3-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">serviceVersion =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2.0.0"</span></span>
+<span id="cb3-4">)</span>
+<span id="cb3-5"></span>
+<span id="cb3-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as_tibble</span>(bwk_client<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">getFeatureTypes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">pretty =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 2
+  name                         title                                            
+  &lt;chr&gt;                        &lt;chr&gt;                                            
+1 IGN_5_CO:curvas_5000_2017    Curvas de nivel cada 10 metros 1:5.000 año 2017 …
+2 IGN_5_CO:limitedistrital_5k  DTA (Límite Distrital)                           
+3 IGN_5_CO:limitecantonal_5k   Límite Cantonal                                  
+4 IGN_5_CO:limiteprovincial_5k Límite Provincial                                </code></pre>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>El código para usar servicios WFS proviene del post “Spatial WFS Services” por Thierry Onkelinx, Hans Van Calster, y Floris Vanderhaeghe. <a href="https://inbo.github.io/tutorials/tutorials/spatial_wfs_services/">Leer más</a></p>
+<hr>
+<p>Adaptamos funciones para migrar a httr2 desde httr. Consulta <a href="https://httr2.r-lib.org/articles/httr2.html">httr2</a> para detalles.</p>
+</div></div><ul>
+<li><strong>Paso 4:</strong> Descargar los datos</li>
+</ul>
+<p>Para descargar los cantones de Costa Rica, utilizaremos la capa denominada <strong>IGN_5_CO:limitecantonal_5k</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">url <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">url_parse</span>(url_wfs)</span>
+<span id="cb5-2">url<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>query <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb5-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">service =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"wfs"</span>,</span>
+<span id="cb5-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">request =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"GetFeature"</span>,</span>
+<span id="cb5-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">typename =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"IGN_5_CO:limitecantonal_5k"</span>,</span>
+<span id="cb5-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">srsName =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"EPSG:4326"</span></span>
+<span id="cb5-7">  )</span>
+<span id="cb5-8">request <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">url_build</span>(url) </span>
+<span id="cb5-9"></span>
+<span id="cb5-10">regiones <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_sf</span>(request) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb5-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(</span>
+<span id="cb5-12">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"CÓDIGO_DE_PROVINCIA"</span>,</span>
+<span id="cb5-13">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"PROVINCIA"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"CÓDIGO_CANTÓN"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"CANTÓN"</span></span>
+<span id="cb5-14">  )</span>
+<span id="cb5-15"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">st_crs</span>(regiones) <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">st_crs</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4326</span>)</span></code></pre></div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Un agradecimiento a Manuel Eduardo Saavedra Núñez, quien, con un comentario en Facebook, nos hizo ver que el resultado de <code>read_sf(request)</code> contiene nombres de columnas duplicados. Por lo tanto, nos quedaremos desde el inicio solamente con las columnas que nos interesan.</p>
+</div></div><p>Ahora, revisemos lo descargado: encontramos nombres de cantones, sus provincias correspondientes y <code>SHAPE</code>, el polígono que representa a cada cantón en el mapa.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(regiones)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 84
+Columns: 5
+$ CÓDIGO_DE_PROVINCIA &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
+$ PROVINCIA           &lt;chr&gt; "San José", "San José", "San José", "San José", "S…
+$ CÓDIGO_CANTÓN       &lt;int&gt; 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, …
+$ CANTÓN              &lt;chr&gt; "San José", "Escazú", "Desamparados", "Puriscal", …
+$ SHAPE               &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-84.17302 9..., MULTI…</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1">x <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">object.size</span>(regiones)</span>
+<span id="cb8-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(x, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"auto"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>20.3 Mb</code></pre>
+</div>
+</div>
+<p>Al mirar el peso del objeto <code>regiones</code>, notamos que es considerablemente grande. Esto se debe a que, para asegurar una cartografía precisa del país, el IGN emplea una precisión mucho mayor de la necesaria para la mayoría de los mapas que crearemos con ggplot2.</p>
+<p>Para concluir este paso, crearemos un mapa con el paquete ggplot2, usando específicamente la geometría <code>geom_sf()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb10-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> regiones</span>
+<span id="cb10-3">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb10-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#365486"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb10-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://aprendetidyverse.com/posts/001_mapa_cantones_cr_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="3200"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Paso 5:</strong> Simplificar el mapa</li>
+</ul>
+<p>Dado que el mapa está formado por polígonos, podemos simplificar estos polígonos eliminando lados. Esto reduce la precisión, pero a la escala de un mapa común creado con <code>ggplot2</code>, será imperceptible. Sin embargo, lograremos reducir considerablemente el tamaño del objeto, facilitando el trabajo en equipos con recursos limitados.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1">regiones_simplificadas <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ms_simplify</span>(</span>
+<span id="cb11-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">input =</span> regiones,</span>
+<span id="cb11-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">keep =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.05</span>,</span>
+<span id="cb11-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">keep_shapes =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span></span>
+<span id="cb11-5">)</span>
+<span id="cb11-6"></span>
+<span id="cb11-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># eliminar la isla del coco</span></span>
+<span id="cb11-8">regiones_simplificadas <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ms_filter_islands</span>(</span>
+<span id="cb11-9">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">input =</span> regiones_simplificadas,</span>
+<span id="cb11-10">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">min_area =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">24000000</span></span>
+<span id="cb11-11">)</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1">x <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">object.size</span>(regiones_simplificadas)</span>
+<span id="cb12-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(x, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"auto"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1.3 Mb</code></pre>
+</div>
+</div>
+<ul>
+<li><strong>Paso 6:</strong> Guardar los datos localmente</li>
+</ul>
+<p>Con los datos ya listos, procederemos a guardarlos localmente. Aunque es posible usar el formato shapefile o GeoJSON, en este caso optaremos por GeoJSON.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Recomiendo la lectura del post “Limitaciones e inconvenientes del shapefile” <a href="https://www.gisandbeers.com/limitaciones-e-inconvenientes-del-shapefile/">Leer más</a>. ¡Gracias, Roberto, por tu excelente contenido!</p>
+</div></div><div class="cell">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">write_sf</span>(</span>
+<span id="cb14-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">obj =</span> regiones_simplificadas, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dsn =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cantones_cr.geojson"</span>)</span></code></pre></div>
+</div>
+<ul>
+<li><strong>Paso 7:</strong> Leer archivos GeoJSON</li>
+</ul>
+<p>Si después de un tiempo deseamos utilizar nuevamente los datos, podemos leerlos fácilmente con la función <code>st_read()</code> de la librería <code>sf</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1">cantones <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">st_read</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cantones_cr.geojson"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">quiet =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb16-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> cantones</span>
+<span id="cb16-3">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb16-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#365486"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb16-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://aprendetidyverse.com/posts/001_mapa_cantones_cr_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="3200"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="graficar-resultados-de-las-elecciones-municipales-2024" class="level2">
+<h2 class="anchored" data-anchor-id="graficar-resultados-de-las-elecciones-municipales-2024">Graficar resultados de las elecciones municipales 2024</h2>
+<p>Ahora que contamos con el “lienzo” para dibujar nuestros datos, agregaremos al mapa los resultados electorales del pasado 4 de febrero. Lo primero será leer los datos almacenados en formato <code>GeoJSON</code>, seleccionando únicamente las columnas que nos interesan: <code>provincia</code>, <code>canton</code> y <code>geometry</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1">cantones <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">st_read</span>(</span>
+<span id="cb17-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dsn =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cantones_cr.geojson"</span>,</span>
+<span id="cb17-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">quiet =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span></span>
+<span id="cb17-4">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb17-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">clean_names</span>()</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(cantones)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 84
+Columns: 5
+$ codigo_de_provincia &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
+$ canton              &lt;chr&gt; "San José", "Escazú", "Desamparados", "Puriscal", …
+$ provincia           &lt;chr&gt; "San José", "San José", "San José", "San José", "S…
+$ codigo_canton       &lt;int&gt; 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, …
+$ geometry            &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-84.15569 9..., MULTI…</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1">cantones <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> cantones <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb20-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(</span>
+<span id="cb20-3">    provincia, canton</span>
+<span id="cb20-4">  )</span>
+<span id="cb20-5"></span>
+<span id="cb20-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(cantones)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 84
+Columns: 3
+$ provincia &lt;chr&gt; "San José", "San José", "San José", "San José", "San José", …
+$ canton    &lt;chr&gt; "San José", "Escazú", "Desamparados", "Puriscal", "Tarrazú",…
+$ geometry  &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-84.15569 9..., MULTIPOLYGON ((…</code></pre>
+</div>
+</div>
+<p>Ahora vamos a leer los datos de los resultados electorales, enfocándonos en seleccionar solamente el nombre del cantón y el partido ganador en ese cantón. Afortunadamente, en Costa Rica los nombres de provincias y cantones son únicos y pueden servir como identificadores, una ventaja que no se extiende a los distritos.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1">resultados_tse <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_csv</span>(</span>
+<span id="cb22-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">file =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"elecciones_municipales_2024.csv"</span>,</span>
+<span id="cb22-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">show_col_types =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span></span>
+<span id="cb22-4">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb22-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">clean_names</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb22-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(canton, ganador)</span>
+<span id="cb22-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(resultados_tse)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 84
+Columns: 2
+$ canton  &lt;chr&gt; "San José", "Escazú", "Desamparados", "Puriscal", "Tarrazú", "…
+$ ganador &lt;chr&gt; "Juntos San José", "PNG", "PLN", "PLN", "PUSC", "PLN", "PLP", …</code></pre>
+</div>
+</div>
+<p>Realizamos la unión de ambas tablas usando el nombre del cantón como clave y presentamos los resultados con <code>ggplot2</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1">mapa <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">left_join</span>(</span>
+<span id="cb24-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> cantones,</span>
+<span id="cb24-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> resultados_tse,</span>
+<span id="cb24-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">by =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">join_by</span>(canton <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> canton)</span>
+<span id="cb24-5">)</span>
+<span id="cb24-6"></span>
+<span id="cb24-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(mapa)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 84
+Columns: 4
+$ provincia &lt;chr&gt; "San José", "San José", "San José", "San José", "San José", …
+$ canton    &lt;chr&gt; "San José", "Escazú", "Desamparados", "Puriscal", "Tarrazú",…
+$ ganador   &lt;chr&gt; "Juntos San José", "PNG", "PLN", "PLN", "PUSC", "PLN", "PLP"…
+$ geometry  &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-84.15569 9..., MULTIPOLYGON ((…</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb26-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> mapa,</span>
+<span id="cb26-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mapping =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb26-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> ganador</span>
+<span id="cb26-5">  )</span>
+<span id="cb26-6">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb26-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb26-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://aprendetidyverse.com/posts/001_mapa_cantones_cr_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="3200"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Buen intento, pero vemos un par de problemas: demasiadas etiquetas, colores muy similares y ese <code>NA</code>, ¿de dónde salió? Comencemos por ese <code>NA</code>; hagamos un filtro para ver cuál de los cantones tiene como ganador <code>NA</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1">mapa <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb27-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">is.na</span>(ganador))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 1 feature and 3 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -84.15433 ymin: 9.636876 xmax: -83.97105 ymax: 9.75103
+Geodetic CRS:  WGS 84
+  provincia             canton ganador                       geometry
+1  San José León Cortés Castro    &lt;NA&gt; MULTIPOLYGON (((-83.98673 9...</code></pre>
+</div>
+</div>
+<p>Vemos que es el cantón León Cortés Castro; en la gran mayoría de las ocasiones, esto se produce por dos razones: no hay datos para el cantón o en ambas tablas se usan nombres diferentes para el mismo cantón. Ya que estas son elecciones nacionales y participan todos los cantones, descartamos la primera opción, así que vamos a ver cómo aparece el nombre de León Cortés Castro en la tabla de resultados.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1">resultados_tse <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb29-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_detect</span>(canton, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"León"</span>))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  canton      ganador      
+  &lt;chr&gt;       &lt;chr&gt;        
+1 León Cortés Frente Amplio</code></pre>
+</div>
+</div>
+<p>Vemos que en la tabla de resultados se utiliza la forma “León Cortés”, una forma muy común de referirse al lugar pero no su nombre oficial. En este caso, modificaremos el nombre del cantón.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1">resultados_tse <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> resultados_tse <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb31-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb31-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">canton =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">if_else</span>(</span>
+<span id="cb31-4">      canton <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"León Cortés"</span>,</span>
+<span id="cb31-5">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"León Cortés Castro"</span>,</span>
+<span id="cb31-6">      canton</span>
+<span id="cb31-7">    )</span>
+<span id="cb31-8">  )</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1">mapa <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">left_join</span>(</span>
+<span id="cb32-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> cantones,</span>
+<span id="cb32-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> resultados_tse,</span>
+<span id="cb32-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">by =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">join_by</span>(canton <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> canton)</span>
+<span id="cb32-5">)</span></code></pre></div>
+</div>
+<p>Ahora repetimos el gráfico y vemos que ya no tenemos valores ausentes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb33-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> mapa,</span>
+<span id="cb33-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mapping =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb33-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> ganador</span>
+<span id="cb33-5">  )</span>
+<span id="cb33-6">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb33-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb33-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://aprendetidyverse.com/posts/001_mapa_cantones_cr_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="3200"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Para términos del ejemplo, vamos a simplificar la cantidad de partidos políticos agrupando como “Otros” aquellos que no tengan como mínimo 5 alcaldías a nivel nacional.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1">mapa <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> mapa <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb34-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb34-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ganador =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fct_lump_min</span>(ganador, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">min =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>,</span>
+<span id="cb34-4">                           <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">other_level =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Otros"</span>)</span>
+<span id="cb34-5">  )</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggokabeito)</span>
+<span id="cb35-2"></span>
+<span id="cb35-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb35-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> mapa,</span>
+<span id="cb35-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mapping =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb35-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> ganador</span>
+<span id="cb35-7">  )</span>
+<span id="cb35-8">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb35-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb35-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_fill_okabe_ito</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb35-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb35-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb35-13">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bottom"</span></span>
+<span id="cb35-14">  )</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://aprendetidyverse.com/posts/001_mapa_cantones_cr_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="3200"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Listo, fueron muchos más pasos de los que creí inicialmente, pero espero que este ejemplo te pueda servir como referencia para mantener tus mapas actualizados. Resumen rápido:</p>
+<ol type="1">
+<li>Se crean nuevos cantones.</li>
+<li>Los cantones cambian de nombre.</li>
+<li>Es preferible usar fuentes oficiales del estado y no de sitios web de terceros.</li>
+<li>Se debe tener cuidado con las faltas de ortografía o cambios de nombres al unir las tablas.</li>
+</ol>
+</section>
+<section id="obeservaciones-finales" class="level2">
+<h2 class="anchored" data-anchor-id="obeservaciones-finales">Obeservaciones finales</h2>
+<p>Ya terminado este post, me puse a pensar que realmente no tengo ningún criterio formado sobre el tema de los nuevos cantones. ¿Es bueno para la administración del país? Pues no tengo idea. Me dejé a mí mismo de tarea leer más sobre el tema y creo que todos los residentes del país deberíamos tomar un par de minutos para pensarlo.</p>
+<p>Laura Fernández Delgado, ministra de planificación nacional y política económica, en un oficio a los diputados 20 de febrero de 2024, dice:</p>
+<blockquote class="blockquote">
+<p>Las decisiones que tome la Asamblea Legislativa de creación de cantonatos pueden derivar en problemas de coordinación, de articulación y fragmentación del territorio; y adicionalmente, en ausencia de estudios técnicos y económicos pueden repercutir en una afectación a los ciudadanos habitantes de esos territorios <strong>derivada de la incapacidad para la prestación de los servicios públicos municipales por ausencia de sostenibilidad financiera</strong>, entre otros de estos nuevos cantones. <sup>7</sup></p>
+</blockquote>
+<p>Justo el día anterior 19 de febrero del 2024, en primer debate se aprobó el expediente 22643 para la creación del cantón Colorado<sup>8</sup> en Guanacaste y existen 6 proyectos de ley vigentes para crear nuevos cantones.</p>
+<ol type="1">
+<li><p>Expediente 24.062: Creación del Cantón de Cervantes, Cantón IX de la Provincia de Cartago.</p></li>
+<li><p>Expediente 23.406: Creación del Cantón XVII de la Provincia de Alajuela, Peñas Blancas.</p></li>
+<li><p>Expediente 23.403: Creación del Cantón Jicaral, Cantón XIV de la Provincia de Puntarenas.</p></li>
+<li><p>Expediente 23.109: Creación del Cantón Cóbano.</p></li>
+<li><p>Expediente 23.055: Creación del Cantón de Paquera, Cantón XIV de la Provincia de Puntarenas.</p></li>
+<li><p>Expediente 22.874: Creación del Cantón Ojo de Agua, Cantón XVII de la Provincia de Alajuela.</p></li>
+</ol>
+<p>Así que menos mal que ya sabemos cómo tener el mapa actualizado, porque si por la fecha se saca el día, lo vamos a tener que hacer con frecuencia en los próximos años.</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notas</h2>
+
+<ol>
+<li id="fn1"><p>Delfino.cr. (26 de abril de 2018). Expediente 20787: Reforma y Adiciones a la Ley N° 9440, Creación del Cantón XVI Río Cuarto de la Provincia de Alajuela, de 20 de Mayo de 2017. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/20787">Leer más</a>↩︎</p></li>
+<li id="fn2"><p>Delfino.cr. (25 de septiembre de 2019). Expediente 21618: Creación del Cantón de Monteverde, Cantón XII de la Provincia de Puntarenas. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/21618">Leer más</a>↩︎</p></li>
+<li id="fn3"><p>Delfino.cr. (21 de octubre de 2021). Expediente 22749: Creación del Cantón de Puerto Jiménez, Cantón XIII de la Provincia de Puntarenas. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/22749">Leer más</a>↩︎</p></li>
+<li id="fn4"><p>República de Costa Rica. (16 de junio de 2010). Ley N° 8808: Declara oficial para efectos administrativos, la aprobación de la División Territorial Administrativa de la República N° 41548-MGP [Cambio de nombre del cantón de Alfaro Ruiz a Zarcero]. La Gaceta, N° 116. <a href="https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&amp;nValor1=1&amp;nValor2=88416&amp;nValor3=115607&amp;strTipM=TC">Leer más</a>↩︎</p></li>
+<li id="fn5"><p>Delfino.cr. (11 de febrero de 2015). Expediente 19469: Cambio de Denominación del Cantón XII, Valverde Vega, de la Provincia de Alajuela, para que en Adelante se Denomine Sarchí. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/19469">Leer más</a>↩︎</p></li>
+<li id="fn6"><p>Presidencia de la República de Costa Rica. (11 de febrero de 2015). Cambio de nombre del Cantón VI de la provincia de Puntarenas para que en adelante se denomine Quepos. Recuperado de <a href="https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&amp;nValor1=1&amp;nValor2=79730&amp;nValor3=100935&amp;strTipM=TC">Leer más</a>↩︎</p></li>
+<li id="fn7"><p>San José, 20 de febrero del 2024 MIDEPLAN-DM-OF-0277-2024 A: Directorio Legislativo, Jefaturas de Fracción, Asamblea Legislativa de Costa Rica Asunto: Opinión de MIDEPLAN sobre el Primer Debate del Proyecto de Ley N°22.643, “Creación del Cantón Colorado, Cantón Duodécimo de la Provincia de Guanacaste”. Disponible en: <a href="https://d1qqtien6gys07.cloudfront.net/wp-content/uploads/2024/02/MIDEPLAN-DM-OF-0277-2024-Reaccion-del-MIDEPLAN-respecto-a-la-aprobacion-en-Primer-Debate-del-Proyecto-de-Ley-22.643-firmado-sellado.pdf">enlace</a>↩︎</p></li>
+<li id="fn8"><p>Delfino.cr. (19 de febrero de 2024). Expediente 22643: Creación del Cantón Colorado, Cantón Duodécimo de la Provincia de Guanacaste. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/22643">Leer más</a>↩︎</p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div>Este blog publica su contenido bajo la Licencia Creative Commons Atribución-NoComercial (CC BY-NC 4.0). Esta licencia permite a los usuarios copiar, redistribuir, remezclar, transformar y construir a partir  del material, siempre que reconozcan debidamente la autoría y no lo utilicen para fines comerciales.  No es necesario solicitar permisos adicionales para usos que estén permitidos bajo esta licencia, siempre y cuando se cumplan estas condiciones.
+<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/deed.es">(Ver Licencia)</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Derechos de autor</h2><div class="quarto-appendix-contents"><div>Copyright Aprende Tidyverse. 2024. Todos los derechos reservados.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
+  author = {Aguero, Carlos},
+  title = {Actualizando el mapa de cantones de Costa Rica con R},
+  date = {2024-02-08},
+  url = {https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html},
+  langid = {es}
+}
+</code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-aguero2024" class="csl-entry quarto-appendix-citeas">
+Aguero, Carlos. 2024. <span>“Actualizando el mapa de cantones de Costa
+Rica con R.”</span> February 8, 2024. <a href="https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html">https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</a>.
+</div></div></section></div> ]]></description>
+  <category>Guías Paso a Paso</category>
+  <category>ggplot2</category>
+  <guid>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</guid>
+  <pubDate>Thu, 08 Feb 2024 06:00:00 GMT</pubDate>
+  <media:content url="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png" medium="image" type="image/png" height="75" width="144"/>
+</item>
+</channel>
+</rss>

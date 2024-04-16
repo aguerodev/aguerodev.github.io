@@ -1,0 +1,175 @@
+---
+title: "Introducción al desarrollo de aplicaciones con shiny"
+subtitle: "Transforma tus análisis en aplicaciones web interactivas: Desarrolla, despliega y dinamiza con Shiny"
+description: ""
+toc: true
+lang: "es"
+author: ""
+pagetitle: "Apps con shiny"
+image: ../images/app_shiny2.jpg
+---
+
+![Foto de <a href="https://unsplash.com/es/@lukechesser?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Luke Chesser</a> en <a href="https://unsplash.com/es/fotos/graficos-de-analisis-de-rendimiento-en-la-pantalla-de-un-portatil-JKUTrJ4vK00?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  ](../images/app_shiny2.jpg)
+
+## ¿Qué es Shiny? 
+
+Hasta hace poco tiempo, cuando un analista deseaba convertir sus modelos o análisis en una aplicación web, necesitaba colaborar estrechamente con un desarrollador web. Este proceso solía ser largo y tedioso, lleno de constantes intercambios hasta clarificar y concretar las ideas en una aplicación funcional.
+
+[Shiny](https://shiny.posit.co) es una herramienta gratuita y de código abierto que empodera a los analistas para crear aplicaciones web reactivas, elegantes y eficaces utilizando el lenguaje de programación que ya dominan. Con Shiny, puedes pasar rápidamente de tu idea a una aplicación totalmente funcional, aprovechando al máximo los recursos y códigos que ya has desarrollado. Para aprender más sobre Shiny y cómo puede transformar tu análisis en aplicaciones web interactivas, visita su [sitio web oficial](https://shiny.posit.co).
+
+Este curso está diseñado para desarrolladores y entusiastas que deseen aprender a crear aplicaciones web interactivas utilizando Shiny, una poderosa herramienta para R. A lo largo de este curso de 6 semanas, explorarás los fundamentos de la programación reactiva y la integración de mapas y gráficos interactivos, así como el despliegue eficiente de aplicaciones en shinyapps.io. Desarrollarás aplicaciones clave que no solo exhibirán tus habilidades técnicas, sino también tu capacidad para manejar y presentar datos de manera efectiva.
+
+## ¿Qué aprenderás?
+
++ **Fundamentos de Shiny y programación reactiva**: Introducción a los conceptos básicos de Shiny y cómo manejar la interactividad en aplicaciones web.
++ **Integración de mapas y gráficos interactivos:** Aprenderás a visualizar datos de manera dinámica utilizando bibliotecas como Leaflet para mapas y Plotly para gráficos.
++ **Despliegue en shinyapps.io:** Adquirirás habilidades para publicar y gestionar aplicaciones en la plataforma de hospedaje de Shiny, shinyapps.io.
++ **Desarrollo de aplicaciones específicas**:
+    + **App de Encuestas**: Conecta tu aplicación con Google Sheets para recopilar y analizar datos de encuestas.
+    + **Monitor de precios para ferreterías**: Crea una aplicación que monitoriza y compara precios de la competencia en tiempo real.
+    + **Comparador de precios de alquileres**: Desarrolla una aplicación para evaluar y encontrar las mejores opciones de alquiler en el mercado.
++ **Automatización y actualización de datos con GitHub Actions**: Utiliza GitHub Actions para automatizar la extracción, limpieza e integración de datos, manteniendo tus aplicaciones actualizadas.
++ **Gestión de bases de datos SQL con Supabase**: Aprende a integrar y manipular bases de datos en SQL utilizando Supabase, una plataforma de backend como servicio que facilita el manejo de datos en la nube.
+
+## Próxima apertura
+
++ Fecha: **miércoles 3 de julio de 2024**
++ Lecciones: todos los miércoles
++ Costa Rica/México: 6:00 p.m. 
++ Colombia: 7:00 p.m. 
++ Argentina: 9:00 p.m.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+
+
+:::
+
+::: {.column width="45%"}
+## ¿Qué obtendrás?
+
++ 6 clases en vivo de 2 horas cada una.
++ Sesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.
++ Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
++ Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
++ Acceso prioritario a cursos avanzados.
++ **Precio: $99 USD.**
+
+[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::::
+
+---
+
+
+## Conoce al instructor
+
+Mi nombre es [Carlos Agüero B](www.linkedin.com/in/carlos-aguero-cr), desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R. 
+
+He tenido la increíble oportunidad de formarme como [instructor certificado por RStudio](https://education.rstudio.com/trainers/people/aguero+carlos/) para la enseñanza de [Tidyverse](https://www.tidyverse.org/) y [Shiny](https://shiny.posit.co/) y, recientemente, unirme la comunidad de instructores de [The Carpentries](https://carpentries.org/instructors/). En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina. 
+
+### Si tienes dudas conversemos:
+
+Puedes programar una 🎥 videollamada de 15 minutos con el instructor para revisar tus dudas sobre el curso en el siguiente [enlace](https://cal.com/aprendetidyverse/15min).
+
+## Conoce lo que dicen nuestros estudiantes
+
+```{=html}
+<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
+```
+<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=off&amp;hideSource&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
+```
+
+## Contenido del curso 
+
+<details open>
+  <summary>Semana 1: Introducción a Shiny y estructura básica</summary>
++ Introducción a Shiny y su importancia en el análisis de datos.
++ Estructura básica de una aplicación Shiny: ui.R y server.R.
++ Conceptos de reactividad en Shiny.
++ Práctica: Construcción de una aplicación que muestre un texto y un gráfico simple basado en una entrada del usuario.
+</details>
+
+<details>
+  <summary>Semana 2: Layouts, temas y elementos HTML</summary>
++ Diferentes layouts en Shiny: paneles, tabs, y grid layouts.
++ Personalización con CSS y temas predefinidos.
++ Uso de elementos HTML y etiquetas en aplicaciones Shiny.
++ Práctica: Diseñar una aplicación con múltiples pestañas y un tema personalizado.
+</details>
+
+<details>
+  <summary>Semana 3: Visualización de datos avanzada</summary>
++ Introducción a plotly para gráficos interactivos.
++ Uso de leaflet para mapas interactivos.
++ Práctica: Desarrollar una aplicación que muestre el precio de alquileres en Costa Rica con filtros dinámicos y mapas interactivos.
+</details>
+
+<details>
+  <summary>Semana 4: Manipulación de datos y UI dinámico</summary>
++ Carga y manipulación de datos desde archivos Excel y CSV.
++ Creación de componentes UI dinámicos.
++ Introducción al bookmarking en Shiny para guardar estados de la aplicación.
++ Práctica: Crear una aplicación para cargar datos, analizarlos y visualizar resultados de manera dinámica.
+</details>
+
+<details>
+  <summary>Semana 5: Módulos y bases de datos</summary>
++ Diseño y uso de módulos en Shiny para reutilizar código.
++ Conexión con bases de datos en la nube, ejemplificando con Supabase.
++ Práctica: Desarrollar una aplicación que use módulos y se conecte a una base de datos en la nube para realizar operaciones CRUD (crear, leer, actualizar, borrar).
+</details>
+
+<details>
+  <summary>Semana 6: Proyecto final y despliegue</summary>
++ Revisión de conceptos clave y mejores prácticas en Shiny.
++ Despliegue de aplicaciones Shiny usando shinyapps.io.
++ Práctica: Crear y desplegar un proyecto final que compare precios de productos entre diferentes supermercados.
+</details>
+
+
+Este programa proporcionará una base sólida en el desarrollo de aplicaciones web interactivas con R y Shiny, enfocándose en casos prácticos y aplicables en el mundo real.
+
+:::: {.columns}
+
+
+::: {.column width="45%"}
+## Inscribirte ahora
+
++ 6 clases en vivo de 2 horas cada una.
++ Sesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.
++ Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
++ Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
++ Acceso prioritario a cursos avanzados.
++ **Precio: $99 USD.**
+
+[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+
+
+:::
+::::
+
+## Ponte en contacto
+
+La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
+
+
+Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr) o en [Twitter](https://twitter.com/dev_aguero) (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!
+

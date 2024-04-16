@@ -1,0 +1,152 @@
+---
+title: "Curso Avanzado de Web Scraping y Automatización con R"
+description: "LLeve sus análisis a un nuevo nivel dominando técnicas de Web Scraping y Automatización con R."
+toc: true
+lang: "es"
+author: ""
+pagetitle: "Curso: R para ciencia de datos"
+image: ../images/web_scraping.jpg
+license: ""
+---
+
+![Foto de <a href="https://unsplash.com/es/@sigmund?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sigmund</a> en <a href="https://unsplash.com/es/fotos/monitor-de-computadora-de-pantalla-plana-negro-uo8Jfqdzs18?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/web_scraping.jpg)
+
+Este curso está diseñado para profesionales y entusiastas del análisis de datos que buscan alcanzar la maestría en técnicas avanzadas de extracción de datos de sitios web y APIs. A lo largo de este programa, profundizarás en tecnologías web como HTML, CSS y XPath, aprendiendo a manejar y manipular estructuras de datos complejas para una extracción efectiva y precisa de información.
+
+## ¿Qué aprenderás?
+
++ **Extracción de datos con rvest**: Domina el scraping estático de páginas web.
++ **Interacción con sitios dinámicos mediante RSelenium**: Aprende a simular interacciones del usuario real para recuperar datos dinámicos.
++ **Manejo avanzado de APIs con httr2**: Comprende y utiliza métodos de API como GET, POST, PUT y DELETE para integrar y enviar datos.
++ **Integración de IA con ChatGPT**: Utiliza inteligencia artificial para optimizar la limpieza y análisis de datos.
++ **Programación funcional con purrr:** Eleva la calidad de tu código haciéndolo más limpio, modular y reutilizable.
++ **Automatización de ETL con GitHub Actions y DuckDB**: Configura un proceso automatizado que monitorea, extrae y almacena información en una base de datos SQL.
+
+## Próxima apertura
+
++ Fecha: **martes 23 de julio de 2024**</mark>
++ Lecciones: todos los martes
++ Costa Rica/México: 6:00 p.m. 
++ Colombia: 7:00 p.m. 
++ Argentina: 9:00 p.m.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+
+
+:::
+
+::: {.column width="45%"}
+## ¿Qué obtendrás?
+
++ 6 clases en vivo de 2 horas cada una.
++ Sesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.
++ Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
++ Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
++ Acceso prioritario a cursos avanzados.
++ **Precio: $99 USD.**
+
+[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::::
+
+---
+
+
+## Conoce al instructor
+
+Mi nombre es [Carlos Agüero B](www.linkedin.com/in/carlos-aguero-cr), desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R. 
+
+He tenido la increíble oportunidad de formarme como [instructor certificado por RStudio](https://education.rstudio.com/trainers/people/aguero+carlos/) para la enseñanza de [Tidyverse](https://www.tidyverse.org/) y [Shiny](https://shiny.posit.co/) y, recientemente, unirme la comunidad de instructores de [The Carpentries](https://carpentries.org/instructors/). En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina. 
+
+## Conoce lo que dicen nuestros estudiantes
+
+```{=html}
+<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
+```
+<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=off&amp;hideSource&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
+```
+
+## Contenido del curso 
+
+
+<details open>
+  <summary>Semana 1: Fundamentos de Web Scraping</summary>
++ Introducción a Web Scraping: Comprender los fundamentos y la ética del web scraping.
++ Tecnologías Web Básicas: Repaso a `HTML` y `CSS` para identificar elementos en una página web.
++ `XPath` y Selección de Datos: Aprender a usar `XPath` para seleccionar nodos específicos dentro de documentos XML/HTML.
+</details>
+
+<details>
+  <summary>Semana 2: Interacción con Sitios Web Dinámicos</summary>
++ Introducción a `RSelenium`: Configuración y uso de Selenium para simular interacciones del usuario.
++ Scraping de Sitios Dinámicos: Técnicas para extraer datos de sitios que cargan contenido de manera dinámica.
+</details>
+    
+<details>
+  <summary>Semana 3: Utilización de APIs</summary>
++ Conceptos de API: Qué son las APIs, cómo funcionan, y su relevancia en el mundo moderno de la programación.
++ Uso de `httr2` para APIs: Realizar peticiones GET, POST, y más.
++ Autenticación y Seguridad: Manejo seguro de claves API y sesiones.
+</details>
+
+
+<details>
+  <summary>Semana 4: Automatización y Monitoreo de Datos</summary>
++ Introducción a `GitHub Actions`: Automatizar scraping y otros scripts de R.
++ Proyecto de ETL con `DuckDB`: Diseño de un proceso ETL para recopilar, transformar y cargar datos.
+</details>
+    
+<details>
+  <summary>Semana 5: Avanzado en Manipulación y Análisis de Datos</summary>
+    + Programación Funcional con `purrr`: Mejorar el código mediante funciones avanzadas en R.
+    + Integración de `ChatGPT` para Análisis de Datos: Uso de IA para limpieza y análisis avanzados.
+</details>
+
+<details>
+  <summary>Semana 6: Proyecto Final y Gestión de Proyectos</summary>
++ Implementación de Proyecto Completo: Aplicar todo lo aprendido en un proyecto integrador.
+</details>
+    
+:::: {.columns}
+
+
+::: {.column width="45%"}
+## Inscribirte ahora
+
++ 6 clases en vivo de 2 horas cada una.
++ Sesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.
++ Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
++ Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
++ Acceso prioritario a cursos avanzados.
++ **Precio: $99 USD.**
+
+[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+
+
+:::
+::::
+
+## Ponte en contacto
+
+La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
+
+
+Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr) o en [Twitter](https://twitter.com/dev_aguero) (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!
+

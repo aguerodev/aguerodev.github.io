@@ -1,47 +1,130 @@
 ---
 lang: "es"
-toc: true
+toc: false
 comments: false
+page-layout: custom
+section-divs: false
 author: ""
-listing:
-  contents: [posts]
-  sort: "date desc"
-  fields: [date, title, image, description, categories]
-  feed: true
-  filter-ui: false
-  sort-ui: false
-  date-format: YYYY-MM-DD
 pagetitle: Aprende Tidyverse
+css: index.css
+license: ""
+copyright: ""
 ---
 
-![](images/logo.png){style="width: 600px; height: 150px; object-fit: cover;"}
+::: hero-banner
+::: content-block
+::: hero-text
+# Curso: R para ciencia de datos
+
+### Tu puerta de entrada al mundo de la ciencia de datos
+
+-   Importa y manipula datos con herramientas como [readr](https://readr.tidyverse.org), [dplyr](https://dplyr.tidyverse.org) y [tidyr](https://tidyr.tidyverse.org).
+-   Maneja textos, fechas y factores usando los paquetes como [lubridate](https://lubridate.tidyverse.org), [stringr](https://stringr.tidyverse.org) y [forcats](https://forcats.tidyverse.org).
+-   Visualiza resultados con [ggplot2](https://ggplot2.tidyverse.org) y [plotly](https://plotly.com).
+-   Crea documentos y mapas interactivos usando [rmarkdown](https://rmarkdown.rstudio.com), [quarto](https://quarto.org), [sf](https://r-spatial.github.io/sf/) y [leaflet](https://rstudio.github.io/leaflet/).
+-   Extrae datos los sitios web con técnicas de web scraping usando [rvest](https://rvest.tidyverse.org) y [selenium](https://docs.ropensci.org/RSelenium/).
+-   Gestiona proyectos y organiza tu código con [renv](https://rstudio.github.io/renv/articles/renv.html) y [GitHub](https://github.com).
+
+### Explora, analiza y comparte. Tienes historias que contar haz de R tu herramienta para hacerlo.
+
+::: hero-buttons
+[Inscribirte Hoy](https://tally.so/r/m67aKo){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"} [Leer Más](courses/r4ds.qmd){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
+:::
+:::
+
+
+::: hero-animation
+![](images/rstudio-desktop-screen.png)
+:::
+:::
+:::
 
 
 
 
-Aprende Tidyverse es una iniciativa que busca contribuir a la comunidad hispanohablante de usuarios de R, ofreciendo de forma gratuita cursos, tutoriales, guías paso a paso y todo lo que se nos ocurra por el camino. ¿Lo mejor? Aprendemos juntos y, ¿por qué no?, nos divertimos en el proceso.
+::: content-block
+## ¿Ya Dominas R? Da el siguiente paso con cursos especializados
 
-## Curso R para ciencia de datos
+::: features
+::: feature
+### ggplot2 avanzado: lleva tus visualizaciones al siguiente nivel
 
-Puedes inscribirte por un precio <mark>**desde los $0 USD hasta los $120 USD**.</mark> Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.
+¿Dominas ggplot2? Lleva tus gráficos al siguiente nivel con técnicas avanzadas de visualización de datos. ¡Explora más!
 
-+ **Próxima apertura:** <mark>**jueves 23 de mayo del 2024**</mark>
-    + Lecciones: jueves y sábados
-    + Costa Rica/México: 6:00 p.m. 
-    + Colombia: 7:00 p.m. 
-    + Argentina: 9:00 p.m.
-    
-*Descuentos de hasta el 75% para estudiantes y académicos. Si tu situación económica o restricciones de tu país no te permiten hacer un pago en línea por el curso, siéntete en total libertad de llevarlo <mark>**totalmente gratis.**</mark>*
+-   **Precio**: \$99 USD
+-   **Duración**: 6 semanas
+-   **Horario**: martes 6:00 p.m (UTC-6)
+-   **Próxima Apertura**: martes 4 de junio de 2024
 
-[Ver los detalles del curso](/courses/index.html){.btn .btn-outline-primary role="button"} 
+::: learn-more
+[Leer más »](courses/avz_ggplot2.qmd)
+:::
+:::
 
-## Ponte en contacto
+::: feature
+### Curso Avanzado de Web Scraping y Automatización con R
 
-La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
+Domina el web scraping con R y accede a un mundo de datos que estás desaprovechando.
 
+-   **Precio**: \$99 USD
+-   **Duración**: 6 semanas
+-   **Horario**: martes 6:00 p.m (UTC-6)
+-   **Próxima Apertura**: martes 23 de julio de 2024
 
-Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr) o en [Twitter](https://twitter.com/dev_aguero) (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!
+::: learn-more
+[Leer más »](courses/web_scraping.qmd)
+:::
+:::
 
----
+::: feature
+### Introducción al desarrollo de aplicaciones con shiny
 
-## Post Recientes
+Desarrolla aplicaciones web reactivas y dashboards profesionales usando el lenguaje que ya conoces: R.
+
+-   **Precio**: \$99 USD
+-   **Duración**: 6 semanas
+-   **Horario**: miércoles 6:00 p.m (UTC-6)
+-   **Próxima Apertura**: miércoles 3 de julio de 2024
+
+::: learn-more
+[Leer más »](/courses/intro_shiny.qmd)
+:::
+:::
+:::
+:::
+
+::: content-block
+## Conoce lo que dicen nuestros estudiantes
+
+```{=html}
+<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
+```
+<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=off&amp;hideSource&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
+```
+::: learn-more
+## [Mira más comentarios en nuestro perfil de linkedin »](https://www.linkedin.com/in/carlos-aguero-cr/details/recommendations)
+:::
+:::
+
+::: email
+::: columns
+::: {.column width="50%"}
+## Suscríbete con tu correo electrónico para recibir información sobre nuestros tutoriales y talleres gratuitos, así como detalles sobre las próximas aperturas de nuestros cursos.
+:::
+
+::: {.column width="50%"}
+<iframe data-tally-src="https://tally.so/embed/wd67kV?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="177" frameborder="0" marginheight="0" marginwidth="0" title="Recibe más información">
+
+</iframe>
+
+```{=html}
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+```
+:::
+:::
+:::

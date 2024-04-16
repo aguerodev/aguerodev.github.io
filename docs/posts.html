@@ -45,6 +45,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -177,8 +179,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Aprende Tidyverse</span>
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/logo.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Buscar"></div>
@@ -188,12 +190,52 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./courses/index.html"> 
-<span class="menu-text">Cursos R Intensivo</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Inicio</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cursos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Cursos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cursos">    
+        <li class="dropdown-header">Cursos de R</li>
+        <li>
+    <a class="dropdown-item" href="./courses/r4ds.html"><i class="bi bi-graph-up-arrow" role="img">
+</i> 
+ <span class="dropdown-text">R para ciencia de datos (novato)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/intro_shiny.html"><i class="bi bi-window-split" role="img">
+</i> 
+ <span class="dropdown-text">Desarrollo de aplicaciones con shiny (intermedio)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/web_scraping.html"><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">Web Scraping con R (avanzado)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/avz_ggplot2.html"><i class="bi bi-palette" role="img">
+</i> 
+ <span class="dropdown-text">ggplot2 Avanzado</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Programas especiales</li>
+        <li>
+    <a class="dropdown-item" href="./courses/r4ds.html"><i class="bi bi-book" role="img">
+</i> 
+ <span class="dropdown-text">R para la investigación en ciencias sociales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/r4ds.html"><i class="bi bi-hospital" role="img">
+</i> 
+ <span class="dropdown-text">R para la investigación en ciencias medicas</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./lunes_pr.html"> 
-<span class="menu-text">Lunes de Consultas</span></a>
+<span class="menu-text">Sesiones de Consultas</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./posts.html" aria-current="page"> 
@@ -232,9 +274,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="images/logo2.png" class="img-fluid" style="width: 600px; height: 150px; object-fit: cover;"></p>
-</div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">En esta página</h2>
    
@@ -243,7 +283,7 @@ window.Quarto = {
   <li><a href="#post-recientes" id="toc-post-recientes" class="nav-link" data-scroll-target="#post-recientes">Post Recientes</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todas <span class="quarto-category-count">(4)</span></div><div class="category" data-category="#30DayChartChallenge">#30DayChartChallenge <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Borrador">Borrador <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Guías Paso a Paso">Guías Paso a Paso <span class="quarto-category-count">(4)</span></div><div class="category" data-category="ggplot2">ggplot2 <span class="quarto-category-count">(4)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todas <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Guías Paso a Paso">Guías Paso a Paso <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ggplot2">ggplot2 <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -263,127 +303,14 @@ window.Quarto = {
 </section>
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filtro">
+    </div>
+</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Borrador,Guías Paso a Paso,ggplot2,#30DayChartChallenge" data-listing-date-sort="1711951200000" data-listing-file-modified-sort="1712779830157" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="743">
-<div class="thumbnail">
-<p><a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external"></a></p><a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external">
-<p><img src="./posts/images/portada_d1.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external">30 days chart challenge 1/30</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Borrador'); return false;">
-Borrador
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
-Guías Paso a Paso
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('#30DayChartChallenge'); return false;">
-#30DayChartChallenge
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external">Hola a todos!! una pequeña advertencia: este documento aún está en construcción. Puedes intentar utilizarlo, pero ten en cuenta que algunas cosas aún podrían no funcionar…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/003_30_days_chart_challenge_d1.html" class="no-external">
-<div class="listing-date">
-2024-04-01
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Borrador,Guías Paso a Paso,ggplot2,#30DayChartChallenge" data-listing-date-sort="1711951200000" data-listing-file-modified-sort="1712779756467" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="495">
-<div class="thumbnail">
-<p><a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external"></a></p><a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external">
-<p><img src="./posts/images/portada_d2.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external">30 days chart challenge 2/30</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Borrador'); return false;">
-Borrador
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
-Guías Paso a Paso
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('#30DayChartChallenge'); return false;">
-#30DayChartChallenge
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1">colores <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb1-2">  <span class="at">amarillo =</span> <span class="st">"#FFCC70"</span>,</span>
-<span id="cb1-3">  <span class="at">gris =</span> <span class="st">"#E3E1D9"</span></span>
-<span id="cb1-4">)</span></code></pre></div>
-</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/004_30_days_chart_challenge_d2.html" class="no-external">
-<div class="listing-date">
-2024-04-01
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Borrador,Guías Paso a Paso,ggplot2" data-listing-date-sort="1711778400000" data-listing-file-modified-sort="1712779769921" data-listing-date-modified-sort="1711951200000" data-listing-reading-time-sort="24" data-listing-word-count-sort="4647">
-<div class="thumbnail">
-<p><a href="./posts/002_custom_legend_ggplot2.html" class="no-external"></a></p><a href="./posts/002_custom_legend_ggplot2.html" class="no-external">
-<p><img src="./posts/images/legend_example.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/002_custom_legend_ggplot2.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_custom_legend_ggplot2.html" class="no-external">Creando leyendas personalizadas en ggplot2</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/002_custom_legend_ggplot2.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Borrador'); return false;">
-Borrador
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
-Guías Paso a Paso
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/002_custom_legend_ggplot2.html" class="no-external">Hola a todos!! una pequeña advertencia: este documento aún está en construcción. Puedes intentar utilizarlo, pero ten en cuenta que algunas cosas aún podrían no funcionar…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/002_custom_legend_ggplot2.html" class="no-external">
-<div class="listing-date">
-2024-03-30
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Guías Paso a Paso,ggplot2" data-listing-date-sort="1707372000000" data-listing-file-modified-sort="1711861544844" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2034">
+<div class="quarto-post image-right" data-index="0" data-categories="Guías Paso a Paso,ggplot2" data-listing-date-sort="1707372000000" data-listing-file-modified-sort="1712972349263" data-listing-date-modified-sort="1712901600000" data-listing-reading-time-sort="10" data-listing-word-count-sort="1993">
 <div class="thumbnail">
 <p><a href="./posts/001_mapa_cantones_cr.html" class="no-external"></a></p><a href="./posts/001_mapa_cantones_cr.html" class="no-external">
 <p><img src="./posts/images/mapa_cr_ggplot2.png" class="thumbnail-image"></p>
@@ -420,8 +347,7 @@ ggplot2
 <div class="listing-no-matching d-none">
 No hay resultados
 </div>
-</div><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div>Este blog libera su contenido bajo la Licencia Creative Commons CC0, permitiendo a los usuarios copiar, modificar, distribuir y utilizar  todo el trabajo, ya sea para propósitos comerciales o no, sin necesidad de pedir permiso o proporcionar atribución al autor.
-<a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/deed.es">(Ver Licencia)</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Derechos de autor</h2><div class="quarto-appendix-contents"><div>Copyright Aprende Tidyverse. 2024. Todos los derechos reservados.</div></div></section></div></main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -846,14 +772,35 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p>Contenido <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2024 por Aprende Tidyverse<br> Todo el contenido está licenciado bajo una Licencia Internacional Creative Commons Atribución-NoComercial 4.0 (<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es">CC BY-NC 4.0</a>).</p>
+</div>   
     <div class="nav-footer-center">
-
-<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./terminos.html">
+<p>Términos y Condiciones</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./docs/faq/index.qmd">
+<p>FAQ</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./license.qmd">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./trademark.qmd">
+<p>Trademark</p>
+</a>
+  </li>  
+</ul>
+    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+<p>Hecho con <i class="fa-solid fa-heart" aria-label="heart"></i> desde Costa Rica usando <i class="fa-brands fa-r-project" aria-label="r-project"></i> y <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/aguerodev/aguerodev.github.io">Revisa el código fuente en <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></p>
+</div>
   </div>
 </footer>
 

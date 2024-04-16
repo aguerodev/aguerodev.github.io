@@ -1,0 +1,42 @@
+---
+lang: "es"
+toc: true
+comments: false
+author: ""
+listing:
+  contents: [posts]
+  sort: "date desc"
+  fields: [date, title, image, description, categories]
+  feed: true
+  filter-ui: false
+  sort-ui: false
+  date-format: YYYY-MM-DD
+pagetitle: Aprende Tidyverse
+---
+
+Aprende Tidyverse es una iniciativa que busca contribuir a la comunidad hispanohablante de usuarios de R, ofreciendo de forma gratuita cursos, tutoriales, guías paso a paso y todo lo que se nos ocurra por el camino. ¿Lo mejor? Aprendemos juntos y, ¿por qué no?, nos divertimos en el proceso.
+
+## Curso R para ciencia de datos
+
+Puedes inscribirte por un precio <mark>**desde los $0 USD hasta los $120 USD**.</mark> Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.
+
++ **Próxima apertura:** <mark>**jueves 23 de mayo del 2024**</mark>
+    + Lecciones: jueves y sábados
+    + Costa Rica/México: 6:00 p.m. 
+    + Colombia: 7:00 p.m. 
+    + Argentina: 9:00 p.m.
+    
+*Descuentos de hasta el 75% para estudiantes y académicos. Si tu situación económica o restricciones de tu país no te permiten hacer un pago en línea por el curso, siéntete en total libertad de llevarlo <mark>**totalmente gratis.**</mark>*
+
+[Ver los detalles del curso](/courses/index.html){.btn .btn-outline-primary role="button"} 
+
+## Ponte en contacto
+
+La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
+
+
+Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr) o en [Twitter](https://twitter.com/dev_aguero) (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!
+
+---
+
+## Post Recientes

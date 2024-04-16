@@ -1,25 +1,44 @@
 ---
-title: "¿Estás lidiando con problemas en R?"
-subtitle: "Unete a nuestros lunes de preguntas y respuesta"
-description: "Resuelve tus dudas de R cada lunes a las 7:00 p.m. ¡Únete a nuestras sesiones de preguntas y respuestas para recibir asesoría personalizada y consejos prácticos que te ayudarán a avanzar en tu aprendizaje de R!"
+title: "¿Problemas con R? ¡Estamos aquí para ayudarte!"
+subtitle: "¡Únete a nuestros domingos de preguntas y respuestas!"
+description: "Cada domingo a las 6:00 p.m. hora de Costa Rica (UTC-6), te invitamos a resolver tus dudas sobre R en nuestras sesiones interactivas. Obtén asesoría personalizada y consejos prácticos que te ayudarán a avanzar en tu aprendizaje del lenguaje de programación R."
 lang: "es"
-toc: true
+toc: false
 comments: false
 author: ""
 date: ""
-pagetitle: Aprende Tidyverse - lunes de preguntas y respuestas
+pagetitle: Aprende Tidyverse - domingos de preguntas y respuestas
 image: images/the_stonebreakers.jpg
+license: ""
 ---
 
-!["Los Forjadores" de Gustave Courbet, 1853.](images/the_stonebreakers.jpg)
+![Imagen de "Los picapedreros" por Gustave Courbet, 1849. Imagen almacenada por la  [Fundación Wikimedia](https://es.m.wikipedia.org/wiki/Archivo:Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg)](images/the_stonebreakers.jpg)
 
-¿Estás lidiando con problemas en R o simplemente tienes dudas que no puedes resolver? ¡Estoy aquí para ayudarte! Todos los lunes a las 7:00 p.m., dedicaré una hora completa para contestar preguntas y brindar asistencia con cualquier desafío que estés enfrentando en R. Esta es tu oportunidad de obtener ayuda personalizada y consejos prácticos para superar esos obstáculos que te impiden avanzar.
+## ¿Cómo participar?
 
-## Detalles del Evento:
-
-+ **¿Cuándo?** Todos los lunes, de 7:00 p.m. a 8:00 p.m. hora de Costa Rica (UTC-6)
-+ **¿Dónde?** Las sesiones se realizan en la plataforma Zoom.
++ ¿Cuándo? Todos los domingos, de 6:00 p.m. a 7:00 p.m. (hora de Costa Rica UTC-6)
++ ¿Dónde? Sesiones en vivo a través de Zoom.
 
 
 [Regístrate gratis](https://cal.com/aprendetidyverse/lunes-preguntas-y-respuestas?month=2024-04){.btn .btn-outline-primary .btn role="button"} 
+
+
+## Normas de conducta
+
++ **Respeto**: No serán permitidos comportamientos que excluyan o intimiden a otros. Prohibidos los comentarios ofensivos, la intimidación, las amenazas y el uso de imágenes violentas o sexuales.
+
++ **Participación activa**: Anímate a participar, hacer preguntas y contribuir al diálogo. Las preguntas que parecen simples para uno pueden ser una gran duda para otro.
+
++ **Silencio durante la sesión**: Mantén tu micrófono silenciado a menos que estés hablando.
+
++ **Privacidad**: No se grabarán las sesiones para proteger la privacidad de todos los participantes.
+
++ **Puntualidad**: Sé puntual para respetar el tiempo de todos.
+
++ **No bots 🤖**: Las sesiones son exclusivamente para humanos.
+
+
+---
+
+**Privacidad y Protección de Datos:** La información personal, como nombres y correos electrónicos de los participantes recolectados en el formulario de inscripción a este evento, no será utilizada con ningún otro fin distinto de comunicaciones relacionadas con su participación en el evento antes, durante o después del mismo. Nos comprometemos a respetar la privacidad de cada participante y a manejar sus datos personales en conformidad con la [Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales (Ley Nº 8968)](https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=70975&nValor3=85989&strTipM=TC) de la República de Costa Rica.
 

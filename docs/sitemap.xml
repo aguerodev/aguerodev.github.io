@@ -1,35 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aprendetidyverse.com/posts/002_custom_legend_ggplot2.html</loc>
-    <lastmod>2024-04-10T20:09:29.921Z</lastmod>
+    <loc>https://aprendetidyverse.com/index.html</loc>
+    <lastmod>2024-04-15T19:46:55.721Z</lastmod>
   </url>
   <url>
-    <loc>https://aprendetidyverse.com/posts/003_30_days_chart_challenge_d1.html</loc>
-    <lastmod>2024-04-10T20:10:30.157Z</lastmod>
+    <loc>https://aprendetidyverse.com/courses/r4ds.html</loc>
+    <lastmod>2024-04-16T01:34:05.829Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aprendetidyverse.com/courses/avz_ggplot2.html</loc>
+    <lastmod>2024-04-15T19:45:49.877Z</lastmod>
   </url>
   <url>
     <loc>https://aprendetidyverse.com/posts.html</loc>
-    <lastmod>2024-03-30T04:07:41.444Z</lastmod>
+    <lastmod>2024-04-13T00:39:53.669Z</lastmod>
   </url>
   <url>
-    <loc>https://aprendetidyverse.com/index.html</loc>
-    <lastmod>2024-04-10T19:36:57.233Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/courses/index.html</loc>
-    <lastmod>2024-04-10T19:36:37.686Z</lastmod>
+    <loc>https://aprendetidyverse.com/index2.html</loc>
+    <lastmod>2024-04-11T05:30:10.282Z</lastmod>
   </url>
   <url>
     <loc>https://aprendetidyverse.com/lunes_pr.html</loc>
-    <lastmod>2024-04-01T02:29:26.167Z</lastmod>
+    <lastmod>2024-04-14T22:32:20.533Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aprendetidyverse.com/terminos.html</loc>
+    <lastmod>2024-04-15T23:34:06.346Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aprendetidyverse.com/courses/intro_shiny.html</loc>
+    <lastmod>2024-04-15T20:15:28.564Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aprendetidyverse.com/courses/web_scraping.html</loc>
+    <lastmod>2024-04-15T19:47:45.583Z</lastmod>
   </url>
   <url>
     <loc>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</loc>
-    <lastmod>2024-03-31T05:05:44.844Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aprendetidyverse.com/posts/004_30_days_chart_challenge_d2.html</loc>
-    <lastmod>2024-04-10T20:09:16.467Z</lastmod>
+    <lastmod>2024-04-13T01:39:09.263Z</lastmod>
   </url>
 </urlset>

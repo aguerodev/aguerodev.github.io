@@ -1,6 +1,6 @@
 ---
 title: "30 days chart challenge 1/30"
-description: ""
+description: " "
 author: "<a href = 'www.linkedin.com/in/carlos-aguero-cr' style = 'text-decoration: underline;'>Carlos Aguero B.</a>"
 date: 2024-04-01
 date-modified: "`r Sys.Date()`"

@@ -1,0 +1,162 @@
+---
+title: "Curso: ggplot2 avanzado"
+subtitle: "lleva tus visualizaciones al siguiente nivel"
+description: ""
+toc: true
+lang: "es"
+author: ""
+pagetitle: "ggplot2 avanzado"
+image: ../images/ggplot2.jpg
+---
+
+![Foto de <a href="https://unsplash.com/es/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> en <a href="https://unsplash.com/es/fotos/texto-XrIfY_4cK1w?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/ggplot2.jpg)
+
+Todos comenzamos con ggplot2 creando gráficos básicos, pero llega un punto donde deseamos más. ¿Cómo lograr que nuestras visualizaciones luzcan tan profesionales como las de The Economist o The New York Times? ¿Cómo adaptarlas al estilo de nuestra empresa? Este curso te lleva al siguiente nivel con ggplot2. Aprende su funcionamiento a fondo y practica replicando gráficos de grandes medios como The Washington Post, entre otros. ¡Prepárate para crear visualizaciones impactantes y con estilo propio!
+
+## En este curso, aprenderás a:
+
++ **Personalizar gráficos con themes y anotaciones**: Crea estilos únicos, resalta información clave y haz que tus gráficos sean fáciles de leer.
++ **Controlar escalas y guías**: Ajusta la apariencia de ejes y leyendas para una comunicación efectiva de la información.
++ **Explorar sistemas de coordenadas y facetado**: Crea visualizaciones especializadas y compara subconjuntos de datos con facilidad.
++ **Automatizar tareas con programación funcional**: Optimiza tu flujo de trabajo y crea gráficos de forma eficiente.
++ **Replicar gráficos de medios de renombre**: Aprende de los mejores y aplica técnicas avanzadas para visualizaciones impactantes.
+
+
+## Próxima apertura
+
++ Duración: 6 semanas
++ Fecha de inicio: **martes 4 de junio de 2024**</mark>
++ Lecciones: todos los martes
++ Costa Rica/México: 6:00 p.m. 
++ Colombia: 7:00 p.m. 
++ Argentina: 9:00 p.m.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+
+
+:::
+
+::: {.column width="45%"}
+## ¿Qué obtendrás?
+
++ 6 clases en vivo de 2 horas cada una.
++ Sesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.
++ Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
++ Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
++ Acceso prioritario a cursos avanzados.
++ **Precio: $99 USD.**
+
+[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::::
+
+---
+
+
+## Conoce al instructor
+
+Mi nombre es [Carlos Agüero B](www.linkedin.com/in/carlos-aguero-cr), desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R. 
+
+He tenido la increíble oportunidad de formarme como [instructor certificado por RStudio](https://education.rstudio.com/trainers/people/aguero+carlos/) para la enseñanza de [Tidyverse](https://www.tidyverse.org/) y [Shiny](https://shiny.posit.co/) y, recientemente, unirme la comunidad de instructores de [The Carpentries](https://carpentries.org/instructors/). En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina. 
+
+
+## Conoce lo que dicen nuestros estudiantes
+
+```{=html}
+<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
+```
+<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=off&amp;hideSource&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
+```
+
+## Contenido del curso 
+
+<details open>
+  <summary>Semana 1: Refresca tus conocimientos</summary>
++ Recordaremos los fundamentos de ggplot2: cómo construir un gráfico a partir de datos, estética, objetos geométricos (puntos, líneas, barras), transformaciones estadísticas, escalas, sistemas de coordenadas, facetado y temas.
++ Practicaremos con diferentes tipos de gráficos, desde los básicos como scatterplots y histogramas, hasta mapas y gráficos más complejos.
++ Aprenderás a personalizar tus gráficos con themes y etiquetas con labs() para un aspecto más pulido.
+</details>
+
+
+<details>
+  <summary>Semana 2: Personaliza tu estilo</summary>
++ Descubrirás el poder del sistema de themes de ggplot2, controlando cada detalle visual, desde el fondo hasta las fuentes y los colores.
+Aprenderás a crear tus propios themes para un estilo consistente en tus visualizaciones o para adaptarte a las guías de estilo de publicaciones.
++ Agregarás anotaciones como texto, etiquetas, rectángulos y líneas para resaltar información importante y hacer tus gráficos más fáciles de leer.
++ Dominarás el "direct labelling" para etiquetar directamente puntos o grupos de datos, evitando leyendas abarrotadas.
+</details>
+   
+
+<details>
+  <summary>Semana 3: Dale sentido a tus datos</summary>
++ Aprenderás cómo las escalas y guías (ejes y leyendas) ayudan a interpretar la información visual y cómo ajustarlas para una mejor comunicación.
++ Exploraremos diferentes tipos de escalas: continuas, discretas, agrupadas y de fecha/hora, y cómo elegir la adecuada para tus datos.
++ Personalizarás la apariencia de las guías con funciones específicas y controlarás cada detalle, desde el color de los ejes hasta el tamaño de las leyendas.
++ Aprenderás a transformar escalas para resaltar patrones en tus datos y a combinar o separar leyendas para una mejor claridad.
+</details>
+
+<details>
+  <summary>Semana 4: Ajusta la perspectiva</summary>
++ Descubrirás cómo los sistemas de coordenadas cambian la forma en que se visualizan los datos, desde el sistema cartesiano estándar hasta coordenadas polares y proyecciones de mapas.
++ Aprenderás a utilizar herramientas como coord_cartesian() para hacer zoom, coord_flip() para intercambiar ejes y coord_fixed() para fijar la relación de aspecto.
++ Dominarás el facetado para dividir tus datos en múltiples gráficos y comparar patrones entre grupos o subconjuntos.
+Controlarás las escalas en gráficos facetados y utilizarás anotaciones para facilitar las comparaciones.
+</details>
+
+<details>
+  <summary>Semana 5: Automatiza tu flujo de trabajo</summary>
++ Aprenderás a escribir funciones para generar componentes de ggplot2, como geoms, escalas y themes, para evitar la repetición de código y aumentar la eficiencia.
++ Crearás funciones para generar gráficos completos, como gráficos circulares y diagramas de coordenadas paralelas, con un solo comando.
++ Utilizaremos el paquete purrr para aplicar la programación funcional a ggplot2, iterando sobre datos y componentes para automatizar tareas.
+</details>
+
+<details>
+  <summary>Semana 6: Inspírate en los mejores</summary>
++ Analizaremos gráficos de medios de renombre como The Economist, The Washington Post y The New York Times para identificar técnicas avanzadas y decisiones de diseño efectivas.
++ Pondremos en práctica todo lo aprendido para replicar estos gráficos, utilizando herramientas como patchwork para combinar múltiples visualizaciones y purrr para automatizar el proceso.
++ Te enfrentarás al desafío de replicar un gráfico complejo de tu elección, mostrando tus habilidades de personalización y automatización.
+</details>
+
+:::: {.columns}
+
+
+::: {.column width="45%"}
+## Inscribirte ahora
+
++ 6 clases en vivo de 2 horas cada una.
++ Sesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.
++ Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
++ Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
++ Acceso prioritario a cursos avanzados.
++ **Precio: $99 USD.**
+
+[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+
+
+:::
+::::
+
+## Ponte en contacto
+
+La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
+
+
+Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr) o en [Twitter](https://twitter.com/dev_aguero) (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!
+

@@ -7,6 +7,22 @@ project:
     port: 4200
 
 website:
+  page-footer:
+    center:
+      - text: "Términos y Condiciones"
+        href: terminos.qmd
+      - text: "FAQ"
+        href: docs/faq/index.qmd
+      - text: "License"
+        href: license.qmd
+      - text: "Trademark"
+        href: trademark.qmd
+    left: |
+      Contenido {{< fa brands creative-commons >}} 2024 por Aprende Tidyverse<br>
+      Todo el contenido está licenciado bajo una Licencia Internacional Creative Commons Atribución-NoComercial 4.0 ([CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.es)).
+    right: |
+      Hecho con {{< fa heart >}} desde Costa Rica usando {{< fa brands r-project >}} y [Quarto](https://quarto.org/)<br>
+      [Revisa el código fuente en {{< fa brands github >}} GitHub](https://github.com/aguerodev/aguerodev.github.io)
   cookie-consent:
     type: express
     style: headline
@@ -24,11 +40,37 @@ website:
   title: "Aprende Tidyverse"
   favicon: favicon.ico
   navbar:
+    logo: images/logo.png
+    logo-alt: ""
+    title: false
     background: dark
     left:
-      - text: "Cursos R Intensivo"
-        file: courses/index.qmd
-      - text: "Lunes de Consultas"
+      - text: "Inicio"
+        file: index.qmd
+      - text: "Cursos"
+        menu:
+          - text: "Cursos de R"
+          - text: "R para ciencia de datos (novato)"
+            icon: "graph-up-arrow"
+            href: courses/r4ds.qmd
+          - text: "Desarrollo de aplicaciones con shiny (intermedio)"
+            icon: "window-split"
+            href: courses/intro_shiny.qmd
+          - text: "Web Scraping con R (avanzado)"
+            icon: "bug"
+            href: courses/web_scraping.qmd
+          - text: "ggplot2 Avanzado"
+            icon: "palette"
+            href: courses/avz_ggplot2.qmd
+          - text: "---"
+          - text: "Programas especiales"
+          - text: "R para la investigación en ciencias sociales"
+            icon: "book"
+            href: courses/r4ds.qmd
+          - text: "R para la investigación en ciencias medicas"
+            icon: "hospital"
+            href: courses/r4ds.qmd
+      - text: "Sesiones de Consultas"
         file: lunes_pr.qmd
       - text: Blog
         file: posts.qmd
@@ -44,6 +86,7 @@ website:
   site-url: https://aprendetidyverse.com
   repo-url: https://github.com/aguerodev/aguerodev.github.io
 
+
 format:
   html:
     grid:
@@ -55,24 +98,11 @@ format:
       freeze: true
       # Enable banner style title blocks
       title-block-banner: false
-      author: Carlos Aguero B
       # Can't yet enable this because it causes "On this page" to appear on index.html
       # even if I set its post-level `toc: false`
       # toc: true
       title-block-categories: false
       toc-depth: 5
-
-copyright: 
-  statement: "Copyright Aprende Tidyverse. 2024. Todos los derechos reservados."
-license:
-  text: >
-    Este blog libera su contenido bajo la Licencia Creative Commons CC0,
-    permitiendo a los usuarios copiar, modificar, distribuir y utilizar 
-    todo el trabajo, ya sea para propósitos comerciales o no, sin necesidad
-    de pedir permiso o proporcionar atribución al autor.
-  type: open-access
-  url: https://creativecommons.org/publicdomain/zero/1.0/deed.es
-
-
+      
 metadata-files:
   - drafts.yml

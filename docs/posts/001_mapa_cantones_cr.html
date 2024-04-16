@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Carlos Aguero B">
+<meta name="author" content="Carlos Aguero">
 <meta name="description" content="Explora los recientes cambios territoriales y de nombres en los cantones de Costa Rica a través de esta guía que te enseñará a crear mapas actualizados con ggplot2, utilizando los datos del Instituto Geográfico Nacional.">
 
 <title>Aprende Tidyverse – Actualizando el mapa de cantones de Costa Rica con R</title>
@@ -78,6 +78,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -158,8 +160,8 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Aprende Tidyverse</span>
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/logo.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Buscar"></div>
@@ -169,12 +171,52 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../courses/index.html"> 
-<span class="menu-text">Cursos R Intensivo</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Inicio</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cursos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Cursos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cursos">    
+        <li class="dropdown-header">Cursos de R</li>
+        <li>
+    <a class="dropdown-item" href="../courses/r4ds.html"><i class="bi bi-graph-up-arrow" role="img">
+</i> 
+ <span class="dropdown-text">R para ciencia de datos (novato)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../courses/intro_shiny.html"><i class="bi bi-window-split" role="img">
+</i> 
+ <span class="dropdown-text">Desarrollo de aplicaciones con shiny (intermedio)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../courses/web_scraping.html"><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">Web Scraping con R (avanzado)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../courses/avz_ggplot2.html"><i class="bi bi-palette" role="img">
+</i> 
+ <span class="dropdown-text">ggplot2 Avanzado</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Programas especiales</li>
+        <li>
+    <a class="dropdown-item" href="../courses/r4ds.html"><i class="bi bi-book" role="img">
+</i> 
+ <span class="dropdown-text">R para la investigación en ciencias sociales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../courses/r4ds.html"><i class="bi bi-hospital" role="img">
+</i> 
+ <span class="dropdown-text">R para la investigación en ciencias medicas</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../lunes_pr.html"> 
-<span class="menu-text">Lunes de Consultas</span></a>
+<span class="menu-text">Sesiones de Consultas</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../posts.html"> 
@@ -245,16 +287,25 @@ cookieconsent.run({
   </div>
 </div>
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Autor/a</div>
+  <div class="quarto-title-meta-heading">Afiliación</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Carlos Aguero </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://aprendetidyverse.com/">
+            Aprende Tidyverse
+            </a>
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Carlos Aguero B </p>
-          </div>
-  </div>
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
@@ -262,6 +313,12 @@ cookieconsent.run({
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de modificación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">12 de abril de 2024</p>
+    </div>
+  </div>
     
   </div>
   
@@ -661,16 +718,6 @@ Geodetic CRS:  WGS 84
 <li><p>Expediente 22.874: Creación del Cantón Ojo de Agua, Cantón XVII de la Provincia de Alajuela.</p></li>
 </ol>
 <p>Así que menos mal que ya sabemos cómo tener el mapa actualizado, porque si por la fecha se saca el día, lo vamos a tener que hacer con frecuencia en los próximos años.</p>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Este blog libera su contenido bajo la <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es">Licencia Creative Commons CC0</a>, permitiendo a los usuarios copiar, modificar, distribuir y utilizar todo el trabajo, ya sea para propósitos comerciales o no, sin necesidad de pedir permiso o proporcionar atribución al autor.</p>
-</div>
-</div>
-</div>
 
 
 </section>
@@ -688,7 +735,18 @@ Geodetic CRS:  WGS 84
 <li id="fn7"><p>San José, 20 de febrero del 2024 MIDEPLAN-DM-OF-0277-2024 A: Directorio Legislativo, Jefaturas de Fracción, Asamblea Legislativa de Costa Rica Asunto: Opinión de MIDEPLAN sobre el Primer Debate del Proyecto de Ley N°22.643, “Creación del Cantón Colorado, Cantón Duodécimo de la Provincia de Guanacaste”. Disponible en: <a href="https://d1qqtien6gys07.cloudfront.net/wp-content/uploads/2024/02/MIDEPLAN-DM-OF-0277-2024-Reaccion-del-MIDEPLAN-respecto-a-la-aprobacion-en-Primer-Debate-del-Proyecto-de-Ley-22.643-firmado-sellado.pdf">enlace</a><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>Delfino.cr. (19 de febrero de 2024). Expediente 22643: Creación del Cantón Colorado, Cantón Duodécimo de la Provincia de Guanacaste. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/22643">Leer más</a><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section></div></main> <!-- /main -->
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div>Este blog publica su contenido bajo la Licencia Creative Commons Atribución-NoComercial (CC BY-NC 4.0). Esta licencia permite a los usuarios copiar, redistribuir, remezclar, transformar y construir a partir  del material, siempre que reconozcan debidamente la autoría y no lo utilicen para fines comerciales.  No es necesario solicitar permisos adicionales para usos que estén permitidos bajo esta licencia, siempre y cuando se cumplan estas condiciones.
+<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/deed.es">(Ver Licencia)</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Derechos de autor</h2><div class="quarto-appendix-contents"><div>Copyright Aprende Tidyverse. 2024. Todos los derechos reservados.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
+  author = {Aguero, Carlos},
+  title = {Actualizando el mapa de cantones de Costa Rica con R},
+  date = {2024-02-08},
+  url = {https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html},
+  langid = {es}
+}
+</code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-aguero2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+Aguero, Carlos. 2024. <span>“Actualizando el mapa de cantones de Costa
+Rica con R.”</span> February 8, 2024. <a href="https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html">https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1115,14 +1173,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p>Contenido <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2024 por Aprende Tidyverse<br> Todo el contenido está licenciado bajo una Licencia Internacional Creative Commons Atribución-NoComercial 4.0 (CC BY-NC 4.0).</p>
+</div>   
     <div class="nav-footer-center">
 
 <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+<p>Hecho con <i class="fa-brands fa-r-project" aria-label="r-project"></i> y <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/aguerodev/aguerodev.github.io">Revisa el código fuente en <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></p>
+</div>
   </div>
 </footer>
 
