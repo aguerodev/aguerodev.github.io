@@ -11,6 +11,7 @@ image: ../images/ggplot2_v2.jpg
 
 ![Foto de <a href="https://unsplash.com/es/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> en <a href="https://unsplash.com/es/fotos/texto-XrIfY_4cK1w?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/ggplot2_v2.jpg)
 
+
 Todos comenzamos con ggplot2 creando gráficos básicos, pero llega un punto donde deseamos más. ¿Cómo lograr que nuestras visualizaciones luzcan profesionales? ¿Cómo adaptarlas al estilo de nuestra empresa? Este curso te lleva al siguiente nivel con ggplot2. Aprende su funcionamiento a fondo y practica replicando gráficos de grandes medios como The Economist, The New York Times, The Washington Post, entre otros. ¡Prepárate para crear visualizaciones impactantes y con estilo propio!
 
 ## En este curso, aprenderás a:

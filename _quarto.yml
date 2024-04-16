@@ -58,14 +58,6 @@ website:
           - text: "Visualización de datos con ggplot2 (avanzado)"
             icon: "palette"
             href: courses/avz_ggplot2.qmd
-          - text: "---"
-          - text: "Programas especiales (muy pronto)"
-          - text: "R para la investigación en ciencias sociales"
-            icon: "book"
-            href: index.qmd
-          - text: "R para la investigación en ciencias medicas"
-            icon: "hospital"
-            href: index.qmd
       - text: "Sesiones de Consultas"
         file: lunes_pr.qmd
       - text: Blog

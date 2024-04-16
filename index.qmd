@@ -22,7 +22,7 @@ copyright: ""
 -   Maneja textos, fechas y factores usando los paquetes como [lubridate](https://lubridate.tidyverse.org), [stringr](https://stringr.tidyverse.org) y [forcats](https://forcats.tidyverse.org).
 -   Visualiza resultados con [ggplot2](https://ggplot2.tidyverse.org) y [plotly](https://plotly.com).
 -   Crea documentos y mapas interactivos usando [rmarkdown](https://rmarkdown.rstudio.com), [quarto](https://quarto.org), [sf](https://r-spatial.github.io/sf/) y [leaflet](https://rstudio.github.io/leaflet/).
--   Extrae datos los sitios web con técnicas de web scraping usando [rvest](https://rvest.tidyverse.org) y [selenium](https://docs.ropensci.org/RSelenium/).
+-   Extrae datos los sitios web con técnicas de web scraping usando [rvest](https://rvest.tidyverse.org).
 -   Gestiona proyectos y organiza tu código con [renv](https://rstudio.github.io/renv/articles/renv.html) y [GitHub](https://github.com).
 
 ### Explora, analiza y comparte. Tienes historias que contar haz de R tu herramienta para hacerlo.
