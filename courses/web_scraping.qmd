@@ -5,11 +5,11 @@ toc: true
 lang: "es"
 author: ""
 pagetitle: "Curso: R para ciencia de datos"
-image: ../images/web_scraping.jpg
+image: ../images/web_scraping_v2.jpg
 license: ""
 ---
 
-![Foto de <a href="https://unsplash.com/es/@sigmund?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sigmund</a> en <a href="https://unsplash.com/es/fotos/monitor-de-computadora-de-pantalla-plana-negro-uo8Jfqdzs18?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/web_scraping.jpg)
+![Foto de <a href="https://unsplash.com/es/@sigmund?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sigmund</a> en <a href="https://unsplash.com/es/fotos/monitor-de-computadora-de-pantalla-plana-negro-uo8Jfqdzs18?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/web_scraping_v2.jpg)
 
 Este curso está diseñado para profesionales y entusiastas del análisis de datos que buscan alcanzar la maestría en técnicas avanzadas de extracción de datos de sitios web y APIs. A lo largo de este programa, profundizarás en tecnologías web como HTML, CSS y XPath, aprendiendo a manejar y manipular estructuras de datos complejas para una extracción efectiva y precisa de información.
 
@@ -34,7 +34,7 @@ Este curso está diseñado para profesionales y entusiastas del análisis de dat
 
 ::: {.column width="50%"}
 
-![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
 
 
 :::
@@ -137,7 +137,7 @@ He tenido la increíble oportunidad de formarme como [instructor certificado por
 
 ::: {.column width="50%"}
 
-![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
 
 
 :::

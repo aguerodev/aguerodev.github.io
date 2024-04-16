@@ -1,16 +1,16 @@
 ---
 title: "Introducción al desarrollo de aplicaciones con shiny"
-subtitle: "Transforma tus análisis en aplicaciones web interactivas: Desarrolla, despliega y dinamiza con Shiny"
+subtitle: "Transforma tus análisis en aplicaciones web reactivas diseña, desarrolla y despliega con Shiny"
 description: ""
 toc: true
 lang: "es"
 author: ""
 pagetitle: "Apps con shiny"
-image: ../images/app_shiny2.jpg
+image: ../images/app_shiny2_v2.jpg
 ---
 
 ![Foto de <a href="https://unsplash.com/es/@lukechesser?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Luke Chesser</a> en <a href="https://unsplash.com/es/fotos/graficos-de-analisis-de-rendimiento-en-la-pantalla-de-un-portatil-JKUTrJ4vK00?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-  ](../images/app_shiny2.jpg)
+  ](../images/app_shiny2_v2.jpg)
 
 ## ¿Qué es Shiny? 
 
@@ -44,7 +44,7 @@ Este curso está diseñado para desarrolladores y entusiastas que deseen aprende
 
 ::: {.column width="50%"}
 
-![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
 
 
 :::
@@ -160,7 +160,7 @@ Este programa proporcionará una base sólida en el desarrollo de aplicaciones w
 
 ::: {.column width="50%"}
 
-![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
 
 
 :::

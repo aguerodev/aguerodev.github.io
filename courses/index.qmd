@@ -5,11 +5,11 @@ toc: true
 lang: "es"
 author: ""
 pagetitle: "Curso: R para ciencia de datos"
-image: ../images/r4ds-2.jpg
+image: ../images/community3_v2.jpg
 license: ""
 ---
 
-![Foto de <a href="https://unsplash.com/es/@neonbrand?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kenny Eliason</a> en <a href="https://unsplash.com/es/fotos/a-group-of-people-in-a-room-with-a-projector-screen-1-aA2Fadydc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/r4ds-2.jpg)
+![Foto de <a href="https://unsplash.com/es/@neonbrand?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kenny Eliason</a> en <a href="https://unsplash.com/es/fotos/a-group-of-people-in-a-room-with-a-projector-screen-1-aA2Fadydc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/community3_v2.jpg)
 
 Queremos iniciar con una premisa fundamental: <mark>**cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero.**</mark> Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos, solamente práctica, práctica y más práctica.
 
@@ -36,7 +36,7 @@ Nos esforzamos por hacer el acceso a la educación lo más equitativo posible, a
 
 ::: {.column width="50%"}
 
-![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
 
 
 :::
@@ -66,7 +66,7 @@ Ideal para profesionales que trabajan con datos y buscan mejorar sus habilidades
 
 ::: {.column width="50%"}
 
-![Foto de <a href="https://unsplash.com/es/@javotrueba?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">javier trueba</a> en <a href="https://unsplash.com/es/fotos/mujer-que-lleva-un-libro-de-texto-blanco-y-verde-iQPr1XkF5F0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/est.jpg)
+![Foto de <a href="https://unsplash.com/es/@javotrueba?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">javier trueba</a> en <a href="https://unsplash.com/es/fotos/mujer-que-lleva-un-libro-de-texto-blanco-y-verde-iQPr1XkF5F0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/est_v2.jpg)
 
 
 :::
@@ -97,7 +97,7 @@ Pensado para estudiantes de pregrado que buscan prepararse desde ya para trabaja
 
 ::: {.column width="50%"}
 
-![Foto de <a href="https://unsplash.com/es/@cwmonty?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Montgomery</a> en <a href="https://unsplash.com/es/fotos/macbook-pro-displaying-group-of-people-smgTvepind4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/community3.jpg)
+![Foto de <a href="https://unsplash.com/es/@cwmonty?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Montgomery</a> en <a href="https://unsplash.com/es/fotos/macbook-pro-displaying-group-of-people-smgTvepind4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/r4ds-2.jpg)
 
 
 :::
@@ -231,7 +231,7 @@ Finalmente, dominarás el arte de gestionar proyectos de datos con `Git`, `GitHu
 
 ::: {.column width="50%"}
 
-![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
 
 
 :::

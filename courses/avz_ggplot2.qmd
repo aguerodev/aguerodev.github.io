@@ -1,7 +1,7 @@
 ---
 title: "Visualización de datos con ggplot2"
 subtitle: ""
-description: "Aprende su funcionamiento a fondo y practica replicando gráficos de grandes medios como The Economist, The New York Times, The Washington Post, entre otros."
+description: "Aprende a fondo el funcionamiento del paquete ggplot2 y practica replicando gráficos de grandes medios como The Economist, The New York Times, The Washington Post, entre otros."
 toc: true
 lang: "es"
 author: ""
@@ -36,7 +36,7 @@ Todos comenzamos con ggplot2 creando gráficos básicos, pero llega un punto don
 
 ::: {.column width="50%"}
 
-![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
 
 
 :::
@@ -148,7 +148,7 @@ Controlarás las escalas en gráficos facetados y utilizarás anotaciones para f
 
 ::: {.column width="50%"}
 
-![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof.jpg)
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
 
 
 :::
