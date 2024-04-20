@@ -58,70 +58,70 @@
   {
     "objectID": "courses/intro_shiny.html",
     "href": "courses/intro_shiny.html",
-    "title": "Introducción al desarrollo de aplicaciones con shiny",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "",
     "text": "Foto de Luke Chesser en Unsplash"
   },
   {
     "objectID": "courses/intro_shiny.html#qué-es-shiny",
     "href": "courses/intro_shiny.html#qué-es-shiny",
-    "title": "Introducción al desarrollo de aplicaciones con shiny",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "¿Qué es Shiny?",
     "text": "¿Qué es Shiny?\nHasta hace poco tiempo, cuando un analista deseaba convertir sus modelos o análisis en una aplicación web, necesitaba colaborar estrechamente con un desarrollador web. Este proceso solía ser largo y tedioso, lleno de constantes intercambios hasta clarificar y concretar las ideas en una aplicación funcional.\nShiny es una herramienta gratuita y de código abierto que empodera a los analistas para crear aplicaciones web reactivas, elegantes y eficaces utilizando el lenguaje de programación que ya dominan. Con Shiny, puedes pasar rápidamente de tu idea a una aplicación totalmente funcional, aprovechando al máximo los recursos y códigos que ya has desarrollado. Para aprender más sobre Shiny y cómo puede transformar tu análisis en aplicaciones web interactivas, visita su sitio web oficial.\nEste curso está diseñado para desarrolladores y entusiastas que deseen aprender a crear aplicaciones web interactivas utilizando Shiny, una poderosa herramienta para R. A lo largo de este curso de 6 semanas, explorarás los fundamentos de la programación reactiva y la integración de mapas y gráficos interactivos, así como el despliegue eficiente de aplicaciones en shinyapps.io. Desarrollarás aplicaciones clave que no solo exhibirán tus habilidades técnicas, sino también tu capacidad para manejar y presentar datos de manera efectiva."
   },
   {
     "objectID": "courses/intro_shiny.html#qué-aprenderás",
     "href": "courses/intro_shiny.html#qué-aprenderás",
-    "title": "Introducción al desarrollo de aplicaciones con shiny",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "¿Qué aprenderás?",
     "text": "¿Qué aprenderás?\n\nFundamentos de Shiny y programación reactiva: Introducción a los conceptos básicos de Shiny y cómo manejar la interactividad en aplicaciones web.\nIntegración de mapas y gráficos interactivos: Aprenderás a visualizar datos de manera dinámica utilizando bibliotecas como Leaflet para mapas y Plotly para gráficos.\nDespliegue en shinyapps.io: Adquirirás habilidades para publicar y gestionar aplicaciones en la plataforma de hospedaje de Shiny, shinyapps.io.\nDesarrollo de aplicaciones específicas:\n\nApp de Encuestas: Conecta tu aplicación con Google Sheets para recopilar y analizar datos de encuestas.\nMonitor de precios para ferreterías: Crea una aplicación que monitoriza y compara precios de la competencia en tiempo real.\nComparador de precios de alquileres: Desarrolla una aplicación para evaluar y encontrar las mejores opciones de alquiler en el mercado.\n\nAutomatización y actualización de datos con GitHub Actions: Utiliza GitHub Actions para automatizar la extracción, limpieza e integración de datos, manteniendo tus aplicaciones actualizadas.\nGestión de bases de datos SQL con Supabase: Aprende a integrar y manipular bases de datos en SQL utilizando Supabase, una plataforma de backend como servicio que facilita el manejo de datos en la nube."
   },
   {
     "objectID": "courses/intro_shiny.html#próxima-apertura",
     "href": "courses/intro_shiny.html#próxima-apertura",
-    "title": "Introducción al desarrollo de aplicaciones con shiny",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "Próxima apertura",
     "text": "Próxima apertura\n\nFecha: miércoles 3 de julio de 2024\nLecciones: Todos los miércoles\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD\n\nInscribirte ahora"
   },
   {
     "objectID": "courses/intro_shiny.html#qué-obtendrás",
     "href": "courses/intro_shiny.html#qué-obtendrás",
-    "title": "Introducción al desarrollo de aplicaciones con shiny",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "¿Qué obtendrás?",
     "text": "¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD\n\nInscribirte ahora"
   },
   {
     "objectID": "courses/intro_shiny.html#conoce-al-instructor",
     "href": "courses/intro_shiny.html#conoce-al-instructor",
-    "title": "Introducción al desarrollo de aplicaciones con shiny",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "Conoce al instructor",
     "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina.\n\nSi tienes dudas conversemos:\nPuedes programar una 🎥 videollamada de 15 minutos con el instructor para revisar tus dudas sobre el curso en el siguiente enlace."
   },
   {
     "objectID": "courses/intro_shiny.html#conoce-lo-que-dicen-nuestros-estudiantes",
     "href": "courses/intro_shiny.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "title": "Introducción al desarrollo de aplicaciones con shiny",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "Conoce lo que dicen nuestros estudiantes",
     "text": "Conoce lo que dicen nuestros estudiantes"
   },
   {
     "objectID": "courses/intro_shiny.html#contenido-del-curso",
     "href": "courses/intro_shiny.html#contenido-del-curso",
-    "title": "Introducción al desarrollo de aplicaciones con shiny",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "Contenido del curso",
     "text": "Contenido del curso\n\n\nSemana 1: Introducción a Shiny y estructura básica\n\n\nIntroducción a Shiny y su importancia en el análisis de datos.\nEstructura básica de una aplicación Shiny: ui.R y server.R.\nConceptos de reactividad en Shiny.\nPráctica: Construcción de una aplicación que muestre un texto y un gráfico simple basado en una entrada del usuario.\n\n\n\n\nSemana 2: Layouts, temas y elementos HTML\n\n\nDiferentes layouts en Shiny: paneles, tabs, y grid layouts.\nPersonalización con CSS y temas predefinidos.\nUso de elementos HTML y etiquetas en aplicaciones Shiny.\nPráctica: Diseñar una aplicación con múltiples pestañas y un tema personalizado.\n\n\n\n\nSemana 3: Visualización de datos avanzada\n\n\nIntroducción a plotly para gráficos interactivos.\nUso de leaflet para mapas interactivos.\nPráctica: Desarrollar una aplicación que muestre el precio de alquileres en Costa Rica con filtros dinámicos y mapas interactivos.\n\n\n\n\nSemana 4: Manipulación de datos y UI dinámico\n\n\nCarga y manipulación de datos desde archivos Excel y CSV.\nCreación de componentes UI dinámicos.\nIntroducción al bookmarking en Shiny para guardar estados de la aplicación.\nPráctica: Crear una aplicación para cargar datos, analizarlos y visualizar resultados de manera dinámica.\n\n\n\n\nSemana 5: Módulos y bases de datos\n\n\nDiseño y uso de módulos en Shiny para reutilizar código.\nConexión con bases de datos en la nube, ejemplificando con Supabase.\nPráctica: Desarrollar una aplicación que use módulos y se conecte a una base de datos en la nube para realizar operaciones CRUD (crear, leer, actualizar, borrar).\n\n\n\n\nSemana 6: Proyecto final y despliegue\n\n\nRevisión de conceptos clave y mejores prácticas en Shiny.\nDespliegue de aplicaciones Shiny usando shinyapps.io.\nPráctica: Crear y desplegar un proyecto final que compare precios de productos entre diferentes supermercados.\n\n\nEste programa proporcionará una base sólida en el desarrollo de aplicaciones web interactivas con R y Shiny, enfocándose en casos prácticos y aplicables en el mundo real."
   },
   {
     "objectID": "courses/intro_shiny.html#inscribirte-ahora",
     "href": "courses/intro_shiny.html#inscribirte-ahora",
-    "title": "Introducción al desarrollo de aplicaciones con shiny",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "Inscribirte ahora",
     "text": "Inscribirte ahora\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD.\n\nInscribirte ahora"
   },
   {
     "objectID": "courses/intro_shiny.html#ponte-en-contacto",
     "href": "courses/intro_shiny.html#ponte-en-contacto",
-    "title": "Introducción al desarrollo de aplicaciones con shiny",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "Ponte en contacto",
     "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
   },

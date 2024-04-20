@@ -1,5 +1,5 @@
 ---
-title: "Introducción al desarrollo de aplicaciones con shiny"
+title: "Desarrollo de aplicaciones con shiny"
 subtitle: "Transforma tus análisis en aplicaciones web reactivas diseña, desarrolla y despliega con Shiny"
 description: ""
 toc: true

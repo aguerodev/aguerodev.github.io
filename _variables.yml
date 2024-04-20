@@ -37,7 +37,7 @@ curso_shiny:
   hora_col: "7:00 p.m."
   hora_arg: "9:00 p.m."
   precio: "$99 USD"
-  url_pago: "https://tally.so/r/mYQb4N?curso=Introducción%20al%20desarrollo%20de%20aplicaciones%20con%20Shiny&precio=%2499%20USD&fecha_inicio=miércoles%203%20de%20julio%20de%202024&precio_cr=50,000%20colones"
+  url_pago: "https://tally.so/r/mYQb4N?curso=Desarrollo%20de%20aplicaciones%20con%20shiny&precio=%2499%20USD&fecha_inicio=miércoles%203%20de%20julio%20de%202024&precio_cr=50,000%20colones"
   
   
   
