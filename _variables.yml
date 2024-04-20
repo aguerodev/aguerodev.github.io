@@ -9,8 +9,8 @@ curso_r4ds:
   precio: "$120 USD"
   precio_est: "$30 USD"
   url_pago: "https://tally.so/r/mYQb4N?curso=R%20para%20ciencia%20de%20datos&precio=%24120%20USD&fecha_inicio=jueves%2023%20de%20mayo%20de%202024&id=curso_r4ds&precio_cr=60,000%20colones"
-  url_pago_est: "https://tally.so/r/mYQb4N?curso=R%20para%20ciencia%20de%20datos&precio=%2430%20USD&fecha_inicio=jueves%2023%20de%20mayo%20de%202024&id=curso_r4ds_descuento&precio_cr=15,000%20colones"
-  url_pago_gratis: "https://tally.so/r/mYQb4N?curso=R%20para%20ciencia%20de%20datos&gratis=si&fecha_inicio=jueves%2023%20de%20mayo%20de%202024&id=curso_r4ds_gratis"
+  url_pago_est: "https://tally.so/r/mYQb4N?curso=R%20para%20ciencia%20de%20datos%20-%20Descuento%20estudiantes&precio=%2430%20USD&fecha_inicio=jueves%2023%20de%20mayo%20de%202024&precio_cr=15,000%20colones"
+  url_pago_gratis: "https://tally.so/r/mYQb4N?curso=R%20para%20ciencia%20de%20datos%20-%20Descuento%20comunidad&gratis=si&fecha_inicio=jueves%2023%20de%20mayo%20de%202024"
   
 curso_ggplot2:
   fecha: "martes 4 de junio de 2024"
@@ -19,7 +19,7 @@ curso_ggplot2:
   hora_col: "7:00 p.m."
   hora_arg: "9:00 p.m."
   precio: "$99 USD"
-  url_pago: "https://tally.so/r/mYQb4N?curso=Visualización%20de%20datos%20con%20ggplot2&precio=%2499%20USD&fecha_inicio=martes%204%20de%20junio%20de%202024&id=curso_ggplot2&precio_cr=50,000%20colones"
+  url_pago: "https://tally.so/r/mYQb4N?curso=Visualización%20de%20datos%20con%20ggplot2&precio=%2499%20USD&fecha_inicio=martes%204%20de%20junio%20de%202024&precio_cr=50,000%20colones"
   
 curso_webscraping:
   fecha: "martes 23 de julio de 2023"
@@ -28,7 +28,7 @@ curso_webscraping:
   hora_col: "7:00 p.m."
   hora_arg: "9:00 p.m."
   precio: "$99 USD"
-  url_pago: "https://tally.so/r/mYQb4N?curso=Web%20Scraping%20y%20Automatización%20con%20R&precio=%2499%20USD&fecha_inicio=martes%2023%20de%20julio%20de%202024&id=curso_webscraping&precio_cr=50,000%20colones"
+  url_pago: "https://tally.so/r/mYQb4N?curso=Web%20Scraping%20y%20Automatización%20con%20R&precio=%2499%20USD&fecha_inicio=martes%2023%20de%20julio%20de%202024&precio_cr=50,000%20colones"
   
 curso_shiny:
   fecha: "miércoles 3 de julio de 2024"
@@ -37,4 +37,8 @@ curso_shiny:
   hora_col: "7:00 p.m."
   hora_arg: "9:00 p.m."
   precio: "$99 USD"
-  url_pago: "https://tally.so/r/mYQb4N?curso=Introducción%20al%20desarrollo%20de%20aplicaciones%20con%20Shiny&precio=%2499%20USD&fecha_inicio=miércoles%203%20de%20julio%20de%202024&id=curso_shiny&precio_cr=50,000%20colones"
+  url_pago: "https://tally.so/r/mYQb4N?curso=Introducción%20al%20desarrollo%20de%20aplicaciones%20con%20Shiny&precio=%2499%20USD&fecha_inicio=miércoles%203%20de%20julio%20de%202024&precio_cr=50,000%20colones"
+  
+  
+  
+  
