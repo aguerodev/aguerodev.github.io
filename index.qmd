@@ -28,7 +28,7 @@ copyright: ""
 ### Explora, analiza y comparte. Tienes historias que contar haz de R tu herramienta para hacerlo.
 
 ::: hero-buttons
-[Inscribirte Hoy](https://tally.so/r/m67aKo){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"} [Leer Más](courses/r4ds.qmd){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
+[Inscribirte Hoy]({{< var curso_r4ds.url_pago >}}){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"} [Leer Más](courses/r4ds.qmd){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
 :::
 :::
 

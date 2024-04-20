@@ -26,11 +26,11 @@ Todos comenzamos con ggplot2 creando gráficos básicos, pero llega un punto don
 ## Próxima apertura
 
 + Duración: 6 semanas
-+ Fecha de inicio: **martes 4 de junio de 2024**</mark>
-+ Lecciones: todos los martes
-+ Costa Rica/México: 6:00 p.m. 
-+ Colombia: 7:00 p.m. 
-+ Argentina: 9:00 p.m.
++ Fecha de inicio: **{{< var curso_ggplot2.fecha >}}**
++ Lecciones: {{< var curso_ggplot2.dia >}}
++ Costa Rica/México: {{< var curso_ggplot2.hora_cr >}}
++ Colombia: {{< var curso_ggplot2.hora_col>}}
++ Argentina: {{< var curso_ggplot2.hora_arg >}}
 
 :::: {.columns}
 
@@ -49,9 +49,9 @@ Todos comenzamos con ggplot2 creando gráficos básicos, pero llega un punto don
 + Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
 + Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
 + Acceso prioritario a cursos avanzados.
-+ **Precio: $99 USD.**
++ **Precio: {{< var curso_ggplot2.precio >}}**
 
-[Inscribirte ahora](https://tally.so/r/w8KvZO){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora]({{< var curso_ggplot2.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -140,9 +140,9 @@ Controlarás las escalas en gráficos facetados y utilizarás anotaciones para f
 + Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
 + Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
 + Acceso prioritario a cursos avanzados.
-+ **Precio: $99 USD.**
++ **Precio: {{< var curso_ggplot2.precio >}}**
 
-[Inscribirte ahora](https://tally.so/r/w8KvZO){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora]({{< var curso_ggplot2.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 

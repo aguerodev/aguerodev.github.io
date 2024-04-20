@@ -20,11 +20,11 @@ Este curso está diseñado para llevarte de ser un principiante a un practicante
 
 ## Próxima apertura:
 
-+ Fecha de inicio: **jueves 23 de mayo del 2024**
-+ Lecciones: jueves y sábados
-+ Costa Rica/México: 6:00 p.m. 
-+ Colombia: 7:00 p.m. 
-+ Argentina: 9:00 p.m.
++ Fecha de inicio: **{{< var curso_r4ds.fecha >}}**
++ Lecciones: {{< var curso_r4ds.dia >}}
++ Costa Rica/México: {{< var curso_r4ds.hora_cr >}}
++ Colombia: {{< var curso_r4ds.hora_col >}}
++ Argentina: {{< var curso_r4ds.hora_arg >}}
     
 
 ## ¿Cómo inscribirme?
@@ -53,9 +53,9 @@ Ideal para profesionales que trabajan con datos y buscan mejorar sus habilidades
 + Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
 + Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
 + Acceso prioritario a cursos avanzados.
-+ **Precio: $120 USD.**
++ **Precio: {{< var curso_r4ds.precio >}}.**
 
-[Inscribirte ahora](https://tally.so/r/m67aKo){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora]({{< var curso_r4ds.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -82,10 +82,10 @@ Pensado para estudiantes de pregrado que buscan prepararse desde ya para trabaja
 + Sesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.
 + Asistencia por correo electrónico.
 + Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
-+ **Precio: $30 USD.**
++ **Precio: {{< var curso_r4ds.precio_est >}}**
 
 
-[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora]({{< var curso_r4ds.url_pago_est >}}){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -113,7 +113,7 @@ Nos esforzamos por facilitar el acceso a este curso para miembros de la comunida
 + Asistencia por correo electrónico.
 + **Precio: Totalmente Gratis.**
 
-[Inscribirte ahora](https://tally.so/r/nGzNeL){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora]({{< var curso_r4ds.url_pago_gratis >}}){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -221,9 +221,9 @@ Finalmente, dominarás el arte de gestionar proyectos de datos con `Git`, `GitHu
 + Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
 + Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
 + Acceso prioritario a cursos avanzados.
-+ **Precio: $120 USD.**
++ **Precio: {{< var curso_r4ds.precio >}}.**
 
-[Inscribirte ahora](https://tally.so/r/woy9qe){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora]({{< var curso_r4ds.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
 
 
 
@@ -235,7 +235,7 @@ Finalmente, dominarás el arte de gestionar proyectos de datos con `Git`, `GitHu
 
 
 :::
-Si lo prefieres, **puedes pagar en dos cuotas**: 50% al inscribirte y el resto en la semana 4 del curso. Para más detalles o para optar por esta modalidad, escribe a info@aprendetidyverse.com.
+
 ::::
 
 ## Ponte en contacto

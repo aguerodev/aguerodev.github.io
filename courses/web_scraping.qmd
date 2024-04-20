@@ -24,11 +24,11 @@ Este curso está diseñado para profesionales y entusiastas del análisis de dat
 
 ## Próxima apertura
 
-+ Fecha: **martes 23 de julio de 2024**</mark>
-+ Lecciones: todos los martes
-+ Costa Rica/México: 6:00 p.m. 
-+ Colombia: 7:00 p.m. 
-+ Argentina: 9:00 p.m.
++ Fecha: **{{< var curso_webscraping.fecha >}}**
++ Lecciones: {{< var curso_webscraping.dia >}}
++ Costa Rica/México: {{< var curso_webscraping.hora_cr >}} 
++ Colombia: {{< var curso_webscraping.hora_col >}} 
++ Argentina: {{< var curso_webscraping.hora_arg >}}
 
 :::: {.columns}
 
@@ -47,9 +47,9 @@ Este curso está diseñado para profesionales y entusiastas del análisis de dat
 + Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
 + Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
 + Acceso prioritario a cursos avanzados.
-+ **Precio: $99 USD.**
++ **Precio: {{< var curso_webscraping.precio >}}**
 
-[Inscribirte ahora](https://tally.so/r/w2eqKL){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora]({{< var curso_webscraping.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -129,9 +129,9 @@ He tenido la increíble oportunidad de formarme como [instructor certificado por
 + Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
 + Certificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.
 + Acceso prioritario a cursos avanzados.
-+ **Precio: $99 USD.**
++ **Precio: {{< var curso_webscraping.precio >}}.**
 
-[Inscribirte ahora](https://tally.so/r/w2eqKL){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora]({{< var curso_webscraping.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
