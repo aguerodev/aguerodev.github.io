@@ -1,11 +1,11 @@
 ---
 title: "Curso: R para ciencia de datos"
-description: "Inicia en el mundo de la ciencia de datos se forma sencilla y divertida"
+description: "Descubre el poder de R en ciencia de datos: ¡únete y transforma tu futuro! Aprende de manera fácil y divertida con ejercicios prácticos. Ideal para principiantes."
 toc: true
 lang: "es"
 author: ""
 pagetitle: "Curso: R para ciencia de datos"
-image: ../images/community3_v2.jpg
+image: ../images/community3_v3.jpg
 license: ""
 ---
 
