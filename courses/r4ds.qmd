@@ -5,7 +5,7 @@ toc: true
 lang: "es"
 author: ""
 pagetitle: "Curso: R para ciencia de datos"
-image: ../images/community3_v3.jpg
+image: ../images/r4ds-2_v3.jpg
 license: ""
 ---
 
