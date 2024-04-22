@@ -1,5 +1,5 @@
 ---
-title: "Inscripción exitosa"
+title: ""
 subtitle: ""
 description: ""
 lang: "es"
@@ -12,7 +12,7 @@ pagetitle: Inscripción exitosa
 license: ""
 ---
 
-## ¡Excelente!🎉 Tu formulario de inscripción al curso ha sido enviado con éxito. En unos minutos recibirás un correo electrónico o un mensaje de Whatsapp con más información. ¡Nos vemos en clase!
+## ¡Excelente!🎉 Tu formulario de inscripción ha sido enviado con éxito. En unos minutos recibirás un correo electrónico o un mensaje de Whatsapp con más información. ¡Nos vemos en clase!🚀
 
 ![Foto de <a href="https://unsplash.com/es/@pineapple?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pineapple Supply Co.</a> en <a href="https://unsplash.com/es/fotos/varias-pinas-en-una-fiesta-qWlkCwBnwOE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](images/party.jpg)
 
