@@ -7,6 +7,7 @@ author: ""
 pagetitle: "Web Scraping y Automatización con R"
 image: ../images/web_scraping_v2.jpg
 license: ""
+include-in-header: web_scraping-meta.html
 ---
 
 ![Foto de <a href="https://unsplash.com/es/@sigmund?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sigmund</a> en <a href="https://unsplash.com/es/fotos/monitor-de-computadora-de-pantalla-plana-negro-uo8Jfqdzs18?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/web_scraping_v2.jpg)
