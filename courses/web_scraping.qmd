@@ -5,7 +5,6 @@ toc: true
 lang: "es"
 author: ""
 pagetitle: "Web Scraping y Automatización con R"
-image: ../images/web_scraping_v2.jpg
 license: ""
 include-in-header: web_scraping-meta.html
 ---
