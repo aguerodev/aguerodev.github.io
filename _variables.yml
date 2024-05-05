@@ -22,7 +22,7 @@ curso_ggplot2:
   url_pago: "https://tally.so/r/mYQb4N?curso=Visualización%20de%20datos%20con%20ggplot2&precio=%2499%20USD&fecha_inicio=martes%204%20de%20junio%20de%202024&precio_cr=50,000%20colones"
   
 curso_webscraping:
-  fecha: "martes 23 de julio de 2023"
+  fecha: "martes 23 de julio de 2024"
   dia: "Todos los martes"
   hora_cr: "6:00 p.m."
   hora_col: "7:00 p.m."
