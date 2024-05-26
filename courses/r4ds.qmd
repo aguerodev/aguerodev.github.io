@@ -91,33 +91,6 @@ Pensado para estudiantes de pregrado que buscan prepararse desde ya para trabaja
 
 ::::
 
-
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-![Foto de <a href="https://unsplash.com/es/@neonbrand?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kenny Eliason</a> en <a href="https://unsplash.com/es/fotos/a-group-of-people-in-a-room-with-a-projector-screen-1-aA2Fadydc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/r4ds-2.jpg)
-
-
-:::
-
-::: {.column width="45%"}
-
-## Acceso de la comunidad 
-
-Nos esforzamos por facilitar el acceso a este curso para miembros de la comunidad de R que enfrentan barreras financieras o técnicas para realizar pagos en línea, además de apoyar a personas de grupos históricamente subrepresentados en STEM.
-
-### ¿Qué obtendrás?
-+ 12 clases en vivo via Zoom de 2 horas cada una.
-+ Asistencia por correo electrónico.
-+ **Precio: Totalmente Gratis.**
-
-[Inscribirte ahora]({{< var curso_r4ds.url_pago_gratis >}}){.btn .btn-outline-primary .btn role="button"} 
-
-:::
-
-::::
 ---
 
 
