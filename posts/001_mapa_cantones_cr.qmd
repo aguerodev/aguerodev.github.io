@@ -3,7 +3,7 @@ title: "Actualizando el mapa de cantones de Costa Rica con R"
 description: "Explora los recientes cambios territoriales y de nombres en los cantones de Costa Rica a través de esta guía que te enseñará a crear mapas actualizados con ggplot2, utilizando los datos del Instituto Geográfico Nacional."
 date: 2024-02-08
 date-modified: 2024-04-12
-categories: ['Guías Paso a Paso', 'ggplot2']
+categories: ['Guías Paso a Paso', 'ggplot2','sf','geojson']
 lang: "es"
 image: images/mapa_cr_ggplot2.png
 comments:

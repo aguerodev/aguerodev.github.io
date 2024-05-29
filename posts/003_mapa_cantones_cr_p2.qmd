@@ -1,0 +1,97 @@
+---
+title: "Manipulando el mapa de los cantones y distritos de Costa Rica con R"
+description: "Trabajar con datos geoespaciales anteriores a 2017 a menudo resulta en mapas con espacios vacíos o zonas grises, debido a cambios en fronteras, actualización de códigos o datos ausentes. Este tutorial muestra cómo resolver estos problemas y unir regiones usando el paquete ‘sf’."
+date: 2024-05-29
+categories: ['Guías Paso a Paso', 'ggplot2','sf','dplyr']
+lang: "es"
+image: images/mapa47.png
+comments:
+  utterances:
+    repo: quarto-dev/quarto-docs
+toc: true
+code-line-numbers: true
+code-copy: true
+toc-location: left
+format: html
+editor_options: 
+  chunk_output_type: console
+execute: 
+  freeze: true
+author:
+  - name: Carlos Aguero
+    affiliation: Aprende Tidyverse
+    affiliation-url: https://aprendetidyverse.com/
+citation: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, dpi = 400, fig.width = 8, fig.height = 6)
+```
+
+
+Hace un par de semanas, en [nuestras sesiones de consultas los domingos a las 6 p.m.](https://aprendetidyverse.com/lunes_pr.html), nos plantearon el siguiente problema: **¿qué pasa si, al descargar el mapa actualizado, como vimos en el [post anterior](https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html), mis datos no están actualizados?** Dicho de otra forma, en mi mapa existen los nuevos cantones como Río Cuarto, Puerto Jiménez y Monteverde, pero no en mis datos, y esas zonas aparecerán en gris. Bueno, en esta guía veremos paso a paso cómo regresar el mapa a la forma que tenía en 2017, uniendo estos nuevos cantones al cantón al que pertenecían, y así poder visualizar nuestro mapa sin regiones sin datos. Esto nos servirá también para crear nuestras propias agrupaciones de áreas, por ejemplo, un mapa de las regiones socioeconómicas de Costa Rica.
+
+::: {.column-margin}
+La Reforma de la División Regional del Territorio de Costa Rica, Decreto N° 9501, establece las regiones oficiales para la investigación y planificación del desarrollo socioeconómico [^decreto]
+
+[^decreto]: Costa Rica. Decreto Ejecutivo N° 9501. Reforma División Regional del Territorio de Costa Rica, para los Efectos de Investigación y Planificación del Desarrollo Socioeconómico. (11 de febrero de 2015). Procuraduría General de la República. [Leer más](https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=59730&nValor3=67054&strTipM=TC)
+:::
+
+
+## Paso 1: Cargar nuestros datos
+
+En este caso, asumiremos que ya leíste y ejecutaste lo visto en [**Actualizando el mapa de cantones de Costa Rica con R**](https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html), así que importaremos directamente el archivo `cantones.geojson`.
+
+```{r, message=FALSE}
+library(tidyverse)
+library(readxl)
+library(sf)
+library(janitor)
+
+cantones <- read_sf("cantones.geojson") |> 
+  clean_names() |> 
+  mutate(codigo_canton = as.character(codigo_canton))
+
+glimpse(cantones)
+```
+
+Por otro lado, utilizaremos los datos del [IDS de Mideplan de 2017](https://documentos.mideplan.go.cr/share/s/T3CmePFRSdCAUc1q50kZQA), intencionalmente, para no tener datos para nuestros nuevos cantones.
+
+```{r, message=FALSE}
+ids <- read_excel(
+  path = "IDS 2017.xlsx",
+  sheet = "IDS cantonal",
+  skip = 2
+) |> 
+clean_names() |> 
+select(codigo_canton = codigo, ids_2017)
+
+glimpse(ids)
+```
+
+## Paso 2: Unir nuestros datos
+
+En este caso siempre debemos recordar como se menciona en [**Actualizando el mapa de cantones de Costa Rica con R**](https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html) que debemos tener presente los posibles cambios de nombre de los cantones en el tiempo.
+
+```{r, message=FALSE}
+cantones <- left_join(cantones, ids)
+glimpse(cantones)
+```
+
+
+```{r, message=FALSE}
+ggplot(
+  data = cantones,
+  mapping = aes(
+    fill = ids_2017
+  )
+) +
+  geom_sf(color = "white", linewidth = 0.1) +
+  scale_fill_continuous(na.value = "red") +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom"
+  )
+```
+
+

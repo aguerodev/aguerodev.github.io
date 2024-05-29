@@ -2,6 +2,9 @@
   {
     "listing": "/index2.html",
     "items": [
+      "/posts/005_duckdb_intro.html",
+      "/posts/004_across_where.html",
+      "/posts/003_mapa_cantones_cr_p2.html",
       "/posts/002_custom_legend_ggplot2.html",
       "/posts/001_mapa_cantones_cr.html"
     ]
@@ -9,6 +12,9 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/005_duckdb_intro.html",
+      "/posts/004_across_where.html",
+      "/posts/003_mapa_cantones_cr_p2.html",
       "/posts/002_custom_legend_ggplot2.html",
       "/posts/001_mapa_cantones_cr.html"
     ]

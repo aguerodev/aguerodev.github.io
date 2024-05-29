@@ -56,76 +56,6 @@
     "text": "Notas\n\n\nRestuccia, Andrew, y Eliza Collins. 2024. “The Rough Years That Turned Gen Z Into America’s Most Disillusioned Voters.” The Wall Street Journal, March 15. https://archive.ph/0E2Bw (Leer publicación).↩︎"
   },
   {
-    "objectID": "courses/intro_shiny.html",
-    "href": "courses/intro_shiny.html",
-    "title": "Desarrollo de aplicaciones con shiny",
-    "section": "",
-    "text": "Foto de Luke Chesser en Unsplash"
-  },
-  {
-    "objectID": "courses/intro_shiny.html#qué-es-shiny",
-    "href": "courses/intro_shiny.html#qué-es-shiny",
-    "title": "Desarrollo de aplicaciones con shiny",
-    "section": "¿Qué es Shiny?",
-    "text": "¿Qué es Shiny?\nHasta hace poco tiempo, cuando un analista deseaba convertir sus modelos o análisis en una aplicación web, necesitaba colaborar estrechamente con un desarrollador web. Este proceso solía ser largo y tedioso, lleno de constantes intercambios hasta clarificar y concretar las ideas en una aplicación funcional.\nShiny es una herramienta gratuita y de código abierto que empodera a los analistas para crear aplicaciones web reactivas, elegantes y eficaces utilizando el lenguaje de programación que ya dominan. Con Shiny, puedes pasar rápidamente de tu idea a una aplicación totalmente funcional, aprovechando al máximo los recursos y códigos que ya has desarrollado. Para aprender más sobre Shiny y cómo puede transformar tu análisis en aplicaciones web interactivas, visita su sitio web oficial.\nEste curso está diseñado para desarrolladores y entusiastas que deseen aprender a crear aplicaciones web interactivas utilizando Shiny, una poderosa herramienta para R. A lo largo de este curso de 6 semanas, explorarás los fundamentos de la programación reactiva y la integración de mapas y gráficos interactivos, así como el despliegue eficiente de aplicaciones en shinyapps.io. Desarrollarás aplicaciones clave que no solo exhibirán tus habilidades técnicas, sino también tu capacidad para manejar y presentar datos de manera efectiva."
-  },
-  {
-    "objectID": "courses/intro_shiny.html#qué-aprenderás",
-    "href": "courses/intro_shiny.html#qué-aprenderás",
-    "title": "Desarrollo de aplicaciones con shiny",
-    "section": "¿Qué aprenderás?",
-    "text": "¿Qué aprenderás?\n\nFundamentos de Shiny y programación reactiva: Introducción a los conceptos básicos de Shiny y cómo manejar la interactividad en aplicaciones web.\nIntegración de mapas y gráficos interactivos: Aprenderás a visualizar datos de manera dinámica utilizando bibliotecas como Leaflet para mapas y Plotly para gráficos.\nDespliegue en shinyapps.io: Adquirirás habilidades para publicar y gestionar aplicaciones en la plataforma de hospedaje de Shiny, shinyapps.io.\nDesarrollo de aplicaciones específicas:\n\nApp de Encuestas: Conecta tu aplicación con Google Sheets para recopilar y analizar datos de encuestas.\nMonitor de precios para ferreterías: Crea una aplicación que monitoriza y compara precios de la competencia en tiempo real.\nComparador de precios de alquileres: Desarrolla una aplicación para evaluar y encontrar las mejores opciones de alquiler en el mercado.\n\nAutomatización y actualización de datos con GitHub Actions: Utiliza GitHub Actions para automatizar la extracción, limpieza e integración de datos, manteniendo tus aplicaciones actualizadas.\nGestión de bases de datos SQL con Supabase: Aprende a integrar y manipular bases de datos en SQL utilizando Supabase, una plataforma de backend como servicio que facilita el manejo de datos en la nube."
-  },
-  {
-    "objectID": "courses/intro_shiny.html#próxima-apertura",
-    "href": "courses/intro_shiny.html#próxima-apertura",
-    "title": "Desarrollo de aplicaciones con shiny",
-    "section": "Próxima apertura",
-    "text": "Próxima apertura\n\nFecha: miércoles 3 de julio de 2024\nLecciones: Todos los miércoles\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/intro_shiny.html#qué-obtendrás",
-    "href": "courses/intro_shiny.html#qué-obtendrás",
-    "title": "Desarrollo de aplicaciones con shiny",
-    "section": "¿Qué obtendrás?",
-    "text": "¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/intro_shiny.html#conoce-al-instructor",
-    "href": "courses/intro_shiny.html#conoce-al-instructor",
-    "title": "Desarrollo de aplicaciones con shiny",
-    "section": "Conoce al instructor",
-    "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina.\n\nSi tienes dudas conversemos:\nPuedes programar una 🎥 videollamada de 15 minutos con el instructor para revisar tus dudas sobre el curso en el siguiente enlace."
-  },
-  {
-    "objectID": "courses/intro_shiny.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "href": "courses/intro_shiny.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "title": "Desarrollo de aplicaciones con shiny",
-    "section": "Conoce lo que dicen nuestros estudiantes",
-    "text": "Conoce lo que dicen nuestros estudiantes"
-  },
-  {
-    "objectID": "courses/intro_shiny.html#contenido-del-curso",
-    "href": "courses/intro_shiny.html#contenido-del-curso",
-    "title": "Desarrollo de aplicaciones con shiny",
-    "section": "Contenido del curso",
-    "text": "Contenido del curso\n\n\nSemana 1: Introducción a Shiny y estructura básica\n\n\nIntroducción a Shiny y su importancia en el análisis de datos.\nEstructura básica de una aplicación Shiny: ui.R y server.R.\nConceptos de reactividad en Shiny.\nPráctica: Construcción de una aplicación que muestre un texto y un gráfico simple basado en una entrada del usuario.\n\n\n\n\nSemana 2: Layouts, temas y elementos HTML\n\n\nDiferentes layouts en Shiny: paneles, tabs, y grid layouts.\nPersonalización con CSS y temas predefinidos.\nUso de elementos HTML y etiquetas en aplicaciones Shiny.\nPráctica: Diseñar una aplicación con múltiples pestañas y un tema personalizado.\n\n\n\n\nSemana 3: Visualización de datos avanzada\n\n\nIntroducción a plotly para gráficos interactivos.\nUso de leaflet para mapas interactivos.\nPráctica: Desarrollar una aplicación que muestre el precio de alquileres en Costa Rica con filtros dinámicos y mapas interactivos.\n\n\n\n\nSemana 4: Manipulación de datos y UI dinámico\n\n\nCarga y manipulación de datos desde archivos Excel y CSV.\nCreación de componentes UI dinámicos.\nIntroducción al bookmarking en Shiny para guardar estados de la aplicación.\nPráctica: Crear una aplicación para cargar datos, analizarlos y visualizar resultados de manera dinámica.\n\n\n\n\nSemana 5: Módulos y bases de datos\n\n\nDiseño y uso de módulos en Shiny para reutilizar código.\nConexión con bases de datos en la nube, ejemplificando con Supabase.\nPráctica: Desarrollar una aplicación que use módulos y se conecte a una base de datos en la nube para realizar operaciones CRUD (crear, leer, actualizar, borrar).\n\n\n\n\nSemana 6: Proyecto final y despliegue\n\n\nRevisión de conceptos clave y mejores prácticas en Shiny.\nDespliegue de aplicaciones Shiny usando shinyapps.io.\nPráctica: Crear y desplegar un proyecto final que compare precios de productos entre diferentes supermercados.\n\n\nEste programa proporcionará una base sólida en el desarrollo de aplicaciones web interactivas con R y Shiny, enfocándose en casos prácticos y aplicables en el mundo real."
-  },
-  {
-    "objectID": "courses/intro_shiny.html#inscribirte-ahora",
-    "href": "courses/intro_shiny.html#inscribirte-ahora",
-    "title": "Desarrollo de aplicaciones con shiny",
-    "section": "Inscribirte ahora",
-    "text": "Inscribirte ahora\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD.\n\nInscribirte ahora"
-  },
-  {
-    "objectID": "courses/intro_shiny.html#ponte-en-contacto",
-    "href": "courses/intro_shiny.html#ponte-en-contacto",
-    "title": "Desarrollo de aplicaciones con shiny",
-    "section": "Ponte en contacto",
-    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
-  },
-  {
     "objectID": "courses/r4ds.html",
     "href": "courses/r4ds.html",
     "title": "Curso: R para ciencia de datos",
@@ -161,13 +91,6 @@
     "text": "Estudiantes de pregrado\nPensado para estudiantes de pregrado que buscan prepararse desde ya para trabajar en el mundo de los datos.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nPrecio: $30 USD\n\nInscribirte ahora"
   },
   {
-    "objectID": "courses/r4ds.html#acceso-de-la-comunidad",
-    "href": "courses/r4ds.html#acceso-de-la-comunidad",
-    "title": "Curso: R para ciencia de datos",
-    "section": "Acceso de la comunidad",
-    "text": "Acceso de la comunidad\nNos esforzamos por facilitar el acceso a este curso para miembros de la comunidad de R que enfrentan barreras financieras o técnicas para realizar pagos en línea, además de apoyar a personas de grupos históricamente subrepresentados en STEM.\n\n¿Qué obtendrás?\n\n12 clases en vivo via Zoom de 2 horas cada una.\nAsistencia por correo electrónico.\nPrecio: Totalmente Gratis.\n\nInscribirte ahora"
-  },
-  {
     "objectID": "courses/r4ds.html#conoce-al-instructor",
     "href": "courses/r4ds.html#conoce-al-instructor",
     "title": "Curso: R para ciencia de datos",
@@ -199,6 +122,69 @@
     "objectID": "courses/r4ds.html#ponte-en-contacto",
     "href": "courses/r4ds.html#ponte-en-contacto",
     "title": "Curso: R para ciencia de datos",
+    "section": "Ponte en contacto",
+    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html",
+    "href": "courses/avz_ggplot2.html",
+    "title": "Visualización de datos con ggplot2",
+    "section": "",
+    "text": "Foto de Markus Spiske en Unsplash\nTodos comenzamos con ggplot2 creando gráficos básicos, pero llega un punto donde deseamos más. ¿Cómo lograr que nuestras visualizaciones luzcan profesionales? ¿Cómo adaptarlas al estilo de nuestra empresa? Este curso te lleva al siguiente nivel con ggplot2. Aprende su funcionamiento a fondo y practica replicando gráficos de grandes medios como The Economist, The New York Times, The Washington Post, entre otros. ¡Prepárate para crear visualizaciones impactantes y con estilo propio!"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#en-este-curso-aprenderás-a",
+    "href": "courses/avz_ggplot2.html#en-este-curso-aprenderás-a",
+    "title": "Visualización de datos con ggplot2",
+    "section": "En este curso, aprenderás a:",
+    "text": "En este curso, aprenderás a:\n\nPersonalizar gráficos con themes y anotaciones: Crea estilos únicos, resalta información clave y haz que tus gráficos sean fáciles de leer.\nControlar escalas y guías: Ajusta la apariencia de ejes y leyendas para una comunicación efectiva de la información.\nExplorar sistemas de coordenadas y facetado: Crea visualizaciones especializadas y compara subconjuntos de datos con facilidad.\nAutomatizar tareas con programación funcional: Optimiza tu flujo de trabajo y crea gráficos de forma eficiente.\nReplicar gráficos de medios de renombre: Aprende de los mejores y aplica técnicas avanzadas para visualizaciones impactantes."
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#próxima-apertura",
+    "href": "courses/avz_ggplot2.html#próxima-apertura",
+    "title": "Visualización de datos con ggplot2",
+    "section": "Próxima apertura",
+    "text": "Próxima apertura\n\nDuración: 6 semanas\nFecha de inicio: martes 4 de junio de 2024\nLecciones: Todos los martes\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#qué-obtendrás",
+    "href": "courses/avz_ggplot2.html#qué-obtendrás",
+    "title": "Visualización de datos con ggplot2",
+    "section": "¿Qué obtendrás?",
+    "text": "¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#conoce-al-instructor",
+    "href": "courses/avz_ggplot2.html#conoce-al-instructor",
+    "title": "Visualización de datos con ggplot2",
+    "section": "Conoce al instructor",
+    "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina."
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "href": "courses/avz_ggplot2.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "title": "Visualización de datos con ggplot2",
+    "section": "Conoce lo que dicen nuestros estudiantes",
+    "text": "Conoce lo que dicen nuestros estudiantes"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#contenido-del-curso",
+    "href": "courses/avz_ggplot2.html#contenido-del-curso",
+    "title": "Visualización de datos con ggplot2",
+    "section": "Contenido del curso",
+    "text": "Contenido del curso\n\n\nSemana 1: Refresca tus conocimientos\n\n\nRecordaremos los fundamentos de ggplot2: cómo construir un gráfico a partir de datos, estética, objetos geométricos (puntos, líneas, barras), transformaciones estadísticas, escalas, sistemas de coordenadas, facetado y temas.\nPracticaremos con diferentes tipos de gráficos, desde los básicos como scatterplots y histogramas, hasta mapas y gráficos más complejos.\nAprenderás a personalizar tus gráficos con themes y etiquetas con labs() para un aspecto más pulido.\n\n\n\n\nSemana 2: Personaliza tu estilo\n\n\nDescubrirás el poder del sistema de themes de ggplot2, controlando cada detalle visual, desde el fondo hasta las fuentes y los colores. Aprenderás a crear tus propios themes para un estilo consistente en tus visualizaciones o para adaptarte a las guías de estilo de publicaciones.\nAgregarás anotaciones como texto, etiquetas, rectángulos y líneas para resaltar información importante y hacer tus gráficos más fáciles de leer.\nDominarás el “direct labelling” para etiquetar directamente puntos o grupos de datos, evitando leyendas abarrotadas.\n\n\n\n\nSemana 3: Dale sentido a tus datos\n\n\nAprenderás cómo las escalas y guías (ejes y leyendas) ayudan a interpretar la información visual y cómo ajustarlas para una mejor comunicación.\nExploraremos diferentes tipos de escalas: continuas, discretas, agrupadas y de fecha/hora, y cómo elegir la adecuada para tus datos.\nPersonalizarás la apariencia de las guías con funciones específicas y controlarás cada detalle, desde el color de los ejes hasta el tamaño de las leyendas.\nAprenderás a transformar escalas para resaltar patrones en tus datos y a combinar o separar leyendas para una mejor claridad.\n\n\n\n\nSemana 4: Ajusta la perspectiva\n\n\nDescubrirás cómo los sistemas de coordenadas cambian la forma en que se visualizan los datos, desde el sistema cartesiano estándar hasta coordenadas polares y proyecciones de mapas.\nAprenderás a utilizar herramientas como coord_cartesian() para hacer zoom, coord_flip() para intercambiar ejes y coord_fixed() para fijar la relación de aspecto.\nDominarás el facetado para dividir tus datos en múltiples gráficos y comparar patrones entre grupos o subconjuntos. Controlarás las escalas en gráficos facetados y utilizarás anotaciones para facilitar las comparaciones.\n\n\n\n\nSemana 5: Automatiza tu flujo de trabajo\n\n\nAprenderás a escribir funciones para generar componentes de ggplot2, como geoms, escalas y themes, para evitar la repetición de código y aumentar la eficiencia.\nCrearás funciones para generar gráficos completos, como gráficos circulares y diagramas de coordenadas paralelas, con un solo comando.\nUtilizaremos el paquete purrr para aplicar la programación funcional a ggplot2, iterando sobre datos y componentes para automatizar tareas.\n\n\n\n\nSemana 6: Inspírate en los mejores\n\n\nAnalizaremos gráficos de medios de renombre como The Economist, The Washington Post y The New York Times para identificar técnicas avanzadas y decisiones de diseño efectivas.\nPondremos en práctica todo lo aprendido para replicar estos gráficos, utilizando herramientas como patchwork para combinar múltiples visualizaciones y purrr para automatizar el proceso.\nTe enfrentarás al desafío de replicar un gráfico complejo de tu elección, mostrando tus habilidades de personalización y automatización."
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#inscribirte-ahora",
+    "href": "courses/avz_ggplot2.html#inscribirte-ahora",
+    "title": "Visualización de datos con ggplot2",
+    "section": "Inscribirte ahora",
+    "text": "Inscribirte ahora\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#ponte-en-contacto",
+    "href": "courses/avz_ggplot2.html#ponte-en-contacto",
+    "title": "Visualización de datos con ggplot2",
     "section": "Ponte en contacto",
     "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
   },
@@ -280,9 +266,9 @@
     "text": "Foto de Pineapple Supply Co. en Unsplash"
   },
   {
-    "objectID": "confirmacion.html#excelente-tu-formulario-de-inscripción-al-curso-ha-sido-enviado-con-éxito.-en-unos-minutos-recibirás-un-correo-electrónico-o-un-mensaje-de-whatsapp-con-más-información.-nos-vemos-en-clase",
-    "href": "confirmacion.html#excelente-tu-formulario-de-inscripción-al-curso-ha-sido-enviado-con-éxito.-en-unos-minutos-recibirás-un-correo-electrónico-o-un-mensaje-de-whatsapp-con-más-información.-nos-vemos-en-clase",
-    "title": "Inscripción exitosa",
+    "objectID": "confirmacion.html#excelente-tu-formulario-de-inscripción-ha-sido-enviado-con-éxito.-en-unos-minutos-recibirás-un-correo-electrónico-o-un-mensaje-de-whatsapp-con-más-información.-nos-vemos-en-clase",
+    "href": "confirmacion.html#excelente-tu-formulario-de-inscripción-ha-sido-enviado-con-éxito.-en-unos-minutos-recibirás-un-correo-electrónico-o-un-mensaje-de-whatsapp-con-más-información.-nos-vemos-en-clase",
+    "title": "Aprende Tidyverse",
     "section": "",
     "text": "Foto de Pineapple Supply Co. en Unsplash"
   },
@@ -420,65 +406,72 @@
     "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
   },
   {
-    "objectID": "courses/avz_ggplot2.html",
-    "href": "courses/avz_ggplot2.html",
-    "title": "Visualización de datos con ggplot2",
+    "objectID": "courses/intro_shiny.html",
+    "href": "courses/intro_shiny.html",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "",
-    "text": "Foto de Markus Spiske en Unsplash\nTodos comenzamos con ggplot2 creando gráficos básicos, pero llega un punto donde deseamos más. ¿Cómo lograr que nuestras visualizaciones luzcan profesionales? ¿Cómo adaptarlas al estilo de nuestra empresa? Este curso te lleva al siguiente nivel con ggplot2. Aprende su funcionamiento a fondo y practica replicando gráficos de grandes medios como The Economist, The New York Times, The Washington Post, entre otros. ¡Prepárate para crear visualizaciones impactantes y con estilo propio!"
+    "text": "Foto de Luke Chesser en Unsplash"
   },
   {
-    "objectID": "courses/avz_ggplot2.html#en-este-curso-aprenderás-a",
-    "href": "courses/avz_ggplot2.html#en-este-curso-aprenderás-a",
-    "title": "Visualización de datos con ggplot2",
-    "section": "En este curso, aprenderás a:",
-    "text": "En este curso, aprenderás a:\n\nPersonalizar gráficos con themes y anotaciones: Crea estilos únicos, resalta información clave y haz que tus gráficos sean fáciles de leer.\nControlar escalas y guías: Ajusta la apariencia de ejes y leyendas para una comunicación efectiva de la información.\nExplorar sistemas de coordenadas y facetado: Crea visualizaciones especializadas y compara subconjuntos de datos con facilidad.\nAutomatizar tareas con programación funcional: Optimiza tu flujo de trabajo y crea gráficos de forma eficiente.\nReplicar gráficos de medios de renombre: Aprende de los mejores y aplica técnicas avanzadas para visualizaciones impactantes."
+    "objectID": "courses/intro_shiny.html#qué-es-shiny",
+    "href": "courses/intro_shiny.html#qué-es-shiny",
+    "title": "Desarrollo de aplicaciones con shiny",
+    "section": "¿Qué es Shiny?",
+    "text": "¿Qué es Shiny?\nHasta hace poco tiempo, cuando un analista deseaba convertir sus modelos o análisis en una aplicación web, necesitaba colaborar estrechamente con un desarrollador web. Este proceso solía ser largo y tedioso, lleno de constantes intercambios hasta clarificar y concretar las ideas en una aplicación funcional.\nShiny es una herramienta gratuita y de código abierto que empodera a los analistas para crear aplicaciones web reactivas, elegantes y eficaces utilizando el lenguaje de programación que ya dominan. Con Shiny, puedes pasar rápidamente de tu idea a una aplicación totalmente funcional, aprovechando al máximo los recursos y códigos que ya has desarrollado. Para aprender más sobre Shiny y cómo puede transformar tu análisis en aplicaciones web interactivas, visita su sitio web oficial.\nEste curso está diseñado para desarrolladores y entusiastas que deseen aprender a crear aplicaciones web interactivas utilizando Shiny, una poderosa herramienta para R. A lo largo de este curso de 6 semanas, explorarás los fundamentos de la programación reactiva y la integración de mapas y gráficos interactivos, así como el despliegue eficiente de aplicaciones en shinyapps.io. Desarrollarás aplicaciones clave que no solo exhibirán tus habilidades técnicas, sino también tu capacidad para manejar y presentar datos de manera efectiva."
   },
   {
-    "objectID": "courses/avz_ggplot2.html#próxima-apertura",
-    "href": "courses/avz_ggplot2.html#próxima-apertura",
-    "title": "Visualización de datos con ggplot2",
+    "objectID": "courses/intro_shiny.html#qué-aprenderás",
+    "href": "courses/intro_shiny.html#qué-aprenderás",
+    "title": "Desarrollo de aplicaciones con shiny",
+    "section": "¿Qué aprenderás?",
+    "text": "¿Qué aprenderás?\n\nFundamentos de Shiny y programación reactiva: Introducción a los conceptos básicos de Shiny y cómo manejar la interactividad en aplicaciones web.\nIntegración de mapas y gráficos interactivos: Aprenderás a visualizar datos de manera dinámica utilizando bibliotecas como Leaflet para mapas y Plotly para gráficos.\nDespliegue en shinyapps.io: Adquirirás habilidades para publicar y gestionar aplicaciones en la plataforma de hospedaje de Shiny, shinyapps.io.\nDesarrollo de aplicaciones específicas:\n\nApp de Encuestas: Conecta tu aplicación con Google Sheets para recopilar y analizar datos de encuestas.\nMonitor de precios para ferreterías: Crea una aplicación que monitoriza y compara precios de la competencia en tiempo real.\nComparador de precios de alquileres: Desarrolla una aplicación para evaluar y encontrar las mejores opciones de alquiler en el mercado.\n\nAutomatización y actualización de datos con GitHub Actions: Utiliza GitHub Actions para automatizar la extracción, limpieza e integración de datos, manteniendo tus aplicaciones actualizadas.\nGestión de bases de datos SQL con Supabase: Aprende a integrar y manipular bases de datos en SQL utilizando Supabase, una plataforma de backend como servicio que facilita el manejo de datos en la nube."
+  },
+  {
+    "objectID": "courses/intro_shiny.html#próxima-apertura",
+    "href": "courses/intro_shiny.html#próxima-apertura",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "Próxima apertura",
-    "text": "Próxima apertura\n\nDuración: 6 semanas\nFecha de inicio: martes 4 de junio de 2024\nLecciones: Todos los martes\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD\n\nInscribirte ahora"
+    "text": "Próxima apertura\n\nFecha: miércoles 3 de julio de 2024\nLecciones: Todos los miércoles\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD\n\nInscribirte ahora"
   },
   {
-    "objectID": "courses/avz_ggplot2.html#qué-obtendrás",
-    "href": "courses/avz_ggplot2.html#qué-obtendrás",
-    "title": "Visualización de datos con ggplot2",
+    "objectID": "courses/intro_shiny.html#qué-obtendrás",
+    "href": "courses/intro_shiny.html#qué-obtendrás",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "¿Qué obtendrás?",
     "text": "¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD\n\nInscribirte ahora"
   },
   {
-    "objectID": "courses/avz_ggplot2.html#conoce-al-instructor",
-    "href": "courses/avz_ggplot2.html#conoce-al-instructor",
-    "title": "Visualización de datos con ggplot2",
+    "objectID": "courses/intro_shiny.html#conoce-al-instructor",
+    "href": "courses/intro_shiny.html#conoce-al-instructor",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "Conoce al instructor",
-    "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina."
+    "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina.\n\nSi tienes dudas conversemos:\nPuedes programar una 🎥 videollamada de 15 minutos con el instructor para revisar tus dudas sobre el curso en el siguiente enlace."
   },
   {
-    "objectID": "courses/avz_ggplot2.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "href": "courses/avz_ggplot2.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "title": "Visualización de datos con ggplot2",
+    "objectID": "courses/intro_shiny.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "href": "courses/intro_shiny.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "Conoce lo que dicen nuestros estudiantes",
     "text": "Conoce lo que dicen nuestros estudiantes"
   },
   {
-    "objectID": "courses/avz_ggplot2.html#contenido-del-curso",
-    "href": "courses/avz_ggplot2.html#contenido-del-curso",
-    "title": "Visualización de datos con ggplot2",
+    "objectID": "courses/intro_shiny.html#contenido-del-curso",
+    "href": "courses/intro_shiny.html#contenido-del-curso",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "Contenido del curso",
-    "text": "Contenido del curso\n\n\nSemana 1: Refresca tus conocimientos\n\n\nRecordaremos los fundamentos de ggplot2: cómo construir un gráfico a partir de datos, estética, objetos geométricos (puntos, líneas, barras), transformaciones estadísticas, escalas, sistemas de coordenadas, facetado y temas.\nPracticaremos con diferentes tipos de gráficos, desde los básicos como scatterplots y histogramas, hasta mapas y gráficos más complejos.\nAprenderás a personalizar tus gráficos con themes y etiquetas con labs() para un aspecto más pulido.\n\n\n\n\nSemana 2: Personaliza tu estilo\n\n\nDescubrirás el poder del sistema de themes de ggplot2, controlando cada detalle visual, desde el fondo hasta las fuentes y los colores. Aprenderás a crear tus propios themes para un estilo consistente en tus visualizaciones o para adaptarte a las guías de estilo de publicaciones.\nAgregarás anotaciones como texto, etiquetas, rectángulos y líneas para resaltar información importante y hacer tus gráficos más fáciles de leer.\nDominarás el “direct labelling” para etiquetar directamente puntos o grupos de datos, evitando leyendas abarrotadas.\n\n\n\n\nSemana 3: Dale sentido a tus datos\n\n\nAprenderás cómo las escalas y guías (ejes y leyendas) ayudan a interpretar la información visual y cómo ajustarlas para una mejor comunicación.\nExploraremos diferentes tipos de escalas: continuas, discretas, agrupadas y de fecha/hora, y cómo elegir la adecuada para tus datos.\nPersonalizarás la apariencia de las guías con funciones específicas y controlarás cada detalle, desde el color de los ejes hasta el tamaño de las leyendas.\nAprenderás a transformar escalas para resaltar patrones en tus datos y a combinar o separar leyendas para una mejor claridad.\n\n\n\n\nSemana 4: Ajusta la perspectiva\n\n\nDescubrirás cómo los sistemas de coordenadas cambian la forma en que se visualizan los datos, desde el sistema cartesiano estándar hasta coordenadas polares y proyecciones de mapas.\nAprenderás a utilizar herramientas como coord_cartesian() para hacer zoom, coord_flip() para intercambiar ejes y coord_fixed() para fijar la relación de aspecto.\nDominarás el facetado para dividir tus datos en múltiples gráficos y comparar patrones entre grupos o subconjuntos. Controlarás las escalas en gráficos facetados y utilizarás anotaciones para facilitar las comparaciones.\n\n\n\n\nSemana 5: Automatiza tu flujo de trabajo\n\n\nAprenderás a escribir funciones para generar componentes de ggplot2, como geoms, escalas y themes, para evitar la repetición de código y aumentar la eficiencia.\nCrearás funciones para generar gráficos completos, como gráficos circulares y diagramas de coordenadas paralelas, con un solo comando.\nUtilizaremos el paquete purrr para aplicar la programación funcional a ggplot2, iterando sobre datos y componentes para automatizar tareas.\n\n\n\n\nSemana 6: Inspírate en los mejores\n\n\nAnalizaremos gráficos de medios de renombre como The Economist, The Washington Post y The New York Times para identificar técnicas avanzadas y decisiones de diseño efectivas.\nPondremos en práctica todo lo aprendido para replicar estos gráficos, utilizando herramientas como patchwork para combinar múltiples visualizaciones y purrr para automatizar el proceso.\nTe enfrentarás al desafío de replicar un gráfico complejo de tu elección, mostrando tus habilidades de personalización y automatización."
+    "text": "Contenido del curso\n\n\nSemana 1: Introducción a Shiny y estructura básica\n\n\nIntroducción a Shiny y su importancia en el análisis de datos.\nEstructura básica de una aplicación Shiny: ui.R y server.R.\nConceptos de reactividad en Shiny.\nPráctica: Construcción de una aplicación que muestre un texto y un gráfico simple basado en una entrada del usuario.\n\n\n\n\nSemana 2: Layouts, temas y elementos HTML\n\n\nDiferentes layouts en Shiny: paneles, tabs, y grid layouts.\nPersonalización con CSS y temas predefinidos.\nUso de elementos HTML y etiquetas en aplicaciones Shiny.\nPráctica: Diseñar una aplicación con múltiples pestañas y un tema personalizado.\n\n\n\n\nSemana 3: Visualización de datos avanzada\n\n\nIntroducción a plotly para gráficos interactivos.\nUso de leaflet para mapas interactivos.\nPráctica: Desarrollar una aplicación que muestre el precio de alquileres en Costa Rica con filtros dinámicos y mapas interactivos.\n\n\n\n\nSemana 4: Manipulación de datos y UI dinámico\n\n\nCarga y manipulación de datos desde archivos Excel y CSV.\nCreación de componentes UI dinámicos.\nIntroducción al bookmarking en Shiny para guardar estados de la aplicación.\nPráctica: Crear una aplicación para cargar datos, analizarlos y visualizar resultados de manera dinámica.\n\n\n\n\nSemana 5: Módulos y bases de datos\n\n\nDiseño y uso de módulos en Shiny para reutilizar código.\nConexión con bases de datos en la nube, ejemplificando con Supabase.\nPráctica: Desarrollar una aplicación que use módulos y se conecte a una base de datos en la nube para realizar operaciones CRUD (crear, leer, actualizar, borrar).\n\n\n\n\nSemana 6: Proyecto final y despliegue\n\n\nRevisión de conceptos clave y mejores prácticas en Shiny.\nDespliegue de aplicaciones Shiny usando shinyapps.io.\nPráctica: Crear y desplegar un proyecto final que compare precios de productos entre diferentes supermercados.\n\n\nEste programa proporcionará una base sólida en el desarrollo de aplicaciones web interactivas con R y Shiny, enfocándose en casos prácticos y aplicables en el mundo real."
   },
   {
-    "objectID": "courses/avz_ggplot2.html#inscribirte-ahora",
-    "href": "courses/avz_ggplot2.html#inscribirte-ahora",
-    "title": "Visualización de datos con ggplot2",
+    "objectID": "courses/intro_shiny.html#inscribirte-ahora",
+    "href": "courses/intro_shiny.html#inscribirte-ahora",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "Inscribirte ahora",
-    "text": "Inscribirte ahora\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD\n\nInscribirte ahora"
+    "text": "Inscribirte ahora\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD.\n\nInscribirte ahora"
   },
   {
-    "objectID": "courses/avz_ggplot2.html#ponte-en-contacto",
-    "href": "courses/avz_ggplot2.html#ponte-en-contacto",
-    "title": "Visualización de datos con ggplot2",
+    "objectID": "courses/intro_shiny.html#ponte-en-contacto",
+    "href": "courses/intro_shiny.html#ponte-en-contacto",
+    "title": "Desarrollo de aplicaciones con shiny",
     "section": "Ponte en contacto",
     "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
   },
@@ -581,10 +574,52 @@
     "text": "Notas\n\n\nDelfino.cr. (26 de abril de 2018). Expediente 20787: Reforma y Adiciones a la Ley N° 9440, Creación del Cantón XVI Río Cuarto de la Provincia de Alajuela, de 20 de Mayo de 2017. Delfino.cr. Leer más↩︎\nDelfino.cr. (25 de septiembre de 2019). Expediente 21618: Creación del Cantón de Monteverde, Cantón XII de la Provincia de Puntarenas. Delfino.cr. Leer más↩︎\nDelfino.cr. (21 de octubre de 2021). Expediente 22749: Creación del Cantón de Puerto Jiménez, Cantón XIII de la Provincia de Puntarenas. Delfino.cr. Leer más↩︎\nRepública de Costa Rica. (16 de junio de 2010). Ley N° 8808: Declara oficial para efectos administrativos, la aprobación de la División Territorial Administrativa de la República N° 41548-MGP [Cambio de nombre del cantón de Alfaro Ruiz a Zarcero]. La Gaceta, N° 116. Leer más↩︎\nDelfino.cr. (11 de febrero de 2015). Expediente 19469: Cambio de Denominación del Cantón XII, Valverde Vega, de la Provincia de Alajuela, para que en Adelante se Denomine Sarchí. Delfino.cr. Leer más↩︎\nPresidencia de la República de Costa Rica. (11 de febrero de 2015). Cambio de nombre del Cantón VI de la provincia de Puntarenas para que en adelante se denomine Quepos. Recuperado de Leer más↩︎\nSan José, 20 de febrero del 2024 MIDEPLAN-DM-OF-0277-2024 A: Directorio Legislativo, Jefaturas de Fracción, Asamblea Legislativa de Costa Rica Asunto: Opinión de MIDEPLAN sobre el Primer Debate del Proyecto de Ley N°22.643, “Creación del Cantón Colorado, Cantón Duodécimo de la Provincia de Guanacaste”. Disponible en: enlace↩︎\nDelfino.cr. (19 de febrero de 2024). Expediente 22643: Creación del Cantón Colorado, Cantón Duodécimo de la Provincia de Guanacaste. Delfino.cr. Leer más↩︎"
   },
   {
-    "objectID": "confirmacion.html#excelente-tu-formulario-de-inscripción-ha-sido-enviado-con-éxito.-en-unos-minutos-recibirás-un-correo-electrónico-o-un-mensaje-de-whatsapp-con-más-información.-nos-vemos-en-clase",
-    "href": "confirmacion.html#excelente-tu-formulario-de-inscripción-ha-sido-enviado-con-éxito.-en-unos-minutos-recibirás-un-correo-electrónico-o-un-mensaje-de-whatsapp-con-más-información.-nos-vemos-en-clase",
-    "title": "Aprende Tidyverse",
+    "objectID": "posts/003_mapa_cantones_cr_p2.html",
+    "href": "posts/003_mapa_cantones_cr_p2.html",
+    "title": "Manipulando el mapa de los cantones y distritos de Costa Rica con R",
     "section": "",
-    "text": "Foto de Pineapple Supply Co. en Unsplash"
+    "text": "Hace un par de semanas, en nuestras sesiones de consultas los domingos a las 6 p.m., nos plantearon el siguiente problema: ¿qué pasa si, al descargar el mapa actualizado, como vimos en el post anterior, mis datos no están actualizados? Dicho de otra forma, en mi mapa existen los nuevos cantones como Río Cuarto, Puerto Jiménez y Monteverde, pero no en mis datos, y esas zonas aparecerán en gris. Bueno, en esta guía veremos paso a paso cómo regresar el mapa a la forma que tenía en 2017, uniendo estos nuevos cantones al cantón al que pertenecían, y así poder visualizar nuestro mapa sin regiones sin datos. Esto nos servirá también para crear nuestras propias agrupaciones de áreas, por ejemplo, un mapa de las regiones socioeconómicas de Costa Rica."
+  },
+  {
+    "objectID": "posts/004_cross_where_tus_nuevos_amigos.html",
+    "href": "posts/004_cross_where_tus_nuevos_amigos.html",
+    "title": "across y where tus dos nuevos mejores amigos a la hora de manipular datos con R.",
+    "section": "",
+    "text": "Cómo citarBibTeX@online{aguero2024,\n  author = {Aguero, Carlos},\n  title = {`across` y `where` tus dos nuevos mejores amigos a la hora de\n    manipular datos con R.},\n  date = {2024-05-29},\n  url = {https://aprendetidyverse.com/posts/004_cross_where_tus_nuevos_amigos.html},\n  langid = {es}\n}\nPor favor, cita este trabajo como:\nAguero, Carlos. 2024. “`across` y `where` tus dos nuevos mejores\namigos a la hora de manipular datos con R.” May 29, 2024. https://aprendetidyverse.com/posts/004_cross_where_tus_nuevos_amigos.html."
+  },
+  {
+    "objectID": "posts/004_across_where.html",
+    "href": "posts/004_across_where.html",
+    "title": "Funciones across y where tus dos nuevos mejores amigos a la hora de manipular datos con R.",
+    "section": "",
+    "text": "Cómo citarBibTeX@online{aguero2024,\n  author = {Aguero, Carlos},\n  title = {Funciones `across` y `where` tus dos nuevos mejores amigos a\n    la hora de manipular datos con R.},\n  date = {2024-05-30},\n  url = {https://aprendetidyverse.com/posts/004_across_where.html},\n  langid = {es}\n}\nPor favor, cita este trabajo como:\nAguero, Carlos. 2024. “Funciones `across` y `where` tus dos nuevos\nmejores amigos a la hora de manipular datos con R.” May 30, 2024.\nhttps://aprendetidyverse.com/posts/004_across_where.html."
+  },
+  {
+    "objectID": "posts/005_duckdb_intro.html",
+    "href": "posts/005_duckdb_intro.html",
+    "title": "DuckDB: La Base de Datos que Simplemente Funciona 🚀",
+    "section": "",
+    "text": "Cómo citarBibTeX@online{aguero2024,\n  author = {Aguero, Carlos},\n  title = {DuckDB: La Base de Datos que Simplemente Funciona 🚀},\n  date = {2024-05-31},\n  url = {https://aprendetidyverse.com/posts/005_duckdb_intro.html},\n  langid = {es}\n}\nPor favor, cita este trabajo como:\nAguero, Carlos. 2024. “DuckDB: La Base de Datos que Simplemente\nFunciona 🚀.” May 31, 2024. https://aprendetidyverse.com/posts/005_duckdb_intro.html."
+  },
+  {
+    "objectID": "posts/003_mapa_cantones_cr_p2.html#footnotes",
+    "href": "posts/003_mapa_cantones_cr_p2.html#footnotes",
+    "title": "Manipulando el mapa de los cantones y distritos de Costa Rica con R",
+    "section": "Notas",
+    "text": "Notas\n\n\nCosta Rica. Decreto Ejecutivo N° 9501. Reforma División Regional del Territorio de Costa Rica, para los Efectos de Investigación y Planificación del Desarrollo Socioeconómico. (11 de febrero de 2015). Procuraduría General de la República. Leer más↩︎"
+  },
+  {
+    "objectID": "posts/003_mapa_cantones_cr_p2.html#paso-1-cargar-nuestros-datos",
+    "href": "posts/003_mapa_cantones_cr_p2.html#paso-1-cargar-nuestros-datos",
+    "title": "Manipulando el mapa de los cantones y distritos de Costa Rica con R",
+    "section": "Paso 1: Cargar nuestros datos",
+    "text": "Paso 1: Cargar nuestros datos\nEn este caso, asumiremos que ya leíste y ejecutaste lo visto en Actualizando el mapa de cantones de Costa Rica con R, así que importaremos directamente el archivo cantones.geojson.\n\nlibrary(tidyverse)\nlibrary(readxl)\nlibrary(sf)\nlibrary(janitor)\n\ncantones &lt;- read_sf(\"cantones.geojson\") |&gt; \n  clean_names() |&gt; \n  mutate(codigo_canton = as.character(codigo_canton))\n\nglimpse(cantones)\n\nRows: 84\nColumns: 5\n$ codigo_de_provincia &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…\n$ canton              &lt;chr&gt; \"San José\", \"Escazú\", \"Desamparados\", \"Puriscal\", …\n$ provincia           &lt;chr&gt; \"San José\", \"San José\", \"San José\", \"San José\", \"S…\n$ codigo_canton       &lt;chr&gt; \"101\", \"102\", \"103\", \"104\", \"105\", \"106\", \"107\", \"…\n$ geometry            &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-84.15569 9..., MULTI…\n\n\nPor otro lado, utilizaremos los datos del IDS de Mideplan de 2017, intencionalmente, para no tener datos para nuestros nuevos cantones.\n\nids &lt;- read_excel(\n  path = \"IDS 2017.xlsx\",\n  sheet = \"IDS cantonal\",\n  skip = 2\n) |&gt; \nclean_names() |&gt; \nselect(codigo_canton = codigo, ids_2017)\n\nglimpse(ids)\n\nRows: 83\nColumns: 2\n$ codigo_canton &lt;chr&gt; \"102\", \"409\", \"407\", \"115\", \"408\", \"406\", \"118\", \"109\", …\n$ ids_2017      &lt;dbl&gt; 100.00000, 99.93229, 98.10882, 96.76766, 96.70938, 91.37…"
+  },
+  {
+    "objectID": "posts/003_mapa_cantones_cr_p2.html#paso-2-unir-nuestros-datos",
+    "href": "posts/003_mapa_cantones_cr_p2.html#paso-2-unir-nuestros-datos",
+    "title": "Manipulando el mapa de los cantones y distritos de Costa Rica con R",
+    "section": "Paso 2: Unir nuestros datos",
+    "text": "Paso 2: Unir nuestros datos\nEn este caso siempre debemos recordar como se menciona en Actualizando el mapa de cantones de Costa Rica con R que debemos tener presente los posibles cambios de nombre de los cantones en el tiempo.\n\ncantones &lt;- left_join(cantones, ids)\nglimpse(cantones)\n\nRows: 84\nColumns: 6\n$ codigo_de_provincia &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…\n$ canton              &lt;chr&gt; \"San José\", \"Escazú\", \"Desamparados\", \"Puriscal\", …\n$ provincia           &lt;chr&gt; \"San José\", \"San José\", \"San José\", \"San José\", \"S…\n$ codigo_canton       &lt;chr&gt; \"101\", \"102\", \"103\", \"104\", \"105\", \"106\", \"107\", \"…\n$ geometry            &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-84.15569 9..., MULTI…\n$ ids_2017            &lt;dbl&gt; 75.39888, 100.00000, 71.88500, 53.31167, 23.69962,…\n\n\n\nggplot(\n  data = cantones,\n  mapping = aes(\n    fill = ids_2017\n  )\n) +\n  geom_sf(color = \"white\", linewidth = 0.1) +\n  scale_fill_continuous(na.value = \"red\") +\n  theme_minimal() +\n  theme(\n    legend.position = \"bottom\"\n  )"
   }
 ]

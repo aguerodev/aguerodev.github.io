@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="">
+<meta name="author" content="Carlos Aguero">
+<meta name="description" content="Descubre cómo across y where pueden transformar tu forma de trabajar con datos en R. Estas funciones facilitan la manipulación y transformación de múltiples columnas de forma simultánea y selectiva, ahorrándote tiempo y esfuerzo. Aprende a usarlas y lleva tu análisis de datos al siguiente nivel.">
 
-<title>Aprende Tidyverse</title>
+<title>Aprende Tidyverse – &lt;code&gt;across&lt;/code&gt; y &lt;code&gt;where&lt;/code&gt; tus dos nuevos mejores amigos a la hora de manipular datos con R.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,29 +25,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.ico" rel="icon">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,35 +73,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7HH46G4FS3"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -131,56 +101,29 @@ cookieconsent.run({
 </script> 
   
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="alternate" type="application/rss+xml" title="Aprende Tidyverse" href="index2.xml" data-external="1"><meta property="og:title" content="Aprende Tidyverse">
-<meta property="og:description" content="">
+<meta property="og:title" content="across y where tus dos nuevos mejores amigos a la hora de manipular datos con R.">
+<meta property="og:description" content="Descubre cómo across y where pueden transformar tu forma de trabajar con datos en R. Estas funciones facilitan la manipulación y transformación de múltiples columnas de forma simultánea y selectiva, ahorrándote tiempo y esfuerzo. Aprende a usarlas y lleva tu análisis de datos al siguiente nivel.">
+<meta property="og:image" content="https://dplyr-wisely.netlify.app/img/dplyr_across_blank.png">
 <meta property="og:site_name" content="aprendetidyverse.com">
 <meta property="og:locale" content="es_ES">
-<meta name="twitter:title" content="Aprende Tidyverse">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="across y where tus dos nuevos mejores amigos a la hora de manipular datos con R.">
+<meta name="twitter:description" content="Descubre cómo across y where pueden transformar tu forma de trabajar con datos en R. Estas funciones facilitan la manipulación y transformación de múltiples columnas de forma simultánea y selectiva, ahorrándote tiempo y esfuerzo. Aprende a usarlas y lleva tu análisis de datos al siguiente nivel.">
+<meta name="twitter:image" content="https://dplyr-wisely.netlify.app/img/dplyr_across_blank.png">
 <meta name="twitter:creator" content="@dev_aguero">
 <meta name="twitter:site" content="@dev_aguero">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/logo.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/logo.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Buscar"></div>
@@ -190,7 +133,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -200,33 +143,33 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cursos">    
         <li class="dropdown-header">Cursos de R</li>
         <li>
-    <a class="dropdown-item" href="./courses/r4ds.html"><i class="bi bi-graph-up-arrow" role="img">
+    <a class="dropdown-item" href="../courses/r4ds.html"><i class="bi bi-graph-up-arrow" role="img">
 </i> 
  <span class="dropdown-text">R para ciencia de datos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./courses/intro_shiny.html"><i class="bi bi-window-split" role="img">
+    <a class="dropdown-item" href="../courses/intro_shiny.html"><i class="bi bi-window-split" role="img">
 </i> 
  <span class="dropdown-text">Desarrollo de aplicaciones con shiny (intermedio)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./courses/web_scraping.html"><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="../courses/web_scraping.html"><i class="bi bi-bug" role="img">
 </i> 
  <span class="dropdown-text">Web Scraping con R (avanzado)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./courses/avz_ggplot2.html"><i class="bi bi-palette" role="img">
+    <a class="dropdown-item" href="../courses/avz_ggplot2.html"><i class="bi bi-palette" role="img">
 </i> 
  <span class="dropdown-text">Visualización de datos con ggplot2 (avanzado)</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./lunes_pr.html"> 
+    <a class="nav-link" href="../lunes_pr.html"> 
 <span class="menu-text">Sesiones de Consultas</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link" href="../posts.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -261,243 +204,82 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
-   
-  <ul>
-  <li><a href="#curso-r-para-ciencia-de-datos" id="toc-curso-r-para-ciencia-de-datos" class="nav-link active" data-scroll-target="#curso-r-para-ciencia-de-datos">Curso R para ciencia de datos</a></li>
-  <li><a href="#ponte-en-contacto" id="toc-ponte-en-contacto" class="nav-link" data-scroll-target="#ponte-en-contacto">Ponte en contacto</a></li>
-  <li><a href="#post-recientes" id="toc-post-recientes" class="nav-link" data-scroll-target="#post-recientes">Post Recientes</a></li>
-  </ul>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><code>across</code> y <code>where</code> tus dos nuevos mejores amigos a la hora de manipular datos con R.</h1>
+  </div>
+
+<div>
+  <div class="description">
+    Descubre cómo across y where pueden transformar tu forma de trabajar con datos en R. Estas funciones facilitan la manipulación y transformación de múltiples columnas de forma simultánea y selectiva, ahorrándote tiempo y esfuerzo. Aprende a usarlas y lleva tu análisis de datos al siguiente nivel.
+  </div>
+</div>
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Autor/a</div>
+  <div class="quarto-title-meta-heading">Afiliación</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Carlos Aguero </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://aprendetidyverse.com/">
+            Aprende Tidyverse
+            </a>
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">29 de mayo de 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de modificación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">29 de mayo de 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
 
 
 
-<p>Aprende Tidyverse es una iniciativa que busca contribuir a la comunidad hispanohablante de usuarios de R, ofreciendo de forma gratuita cursos, tutoriales, guías paso a paso y todo lo que se nos ocurra por el camino. ¿Lo mejor? Aprendemos juntos y, ¿por qué no?, nos divertimos en el proceso.</p>
-<section id="curso-r-para-ciencia-de-datos" class="level2">
-<h2 class="anchored" data-anchor-id="curso-r-para-ciencia-de-datos">Curso R para ciencia de datos</h2>
-<p>Puedes inscribirte por un precio <mark><strong>desde los $0 USD hasta los $120 USD</strong>.</mark> Nuestro instructor y asistentes están listos para guiarte en tu proceso de aprendizaje. Simplemente completa el formulario de inscripción y recibirás en tu correo electrónico toda la información necesaria para comenzar la sesión.</p>
-<ul>
-<li><strong>Próxima apertura:</strong> <mark><strong>jueves 23 de mayo del 2024</strong></mark>
-<ul>
-<li>Lecciones: jueves y sábados</li>
-<li>Costa Rica/México: 6:00 p.m.</li>
-<li>Colombia: 7:00 p.m.</li>
-<li>Argentina: 9:00 p.m.</li>
-</ul></li>
-</ul>
-<p><em>Descuentos de hasta el 75% para estudiantes y académicos. Si tu situación económica o restricciones de tu país no te permiten hacer un pago en línea por el curso, siéntete en total libertad de llevarlo <mark><strong>totalmente gratis.</strong></mark></em></p>
-<p><a href="./courses/index.html" class="btn btn-outline-primary" role="button">Ver los detalles del curso</a></p>
-</section>
-<section id="ponte-en-contacto" class="level2">
-<h2 class="anchored" data-anchor-id="ponte-en-contacto">Ponte en contacto</h2>
-<p>La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.</p>
-<p>Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en <a href="https://www.linkedin.com/in/carlos-aguero-cr">LinkedIn</a> o en <a href="https://twitter.com/dev_aguero">Twitter</a> (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!</p>
-<hr>
-</section>
-<section id="post-recientes" class="level2">
-<h2 class="anchored" data-anchor-id="post-recientes">Post Recientes</h2>
 
 
-
-</section>
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Guías Paso a Paso,duckdb,dplyr,DBI" data-listing-date-sort="1717135200000" data-listing-file-modified-sort="1717014363887" data-listing-date-modified-sort="1717135200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
-<div class="thumbnail">
-<p><a href="./posts/005_duckdb_intro.html" class="no-external"></a></p><a href="./posts/005_duckdb_intro.html" class="no-external">
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1358/1*woaPPp2Hq10SJqN6sgH0yQ.jpeg" class="thumbnail-image"></p>
-</a><p><a href="./posts/005_duckdb_intro.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_duckdb_intro.html" class="no-external">DuckDB: La Base de Datos que Simplemente Funciona 🚀</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/005_duckdb_intro.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
-Guías Paso a Paso
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('duckdb'); return false;">
-duckdb
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('dplyr'); return false;">
-dplyr
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('DBI'); return false;">
-DBI
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/005_duckdb_intro.html" class="no-external">DuckDB es ideal para manejar grandes volúmenes de datos sin necesidad de equipos potentes ni costosos. Además, facilita compartir datos estructurados, sin instalación ni configuración. Simplemente funciona, ¡es magia! ✨</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/005_duckdb_intro.html" class="no-external">
-<div class="listing-date">
-2024-05-31
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Tutorial,dplyr" data-listing-date-sort="1717048800000" data-listing-file-modified-sort="1717014404093" data-listing-date-modified-sort="1717048800000" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
-<div class="thumbnail">
-<p><a href="./posts/004_across_where.html" class="no-external"></a></p><a href="./posts/004_across_where.html" class="no-external">
-<p><img loading="lazy" src="https://dplyr-wisely.netlify.app/img/dplyr_across_blank.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/004_across_where.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_across_where.html" class="no-external">Funciones <code>across</code> y <code>where</code> tus dos nuevos mejores amigos a la hora de manipular datos con R.</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/004_across_where.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
-Tutorial
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('dplyr'); return false;">
-dplyr
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/004_across_where.html" class="no-external">Descubre cómo across y where pueden transformar tu forma de trabajar con datos en R. Estas funciones facilitan la manipulación y transformación de múltiples columnas de forma simultánea y selectiva, ahorrándote tiempo y esfuerzo. Aprende a usarlas y lleva tu análisis de datos al siguiente nivel.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/004_across_where.html" class="no-external">
-<div class="listing-date">
-2024-05-30
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Guías Paso a Paso,ggplot2,sf,dplyr" data-listing-date-sort="1716962400000" data-listing-file-modified-sort="1717019476746" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="377">
-<div class="thumbnail">
-<p><a href="./posts/003_mapa_cantones_cr_p2.html" class="no-external"></a></p><a href="./posts/003_mapa_cantones_cr_p2.html" class="no-external">
-<p><img loading="lazy" src="./posts/images/mapa47.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/003_mapa_cantones_cr_p2.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_mapa_cantones_cr_p2.html" class="no-external">Manipulando el mapa de los cantones y distritos de Costa Rica con R</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/003_mapa_cantones_cr_p2.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
-Guías Paso a Paso
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('sf'); return false;">
-sf
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('dplyr'); return false;">
-dplyr
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/003_mapa_cantones_cr_p2.html" class="no-external">Trabajar con datos geoespaciales anteriores a 2017 a menudo resulta en mapas con espacios vacíos o zonas grises, debido a cambios en fronteras, actualización de códigos o datos ausentes. Este tutorial muestra cómo resolver estos problemas y unir regiones usando el paquete ‘sf’.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/003_mapa_cantones_cr_p2.html" class="no-external">
-<div class="listing-date">
-2024-05-29
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Guías Paso a Paso,ggplot2" data-listing-date-sort="1713247200000" data-listing-file-modified-sort="1713297403192" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="27" data-listing-word-count-sort="5340">
-<div class="thumbnail">
-<p><a href="./posts/002_custom_legend_ggplot2.html" class="no-external"></a></p><a href="./posts/002_custom_legend_ggplot2.html" class="no-external">
-<p><img loading="lazy" src="./posts/images/legend_example.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/002_custom_legend_ggplot2.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_custom_legend_ggplot2.html" class="no-external">Cómo crear leyendas personalizadas en tus gráficos utilizando ggplot2</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/002_custom_legend_ggplot2.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
-Guías Paso a Paso
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/002_custom_legend_ggplot2.html" class="no-external">Explora las nuevas funcionalidades de ggplot2 3.5 y lleva tus gráficos al próximo nivel personalizando tus leyendas hasta el último detalle</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/002_custom_legend_ggplot2.html" class="no-external">
-<div class="listing-date">
-2024-04-16
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Guías Paso a Paso,ggplot2,sf,geojson" data-listing-date-sort="1707372000000" data-listing-file-modified-sort="1717014446331" data-listing-date-modified-sort="1712901600000" data-listing-reading-time-sort="10" data-listing-word-count-sort="1993">
-<div class="thumbnail">
-<p><a href="./posts/001_mapa_cantones_cr.html" class="no-external"></a></p><a href="./posts/001_mapa_cantones_cr.html" class="no-external">
-<p><img loading="lazy" src="./posts/images/mapa_cr_ggplot2.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/001_mapa_cantones_cr.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_mapa_cantones_cr.html" class="no-external">Actualizando el mapa de cantones de Costa Rica con R</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/001_mapa_cantones_cr.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Guías Paso a Paso'); return false;">
-Guías Paso a Paso
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('sf'); return false;">
-sf
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('geojson'); return false;">
-geojson
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/001_mapa_cantones_cr.html" class="no-external">Explora los recientes cambios territoriales y de nombres en los cantones de Costa Rica a través de esta guía que te enseñará a crear mapas actualizados con ggplot2, utilizando los datos del Instituto Geográfico Nacional.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/001_mapa_cantones_cr.html" class="no-external">
-<div class="listing-date">
-2024-02-08
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No hay resultados
-</div>
-</div></main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
+  author = {Aguero, Carlos},
+  title = {`across` y `where` tus dos nuevos mejores amigos a la hora de
+    manipular datos con R.},
+  date = {2024-05-29},
+  url = {https://aprendetidyverse.com/posts/004_cross_where_tus_nuevos_amigos.html},
+  langid = {es}
+}
+</code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-aguero2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+Aguero, Carlos. 2024. <span>“`across` y `where` tus dos nuevos mejores
+amigos a la hora de manipular datos con R.”</span> May 29, 2024. <a href="https://aprendetidyverse.com/posts/004_cross_where_tus_nuevos_amigos.html">https://aprendetidyverse.com/posts/004_cross_where_tus_nuevos_amigos.html</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -918,6 +700,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://utteranc.es/client.js" repo="quarto-dev/quarto-docs" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -927,12 +711,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./terminos.html">
+    <a class="nav-link" href="../terminos.html">
 <p>Términos y Condiciones</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./codigo_conducta.html">
+    <a class="nav-link" href="../codigo_conducta.html">
 <p>Código de conducta</p>
 </a>
   </li>  

@@ -9,8 +9,298 @@
 <link>https://aprendetidyverse.com/index2.html</link>
 <atom:link href="https://aprendetidyverse.com/index2.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.5.28</generator>
-<lastBuildDate>Tue, 16 Apr 2024 06:00:00 GMT</lastBuildDate>
+<generator>quarto-1.5.32</generator>
+<lastBuildDate>Fri, 31 May 2024 06:00:00 GMT</lastBuildDate>
+<item>
+  <title>DuckDB: La Base de Datos que Simplemente Funciona 🚀</title>
+  <dc:creator>Carlos Aguero</dc:creator>
+  <link>https://aprendetidyverse.com/posts/005_duckdb_intro.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
+  author = {Aguero, Carlos},
+  title = {DuckDB: La Base de Datos que Simplemente Funciona 🚀},
+  date = {2024-05-31},
+  url = {https://aprendetidyverse.com/posts/005_duckdb_intro.html},
+  langid = {es}
+}
+</code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-aguero2024" class="csl-entry quarto-appendix-citeas">
+Aguero, Carlos. 2024. <span>“DuckDB: La Base de Datos que Simplemente
+Funciona 🚀.”</span> May 31, 2024. <a href="https://aprendetidyverse.com/posts/005_duckdb_intro.html">https://aprendetidyverse.com/posts/005_duckdb_intro.html</a>.
+</div></div></section></div> ]]></description>
+  <category>Guías Paso a Paso</category>
+  <category>duckdb</category>
+  <category>dplyr</category>
+  <category>DBI</category>
+  <guid>https://aprendetidyverse.com/posts/005_duckdb_intro.html</guid>
+  <pubDate>Fri, 31 May 2024 06:00:00 GMT</pubDate>
+  <media:content url="https://miro.medium.com/v2/resize:fit:1358/1*woaPPp2Hq10SJqN6sgH0yQ.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Funciones across y where tus dos nuevos mejores amigos a la hora de manipular datos con R.</title>
+  <dc:creator>Carlos Aguero</dc:creator>
+  <link>https://aprendetidyverse.com/posts/004_across_where.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
+  author = {Aguero, Carlos},
+  title = {Funciones `across` y `where` tus dos nuevos mejores amigos a
+    la hora de manipular datos con R.},
+  date = {2024-05-30},
+  url = {https://aprendetidyverse.com/posts/004_across_where.html},
+  langid = {es}
+}
+</code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-aguero2024" class="csl-entry quarto-appendix-citeas">
+Aguero, Carlos. 2024. <span>“Funciones `across` y `where` tus dos nuevos
+mejores amigos a la hora de manipular datos con R.”</span> May 30, 2024.
+<a href="https://aprendetidyverse.com/posts/004_across_where.html">https://aprendetidyverse.com/posts/004_across_where.html</a>.
+</div></div></section></div> ]]></description>
+  <category>Tutorial</category>
+  <category>dplyr</category>
+  <guid>https://aprendetidyverse.com/posts/004_across_where.html</guid>
+  <pubDate>Thu, 30 May 2024 06:00:00 GMT</pubDate>
+  <media:content url="https://dplyr-wisely.netlify.app/img/dplyr_across_blank.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Manipulando el mapa de los cantones y distritos de Costa Rica con R</title>
+  <dc:creator>Carlos Aguero</dc:creator>
+  <link>https://aprendetidyverse.com/posts/003_mapa_cantones_cr_p2.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Hace un par de semanas, en <a href="https://aprendetidyverse.com/lunes_pr.html">nuestras sesiones de consultas los domingos a las 6 p.m.</a>, nos plantearon el siguiente problema: <strong>¿qué pasa si, al descargar el mapa actualizado, como vimos en el <a href="https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html">post anterior</a>, mis datos no están actualizados?</strong> Dicho de otra forma, en mi mapa existen los nuevos cantones como Río Cuarto, Puerto Jiménez y Monteverde, pero no en mis datos, y esas zonas aparecerán en gris. Bueno, en esta guía veremos paso a paso cómo regresar el mapa a la forma que tenía en 2017, uniendo estos nuevos cantones al cantón al que pertenecían, y así poder visualizar nuestro mapa sin regiones sin datos. Esto nos servirá también para crear nuestras propias agrupaciones de áreas, por ejemplo, un mapa de las regiones socioeconómicas de Costa Rica.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>La Reforma de la División Regional del Territorio de Costa Rica, Decreto N° 9501, establece las regiones oficiales para la investigación y planificación del desarrollo socioeconómico <sup>1</sup></p>
+</div></div><section id="paso-1-cargar-nuestros-datos" class="level2">
+<h2 class="anchored" data-anchor-id="paso-1-cargar-nuestros-datos">Paso 1: Cargar nuestros datos</h2>
+<p>En este caso, asumiremos que ya leíste y ejecutaste lo visto en <a href="https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html"><strong>Actualizando el mapa de cantones de Costa Rica con R</strong></a>, así que importaremos directamente el archivo <code>cantones.geojson</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyverse)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(readxl)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(sf)</span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(janitor)</span>
+<span id="cb1-5"></span>
+<span id="cb1-6">cantones <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_sf</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cantones.geojson"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">clean_names</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb1-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">codigo_canton =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.character</span>(codigo_canton))</span>
+<span id="cb1-9"></span>
+<span id="cb1-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(cantones)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 84
+Columns: 5
+$ codigo_de_provincia &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
+$ canton              &lt;chr&gt; "San José", "Escazú", "Desamparados", "Puriscal", …
+$ provincia           &lt;chr&gt; "San José", "San José", "San José", "San José", "S…
+$ codigo_canton       &lt;chr&gt; "101", "102", "103", "104", "105", "106", "107", "…
+$ geometry            &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-84.15569 9..., MULTI…</code></pre>
+</div>
+</div>
+<p>Por otro lado, utilizaremos los datos del <a href="https://documentos.mideplan.go.cr/share/s/T3CmePFRSdCAUc1q50kZQA">IDS de Mideplan de 2017</a>, intencionalmente, para no tener datos para nuestros nuevos cantones.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">ids <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_excel</span>(</span>
+<span id="cb3-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">path =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"IDS 2017.xlsx"</span>,</span>
+<span id="cb3-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sheet =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"IDS cantonal"</span>,</span>
+<span id="cb3-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">skip =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb3-5">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb3-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">clean_names</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb3-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">codigo_canton =</span> codigo, ids_2017)</span>
+<span id="cb3-8"></span>
+<span id="cb3-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(ids)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 83
+Columns: 2
+$ codigo_canton &lt;chr&gt; "102", "409", "407", "115", "408", "406", "118", "109", …
+$ ids_2017      &lt;dbl&gt; 100.00000, 99.93229, 98.10882, 96.76766, 96.70938, 91.37…</code></pre>
+</div>
+</div>
+</section>
+<section id="paso-2-unir-nuestros-datos" class="level2">
+<h2 class="anchored" data-anchor-id="paso-2-unir-nuestros-datos">Paso 2: Unir nuestros datos</h2>
+<p>En este caso siempre debemos recordar como se menciona en <a href="https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html"><strong>Actualizando el mapa de cantones de Costa Rica con R</strong></a> que debemos tener presente los posibles cambios de nombre de los cantones en el tiempo.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1">cantones <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">left_join</span>(cantones, ids)</span>
+<span id="cb5-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(cantones)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 84
+Columns: 6
+$ codigo_de_provincia &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
+$ canton              &lt;chr&gt; "San José", "Escazú", "Desamparados", "Puriscal", …
+$ provincia           &lt;chr&gt; "San José", "San José", "San José", "San José", "S…
+$ codigo_canton       &lt;chr&gt; "101", "102", "103", "104", "105", "106", "107", "…
+$ geometry            &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-84.15569 9..., MULTI…
+$ ids_2017            &lt;dbl&gt; 75.39888, 100.00000, 71.88500, 53.31167, 23.69962,…</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb7-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> cantones,</span>
+<span id="cb7-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mapping =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb7-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> ids_2017</span>
+<span id="cb7-5">  )</span>
+<span id="cb7-6">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.1</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_fill_continuous</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">na.value =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"red"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb7-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bottom"</span></span>
+<span id="cb7-12">  )</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://aprendetidyverse.com/posts/003_mapa_cantones_cr_p2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="3200"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notas</h2>
+
+<ol>
+<li id="fn1"><p>Costa Rica. Decreto Ejecutivo N° 9501. Reforma División Regional del Territorio de Costa Rica, para los Efectos de Investigación y Planificación del Desarrollo Socioeconómico. (11 de febrero de 2015). Procuraduría General de la República. <a href="https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&amp;nValor1=1&amp;nValor2=59730&amp;nValor3=67054&amp;strTipM=TC">Leer más</a>↩︎</p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
+  author = {Aguero, Carlos},
+  title = {Manipulando el mapa de los cantones y distritos de Costa Rica
+    con R},
+  date = {2024-05-29},
+  url = {https://aprendetidyverse.com/posts/003_mapa_cantones_cr_p2.html},
+  langid = {es}
+}
+</code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-aguero2024" class="csl-entry quarto-appendix-citeas">
+Aguero, Carlos. 2024. <span>“Manipulando el mapa de los cantones y
+distritos de Costa Rica con R.”</span> May 29, 2024. <a href="https://aprendetidyverse.com/posts/003_mapa_cantones_cr_p2.html">https://aprendetidyverse.com/posts/003_mapa_cantones_cr_p2.html</a>.
+</div></div></section></div> ]]></description>
+  <category>Guías Paso a Paso</category>
+  <category>ggplot2</category>
+  <category>sf</category>
+  <category>dplyr</category>
+  <guid>https://aprendetidyverse.com/posts/003_mapa_cantones_cr_p2.html</guid>
+  <pubDate>Wed, 29 May 2024 06:00:00 GMT</pubDate>
+  <media:content url="https://aprendetidyverse.com/posts/images/mapa47.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
 <item>
   <title>Cómo crear leyendas personalizadas en tus gráficos utilizando ggplot2</title>
   <dc:creator>Carlos Aguero B</dc:creator>
@@ -3648,6 +3938,8 @@ Rica con R.”</span> February 8, 2024. <a href="https://aprendetidyverse.com/po
 </div></div></section></div> ]]></description>
   <category>Guías Paso a Paso</category>
   <category>ggplot2</category>
+  <category>sf</category>
+  <category>geojson</category>
   <guid>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</guid>
   <pubDate>Thu, 08 Feb 2024 06:00:00 GMT</pubDate>
   <media:content url="https://aprendetidyverse.com/posts/images/mapa_cr_ggplot2.png" medium="image" type="image/png" height="75" width="144"/>

@@ -1,0 +1,15 @@
+{
+  "hash": "65c3e5a2289f5420421338479d1c5a77",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"`across` y `where` tus dos nuevos mejores amigos a la hora de manipular datos con R.\"\ndescription: \"Descubre cómo across y where pueden transformar tu forma de trabajar con datos en R. Estas funciones facilitan la manipulación y transformación de múltiples columnas de forma simultánea y selectiva, ahorrándote tiempo y esfuerzo. Aprende a usarlas y lleva tu análisis de datos al siguiente nivel.\"\ndate: 2024-05-29\ndate-modified: 2024-05-29\ncategories: ['Guías Paso a Paso', 'ggplot2']\nlang: \"es\"\nimage: https://dplyr-wisely.netlify.app/img/dplyr_across_blank.png\ncomments:\n  utterances:\n    repo: quarto-dev/quarto-docs\ntoc: true\ncode-line-numbers: true\ncode-copy: true\ntoc-location: left\nformat: html\neditor_options: \n  chunk_output_type: console\nexecute: \n  freeze: true\nauthor:\n  - name: Carlos Aguero\n    affiliation: Aprende Tidyverse\n    affiliation-url: https://aprendetidyverse.com/\ncitation: true\n---\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

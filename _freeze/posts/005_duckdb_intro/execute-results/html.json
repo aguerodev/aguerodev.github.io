@@ -1,0 +1,15 @@
+{
+  "hash": "944443522234d7608a5850728ff0f497",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"DuckDB: La Base de Datos que Simplemente Funciona 🚀\"\ndescription: \"DuckDB es ideal para manejar grandes volúmenes de datos sin necesidad de equipos potentes ni costosos. Además, facilita compartir datos estructurados, sin instalación ni configuración. Simplemente funciona, ¡es magia! ✨\"\ndate: 2024-05-31\ndate-modified: 2024-05-31\ncategories: ['Guías Paso a Paso', 'duckdb','dplyr','DBI']\nlang: \"es\"\nimage: https://miro.medium.com/v2/resize:fit:1358/1*woaPPp2Hq10SJqN6sgH0yQ.jpeg\ncomments:\n  utterances:\n    repo: quarto-dev/quarto-docs\ntoc: true\ncode-line-numbers: true\ncode-copy: true\ntoc-location: left\nformat: html\neditor_options: \n  chunk_output_type: console\nexecute: \n  freeze: true\nauthor:\n  - name: Carlos Aguero\n    affiliation: Aprende Tidyverse\n    affiliation-url: https://aprendetidyverse.com/\ncitation: true\n---\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

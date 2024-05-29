@@ -1,5 +1,6 @@
 website:
   drafts:
-    - posts/003_30_days_chart_challenge_d1.qmd
-    - posts/004_30_days_chart_challenge_d2.qmd
-  draft-mode: gone
+    - posts/003_mapa_cantones_cr_p2.qmd
+    - posts/004_across_where.qmd 
+    - posts/005_duckdb_intro.qmd 
+  draft-mode: visible
