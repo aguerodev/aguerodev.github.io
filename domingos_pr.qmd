@@ -1,0 +1,39 @@
+---
+title: "¿Problemas con R? ¡Estamos aquí para ayudarte!"
+subtitle: "¡Únete a nuestros domingos de preguntas y respuestas!"
+description: "Cada domingo a las 6:00 p.m. hora de Costa Rica (UTC-6), te invitamos a resolver tus dudas sobre R en nuestras sesiones interactivas. Obtén asesoría personalizada y consejos prácticos que te ayudarán a avanzar en tu aprendizaje del lenguaje de programación R."
+lang: "es"
+toc: false
+comments: false
+author: ""
+date: ""
+pagetitle: Aprende Tidyverse - domingos de preguntas y respuestas
+image: images/the_stonebreakers.jpg
+license: ""
+---
+
+![Imagen de "Los picapedreros" por Gustave Courbet, 1849. Imagen almacenada por la  [Fundación Wikimedia](https://es.m.wikipedia.org/wiki/Archivo:Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg)](images/the_stonebreakers.jpg)
+
+## ¿Cómo participar?
+
++ ¿Cuándo? Todos los domingos, de 6:00 p.m. a 7:00 p.m. (hora de Costa Rica UTC-6)
++ ¿Dónde? Sesiones en vivo a través de Zoom.
+
+
+[Regístrate gratis](https://cal.com/aprendetidyverse/lunes-preguntas-y-respuestas?month=2024-04){.btn .btn-outline-primary .btn role="button"} 
+
+
+## Normas de conducta
+
++ **Respeto**: No serán permitidos comportamientos que excluyan o intimiden a otros. Prohibidos los comentarios ofensivos, la intimidación, las amenazas y el uso de imágenes violentas o sexuales ([Leer Código de conducta](codigo_conducta.qmd)).
+
++ **Participación activa**: Anímate a participar, hacer preguntas y contribuir al diálogo. Las preguntas que parecen simples para uno pueden ser una gran duda para otro.
+
++ **Silencio durante la sesión**: Mantén tu micrófono silenciado a menos que estés hablando.
+
++ **Privacidad**: No se grabarán las sesiones para proteger la privacidad de todos los participantes.
+
++ **Puntualidad**: Sé puntual para respetar el tiempo de todos.
+
++ **No bots 🤖**: Las sesiones son exclusivamente para humanos.
+

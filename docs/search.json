@@ -606,7 +606,7 @@
     "href": "posts/003_mapa_cantones_cr_p2.html#footnotes",
     "title": "Manipulando el mapa de los cantones y distritos de Costa Rica con R",
     "section": "Notas",
-    "text": "Notas\n\n\nCosta Rica. Decreto Ejecutivo N° 9501. Reforma División Regional del Territorio de Costa Rica, para los Efectos de Investigación y Planificación del Desarrollo Socioeconómico. (11 de febrero de 2015). Procuraduría General de la República. Leer más↩︎"
+    "text": "Notas\n\n\nCosta Rica. Decreto Ejecutivo N° 9501. Reforma División Regional del Territorio de Costa Rica, para los Efectos de Investigación y Planificación del Desarrollo Socioeconómico. (11 de febrero de 2015). Procuraduría General de la República. Leer más↩︎\nDelfino.cr. (21 de octubre de 2021). Expediente 22749: Creación del Cantón de Puerto Jiménez, Cantón XIII de la Provincia de Puntarenas. Delfino.cr. Leer más↩︎\nDelfino.cr. (25 de septiembre de 2019). Expediente 21618: Creación del Cantón de Monteverde, Cantón XII de la Provincia de Puntarenas. Delfino.cr. Leer más↩︎"
   },
   {
     "objectID": "posts/003_mapa_cantones_cr_p2.html#paso-1-cargar-nuestros-datos",
@@ -620,6 +620,48 @@
     "href": "posts/003_mapa_cantones_cr_p2.html#paso-2-unir-nuestros-datos",
     "title": "Manipulando el mapa de los cantones y distritos de Costa Rica con R",
     "section": "Paso 2: Unir nuestros datos",
-    "text": "Paso 2: Unir nuestros datos\nEn este caso siempre debemos recordar como se menciona en Actualizando el mapa de cantones de Costa Rica con R que debemos tener presente los posibles cambios de nombre de los cantones en el tiempo.\n\ncantones &lt;- left_join(cantones, ids)\nglimpse(cantones)\n\nRows: 84\nColumns: 6\n$ codigo_de_provincia &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…\n$ canton              &lt;chr&gt; \"San José\", \"Escazú\", \"Desamparados\", \"Puriscal\", …\n$ provincia           &lt;chr&gt; \"San José\", \"San José\", \"San José\", \"San José\", \"S…\n$ codigo_canton       &lt;chr&gt; \"101\", \"102\", \"103\", \"104\", \"105\", \"106\", \"107\", \"…\n$ geometry            &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-84.15569 9..., MULTI…\n$ ids_2017            &lt;dbl&gt; 75.39888, 100.00000, 71.88500, 53.31167, 23.69962,…\n\n\n\nggplot(\n  data = cantones,\n  mapping = aes(\n    fill = ids_2017\n  )\n) +\n  geom_sf(color = \"white\", linewidth = 0.1) +\n  scale_fill_continuous(na.value = \"red\") +\n  theme_minimal() +\n  theme(\n    legend.position = \"bottom\"\n  )"
+    "text": "Paso 2: Unir nuestros datos\nEn este caso siempre debemos recordar como se menciona en Actualizando el mapa de cantones de Costa Rica con R que debemos tener presente los posibles cambios de nombre de los cantones en el tiempo.\n\ncantones &lt;- left_join(cantones, ids)\nglimpse(cantones)\n\nRows: 84\nColumns: 6\n$ codigo_de_provincia &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…\n$ canton              &lt;chr&gt; \"San José\", \"Escazú\", \"Desamparados\", \"Puriscal\", …\n$ provincia           &lt;chr&gt; \"San José\", \"San José\", \"San José\", \"San José\", \"S…\n$ codigo_canton       &lt;chr&gt; \"101\", \"102\", \"103\", \"104\", \"105\", \"106\", \"107\", \"…\n$ geometry            &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-84.15569 9..., MULTI…\n$ ids_2017            &lt;dbl&gt; 75.39888, 100.00000, 71.88500, 53.31167, 23.69962,…"
+  },
+  {
+    "objectID": "posts/003_mapa_cantones_cr_p2.html#paso-3-visualizar-nuestro-mapa",
+    "href": "posts/003_mapa_cantones_cr_p2.html#paso-3-visualizar-nuestro-mapa",
+    "title": "Manipulando el mapa de los cantones y distritos de Costa Rica con R",
+    "section": "Paso 3: Visualizar nuestro mapa",
+    "text": "Paso 3: Visualizar nuestro mapa\nAhora que tenemos nuestros datos, vamos a crear un mapa donde representaremos en colores el IDS de cada cantón. Además, para identificarlos mejor, pondremos en rojo aquellos cantones que no tengan datos, es decir, su IDS es NA.\n\nggplot(\n  data = cantones,\n  mapping = aes(\n    fill = ids_2017\n  )\n) +\n  geom_sf(color = \"white\", linewidth = 0.1) +\n  scale_fill_continuous(na.value = \"red\") +\n  theme_minimal() +\n  theme(\n    legend.position = \"bottom\"\n  )\n\n\n\n\n\n\n\n\nPodemos ver a simple vista que tenemos 2 zonas en rojo, pero apliquemos un filtro para verlas con más claridad.\n\ncantones |&gt; \n  as.data.frame() |&gt; \n  filter(if_any(everything(), is.na)) |&gt; \n  select(provincia, canton,codigo_canton, ids_2017) \n\n   provincia         canton codigo_canton ids_2017\n1 Puntarenas     Monteverde           612       NA\n2 Puntarenas Puerto Jiménez           613       NA\n\n\nPodemos ver que efectivamente son los cantones de Puerto Jiménez2 y Monteverde3 los que no presentan datos.\nPara términos de nuestro ejemplo, vamos a “regresar” Monteverde al cantón de Puntarenas y Puerto Jiménez al cantón de Golfito.\n\ncantones |&gt; \n  as.data.frame() |&gt; \n  filter(canton %in% c(\"Golfito\",\"Puntarenas\")) |&gt; \n  select(canton, codigo_canton)\n\n      canton codigo_canton\n1 Puntarenas           601\n2    Golfito           607"
+  },
+  {
+    "objectID": "posts/003_mapa_cantones_cr_p2.html#paso-3-unificar-nombre-y-códigos-de-los-cantones-a-unir",
+    "href": "posts/003_mapa_cantones_cr_p2.html#paso-3-unificar-nombre-y-códigos-de-los-cantones-a-unir",
+    "title": "Manipulando el mapa de los cantones y distritos de Costa Rica con R",
+    "section": "Paso 3: Unificar nombre y códigos de los cantones a unir",
+    "text": "Paso 3: Unificar nombre y códigos de los cantones a unir\nPara esto, debemos asegurarnos de que tanto el nombre del cantón como el código del cantón sean iguales para los cantones que queremos unir.\n\ncantones &lt;- read_sf(\"cantones.geojson\") |&gt; \n  clean_names() |&gt; \n  mutate(codigo_canton = as.character(codigo_canton))\n\n\ncantones &lt;- cantones |&gt; \n  mutate(\n    canton = case_match(\n      canton,\n      \"Puerto Jiménez\" ~ \"Golfito\",\n      \"Monteverde\" ~ \"Puntarenas\",\n      .default = canton\n    ),\n    codigo_canton = case_match(\n      codigo_canton,\n      \"613\" ~ \"607\",\n      \"612\" ~ \"601\",\n      .default = codigo_canton\n    )\n  )\n\nAhora que tenemos los nombres correctos, podemos utilizar la función st_union para unificar esas regiones en un solo polígono."
+  },
+  {
+    "objectID": "posts/003_mapa_cantones_cr_p2.html#paso-4-unimos-los-polígonos-de-las-regiones-que-queremos-reunificar",
+    "href": "posts/003_mapa_cantones_cr_p2.html#paso-4-unimos-los-polígonos-de-las-regiones-que-queremos-reunificar",
+    "title": "Manipulando el mapa de los cantones y distritos de Costa Rica con R",
+    "section": "Paso 4: Unimos los polígonos de las regiones que queremos ‘reunificar’",
+    "text": "Paso 4: Unimos los polígonos de las regiones que queremos ‘reunificar’\n\ncantones &lt;- cantones |&gt; \n  group_by(codigo_de_provincia, provincia, codigo_canton, canton) |&gt; \n  summarise(\n    geometry = st_union(geometry)\n  )\n\n`summarise()` has grouped output by 'codigo_de_provincia', 'provincia',\n'codigo_canton'. You can override using the `.groups` argument.\n\n\nAhora realizamos el proceso anterior, unimos los datos del IDS y realizamos el gráfico.\n\ncantones &lt;- left_join(cantones, ids)\nglimpse(cantones)\n\nRows: 82\nColumns: 6\nGroups: codigo_de_provincia, provincia, codigo_canton [82]\n$ codigo_de_provincia &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…\n$ provincia           &lt;chr&gt; \"San José\", \"San José\", \"San José\", \"San José\", \"S…\n$ codigo_canton       &lt;chr&gt; \"101\", \"102\", \"103\", \"104\", \"105\", \"106\", \"107\", \"…\n$ canton              &lt;chr&gt; \"San José\", \"Escazú\", \"Desamparados\", \"Puriscal\", …\n$ geometry            &lt;POLYGON [°]&gt; POLYGON ((-84.15569 9.96885..., POLYGON ((…\n$ ids_2017            &lt;dbl&gt; 75.39888, 100.00000, 71.88500, 53.31167, 23.69962,…\n\n\n\nggplot(\n  data = cantones,\n  mapping = aes(\n    fill = ids_2017\n  )\n) +\n  geom_sf(color = \"white\", linewidth = 0.1) +\n  scale_fill_continuous(na.value = \"red\") +\n  theme_minimal() +\n  theme(\n    legend.position = \"bottom\"\n  )\n\n\n\n\n\n\n\n\nPara verificar que realmente hemos unificado los polígonos, veamos solamente el cantón de Golfito, en el que podemos ver a Puerto Jiménez (la de la izquierda para los que no conocen bien la geografía de la zona sur).\n\ngolfo &lt;- cantones |&gt; \n  filter(canton == \"Golfito\")\n\nggplot(\n  data = golfo,\n  mapping = aes(\n    fill = ids_2017\n  )\n) +\n  geom_sf(color = \"white\", linewidth = 0.1) +\n  scale_fill_continuous(na.value = \"red\") +\n  theme_minimal() +\n  theme(\n    legend.position = \"bottom\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSolo por curiosidad agregemos un punto el mapa, un lugar facil de reconocer en puerto jimenez, bar la purruja.\n\n\n\n\n# ubicación del bar la purruja en puerto jimenez\nbar_purruja &lt;- st_sfc(st_point(c(-83.302653,8.540380)))\nst_crs(bar_purruja) &lt;- 4326\n\n\nggplot(\n  data = golfo,\n  mapping = aes(\n    fill = ids_2017\n  )\n) +\n  geom_sf(color = \"white\", linewidth = 0.1) +\n  geom_sf(data = bar_purruja, color = \"red\", inherit.aes = FALSE)+\n  scale_fill_continuous(na.value = \"red\") +\n  theme_minimal() +\n  theme(\n    legend.position = \"bottom\"\n  )"
+  },
+  {
+    "objectID": "domingos_pr.html",
+    "href": "domingos_pr.html",
+    "title": "¿Problemas con R? ¡Estamos aquí para ayudarte!",
+    "section": "",
+    "text": "Imagen de “Los picapedreros” por Gustave Courbet, 1849. Imagen almacenada por la Fundación Wikimedia"
+  },
+  {
+    "objectID": "domingos_pr.html#cómo-participar",
+    "href": "domingos_pr.html#cómo-participar",
+    "title": "¿Problemas con R? ¡Estamos aquí para ayudarte!",
+    "section": "¿Cómo participar?",
+    "text": "¿Cómo participar?\n\n¿Cuándo? Todos los domingos, de 6:00 p.m. a 7:00 p.m. (hora de Costa Rica UTC-6)\n¿Dónde? Sesiones en vivo a través de Zoom.\n\nRegístrate gratis"
+  },
+  {
+    "objectID": "domingos_pr.html#normas-de-conducta",
+    "href": "domingos_pr.html#normas-de-conducta",
+    "title": "¿Problemas con R? ¡Estamos aquí para ayudarte!",
+    "section": "Normas de conducta",
+    "text": "Normas de conducta\n\nRespeto: No serán permitidos comportamientos que excluyan o intimiden a otros. Prohibidos los comentarios ofensivos, la intimidación, las amenazas y el uso de imágenes violentas o sexuales (Leer Código de conducta).\nParticipación activa: Anímate a participar, hacer preguntas y contribuir al diálogo. Las preguntas que parecen simples para uno pueden ser una gran duda para otro.\nSilencio durante la sesión: Mantén tu micrófono silenciado a menos que estés hablando.\nPrivacidad: No se grabarán las sesiones para proteger la privacidad de todos los participantes.\nPuntualidad: Sé puntual para respetar el tiempo de todos.\nNo bots 🤖: Las sesiones son exclusivamente para humanos."
   }
 ]

@@ -78,6 +78,9 @@ cantones <- left_join(cantones, ids)
 glimpse(cantones)
 ```
 
+## Paso 3: Visualizar nuestro mapa
+
+Ahora que tenemos nuestros datos, vamos a crear un mapa donde representaremos en colores el IDS de cada cantón. Además, para identificarlos mejor, pondremos en rojo aquellos cantones que no tengan datos, es decir, su IDS es NA.
 
 ```{r, message=FALSE}
 ggplot(
@@ -95,3 +98,141 @@ ggplot(
 ```
 
 
+Podemos ver a simple vista que tenemos 2 zonas en rojo, pero apliquemos un filtro para verlas con más claridad.
+
+```{r}
+cantones |> 
+  as.data.frame() |> 
+  filter(if_any(everything(), is.na)) |> 
+  select(provincia, canton,codigo_canton, ids_2017) 
+```
+
+Podemos ver que efectivamente son los cantones de Puerto Jiménez[^puerto_jimenez] y Monteverde[^monteverde] los que no presentan datos.
+
+
+[^monteverde]: Delfino.cr. (25 de septiembre de 2019). Expediente 21618: Creación del Cantón de Monteverde, Cantón XII de la Provincia de Puntarenas. Delfino.cr. [Leer más](https://delfino.cr/asamblea/proyecto/21618)
+
+[^puerto_jimenez]: Delfino.cr. (21 de octubre de 2021). Expediente 22749: Creación del Cantón de Puerto Jiménez, Cantón XIII de la Provincia de Puntarenas. Delfino.cr. [Leer más](https://delfino.cr/asamblea/proyecto/22749)
+
+Para términos de nuestro ejemplo, vamos a "regresar" Monteverde al cantón de Puntarenas y Puerto Jiménez al cantón de Golfito.
+
+```{r}
+cantones |> 
+  as.data.frame() |> 
+  filter(canton %in% c("Golfito","Puntarenas")) |> 
+  select(canton, codigo_canton)
+```
+
+
+## Paso 3: Unificar nombre y códigos de los cantones a unir
+
+Para esto, debemos asegurarnos de que tanto el nombre del cantón como el código del cantón sean iguales para los cantones que queremos unir.
+
+```{r}
+cantones <- read_sf("cantones.geojson") |> 
+  clean_names() |> 
+  mutate(codigo_canton = as.character(codigo_canton))
+
+
+cantones <- cantones |> 
+  mutate(
+    canton = case_match(
+      canton,
+      "Puerto Jiménez" ~ "Golfito",
+      "Monteverde" ~ "Puntarenas",
+      .default = canton
+    ),
+    codigo_canton = case_match(
+      codigo_canton,
+      "613" ~ "607",
+      "612" ~ "601",
+      .default = codigo_canton
+    )
+  )
+```
+
+Ahora que tenemos los nombres correctos, podemos utilizar la función `st_union` para unificar esas regiones en un solo polígono.
+
+## Paso 4: Unimos los polígonos de las regiones que queremos 'reunificar'
+
+```{r}
+cantones <- cantones |> 
+  group_by(codigo_de_provincia, provincia, codigo_canton, canton) |> 
+  summarise(
+    geometry = st_union(geometry)
+  )
+```
+
+Ahora realizamos el proceso anterior, unimos los datos del IDS y realizamos el gráfico.
+
+```{r, message=FALSE}
+cantones <- left_join(cantones, ids)
+glimpse(cantones)
+```
+
+
+```{r, message=FALSE}
+ggplot(
+  data = cantones,
+  mapping = aes(
+    fill = ids_2017
+  )
+) +
+  geom_sf(color = "white", linewidth = 0.1) +
+  scale_fill_continuous(na.value = "red") +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom"
+  )
+```
+
+Para verificar que realmente hemos unificado los polígonos, veamos solamente el cantón de Golfito, en el que podemos ver a Puerto Jiménez (la de la izquierda para los que no conocen bien la geografía de la zona sur).
+
+
+```{r, message=FALSE}
+
+golfo <- cantones |> 
+  filter(canton == "Golfito")
+
+ggplot(
+  data = golfo,
+  mapping = aes(
+    fill = ids_2017
+  )
+) +
+  geom_sf(color = "white", linewidth = 0.1) +
+  scale_fill_continuous(na.value = "red") +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom"
+  )
+```
+
+::: {.callout-note appearance="simple"}
+
+Solo por curiosidad agregemos un punto el mapa, un lugar facil de reconocer en puerto jimenez, bar la purruja. 
+
+
+:::
+
+```{r}
+# ubicación del bar la purruja en puerto jimenez
+bar_purruja <- st_sfc(st_point(c(-83.302653,8.540380)))
+st_crs(bar_purruja) <- 4326
+```
+
+```{r, message=FALSE}
+ggplot(
+  data = golfo,
+  mapping = aes(
+    fill = ids_2017
+  )
+) +
+  geom_sf(color = "white", linewidth = 0.1) +
+  geom_sf(data = bar_purruja, color = "red", inherit.aes = FALSE)+
+  scale_fill_continuous(na.value = "red") +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom"
+  )
+```

@@ -208,6 +208,10 @@ $ geometry            &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-84.15569 9..., 
 $ ids_2017            &lt;dbl&gt; 75.39888, 100.00000, 71.88500, 53.31167, 23.69962,…</code></pre>
 </div>
 </div>
+</section>
+<section id="paso-3-visualizar-nuestro-mapa" class="level2">
+<h2 class="anchored" data-anchor-id="paso-3-visualizar-nuestro-mapa">Paso 3: Visualizar nuestro mapa</h2>
+<p>Ahora que tenemos nuestros datos, vamos a crear un mapa donde representaremos en colores el IDS de cada cantón. Además, para identificarlos mejor, pondremos en rojo aquellos cantones que no tengan datos, es decir, su IDS es NA.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -271,6 +275,459 @@ font-style: inherit;">"bottom"</span></span>
 </div>
 </div>
 </div>
+<p>Podemos ver a simple vista que tenemos 2 zonas en rojo, pero apliquemos un filtro para verlas con más claridad.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1">cantones <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb8-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.data.frame</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb8-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">if_any</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">everything</span>(), is.na)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb8-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(provincia, canton,codigo_canton, ids_2017) </span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   provincia         canton codigo_canton ids_2017
+1 Puntarenas     Monteverde           612       NA
+2 Puntarenas Puerto Jiménez           613       NA</code></pre>
+</div>
+</div>
+<p>Podemos ver que efectivamente son los cantones de Puerto Jiménez<sup>2</sup> y Monteverde<sup>3</sup> los que no presentan datos.</p>
+<p>Para términos de nuestro ejemplo, vamos a “regresar” Monteverde al cantón de Puntarenas y Puerto Jiménez al cantón de Golfito.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1">cantones <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb10-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.data.frame</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb10-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(canton <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%in%</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Golfito"</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Puntarenas"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb10-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(canton, codigo_canton)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      canton codigo_canton
+1 Puntarenas           601
+2    Golfito           607</code></pre>
+</div>
+</div>
+</section>
+<section id="paso-3-unificar-nombre-y-códigos-de-los-cantones-a-unir" class="level2">
+<h2 class="anchored" data-anchor-id="paso-3-unificar-nombre-y-códigos-de-los-cantones-a-unir">Paso 3: Unificar nombre y códigos de los cantones a unir</h2>
+<p>Para esto, debemos asegurarnos de que tanto el nombre del cantón como el código del cantón sean iguales para los cantones que queremos unir.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1">cantones <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_sf</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cantones.geojson"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb12-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">clean_names</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb12-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">codigo_canton =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.character</span>(codigo_canton))</span>
+<span id="cb12-4"></span>
+<span id="cb12-5"></span>
+<span id="cb12-6">cantones <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> cantones <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb12-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb12-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">canton =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_match</span>(</span>
+<span id="cb12-9">      canton,</span>
+<span id="cb12-10">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Puerto Jiménez"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Golfito"</span>,</span>
+<span id="cb12-11">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Monteverde"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Puntarenas"</span>,</span>
+<span id="cb12-12">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.default =</span> canton</span>
+<span id="cb12-13">    ),</span>
+<span id="cb12-14">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">codigo_canton =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_match</span>(</span>
+<span id="cb12-15">      codigo_canton,</span>
+<span id="cb12-16">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"613"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"607"</span>,</span>
+<span id="cb12-17">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"612"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"601"</span>,</span>
+<span id="cb12-18">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.default =</span> codigo_canton</span>
+<span id="cb12-19">    )</span>
+<span id="cb12-20">  )</span></code></pre></div>
+</div>
+<p>Ahora que tenemos los nombres correctos, podemos utilizar la función <code>st_union</code> para unificar esas regiones en un solo polígono.</p>
+</section>
+<section id="paso-4-unimos-los-polígonos-de-las-regiones-que-queremos-reunificar" class="level2">
+<h2 class="anchored" data-anchor-id="paso-4-unimos-los-polígonos-de-las-regiones-que-queremos-reunificar">Paso 4: Unimos los polígonos de las regiones que queremos ‘reunificar’</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1">cantones <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> cantones <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb13-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(codigo_de_provincia, provincia, codigo_canton, canton) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb13-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarise</span>(</span>
+<span id="cb13-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">geometry =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">st_union</span>(geometry)</span>
+<span id="cb13-5">  )</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'codigo_de_provincia', 'provincia',
+'codigo_canton'. You can override using the `.groups` argument.</code></pre>
+</div>
+</div>
+<p>Ahora realizamos el proceso anterior, unimos los datos del IDS y realizamos el gráfico.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1">cantones <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">left_join</span>(cantones, ids)</span>
+<span id="cb15-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(cantones)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 82
+Columns: 6
+Groups: codigo_de_provincia, provincia, codigo_canton [82]
+$ codigo_de_provincia &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
+$ provincia           &lt;chr&gt; "San José", "San José", "San José", "San José", "S…
+$ codigo_canton       &lt;chr&gt; "101", "102", "103", "104", "105", "106", "107", "…
+$ canton              &lt;chr&gt; "San José", "Escazú", "Desamparados", "Puriscal", …
+$ geometry            &lt;POLYGON [°]&gt; POLYGON ((-84.15569 9.96885..., POLYGON ((…
+$ ids_2017            &lt;dbl&gt; 75.39888, 100.00000, 71.88500, 53.31167, 23.69962,…</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb17-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> cantones,</span>
+<span id="cb17-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mapping =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb17-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> ids_2017</span>
+<span id="cb17-5">  )</span>
+<span id="cb17-6">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb17-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.1</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb17-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_fill_continuous</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">na.value =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"red"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb17-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb17-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb17-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bottom"</span></span>
+<span id="cb17-12">  )</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://aprendetidyverse.com/posts/003_mapa_cantones_cr_p2_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="3200"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Para verificar que realmente hemos unificado los polígonos, veamos solamente el cantón de Golfito, en el que podemos ver a Puerto Jiménez (la de la izquierda para los que no conocen bien la geografía de la zona sur).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1">golfo <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> cantones <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb18-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(canton <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Golfito"</span>)</span>
+<span id="cb18-3"></span>
+<span id="cb18-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb18-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> golfo,</span>
+<span id="cb18-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mapping =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb18-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> ids_2017</span>
+<span id="cb18-8">  )</span>
+<span id="cb18-9">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb18-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.1</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb18-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_fill_continuous</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">na.value =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"red"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb18-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb18-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb18-14">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bottom"</span></span>
+<span id="cb18-15">  )</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://aprendetidyverse.com/posts/003_mapa_cantones_cr_p2_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="3200"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Solo por curiosidad agregemos un punto el mapa, un lugar facil de reconocer en puerto jimenez, bar la purruja.</p>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ubicación del bar la purruja en puerto jimenez</span></span>
+<span id="cb19-2">bar_purruja <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">st_sfc</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">st_point</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">83.302653</span>,<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8.540380</span>)))</span>
+<span id="cb19-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">st_crs</span>(bar_purruja) <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4326</span></span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb20-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> golfo,</span>
+<span id="cb20-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mapping =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb20-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> ids_2017</span>
+<span id="cb20-5">  )</span>
+<span id="cb20-6">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb20-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.1</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb20-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> bar_purruja, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"red"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">inherit.aes =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb20-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_fill_continuous</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">na.value =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"red"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb20-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb20-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb20-12">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bottom"</span></span>
+<span id="cb20-13">  )</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://aprendetidyverse.com/posts/003_mapa_cantones_cr_p2_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="3200"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -280,6 +737,8 @@ font-style: inherit;">"bottom"</span></span>
 
 <ol>
 <li id="fn1"><p>Costa Rica. Decreto Ejecutivo N° 9501. Reforma División Regional del Territorio de Costa Rica, para los Efectos de Investigación y Planificación del Desarrollo Socioeconómico. (11 de febrero de 2015). Procuraduría General de la República. <a href="https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&amp;nValor1=1&amp;nValor2=59730&amp;nValor3=67054&amp;strTipM=TC">Leer más</a>↩︎</p></li>
+<li id="fn2"><p>Delfino.cr. (21 de octubre de 2021). Expediente 22749: Creación del Cantón de Puerto Jiménez, Cantón XIII de la Provincia de Puntarenas. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/22749">Leer más</a>↩︎</p></li>
+<li id="fn3"><p>Delfino.cr. (25 de septiembre de 2019). Expediente 21618: Creación del Cantón de Monteverde, Cantón XII de la Provincia de Puntarenas. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/21618">Leer más</a>↩︎</p></li>
 </ol>
 </section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
   author = {Aguero, Carlos},

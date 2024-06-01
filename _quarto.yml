@@ -59,7 +59,7 @@ website:
             icon: "palette"
             href: courses/avz_ggplot2.qmd
       - text: "Sesiones de Consultas"
-        file: lunes_pr.qmd
+        file: domingos_pr.qmd
       - text: Blog
         file: posts.qmd
     right:
