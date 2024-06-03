@@ -5,7 +5,7 @@ date: 2024-05-30
 date-modified: 2024-05-30
 categories: ['Tutorial', 'dplyr']
 lang: "es"
-image: https://dplyr-wisely.netlify.app/img/dplyr_across_blank.png
+image: images/dplyr_across_blank.png
 comments:
   utterances:
     repo: quarto-dev/quarto-docs

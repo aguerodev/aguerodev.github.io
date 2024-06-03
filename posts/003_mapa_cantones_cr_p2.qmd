@@ -12,7 +12,6 @@ toc: true
 code-line-numbers: true
 code-copy: true
 toc-location: left
-format: html
 editor_options: 
   chunk_output_type: console
 execute: 
@@ -22,6 +21,12 @@ author:
     affiliation: Aprende Tidyverse
     affiliation-url: https://aprendetidyverse.com/
 citation: true
+format:
+  html:
+    other-links:
+      - text: Descargar archivos geoJSON
+        href: https://share.aprendetidyverse.com/s/info_mapas_post2
+
 ---
 
 ```{r setup, include=FALSE}
@@ -31,12 +36,9 @@ knitr::opts_chunk$set(echo = TRUE, dpi = 400, fig.width = 8, fig.height = 6)
 
 Hace un par de semanas, en [nuestras sesiones de consultas los domingos a las 6 p.m.](https://aprendetidyverse.com/lunes_pr.html), nos plantearon el siguiente problema: **¿qué pasa si, al descargar el mapa actualizado, como vimos en el [post anterior](https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html), mis datos no están actualizados?** Dicho de otra forma, en mi mapa existen los nuevos cantones como Río Cuarto, Puerto Jiménez y Monteverde, pero no en mis datos, y esas zonas aparecerán en gris. Bueno, en esta guía veremos paso a paso cómo regresar el mapa a la forma que tenía en 2017, uniendo estos nuevos cantones al cantón al que pertenecían, y así poder visualizar nuestro mapa sin regiones sin datos. Esto nos servirá también para crear nuestras propias agrupaciones de áreas, por ejemplo, un mapa de las regiones socioeconómicas de Costa Rica.
 
-::: {.column-margin}
-La Reforma de la División Regional del Territorio de Costa Rica, Decreto N° 9501, establece las regiones oficiales para la investigación y planificación del desarrollo socioeconómico [^decreto]
+Puedes descargar los datos de los cantones y distritos en este [enlace](https://share.aprendetidyverse.com/s/info_mapas_post2)
 
-[^decreto]: Costa Rica. Decreto Ejecutivo N° 9501. Reforma División Regional del Territorio de Costa Rica, para los Efectos de Investigación y Planificación del Desarrollo Socioeconómico. (11 de febrero de 2015). Procuraduría General de la República. [Leer más](https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=59730&nValor3=67054&strTipM=TC)
-:::
-
+# Unir cantones
 
 ## Paso 1: Cargar nuestros datos
 
@@ -80,7 +82,7 @@ glimpse(cantones)
 
 ## Paso 3: Visualizar nuestro mapa
 
-Ahora que tenemos nuestros datos, vamos a crear un mapa donde representaremos en colores el IDS de cada cantón. Además, para identificarlos mejor, pondremos en rojo aquellos cantones que no tengan datos, es decir, su IDS es NA.
+Ahora que tenemos nuestros datos, vamos a crear un mapa donde representaremos en colores el IDS de cada cantón. Además, para identificarlos mejor, pondremos en <strong style = 'color:red;'>rojo</strong> aquellos cantones que no tengan datos, es decir, su IDS es NA.
 
 ```{r, message=FALSE}
 ggplot(
@@ -208,31 +210,51 @@ ggplot(
   )
 ```
 
-::: {.callout-note appearance="simple"}
+# Unir distritos en regiones de planificación
 
-Solo por curiosidad agregemos un punto el mapa, un lugar facil de reconocer en puerto jimenez, bar la purruja. 
+En este ejemplo, utilizaremos los datos de los distritos y los agruparemos según su región administrativa en Costa Rica, que incluye Brunca, Central, Chorotega, Huetar Caribe, Huetar Norte y Pacífico Central.
 
+::: {.column-margin}
+La Reforma de la División Regional del Territorio de Costa Rica, Decreto N° 9501, establece las regiones oficiales para la investigación y planificación del desarrollo socioeconómico [^decreto]
 
+[^decreto]: Costa Rica. Decreto Ejecutivo N° 9501. Reforma División Regional del Territorio de Costa Rica, para los Efectos de Investigación y Planificación del Desarrollo Socioeconómico. (11 de febrero de 2015). Procuraduría General de la República. [Leer más](https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=59730&nValor3=67054&strTipM=TC)
 :::
 
+Puedes descargar los datos de los cantones y distritos en este [enlace](https://share.aprendetidyverse.com/s/info_mapas_post2)
+
 ```{r}
-# ubicación del bar la purruja en puerto jimenez
-bar_purruja <- st_sfc(st_point(c(-83.302653,8.540380)))
-st_crs(bar_purruja) <- 4326
+distritos <- read_sf("distritos_cr.geojson") |> 
+clean_names()
+
+glimpse(distritos)
 ```
 
-```{r, message=FALSE}
-ggplot(
-  data = golfo,
-  mapping = aes(
-    fill = ids_2017
-  )
-) +
-  geom_sf(color = "white", linewidth = 0.1) +
-  geom_sf(data = bar_purruja, color = "red", inherit.aes = FALSE)+
-  scale_fill_continuous(na.value = "red") +
-  theme_minimal() +
-  theme(
-    legend.position = "bottom"
+Si realizamos un gráfico con los datos completos, veremos que se incluyen los 491 distritos de Costa Rica (a junio de 2024).
+
+```{r}
+ggplot(data = distritos) +
+  geom_sf(color = "white", linewidth = 0.1, fill = "steelblue") +
+  theme_minimal()
+```
+
+Ahora, podemos tomar este mapa y utilizar la función `st_union` junto con la variable `región` para crear un mapa de las regiones administrativas. Esto nos brinda mucha flexibilidad para adaptar los datos disponibles, permitiéndonos realizar las agrupaciones que mejor nos convengan.
+
+```{r, warning=FALSE}
+regiones <- distritos |> 
+  group_by(region) |> 
+  summarise(
+    geometry = st_union(geometry)
   )
 ```
+
+```{r}
+ggplot(
+  data = regiones,
+  mapping = aes(
+    fill = region
+  )) +
+  geom_sf(color = "white", linewidth = 0.1) +
+  theme_minimal()
+```
+
+Espero que esta pequeña guía te sea de utilidad. Si tienes alguna consulta, no dudes en contactarme a carlos.aguero@aprendetidyverse.com o unirte a nuestros [Domingos de Preguntas y Respuestas](https://aprendetidyverse.com/domingos_pr.html), un espacio público y gratuito donde conversamos y resolvemos juntos problemas con código R. Este espacio está diseñado para brindar acceso a toda la comunidad de usuarios de R, ofreciendo consultoría y apoyo en su proceso de aprendizaje sin costo alguno.

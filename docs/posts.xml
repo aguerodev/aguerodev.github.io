@@ -71,7 +71,7 @@ mejores amigos a la hora de manipular datos con R.”</span> May 30, 2024.
   <category>dplyr</category>
   <guid>https://aprendetidyverse.com/posts/004_across_where.html</guid>
   <pubDate>Thu, 30 May 2024 06:00:00 GMT</pubDate>
-  <media:content url="https://dplyr-wisely.netlify.app/img/dplyr_across_blank.png" medium="image" type="image/png"/>
+  <media:content url="https://aprendetidyverse.com/posts/images/dplyr_across_blank.png" medium="image" type="image/png" height="93" width="144"/>
 </item>
 <item>
   <title>Manipulando el mapa de los cantones y distritos de Costa Rica con R</title>
@@ -83,10 +83,10 @@ mejores amigos a la hora de manipular datos con R.”</span> May 30, 2024.
 
 
 <p>Hace un par de semanas, en <a href="https://aprendetidyverse.com/lunes_pr.html">nuestras sesiones de consultas los domingos a las 6 p.m.</a>, nos plantearon el siguiente problema: <strong>¿qué pasa si, al descargar el mapa actualizado, como vimos en el <a href="https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html">post anterior</a>, mis datos no están actualizados?</strong> Dicho de otra forma, en mi mapa existen los nuevos cantones como Río Cuarto, Puerto Jiménez y Monteverde, pero no en mis datos, y esas zonas aparecerán en gris. Bueno, en esta guía veremos paso a paso cómo regresar el mapa a la forma que tenía en 2017, uniendo estos nuevos cantones al cantón al que pertenecían, y así poder visualizar nuestro mapa sin regiones sin datos. Esto nos servirá también para crear nuestras propias agrupaciones de áreas, por ejemplo, un mapa de las regiones socioeconómicas de Costa Rica.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>La Reforma de la División Regional del Territorio de Costa Rica, Decreto N° 9501, establece las regiones oficiales para la investigación y planificación del desarrollo socioeconómico <sup>1</sup></p>
-</div></div><section id="paso-1-cargar-nuestros-datos" class="level2">
+<p>Puedes descargar los datos de los cantones y distritos en este <a href="https://share.aprendetidyverse.com/s/info_mapas_post2">enlace</a></p>
+<section id="unir-cantones" class="level1">
+<h1>Unir cantones</h1>
+<section id="paso-1-cargar-nuestros-datos" class="level2">
 <h2 class="anchored" data-anchor-id="paso-1-cargar-nuestros-datos">Paso 1: Cargar nuestros datos</h2>
 <p>En este caso, asumiremos que ya leíste y ejecutaste lo visto en <a href="https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html"><strong>Actualizando el mapa de cantones de Costa Rica con R</strong></a>, así que importaremos directamente el archivo <code>cantones.geojson</code>.</p>
 <div class="cell">
@@ -211,7 +211,7 @@ $ ids_2017            &lt;dbl&gt; 75.39888, 100.00000, 71.88500, 53.31167, 23.69
 </section>
 <section id="paso-3-visualizar-nuestro-mapa" class="level2">
 <h2 class="anchored" data-anchor-id="paso-3-visualizar-nuestro-mapa">Paso 3: Visualizar nuestro mapa</h2>
-<p>Ahora que tenemos nuestros datos, vamos a crear un mapa donde representaremos en colores el IDS de cada cantón. Además, para identificarlos mejor, pondremos en rojo aquellos cantones que no tengan datos, es decir, su IDS es NA.</p>
+<p>Ahora que tenemos nuestros datos, vamos a crear un mapa donde representaremos en colores el IDS de cada cantón. Además, para identificarlos mejor, pondremos en <strong style="color:red;">rojo</strong> aquellos cantones que no tengan datos, es decir, su IDS es NA.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -303,7 +303,7 @@ font-style: inherit;">select</span>(provincia, canton,codigo_canton, ids_2017) <
 2 Puntarenas Puerto Jiménez           613       NA</code></pre>
 </div>
 </div>
-<p>Podemos ver que efectivamente son los cantones de Puerto Jiménez<sup>2</sup> y Monteverde<sup>3</sup> los que no presentan datos.</p>
+<p>Podemos ver que efectivamente son los cantones de Puerto Jiménez<sup>1</sup> y Monteverde<sup>2</sup> los que no presentan datos.</p>
 <p>Para términos de nuestro ejemplo, vamos a “regresar” Monteverde al cantón de Puntarenas y Puerto Jiménez al cantón de Golfito.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1">cantones <span class="sc" style="color: #5E5E5E;
@@ -613,63 +613,131 @@ font-style: inherit;">"bottom"</span></span>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Solo por curiosidad agregemos un punto el mapa, un lugar facil de reconocer en puerto jimenez, bar la purruja.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+<section id="unir-distritos-en-regiones-de-planificación" class="level1 page-columns page-full">
+<h1>Unir distritos en regiones de planificación</h1>
+<p>En este ejemplo, utilizaremos los datos de los distritos y los agruparemos según su región administrativa en Costa Rica, que incluye Brunca, Central, Chorotega, Huetar Caribe, Huetar Norte y Pacífico Central.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>La Reforma de la División Regional del Territorio de Costa Rica, Decreto N° 9501, establece las regiones oficiales para la investigación y planificación del desarrollo socioeconómico <sup>3</sup></p>
+</div></div><p>Puedes descargar los datos de los cantones y distritos en este <a href="https://share.aprendetidyverse.com/s/info_mapas_post2">enlace</a></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># ubicación del bar la purruja en puerto jimenez</span></span>
-<span id="cb19-2">bar_purruja <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1">distritos <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">st_sfc</span>(<span class="fu" style="color: #4758AB;
+font-style: inherit;">read_sf</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">st_point</span>(<span class="fu" style="color: #4758AB;
+font-style: inherit;">"distritos_cr.geojson"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">c</span>(<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb19-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+font-style: inherit;">clean_names</span>()</span>
+<span id="cb19-3"></span>
+<span id="cb19-4"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">83.302653</span>,<span class="fl" style="color: #AD0000;
+font-style: inherit;">glimpse</span>(distritos)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 491
+Columns: 16
+$ objectid         &lt;int&gt; 1131, 1132, 1133, 1134, 1135, 1136, 1137, 1138, 1139,…
+$ provincia        &lt;chr&gt; "Limón", "Heredia", "Heredia", "Alajuela", "Heredia",…
+$ canton           &lt;chr&gt; "Pococí", "Sarapiquí", "Sarapiquí", "San Carlos", "Sa…
+$ region           &lt;chr&gt; "Huetar Caribe", "Huetar Norte", "Huetar Norte", "Hue…
+$ oficializacion   &lt;dttm&gt; 1971-07-02, 1970-11-18, 1999-09-16, 1948-11-05, 1999…
+$ codigo_canton    &lt;int&gt; 702, 410, 410, 210, 410, 213, 210, 213, 214, 213, 214…
+$ global_id        &lt;chr&gt; "{59F87CBA-7CA7-4E12-918D-822CB26FDB38}", "{96EC74A5-…
+$ distrito         &lt;chr&gt; "Colorado", "Puerto Viejo", "Llanuras del Gaspar", "P…
+$ gml_id           &lt;chr&gt; "limitedistrital_5k.1", "limitedistrital_5k.2", "limi…
+$ codigo           &lt;int&gt; 160105, 160105, 160105, 160105, 160105, 160105, 16010…
+$ codigo_provincia &lt;int&gt; 7, 4, 4, 2, 4, 2, 2, 2, 2, 2, 2, 5, 5, 5, 2, 6, 5, 6,…
+$ codigo_dta       &lt;int&gt; 70206, 41001, 41004, 21006, 41005, 21307, 21013, 2130…
+$ legislacion      &lt;chr&gt; "Decreto  1825-G", "Ley 4671", "Decreto  28137-G", "D…
+$ area             &lt;dbl&gt; 948.43468, 428.51741, 267.21675, 379.26541, 369.70036…
+$ version          &lt;dbl&gt; 20240502001, 20240502001, 20240502001, 20240502001, 2…
+$ geometry         &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-83.41636 1..., MULTIPOL…</code></pre>
+</div>
+</div>
+<p>Si realizamos un gráfico con los datos completos, veremos que se incluyen los 491 distritos de Costa Rica (a junio de 2024).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">8.540380</span>)))</span>
-<span id="cb19-3"><span class="fu" style="color: #4758AB;
+font-style: inherit;">ggplot</span>(<span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">st_crs</span>(bar_purruja) <span class="ot" style="color: #003B4F;
+font-style: inherit;">data =</span> distritos) <span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+font-style: inherit;">+</span></span>
+<span id="cb21-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">4326</span></span></code></pre></div>
+font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.1</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"steelblue"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb21-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://aprendetidyverse.com/posts/003_mapa_cantones_cr_p2_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="3200"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Ahora, podemos tomar este mapa y utilizar la función <code>st_union</code> junto con la variable <code>región</code> para crear un mapa de las regiones administrativas. Esto nos brinda mucha flexibilidad para adaptar los datos disponibles, permitiéndonos realizar las agrupaciones que mejor nos convengan.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1">regiones <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> distritos <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb22-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(region) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb22-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarise</span>(</span>
+<span id="cb22-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">geometry =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">st_union</span>(geometry)</span>
+<span id="cb22-5">  )</span></code></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(</span>
-<span id="cb20-2">  <span class="at" style="color: #657422;
+<span id="cb23-2">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">data =</span> golfo,</span>
-<span id="cb20-3">  <span class="at" style="color: #657422;
+font-style: inherit;">data =</span> regiones,</span>
+<span id="cb23-3">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">mapping =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">aes</span>(</span>
-<span id="cb20-4">    <span class="at" style="color: #657422;
+<span id="cb23-4">    <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">fill =</span> ids_2017</span>
-<span id="cb20-5">  )</span>
-<span id="cb20-6">) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">fill =</span> region</span>
+<span id="cb23-5">  )) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb20-7">  <span class="fu" style="color: #4758AB;
+<span id="cb23-6">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -682,52 +750,18 @@ background-color: null;
 font-style: inherit;">0.1</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb20-8">  <span class="fu" style="color: #4758AB;
+<span id="cb23-7">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">data =</span> bar_purruja, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">inherit.aes =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">FALSE</span>)<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb20-9">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">scale_fill_continuous</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">na.value =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb20-10">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb20-11">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">theme</span>(</span>
-<span id="cb20-12">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"bottom"</span></span>
-<span id="cb20-13">  )</span></code></pre></div>
+font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://aprendetidyverse.com/posts/003_mapa_cantones_cr_p2_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="3200"></p>
+<p><img src="https://aprendetidyverse.com/posts/003_mapa_cantones_cr_p2_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="3200"></p>
 </figure>
 </div>
 </div>
 </div>
+<p>Espero que esta pequeña guía te sea de utilidad. Si tienes alguna consulta, no dudes en contactarme a carlos.aguero@aprendetidyverse.com o unirte a nuestros <a href="https://aprendetidyverse.com/domingos_pr.html">Domingos de Preguntas y Respuestas</a>, un espacio público y gratuito donde conversamos y resolvemos juntos problemas con código R. Este espacio está diseñado para brindar acceso a toda la comunidad de usuarios de R, ofreciendo consultoría y apoyo en su proceso de aprendizaje sin costo alguno.</p>
 
 
 </section>
@@ -736,9 +770,9 @@ font-style: inherit;">"bottom"</span></span>
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notas</h2>
 
 <ol>
-<li id="fn1"><p>Costa Rica. Decreto Ejecutivo N° 9501. Reforma División Regional del Territorio de Costa Rica, para los Efectos de Investigación y Planificación del Desarrollo Socioeconómico. (11 de febrero de 2015). Procuraduría General de la República. <a href="https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&amp;nValor1=1&amp;nValor2=59730&amp;nValor3=67054&amp;strTipM=TC">Leer más</a>↩︎</p></li>
-<li id="fn2"><p>Delfino.cr. (21 de octubre de 2021). Expediente 22749: Creación del Cantón de Puerto Jiménez, Cantón XIII de la Provincia de Puntarenas. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/22749">Leer más</a>↩︎</p></li>
-<li id="fn3"><p>Delfino.cr. (25 de septiembre de 2019). Expediente 21618: Creación del Cantón de Monteverde, Cantón XII de la Provincia de Puntarenas. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/21618">Leer más</a>↩︎</p></li>
+<li id="fn1"><p>Delfino.cr. (21 de octubre de 2021). Expediente 22749: Creación del Cantón de Puerto Jiménez, Cantón XIII de la Provincia de Puntarenas. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/22749">Leer más</a>↩︎</p></li>
+<li id="fn2"><p>Delfino.cr. (25 de septiembre de 2019). Expediente 21618: Creación del Cantón de Monteverde, Cantón XII de la Provincia de Puntarenas. Delfino.cr. <a href="https://delfino.cr/asamblea/proyecto/21618">Leer más</a>↩︎</p></li>
+<li id="fn3"><p>Costa Rica. Decreto Ejecutivo N° 9501. Reforma División Regional del Territorio de Costa Rica, para los Efectos de Investigación y Planificación del Desarrollo Socioeconómico. (11 de febrero de 2015). Procuraduría General de la República. <a href="https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&amp;nValor1=1&amp;nValor2=59730&amp;nValor3=67054&amp;strTipM=TC">Leer más</a>↩︎</p></li>
 </ol>
 </section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
   author = {Aguero, Carlos},
