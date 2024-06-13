@@ -27,12 +27,8 @@ Domina el lenguaje R y lleva tus habilidades en análisis de datos al siguiente 
 - Organiza y gestiona proyectos de forma profesional.
 - Integra SQL con R para potenciar tus análisis y gestionar bases de datos.
 
-
-
-### Explora, analiza y comparte. Tienes historias que contar haz de R tu herramienta para hacerlo.
-
 ::: hero-buttons
-[Inscribirte Hoy]({{< var curso_r4ds.url_pago >}}){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"} [Leer Más](courses/r4ds.qmd){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
+[Ver los cursos](courses/r4ds.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"} [Hablar con el instructor](https://wa.me/50683725899?text=Me%20gustaría%20conocer%20más%20sobre%20curiosos%20del%20programa%20R%20para%20ciencia%20de%20datos){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
 :::
 :::
 
@@ -43,55 +39,88 @@ Domina el lenguaje R y lleva tus habilidades en análisis de datos al siguiente 
 :::
 :::
 
-
-
-
 ::: content-block
-## ¿Ya Dominas R? Da el siguiente paso con cursos especializados
+
+## Conoce nuestros cursos
 
 ::: features
+
 ::: feature
-### ggplot2 avanzado: lleva tus visualizaciones al siguiente nivel
 
-¿Dominas ggplot2? Lleva tus gráficos al siguiente nivel con técnicas avanzadas de visualización de datos. ¡Explora más!
-
--   **Precio**: \$99 USD
--   **Duración**: 6 semanas
--   **Horario**: martes 6:00 p.m (UTC-6)
--   **Próxima Apertura**: martes 4 de junio de 2024
+### Fundamentos de R y RStudio
+Conoce RStudio y utiliza sus funcionalidades para optimizar tu trabajo con R.
 
 ::: learn-more
-[Leer más »](courses/avz_ggplot2.qmd)
+[Leer más »](https://aprendetidyverse.com/courses/fundamentos_R.html)
 :::
 :::
 
 ::: feature
-### Curso Avanzado de Web Scraping y Automatización con R
 
-Domina el web scraping con R y accede a un mundo de datos que estás desaprovechando.
-
--   **Precio**: \$99 USD
--   **Duración**: 6 semanas
--   **Horario**: martes 6:00 p.m (UTC-6)
--   **Próxima Apertura**: martes 23 de julio de 2024
+### Visualización de datos con R
+Crea visualizaciones impactantes para comunicar tus hallazgos de manera efectiva.
 
 ::: learn-more
-[Leer más »](courses/web_scraping.qmd)
+[Leer más »](https://aprendetidyverse.com/courses/visualizacion_datos_R.html)
 :::
 :::
 
 ::: feature
-### Introducción al desarrollo de aplicaciones con shiny
-
-Desarrolla aplicaciones web reactivas y dashboards profesionales usando el lenguaje que ya conoces: R.
-
--   **Precio**: \$99 USD
--   **Duración**: 6 semanas
--   **Horario**: miércoles 6:00 p.m (UTC-6)
--   **Próxima Apertura**: miércoles 3 de julio de 2024
+### Desarrollo de documentos con Quarto
+Desarrolla documentos y mapas interactivos para presentar tus resultados.
 
 ::: learn-more
-[Leer más »](/courses/intro_shiny.qmd)
+[Leer más »](https://aprendetidyverse.com/courses/documentos_con_quarto.html)
+:::
+:::
+
+::: feature
+### Manipulación de datos con R
+Importa y manipula datos eficientemente con herramientas avanzadas.
+
+::: learn-more
+[Leer más »](https://aprendetidyverse.com/courses/manipulacion_datos_R.html)
+:::
+:::
+
+::: feature
+### Limpieza e importación de datos
+Maneja textos, fechas y factores con precisión.
+
+
+::: learn-more
+[Leer más »](https://aprendetidyverse.com/courses/limpieza_importacion.html)
+:::
+:::
+
+::: feature
+### Introducción a SQL
+Integra SQL con R para potenciar tus análisis y gestionar bases de datos.
+
+
+::: learn-more
+[Leer más »](https://aprendetidyverse.com/courses/introduccion_sql.html)
+:::
+:::
+
+::: feature
+### Web Scraping y Automatización
+Extrae datos de sitios web con técnicas de web scraping.
+
+
+::: learn-more
+[Leer más »](https://aprendetidyverse.com/courses/web_scraping.html)
+:::
+:::
+
+::: feature
+
+### Organización y documentación de proyectos en RStudio
+Organiza y gestiona proyectos de forma profesional.
+
+
+::: learn-more
+[Leer más »](https://aprendetidyverse.com/courses/desarrollo_proyectos_R.html)
 :::
 :::
 :::
