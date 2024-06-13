@@ -1,9 +1,8 @@
 ---
-title: "Funciones `across` y `where` tus dos nuevos mejores amigos a la hora de manipular datos con R."
-description: "Descubre cómo across y where pueden transformar tu forma de trabajar con datos en R. Estas funciones facilitan la manipulación y transformación de múltiples columnas de forma simultánea y selectiva, ahorrándote tiempo y esfuerzo. Aprende a usarlas y lleva tu análisis de datos al siguiente nivel."
+title: "Si usas dplyr, debes aprender a usar across y where"
+description: "Aprende a usar las funciones across y where de dplyr para realizar operaciones en múltiples columnas de manera eficiente. Estas herramientas mejoran la manipulación y el procesamiento de datos en R."
 date: 2024-05-30
-date-modified: 2024-05-30
-categories: ['Tutorial', 'dplyr']
+categories: ['Tutorial', 'dplyr','across','where']
 lang: "es"
 image: images/dplyr_across_blank.png
 comments:
@@ -29,3 +28,72 @@ citation: true
 knitr::opts_chunk$set(echo = TRUE, dpi = 400, fig.width = 8, fig.height = 6)
 ```
 
+Si trabajas con datos, hay dos situaciones comunes que seguro has tenido que resolver. La primera es seleccionar o filtrar tus datos considerando el tipo de datos de alguna variable. Por ejemplo, ACP o un clustering jerárquico, es necesario seleccionar solo las variables numéricas. La segunda situación es cuando necesitas aplicar una función a todas las columnas de tu tabla, como escalar todas las columnas aplicando la misma función, por ejemplo, `scale`, a cada columna o a cada columna numérica.
+
+Estos escenarios se vuelven fáciles de escribir y leer cuando utilizamos las funciones `across` y `where` de `dplyr`. Con `across`, puedes aplicar una función a múltiples columnas simultáneamente, y con `where`, puedes filtrar columnas basándote en condiciones específicas, como su tipo de dato.
+
+La mejor forma de explicar esto es usando ejemplos concretos. A continuación, veamos una serie de casos y cómo resolverlos con estas funciones.
+
+Para estos ejemplos usaremos un dataset que me encanta, llamado pinguinos 🐧. Se presenta como una alternativa al típico dataset iris, el cual, no sé vos, pero al menos yo ya estoy un poco harto 💕. Originalmente presentado en el paquete [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) desarrollado por [Allison Horst](https://orcid.org/0000-0002-6047-5564), [Alison Hill](https://orcid.org/0000-0002-8082-1890) y [Kristen Gorman](https://orcid.org/0000-0002-0258-9264), y luego traducido al español por el paquete [datos](https://cran.r-project.org/web/packages/datos/index.html), una hermosa contribución de [Riva Quiroga](https://orcid.org/0000-0002-1147-4135), Edgar Ruiz, Mauricio Vargas, [Mauro Lepore](https://orcid.org/0000-0002-1986-7988), Rayna Harris, Daniela Vasquez y Joshua Kunst.
+
+## Ejemplo 1: Seleccionar solamente las variables numéricas
+
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(datos)
+glimpse(pinguinos)
+```
+
+```{r}
+x <- select(pinguinos,where(is.numeric))
+glimpse(x)
+```
+
+Podemos, a la función `where`, pasar cualquier función que reciba un vector y retorne un `TRUE/FALSE`, lo cual es útil al combinarlo con las funciones que R ya nos provee para verificar tipos como `is.numeric`, `is.factor`, `is.character`, `is.logical`. O podríamos, ¿por qué no?, escribir nuestras propias funciones cortas.
+
+Por ejemplo, quiero las columnas que no contengan valores ausentes `NA`.
+
+```{r}
+select(pinguinos, where(\(x) all(!is.na(x))))
+```
+
+
+## Ejemplo 2: Escalar todas las variables numéricas
+
+```{r}
+pinguinos |> 
+  mutate(
+    across(
+      where(is.numeric),
+      \(x) as.vector(scale(x))
+    )
+  )
+```
+
+## Ejemplo 3: Resumir todas la variables numéricas calculando la media
+
+```{r}
+pinguinos |> 
+  summarise(across(where(is.numeric), mean,
+    na.rm = TRUE))
+```
+
+## Ejemplo 4: Resumir todas la variables numéricas calculando la media y la mediana
+
+```{r}
+x <- pinguinos |> 
+  summarise(across(
+    .cols = where(is.numeric),
+    .fns = list(media = mean, mediana = median),
+    na.rm = TRUE)
+  )
+
+glimpse(x)
+```
+
+
+```{r}
+pinguinos |> 
+  summarise(across(where(is.numeric), list(mean = mean,media = median), .names = "{col}_{fn}"))
+```

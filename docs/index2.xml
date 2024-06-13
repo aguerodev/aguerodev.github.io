@@ -43,7 +43,7 @@ Funciona 🚀.”</span> May 31, 2024. <a href="https://aprendetidyverse.com/pos
   <media:content url="https://miro.medium.com/v2/resize:fit:1358/1*woaPPp2Hq10SJqN6sgH0yQ.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Funciones across y where tus dos nuevos mejores amigos a la hora de manipular datos con R.</title>
+  <title>Si usas dplyr, debes aprender a usar across y where</title>
   <dc:creator>Carlos Aguero</dc:creator>
   <link>https://aprendetidyverse.com/posts/004_across_where.html</link>
   <description><![CDATA[ 
@@ -51,24 +51,270 @@ Funciona 🚀.”</span> May 31, 2024. <a href="https://aprendetidyverse.com/pos
 
 
 
+<p>Si trabajas con datos, hay dos situaciones comunes que seguro has tenido que resolver. La primera es seleccionar o filtrar tus datos considerando el tipo de datos de alguna variable. Por ejemplo, ACP o un clustering jerárquico, es necesario seleccionar solo las variables numéricas. La segunda situación es cuando necesitas aplicar una función a todas las columnas de tu tabla, como escalar todas las columnas aplicando la misma función, por ejemplo, <code>scale</code>, a cada columna o a cada columna numérica.</p>
+<p>Estos escenarios se vuelven fáciles de escribir y leer cuando utilizamos las funciones <code>across</code> y <code>where</code> de <code>dplyr</code>. Con <code>across</code>, puedes aplicar una función a múltiples columnas simultáneamente, y con <code>where</code>, puedes filtrar columnas basándote en condiciones específicas, como su tipo de dato.</p>
+<p>La mejor forma de explicar esto es usando ejemplos concretos. A continuación, veamos una serie de casos y cómo resolverlos con estas funciones.</p>
+<p>Para estos ejemplos usaremos un dataset que me encanta, llamado pinguinos 🐧. Se presenta como una alternativa al típico dataset iris, el cual, no sé vos, pero al menos yo ya estoy un poco harto 💕. Originalmente presentado en el paquete <a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a> desarrollado por <a href="https://orcid.org/0000-0002-6047-5564">Allison Horst</a>, <a href="https://orcid.org/0000-0002-8082-1890">Alison Hill</a> y <a href="https://orcid.org/0000-0002-0258-9264">Kristen Gorman</a>, y luego traducido al español por el paquete <a href="https://cran.r-project.org/web/packages/datos/index.html">datos</a>, una hermosa contribución de <a href="https://orcid.org/0000-0002-1147-4135">Riva Quiroga</a>, Edgar Ruiz, Mauricio Vargas, <a href="https://orcid.org/0000-0002-1986-7988">Mauro Lepore</a>, Rayna Harris, Daniela Vasquez y Joshua Kunst.</p>
+<section id="ejemplo-1-seleccionar-solamente-las-variables-numéricas" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-1-seleccionar-solamente-las-variables-numéricas">Ejemplo 1: Seleccionar solamente las variables numéricas</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyverse)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(datos)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(pinguinos)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 344
+Columns: 8
+$ especie         &lt;fct&gt; Adelia, Adelia, Adelia, Adelia, Adelia, Adelia, Adelia…
+$ isla            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgersen,…
+$ largo_pico_mm   &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, 42…
+$ alto_pico_mm    &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, 20…
+$ largo_aleta_mm  &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186, …
+$ masa_corporal_g &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, 42…
+$ sexo            &lt;fct&gt; macho, hembra, hembra, NA, hembra, macho, hembra, mach…
+$ anio            &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, …</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">x <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(pinguinos,<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">where</span>(is.numeric))</span>
+<span id="cb3-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(x)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 344
+Columns: 5
+$ largo_pico_mm   &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, 42…
+$ alto_pico_mm    &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, 20…
+$ largo_aleta_mm  &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186, …
+$ masa_corporal_g &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, 42…
+$ anio            &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, …</code></pre>
+</div>
+</div>
+<p>Podemos, a la función <code>where</code>, pasar cualquier función que reciba un vector y retorne un <code>TRUE/FALSE</code>, lo cual es útil al combinarlo con las funciones que R ya nos provee para verificar tipos como <code>is.numeric</code>, <code>is.factor</code>, <code>is.character</code>, <code>is.logical</code>. O podríamos, ¿por qué no?, escribir nuestras propias funciones cortas.</p>
+<p>Por ejemplo, quiero las columnas que no contengan valores ausentes <code>NA</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(pinguinos, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">where</span>(\(x) <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">all</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">is.na</span>(x))))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 3
+   especie isla       anio
+   &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt;
+ 1 Adelia  Torgersen  2007
+ 2 Adelia  Torgersen  2007
+ 3 Adelia  Torgersen  2007
+ 4 Adelia  Torgersen  2007
+ 5 Adelia  Torgersen  2007
+ 6 Adelia  Torgersen  2007
+ 7 Adelia  Torgersen  2007
+ 8 Adelia  Torgersen  2007
+ 9 Adelia  Torgersen  2007
+10 Adelia  Torgersen  2007
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="ejemplo-2-escalar-todas-las-variables-numéricas" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-2-escalar-todas-las-variables-numéricas">Ejemplo 2: Escalar todas las variables numéricas</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1">pinguinos <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb7-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb7-3">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">across</span>(</span>
+<span id="cb7-4">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">where</span>(is.numeric),</span>
+<span id="cb7-5">      \(x) <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.vector</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale</span>(x))</span>
+<span id="cb7-6">    )</span>
+<span id="cb7-7">  )</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 8
+   especie isla  largo_pico_mm alto_pico_mm largo_aleta_mm masa_corporal_g sexo 
+   &lt;fct&gt;   &lt;fct&gt;         &lt;dbl&gt;        &lt;dbl&gt;          &lt;dbl&gt;           &lt;dbl&gt; &lt;fct&gt;
+ 1 Adelia  Torg…        -0.883        0.784         -1.42          -0.563  macho
+ 2 Adelia  Torg…        -0.810        0.126         -1.06          -0.501  hemb…
+ 3 Adelia  Torg…        -0.663        0.430         -0.421         -1.19   hemb…
+ 4 Adelia  Torg…        NA           NA             NA             NA      &lt;NA&gt; 
+ 5 Adelia  Torg…        -1.32         1.09          -0.563         -0.937  hemb…
+ 6 Adelia  Torg…        -0.847        1.75          -0.776         -0.688  macho
+ 7 Adelia  Torg…        -0.920        0.329         -1.42          -0.719  hemb…
+ 8 Adelia  Torg…        -0.865        1.24          -0.421          0.590  macho
+ 9 Adelia  Torg…        -1.80         0.480         -0.563         -0.906  &lt;NA&gt; 
+10 Adelia  Torg…        -0.352        1.54          -0.776          0.0602 &lt;NA&gt; 
+# ℹ 334 more rows
+# ℹ 1 more variable: anio &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="ejemplo-3-resumir-todas-la-variables-numéricas-calculando-la-media" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-3-resumir-todas-la-variables-numéricas-calculando-la-media">Ejemplo 3: Resumir todas la variables numéricas calculando la media</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1">pinguinos <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb9-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarise</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">across</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">where</span>(is.numeric), mean,</span>
+<span id="cb9-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">na.rm =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>))</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: There was 1 warning in `summarise()`.
+ℹ In argument: `across(where(is.numeric), mean, na.rm = TRUE)`.
+Caused by warning:
+! The `...` argument of `across()` is deprecated as of dplyr 1.1.0.
+Supply arguments directly to `.fns` through an anonymous function instead.
+
+  # Previously
+  across(a:b, mean, na.rm = TRUE)
+
+  # Now
+  across(a:b, \(x) mean(x, na.rm = TRUE))</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 5
+  largo_pico_mm alto_pico_mm largo_aleta_mm masa_corporal_g  anio
+          &lt;dbl&gt;        &lt;dbl&gt;          &lt;dbl&gt;           &lt;dbl&gt; &lt;dbl&gt;
+1          43.9         17.2           201.           4202. 2008.</code></pre>
+</div>
+</div>
+</section>
+<section id="ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana">Ejemplo 4: Resumir todas la variables numéricas calculando la media y la mediana</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1">x <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> pinguinos <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb12-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarise</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">across</span>(</span>
+<span id="cb12-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.cols =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">where</span>(is.numeric),</span>
+<span id="cb12-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.fns =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">media =</span> mean, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mediana =</span> median),</span>
+<span id="cb12-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">na.rm =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span>
+<span id="cb12-6">  )</span>
+<span id="cb12-7"></span>
+<span id="cb12-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(x)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1
+Columns: 10
+$ largo_pico_mm_media     &lt;dbl&gt; 43.92193
+$ largo_pico_mm_mediana   &lt;dbl&gt; 44.45
+$ alto_pico_mm_media      &lt;dbl&gt; 17.15117
+$ alto_pico_mm_mediana    &lt;dbl&gt; 17.3
+$ largo_aleta_mm_media    &lt;dbl&gt; 200.9152
+$ largo_aleta_mm_mediana  &lt;dbl&gt; 197
+$ masa_corporal_g_media   &lt;dbl&gt; 4201.754
+$ masa_corporal_g_mediana &lt;dbl&gt; 4050
+$ anio_media              &lt;dbl&gt; 2008.029
+$ anio_mediana            &lt;dbl&gt; 2008</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1">pinguinos <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb14-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarise</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">across</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">where</span>(is.numeric), <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean =</span> mean,<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">media =</span> median), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.names =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"{col}_{fn}"</span>))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 10
+  largo_pico_mm_mean largo_pico_mm_media alto_pico_mm_mean alto_pico_mm_media
+               &lt;dbl&gt;               &lt;dbl&gt;             &lt;dbl&gt;              &lt;dbl&gt;
+1                 NA                  NA                NA                 NA
+# ℹ 6 more variables: largo_aleta_mm_mean &lt;dbl&gt;, largo_aleta_mm_media &lt;int&gt;,
+#   masa_corporal_g_mean &lt;dbl&gt;, masa_corporal_g_media &lt;int&gt;, anio_mean &lt;dbl&gt;,
+#   anio_media &lt;dbl&gt;</code></pre>
+</div>
+</div>
 
 
+</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
   author = {Aguero, Carlos},
-  title = {Funciones `across` y `where` tus dos nuevos mejores amigos a
-    la hora de manipular datos con R.},
+  title = {Si usas dplyr, debes aprender a usar across y where},
   date = {2024-05-30},
   url = {https://aprendetidyverse.com/posts/004_across_where.html},
   langid = {es}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-aguero2024" class="csl-entry quarto-appendix-citeas">
-Aguero, Carlos. 2024. <span>“Funciones `across` y `where` tus dos nuevos
-mejores amigos a la hora de manipular datos con R.”</span> May 30, 2024.
-<a href="https://aprendetidyverse.com/posts/004_across_where.html">https://aprendetidyverse.com/posts/004_across_where.html</a>.
+Aguero, Carlos. 2024. <span>“Si usas dplyr, debes aprender a usar across
+y where.”</span> May 30, 2024. <a href="https://aprendetidyverse.com/posts/004_across_where.html">https://aprendetidyverse.com/posts/004_across_where.html</a>.
 </div></div></section></div> ]]></description>
   <category>Tutorial</category>
   <category>dplyr</category>
+  <category>across</category>
+  <category>where</category>
   <guid>https://aprendetidyverse.com/posts/004_across_where.html</guid>
   <pubDate>Thu, 30 May 2024 06:00:00 GMT</pubDate>
   <media:content url="https://aprendetidyverse.com/posts/images/dplyr_across_blank.png" medium="image" type="image/png" height="93" width="144"/>

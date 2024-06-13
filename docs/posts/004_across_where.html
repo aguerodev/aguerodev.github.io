@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Carlos Aguero">
-<meta name="description" content="Descubre cómo across y where pueden transformar tu forma de trabajar con datos en R. Estas funciones facilitan la manipulación y transformación de múltiples columnas de forma simultánea y selectiva, ahorrándote tiempo y esfuerzo. Aprende a usarlas y lleva tu análisis de datos al siguiente nivel.">
+<meta name="description" content="Aprende a usar las funciones across y where de dplyr para realizar operaciones en múltiples columnas de manera eficiente. Estas herramientas mejoran la manipulación y el procesamiento de datos en R.">
 
-<title>Aprende Tidyverse – Funciones &lt;code&gt;across&lt;/code&gt; y &lt;code&gt;where&lt;/code&gt; tus dos nuevos mejores amigos a la hora de manipular datos con R.</title>
+<title>Aprende Tidyverse – Si usas dplyr, debes aprender a usar across y where</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -103,15 +137,15 @@ cookieconsent.run({
 <meta name="quarto:status" content="draft">
 
 
-<meta property="og:title" content="Funciones across y where tus dos nuevos mejores amigos a la hora de manipular datos con R.">
-<meta property="og:description" content="Descubre cómo across y where pueden transformar tu forma de trabajar con datos en R. Estas funciones facilitan la manipulación y transformación de múltiples columnas de forma simultánea y selectiva, ahorrándote tiempo y esfuerzo. Aprende a usarlas y lleva tu análisis de datos al siguiente nivel.">
+<meta property="og:title" content="Si usas dplyr, debes aprender a usar across y where">
+<meta property="og:description" content="Aprende a usar las funciones across y where de dplyr para realizar operaciones en múltiples columnas de manera eficiente. Estas herramientas mejoran la manipulación y el procesamiento de datos en R.">
 <meta property="og:image" content="https://aprendetidyverse.com/posts/images/dplyr_across_blank.png">
 <meta property="og:site_name" content="aprendetidyverse.com">
 <meta property="og:locale" content="es_ES">
 <meta property="og:image:height" content="1765">
 <meta property="og:image:width" content="2732">
-<meta name="twitter:title" content="Funciones across y where tus dos nuevos mejores amigos a la hora de manipular datos con R.">
-<meta name="twitter:description" content="Descubre cómo across y where pueden transformar tu forma de trabajar con datos en R. Estas funciones facilitan la manipulación y transformación de múltiples columnas de forma simultánea y selectiva, ahorrándote tiempo y esfuerzo. Aprende a usarlas y lleva tu análisis de datos al siguiente nivel.">
+<meta name="twitter:title" content="Si usas dplyr, debes aprender a usar across y where">
+<meta name="twitter:description" content="Aprende a usar las funciones across y where de dplyr para realizar operaciones en múltiples columnas de manera eficiente. Estas herramientas mejoran la manipulación y el procesamiento de datos en R.">
 <meta name="twitter:image" content="https://aprendetidyverse.com/posts/images/dplyr_across_blank.png">
 <meta name="twitter:creator" content="@dev_aguero">
 <meta name="twitter:site" content="@dev_aguero">
@@ -210,7 +244,16 @@ cookieconsent.run({
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#ejemplo-1-seleccionar-solamente-las-variables-numéricas" id="toc-ejemplo-1-seleccionar-solamente-las-variables-numéricas" class="nav-link active" data-scroll-target="#ejemplo-1-seleccionar-solamente-las-variables-numéricas">Ejemplo 1: Seleccionar solamente las variables numéricas</a></li>
+  <li><a href="#ejemplo-2-escalar-todas-las-variables-numéricas" id="toc-ejemplo-2-escalar-todas-las-variables-numéricas" class="nav-link" data-scroll-target="#ejemplo-2-escalar-todas-las-variables-numéricas">Ejemplo 2: Escalar todas las variables numéricas</a></li>
+  <li><a href="#ejemplo-3-resumir-todas-la-variables-numéricas-calculando-la-media" id="toc-ejemplo-3-resumir-todas-la-variables-numéricas-calculando-la-media" class="nav-link" data-scroll-target="#ejemplo-3-resumir-todas-la-variables-numéricas-calculando-la-media">Ejemplo 3: Resumir todas la variables numéricas calculando la media</a></li>
+  <li><a href="#ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana" id="toc-ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana" class="nav-link" data-scroll-target="#ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana">Ejemplo 4: Resumir todas la variables numéricas calculando la media y la mediana</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -221,12 +264,12 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Funciones <code>across</code> y <code>where</code> tus dos nuevos mejores amigos a la hora de manipular datos con R.</h1>
+<h1 class="title">Si usas dplyr, debes aprender a usar across y where</h1>
   </div>
 
 <div>
   <div class="description">
-    Descubre cómo across y where pueden transformar tu forma de trabajar con datos en R. Estas funciones facilitan la manipulación y transformación de múltiples columnas de forma simultánea y selectiva, ahorrándote tiempo y esfuerzo. Aprende a usarlas y lleva tu análisis de datos al siguiente nivel.
+    Aprende a usar las funciones across y where de dplyr para realizar operaciones en múltiples columnas de manera eficiente. Estas herramientas mejoran la manipulación y el procesamiento de datos en R.
   </div>
 </div>
 
@@ -256,12 +299,6 @@ cookieconsent.run({
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de modificación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">30 de mayo de 2024</p>
-    </div>
-  </div>
     
   </div>
   
@@ -270,21 +307,173 @@ cookieconsent.run({
 </header>
 
 
+<p>Si trabajas con datos, hay dos situaciones comunes que seguro has tenido que resolver. La primera es seleccionar o filtrar tus datos considerando el tipo de datos de alguna variable. Por ejemplo, ACP o un clustering jerárquico, es necesario seleccionar solo las variables numéricas. La segunda situación es cuando necesitas aplicar una función a todas las columnas de tu tabla, como escalar todas las columnas aplicando la misma función, por ejemplo, <code>scale</code>, a cada columna o a cada columna numérica.</p>
+<p>Estos escenarios se vuelven fáciles de escribir y leer cuando utilizamos las funciones <code>across</code> y <code>where</code> de <code>dplyr</code>. Con <code>across</code>, puedes aplicar una función a múltiples columnas simultáneamente, y con <code>where</code>, puedes filtrar columnas basándote en condiciones específicas, como su tipo de dato.</p>
+<p>La mejor forma de explicar esto es usando ejemplos concretos. A continuación, veamos una serie de casos y cómo resolverlos con estas funciones.</p>
+<p>Para estos ejemplos usaremos un dataset que me encanta, llamado pinguinos 🐧. Se presenta como una alternativa al típico dataset iris, el cual, no sé vos, pero al menos yo ya estoy un poco harto 💕. Originalmente presentado en el paquete <a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a> desarrollado por <a href="https://orcid.org/0000-0002-6047-5564">Allison Horst</a>, <a href="https://orcid.org/0000-0002-8082-1890">Alison Hill</a> y <a href="https://orcid.org/0000-0002-0258-9264">Kristen Gorman</a>, y luego traducido al español por el paquete <a href="https://cran.r-project.org/web/packages/datos/index.html">datos</a>, una hermosa contribución de <a href="https://orcid.org/0000-0002-1147-4135">Riva Quiroga</a>, Edgar Ruiz, Mauricio Vargas, <a href="https://orcid.org/0000-0002-1986-7988">Mauro Lepore</a>, Rayna Harris, Daniela Vasquez y Joshua Kunst.</p>
+<section id="ejemplo-1-seleccionar-solamente-las-variables-numéricas" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-1-seleccionar-solamente-las-variables-numéricas">Ejemplo 1: Seleccionar solamente las variables numéricas</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(datos)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">glimpse</span>(pinguinos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 344
+Columns: 8
+$ especie         &lt;fct&gt; Adelia, Adelia, Adelia, Adelia, Adelia, Adelia, Adelia…
+$ isla            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgersen,…
+$ largo_pico_mm   &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, 42…
+$ alto_pico_mm    &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, 20…
+$ largo_aleta_mm  &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186, …
+$ masa_corporal_g &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, 42…
+$ sexo            &lt;fct&gt; macho, hembra, hembra, NA, hembra, macho, hembra, mach…
+$ anio            &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, …</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>x <span class="ot">&lt;-</span> <span class="fu">select</span>(pinguinos,<span class="fu">where</span>(is.numeric))</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">glimpse</span>(x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 344
+Columns: 5
+$ largo_pico_mm   &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, 42…
+$ alto_pico_mm    &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, 20…
+$ largo_aleta_mm  &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186, …
+$ masa_corporal_g &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, 42…
+$ anio            &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, …</code></pre>
+</div>
+</div>
+<p>Podemos, a la función <code>where</code>, pasar cualquier función que reciba un vector y retorne un <code>TRUE/FALSE</code>, lo cual es útil al combinarlo con las funciones que R ya nos provee para verificar tipos como <code>is.numeric</code>, <code>is.factor</code>, <code>is.character</code>, <code>is.logical</code>. O podríamos, ¿por qué no?, escribir nuestras propias funciones cortas.</p>
+<p>Por ejemplo, quiero las columnas que no contengan valores ausentes <code>NA</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">select</span>(pinguinos, <span class="fu">where</span>(\(x) <span class="fu">all</span>(<span class="sc">!</span><span class="fu">is.na</span>(x))))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 3
+   especie isla       anio
+   &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt;
+ 1 Adelia  Torgersen  2007
+ 2 Adelia  Torgersen  2007
+ 3 Adelia  Torgersen  2007
+ 4 Adelia  Torgersen  2007
+ 5 Adelia  Torgersen  2007
+ 6 Adelia  Torgersen  2007
+ 7 Adelia  Torgersen  2007
+ 8 Adelia  Torgersen  2007
+ 9 Adelia  Torgersen  2007
+10 Adelia  Torgersen  2007
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="ejemplo-2-escalar-todas-las-variables-numéricas" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-2-escalar-todas-las-variables-numéricas">Ejemplo 2: Escalar todas las variables numéricas</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>pinguinos <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="fu">across</span>(</span>
+<span id="cb7-4"><a href="#cb7-4"></a>      <span class="fu">where</span>(is.numeric),</span>
+<span id="cb7-5"><a href="#cb7-5"></a>      \(x) <span class="fu">as.vector</span>(<span class="fu">scale</span>(x))</span>
+<span id="cb7-6"><a href="#cb7-6"></a>    )</span>
+<span id="cb7-7"><a href="#cb7-7"></a>  )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 8
+   especie isla  largo_pico_mm alto_pico_mm largo_aleta_mm masa_corporal_g sexo 
+   &lt;fct&gt;   &lt;fct&gt;         &lt;dbl&gt;        &lt;dbl&gt;          &lt;dbl&gt;           &lt;dbl&gt; &lt;fct&gt;
+ 1 Adelia  Torg…        -0.883        0.784         -1.42          -0.563  macho
+ 2 Adelia  Torg…        -0.810        0.126         -1.06          -0.501  hemb…
+ 3 Adelia  Torg…        -0.663        0.430         -0.421         -1.19   hemb…
+ 4 Adelia  Torg…        NA           NA             NA             NA      &lt;NA&gt; 
+ 5 Adelia  Torg…        -1.32         1.09          -0.563         -0.937  hemb…
+ 6 Adelia  Torg…        -0.847        1.75          -0.776         -0.688  macho
+ 7 Adelia  Torg…        -0.920        0.329         -1.42          -0.719  hemb…
+ 8 Adelia  Torg…        -0.865        1.24          -0.421          0.590  macho
+ 9 Adelia  Torg…        -1.80         0.480         -0.563         -0.906  &lt;NA&gt; 
+10 Adelia  Torg…        -0.352        1.54          -0.776          0.0602 &lt;NA&gt; 
+# ℹ 334 more rows
+# ℹ 1 more variable: anio &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="ejemplo-3-resumir-todas-la-variables-numéricas-calculando-la-media" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-3-resumir-todas-la-variables-numéricas-calculando-la-media">Ejemplo 3: Resumir todas la variables numéricas calculando la media</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>pinguinos <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), mean,</span>
+<span id="cb9-3"><a href="#cb9-3"></a>    <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: There was 1 warning in `summarise()`.
+ℹ In argument: `across(where(is.numeric), mean, na.rm = TRUE)`.
+Caused by warning:
+! The `...` argument of `across()` is deprecated as of dplyr 1.1.0.
+Supply arguments directly to `.fns` through an anonymous function instead.
+
+  # Previously
+  across(a:b, mean, na.rm = TRUE)
+
+  # Now
+  across(a:b, \(x) mean(x, na.rm = TRUE))</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 5
+  largo_pico_mm alto_pico_mm largo_aleta_mm masa_corporal_g  anio
+          &lt;dbl&gt;        &lt;dbl&gt;          &lt;dbl&gt;           &lt;dbl&gt; &lt;dbl&gt;
+1          43.9         17.2           201.           4202. 2008.</code></pre>
+</div>
+</div>
+</section>
+<section id="ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana">Ejemplo 4: Resumir todas la variables numéricas calculando la media y la mediana</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>x <span class="ot">&lt;-</span> pinguinos <span class="sc">|&gt;</span> </span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(</span>
+<span id="cb12-3"><a href="#cb12-3"></a>    <span class="at">.cols =</span> <span class="fu">where</span>(is.numeric),</span>
+<span id="cb12-4"><a href="#cb12-4"></a>    <span class="at">.fns =</span> <span class="fu">list</span>(<span class="at">media =</span> mean, <span class="at">mediana =</span> median),</span>
+<span id="cb12-5"><a href="#cb12-5"></a>    <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb12-6"><a href="#cb12-6"></a>  )</span>
+<span id="cb12-7"><a href="#cb12-7"></a></span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="fu">glimpse</span>(x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1
+Columns: 10
+$ largo_pico_mm_media     &lt;dbl&gt; 43.92193
+$ largo_pico_mm_mediana   &lt;dbl&gt; 44.45
+$ alto_pico_mm_media      &lt;dbl&gt; 17.15117
+$ alto_pico_mm_mediana    &lt;dbl&gt; 17.3
+$ largo_aleta_mm_media    &lt;dbl&gt; 200.9152
+$ largo_aleta_mm_mediana  &lt;dbl&gt; 197
+$ masa_corporal_g_media   &lt;dbl&gt; 4201.754
+$ masa_corporal_g_mediana &lt;dbl&gt; 4050
+$ anio_media              &lt;dbl&gt; 2008.029
+$ anio_mediana            &lt;dbl&gt; 2008</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>pinguinos <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="fu">list</span>(<span class="at">mean =</span> mean,<span class="at">media =</span> median), <span class="at">.names =</span> <span class="st">"{col}_{fn}"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 10
+  largo_pico_mm_mean largo_pico_mm_media alto_pico_mm_mean alto_pico_mm_media
+               &lt;dbl&gt;               &lt;dbl&gt;             &lt;dbl&gt;              &lt;dbl&gt;
+1                 NA                  NA                NA                 NA
+# ℹ 6 more variables: largo_aleta_mm_mean &lt;dbl&gt;, largo_aleta_mm_media &lt;int&gt;,
+#   masa_corporal_g_mean &lt;dbl&gt;, masa_corporal_g_media &lt;int&gt;, anio_mean &lt;dbl&gt;,
+#   anio_media &lt;dbl&gt;</code></pre>
+</div>
+</div>
 
 
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
   author = {Aguero, Carlos},
-  title = {Funciones `across` y `where` tus dos nuevos mejores amigos a
-    la hora de manipular datos con R.},
+  title = {Si usas dplyr, debes aprender a usar across y where},
   date = {2024-05-30},
   url = {https://aprendetidyverse.com/posts/004_across_where.html},
   langid = {es}
 }
 </code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-aguero2024" class="csl-entry quarto-appendix-citeas" role="listitem">
-Aguero, Carlos. 2024. <span>“Funciones `across` y `where` tus dos nuevos
-mejores amigos a la hora de manipular datos con R.”</span> May 30, 2024.
-<a href="https://aprendetidyverse.com/posts/004_across_where.html">https://aprendetidyverse.com/posts/004_across_where.html</a>.
+Aguero, Carlos. 2024. <span>“Si usas dplyr, debes aprender a usar across
+y where.”</span> May 30, 2024. <a href="https://aprendetidyverse.com/posts/004_across_where.html">https://aprendetidyverse.com/posts/004_across_where.html</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

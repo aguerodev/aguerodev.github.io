@@ -46,9 +46,9 @@ website:
       - text: "Cursos"
         menu:
           - text: "Cursos de R"
-          - text: "R para ciencia de datos"
-            icon: "graph-up-arrow"
-            href: courses/r4ds.qmd
+          - text: "Fundamentos de R y Rstudio"
+            icon: "book"
+            href: courses/fundamentos_R.qmd
           - text: "Desarrollo de aplicaciones con shiny (intermedio)"
             icon: "window-split"
             href: courses/intro_shiny.qmd

@@ -1,0 +1,126 @@
+---
+title: "Aprende Programación en R Desde Cero"
+subtitle: ""
+description: "Descubre el poder del lenguaje de programación R en nuestro curso introductorio de 6 Semanas, diseñado para personas sin experiencia en programación."
+toc: true
+lang: "es"
+author: ""
+pagetitle: "Visualización de datos con ggplot2"
+image: ../images/ggplot2_v2.jpg
+---
+
+![Foto de <a href="https://unsplash.com/es/@cwmonty?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Montgomery</a> en <a href="https://unsplash.com/es/fotos/macbook-pro-displaying-group-of-people-smgTvepind4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/community3_og.jpg)
+
+
+¿Te imaginas pasar de no tener conocimientos de R a poder crear tus primeros reportes, con gráficos, leyendo datos desde CSV y Excel para poder contestar las preguntas del negocio en tan solo 6 semanas? Yo también estuve en tu lugar, sin experiencia y con muchas dudas. Con el tiempo y la guía adecuada, logré aprender R y mejorar mis habilidades. Ahora, quiero compartir este conocimiento contigo.
+
+
+Muchos comienzan a aprender R, pero la frustración y la falta de apoyo los lleva a abandonar. Nuestro curso está diseñado para superar estos obstáculos, ofreciéndote una base sólida y el soporte necesario para que sigas adelante.
+
+Con nuestro curso de **6 semanas**, no solo aprenderás los fundamentos de R, sino que también recibirás soporte personalizado para asegurarte de que comprendas cada concepto y puedas aplicarlo en situaciones reales.
+
+## Lo Que Aprenderás
+
++	**Introducción a R y RStudio**: Entiende el ecosistema de R y familiarízate con la interfaz de RStudio.
+
++ **Importación de Datos y Operaciones Básicas**: Aprende a leer archivos CSV y Excel, y realiza operaciones básicas de datos usando dplyr.
+
++ **Visualización de Datos con ggplot2**: Crea visualizaciones impresionantes, incluyendo gráficos de dispersión y de barras.
+
++ **Manipulación de Datos con dplyr**: Domina técnicas de manipulación de datos y combina conjuntos de datos.
+
++ **Creación de Informes con Quarto**: Genera informes y documentos profesionales con Quarto.
+
++ **Proyecto Final y Revisión**: Aplica tus habilidades a un conjunto de datos del mundo real y crea un informe completo.
+
+Al finalizar el curso, serás capaz de importar y manipular datos, crear visualizaciones profesionales y generar informes detallados. Estarás listo para aplicar estos conocimientos en tu trabajo o proyectos personales.
+
+## Formato del Curso
+
++ Duración: 6 semanas
++ Próxima apertura: **martes 1 de octubre** 
+  + 6:00 PM (hora de Costa Rica)
+  + 7:00 PM (hora de Colombia)
+  + 9:00 PM (hora de Argentina)
+  
++ Formato: Clases online con una duración aproximada de 2 horas, una combinación de **teoría (50%)** y **codificación en vivo (50%)** escribe código desde el primer día.
++ Evaluaciones Interactivas: Cuestionarios y tareas semanales para reforzar el aprendizaje.
++ Soporte Personalizado: **Sesiones semanales seguimiento privadas** por Zoom para preguntas y revisión de ejercicios
++ Certificado: Emitido por Certifier, compatible con LinkedIn
+
+
+## Conoce al instructor
+
+Hola, soy [Carlos Aguero](https://www.linkedin.com/in/carlos-aguero-cr). Soy ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R.
+
+Formo parte del listado de [instructores certificados por RStudio](https://education.rstudio.com/trainers/), enfocándome en **Tidyverse** y **Shiny**. Recientemente, tuve el gusto de unirme a los instructores de la organización [Software Carpentry](https://www.software-carpentry.org).
+
+A lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.
+
+---
+
+## Conoce lo que dicen nuestros estudiantes
+
+```{=html}
+<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
+```
+<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=off&amp;hideSource&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
+```
+
+
+:::: {.columns}
+
+
+::: {.column width="45%"}
+## Inscribirte ahora
+
++ 6 clases en vivo de 2 horas cada una.
++ Sesión semanal privada de 45 minutos con el instructor para retroalimentación personalizada.
++ Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
++ Certificado compatible con LinkedIn, emitido por Certifier.
++ **Precio: $200 USD**
+
+[Inscribirte ahora]({{< var curso_ggplot2.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
+
+:::
+::::
+
+No esperes más. ¡Inscríbete ahora y empieza tu camino hacia la maestría en R! Recibe el soporte que necesitas para triunfar desde el primer día.
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@javotrueba?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">javier trueba</a> en <a href="https://unsplash.com/es/fotos/mujer-que-lleva-un-libro-de-texto-blanco-y-verde-iQPr1XkF5F0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/est_v2.jpg)
+
+
+:::
+
+::: {.column width="45%"}
+
+## Estudiantes de pregrado 
+
+Si eres estudiante activo en alguna universidad nacional o extranjera, contáctanos en **info@aprendetidyverse.com** para obtener descuentos especiales, incluyendo hasta el 100% de descuento. Evaluamos cada caso individualmente para hacer que el aprendizaje de R sea accesible para todos.
+
+:::
+
+::::
+
+
+## Ponte en contacto
+
+La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
+
+
+Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr) o en [Twitter](https://twitter.com/dev_aguero) (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!
+
