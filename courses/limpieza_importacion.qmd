@@ -1,18 +1,17 @@
 ---
-title: "Limpieza e inportación de datos con R"
+title: "Importación y limpieza de datos con R"
 subtitle: ""
-description: "¿Quieres dominar la manipulación de datos en R y transformar tus habilidades de análisis?"
+description: "¿Estás listo para dominar el arte de la limpieza y manipulación de datos?"
 toc: true
 lang: "es"
 author: ""
-pagetitle: "Manipulación de datos con R"
-image: ../images/data_wrangling.jpg
+pagetitle: "Importación y limpieza de datos con R"
+image: ../images/data_cleaning.jpg
 ---
 
-![Foto de <a href="https://unsplash.com/es/@purzlbaum?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Claudio Schwarz</a> en <a href="https://unsplash.com/es/fotos/un-primer-plano-de-una-ventana-con-un-edificio-en-el-fondo-fyeOxvYvIyY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/data_wrangling.jpg)
+![Foto de <a href="https://unsplash.com/es/@pillepriske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pille R. Priske</a> en <a href="https://unsplash.com/es/fotos/polvo-amarillo-en-un-recipiente-de-vidrio-transparente-Y1JjwhHaPRM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/data_cleaning.jpg)
 
-
-Este curso de 6 semanas está diseñado para enseñarte cómo <mark>**manipular y preparar datos de manera eficiente utilizando R y el ecosistema tidyverse.**</mark> Aprenderás a importar, limpiar, transformar y resumir datos con herramientas como dplyr, tidyr y purrr. Cada semana se enfoca en diferentes aspectos de la manipulación de datos, asegurando una comprensión profunda y práctica.
+Este curso de 6 semanas está diseñado para enseñar a los participantes técnicas avanzadas de limpieza y manejo de datos utilizando el lenguaje de programación R y el conjunto de paquetes Tidyverse. A lo largo del curso, los estudiantes aprenderán a <mark>**importar datos desde diferentes formatos, limpiar y transformar datos, trabajar con tipos de datos complejos**</mark> como fechas y texto, y utilizar herramientas avanzadas como expresiones regulares y la API de OpenAI ChatGPT para la limpieza y extracción de información.
 
 ### ⚠️ Prerrequisitos del Curso
 
@@ -27,33 +26,33 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 ## En este curso, aprenderás a:
 
 <details open>
-<summary>Semana 1: Introducción a Tidyverse y Manipulación de Datos Básicos</summary>
-<p>Durante la primera semana, haremos un repaso completo de las operaciones básicas del paquete dplyr y conversaremos sobre la importancia de documentar correctamente nuestros sets de datos, así como de crear procesos de validación de la información con herramientas como el paquete pointblank de RStudio. Esto incluye la importación de datos desde archivos CSV, Excel y SPSS usando readr, readxl y haven, así como la exploración básica de datos y operaciones básicas con dplyr como select(), filter(), mutate(), arrange() y summarise(). También practicarás cargando y explorando un dataset en CSV y realizando operaciones básicas de manipulación y limpieza.</p>
+<summary>Semana 1: Introducción y Fundamentos de la Limpieza de Datos</summary>
+<p>Durante la primera semana, nos concentraremos en entender a detalle el proceso de lectura y las particularidades de los formatos CSV, Excel y SPSS. Aprenderemos cómo importar datos desde estas fuentes utilizando las librerías <code>readr</code>, <code>readxl</code> y <code>haven</code>. También discutiremos cómo dar formato correcto a los datos, errores comunes y particularidades de cada uno. Además, haremos un repaso de los tipos de datos en R y las reglas de casting o transformación de tipos de datos. Los estudiantes comprenderán la importancia de la limpieza de datos y explorarán técnicas básicas de manipulación con <code>dplyr</code>, como <code>select()</code>, <code>filter()</code>, <code>mutate()</code>, <code>arrange()</code> y <code>summarise()</code>.</p>
 </details>
 
 <details>
-<summary>Semana 2: Filtrados Avanzados y Operaciones Lógicas Complejas</summary>
-<p>En la segunda semana, aprenderás a realizar filtrados avanzados y a utilizar operaciones lógicas complejas en la manipulación de datos. Esto incluye el uso avanzado de filter(), operadores lógicos como &amp;, | y !, y funciones condicionales como if_else() y case_when(). Además, aprenderás a usar operaciones como when_math(), any_of(), all_of(), where() y str_detect(). Practicarás filtrando datos con múltiples condiciones y creando nuevas variables basadas en condiciones lógicas.</p>
+<summary>Semana 2: Manipulación y Transformación de Datos</summary>
+<p>En la segunda semana, los estudiantes aprenderán a seleccionar, filtrar y transformar datos utilizando <code>dplyr</code>. También conocerán cómo normalizar nombres de variables con <code>janitor</code> y cómo transformar datos con <code>tidyr</code> mediante las funciones <code>pivot_longer()</code> y <code>pivot_wider()</code>. Esta semana se enfocará en la manipulación y transformación de datos para prepararlos para análisis posteriores. Lectura recomendada: Capítulos 3 y 4 de "R for Data Science". Práctica: Ejercicios de manipulación y transformación de datos.</p>
 </details>
 
 <details>
-<summary>Semana 3: Resúmenes y Datos Agrupados</summary>
-<p>Durante la tercera semana, te centrarás en la creación de resúmenes y estadísticas descriptivas, así como en el trabajo con datos agrupados. Aprenderás a utilizar funciones de resumen como summarise(), n(), mean(), median(), sd(), min() y max(). También trabajarás con la agrupación de datos usando group_by() y combinarás group_by() con summarise() para obtener estadísticas por grupo. Además, aprenderás a aplicar funciones a múltiples columnas usando across() y where(), y el uso de .by como sustituto de group_by(). Practicarás creando resúmenes de datos y agrupando datos para calcular estadísticas descriptivas por grupo.</p>
+<summary>Semana 3: Trabajo con Textos y Expresiones Regulares</summary>
+<p>Durante la tercera semana, los estudiantes se centrarán en la manipulación y limpieza de datos textuales utilizando la librería <code>stringr</code>. Aprenderán sobre expresiones regulares básicas y avanzadas para extraer y reemplazar patrones en textos. Esta semana incluirá ejercicios prácticos para limpiar datos textuales, como la remoción de espacios y caracteres especiales.</p>
 </details>
 
 <details>
-<summary>Semana 4: Transformación de Datos con tidyr</summary>
-<p>En la cuarta semana, te enfocarás en la reestructuración de datos utilizando tidyr y en la aplicación de funciones de transformación avanzadas. Aprenderás a usar pivot_longer() y pivot_wider() para transformar datos y manejar valores faltantes con replace_na() y fill(). Además, veremos los conceptos de tidy data y cómo aplicar estos principios en tus proyectos. Practicarás transformando datasets para cumplir con los principios de tidy data y aplicando transformaciones avanzadas a múltiples columnas.</p>
+<summary>Semana 4: Trabajo con Fechas y Tiempos</summary>
+<p>En la cuarta semana, los estudiantes aprenderán a manejar y limpiar datos de fechas utilizando la librería <code>lubridate</code>. Aprenderán a convertir cadenas a fechas, descomponer fechas en componentes (año, mes, día, hora, minuto, segundo) y realizar operaciones aritméticas con fechas, como sumas y restas. Esta semana se enfocará en preparar datos de fechas para análisis basados en el tiempo.</p>
 </details>
 
 <details>
-<summary>Semana 5: Combinación de Datos con Joins</summary>
-<p>Durante la quinta semana, aprenderás a combinar datasets con diferentes tipos de joins. Esto incluye inner_join(), left_join(), right_join() y full_join(). También aprenderás a usar semi_join() y anti_join() para filtrar datasets y manejar claves duplicadas. Además, veremos el concepto de relaciones, llaves primarias y foráneas, y cómo unir datos de diferentes fuentes de forma efectiva. Practicarás combinando datasets utilizando diferentes tipos de joins y creando un conjunto de datos completo a partir de tablas separadas.</p>
+<summary>Semana 5: Integración con LLMs para la limpieza de datos</summary>
+<p>Durante la quinta semana, los estudiantes aprenderán a integrar modelos de limpieza de datos complejos y a utilizar APIs como OpenAI ChatGPT para la limpieza y extracción de información. Conocerán cómo trabajar con APIs en R utilizando las librerías <code>httr</code> y <code>jsonlite</code>, y cómo integrar herramientas de inteligencia artificial para abordar tareas complejas de limpieza de datos.</p>
 </details>
 
 <details>
 <summary>Semana 6: Proyecto Final</summary>
-<p>La última semana está dedicada al proyecto final, donde aplicarás todos los conocimientos adquiridos a lo largo del curso. Deberás seleccionar un set de datos y aplicar un proceso de limpieza de los datos, así como documentar las variables utilizando el paquete pointblank para aplicar validaciones. Desarrollarás un informe completo que incluirá la lectura de datos, su limpieza, transformación. Presentarás y discutirás tus resultados, demostrando así tus habilidades y conocimientos.</p>
+<p>La última semana está dedicada al proyecto final, donde los estudiantes aplicarán todos los conocimientos adquiridos a lo largo del curso. Seleccionarán uno de los conjuntos de datos propuestos y aplicarán técnicas de limpieza de datos para extraer información útil y contestar preguntas específicas. Deberán presentar y discutir su informe final para demostrar su comprensión del tema. Los estudiantes desarrollarán un informe completo y presentarán sus proyectos, demostrando sus habilidades y conocimientos en limpieza de datos.</p>
 </details>
 
 :::: {.columns}
@@ -61,7 +60,7 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 
 ::: {.column width="45%"}
 ## Inscríbete Ahora
-+ Inicio de lecciones: **martes 15 de abril de 2025**
++ Inicio de lecciones: **martes 10 de junio de 2025**
 + Clases en vivo
 + Grabaciones de las clases
 + Sesiones de seguimiento personalizadas
@@ -70,7 +69,7 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Manipulación%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2015%20de%20abril%20de%202025&id=curso_manipulacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Importación%20y%20limpieza%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2010%20de%20junio%20de%202025&id=curso_importacion_limpieza_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -121,7 +120,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 ::: {.column width="45%"}
 ## Inscríbete Ahora
 
-+ Inicio de lecciones: **martes 15 de abril de 2025**
++ Inicio de lecciones: **martes 10 de junio de 2025**
 + Clases en vivo
 + Grabaciones de las clases
 + Sesiones de seguimiento personalizadas
@@ -130,7 +129,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Manipulación%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2015%20de%20abril%20de%202025&id=curso_manipulacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Importación%20y%20limpieza%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2010%20de%20junio%20de%202025&id=curso_importacion_limpieza_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 

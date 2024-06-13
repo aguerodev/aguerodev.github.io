@@ -1,18 +1,18 @@
 ---
-title: "Introducción a SQL"
+title: "Introducción a SQL y su integración con R"
 subtitle: ""
-description: "¿Quieres dominar la manipulación de datos en R y transformar tus habilidades de análisis?"
+description: "Desbloquea el Poder de los Datos con SQL, dplyr, tidyverse y DuckDB"
 toc: true
 lang: "es"
 author: ""
-pagetitle: "Manipulación de datos con R"
-image: ../images/data_wrangling.jpg
+pagetitle: "Introducción a SQL y su integración con R"
+image: ../images/sql_intro.jpg
 ---
 
-![Foto de <a href="https://unsplash.com/es/@purzlbaum?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Claudio Schwarz</a> en <a href="https://unsplash.com/es/fotos/un-primer-plano-de-una-ventana-con-un-edificio-en-el-fondo-fyeOxvYvIyY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/data_wrangling.jpg)
+![Foto de <a href="https://unsplash.com/es/@sigmund?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">rivage</a> en <a href="https://unsplash.com/es/fotos/mujer-con-camisa-negra-sentada-al-lado-de-un-monitor-de-computadora-de-pantalla-plana-negra-Im_cQ6hQo10?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/sql_intro.jpg)
 
 
-Este curso de 6 semanas está diseñado para enseñarte cómo <mark>**manipular y preparar datos de manera eficiente utilizando R y el ecosistema tidyverse.**</mark> Aprenderás a importar, limpiar, transformar y resumir datos con herramientas como dplyr, tidyr y purrr. Cada semana se enfoca en diferentes aspectos de la manipulación de datos, asegurando una comprensión profunda y práctica.
+¿Estás listo para llevar tus habilidades de ciencia de datos al siguiente nivel? ¡Entonces este curso es para ti! Durante 6 semanas, te sumergirás en el emocionante mundo de SQL y RStudio, aprendiendo cómo integrar estas poderosas herramientas para optimizar tus análisis de datos. Este curso está diseñado para proporcionarte una comprensión sólida y práctica de cómo utilizar SQL dentro del ecosistema RStudio.
 
 ### ⚠️ Prerrequisitos del Curso
 
@@ -27,33 +27,33 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 ## En este curso, aprenderás a:
 
 <details open>
-<summary>Semana 1: Introducción a Tidyverse y Manipulación de Datos Básicos</summary>
-<p>Durante la primera semana, haremos un repaso completo de las operaciones básicas del paquete dplyr y conversaremos sobre la importancia de documentar correctamente nuestros sets de datos, así como de crear procesos de validación de la información con herramientas como el paquete pointblank de RStudio. Esto incluye la importación de datos desde archivos CSV, Excel y SPSS usando readr, readxl y haven, así como la exploración básica de datos y operaciones básicas con dplyr como select(), filter(), mutate(), arrange() y summarise(). También practicarás cargando y explorando un dataset en CSV y realizando operaciones básicas de manipulación y limpieza.</p>
+<summary>Semana 1: Introducción a SQL y RStudio</summary>
+<p>Durante la primera semana, nos familiarizaremos con el entorno de RStudio y comprenderemos los conceptos básicos de SQL. Aprenderemos a conectar RStudio con bases de datos SQL y comenzaremos a realizar consultas básicas. Los contenidos incluyen la instalación y configuración de RStudio, la navegación en su interfaz, y la instalación de paquetes necesarios como <code>tidyverse</code>, <code>DBI</code> y <code>duckdb</code>. También exploraremos conceptos básicos de SQL como <code>SELECT</code>, <code>FROM</code>, <code>WHERE</code> y <code>JOIN</code>, y aprenderemos a conectarnos a bases de datos utilizando el paquete <code>DBI</code>, con ejemplos prácticos de conexión a bases de datos SQLite.</p>
 </details>
 
 <details>
-<summary>Semana 2: Filtrados Avanzados y Operaciones Lógicas Complejas</summary>
-<p>En la segunda semana, aprenderás a realizar filtrados avanzados y a utilizar operaciones lógicas complejas en la manipulación de datos. Esto incluye el uso avanzado de filter(), operadores lógicos como &amp;, | y !, y funciones condicionales como if_else() y case_when(). Además, aprenderás a usar operaciones como when_math(), any_of(), all_of(), where() y str_detect(). Practicarás filtrando datos con múltiples condiciones y creando nuevas variables basadas en condiciones lógicas.</p>
+<summary>Semana 2: Integración de SQL con dplyr</summary>
+<p>En la segunda semana, aprenderemos a utilizar el paquete <code>dplyr</code> para la manipulación de datos y cómo integrar consultas SQL con <code>dplyr</code>. Exploraremos los verbos clave de <code>dplyr</code> como <code>select</code>, <code>filter</code>, <code>mutate</code>, <code>summarize</code> y <code>arrange</code>, y cómo realizar consultas SQL dentro de <code>dplyr</code> utilizando <code>tbl()</code>. Esta semana se enfocará en la integración de SQL y <code>dplyr</code> para una manipulación de datos eficiente.</p>
 </details>
 
 <details>
-<summary>Semana 3: Resúmenes y Datos Agrupados</summary>
-<p>Durante la tercera semana, te centrarás en la creación de resúmenes y estadísticas descriptivas, así como en el trabajo con datos agrupados. Aprenderás a utilizar funciones de resumen como summarise(), n(), mean(), median(), sd(), min() y max(). También trabajarás con la agrupación de datos usando group_by() y combinarás group_by() con summarise() para obtener estadísticas por grupo. Además, aprenderás a aplicar funciones a múltiples columnas usando across() y where(), y el uso de .by como sustituto de group_by(). Practicarás creando resúmenes de datos y agrupando datos para calcular estadísticas descriptivas por grupo.</p>
+<summary>Semana 3: El Ecosistema de tidyverse</summary>
+<p>Durante la tercera semana, exploraremos el ecosistema <code>tidyverse</code> y su integración con <code>dplyr</code> y SQL. Aprenderemos a utilizar otros paquetes del <code>tidyverse</code> como <code>ggplot2</code>, <code>tidyr</code>, <code>readr</code>, <code>purrr</code>, <code>stringr</code> y <code>forcats</code> para un análisis de datos completo. Veremos cómo <code>dplyr</code> se puede usar para realizar operaciones previas a la visualización con <code>ggplot2</code> y cómo transformar datos con <code>tidyr</code> y consultas SQL.</p>
 </details>
 
 <details>
-<summary>Semana 4: Transformación de Datos con tidyr</summary>
-<p>En la cuarta semana, te enfocarás en la reestructuración de datos utilizando tidyr y en la aplicación de funciones de transformación avanzadas. Aprenderás a usar pivot_longer() y pivot_wider() para transformar datos y manejar valores faltantes con replace_na() y fill(). Además, veremos los conceptos de tidy data y cómo aplicar estos principios en tus proyectos. Practicarás transformando datasets para cumplir con los principios de tidy data y aplicando transformaciones avanzadas a múltiples columnas.</p>
+<summary>Semana 4: Introducción a DuckDB</summary>
+<p>En la cuarta semana, comprenderemos qué es DuckDB y sus ventajas. Aprenderemos a instalar y configurar DuckDB en RStudio, y compararemos DuckDB con otras bases de datos locales. Los estudiantes aprenderán a crear y conectar una base de datos DuckDB, y realizar consultas básicas desde RStudio. Esta semana se enfocará en aprovechar el rendimiento de DuckDB para análisis de datos eficientes.</p>
 </details>
 
 <details>
-<summary>Semana 5: Combinación de Datos con Joins</summary>
-<p>Durante la quinta semana, aprenderás a combinar datasets con diferentes tipos de joins. Esto incluye inner_join(), left_join(), right_join() y full_join(). También aprenderás a usar semi_join() y anti_join() para filtrar datasets y manejar claves duplicadas. Además, veremos el concepto de relaciones, llaves primarias y foráneas, y cómo unir datos de diferentes fuentes de forma efectiva. Practicarás combinando datasets utilizando diferentes tipos de joins y creando un conjunto de datos completo a partir de tablas separadas.</p>
+<summary>Semana 5: Optimización de Consultas con DuckDB</summary>
+<p>Durante la quinta semana, aprenderemos a optimizar consultas SQL utilizando DuckDB y compararemos su rendimiento con otras bases de datos locales. Exploraremos técnicas de optimización de consultas en DuckDB, el uso de índices y particionamiento, y veremos casos de uso donde DuckDB es más eficiente. Practicaremos optimizando consultas SQL y comparando el rendimiento de DuckDB con SQLite en conjuntos de datos grandes.</p>
 </details>
 
 <details>
 <summary>Semana 6: Proyecto Final</summary>
-<p>La última semana está dedicada al proyecto final, donde aplicarás todos los conocimientos adquiridos a lo largo del curso. Deberás seleccionar un set de datos y aplicar un proceso de limpieza de los datos, así como documentar las variables utilizando el paquete pointblank para aplicar validaciones. Desarrollarás un informe completo que incluirá la lectura de datos, su limpieza, transformación. Presentarás y discutirás tus resultados, demostrando así tus habilidades y conocimientos.</p>
+<p>La última semana está dedicada al proyecto final, donde los estudiantes aplicarán todos los conocimientos adquiridos a lo largo del curso. Deberán crear un proceso de ETL (Extract, Transform, Load) en el cual capturen información desordenada de diferentes archivos y la consoliden de forma limpia y ordenada en una base de datos para su posterior análisis. Los estudiantes desarrollarán un informe completo, utilizando DuckDB para optimizar el rendimiento y visualizando los resultados con <code>ggplot2</code>. Presentarán y discutirán su solución para demostrar su comprensión de los temas vistos en el curso y sus habilidades adquiridas.</p>
 </details>
 
 :::: {.columns}
@@ -61,7 +61,7 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 
 ::: {.column width="45%"}
 ## Inscríbete Ahora
-+ Inicio de lecciones: **martes 15 de abril de 2025**
++ Inicio de lecciones: **martes 5 de agosto de 2025**
 + Clases en vivo
 + Grabaciones de las clases
 + Sesiones de seguimiento personalizadas
@@ -70,7 +70,7 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Manipulación%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2015%20de%20abril%20de%202025&id=curso_manipulacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Introducción%20a%20SQL%20y%20su%20integración%20con%20R&precio=%24200%20USD&fecha_inicio=martes%205%20de%20agosto%20de%202025&id=curso_sql_integracion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -121,7 +121,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 ::: {.column width="45%"}
 ## Inscríbete Ahora
 
-+ Inicio de lecciones: **martes 15 de abril de 2025**
++ Inicio de lecciones: **martes 5 de agosto de 2025**
 + Clases en vivo
 + Grabaciones de las clases
 + Sesiones de seguimiento personalizadas
@@ -130,7 +130,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Manipulación%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2015%20de%20abril%20de%202025&id=curso_manipulacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Introducción%20a%20SQL%20y%20su%20integración%20con%20R&precio=%24200%20USD&fecha_inicio=martes%205%20de%20agosto%20de%202025&id=curso_sql_integracion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 

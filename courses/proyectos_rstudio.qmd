@@ -1,10 +1,10 @@
 ---
-title: "Web Scraping y Automatización con R"
-description: "¿Estás listo para dominar el Web Scraping y la Automatización con R? 🚀📊"
+title: " Organización y documentación de proyectos en RStudio"
+description: "¿Estás listo para llevar tus proyectos de ciencia de datos al siguiente nivel? 🚀📊"
 toc: true
 lang: "es"
 author: ""
-pagetitle: "Web Scraping y Automatización con R"
+pagetitle: "Organización y documentación de proyectos en RStudio"
 license: ""
 include-in-header: web_scraping-meta.html
 ---

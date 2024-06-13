@@ -61,13 +61,13 @@ website:
           - text: "Limpieza e inportación de datos"
             icon: "window-split"
             href: courses/limpieza_importacion.qmd
-          - text: "Introducción a SQL"
+          - text: "Introducción a SQL y su integración con R"
             icon: "window-split"
             href: courses/introduccion_sql.qmd
-          - text: "Web Scraping"
+          - text: "Web Scraping y Automatización con R"
             icon: "bug"
             href: courses/web_scraping.qmd
-          - text: "Desarrollo de proyeto con R y RStudio"
+          - text: "Organización y documentación de proyectos en RStudio"
             icon: "bug"
             href: courses/desarrollo_proyectos_R.qmd
       - text: "Sesiones de Consultas"

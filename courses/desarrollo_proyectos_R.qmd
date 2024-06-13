@@ -1,18 +1,17 @@
 ---
 title: "Desarrollo de proyeto con R y RStudio"
 subtitle: ""
-description: "¿Quieres dominar la manipulación de datos en R y transformar tus habilidades de análisis?"
+description: "¿Quieres llevar tus proyectos de ciencia de datos al siguiente nivel con RStudio y GitHub? 🚀🔍"
 toc: true
 lang: "es"
 author: ""
 pagetitle: "Manipulación de datos con R"
-image: ../images/data_wrangling.jpg
+image: ../images/data_project.jpg
 ---
 
-![Foto de <a href="https://unsplash.com/es/@purzlbaum?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Claudio Schwarz</a> en <a href="https://unsplash.com/es/fotos/un-primer-plano-de-una-ventana-con-un-edificio-en-el-fondo-fyeOxvYvIyY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/data_wrangling.jpg)
+![Foto de <a href="https://unsplash.com/es/@praveentcom?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Praveen Thirumurugan</a> en <a href="https://unsplash.com/es/fotos/un-libro-y-una-pequena-figura-en-un-escritorio-KPAQpJYzH0Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/data_project.jpg)
 
-
-Este curso de 6 semanas está diseñado para enseñarte cómo <mark>**manipular y preparar datos de manera eficiente utilizando R y el ecosistema tidyverse.**</mark> Aprenderás a importar, limpiar, transformar y resumir datos con herramientas como dplyr, tidyr y purrr. Cada semana se enfoca en diferentes aspectos de la manipulación de datos, asegurando una comprensión profunda y práctica.
+Este curso intensivo de 6 semanas está diseñado para <mark>**equiparte con las habilidades esenciales para organizar y documentar tu código en RStudio, gestionar el control de versiones con GitHub, y controlar dependencias de manera eficiente.**</mark> Aprenderás a utilizar repositorios como RStudio Package Manager para la creación de snapshots y aplicar la metodología CRISP-DM en tus proyectos de ciencia de datos. Imagina poder llevar tus análisis a nuevos niveles de precisión y eficiencia, con un flujo de trabajo impecable y profesional. ¡Es hora de transformar tu enfoque y convertirte en un maestro de la ciencia de datos!
 
 ### ⚠️ Prerrequisitos del Curso
 
@@ -27,33 +26,33 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 ## En este curso, aprenderás a:
 
 <details open>
-<summary>Semana 1: Introducción a Tidyverse y Manipulación de Datos Básicos</summary>
-<p>Durante la primera semana, haremos un repaso completo de las operaciones básicas del paquete dplyr y conversaremos sobre la importancia de documentar correctamente nuestros sets de datos, así como de crear procesos de validación de la información con herramientas como el paquete pointblank de RStudio. Esto incluye la importación de datos desde archivos CSV, Excel y SPSS usando readr, readxl y haven, así como la exploración básica de datos y operaciones básicas con dplyr como select(), filter(), mutate(), arrange() y summarise(). También practicarás cargando y explorando un dataset en CSV y realizando operaciones básicas de manipulación y limpieza.</p>
+<summary>Semana 1: Organización y Documentación del Código en RStudio</summary>
+<p>Durante la primera semana, nos enfocaremos en la importancia de organizar y documentar correctamente el código en RStudio. Aprenderemos a crear proyectos en RStudio, estructurarlos de manera eficiente utilizando carpetas para datos, scripts, resultados y documentos, y documentar el código con comentarios y el paquete <code>roxygen2</code>. También crearemos archivos README para describir el propósito y la estructura de los proyectos.</p>
 </details>
 
 <details>
-<summary>Semana 2: Filtrados Avanzados y Operaciones Lógicas Complejas</summary>
-<p>En la segunda semana, aprenderás a realizar filtrados avanzados y a utilizar operaciones lógicas complejas en la manipulación de datos. Esto incluye el uso avanzado de filter(), operadores lógicos como &amp;, | y !, y funciones condicionales como if_else() y case_when(). Además, aprenderás a usar operaciones como when_math(), any_of(), all_of(), where() y str_detect(). Practicarás filtrando datos con múltiples condiciones y creando nuevas variables basadas en condiciones lógicas.</p>
+<summary>Semana 2: Control de Versiones con GitHub</summary>
+<p>En la segunda semana, nos adentraremos en el control de versiones utilizando GitHub. Aprenderemos a configurar Git en RStudio, crear y clonar repositorios en GitHub, y utilizar comandos básicos de Git como <code>commit</code>, <code>push</code>, <code>pull</code> y <code>branch</code>. Practicaremos realizando commits y subiendo cambios a un repositorio remoto, asegurando un seguimiento preciso de las modificaciones en nuestros proyectos.</p>
 </details>
 
 <details>
-<summary>Semana 3: Resúmenes y Datos Agrupados</summary>
-<p>Durante la tercera semana, te centrarás en la creación de resúmenes y estadísticas descriptivas, así como en el trabajo con datos agrupados. Aprenderás a utilizar funciones de resumen como summarise(), n(), mean(), median(), sd(), min() y max(). También trabajarás con la agrupación de datos usando group_by() y combinarás group_by() con summarise() para obtener estadísticas por grupo. Además, aprenderás a aplicar funciones a múltiples columnas usando across() y where(), y el uso de .by como sustituto de group_by(). Practicarás creando resúmenes de datos y agrupando datos para calcular estadísticas descriptivas por grupo.</p>
+<summary>Semana 3: Control de Dependencias</summary>
+<p>Durante la tercera semana, aprenderemos a manejar dependencias en proyectos R. Utilizaremos herramientas como <code>rvest</code> para gestionar dependencias y exploraremos cómo crear y usar archivos <code>DESCRIPTION</code> y <code>renv.lock</code> para especificar y controlar las versiones de los paquetes necesarios para nuestros proyectos. Esto nos ayudará a garantizar la reproducibilidad y consistencia del entorno de trabajo.</p>
 </details>
 
 <details>
-<summary>Semana 4: Transformación de Datos con tidyr</summary>
-<p>En la cuarta semana, te enfocarás en la reestructuración de datos utilizando tidyr y en la aplicación de funciones de transformación avanzadas. Aprenderás a usar pivot_longer() y pivot_wider() para transformar datos y manejar valores faltantes con replace_na() y fill(). Además, veremos los conceptos de tidy data y cómo aplicar estos principios en tus proyectos. Practicarás transformando datasets para cumplir con los principios de tidy data y aplicando transformaciones avanzadas a múltiples columnas.</p>
+<summary>Semana 4: Metodología CRISP-DM en Proyectos de Ciencia de Datos</summary>
+<p>Durante la cuarta semana, nos enfocaremos en aplicar la metodología CRISP-DM (Cross Industry Standard Process for Data Mining) en proyectos de ciencia de datos. Aprenderemos sobre las fases de CRISP-DM: comprensión del negocio, comprensión de los datos, preparación de los datos, modelado, evaluación y despliegue. Aplicaremos esta metodología en un mini-proyecto de ciencia de datos, integrando las herramientas y prácticas aprendidas a lo largo del curso.</p>
 </details>
 
 <details>
-<summary>Semana 5: Combinación de Datos con Joins</summary>
-<p>Durante la quinta semana, aprenderás a combinar datasets con diferentes tipos de joins. Esto incluye inner_join(), left_join(), right_join() y full_join(). También aprenderás a usar semi_join() y anti_join() para filtrar datasets y manejar claves duplicadas. Además, veremos el concepto de relaciones, llaves primarias y foráneas, y cómo unir datos de diferentes fuentes de forma efectiva. Practicarás combinando datasets utilizando diferentes tipos de joins y creando un conjunto de datos completo a partir de tablas separadas.</p>
+<summary>Semana 5: GitHub Actions para Pruebas en Nuestro Código</summary>
+<p>En la quinta semana, aprenderemos a utilizar GitHub Actions para automatizar pruebas y otros flujos de trabajo en nuestros proyectos. Configuraremos GitHub Actions para ejecutar pruebas automáticamente cada vez que realicemos cambios en el código, asegurando que nuestro proyecto se mantenga estable y funcional. También exploraremos cómo integrar otras herramientas y servicios en nuestros flujos de trabajo automatizados.</p>
 </details>
 
 <details>
 <summary>Semana 6: Proyecto Final</summary>
-<p>La última semana está dedicada al proyecto final, donde aplicarás todos los conocimientos adquiridos a lo largo del curso. Deberás seleccionar un set de datos y aplicar un proceso de limpieza de los datos, así como documentar las variables utilizando el paquete pointblank para aplicar validaciones. Desarrollarás un informe completo que incluirá la lectura de datos, su limpieza, transformación. Presentarás y discutirás tus resultados, demostrando así tus habilidades y conocimientos.</p>
+<p>En la última semana, los estudiantes aplicarán todo lo aprendido en un proyecto final. Deberán organizar y documentar el código en RStudio, gestionar el control de versiones con GitHub, controlar dependencias, y aplicar la metodología CRISP-DM en un proyecto de ciencia de datos. Los estudiantes desarrollarán un caso práctico donde implementarán un proceso de análisis de datos y documentarán todo el proceso utilizando la metodología CRISP-DM. Finalmente, presentarán sus proyectos, demostrando sus habilidades en organización, documentación, control de versiones y gestión de dependencias.</p>
 </details>
 
 :::: {.columns}
@@ -61,7 +60,7 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 
 ::: {.column width="45%"}
 ## Inscríbete Ahora
-+ Inicio de lecciones: **martes 15 de abril de 2025**
++ Inicio de lecciones: **martes 25 de noviembre de 2025**
 + Clases en vivo
 + Grabaciones de las clases
 + Sesiones de seguimiento personalizadas
@@ -70,7 +69,7 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Manipulación%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2015%20de%20abril%20de%202025&id=curso_manipulacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Desarrollo%20de%20proyecto%20con%20R%20y%20RStudio&precio=%24200%20USD&fecha_inicio=martes%2025%20de%20noviembre%20de%202025&id=curso_desarrollo_R_RStudio&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -121,7 +120,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 ::: {.column width="45%"}
 ## Inscríbete Ahora
 
-+ Inicio de lecciones: **martes 15 de abril de 2025**
++ Inicio de lecciones: **martes 25 de noviembre de 2025**
 + Clases en vivo
 + Grabaciones de las clases
 + Sesiones de seguimiento personalizadas
@@ -130,7 +129,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Manipulación%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2015%20de%20abril%20de%202025&id=curso_manipulacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Desarrollo%20de%20proyecto%20con%20R%20y%20RStudio&precio=%24200%20USD&fecha_inicio=martes%2025%20de%20noviembre%20de%202025&id=curso_desarrollo_R_RStudio&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
