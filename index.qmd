@@ -14,16 +14,20 @@ copyright: ""
 ::: hero-banner
 ::: content-block
 ::: hero-text
-# Curso: R para ciencia de datos
+# ¡Transforma tu carrera con programa R para Ciencia de Datos!
+<br>
+Domina el lenguaje R y lleva tus habilidades en análisis de datos al siguiente nivel con nuestra serie de **8 cursos diseñados para guiarte desde los conceptos básicos hasta técnicas avanzadas**, con el apoyo de instructores certificados y material actualizado.
 
-### Tu puerta de entrada al mundo de la ciencia de datos
+- Conoce RStudio y usa sus funcionalidades para optimizar tu trabajo.
+- Importa y manipula datos eficientemente con herramientas avanzadas.
+- Maneja textos, fechas y factores con precisión.
+- Crea visualizaciones impactantes para comunicar tus hallazgos.
+- Desarrolla documentos y mapas interactivos.
+- Extrae datos de sitios web con técnicas de web scraping.
+- Organiza y gestiona proyectos de forma profesional.
+- Integra SQL con R para potenciar tus análisis y gestionar bases de datos.
 
--   Importa y manipula datos con herramientas como [readr](https://readr.tidyverse.org), [dplyr](https://dplyr.tidyverse.org) y [tidyr](https://tidyr.tidyverse.org).
--   Maneja textos, fechas y factores usando los paquetes como [lubridate](https://lubridate.tidyverse.org), [stringr](https://stringr.tidyverse.org) y [forcats](https://forcats.tidyverse.org).
--   Visualiza resultados con [ggplot2](https://ggplot2.tidyverse.org) y [plotly](https://plotly.com).
--   Crea documentos y mapas interactivos usando [rmarkdown](https://rmarkdown.rstudio.com), [quarto](https://quarto.org), [sf](https://r-spatial.github.io/sf/) y [leaflet](https://rstudio.github.io/leaflet/).
--   Extrae datos los sitios web con técnicas de web scraping usando [rvest](https://rvest.tidyverse.org).
--   Gestiona proyectos y organiza tu código con [renv](https://rstudio.github.io/renv/articles/renv.html) y [GitHub](https://github.com).
+
 
 ### Explora, analiza y comparte. Tienes historias que contar haz de R tu herramienta para hacerlo.
 
