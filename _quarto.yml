@@ -47,28 +47,28 @@ website:
         menu:
           - text: "R para ciencia de datos"
           - text: "Fundamentos de R y Rstudio"
-            icon: "book"
+            icon: "bi-laptop"
             href: courses/fundamentos_R.qmd
           - text: "Visualización de datos con R"
             icon: "palette"
             href: courses/visualizacion_datos_R.qmd
           - text: "Desarrollo de reportes y documentos"
-            icon: "book"
+            icon: "bi-file-earmark-text"
             href: courses/documentos_con_quarto.qmd
           - text: "Manipulación de datos con R"
             icon: "tools"
             href: courses/manipulacion_datos_R.qmd
           - text: "Limpieza e inportación de datos"
-            icon: "window-split"
+            icon: "bi-database"
             href: courses/limpieza_importacion.qmd
           - text: "Introducción a SQL y su integración con R"
-            icon: "window-split"
+            icon: "bi-server"
             href: courses/introduccion_sql.qmd
           - text: "Web Scraping y Automatización con R"
-            icon: "bug"
+            icon: "bi-globe"
             href: courses/web_scraping.qmd
           - text: "Organización y documentación de proyectos en RStudio"
-            icon: "bug"
+            icon: "bi-journal"
             href: courses/desarrollo_proyectos_R.qmd
       - text: "Sesiones de Consultas"
         file: domingos_pr.qmd
