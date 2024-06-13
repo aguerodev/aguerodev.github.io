@@ -57,7 +57,7 @@ website:
             href: courses/documentos_con_quarto.qmd
           - text: "Manipulación de datos con R"
             icon: "tools"
-            href: courses/manipulacion_datos.qmd
+            href: courses/manipulacion_datos_R.qmd
           - text: "Limpieza e inportación de datos"
             icon: "window-split"
             href: courses/limpieza_importacion.qmd
