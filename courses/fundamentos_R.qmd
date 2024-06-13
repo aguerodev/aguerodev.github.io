@@ -5,8 +5,8 @@ description: "Descubre el poder del lenguaje de programación R en nuestro curso
 toc: true
 lang: "es"
 author: ""
-pagetitle: "Visualización de datos con ggplot2"
-image: ../images/ggplot2_v2.jpg
+pagetitle: "Fundamentos de R y Rstudio"
+image: ../images/community3_og.jpg
 ---
 
 ![Foto de <a href="https://unsplash.com/es/@cwmonty?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Montgomery</a> en <a href="https://unsplash.com/es/fotos/macbook-pro-displaying-group-of-people-smgTvepind4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/community3_og.jpg)
