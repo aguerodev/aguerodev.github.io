@@ -45,19 +45,31 @@ website:
         file: index.qmd
       - text: "Cursos"
         menu:
-          - text: "Cursos de R"
+          - text: "R para ciencia de datos"
           - text: "Fundamentos de R y Rstudio"
             icon: "book"
             href: courses/fundamentos_R.qmd
-          - text: "Desarrollo de aplicaciones con shiny (intermedio)"
+          - text: "Visualización de datos con R"
+            icon: "palette"
+            href: courses/visualizacion_datos_R.qmd
+          - text: "Desarrollo de reportes y documentos"
+            icon: "book"
+            href: courses/documentos_con_quarto.qmd
+          - text: "Manipulación de datos con R"
+            icon: "tools"
+            href: courses/manipulacion_datos.qmd
+          - text: "Limpieza e inportación de datos"
             icon: "window-split"
-            href: courses/intro_shiny.qmd
-          - text: "Web Scraping con R (avanzado)"
+            href: courses/limpieza_importacion.qmd
+          - text: "Introducción a SQL"
+            icon: "window-split"
+            href: courses/introduccion_sql.qmd
+          - text: "Web Scraping"
             icon: "bug"
             href: courses/web_scraping.qmd
-          - text: "Visualización de datos con ggplot2 (avanzado)"
-            icon: "palette"
-            href: courses/avz_ggplot2.qmd
+          - text: "Desarrollo de proyeto con R y RStudio"
+            icon: "bug"
+            href: courses/desarrollo_proyectos_R.qmd
       - text: "Sesiones de Consultas"
         file: domingos_pr.qmd
       - text: Blog

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="">
+<meta name="description" content="¿Quieres dominar la manipulación de datos en R y transformar tus habilidades de análisis? 🚀">
+
+<title>Aprende Tidyverse – Manipulación de datos con R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.ico" rel="icon">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7HH46G4FS3"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7HH46G4FS3', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"headline",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"es"
+  });
+});
+</script> 
+  
+
+
+<meta property="og:title" content="Manipulación de datos con R">
+<meta property="og:description" content="¿Quieres dominar la manipulación de datos en R y transformar tus habilidades de análisis? 🚀">
+<meta property="og:image" content="https://aprendetidyverse.com/images/data_wrangling.jpg">
+<meta property="og:site_name" content="aprendetidyverse.com">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:title" content="Manipulación de datos con R">
+<meta name="twitter:description" content="¿Quieres dominar la manipulación de datos en R y transformar tus habilidades de análisis? 🚀">
+<meta name="twitter:image" content="https://aprendetidyverse.com/images/data_wrangling.jpg">
+<meta name="twitter:creator" content="@dev_aguero">
+<meta name="twitter:site" content="@dev_aguero">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/logo.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cursos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Cursos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cursos">    
+        <li class="dropdown-header">R para ciencia de datos</li>
+        <li>
+    <a class="dropdown-item" href="../courses/fundamentos_R.html"><i class="bi bi-book" role="img">
+</i> 
+ <span class="dropdown-text">Fundamentos de R y Rstudio</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../courses/visualizacion_datos_R.html"><i class="bi bi-palette" role="img">
+</i> 
+ <span class="dropdown-text">Visualización de datos con R</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../courses/visualizacion_datos_R.html"><i class="bi bi-tools" role="img">
+</i> 
+ <span class="dropdown-text">Manipulación de datos con R</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../courses/intro_shiny.html"><i class="bi bi-window-split" role="img">
+</i> 
+ <span class="dropdown-text">Desarrollo de aplicaciones con shiny (intermedio)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../courses/web_scraping.html"><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">Web Scraping con R (avanzado)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../domingos_pr.html"> 
+<span class="menu-text">Sesiones de Consultas</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../posts.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/dev_aguero"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/aprende.tidyverse/"> <i class="bi bi-instagram" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/aprende.tidyverse"> <i class="bi bi-facebook" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/carlos-aguero-cr/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#prerrequisitos-del-curso" id="toc-prerrequisitos-del-curso" class="nav-link active" data-scroll-target="#prerrequisitos-del-curso">⚠️ Prerrequisitos del Curso</a></li>
+  <li><a href="#en-este-curso-aprenderás-a" id="toc-en-este-curso-aprenderás-a" class="nav-link" data-scroll-target="#en-este-curso-aprenderás-a">En este curso, aprenderás a:</a></li>
+  <li><a href="#conoce-al-instructor" id="toc-conoce-al-instructor" class="nav-link" data-scroll-target="#conoce-al-instructor">Conoce al instructor</a>
+  <ul class="collapse">
+  <li><a href="#tienes-dudas-hablemos-sin-compromiso" id="toc-tienes-dudas-hablemos-sin-compromiso" class="nav-link" data-scroll-target="#tienes-dudas-hablemos-sin-compromiso">¿Tienes dudas? Hablemos sin compromiso 😊</a></li>
+  </ul></li>
+  <li><a href="#conoce-lo-que-dicen-nuestros-estudiantes" id="toc-conoce-lo-que-dicen-nuestros-estudiantes" class="nav-link" data-scroll-target="#conoce-lo-que-dicen-nuestros-estudiantes">Conoce lo que dicen nuestros estudiantes</a></li>
+  <li><a href="#ponte-en-contacto" id="toc-ponte-en-contacto" class="nav-link" data-scroll-target="#ponte-en-contacto">Ponte en contacto</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Manipulación de datos con R</h1>
+</div>
+
+<div>
+  <div class="description">
+    ¿Quieres dominar la manipulación de datos en R y transformar tus habilidades de análisis? 🚀
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/data_wrangling.jpg" class="img-fluid figure-img"></p>
+<figcaption>Foto de <a href="https://unsplash.com/es/@purzlbaum?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Claudio Schwarz</a> en <a href="https://unsplash.com/es/fotos/un-primer-plano-de-una-ventana-con-un-edificio-en-el-fondo-fyeOxvYvIyY?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></figcaption>
+</figure>
+</div>
+<p>Este curso de 6 semanas está diseñado para enseñarte cómo <mark><strong>manipular y preparar datos de manera eficiente utilizando R y el ecosistema tidyverse.</strong></mark> Aprenderás a importar, limpiar, transformar y resumir datos con herramientas como dplyr, tidyr y purrr. Cada semana se enfoca en diferentes aspectos de la manipulación de datos, asegurando una comprensión profunda y práctica.</p>
+<section id="prerrequisitos-del-curso" class="level3">
+<h3 class="anchored" data-anchor-id="prerrequisitos-del-curso">⚠️ Prerrequisitos del Curso</h3>
+<p>Para poder desenvolverte en el curso sin problemas, es importante cumplir con los siguientes requisitos. Si tienes dudas, escríbenos o considera optar por alguno de nuestros cursos anteriores, como <a href="../courses/fundamentos_R.html">Fundamentos de R y RStudio</a> o <a href="../courses/visualizacion_datos_R.html">Visualización de datos con R</a>.</p>
+<ul>
+<li>Conocimientos sólidos sobre el uso de RStudio.</li>
+<li>Conocimientos básicos de lectura y manipulación de datos con dplyr.</li>
+<li>Capacidad de filtrar datos y crear nuevas variables.</li>
+<li>Experiencia en la creación de reportes con rmarkdown o Quarto.</li>
+<li>Conocimientos básicos en la creación de gráficos en R.</li>
+</ul>
+</section>
+<section id="en-este-curso-aprenderás-a" class="level2">
+<h2 class="anchored" data-anchor-id="en-este-curso-aprenderás-a">En este curso, aprenderás a:</h2>
+<details open="">
+<summary>
+Semana 1: Introducción a Tidyverse y Manipulación de Datos Básicos
+</summary>
+<p>
+Durante la primera semana, haremos un repaso completo de las operaciones básicas del paquete dplyr y conversaremos sobre la importancia de documentar correctamente nuestros sets de datos, así como de crear procesos de validación de la información con herramientas como el paquete pointblank de RStudio. Esto incluye la importación de datos desde archivos CSV, Excel y SPSS usando readr, readxl y haven, así como la exploración básica de datos y operaciones básicas con dplyr como select(), filter(), mutate(), arrange() y summarise(). También practicarás cargando y explorando un dataset en CSV y realizando operaciones básicas de manipulación y limpieza.
+</p>
+</details>
+<details>
+<summary>
+Semana 2: Filtrados Avanzados y Operaciones Lógicas Complejas
+</summary>
+<p>
+En la segunda semana, aprenderás a realizar filtrados avanzados y a utilizar operaciones lógicas complejas en la manipulación de datos. Esto incluye el uso avanzado de filter(), operadores lógicos como &amp;, | y !, y funciones condicionales como if_else() y case_when(). Además, aprenderás a usar operaciones como when_math(), any_of(), all_of(), where() y str_detect(). Practicarás filtrando datos con múltiples condiciones y creando nuevas variables basadas en condiciones lógicas.
+</p>
+</details>
+<details>
+<summary>
+Semana 3: Resúmenes y Datos Agrupados
+</summary>
+<p>
+Durante la tercera semana, te centrarás en la creación de resúmenes y estadísticas descriptivas, así como en el trabajo con datos agrupados. Aprenderás a utilizar funciones de resumen como summarise(), n(), mean(), median(), sd(), min() y max(). También trabajarás con la agrupación de datos usando group_by() y combinarás group_by() con summarise() para obtener estadísticas por grupo. Además, aprenderás a aplicar funciones a múltiples columnas usando across() y where(), y el uso de .by como sustituto de group_by(). Practicarás creando resúmenes de datos y agrupando datos para calcular estadísticas descriptivas por grupo.
+</p>
+</details>
+<details>
+<summary>
+Semana 4: Transformación de Datos con tidyr
+</summary>
+<p>
+En la cuarta semana, te enfocarás en la reestructuración de datos utilizando tidyr y en la aplicación de funciones de transformación avanzadas. Aprenderás a usar pivot_longer() y pivot_wider() para transformar datos y manejar valores faltantes con replace_na() y fill(). Además, veremos los conceptos de tidy data y cómo aplicar estos principios en tus proyectos. Practicarás transformando datasets para cumplir con los principios de tidy data y aplicando transformaciones avanzadas a múltiples columnas.
+</p>
+</details>
+<details>
+<summary>
+Semana 5: Combinación de Datos con Joins
+</summary>
+<p>
+Durante la quinta semana, aprenderás a combinar datasets con diferentes tipos de joins. Esto incluye inner_join(), left_join(), right_join() y full_join(). También aprenderás a usar semi_join() y anti_join() para filtrar datasets y manejar claves duplicadas. Además, veremos el concepto de relaciones, llaves primarias y foráneas, y cómo unir datos de diferentes fuentes de forma efectiva. Practicarás combinando datasets utilizando diferentes tipos de joins y creando un conjunto de datos completo a partir de tablas separadas.
+</p>
+</details>
+<details>
+<summary>
+Semana 6: Proyecto Final
+</summary>
+<p>
+La última semana está dedicada al proyecto final, donde aplicarás todos los conocimientos adquiridos a lo largo del curso. Deberás seleccionar un set de datos y aplicar un proceso de limpieza de los datos, así como documentar las variables utilizando el paquete pointblank para aplicar validaciones. Desarrollarás un informe completo que incluirá la lectura de datos, su limpieza, transformación. Presentarás y discutirás tus resultados, demostrando así tus habilidades y conocimientos.
+</p>
+</details>
+<div class="columns">
+<p>¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.</p><div class="column" style="width:45%;">
+<section id="inscríbete-ahora" class="level2">
+<h2 class="anchored" data-anchor-id="inscríbete-ahora">Inscríbete Ahora</h2>
+<ul>
+<li>Inicio de lecciones: <strong>martes 15 de abril de 2025</strong></li>
+<li>Clases en vivo</li>
+<li>Grabaciones de las clases</li>
+<li>Sesiones de seguimiento personalizadas</li>
+<li>Acceso a una comunidad de aprendizaje</li>
+<li>Ayuda en minutos a través de Zoom o WhatsApp</li>
+<li>Certificado compatible con LinkedIn emitido por Certifier</li>
+<li><strong>Precio: $200 USD</strong></li>
+</ul>
+<p><a href="https://tally.so/r/mYQb4N?curso=Manipulación%20de%20datos%20con%20R&amp;precio=%24200%20USD&amp;fecha_inicio=martes%2015%20de%20abril%20de%202025&amp;id=curso_manipulacion_R&amp;precio_cr=103,400%20colones" class="btn btn-outline-primary" role="button">Inscribirte ahora</a></p>
+</section>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/prof_v2.jpg" class="img-fluid figure-img"></p>
+<figcaption>Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟</p>
+</blockquote>
+</section>
+<section id="conoce-al-instructor" class="level2">
+<h2 class="anchored" data-anchor-id="conoce-al-instructor">Conoce al instructor</h2>
+<p>Hola 👋🏼, soy <a href="https://www.linkedin.com/in/carlos-aguero-cr">Carlos Aguero</a>. Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.</p>
+<p>Formo parte del listado de <a href="https://education.rstudio.com/trainers/">instructores certificados por RStudio</a>, enfocándome en <strong>Tidyverse</strong> y <strong>Shiny</strong>. Recientemente, tuve el gusto de unirme a los instructores de la organización <a href="https://www.software-carpentry.org">Software Carpentry</a> 🚀.</p>
+<p>A lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.</p>
+<section id="tienes-dudas-hablemos-sin-compromiso" class="level3">
+<h3 class="anchored" data-anchor-id="tienes-dudas-hablemos-sin-compromiso">¿Tienes dudas? Hablemos sin compromiso 😊</h3>
+<p>Si tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes.</p>
+<p>Mi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: <a href="https://cal.com/aprendetidyverse/reuniones-1h">https://cal.com/aprendetidyverse/reuniones-1h</a>.</p>
+<hr>
+</section>
+</section>
+<section id="conoce-lo-que-dicen-nuestros-estudiantes" class="level2">
+<h2 class="anchored" data-anchor-id="conoce-lo-que-dicen-nuestros-estudiantes">Conoce lo que dicen nuestros estudiantes</h2>
+<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
+<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=off&amp;hideSource&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
+</iframe>
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
+<hr>
+<div class="columns">
+<p>No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.</p><div class="column" style="width:45%;">
+<section id="inscríbete-ahora-1" class="level2">
+<h2 class="anchored" data-anchor-id="inscríbete-ahora-1">Inscríbete Ahora</h2>
+<ul>
+<li>Inicio de lecciones: <strong>martes 15 de abril de 2025</strong></li>
+<li>Clases en vivo</li>
+<li>Grabaciones de las clases</li>
+<li>Sesiones de seguimiento personalizadas</li>
+<li>Acceso a una comunidad de aprendizaje</li>
+<li>Ayuda en minutos a través de Zoom o WhatsApp</li>
+<li>Certificado compatible con LinkedIn emitido por Certifier</li>
+<li><strong>Precio: $200 USD</strong></li>
+</ul>
+<p><a href="https://tally.so/r/mYQb4N?curso=Manipulación%20de%20datos%20con%20R&amp;precio=%24200%20USD&amp;fecha_inicio=martes%2015%20de%20abril%20de%202025&amp;id=curso_manipulacion_R&amp;precio_cr=103,400%20colones" class="btn btn-outline-primary" role="button">Inscribirte ahora</a></p>
+</section>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/prof_v3.jpg" class="img-fluid figure-img"></p>
+<figcaption>Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/man-sitting-in-front-of-table-Kz8nHVg_tGI?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ponte-en-contacto" class="level2">
+<h2 class="anchored" data-anchor-id="ponte-en-contacto">Ponte en contacto</h2>
+<p>La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.</p>
+<p>Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en <a href="https://www.linkedin.com/in/carlos-aguero-cr">LinkedIn</a> o en <a href="https://twitter.com/dev_aguero">Twitter</a> (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/aprendetidyverse\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Contenido <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2024 por Aprende Tidyverse<br> Todo el contenido está licenciado bajo una Licencia Internacional Creative Commons Atribución-NoComercial 4.0 (<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es">CC BY-NC 4.0</a>).</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../terminos.html">
+<p>Términos y Condiciones</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../codigo_conducta.html">
+<p>Código de conducta</p>
+</a>
+  </li>  
+</ul>
+    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+<p>Hecho con <i class="fa-solid fa-heart" aria-label="heart"></i> desde Costa Rica usando <i class="fa-brands fa-r-project" aria-label="r-project"></i> y <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/aguerodev/aguerodev.github.io">Revisa el código fuente en <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

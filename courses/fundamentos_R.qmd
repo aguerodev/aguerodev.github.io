@@ -1,5 +1,5 @@
 ---
-title: "Aprende Programación en R Desde Cero"
+title: "Aprende programación en R desde cero"
 subtitle: ""
 description: "Descubre el poder del lenguaje de programación R en nuestro curso introductorio de 6 Semanas, diseñado para personas sin experiencia en programación."
 toc: true
@@ -11,51 +11,87 @@ image: ../images/community3_og.jpg
 
 ![Foto de <a href="https://unsplash.com/es/@cwmonty?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Montgomery</a> en <a href="https://unsplash.com/es/fotos/macbook-pro-displaying-group-of-people-smgTvepind4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/community3_og.jpg)
 
-
 ¿Te imaginas pasar de no tener conocimientos de R a poder crear tus primeros reportes, con gráficos, leyendo datos desde CSV y Excel para poder contestar las preguntas del negocio en tan solo 6 semanas? Yo también estuve en tu lugar, sin experiencia y con muchas dudas. Con el tiempo y la guía adecuada, logré aprender R y mejorar mis habilidades. Ahora, quiero compartir este conocimiento contigo.
 
-
-Muchos comienzan a aprender R, pero la frustración y la falta de apoyo los lleva a abandonar. Nuestro curso está diseñado para superar estos obstáculos, ofreciéndote una base sólida y el soporte necesario para que sigas adelante.
+Muchos comienzan a aprender R, pero la frustración y la falta de apoyo los lleva a abandonar. <mark>Nuestro curso está diseñado para superar estos obstáculos, ofreciéndote una base sólida y el soporte necesario para que sigas adelante.</mark>
 
 Con nuestro curso de **6 semanas**, no solo aprenderás los fundamentos de R, sino que también recibirás soporte personalizado para asegurarte de que comprendas cada concepto y puedas aplicarlo en situaciones reales.
 
-## Lo Que Aprenderás
+## Lo que Aprenderás
 
-+	**Introducción a R y RStudio**: Entiende el ecosistema de R y familiarízate con la interfaz de RStudio.
+<details open>
+<summary>Semana 1: Descubriendo R y el Tidyverse</summary>
+<p>En la primera semana, te sumergirás en el mundo de R y el conjunto de herramientas del Tidyverse. Aprenderás a configurar tu espacio de trabajo en RStudio, cómo leer archivos .csv y empezarás a jugar con tus datos, dándoles un primer vistazo y creando visualizaciones sencillas.</p>
+</details>
 
-+ **Importación de Datos y Operaciones Básicas**: Aprende a leer archivos CSV y Excel, y realiza operaciones básicas de datos usando dplyr.
+<details>
+<summary>Semana 2: Comenzamos a explorar los datos</summary>
+<p>En esta semana, te adentrarás en el corazón de <code>dplyr</code> y <code>tidyr</code>, donde la magia de la manipulación de datos realmente sucede. Aprenderás a filtrar, seleccionar, y transformar tus datos para revelar las historias ocultas que tienen para contar.</p>
+</details>
 
-+ **Visualización de Datos con ggplot2**: Crea visualizaciones impresionantes, incluyendo gráficos de dispersión y de barras.
+<details>
+<summary>Semana 3: Inicia en la visualización de Datos</summary>
+<p>Aquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando <code>ggplot2</code> para crear tus primeros gráficos. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapten a tus necesidades.</p>
+</details>
 
-+ **Manipulación de Datos con dplyr**: Domina técnicas de manipulación de datos y combina conjuntos de datos.
+<details>
+<summary>Semana 4: Lectura y limpieza de datos</summary>
+<p>Esta semana te enseñará a ser capaz de leer datos almacenados en <code>CSV</code>, <code>Excel</code>, <code>SPSS</code>, entre otros. Ya sea que estés trabajando con texto, números, fechas, o cualquier otro tipo, aprenderás las habilidades para manejarlos todos con eficiencia.</p>
+</details>
 
-+ **Creación de Informes con Quarto**: Genera informes y documentos profesionales con Quarto.
+<details>
+<summary>Semana 5: Creación de Informes con Quarto</summary>
+<p>Con <code>Quarto</code>, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.</p>
+</details>
 
-+ **Proyecto Final y Revisión**: Aplica tus habilidades a un conjunto de datos del mundo real y crea un informe completo.
+<details>
+<summary>Semana 6: Proyecto Final</summary>
+<p>En la última semana, aplicarás todo lo aprendido a lo largo del curso en un proyecto final. Deberás leer datos, limpiarlos, transformarlos y presentarlos utilizando gráficos y tablas. El objetivo es crear un informe completo que demuestre tus habilidades y conocimientos adquiridos.</p>
+</details>
 
-Al finalizar el curso, serás capaz de importar y manipular datos, crear visualizaciones profesionales y generar informes detallados. Estarás listo para aplicar estos conocimientos en tu trabajo o proyectos personales.
+Al finalizar el curso, serás capaz de importar y manipular datos, crear visualizaciones y generar informes usando las herramientas que te ofrece el lenguaje R y RStudio. Estarás listo para aplicar estos conocimientos en tu trabajo o proyectos personales.
 
-## Formato del Curso
+:::: {.columns}
+¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.
 
-+ Duración: 6 semanas
-+ Próxima apertura: **martes 1 de octubre** 
-  + 6:00 PM (hora de Costa Rica)
-  + 7:00 PM (hora de Colombia)
-  + 9:00 PM (hora de Argentina)
+::: {.column width="45%"}
+## Inscríbete Ahora
++ Inicio de lecciones: **martes 1 de octubre**
++ Clases en vivo
++ Grabaciones de las clases
++ Sesiones de seguimiento personalizadas
++ Acceso a una comunidad de aprendizaje
++ Ayuda en minutos a través de Zoom o WhatsApp
++ Certificado compatible con LinkedIn emitido por Certifier
++ **Precio: $200 USD**
+
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Fundamentos%20de%20R%20y%20RStudio&precio=%24200%20USD&fecha_inicio=martes%201%20de%20octubre%20de%202024&id=curso_fundamentos_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
+
+:::
+::::
+
+> ¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟
+
   
-+ Formato: Clases online con una duración aproximada de 2 horas, una combinación de **teoría (50%)** y **codificación en vivo (50%)** escribe código desde el primer día.
-+ Evaluaciones Interactivas: Cuestionarios y tareas semanales para reforzar el aprendizaje.
-+ Soporte Personalizado: **Sesiones semanales seguimiento privadas** por Zoom para preguntas y revisión de ejercicios
-+ Certificado: Emitido por Certifier, compatible con LinkedIn
-
-
 ## Conoce al instructor
 
-Hola, soy [Carlos Aguero](https://www.linkedin.com/in/carlos-aguero-cr). Soy ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R.
+Hola 👋🏼, soy [Carlos Aguero](https://www.linkedin.com/in/carlos-aguero-cr). Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.
 
-Formo parte del listado de [instructores certificados por RStudio](https://education.rstudio.com/trainers/), enfocándome en **Tidyverse** y **Shiny**. Recientemente, tuve el gusto de unirme a los instructores de la organización [Software Carpentry](https://www.software-carpentry.org).
+Formo parte del listado de [instructores certificados por RStudio](https://education.rstudio.com/trainers/), enfocándome en **Tidyverse** y **Shiny**. Recientemente, tuve el gusto de unirme a los instructores de la organización [Software Carpentry](https://www.software-carpentry.org) 🚀.
 
 A lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.
+
+### ¿Tienes dudas? Hablemos sin compromiso 😊
+
+Si tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes. 
+
+Mi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: [https://cal.com/aprendetidyverse/reuniones-1h](https://cal.com/aprendetidyverse/reuniones-1h).
 
 ---
 
@@ -72,49 +108,34 @@ A lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudia
 <script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
 ```
 
+---
 
 :::: {.columns}
-
+No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.
 
 ::: {.column width="45%"}
-## Inscribirte ahora
+## Inscríbete Ahora
 
-+ 6 clases en vivo de 2 horas cada una.
-+ Sesión semanal privada de 45 minutos con el instructor para retroalimentación personalizada.
-+ Asistencia por correo electrónico y consultas en tiempo real vía Zoom.
-+ Certificado compatible con LinkedIn, emitido por Certifier.
++ Inicio de lecciones: martes 1 de octubre
++ Clases en vivo
++ Grabaciones de las clases
++ Sesiones de seguimiento personalizadas
++ Acceso a una comunidad de aprendizaje
++ Ayuda en minutos a través de Zoom o WhatsApp
++ Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora]({{< var curso_ggplot2.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Fundamentos%20de%20R%20y%20RStudio&precio=%24200%20USD&fecha_inicio=martes%201%20de%20octubre%20de%202024&id=curso_fundamentos_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
 ::: {.column width="50%"}
 
-![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/man-sitting-in-front-of-table-Kz8nHVg_tGI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v3.jpg)
 
 :::
 ::::
 
-No esperes más. ¡Inscríbete ahora y empieza tu camino hacia la maestría en R! Recibe el soporte que necesitas para triunfar desde el primer día.
-
-:::: {.columns}
-::: {.column width="50%"}
-
-![Foto de <a href="https://unsplash.com/es/@javotrueba?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">javier trueba</a> en <a href="https://unsplash.com/es/fotos/mujer-que-lleva-un-libro-de-texto-blanco-y-verde-iQPr1XkF5F0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/est_v2.jpg)
-
-
-:::
-
-::: {.column width="45%"}
-
-## Estudiantes de pregrado 
-
-Si eres estudiante activo en alguna universidad nacional o extranjera, contáctanos en **info@aprendetidyverse.com** para obtener descuentos especiales, incluyendo hasta el 100% de descuento. Evaluamos cada caso individualmente para hacer que el aprendizaje de R sea accesible para todos.
-
-:::
-
-::::
 
 
 ## Ponte en contacto

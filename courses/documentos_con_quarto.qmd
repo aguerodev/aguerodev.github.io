@@ -1,0 +1,149 @@
+---
+title: "Desarrollo de reportes y documentos en R"
+subtitle: ""
+description: "¿Te gustaría dominar la visualización de datos y contar historias impactantes con tus gráficos?"
+toc: true
+lang: "es"
+author: ""
+pagetitle: "Desarrollo de reportes y documentos en R"
+image: ../images/reportes_quarto.jpg
+---
+
+![Foto de <a href="https://unsplash.com/es/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> en <a href="https://unsplash.com/es/fotos/texto-XrIfY_4cK1w?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/reportes_quarto.jpg)
+
+Este programa de 6 semanas te llevará de ser un principiante absoluto a un usuario competente de <mark>**Quarto, la moderna herramienta de publicación de documentos dinámicos.**</mark> Aprenderás desde la sintaxis básica de Markdown y la creación de documentos simples hasta la generación de informes parametrizados, presentaciones atractivas y artículos académicos con gestión de bibliografía.
+
+### ⚠️ Prerrequisitos del Curso
+
+
+Para poder desenvolverte en el curso sin problemas, es importante cumplir con los siguientes requisitos. Si tienes dudas, escríbenos o considera optar por alguno de nuestros cursos anteriores, como [Fundamentos de R y RStudio](fundamentos_R.qmd).
+
++ Conocimientos sólidos sobre el uso de RStudio.
++ Conocimientos básicos de lectura y manipulación de datos con dplyr.
+
+## En este curso, aprenderás a:
+<details open>
+<summary>Semana 1: Introducción a Quarto y Sintaxis de Markdown</summary>
+<p>Durante la primera semana, aprenderás qué es Quarto y cómo se diferencia de RMarkdown. Te familiarizarás con la instalación y configuración inicial de Quarto, y explorarás la comparación entre Quarto y RMarkdown. Además, aprenderás la estructura básica de un documento Markdown, incluyendo encabezados, listas, tablas, bloques de código y la inclusión de gráficos y visualizaciones. Para poner en práctica lo aprendido, crearás un documento básico en Quarto que incluya texto, listas, tablas y gráficos.</p>
+</details>
+
+<details>
+<summary>Semana 2: Creación de Documentos Parametrizados</summary>
+<p>En la segunda semana, te adentrarás en la creación de documentos parametrizados en Quarto. Aprenderás qué son los documentos parametrizados, sus casos de uso y beneficios. Descubrirás cómo definir parámetros en YAML, usar estos parámetros en el contenido del documento y renderizar documentos con diferentes parámetros. Como ejercicio, crearás un documento parametrizado que tome diferentes valores de entrada y genere salidas personalizadas.</p>
+</details>
+
+<details>
+<summary>Semana 3: Creación de Presentaciones con Quarto</summary>
+<p>Durante la tercera semana, aprenderás a crear presentaciones interactivas y profesionales con Quarto. Explorarás los tipos de presentaciones soportadas (HTML, PDF, etc.) y la estructura básica de una presentación. Además, aprenderás a personalizar presentaciones mediante diapositivas, transiciones, temas, gráficos, tablas, multimedia, código interactivo y widgets. Como ejercicio, crearás una presentación completa sobre un tema de interés, utilizando diferentes elementos multimedia e interactivos.</p>
+</details>
+
+<details>
+<summary>Semana 4: Creación de Artículos y Gestión de Fuentes Bibliográficas</summary>
+<p>En la cuarta semana, aprenderás a crear artículos académicos y gestionar fuentes bibliográficas en Quarto. Descubrirás la estructura de un artículo académico, el formato de citas y referencias, y cómo usar BibTeX y otros formatos de bibliografía. Además, aprenderás a integrar gestores de referencias como Zotero y Mendeley, y a generar bibliografías automáticamente. Para poner en práctica lo aprendido, escribirás un artículo académico completo con citas y referencias, utilizando un gestor de bibliografía.</p>
+</details>
+
+<details>
+<summary>Semana 5: Extensiones para Quarto y Publicación en QuartoPub</summary>
+<p>Durante la quinta semana, aprenderás sobre las extensiones disponibles para Quarto que pueden mejorar tus documentos y presentaciones. Además, te enfocarás en cómo publicar tus documentos en QuartoPub. Aprenderás a configurar y desplegar tus documentos en esta plataforma, explorando las mejores prácticas para la publicación en línea. Como ejercicio, publicarás un documento en QuartoPub utilizando las extensiones aprendidas.</p>
+</details>
+
+<details>
+<summary>Semana 6: Proyecto Final y Mejores Prácticas</summary>
+<p>La última semana está dedicada al proyecto final, donde aplicarás todo lo aprendido a lo largo del curso. Desarrollarás un proyecto completo que incluya un documento parametrizado, una presentación y un artículo académico, aplicando las mejores prácticas en la creación de documentos con Quarto. Aprenderás sobre la organización y estructura del código, la documentación y comentarios, y la optimización y rendimiento de tus proyectos. Finalmente, presentarás y discutirás tus resultados, demostrando tus habilidades y conocimientos adquiridos.</p>
+</details>
+
+:::: {.columns}
+¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.
+
+::: {.column width="45%"}
+## Inscríbete Ahora
++ Inicio de lecciones: **martes 18 de febrero de 2025**
++ Clases en vivo
++ Grabaciones de las clases
++ Sesiones de seguimiento personalizadas
++ Acceso a una comunidad de aprendizaje
++ Ayuda en minutos a través de Zoom o WhatsApp
++ Certificado compatible con LinkedIn emitido por Certifier
++ **Precio: $200 USD**
+
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Desarrollo%20de%20reportes%20y%20documentos%20en%20R&precio=%24200%20USD&fecha_inicio=martes%2018%20de%20febrero%20de%202025&id=curso_reportes_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
+
+:::
+::::
+
+> ¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟
+
+  
+## Conoce al instructor
+
+Hola 👋🏼, soy [Carlos Aguero](https://www.linkedin.com/in/carlos-aguero-cr). Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.
+
+Formo parte del listado de [instructores certificados por RStudio](https://education.rstudio.com/trainers/), enfocándome en **Tidyverse** y **Shiny**. Recientemente, tuve el gusto de unirme a los instructores de la organización [Software Carpentry](https://www.software-carpentry.org) 🚀.
+
+A lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.
+
+### ¿Tienes dudas? Hablemos sin compromiso 😊
+
+Si tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes. 
+
+Mi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: [https://cal.com/aprendetidyverse/reuniones-1h](https://cal.com/aprendetidyverse/reuniones-1h).
+
+---
+
+## Conoce lo que dicen nuestros estudiantes
+
+```{=html}
+<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
+```
+<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=off&amp;hideSource&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
+```
+
+---
+
+:::: {.columns}
+No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.
+
+::: {.column width="45%"}
+## Inscríbete Ahora
+
++ Inicio de lecciones: **martes 18 de febrero de 2025**
++ Clases en vivo
++ Grabaciones de las clases
++ Sesiones de seguimiento personalizadas
++ Acceso a una comunidad de aprendizaje
++ Ayuda en minutos a través de Zoom o WhatsApp
++ Certificado compatible con LinkedIn emitido por Certifier
++ **Precio: $200 USD**
+
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Desarrollo%20de%20reportes%20y%20documentos%20en%20R&precio=%24200%20USD&fecha_inicio=martes%2018%20de%20febrero%20de%202025&id=curso_reportes_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/man-sitting-in-front-of-table-Kz8nHVg_tGI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v3.jpg)
+
+:::
+::::
+
+
+
+## Ponte en contacto
+
+La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
+
+
+Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr) o en [Twitter](https://twitter.com/dev_aguero) (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!
+
+

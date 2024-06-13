@@ -1,0 +1,153 @@
+---
+title: "Desarrollo de proyeto con R y RStudio"
+subtitle: ""
+description: "¿Quieres dominar la manipulación de datos en R y transformar tus habilidades de análisis?"
+toc: true
+lang: "es"
+author: ""
+pagetitle: "Manipulación de datos con R"
+image: ../images/data_wrangling.jpg
+---
+
+![Foto de <a href="https://unsplash.com/es/@purzlbaum?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Claudio Schwarz</a> en <a href="https://unsplash.com/es/fotos/un-primer-plano-de-una-ventana-con-un-edificio-en-el-fondo-fyeOxvYvIyY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/data_wrangling.jpg)
+
+
+Este curso de 6 semanas está diseñado para enseñarte cómo <mark>**manipular y preparar datos de manera eficiente utilizando R y el ecosistema tidyverse.**</mark> Aprenderás a importar, limpiar, transformar y resumir datos con herramientas como dplyr, tidyr y purrr. Cada semana se enfoca en diferentes aspectos de la manipulación de datos, asegurando una comprensión profunda y práctica.
+
+### ⚠️ Prerrequisitos del Curso
+
+Para poder desenvolverte en el curso sin problemas, es importante cumplir con los siguientes requisitos. Si tienes dudas, escríbenos o considera optar por alguno de nuestros cursos anteriores, como [Fundamentos de R y RStudio](fundamentos_R.qmd) o [Visualización de datos con R](visualizacion_datos_R.qmd).
+
++ Conocimientos sólidos sobre el uso de RStudio.
++ Conocimientos básicos de lectura y manipulación de datos con dplyr.
++  Capacidad de filtrar datos y crear nuevas variables.
++ Experiencia en la creación de reportes con rmarkdown o Quarto.
++ Conocimientos básicos en la creación de gráficos en R.
+
+## En este curso, aprenderás a:
+
+<details open>
+<summary>Semana 1: Introducción a Tidyverse y Manipulación de Datos Básicos</summary>
+<p>Durante la primera semana, haremos un repaso completo de las operaciones básicas del paquete dplyr y conversaremos sobre la importancia de documentar correctamente nuestros sets de datos, así como de crear procesos de validación de la información con herramientas como el paquete pointblank de RStudio. Esto incluye la importación de datos desde archivos CSV, Excel y SPSS usando readr, readxl y haven, así como la exploración básica de datos y operaciones básicas con dplyr como select(), filter(), mutate(), arrange() y summarise(). También practicarás cargando y explorando un dataset en CSV y realizando operaciones básicas de manipulación y limpieza.</p>
+</details>
+
+<details>
+<summary>Semana 2: Filtrados Avanzados y Operaciones Lógicas Complejas</summary>
+<p>En la segunda semana, aprenderás a realizar filtrados avanzados y a utilizar operaciones lógicas complejas en la manipulación de datos. Esto incluye el uso avanzado de filter(), operadores lógicos como &amp;, | y !, y funciones condicionales como if_else() y case_when(). Además, aprenderás a usar operaciones como when_math(), any_of(), all_of(), where() y str_detect(). Practicarás filtrando datos con múltiples condiciones y creando nuevas variables basadas en condiciones lógicas.</p>
+</details>
+
+<details>
+<summary>Semana 3: Resúmenes y Datos Agrupados</summary>
+<p>Durante la tercera semana, te centrarás en la creación de resúmenes y estadísticas descriptivas, así como en el trabajo con datos agrupados. Aprenderás a utilizar funciones de resumen como summarise(), n(), mean(), median(), sd(), min() y max(). También trabajarás con la agrupación de datos usando group_by() y combinarás group_by() con summarise() para obtener estadísticas por grupo. Además, aprenderás a aplicar funciones a múltiples columnas usando across() y where(), y el uso de .by como sustituto de group_by(). Practicarás creando resúmenes de datos y agrupando datos para calcular estadísticas descriptivas por grupo.</p>
+</details>
+
+<details>
+<summary>Semana 4: Transformación de Datos con tidyr</summary>
+<p>En la cuarta semana, te enfocarás en la reestructuración de datos utilizando tidyr y en la aplicación de funciones de transformación avanzadas. Aprenderás a usar pivot_longer() y pivot_wider() para transformar datos y manejar valores faltantes con replace_na() y fill(). Además, veremos los conceptos de tidy data y cómo aplicar estos principios en tus proyectos. Practicarás transformando datasets para cumplir con los principios de tidy data y aplicando transformaciones avanzadas a múltiples columnas.</p>
+</details>
+
+<details>
+<summary>Semana 5: Combinación de Datos con Joins</summary>
+<p>Durante la quinta semana, aprenderás a combinar datasets con diferentes tipos de joins. Esto incluye inner_join(), left_join(), right_join() y full_join(). También aprenderás a usar semi_join() y anti_join() para filtrar datasets y manejar claves duplicadas. Además, veremos el concepto de relaciones, llaves primarias y foráneas, y cómo unir datos de diferentes fuentes de forma efectiva. Practicarás combinando datasets utilizando diferentes tipos de joins y creando un conjunto de datos completo a partir de tablas separadas.</p>
+</details>
+
+<details>
+<summary>Semana 6: Proyecto Final</summary>
+<p>La última semana está dedicada al proyecto final, donde aplicarás todos los conocimientos adquiridos a lo largo del curso. Deberás seleccionar un set de datos y aplicar un proceso de limpieza de los datos, así como documentar las variables utilizando el paquete pointblank para aplicar validaciones. Desarrollarás un informe completo que incluirá la lectura de datos, su limpieza, transformación. Presentarás y discutirás tus resultados, demostrando así tus habilidades y conocimientos.</p>
+</details>
+
+:::: {.columns}
+¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.
+
+::: {.column width="45%"}
+## Inscríbete Ahora
++ Inicio de lecciones: **martes 15 de abril de 2025**
++ Clases en vivo
++ Grabaciones de las clases
++ Sesiones de seguimiento personalizadas
++ Acceso a una comunidad de aprendizaje
++ Ayuda en minutos a través de Zoom o WhatsApp
++ Certificado compatible con LinkedIn emitido por Certifier
++ **Precio: $200 USD**
+
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Manipulación%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2015%20de%20abril%20de%202025&id=curso_manipulacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
+
+:::
+::::
+
+> ¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟
+
+  
+## Conoce al instructor
+
+Hola 👋🏼, soy [Carlos Aguero](https://www.linkedin.com/in/carlos-aguero-cr). Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.
+
+Formo parte del listado de [instructores certificados por RStudio](https://education.rstudio.com/trainers/), enfocándome en **Tidyverse** y **Shiny**. Recientemente, tuve el gusto de unirme a los instructores de la organización [Software Carpentry](https://www.software-carpentry.org) 🚀.
+
+A lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.
+
+### ¿Tienes dudas? Hablemos sin compromiso 😊
+
+Si tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes. 
+
+Mi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: [https://cal.com/aprendetidyverse/reuniones-1h](https://cal.com/aprendetidyverse/reuniones-1h).
+
+---
+
+## Conoce lo que dicen nuestros estudiantes
+
+```{=html}
+<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
+```
+<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=off&amp;hideSource&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
+```
+
+---
+
+:::: {.columns}
+No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.
+
+::: {.column width="45%"}
+## Inscríbete Ahora
+
++ Inicio de lecciones: **martes 15 de abril de 2025**
++ Clases en vivo
++ Grabaciones de las clases
++ Sesiones de seguimiento personalizadas
++ Acceso a una comunidad de aprendizaje
++ Ayuda en minutos a través de Zoom o WhatsApp
++ Certificado compatible con LinkedIn emitido por Certifier
++ **Precio: $200 USD**
+
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Manipulación%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2015%20de%20abril%20de%202025&id=curso_manipulacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::: {.column width="50%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/man-sitting-in-front-of-table-Kz8nHVg_tGI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v3.jpg)
+
+:::
+::::
+
+
+
+## Ponte en contacto
+
+La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
+
+
+Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr) o en [Twitter](https://twitter.com/dev_aguero) (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!
+
+

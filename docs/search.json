@@ -128,16 +128,16 @@
   {
     "objectID": "courses/avz_ggplot2.html",
     "href": "courses/avz_ggplot2.html",
-    "title": "Visualización de datos con ggplot2",
+    "title": "Visualización de datos con R",
     "section": "",
-    "text": "Foto de Markus Spiske en Unsplash\nTodos comenzamos con ggplot2 creando gráficos básicos, pero llega un punto donde deseamos más. ¿Cómo lograr que nuestras visualizaciones luzcan profesionales? ¿Cómo adaptarlas al estilo de nuestra empresa? Este curso te lleva al siguiente nivel con ggplot2. Aprende su funcionamiento a fondo y practica replicando gráficos de grandes medios como The Economist, The New York Times, The Washington Post, entre otros. ¡Prepárate para crear visualizaciones impactantes y con estilo propio!"
+    "text": "Foto de Markus Spiske en Unsplash\nEn este curso de 6 semanas, te sumergirás en el mundo de la visualización de datos utilizando R y ggplot2. Aprenderás desde los fundamentos hasta técnicas avanzadas, incluyendo gráficos interactivos y manejo de datos geoespaciales para crear mapas. Al finalizar, serás capaz de crear visualizaciones efectivas y atractivas que comuniquen tus datos de manera clara y convincente."
   },
   {
     "objectID": "courses/avz_ggplot2.html#en-este-curso-aprenderás-a",
     "href": "courses/avz_ggplot2.html#en-este-curso-aprenderás-a",
-    "title": "Visualización de datos con ggplot2",
+    "title": "Visualización de datos con R",
     "section": "En este curso, aprenderás a:",
-    "text": "En este curso, aprenderás a:\n\nPersonalizar gráficos con themes y anotaciones: Crea estilos únicos, resalta información clave y haz que tus gráficos sean fáciles de leer.\nControlar escalas y guías: Ajusta la apariencia de ejes y leyendas para una comunicación efectiva de la información.\nExplorar sistemas de coordenadas y facetado: Crea visualizaciones especializadas y compara subconjuntos de datos con facilidad.\nAutomatizar tareas con programación funcional: Optimiza tu flujo de trabajo y crea gráficos de forma eficiente.\nReplicar gráficos de medios de renombre: Aprende de los mejores y aplica técnicas avanzadas para visualizaciones impactantes."
+    "text": "En este curso, aprenderás a:\n\n\nSemana 1: Fundamentos de ggplot2\n\n\nDurante la primera semana, aprenderás los fundamentos de ggplot2, comprendiendo la gramática de los gráficos y creando gráficos básicos como histogramas, gráficos de dispersión, líneas y cajas. También te familiarizarás con la personalización de elementos básicos del gráfico como títulos, etiquetas y temas.\n\n\n\n\nSemana 2: Escalas, Facetas y Personalización Avanzada\n\n\nEn la segunda semana, dominarás el uso de escalas y facetas para dividir datos y personalizar gráficos con colores, formas y tamaños. Además, aprenderás a ajustar temas y estilos avanzados para tus gráficos.\n\n\n\n\nSemana 3: Gráficos Interactivos con Plotly y Dygraph\n\n\nEn la tercera semana, te introducirás en la creación de gráficos interactivos utilizando Plotly y Dygraph. Aprenderás a convertir gráficos de ggplot2 a gráficos interactivos y a crear gráficos de series temporales interactivos desde cero.\n\n\n\n\nSemana 4: Fundamentos de Datos Geoespaciales y Creación de Mapas con ggplot2\n\n\nDurante la cuarta semana, te adentrarás en los conceptos básicos de datos geoespaciales y aprenderás a crear mapas estáticos usando ggplot2 y el paquete sf. También te centrarás en la personalización de mapas con diferentes capas y estéticas.\n\n\n\n\nSemana 5: Mapas Interactivos con Leaflet\n\n\nEn la quinta semana, aprenderás a crear mapas interactivos usando Leaflet. Añadirás marcadores, capas y controles a los mapas y aprenderás a integrar datos geoespaciales en tus mapas interactivos.\n\n\n\n\nSemana 6: Proyecto Final\n\n\nLa última semana está dedicada al proyecto final, donde aplicarás todos los conocimientos adquiridos a lo largo del curso. Desarrollarás un informe completo que incluirá la lectura de datos, su limpieza, transformación y presentación mediante gráficos y tablas. Este informe deberá contener gráficos interactivos y mapas de Costa Rica o tu país (en caso de ser extranjero), comunicando de forma efectiva tus resultados. Presentarás y discutirás tus resultados, demostrando así tus habilidades y conocimientos.\n\n\n\n¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 1 de octubre\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n\n¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟"
   },
   {
     "objectID": "courses/avz_ggplot2.html#próxima-apertura",
@@ -156,16 +156,16 @@
   {
     "objectID": "courses/avz_ggplot2.html#conoce-al-instructor",
     "href": "courses/avz_ggplot2.html#conoce-al-instructor",
-    "title": "Visualización de datos con ggplot2",
+    "title": "Visualización de datos con R",
     "section": "Conoce al instructor",
-    "text": "Conoce al instructor\nMi nombre es Carlos Agüero B, desde el 2016, me dedico a enseñar a profesionales, en su mayoría no programadores, cómo analizar datos utilizando el lenguaje R.\nHe tenido la increíble oportunidad de formarme como instructor certificado por RStudio para la enseñanza de Tidyverse y Shiny y, recientemente, unirme la comunidad de instructores de The Carpentries. En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina."
+    "text": "Conoce al instructor\nHola 👋🏼, soy Carlos Aguero. Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.\nFormo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. Recientemente, tuve el gusto de unirme a los instructores de la organización Software Carpentry 🚀.\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.\n\n¿Tienes dudas? Hablemos sin compromiso 😊\nSi tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes.\nMi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: https://cal.com/aprendetidyverse/reuniones-1h."
   },
   {
     "objectID": "courses/avz_ggplot2.html#conoce-lo-que-dicen-nuestros-estudiantes",
     "href": "courses/avz_ggplot2.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "title": "Visualización de datos con ggplot2",
+    "title": "Visualización de datos con R",
     "section": "Conoce lo que dicen nuestros estudiantes",
-    "text": "Conoce lo que dicen nuestros estudiantes"
+    "text": "Conoce lo que dicen nuestros estudiantes\n\n\n\n\n\n\nNo esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 1 de octubre\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash"
   },
   {
     "objectID": "courses/avz_ggplot2.html#contenido-del-curso",
@@ -184,7 +184,7 @@
   {
     "objectID": "courses/avz_ggplot2.html#ponte-en-contacto",
     "href": "courses/avz_ggplot2.html#ponte-en-contacto",
-    "title": "Visualización de datos con ggplot2",
+    "title": "Visualización de datos con R",
     "section": "Ponte en contacto",
     "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
   },
@@ -695,9 +695,9 @@
   {
     "objectID": "courses/fundamentos_R.html",
     "href": "courses/fundamentos_R.html",
-    "title": "Aprende Programación en R Desde Cero",
+    "title": "Aprende programación en R desde cero",
     "section": "",
-    "text": "Foto de Chris Montgomery en Unsplash\n¿Te imaginas pasar de no tener conocimientos de R a poder crear tus primeros reportes, con gráficos, leyendo datos desde CSV y Excel para poder contestar las preguntas del negocio en tan solo 6 semanas? Yo también estuve en tu lugar, sin experiencia y con muchas dudas. Con el tiempo y la guía adecuada, logré aprender R y mejorar mis habilidades. Ahora, quiero compartir este conocimiento contigo.\nMuchos comienzan a aprender R, pero la frustración y la falta de apoyo los lleva a abandonar. Nuestro curso está diseñado para superar estos obstáculos, ofreciéndote una base sólida y el soporte necesario para que sigas adelante.\nCon nuestro curso de 6 semanas, no solo aprenderás los fundamentos de R, sino que también recibirás soporte personalizado para asegurarte de que comprendas cada concepto y puedas aplicarlo en situaciones reales.\nNo esperes más. ¡Inscríbete ahora y empieza tu camino hacia la maestría en R! Recibe el soporte que necesitas para triunfar desde el primer día."
+    "text": "Foto de Chris Montgomery en Unsplash\n¿Te imaginas pasar de no tener conocimientos de R a poder crear tus primeros reportes, con gráficos, leyendo datos desde CSV y Excel para poder contestar las preguntas del negocio en tan solo 6 semanas? Yo también estuve en tu lugar, sin experiencia y con muchas dudas. Con el tiempo y la guía adecuada, logré aprender R y mejorar mis habilidades. Ahora, quiero compartir este conocimiento contigo.\nMuchos comienzan a aprender R, pero la frustración y la falta de apoyo los lleva a abandonar. Nuestro curso está diseñado para superar estos obstáculos, ofreciéndote una base sólida y el soporte necesario para que sigas adelante.\nCon nuestro curso de 6 semanas, no solo aprenderás los fundamentos de R, sino que también recibirás soporte personalizado para asegurarte de que comprendas cada concepto y puedas aplicarlo en situaciones reales."
   },
   {
     "objectID": "courses/fundamentos_R.html#en-este-curso-aprenderás-a",
@@ -711,7 +711,7 @@
     "href": "courses/fundamentos_R.html#próxima-apertura",
     "title": "Aprende Programación en R Desde Cero",
     "section": "Próxima apertura",
-    "text": "Próxima apertura\n\nDuración: 6 semanas\nFecha de inicio: martes 4 de junio de 2024\nLecciones: Todos los martes\nCosta Rica/México: 6:00 p.m.\nColombia: 7:00 p.m.\nArgentina: 9:00 p.m.\n\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n¿Qué obtendrás?\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 30 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado de aprovechamiento compatible con LinkedIn, emitido por Certifier.\nAcceso prioritario a cursos avanzados.\nPrecio: $99 USD\n\nInscribirte ahora"
+    "text": "Próxima apertura\n\nPróxima apertura: martes 1 de octubre 📆\n\n6:00 PM Costa Rica 🇨🇷\n7:00 PM Colombia 🇨🇴\n9:00 PM Argentina 🇦🇷\n\nDuración: 6 semanas\nPrecio: $200 USD\n\nInscribirte ahora"
   },
   {
     "objectID": "courses/fundamentos_R.html#qué-obtendrás",
@@ -723,16 +723,16 @@
   {
     "objectID": "courses/fundamentos_R.html#conoce-al-instructor",
     "href": "courses/fundamentos_R.html#conoce-al-instructor",
-    "title": "Aprende Programación en R Desde Cero",
+    "title": "Aprende programación en R desde cero",
     "section": "Conoce al instructor",
-    "text": "Conoce al instructor\nHola, soy Carlos Aguero. Soy ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R.\nFormo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. Recientemente, tuve el gusto de unirme a los instructores de la organización Software Carpentry.\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos."
+    "text": "Conoce al instructor\nHola 👋🏼, soy Carlos Aguero. Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.\nFormo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. Recientemente, tuve el gusto de unirme a los instructores de la organización Software Carpentry 🚀.\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.\n\n¿Tienes dudas? Hablemos sin compromiso 😊\nSi tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes.\nMi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: https://cal.com/aprendetidyverse/reuniones-1h."
   },
   {
     "objectID": "courses/fundamentos_R.html#conoce-lo-que-dicen-nuestros-estudiantes",
     "href": "courses/fundamentos_R.html#conoce-lo-que-dicen-nuestros-estudiantes",
-    "title": "Aprende Programación en R Desde Cero",
+    "title": "Aprende programación en R desde cero",
     "section": "Conoce lo que dicen nuestros estudiantes",
-    "text": "Conoce lo que dicen nuestros estudiantes"
+    "text": "Conoce lo que dicen nuestros estudiantes\n\n\n\n\n\n\nNo esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 1 de octubre\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash"
   },
   {
     "objectID": "courses/fundamentos_R.html#contenido-del-curso",
@@ -751,16 +751,16 @@
   {
     "objectID": "courses/fundamentos_R.html#ponte-en-contacto",
     "href": "courses/fundamentos_R.html#ponte-en-contacto",
-    "title": "Aprende Programación en R Desde Cero",
+    "title": "Aprende programación en R desde cero",
     "section": "Ponte en contacto",
     "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
   },
   {
     "objectID": "courses/fundamentos_R.html#lo-que-aprenderás",
     "href": "courses/fundamentos_R.html#lo-que-aprenderás",
-    "title": "Aprende Programación en R Desde Cero",
-    "section": "Lo Que Aprenderás",
-    "text": "Lo Que Aprenderás\n\nIntroducción a R y RStudio: Entiende el ecosistema de R y familiarízate con la interfaz de RStudio.\nImportación de Datos y Operaciones Básicas: Aprende a leer archivos CSV y Excel, y realiza operaciones básicas de datos usando dplyr.\nVisualización de Datos con ggplot2: Crea visualizaciones impresionantes, incluyendo gráficos de dispersión y de barras.\nManipulación de Datos con dplyr: Domina técnicas de manipulación de datos y combina conjuntos de datos.\nCreación de Informes con Quarto: Genera informes y documentos profesionales con Quarto.\nProyecto Final y Revisión: Aplica tus habilidades a un conjunto de datos del mundo real y crea un informe completo.\n\nAl finalizar el curso, serás capaz de importar y manipular datos, crear visualizaciones profesionales y generar informes detallados. Estarás listo para aplicar estos conocimientos en tu trabajo o proyectos personales."
+    "title": "Aprende programación en R desde cero",
+    "section": "Lo que Aprenderás",
+    "text": "Lo que Aprenderás\n\n\nSemana 1: Descubriendo R y el Tidyverse\n\n\nEn la primera semana, te sumergirás en el mundo de R y el conjunto de herramientas del Tidyverse. Aprenderás a configurar tu espacio de trabajo en RStudio, cómo leer archivos .csv y empezarás a jugar con tus datos, dándoles un primer vistazo y creando visualizaciones sencillas.\n\n\n\n\nSemana 2: Comenzamos a explorar los datos\n\n\nEn esta semana, te adentrarás en el corazón de dplyr y tidyr, donde la magia de la manipulación de datos realmente sucede. Aprenderás a filtrar, seleccionar, y transformar tus datos para revelar las historias ocultas que tienen para contar.\n\n\n\n\nSemana 3: Inicia en la visualización de Datos\n\n\nAquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando ggplot2 para crear tus primeros gráficos. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapten a tus necesidades.\n\n\n\n\nSemana 4: Lectura y limpieza de datos\n\n\nEsta semana te enseñará a ser capaz de leer datos almacenados en CSV, Excel, SPSS, entre otros. Ya sea que estés trabajando con texto, números, fechas, o cualquier otro tipo, aprenderás las habilidades para manejarlos todos con eficiencia.\n\n\n\n\nSemana 5: Creación de Informes con Quarto\n\n\nCon Quarto, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.\n\n\n\n\nSemana 6: Proyecto Final\n\n\nEn la última semana, aplicarás todo lo aprendido a lo largo del curso en un proyecto final. Deberás leer datos, limpiarlos, transformarlos y presentarlos utilizando gráficos y tablas. El objetivo es crear un informe completo que demuestre tus habilidades y conocimientos adquiridos.\n\n\nAl finalizar el curso, serás capaz de importar y manipular datos, crear visualizaciones y generar informes usando las herramientas que te ofrece el lenguaje R y RStudio. Estarás listo para aplicar estos conocimientos en tu trabajo o proyectos personales.\n\n¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 1 de octubre\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n\n¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟"
   },
   {
     "objectID": "courses/fundamentos_R.html#formato-del-curso",
@@ -782,5 +782,348 @@
     "title": "Aprende Programación en R Desde Cero",
     "section": "Estudiantes de pregrado",
     "text": "Estudiantes de pregrado\nSi eres estudiante activo en alguna universidad nacional o extranjera, contáctanos en info@aprendetidyverse.com para obtener descuentos especiales, incluyendo hasta el 100% de descuento. Evaluamos cada caso individualmente para hacer que el aprendizaje de R sea accesible para todos."
+  },
+  {
+    "objectID": "courses/fundamentos_R.html#inscribirte-ahora-1",
+    "href": "courses/fundamentos_R.html#inscribirte-ahora-1",
+    "title": "Aprende Programación en R Desde Cero",
+    "section": "Inscribirte ahora",
+    "text": "Inscribirte ahora\n\n6 clases en vivo de 2 horas cada una.\nSesión semanal privada de 45 minutos con el instructor para retroalimentación personalizada.\nAsistencia por correo electrónico y consultas en tiempo real vía Zoom.\nCertificado compatible con LinkedIn, emitido por Certifier.\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/fundamentos_R.html#inscríbete-ahora",
+    "href": "courses/fundamentos_R.html#inscríbete-ahora",
+    "title": "Aprende programación en R desde cero",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 1 de octubre\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/fundamentos_R.html#inscríbete-ahora-1",
+    "href": "courses/fundamentos_R.html#inscríbete-ahora-1",
+    "title": "Aprende programación en R desde cero",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 1 de octubre\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#inscríbete-ahora",
+    "href": "courses/avz_ggplot2.html#inscríbete-ahora",
+    "title": "Visualización de datos con R",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 1 de octubre\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#inscríbete-ahora-1",
+    "href": "courses/avz_ggplot2.html#inscríbete-ahora-1",
+    "title": "Visualización de datos con R",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 1 de octubre\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/avz_ggplot2.html#tienes-dudas-hablemos-sin-compromiso",
+    "href": "courses/avz_ggplot2.html#tienes-dudas-hablemos-sin-compromiso",
+    "title": "Visualización de datos con R",
+    "section": "¿Tienes dudas? Hablemos sin compromiso 😊",
+    "text": "¿Tienes dudas? Hablemos sin compromiso 😊\nSi tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes. Mi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: https://cal.com/aprendetidyverse/reuniones-1h."
+  },
+  {
+    "objectID": "courses/visualizacion_datos_R.html",
+    "href": "courses/visualizacion_datos_R.html",
+    "title": "Visualización de datos con R",
+    "section": "",
+    "text": "Foto de Markus Spiske en Unsplash\nEn este curso de 6 semanas, te sumergirás en el mundo de la visualización de datos utilizando R y ggplot2. Aprenderás desde los fundamentos hasta técnicas avanzadas, incluyendo gráficos interactivos y manejo de datos geoespaciales para crear mapas. Al finalizar, serás capaz de crear visualizaciones efectivas y atractivas que comuniquen tus datos de manera clara y convincente."
+  },
+  {
+    "objectID": "courses/visualizacion_datos_R.html#en-este-curso-aprenderás-a",
+    "href": "courses/visualizacion_datos_R.html#en-este-curso-aprenderás-a",
+    "title": "Visualización de datos con R",
+    "section": "En este curso, aprenderás a:",
+    "text": "En este curso, aprenderás a:\n\n\nSemana 1: Fundamentos de ggplot2\n\n\nDurante la primera semana, aprenderás los fundamentos de ggplot2, comprendiendo la gramática de los gráficos y creando gráficos básicos como histogramas, gráficos de dispersión, líneas y cajas. También te familiarizarás con la personalización de elementos básicos del gráfico como títulos, etiquetas y temas.\n\n\n\n\nSemana 2: Escalas, Facetas y Personalización Avanzada\n\n\nEn la segunda semana, dominarás el uso de escalas y facetas para dividir datos y personalizar gráficos con colores, formas y tamaños. Además, aprenderás a ajustar temas y estilos avanzados para tus gráficos.\n\n\n\n\nSemana 3: Gráficos Interactivos con Plotly y Dygraph\n\n\nEn la tercera semana, te introducirás en la creación de gráficos interactivos utilizando Plotly y Dygraph. Aprenderás a convertir gráficos de ggplot2 a gráficos interactivos y a crear gráficos de series temporales interactivos desde cero.\n\n\n\n\nSemana 4: Fundamentos de Datos Geoespaciales y Creación de Mapas con ggplot2\n\n\nDurante la cuarta semana, te adentrarás en los conceptos básicos de datos geoespaciales y aprenderás a crear mapas estáticos usando ggplot2 y el paquete sf. También te centrarás en la personalización de mapas con diferentes capas y estéticas.\n\n\n\n\nSemana 5: Mapas Interactivos con Leaflet\n\n\nEn la quinta semana, aprenderás a crear mapas interactivos usando Leaflet. Añadirás marcadores, capas y controles a los mapas y aprenderás a integrar datos geoespaciales en tus mapas interactivos.\n\n\n\n\nSemana 6: Proyecto Final\n\n\nLa última semana está dedicada al proyecto final, donde aplicarás todos los conocimientos adquiridos a lo largo del curso. Desarrollarás un informe completo que incluirá la lectura de datos, su limpieza, transformación y presentación mediante gráficos y tablas. Este informe deberá contener gráficos interactivos y mapas de Costa Rica o tu país (en caso de ser extranjero), comunicando de forma efectiva tus resultados. Presentarás y discutirás tus resultados, demostrando así tus habilidades y conocimientos.\n\n\n\n¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 26 de noviembre\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n\n¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟"
+  },
+  {
+    "objectID": "courses/visualizacion_datos_R.html#inscríbete-ahora",
+    "href": "courses/visualizacion_datos_R.html#inscríbete-ahora",
+    "title": "Visualización de datos con R",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 26 de noviembre\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/visualizacion_datos_R.html#conoce-al-instructor",
+    "href": "courses/visualizacion_datos_R.html#conoce-al-instructor",
+    "title": "Visualización de datos con R",
+    "section": "Conoce al instructor",
+    "text": "Conoce al instructor\nHola 👋🏼, soy Carlos Aguero. Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.\nFormo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. Recientemente, tuve el gusto de unirme a los instructores de la organización Software Carpentry 🚀.\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.\n\n¿Tienes dudas? Hablemos sin compromiso 😊\nSi tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes.\nMi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: https://cal.com/aprendetidyverse/reuniones-1h."
+  },
+  {
+    "objectID": "courses/visualizacion_datos_R.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "href": "courses/visualizacion_datos_R.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "title": "Visualización de datos con R",
+    "section": "Conoce lo que dicen nuestros estudiantes",
+    "text": "Conoce lo que dicen nuestros estudiantes\n\n\n\n\n\n\nNo esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 26 de noviembre\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash"
+  },
+  {
+    "objectID": "courses/visualizacion_datos_R.html#inscríbete-ahora-1",
+    "href": "courses/visualizacion_datos_R.html#inscríbete-ahora-1",
+    "title": "Visualización de datos con R",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 26 de noviembre\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/visualizacion_datos_R.html#ponte-en-contacto",
+    "href": "courses/visualizacion_datos_R.html#ponte-en-contacto",
+    "title": "Visualización de datos con R",
+    "section": "Ponte en contacto",
+    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "courses/manipulacion_datos_R.html",
+    "href": "courses/manipulacion_datos_R.html",
+    "title": "Manipulación de datos con R",
+    "section": "",
+    "text": "Foto de Claudio Schwarz en Unsplash\nEste curso de 6 semanas está diseñado para enseñarte cómo manipular y preparar datos de manera eficiente utilizando R y el ecosistema tidyverse. Aprenderás a importar, limpiar, transformar y resumir datos con herramientas como dplyr, tidyr y purrr. Cada semana se enfoca en diferentes aspectos de la manipulación de datos, asegurando una comprensión profunda y práctica."
+  },
+  {
+    "objectID": "courses/manipulacion_datos_R.html#en-este-curso-aprenderás-a",
+    "href": "courses/manipulacion_datos_R.html#en-este-curso-aprenderás-a",
+    "title": "Manipulación de datos con R",
+    "section": "En este curso, aprenderás a:",
+    "text": "En este curso, aprenderás a:\n\n\nSemana 1: Introducción a Tidyverse y Manipulación de Datos Básicos\n\n\nDurante la primera semana, haremos un repaso completo de las operaciones básicas del paquete dplyr y conversaremos sobre la importancia de documentar correctamente nuestros sets de datos, así como de crear procesos de validación de la información con herramientas como el paquete pointblank de RStudio. Esto incluye la importación de datos desde archivos CSV, Excel y SPSS usando readr, readxl y haven, así como la exploración básica de datos y operaciones básicas con dplyr como select(), filter(), mutate(), arrange() y summarise(). También practicarás cargando y explorando un dataset en CSV y realizando operaciones básicas de manipulación y limpieza.\n\n\n\n\nSemana 2: Filtrados Avanzados y Operaciones Lógicas Complejas\n\n\nEn la segunda semana, aprenderás a realizar filtrados avanzados y a utilizar operaciones lógicas complejas en la manipulación de datos. Esto incluye el uso avanzado de filter(), operadores lógicos como &, | y !, y funciones condicionales como if_else() y case_when(). Además, aprenderás a usar operaciones como when_math(), any_of(), all_of(), where() y str_detect(). Practicarás filtrando datos con múltiples condiciones y creando nuevas variables basadas en condiciones lógicas.\n\n\n\n\nSemana 3: Resúmenes y Datos Agrupados\n\n\nDurante la tercera semana, te centrarás en la creación de resúmenes y estadísticas descriptivas, así como en el trabajo con datos agrupados. Aprenderás a utilizar funciones de resumen como summarise(), n(), mean(), median(), sd(), min() y max(). También trabajarás con la agrupación de datos usando group_by() y combinarás group_by() con summarise() para obtener estadísticas por grupo. Además, aprenderás a aplicar funciones a múltiples columnas usando across() y where(), y el uso de .by como sustituto de group_by(). Practicarás creando resúmenes de datos y agrupando datos para calcular estadísticas descriptivas por grupo.\n\n\n\n\nSemana 4: Transformación de Datos con tidyr\n\n\nEn la cuarta semana, te enfocarás en la reestructuración de datos utilizando tidyr y en la aplicación de funciones de transformación avanzadas. Aprenderás a usar pivot_longer() y pivot_wider() para transformar datos y manejar valores faltantes con replace_na() y fill(). Además, veremos los conceptos de tidy data y cómo aplicar estos principios en tus proyectos. Practicarás transformando datasets para cumplir con los principios de tidy data y aplicando transformaciones avanzadas a múltiples columnas.\n\n\n\n\nSemana 5: Combinación de Datos con Joins\n\n\nDurante la quinta semana, aprenderás a combinar datasets con diferentes tipos de joins. Esto incluye inner_join(), left_join(), right_join() y full_join(). También aprenderás a usar semi_join() y anti_join() para filtrar datasets y manejar claves duplicadas. Además, veremos el concepto de relaciones, llaves primarias y foráneas, y cómo unir datos de diferentes fuentes de forma efectiva. Practicarás combinando datasets utilizando diferentes tipos de joins y creando un conjunto de datos completo a partir de tablas separadas.\n\n\n\n\nSemana 6: Proyecto Final\n\n\nLa última semana está dedicada al proyecto final, donde aplicarás todos los conocimientos adquiridos a lo largo del curso. Deberás seleccionar un set de datos y aplicar un proceso de limpieza de los datos, así como documentar las variables utilizando el paquete pointblank para aplicar validaciones. Desarrollarás un informe completo que incluirá la lectura de datos, su limpieza, transformación. Presentarás y discutirás tus resultados, demostrando así tus habilidades y conocimientos.\n\n\n\n¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n\n¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟"
+  },
+  {
+    "objectID": "courses/manipulacion_datos_R.html#inscríbete-ahora",
+    "href": "courses/manipulacion_datos_R.html#inscríbete-ahora",
+    "title": "Manipulación de datos con R",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/manipulacion_datos_R.html#conoce-al-instructor",
+    "href": "courses/manipulacion_datos_R.html#conoce-al-instructor",
+    "title": "Manipulación de datos con R",
+    "section": "Conoce al instructor",
+    "text": "Conoce al instructor\nHola 👋🏼, soy Carlos Aguero. Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.\nFormo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. Recientemente, tuve el gusto de unirme a los instructores de la organización Software Carpentry 🚀.\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.\n\n¿Tienes dudas? Hablemos sin compromiso 😊\nSi tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes.\nMi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: https://cal.com/aprendetidyverse/reuniones-1h."
+  },
+  {
+    "objectID": "courses/manipulacion_datos_R.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "href": "courses/manipulacion_datos_R.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "title": "Manipulación de datos con R",
+    "section": "Conoce lo que dicen nuestros estudiantes",
+    "text": "Conoce lo que dicen nuestros estudiantes\n\n\n\n\n\n\nNo esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash"
+  },
+  {
+    "objectID": "courses/manipulacion_datos_R.html#inscríbete-ahora-1",
+    "href": "courses/manipulacion_datos_R.html#inscríbete-ahora-1",
+    "title": "Manipulación de datos con R",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/manipulacion_datos_R.html#ponte-en-contacto",
+    "href": "courses/manipulacion_datos_R.html#ponte-en-contacto",
+    "title": "Manipulación de datos con R",
+    "section": "Ponte en contacto",
+    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "courses/manipulacion_datos_R.html#prerrequisitos-del-curso",
+    "href": "courses/manipulacion_datos_R.html#prerrequisitos-del-curso",
+    "title": "Manipulación de datos con R",
+    "section": "⚠️ Prerrequisitos del Curso",
+    "text": "⚠️ Prerrequisitos del Curso\nPara poder desenvolverte en el curso sin problemas, es importante cumplir con los siguientes requisitos. Si tienes dudas, escríbenos o considera optar por alguno de nuestros cursos anteriores, como Fundamentos de R y RStudio o Visualización de datos con R.\n\nConocimientos sólidos sobre el uso de la herramienta RStudio.\nConocimientos básicos sobre la lectura y manipulación de datos con el paquete dplyr.\nCapacidad de filtrar datos a partir de operaciones lógicas.\nHabilidad para crear nuevas variables.\nCapacidad para instalar paquetes en R.\nExperiencia en la creación de reportes con rmarkdown o Quarto.\nConocimientos básicos en la creación de gráficos en R."
+  },
+  {
+    "objectID": "courses/documentos_con_quarto.html",
+    "href": "courses/documentos_con_quarto.html",
+    "title": "Desarrollo de reportes y documentos en R",
+    "section": "",
+    "text": "Foto de Markus Spiske en Unsplash\nEste programa de 6 semanas te llevará de ser un principiante absoluto a un usuario competente de Quarto, la moderna herramienta de publicación de documentos dinámicos. Aprenderás desde la sintaxis básica de Markdown y la creación de documentos simples hasta la generación de informes parametrizados, presentaciones atractivas y artículos académicos con gestión de bibliografía."
+  },
+  {
+    "objectID": "courses/documentos_con_quarto.html#en-este-curso-aprenderás-a",
+    "href": "courses/documentos_con_quarto.html#en-este-curso-aprenderás-a",
+    "title": "Desarrollo de reportes y documentos en R",
+    "section": "En este curso, aprenderás a:",
+    "text": "En este curso, aprenderás a:\n\n\nSemana 1: Introducción a Quarto y Sintaxis de Markdown\n\n\nDurante la primera semana, aprenderás qué es Quarto y cómo se diferencia de RMarkdown. Te familiarizarás con la instalación y configuración inicial de Quarto, y explorarás la comparación entre Quarto y RMarkdown. Además, aprenderás la estructura básica de un documento Markdown, incluyendo encabezados, listas, tablas, bloques de código y la inclusión de gráficos y visualizaciones. Para poner en práctica lo aprendido, crearás un documento básico en Quarto que incluya texto, listas, tablas y gráficos.\n\n\n\n\nSemana 2: Creación de Documentos Parametrizados\n\n\nEn la segunda semana, te adentrarás en la creación de documentos parametrizados en Quarto. Aprenderás qué son los documentos parametrizados, sus casos de uso y beneficios. Descubrirás cómo definir parámetros en YAML, usar estos parámetros en el contenido del documento y renderizar documentos con diferentes parámetros. Como ejercicio, crearás un documento parametrizado que tome diferentes valores de entrada y genere salidas personalizadas.\n\n\n\n\nSemana 3: Creación de Presentaciones con Quarto\n\n\nDurante la tercera semana, aprenderás a crear presentaciones interactivas y profesionales con Quarto. Explorarás los tipos de presentaciones soportadas (HTML, PDF, etc.) y la estructura básica de una presentación. Además, aprenderás a personalizar presentaciones mediante diapositivas, transiciones, temas, gráficos, tablas, multimedia, código interactivo y widgets. Como ejercicio, crearás una presentación completa sobre un tema de interés, utilizando diferentes elementos multimedia e interactivos.\n\n\n\n\nSemana 4: Creación de Artículos y Gestión de Fuentes Bibliográficas\n\n\nEn la cuarta semana, aprenderás a crear artículos académicos y gestionar fuentes bibliográficas en Quarto. Descubrirás la estructura de un artículo académico, el formato de citas y referencias, y cómo usar BibTeX y otros formatos de bibliografía. Además, aprenderás a integrar gestores de referencias como Zotero y Mendeley, y a generar bibliografías automáticamente. Para poner en práctica lo aprendido, escribirás un artículo académico completo con citas y referencias, utilizando un gestor de bibliografía.\n\n\n\n\nSemana 5: Extensiones para Quarto y Publicación en QuartoPub\n\n\nDurante la quinta semana, aprenderás sobre las extensiones disponibles para Quarto que pueden mejorar tus documentos y presentaciones. Además, te enfocarás en cómo publicar tus documentos en QuartoPub. Aprenderás a configurar y desplegar tus documentos en esta plataforma, explorando las mejores prácticas para la publicación en línea. Como ejercicio, publicarás un documento en QuartoPub utilizando las extensiones aprendidas.\n\n\n\n\nSemana 6: Proyecto Final y Mejores Prácticas\n\n\nLa última semana está dedicada al proyecto final, donde aplicarás todo lo aprendido a lo largo del curso. Desarrollarás un proyecto completo que incluya un documento parametrizado, una presentación y un artículo académico, aplicando las mejores prácticas en la creación de documentos con Quarto. Aprenderás sobre la organización y estructura del código, la documentación y comentarios, y la optimización y rendimiento de tus proyectos. Finalmente, presentarás y discutirás tus resultados, demostrando tus habilidades y conocimientos adquiridos.\n\n\n\n¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 18 de febrero de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n\n¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟"
+  },
+  {
+    "objectID": "courses/documentos_con_quarto.html#inscríbete-ahora",
+    "href": "courses/documentos_con_quarto.html#inscríbete-ahora",
+    "title": "Desarrollo de reportes y documentos en R",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 18 de febrero de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/documentos_con_quarto.html#conoce-al-instructor",
+    "href": "courses/documentos_con_quarto.html#conoce-al-instructor",
+    "title": "Desarrollo de reportes y documentos en R",
+    "section": "Conoce al instructor",
+    "text": "Conoce al instructor\nHola 👋🏼, soy Carlos Aguero. Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.\nFormo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. Recientemente, tuve el gusto de unirme a los instructores de la organización Software Carpentry 🚀.\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.\n\n¿Tienes dudas? Hablemos sin compromiso 😊\nSi tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes.\nMi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: https://cal.com/aprendetidyverse/reuniones-1h."
+  },
+  {
+    "objectID": "courses/documentos_con_quarto.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "href": "courses/documentos_con_quarto.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "title": "Desarrollo de reportes y documentos en R",
+    "section": "Conoce lo que dicen nuestros estudiantes",
+    "text": "Conoce lo que dicen nuestros estudiantes\n\n\n\n\n\n\nNo esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 18 de febrero de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash"
+  },
+  {
+    "objectID": "courses/documentos_con_quarto.html#inscríbete-ahora-1",
+    "href": "courses/documentos_con_quarto.html#inscríbete-ahora-1",
+    "title": "Desarrollo de reportes y documentos en R",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 18 de febrero de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/documentos_con_quarto.html#ponte-en-contacto",
+    "href": "courses/documentos_con_quarto.html#ponte-en-contacto",
+    "title": "Desarrollo de reportes y documentos en R",
+    "section": "Ponte en contacto",
+    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "courses/limpieza_importacion.html",
+    "href": "courses/limpieza_importacion.html",
+    "title": "Limpieza e inportación de datos con R",
+    "section": "",
+    "text": "Foto de Claudio Schwarz en Unsplash\nEste curso de 6 semanas está diseñado para enseñarte cómo manipular y preparar datos de manera eficiente utilizando R y el ecosistema tidyverse. Aprenderás a importar, limpiar, transformar y resumir datos con herramientas como dplyr, tidyr y purrr. Cada semana se enfoca en diferentes aspectos de la manipulación de datos, asegurando una comprensión profunda y práctica."
+  },
+  {
+    "objectID": "courses/limpieza_importacion.html#en-este-curso-aprenderás-a",
+    "href": "courses/limpieza_importacion.html#en-este-curso-aprenderás-a",
+    "title": "Limpieza e inportación de datos con R",
+    "section": "En este curso, aprenderás a:",
+    "text": "En este curso, aprenderás a:\n\n\nSemana 1: Introducción a Tidyverse y Manipulación de Datos Básicos\n\n\nDurante la primera semana, haremos un repaso completo de las operaciones básicas del paquete dplyr y conversaremos sobre la importancia de documentar correctamente nuestros sets de datos, así como de crear procesos de validación de la información con herramientas como el paquete pointblank de RStudio. Esto incluye la importación de datos desde archivos CSV, Excel y SPSS usando readr, readxl y haven, así como la exploración básica de datos y operaciones básicas con dplyr como select(), filter(), mutate(), arrange() y summarise(). También practicarás cargando y explorando un dataset en CSV y realizando operaciones básicas de manipulación y limpieza.\n\n\n\n\nSemana 2: Filtrados Avanzados y Operaciones Lógicas Complejas\n\n\nEn la segunda semana, aprenderás a realizar filtrados avanzados y a utilizar operaciones lógicas complejas en la manipulación de datos. Esto incluye el uso avanzado de filter(), operadores lógicos como &, | y !, y funciones condicionales como if_else() y case_when(). Además, aprenderás a usar operaciones como when_math(), any_of(), all_of(), where() y str_detect(). Practicarás filtrando datos con múltiples condiciones y creando nuevas variables basadas en condiciones lógicas.\n\n\n\n\nSemana 3: Resúmenes y Datos Agrupados\n\n\nDurante la tercera semana, te centrarás en la creación de resúmenes y estadísticas descriptivas, así como en el trabajo con datos agrupados. Aprenderás a utilizar funciones de resumen como summarise(), n(), mean(), median(), sd(), min() y max(). También trabajarás con la agrupación de datos usando group_by() y combinarás group_by() con summarise() para obtener estadísticas por grupo. Además, aprenderás a aplicar funciones a múltiples columnas usando across() y where(), y el uso de .by como sustituto de group_by(). Practicarás creando resúmenes de datos y agrupando datos para calcular estadísticas descriptivas por grupo.\n\n\n\n\nSemana 4: Transformación de Datos con tidyr\n\n\nEn la cuarta semana, te enfocarás en la reestructuración de datos utilizando tidyr y en la aplicación de funciones de transformación avanzadas. Aprenderás a usar pivot_longer() y pivot_wider() para transformar datos y manejar valores faltantes con replace_na() y fill(). Además, veremos los conceptos de tidy data y cómo aplicar estos principios en tus proyectos. Practicarás transformando datasets para cumplir con los principios de tidy data y aplicando transformaciones avanzadas a múltiples columnas.\n\n\n\n\nSemana 5: Combinación de Datos con Joins\n\n\nDurante la quinta semana, aprenderás a combinar datasets con diferentes tipos de joins. Esto incluye inner_join(), left_join(), right_join() y full_join(). También aprenderás a usar semi_join() y anti_join() para filtrar datasets y manejar claves duplicadas. Además, veremos el concepto de relaciones, llaves primarias y foráneas, y cómo unir datos de diferentes fuentes de forma efectiva. Practicarás combinando datasets utilizando diferentes tipos de joins y creando un conjunto de datos completo a partir de tablas separadas.\n\n\n\n\nSemana 6: Proyecto Final\n\n\nLa última semana está dedicada al proyecto final, donde aplicarás todos los conocimientos adquiridos a lo largo del curso. Deberás seleccionar un set de datos y aplicar un proceso de limpieza de los datos, así como documentar las variables utilizando el paquete pointblank para aplicar validaciones. Desarrollarás un informe completo que incluirá la lectura de datos, su limpieza, transformación. Presentarás y discutirás tus resultados, demostrando así tus habilidades y conocimientos.\n\n\n\n¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n\n¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟"
+  },
+  {
+    "objectID": "courses/limpieza_importacion.html#inscríbete-ahora",
+    "href": "courses/limpieza_importacion.html#inscríbete-ahora",
+    "title": "Limpieza e inportación de datos con R",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/limpieza_importacion.html#conoce-al-instructor",
+    "href": "courses/limpieza_importacion.html#conoce-al-instructor",
+    "title": "Limpieza e inportación de datos con R",
+    "section": "Conoce al instructor",
+    "text": "Conoce al instructor\nHola 👋🏼, soy Carlos Aguero. Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.\nFormo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. Recientemente, tuve el gusto de unirme a los instructores de la organización Software Carpentry 🚀.\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.\n\n¿Tienes dudas? Hablemos sin compromiso 😊\nSi tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes.\nMi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: https://cal.com/aprendetidyverse/reuniones-1h."
+  },
+  {
+    "objectID": "courses/limpieza_importacion.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "href": "courses/limpieza_importacion.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "title": "Limpieza e inportación de datos con R",
+    "section": "Conoce lo que dicen nuestros estudiantes",
+    "text": "Conoce lo que dicen nuestros estudiantes\n\n\n\n\n\n\nNo esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash"
+  },
+  {
+    "objectID": "courses/limpieza_importacion.html#inscríbete-ahora-1",
+    "href": "courses/limpieza_importacion.html#inscríbete-ahora-1",
+    "title": "Limpieza e inportación de datos con R",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/limpieza_importacion.html#ponte-en-contacto",
+    "href": "courses/limpieza_importacion.html#ponte-en-contacto",
+    "title": "Limpieza e inportación de datos con R",
+    "section": "Ponte en contacto",
+    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "courses/introduccion_sql.html",
+    "href": "courses/introduccion_sql.html",
+    "title": "Introducción a SQL",
+    "section": "",
+    "text": "Foto de Claudio Schwarz en Unsplash\nEste curso de 6 semanas está diseñado para enseñarte cómo manipular y preparar datos de manera eficiente utilizando R y el ecosistema tidyverse. Aprenderás a importar, limpiar, transformar y resumir datos con herramientas como dplyr, tidyr y purrr. Cada semana se enfoca en diferentes aspectos de la manipulación de datos, asegurando una comprensión profunda y práctica."
+  },
+  {
+    "objectID": "courses/introduccion_sql.html#en-este-curso-aprenderás-a",
+    "href": "courses/introduccion_sql.html#en-este-curso-aprenderás-a",
+    "title": "Introducción a SQL",
+    "section": "En este curso, aprenderás a:",
+    "text": "En este curso, aprenderás a:\n\n\nSemana 1: Introducción a Tidyverse y Manipulación de Datos Básicos\n\n\nDurante la primera semana, haremos un repaso completo de las operaciones básicas del paquete dplyr y conversaremos sobre la importancia de documentar correctamente nuestros sets de datos, así como de crear procesos de validación de la información con herramientas como el paquete pointblank de RStudio. Esto incluye la importación de datos desde archivos CSV, Excel y SPSS usando readr, readxl y haven, así como la exploración básica de datos y operaciones básicas con dplyr como select(), filter(), mutate(), arrange() y summarise(). También practicarás cargando y explorando un dataset en CSV y realizando operaciones básicas de manipulación y limpieza.\n\n\n\n\nSemana 2: Filtrados Avanzados y Operaciones Lógicas Complejas\n\n\nEn la segunda semana, aprenderás a realizar filtrados avanzados y a utilizar operaciones lógicas complejas en la manipulación de datos. Esto incluye el uso avanzado de filter(), operadores lógicos como &, | y !, y funciones condicionales como if_else() y case_when(). Además, aprenderás a usar operaciones como when_math(), any_of(), all_of(), where() y str_detect(). Practicarás filtrando datos con múltiples condiciones y creando nuevas variables basadas en condiciones lógicas.\n\n\n\n\nSemana 3: Resúmenes y Datos Agrupados\n\n\nDurante la tercera semana, te centrarás en la creación de resúmenes y estadísticas descriptivas, así como en el trabajo con datos agrupados. Aprenderás a utilizar funciones de resumen como summarise(), n(), mean(), median(), sd(), min() y max(). También trabajarás con la agrupación de datos usando group_by() y combinarás group_by() con summarise() para obtener estadísticas por grupo. Además, aprenderás a aplicar funciones a múltiples columnas usando across() y where(), y el uso de .by como sustituto de group_by(). Practicarás creando resúmenes de datos y agrupando datos para calcular estadísticas descriptivas por grupo.\n\n\n\n\nSemana 4: Transformación de Datos con tidyr\n\n\nEn la cuarta semana, te enfocarás en la reestructuración de datos utilizando tidyr y en la aplicación de funciones de transformación avanzadas. Aprenderás a usar pivot_longer() y pivot_wider() para transformar datos y manejar valores faltantes con replace_na() y fill(). Además, veremos los conceptos de tidy data y cómo aplicar estos principios en tus proyectos. Practicarás transformando datasets para cumplir con los principios de tidy data y aplicando transformaciones avanzadas a múltiples columnas.\n\n\n\n\nSemana 5: Combinación de Datos con Joins\n\n\nDurante la quinta semana, aprenderás a combinar datasets con diferentes tipos de joins. Esto incluye inner_join(), left_join(), right_join() y full_join(). También aprenderás a usar semi_join() y anti_join() para filtrar datasets y manejar claves duplicadas. Además, veremos el concepto de relaciones, llaves primarias y foráneas, y cómo unir datos de diferentes fuentes de forma efectiva. Practicarás combinando datasets utilizando diferentes tipos de joins y creando un conjunto de datos completo a partir de tablas separadas.\n\n\n\n\nSemana 6: Proyecto Final\n\n\nLa última semana está dedicada al proyecto final, donde aplicarás todos los conocimientos adquiridos a lo largo del curso. Deberás seleccionar un set de datos y aplicar un proceso de limpieza de los datos, así como documentar las variables utilizando el paquete pointblank para aplicar validaciones. Desarrollarás un informe completo que incluirá la lectura de datos, su limpieza, transformación. Presentarás y discutirás tus resultados, demostrando así tus habilidades y conocimientos.\n\n\n\n¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n\n¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟"
+  },
+  {
+    "objectID": "courses/introduccion_sql.html#inscríbete-ahora",
+    "href": "courses/introduccion_sql.html#inscríbete-ahora",
+    "title": "Introducción a SQL",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/introduccion_sql.html#conoce-al-instructor",
+    "href": "courses/introduccion_sql.html#conoce-al-instructor",
+    "title": "Introducción a SQL",
+    "section": "Conoce al instructor",
+    "text": "Conoce al instructor\nHola 👋🏼, soy Carlos Aguero. Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.\nFormo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. Recientemente, tuve el gusto de unirme a los instructores de la organización Software Carpentry 🚀.\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.\n\n¿Tienes dudas? Hablemos sin compromiso 😊\nSi tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes.\nMi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: https://cal.com/aprendetidyverse/reuniones-1h."
+  },
+  {
+    "objectID": "courses/introduccion_sql.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "href": "courses/introduccion_sql.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "title": "Introducción a SQL",
+    "section": "Conoce lo que dicen nuestros estudiantes",
+    "text": "Conoce lo que dicen nuestros estudiantes\n\n\n\n\n\n\nNo esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash"
+  },
+  {
+    "objectID": "courses/introduccion_sql.html#inscríbete-ahora-1",
+    "href": "courses/introduccion_sql.html#inscríbete-ahora-1",
+    "title": "Introducción a SQL",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/introduccion_sql.html#ponte-en-contacto",
+    "href": "courses/introduccion_sql.html#ponte-en-contacto",
+    "title": "Introducción a SQL",
+    "section": "Ponte en contacto",
+    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
+  },
+  {
+    "objectID": "courses/desarrollo_proyectos_R.html",
+    "href": "courses/desarrollo_proyectos_R.html",
+    "title": "Desarrollo de proyeto con R y RStudio",
+    "section": "",
+    "text": "Foto de Claudio Schwarz en Unsplash\nEste curso de 6 semanas está diseñado para enseñarte cómo manipular y preparar datos de manera eficiente utilizando R y el ecosistema tidyverse. Aprenderás a importar, limpiar, transformar y resumir datos con herramientas como dplyr, tidyr y purrr. Cada semana se enfoca en diferentes aspectos de la manipulación de datos, asegurando una comprensión profunda y práctica."
+  },
+  {
+    "objectID": "courses/desarrollo_proyectos_R.html#en-este-curso-aprenderás-a",
+    "href": "courses/desarrollo_proyectos_R.html#en-este-curso-aprenderás-a",
+    "title": "Desarrollo de proyeto con R y RStudio",
+    "section": "En este curso, aprenderás a:",
+    "text": "En este curso, aprenderás a:\n\n\nSemana 1: Introducción a Tidyverse y Manipulación de Datos Básicos\n\n\nDurante la primera semana, haremos un repaso completo de las operaciones básicas del paquete dplyr y conversaremos sobre la importancia de documentar correctamente nuestros sets de datos, así como de crear procesos de validación de la información con herramientas como el paquete pointblank de RStudio. Esto incluye la importación de datos desde archivos CSV, Excel y SPSS usando readr, readxl y haven, así como la exploración básica de datos y operaciones básicas con dplyr como select(), filter(), mutate(), arrange() y summarise(). También practicarás cargando y explorando un dataset en CSV y realizando operaciones básicas de manipulación y limpieza.\n\n\n\n\nSemana 2: Filtrados Avanzados y Operaciones Lógicas Complejas\n\n\nEn la segunda semana, aprenderás a realizar filtrados avanzados y a utilizar operaciones lógicas complejas en la manipulación de datos. Esto incluye el uso avanzado de filter(), operadores lógicos como &, | y !, y funciones condicionales como if_else() y case_when(). Además, aprenderás a usar operaciones como when_math(), any_of(), all_of(), where() y str_detect(). Practicarás filtrando datos con múltiples condiciones y creando nuevas variables basadas en condiciones lógicas.\n\n\n\n\nSemana 3: Resúmenes y Datos Agrupados\n\n\nDurante la tercera semana, te centrarás en la creación de resúmenes y estadísticas descriptivas, así como en el trabajo con datos agrupados. Aprenderás a utilizar funciones de resumen como summarise(), n(), mean(), median(), sd(), min() y max(). También trabajarás con la agrupación de datos usando group_by() y combinarás group_by() con summarise() para obtener estadísticas por grupo. Además, aprenderás a aplicar funciones a múltiples columnas usando across() y where(), y el uso de .by como sustituto de group_by(). Practicarás creando resúmenes de datos y agrupando datos para calcular estadísticas descriptivas por grupo.\n\n\n\n\nSemana 4: Transformación de Datos con tidyr\n\n\nEn la cuarta semana, te enfocarás en la reestructuración de datos utilizando tidyr y en la aplicación de funciones de transformación avanzadas. Aprenderás a usar pivot_longer() y pivot_wider() para transformar datos y manejar valores faltantes con replace_na() y fill(). Además, veremos los conceptos de tidy data y cómo aplicar estos principios en tus proyectos. Practicarás transformando datasets para cumplir con los principios de tidy data y aplicando transformaciones avanzadas a múltiples columnas.\n\n\n\n\nSemana 5: Combinación de Datos con Joins\n\n\nDurante la quinta semana, aprenderás a combinar datasets con diferentes tipos de joins. Esto incluye inner_join(), left_join(), right_join() y full_join(). También aprenderás a usar semi_join() y anti_join() para filtrar datasets y manejar claves duplicadas. Además, veremos el concepto de relaciones, llaves primarias y foráneas, y cómo unir datos de diferentes fuentes de forma efectiva. Practicarás combinando datasets utilizando diferentes tipos de joins y creando un conjunto de datos completo a partir de tablas separadas.\n\n\n\n\nSemana 6: Proyecto Final\n\n\nLa última semana está dedicada al proyecto final, donde aplicarás todos los conocimientos adquiridos a lo largo del curso. Deberás seleccionar un set de datos y aplicar un proceso de limpieza de los datos, así como documentar las variables utilizando el paquete pointblank para aplicar validaciones. Desarrollarás un informe completo que incluirá la lectura de datos, su limpieza, transformación. Presentarás y discutirás tus resultados, demostrando así tus habilidades y conocimientos.\n\n\n\n¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n\n¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟"
+  },
+  {
+    "objectID": "courses/desarrollo_proyectos_R.html#inscríbete-ahora",
+    "href": "courses/desarrollo_proyectos_R.html#inscríbete-ahora",
+    "title": "Desarrollo de proyeto con R y RStudio",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/desarrollo_proyectos_R.html#conoce-al-instructor",
+    "href": "courses/desarrollo_proyectos_R.html#conoce-al-instructor",
+    "title": "Desarrollo de proyeto con R y RStudio",
+    "section": "Conoce al instructor",
+    "text": "Conoce al instructor\nHola 👋🏼, soy Carlos Aguero. Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.\nFormo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. Recientemente, tuve el gusto de unirme a los instructores de la organización Software Carpentry 🚀.\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.\n\n¿Tienes dudas? Hablemos sin compromiso 😊\nSi tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes.\nMi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: https://cal.com/aprendetidyverse/reuniones-1h."
+  },
+  {
+    "objectID": "courses/desarrollo_proyectos_R.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "href": "courses/desarrollo_proyectos_R.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "title": "Desarrollo de proyeto con R y RStudio",
+    "section": "Conoce lo que dicen nuestros estudiantes",
+    "text": "Conoce lo que dicen nuestros estudiantes\n\n\n\n\n\n\nNo esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash"
+  },
+  {
+    "objectID": "courses/desarrollo_proyectos_R.html#inscríbete-ahora-1",
+    "href": "courses/desarrollo_proyectos_R.html#inscríbete-ahora-1",
+    "title": "Desarrollo de proyeto con R y RStudio",
+    "section": "Inscríbete Ahora",
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 15 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+  },
+  {
+    "objectID": "courses/desarrollo_proyectos_R.html#ponte-en-contacto",
+    "href": "courses/desarrollo_proyectos_R.html#ponte-en-contacto",
+    "title": "Desarrollo de proyeto con R y RStudio",
+    "section": "Ponte en contacto",
+    "text": "Ponte en contacto\nLa comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.\nPara charlar o preguntar, escríbeme a carlos.aguero@aprendetidyverse.com. También puedes encontrarme en LinkedIn o en Twitter (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!"
   }
 ]
