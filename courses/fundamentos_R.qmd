@@ -9,11 +9,12 @@ pagetitle: "Fundamentos de R y Rstudio"
 image: ../images/community3_og.jpg
 ---
 
+
 ![Foto de <a href="https://unsplash.com/es/@cwmonty?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Montgomery</a> en <a href="https://unsplash.com/es/fotos/macbook-pro-displaying-group-of-people-smgTvepind4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/community3_og.jpg)
 
 ¿Te imaginas pasar de no tener conocimientos de R a poder crear tus primeros reportes, con gráficos, leyendo datos desde CSV y Excel para poder contestar las preguntas del negocio en tan solo 6 semanas? Yo también estuve en tu lugar, sin experiencia y con muchas dudas. Con el tiempo y la guía adecuada, logré aprender R y mejorar mis habilidades. Ahora, quiero compartir este conocimiento contigo.
 
-Muchos comienzan a aprender R, pero la frustración y la falta de apoyo los lleva a abandonar. <mark>Nuestro curso está diseñado para superar estos obstáculos, ofreciéndote una base sólida y el soporte necesario para que sigas adelante.</mark>
+Muchos comienzan a aprender R, pero la frustración y la falta de apoyo los lleva a abandonar. <mark>**Nuestro curso está diseñado para superar estos obstáculos, ofreciéndote una base sólida y el soporte necesario para que sigas adelante.**</mark>
 
 Con nuestro curso de **6 semanas**, no solo aprenderás los fundamentos de R, sino que también recibirás soporte personalizado para asegurarte de que comprendas cada concepto y puedas aplicarlo en situaciones reales.
 
@@ -51,6 +52,9 @@ Con nuestro curso de **6 semanas**, no solo aprenderás los fundamentos de R, si
 
 Al finalizar el curso, serás capaz de importar y manipular datos, crear visualizaciones y generar informes usando las herramientas que te ofrece el lenguaje R y RStudio. Estarás listo para aplicar estos conocimientos en tu trabajo o proyectos personales.
 
+
+
+    
 :::: {.columns}
 ¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.
 
@@ -76,22 +80,26 @@ Al finalizar el curso, serás capaz de importar y manipular datos, crear visuali
 :::
 ::::
 
-> ¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟
+> ¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en **info@aprendetidyverse.com**. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟
 
-  
 ## Conoce al instructor
 
-Hola 👋🏼, soy [Carlos Aguero](https://www.linkedin.com/in/carlos-aguero-cr). Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.
+<div style="display: flex; align-items: flex-start; margin: 20px 0;">
+<div style="width: 25%; display: flex; justify-content: center; align-items: center; padding: 10px;">
+<img src="me.png" alt="Foto de perfil" style="width: 100%; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+</div>
+<div style="width: 75%; padding: 10px;">
+<h2 style="margin: 0;">👋 Hola, soy <a href="www.linkedin.com/in/carlos-aguero-cr" style="text-decoration: none; color: #0073e6;">Carlos Agüero</a></h2>
+<p style="margin: 10px 0 0 0;">Desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R.</p>
+<p style="margin: 10px 0 0 0;">📚 Formo parte del listado de <a href="https://education.rstudio.com/trainers/" style="text-decoration: none; color: #0073e6;">**instructores certificados por RStudio**</a>, enfocándome en <strong>Tidyverse</strong> y <strong>Shiny</strong>. En diciembre de 2023, tuve el gusto de unirme a los instructores de la organización <a href="https://www.software-carpentry.org" style="text-decoration: none; color: #0073e6;">**The Software Carpentry**</a>.</p>
+</div>
+</div>
+    
+A lo largo de los años, he tenido el privilegio de ayudar a **más de 400 estudiantes en toda América Latina** a descubrir el potencial del análisis de datos con R.
 
-Formo parte del listado de [instructores certificados por RStudio](https://education.rstudio.com/trainers/), enfocándome en **Tidyverse** y **Shiny**. Recientemente, tuve el gusto de unirme a los instructores de la organización [Software Carpentry](https://www.software-carpentry.org) 🚀.
+<h2 style="margin: 0; color: #0073e6; ">¿Tienes dudas? 🤔</h2>
 
-A lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.
-
-### ¿Tienes dudas? Hablemos sin compromiso 😊
-
-Si tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes. 
-
-Mi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: [https://cal.com/aprendetidyverse/reuniones-1h](https://cal.com/aprendetidyverse/reuniones-1h).
+Si tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso <a href="https://cal.com/aprendetidyverse/reuniones-1h" style="text-decoration: none; color: #EE4E4E;">**Agender una reunión de zoom**</a>.
 
 ---
 
@@ -112,6 +120,7 @@ Mi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encon
 
 :::: {.columns}
 No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.
+
 
 ::: {.column width="45%"}
 ## Inscríbete Ahora
