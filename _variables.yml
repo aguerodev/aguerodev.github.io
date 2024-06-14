@@ -38,6 +38,7 @@ curso_shiny:
   precio: "$99 USD"
   url_pago: "https://tally.so/r/mYQb4N?curso=Desarrollo%20de%20aplicaciones%20con%20shiny&precio=%2499%20USD&fecha_inicio=miércoles%203%20de%20julio%20de%202024&precio_cr=50,000%20colones"
   
-  
-  
+curso_fundamentos:
+  fecha: "lunes 5 de agosto de 2024"
+  url_pago: "https://tally.so/r/mYQb4N?curso=Fundamentos%20de%20R%20y%20RStudio&precio=%24200%20USD&fecha_inicio=martes%201%20de%20octubre%20de%202024&id=curso_fundamentos_R&precio_cr=103,400%20colones"
   

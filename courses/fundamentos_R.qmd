@@ -56,7 +56,7 @@ Al finalizar el curso, serás capaz de importar y manipular datos, crear visuali
 
 ::: {.column width="45%"}
 ## Inscríbete Ahora
-+ Inicio de lecciones: **martes 1 de octubre**
++ Inicio de lecciones: **{{< var curso_fundamentos.fecha >}}**
 + Clases en vivo
 + Grabaciones de las clases
 + Sesiones de seguimiento personalizadas
@@ -65,7 +65,7 @@ Al finalizar el curso, serás capaz de importar y manipular datos, crear visuali
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Fundamentos%20de%20R%20y%20RStudio&precio=%24200%20USD&fecha_inicio=martes%201%20de%20octubre%20de%202024&id=curso_fundamentos_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora]({{< var curso_fundamentos.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -116,7 +116,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 ::: {.column width="45%"}
 ## Inscríbete Ahora
 
-+ Inicio de lecciones: martes 1 de octubre
++ Inicio de lecciones: **{{< var curso_fundamentos.fecha >}}**
 + Clases en vivo
 + Grabaciones de las clases
 + Sesiones de seguimiento personalizadas
@@ -125,7 +125,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Fundamentos%20de%20R%20y%20RStudio&precio=%24200%20USD&fecha_inicio=martes%201%20de%20octubre%20de%202024&id=curso_fundamentos_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora]({{< var curso_fundamentos.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
