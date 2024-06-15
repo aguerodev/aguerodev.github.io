@@ -27,8 +27,8 @@ Aprender a analizar datos con R es todo un desafío, pero con la asistencia corr
 ### Comienza hoy tu camino en el mundo de la Ciencia de Datos 🚀
 
 ::: hero-buttons
-[¡Inicia hoy!](courses/fundamentos_R.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"} 
-[Conversemos](https://cal.com/aprendetidyverse/sesiones-1-1-con-el-instructor){.btn .btn-lg role="button"}
+<a href="https://aprendetidyverse.com/courses/fundamentos_R.html" style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora</a>
+<a href="https://cal.com/aprendetidyverse/sesiones-1-1-con-el-instructor" style="background-color: transparent; color: grey; padding: 10px 20px; border: 2px solid grey; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: color 0.3s ease;">Conversemos</a>
 :::
 :::
 
@@ -46,89 +46,54 @@ Aprender a analizar datos con R es todo un desafío, pero con la asistencia corr
 ¡Empieza desde cero y lánzate a la aventura! Aprende R y RStudio, y comienza a realizar tus primeros análisis con pasos firmes y una base sólida. 🚀
 
 
+
 ::: features
 
-::: feature
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+<div style="background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; width: 100%; max-width: 350px;">
+<h3 style="color: #333;">Fundamentos de R y RStudio</h3>
+<p>¡Empieza desde cero y lánzate a la aventura! Aprende R y RStudio, y comienza a realizar tus primeros análisis con pasos firmes y una base sólida. 🚀</p>
+<a href="https://aprendetidyverse.com/courses/fundamentos_R.html" style="color: #FF5F00; text-decoration: none; font-weight: bold;">Leer más »</a>
+</div>
+<div style="background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; width: 100%; max-width: 350px;">
+<h3 style="color: #333;">Visualización de datos con R</h3>
+<p>¡Haz que tus datos hablen! Crea visualizaciones impactantes que comuniquen tus hallazgos de manera efectiva y sorprendente. 🌟</p>
+<a href="https://aprendetidyverse.com/courses/visualizacion_datos_R.html" style="color: #FF5F00; text-decoration: none; font-weight: bold;">Leer más »</a>
+</div>
+<div style="background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; width: 100%; max-width: 350px;">
+<h3 style="color: #333;">Desarrollo de documentos con Quarto</h3>
+<p>¡Presenta con poder y estilo! Desarrolla documentos, presentaciones, sitios web y mapas interactivos para mostrar tus resultados de manera efectiva y atractiva. 📊</p>
+<a href="https://aprendetidyverse.com/courses/documentos_con_quarto.html" style="color: #FF5F00; text-decoration: none; font-weight: bold;">Leer más »</a>
+</div>
+<div style="background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; width: 100%; max-width: 350px;">
+<h3 style="color: #333;">Manipulación de datos con R</h3>
+<p>¡Domina tus datos! Transforma y manipula datos de manera eficiente utilizando herramientas avanzadas para obtener resultados precisos y confiables. 🛠️</p>
+<a href="https://aprendetidyverse.com/courses/manipulacion_datos_R.html" style="color: #FF5F00; text-decoration: none; font-weight: bold;">Leer más »</a>
+</div>
+<div style="background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; width: 100%; max-width: 350px;">
+<h3 style="color: #333;">Limpieza e importación de datos</h3>
+<p>¡Haz que tus datos brillen! Aprende a manejar textos, fechas y factores con precisión y facilidad. ✨</p>
+<a href="https://aprendetidyverse.com/courses/limpieza_importacion.html" style="color: #FF5F00; text-decoration: none; font-weight: bold;">Leer más »</a>
+</div>
+<div style="background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; width: 100%; max-width: 350px;">
+<h3 style="color: #333;">Introducción a SQL</h3>
+<p>¡Duplica tu poder analítico! Integra SQL con R para potenciar tus análisis y gestionar bases de datos como un profesional. 🔗</p>
+<a href="https://aprendetidyverse.com/courses/introduccion_sql.html" style="color: #FF5F00; text-decoration: none; font-weight: bold;">Leer más »</a>
+</div>
+<div style="background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; width: 100%; max-width: 350px;">
+<h3 style="color: #333;">Web Scraping y Automatización</h3>
+<p>¡Consigue los datos que necesitas! Extrae datos de sitios web con técnicas de web scraping y automatiza tus procesos. 🕸️</p>
+<a href="https://aprendetidyverse.com/courses/web_scraping.html" style="color: #FF5F00; text-decoration: none; font-weight: bold;">Leer más »</a>
+</div>
+<div style="background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; width: 100%; max-width: 350px;">
+<h3 style="color: #333;">Organización y documentación de proyectos en RStudio</h3>
+<p>¡Organiza y triunfa! Aprende a organizar y gestionar proyectos de forma profesional con RStudio. 📁</p>
+<a href="https://aprendetidyverse.com/courses/desarrollo_proyectos_R.html" style="color: #FF5F00; text-decoration: none; font-weight: bold;">Leer más »</a>
+</div>
+</div>
 
-### Fundamentos de R y RStudio
-¡Empieza desde cero y lánzate a la aventura! Aprende R y RStudio, y comienza a realizar tus primeros análisis con pasos firmes y una base sólida. 🚀
-
-::: learn-more
-[Leer más »](https://aprendetidyverse.com/courses/fundamentos_R.html)
 :::
 :::
-
-::: feature
-
-### Visualización de datos con R
-¡Haz que tus datos hablen! Crea visualizaciones impactantes que comuniquen tus hallazgos de manera efectiva y sorprendente. 🌟
-
-::: learn-more
-[Leer más »](https://aprendetidyverse.com/courses/visualizacion_datos_R.html)
-:::
-:::
-
-::: feature
-### Desarrollo de documentos con Quarto
-¡Presenta con poder y estilo! Desarrolla documentos, presentaciones, sitios web y mapas interactivos para mostrar tus resultados de manera efectiva y atractiva. 📊
-
-::: learn-more
-[Leer más »](https://aprendetidyverse.com/courses/documentos_con_quarto.html)
-:::
-:::
-
-::: feature
-### Manipulación de datos con R
-¡Domina tus datos! Transforma y manipula datos de manera eficiente utilizando herramientas avanzadas para obtener resultados precisos y confiables. 🛠️
-
-::: learn-more
-[Leer más »](https://aprendetidyverse.com/courses/manipulacion_datos_R.html)
-:::
-:::
-
-::: feature
-### Limpieza e importación de datos
-¡Haz que tus datos brillen! Aprende a manejar textos, fechas y factores con precisión y facilidad. ✨
-
-
-::: learn-more
-[Leer más »](https://aprendetidyverse.com/courses/limpieza_importacion.html)
-:::
-:::
-
-::: feature
-### Introducción a SQL
-¡Duplica tu poder analítico! Integra SQL con R para potenciar tus análisis y gestionar bases de datos como un profesional. 🔗
-
-
-::: learn-more
-[Leer más »](https://aprendetidyverse.com/courses/introduccion_sql.html)
-:::
-:::
-
-::: feature
-### Web Scraping y Automatización
-¡Consigue los datos que necesitas! Extrae datos de sitios web con técnicas de web scraping y automatiza tus procesos. 🕸️
-
-
-::: learn-more
-[Leer más »](https://aprendetidyverse.com/courses/web_scraping.html)
-:::
-:::
-
-::: feature
-
-### Organización y documentación de proyectos en RStudio
-¡Organiza y triunfa! Aprende a organizar y gestionar proyectos de forma profesional con RStudio. 📁
-
-
-::: learn-more
-[Leer más »](https://aprendetidyverse.com/courses/desarrollo_proyectos_R.html)
-:::
-:::
-:::
-:::
-
 
 ::: content-block
 ## Conoce al instructor
@@ -138,40 +103,44 @@ Aprender a analizar datos con R es todo un desafío, pero con la asistencia corr
 <img src="me.png" alt="Foto de perfil" style="width: 100%; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
 </div>
 <div style="width: 75%; padding: 10px;">
-<h2 style="margin: 0;">👋 Hola, soy <a href="www.linkedin.com/in/carlos-aguero-cr" style="text-decoration: none; color: #0073e6;">Carlos Agüero</a></h2>
+<h2 style="margin: 0;">👋 Hola, soy <a href="https://www.linkedin.com/in/carlos-aguero-cr" style="text-decoration: none; color: #0073e6;">Carlos Agüero</a></h2>
 <p style="margin: 10px 0 0 0;">Desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R.</p>
 <p style="margin: 10px 0 0 0;">📚 Formo parte del listado de <a href="https://education.rstudio.com/trainers/" style="text-decoration: none; color: #0073e6;">**instructores certificados por RStudio**</a>, enfocándome en <strong>Tidyverse</strong> y <strong>Shiny</strong>. En diciembre de 2023, tuve el gusto de unirme a los instructores de la organización <a href="https://www.software-carpentry.org" style="text-decoration: none; color: #0073e6;">**The Software Carpentry**</a>.</p>
-<p>A lo largo de los años, he tenido el privilegio de ayudar a **más de 400 estudiantes en toda América Latina** a descubrir el potencial del análisis de datos con R.</p>
 </div>
 </div>
-    
+<style>
+@media (max-width: 768px) {
+div[style*="display: flex; align-items: flex-start; margin: 20px 0;"] {
+flex-direction: column;
+}
+div[style*="width: 25%; display: flex; justify-content: center; align-items: center; padding: 10px;"] {
+display: none;
+}
+div[style*="width: 75%; padding: 10px;"] {
+width: 100%;
+}
+}
+</style>
 
 
 <h2 style="margin: 0">¿Tienes dudas? 🤔</h2>
 
-¿No estás seguro si este curso es para ti? ¡No te preocupes! Agenda una reunión personalizada por Zoom conmigo y aclara todas tus inquietudes sin compromiso. ¡Reserva tu espacio ahora y toma una decisión informada! <a href="https://cal.com/aprendetidyverse/reuniones-1h" style="text-decoration: none; color: #EE4E4E;">**Agenda tu reunión aquí**</a>.
+¿No estás seguro si este curso es para ti? ¡No te preocupes! Agenda una reunión personalizada por Zoom conmigo y aclara todas tus inquietudes sin compromiso. ¡Reserva tu espacio ahora y toma una decisión informada! <a href="https://cal.com/aprendetidyverse/reuniones-1h" style="text-decoration: none; color: #FF5F00;">**Agenda tu reunión aquí**</a>.
 
 :::
 
 
 ::: content-block
----
+
 
 ## 🎓Descubre las experiencias de nuestros estudiantes👩🏻‍💻
 
 Nos comprometemos con nuestros estudiantes para ofrecer la mejor experiencia de aprendizaje posible. Este compromiso se refleja en sus comentarios. Conoce lo que dicen algunos de ellos:
 
-
-```{=html}
 <script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
-```
-<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=off&amp;hideSource&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
+<iframe id='testimonialto-r-para-ciencia-de-datos-tag-all-light' src="https://embed-v2.testimonial.to/w/r-para-ciencia-de-datos?theme=light&card=large&loadMore=on&initialCount=20&randomize=on&tag=all" frameborder="0" scrolling="no" width="100%"></iframe>
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-r-para-ciencia-de-datos-tag-all-light');</script>
 
-</iframe>
-
-```{=html}
-<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
-```
 ::: learn-more
 ## [Mira más comentarios en nuestro perfil de linkedin »](https://www.linkedin.com/in/carlos-aguero-cr/details/recommendations)
 :::

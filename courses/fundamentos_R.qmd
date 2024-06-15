@@ -52,24 +52,20 @@ Con nuestro curso de **6 semanas**, no solo aprenderás los fundamentos de R, si
 
 Al finalizar el curso, serás capaz de importar y manipular datos, crear visualizaciones y generar informes usando las herramientas que te ofrece el lenguaje R y RStudio. Estarás listo para aplicar estos conocimientos en tu trabajo o proyectos personales.
 
-
-
-    
 :::: {.columns}
 ¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.
 
 ::: {.column width="45%"}
 ## Inscríbete Ahora
 + Inicio de lecciones: **{{< var curso_fundamentos.fecha >}}**
-+ Clases en vivo
-+ Grabaciones de las clases
++ Clases 6 clases en vivo
 + Sesiones de seguimiento personalizadas
-+ Acceso a una comunidad de aprendizaje
++ Ejercicios prácticos y proyectos reales
 + Ayuda en minutos a través de Zoom o WhatsApp
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora]({{< var curso_fundamentos.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
+<a href='{{< var curso_fundamentos.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora</a>
 
 :::
 
@@ -80,7 +76,7 @@ Al finalizar el curso, serás capaz de importar y manipular datos, crear visuali
 :::
 ::::
 
-> ¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en **info@aprendetidyverse.com**. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟
+> ¡Hola! 👋 Si eres estudiante universitario, escríbenos a info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita. 🎓✨
 
 ## Conoce al instructor
 
@@ -89,11 +85,24 @@ Al finalizar el curso, serás capaz de importar y manipular datos, crear visuali
 <img src="me.png" alt="Foto de perfil" style="width: 100%; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
 </div>
 <div style="width: 75%; padding: 10px;">
-<h2 style="margin: 0;">👋 Hola, soy <a href="www.linkedin.com/in/carlos-aguero-cr" style="text-decoration: none; color: #0073e6;">Carlos Agüero</a></h2>
+<h2 style="margin: 0;">👋 Hola, soy <a href="https://www.linkedin.com/in/carlos-aguero-cr" style="text-decoration: none; color: #0073e6;">Carlos Agüero</a></h2>
 <p style="margin: 10px 0 0 0;">Desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R.</p>
 <p style="margin: 10px 0 0 0;">📚 Formo parte del listado de <a href="https://education.rstudio.com/trainers/" style="text-decoration: none; color: #0073e6;">**instructores certificados por RStudio**</a>, enfocándome en <strong>Tidyverse</strong> y <strong>Shiny</strong>. En diciembre de 2023, tuve el gusto de unirme a los instructores de la organización <a href="https://www.software-carpentry.org" style="text-decoration: none; color: #0073e6;">**The Software Carpentry**</a>.</p>
 </div>
 </div>
+<style>
+@media (max-width: 768px) {
+div[style*="display: flex; align-items: flex-start; margin: 20px 0;"] {
+flex-direction: column;
+}
+div[style*="width: 25%; display: flex; justify-content: center; align-items: center; padding: 10px;"] {
+display: none;
+}
+div[style*="width: 75%; padding: 10px;"] {
+width: 100%;
+}
+}
+</style>
     
 A lo largo de los años, he tenido el privilegio de ayudar a **más de 400 estudiantes en toda América Latina** a descubrir el potencial del análisis de datos con R.
 
@@ -101,20 +110,14 @@ A lo largo de los años, he tenido el privilegio de ayudar a **más de 400 estud
 
 Si tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso <a href="https://cal.com/aprendetidyverse/reuniones-1h" style="text-decoration: none; color: #EE4E4E;">**Agender una reunión de zoom**</a>.
 
----
 
-## Conoce lo que dicen nuestros estudiantes
+## 🎓 Conoce a nuestros estudiantes 👩🏻‍💻
 
-```{=html}
+Nos comprometemos con nuestros estudiantes para ofrecer la mejor experiencia de aprendizaje posible. Este compromiso se refleja en sus comentarios. Conoce lo que dicen algunos de ellos:
+
 <script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
-```
-<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=off&amp;hideSource&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
-
-</iframe>
-
-```{=html}
-<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
-```
+<iframe id='testimonialto-r-para-ciencia-de-datos-tag-all-light' src="https://embed-v2.testimonial.to/w/r-para-ciencia-de-datos?theme=light&card=base&loadMore=on&initialCount=20&randomize=on&tag=all" frameborder="0" scrolling="no" width="100%"></iframe>
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-r-para-ciencia-de-datos-tag-all-light');</script>
 
 ---
 
@@ -126,16 +129,14 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 ## Inscríbete Ahora
 
 + Inicio de lecciones: **{{< var curso_fundamentos.fecha >}}**
-+ Clases en vivo
-+ Grabaciones de las clases
++ Clases 6 clases en vivo
 + Sesiones de seguimiento personalizadas
-+ Acceso a una comunidad de aprendizaje
++ Ejercicios prácticos y proyectos reales
 + Ayuda en minutos a través de Zoom o WhatsApp
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora]({{< var curso_fundamentos.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
-
+<a href='{{< var curso_fundamentos.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora</a>
 :::
 
 ::: {.column width="50%"}
