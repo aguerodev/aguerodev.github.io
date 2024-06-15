@@ -429,3 +429,76 @@ font-weight: 700;
   font-size: 20px;
   color:#074173;
 } 
+.container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.image-container {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.image-container img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.text-container {
+    width: 75%;
+    padding: 10px;
+}
+.profile-link {
+    text-decoration: none;
+    color: #0073e6;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-container {
+        display: none;
+    }
+    .text-container {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
+.offer-container {
+            background: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        .offer-container h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .offer-container p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .offer-container a {
+            display: inline-block;
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .offer-container a:hover {
+            background-color: #005bb5;
+        }
+        .emoji {
+            font-size: 24px;
+        }

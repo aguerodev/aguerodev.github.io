@@ -12,11 +12,10 @@ image: ../images/community3_og.jpg
 
 ![Foto de <a href="https://unsplash.com/es/@cwmonty?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Montgomery</a> en <a href="https://unsplash.com/es/fotos/macbook-pro-displaying-group-of-people-smgTvepind4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/community3_og.jpg)
 
-¿Te imaginas pasar de no tener conocimientos de R a poder crear tus primeros reportes, con gráficos, leyendo datos desde CSV y Excel para poder contestar las preguntas del negocio en tan solo 6 semanas? Yo también estuve en tu lugar, sin experiencia y con muchas dudas. Con el tiempo y la guía adecuada, logré aprender R y mejorar mis habilidades. Ahora, quiero compartir este conocimiento contigo.
+¿Te imaginas pasar de no tener conocimientos de R a poder crear tus primeros reportes con gráficos, leyendo datos desde CSV y Excel para contestar las preguntas del negocio en tan solo 6 semanas? Con práctica y la guía adecuada, puedes mejorar tus habilidades. Es momento de comenzar.
 
-Muchos comienzan a aprender R, pero la frustración y la falta de apoyo los lleva a abandonar. <mark>**Nuestro curso está diseñado para superar estos obstáculos, ofreciéndote una base sólida y el soporte necesario para que sigas adelante.**</mark>
+Con nuestro curso de 6 semanas, no solo aprenderás los fundamentos de R, sino que también recibirás soporte personalizado para asegurarte de que comprendas cada concepto y puedas aplicarlo en situaciones reales.
 
-Con nuestro curso de **6 semanas**, no solo aprenderás los fundamentos de R, sino que también recibirás soporte personalizado para asegurarte de que comprendas cada concepto y puedas aplicarlo en situaciones reales.
 
 ## Lo que Aprenderás
 
@@ -50,7 +49,6 @@ Con nuestro curso de **6 semanas**, no solo aprenderás los fundamentos de R, si
 <p>En la última semana, aplicarás todo lo aprendido a lo largo del curso en un proyecto final. Deberás leer datos, limpiarlos, transformarlos y presentarlos utilizando gráficos y tablas. El objetivo es crear un informe completo que demuestre tus habilidades y conocimientos adquiridos.</p>
 </details>
 
-Al finalizar el curso, serás capaz de importar y manipular datos, crear visualizaciones y generar informes usando las herramientas que te ofrece el lenguaje R y RStudio. Estarás listo para aplicar estos conocimientos en tu trabajo o proyectos personales.
 
 :::: {.columns}
 ¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.
@@ -76,33 +74,26 @@ Al finalizar el curso, serás capaz de importar y manipular datos, crear visuali
 :::
 ::::
 
-> ¡Hola! 👋 Si eres estudiante universitario, escríbenos a info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita. 🎓✨
+::: {.callout-note appearance="simple"}
+
+## Oferta Exclusiva 🎁 
+
+¿Eres estudiante, profesor, investigador o colaborador de una ONG? Sabemos que aprender R es esencial, pero a veces los costos pueden ser una barrera. Queremos apoyar a la comunidad destinando un porcentaje de nuestras ganancias para ofrecer acceso gratuito a todos nuestros cursos. Escríbenos a **info@aprendetidyverse.com** y empieza hoy mismo. 🎓✨
+:::
+
 
 ## Conoce al instructor
 
-<div style="display: flex; align-items: flex-start; margin: 20px 0;">
-<div style="width: 25%; display: flex; justify-content: center; align-items: center; padding: 10px;">
-<img src="me.png" alt="Foto de perfil" style="width: 100%; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<div class="container">
+<div class="image-container">
+<img src="me.png" alt="Foto de perfil" class="profile-image">
 </div>
-<div style="width: 75%; padding: 10px;">
-<h2 style="margin: 0;">👋 Hola, soy <a href="https://www.linkedin.com/in/carlos-aguero-cr" style="text-decoration: none; color: #0073e6;">Carlos Agüero</a></h2>
-<p style="margin: 10px 0 0 0;">Desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R.</p>
-<p style="margin: 10px 0 0 0;">📚 Formo parte del listado de <a href="https://education.rstudio.com/trainers/" style="text-decoration: none; color: #0073e6;">**instructores certificados por RStudio**</a>, enfocándome en <strong>Tidyverse</strong> y <strong>Shiny</strong>. En diciembre de 2023, tuve el gusto de unirme a los instructores de la organización <a href="https://www.software-carpentry.org" style="text-decoration: none; color: #0073e6;">**The Software Carpentry**</a>.</p>
+<div class="text-container">
+<h2>👋 Hola, soy <a href="https://www.linkedin.com/in/carlos-aguero-cr" class="profile-link">Carlos Agüero</a></h2>
+<p>Desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R.</p>
+<p>📚 Formo parte del listado de <a href="https://education.rstudio.com/trainers/" class="profile-link"><strong>instructores certificados por RStudio</strong></a>, enfocándome en <strong>Tidyverse</strong> y <strong>Shiny</strong>. En diciembre de 2023, tuve el gusto de unirme a los instructores de la organización <a href="https://www.software-carpentry.org" class="profile-link"><strong>The Software Carpentry</strong></a>.</p>
 </div>
 </div>
-<style>
-@media (max-width: 768px) {
-div[style*="display: flex; align-items: flex-start; margin: 20px 0;"] {
-flex-direction: column;
-}
-div[style*="width: 25%; display: flex; justify-content: center; align-items: center; padding: 10px;"] {
-display: none;
-}
-div[style*="width: 75%; padding: 10px;"] {
-width: 100%;
-}
-}
-</style>
     
 A lo largo de los años, he tenido el privilegio de ayudar a **más de 400 estudiantes en toda América Latina** a descubrir el potencial del análisis de datos con R.
 
@@ -119,10 +110,8 @@ Nos comprometemos con nuestros estudiantes para ofrecer la mejor experiencia de 
 <iframe id='testimonialto-r-para-ciencia-de-datos-tag-all-light' src="https://embed-v2.testimonial.to/w/r-para-ciencia-de-datos?theme=light&card=base&loadMore=on&initialCount=20&randomize=on&tag=all" frameborder="0" scrolling="no" width="100%"></iframe>
 <script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-r-para-ciencia-de-datos-tag-all-light');</script>
 
----
-
 :::: {.columns}
-No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.
+No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para comenzar a escribir código desde el primer día.
 
 
 ::: {.column width="45%"}
