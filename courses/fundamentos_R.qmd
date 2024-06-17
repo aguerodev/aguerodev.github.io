@@ -1,7 +1,7 @@
 ---
 title: "Aprende programación en R desde cero"
 subtitle: ""
-description: "Descubre el poder del lenguaje de programación R en nuestro curso introductorio de 6 Semanas, diseñado para personas sin experiencia en programación."
+description: "¡Tu viaje en ciencia de datos comienza ahora! Aprende los fundamentos de la ciencia de datos con tidyverse."
 toc: true
 lang: "es"
 author: ""
@@ -14,7 +14,7 @@ image: ../images/community3_og.jpg
 
 ¿Te imaginas pasar de no tener conocimientos de R a poder crear tus primeros reportes con gráficos, leyendo datos desde CSV y Excel para contestar las preguntas del negocio en tan solo 6 semanas? Con práctica y la guía adecuada, puedes mejorar tus habilidades. Es momento de comenzar.
 
-Con nuestro curso de 6 semanas, no solo aprenderás los fundamentos de R, sino que también recibirás soporte personalizado para asegurarte de que comprendas cada concepto y puedas aplicarlo en situaciones reales.
+Con nuestro curso no solo aprenderás los fundamentos de R, sino que también recibirás soporte personalizado para asegurarte de que comprendas cada concepto y puedas aplicarlo en situaciones reales.
 
 
 ## Lo que Aprenderás
@@ -69,17 +69,10 @@ Con nuestro curso de 6 semanas, no solo aprenderás los fundamentos de R, sino q
 
 ::: {.column width="50%"}
 
-![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/personas-desconocidas-que-usan-la-computadora-en-interiores-nFLmPAf9dVc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v2.jpg)
+![Foto de <a href="https://unsplash.com/es/@jasongoodman_youxventures?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jason Goodman</a> en <a href="https://unsplash.com/es/fotos/five-person-by-table-watching-turned-on-white-imac-vbxyFxlgpjM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v4.jpg)
 
 :::
 ::::
-
-::: {.callout-note appearance="simple"}
-
-## Oferta Exclusiva 🎁 
-
-¿Eres estudiante, profesor, investigador o colaborador de una ONG? Sabemos que aprender R es esencial, pero a veces los costos pueden ser una barrera. Queremos apoyar a la comunidad destinando un porcentaje de nuestras ganancias para ofrecer acceso gratuito a todos nuestros cursos. Escríbenos a **info@aprendetidyverse.com** y empieza hoy mismo. 🎓✨
-:::
 
 
 ## Conoce al instructor
@@ -115,6 +108,11 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 
 
 ::: {.column width="45%"}
+
+![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/man-sitting-in-front-of-table-Kz8nHVg_tGI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v3.jpg)
+:::
+
+::: {.column width="50%"}
 ## Inscríbete Ahora
 
 + Inicio de lecciones: **{{< var curso_fundamentos.fecha >}}**
@@ -126,16 +124,17 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 + **Precio: $200 USD**
 
 <a href='{{< var curso_fundamentos.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora</a>
-:::
 
-::: {.column width="50%"}
-
-![Foto de <a href="https://unsplash.com/es/@arlington_research?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arlington Research</a> en <a href="https://unsplash.com/es/fotos/man-sitting-in-front-of-table-Kz8nHVg_tGI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/prof_v3.jpg)
 
 :::
 ::::
 
+::: {.callout-note appearance="simple"}
 
+## Oferta Exclusiva 🎁 
+
+¿Eres estudiante, profesor, investigador o colaborador de una ONG? Sabemos que aprender R es esencial, pero a veces los costos pueden ser una barrera. Queremos apoyar a la comunidad destinando un porcentaje de nuestras ganancias para ofrecer acceso gratuito a todos nuestros cursos. Escríbenos a **info@aprendetidyverse.com** y empieza hoy mismo. 🎓✨
+:::
 
 ## Ponte en contacto
 
