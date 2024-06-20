@@ -126,13 +126,6 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 :::
 ::::
 
-::: {.callout-note appearance="simple"}
-
-## Oferta Exclusiva 🎁 
-
-¿Eres estudiante, profesor, investigador o colaborador de una ONG? Sabemos que aprender R es esencial, pero a veces los costos pueden ser una barrera. Queremos apoyar a la comunidad destinando un porcentaje de nuestras ganancias para ofrecer acceso gratuito a todos nuestros cursos. Escríbenos a **info@aprendetidyverse.com** y empieza hoy mismo. 🎓✨
-:::
-
 ## Ponte en contacto
 
 La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
