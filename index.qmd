@@ -14,7 +14,7 @@ copyright: ""
 ::: hero-banner
 ::: content-block
 ::: hero-text
-# ¡Rompe las Barreras y Aprende Ciencia de Datos con R! 🚀
+# ¡Rompe las Barreras y Aprende Ciencia de Datos con R! 
 <br>
 **¿Piensas que aprender R es demasiado difícil?** ¡Piénsalo de nuevo! Con el enfoque y los recursos adecuados, cualquiera puede dominar R y aplicarlo a la ciencia de datos, sin importar tu experiencia previa.
 
@@ -25,7 +25,7 @@ copyright: ""
 -	**Garantía de Satisfacción**: Reembolso del 100% si no estás satisfecho.
 
 ::: hero-buttons
-<a href="https://wa.me/50683725899?text=Hola,%20me%20gustaría%20información%20sobre%20los%20cursos" style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">¡Inscríbete Ahora!</a>
+<a href="https://aprendetidyverse.com/courses/fundamentos_R.html" style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">¡Inscríbete Ahora!</a>
 <a href="https://cal.com/aprendetidyverse/sesiones-1-1-con-el-instructor" style="background-color: transparent; color: grey; padding: 10px 20px; border: 2px solid grey; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: color 0.3s ease;">Llamada por zoom</a>
 :::
 :::
@@ -56,16 +56,6 @@ Al finalizar el curso, aplicarás lo aprendido en un proyecto real, seleccionand
 :::
 
 :::content-block
-
-## ¿Tienes Dudas? 🤔
-
-Si llegaste hasta aquí con **una duda o error puntual en tu código**, igual podemos ayudarte. Regístrate y consulta de forma **totalmente gratuita** en nuestro foro de preguntas.
-
-No dejes que un error frustrante frene tu día. Ingresa ahora, **deja tu pregunta y recibe asesoría experta totalmente gratis en nuestro foro en minutos.**
-
-<a href="https://forum.aprendetidyverse.com/public/"  style="background-color: black; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Ir al foro</a>
-
-:::
 
 ::: content-block
 ## Conoce al instructor
@@ -100,6 +90,16 @@ Nuestros estudiantes son la mejor prueba de lo mucho que amamos dar clases. Aqu�
 ::: learn-more
 ## [Mira más comentarios en nuestro perfil de linkedin »](https://www.linkedin.com/in/carlos-aguero-cr/details/recommendations)
 :::
+:::
+
+## ¿Tienes Dudas? 🤔
+
+Si llegaste hasta aquí con **una duda o error puntual en tu código**, igual podemos ayudarte. Regístrate y consulta de forma **totalmente gratuita** en nuestro foro de preguntas.
+
+No dejes que un error frustrante frene tu día. Ingresa ahora, **deja tu pregunta y recibe asesoría experta totalmente gratis en nuestro foro en minutos.**
+
+<a href="https://forum.aprendetidyverse.com/public/"  style="background-color: black; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Ir al foro</a>
+
 :::
 
 ::: content-block
