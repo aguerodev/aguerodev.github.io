@@ -45,11 +45,6 @@ website:
         file: index.qmd
       - text: "Cursos"
         menu:
-          - text: "Curso Intensivo 6 semanas"
-          - text: "R para ciencia de datos"
-            icon: "bi-rocket"
-            href: courses/r4ds.qmd
-          - text: "--------"
           - text: "Programa de completo 8 cursos"
           - text: "Fundamentos de R y Rstudio"
             icon: "bi-laptop"
@@ -75,10 +70,11 @@ website:
           - text: "Organización y documentación de proyectos en RStudio"
             icon: "bi-journal"
             href: courses/desarrollo_proyectos_R.qmd
-      - text: "Sesiones de Consultas"
-        file: domingos_pr.qmd
+      - text: "Foro de consultas"
+        href: https://forum.aprendetidyverse.com/public/
       - text: Blog
         file: posts.qmd
+
     right:
       - icon: twitter
         href: https://twitter.com/dev_aguero
