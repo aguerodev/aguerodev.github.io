@@ -46,7 +46,7 @@ glimpse(pinguinos)
 ```
 
 ```{r}
-x <- select(pinguinos,where(is.numeric))
+x <- select(pinguinos, where(is.numeric))
 glimpse(x)
 ```
 
@@ -58,8 +58,13 @@ Por ejemplo, quiero las columnas que no contengan valores ausentes `NA`.
 select(pinguinos, where(\(x) all(!is.na(x))))
 ```
 
+::: {.column-margin}
+La forma abreviada `\(x) x + 1` se interpreta como `function(x) x + 1`. Puede ser útil para hacer que el código que contiene expresiones de funciones simples sea más legible.
+:::
 
 ## Ejemplo 2: Escalar todas las variables numéricas
+
+En otro escenario, lo normal sería crear primero una tabla con todas las variables numéricas y escalarlas, ya que la función `scale` no soporta variables no numéricas. En este caso, podemos hacer que la función `scale` se aplique solamente a las variables numéricas, dejando las demás intactas.
 
 ```{r}
 pinguinos |> 
@@ -73,27 +78,86 @@ pinguinos |>
 
 ## Ejemplo 3: Resumir todas la variables numéricas calculando la media
 
+Otro caso muy común es querer aplicar un resumen a múltiples columnas. Cuando tenemos muchas columnas o estas pueden, por la naturaleza de nuestros datos, cambiar de nombre con frecuencia, podemos implementar una solución más genérica que calcule la media para cada variable numérica sin depender del nombre de las variables.
+
 ```{r}
 pinguinos |> 
-  summarise(across(where(is.numeric), mean,
-    na.rm = TRUE))
+  summarise(
+  across(
+    where(is.numeric), # solamente numéricas
+    \(x) mean(x, na.rm = TRUE)) # calculamos la media para cada variable
+  )
 ```
 
 ## Ejemplo 4: Resumir todas la variables numéricas calculando la media y la mediana
 
+Ahora bien, si queremos aplicar más de una función de resumen, en lugar de pasar una sola función como parámetro, podemos pasar una lista con varias funciones. A cada una de las columnas indicadas por `where` se le aplicarán todas las funciones de la lista.
+
 ```{r}
 x <- pinguinos |> 
-  summarise(across(
-    .cols = where(is.numeric),
-    .fns = list(media = mean, mediana = median),
-    na.rm = TRUE)
+  summarise(
+    across(
+      .cols = where(is.numeric),
+      .fns = list(
+              media = \(x) mean(x, na.rm = TRUE),
+              mediana = \(x) median(x, na.rm = TRUE)
+            )
+    )
   )
 
 glimpse(x)
 ```
 
 
+::: {.column-margin}
+Para evitar confusiones, es posible que indiquemos los nombres de los parámetros de la función `across`. El primer parámetro es `.cols`, que contiene el where o las variables de la tabla que se van a utilizar, y el segundo parámetro es `.funs`, que puede ser una función o una lista de las funciones que se van a aplicar a cada una de las columnas.
+:::
+
+
+## Ejemplos 5 Convertir todas las variables de tipo character en Factor
+
+Aunque para muchas operaciones podemos trabajar con textos sin problema, la mayoría de los modelos necesitan variables de tipo factor en lugar de textos para funcionar correctamente. En este caso, por ejemplo, si queremos convertir todos los textos en factores, podemos hacerlo de la siguiente manera.
+
 ```{r}
-pinguinos |> 
-  summarise(across(where(is.numeric), list(mean = mean,media = median), .names = "{col}_{fn}"))
+x <- pinguinos |> 
+  mutate(
+    across(
+      where(is.character),
+      as.factor
+    )
+  )
+
+glimpse(x)
 ```
+
+
+Estas funciones nos ofrecen muchas ventajas. Para mí, la principal es poder diseñar scripts que dependen más de los tipos que de los nombres. No tener que conocer la cantidad ni el nombre de las variables para poder realizar operaciones se vuelve mucho más práctico. Como resultado, tenemos un código más sencillo de leer y fácil de mantener en el tiempo, ya que es posible que requiera menos cambios que otras alternativas.
+
+
+::: {.callout-warning}
+## Importante 🚨
+
+🚀¡Atención a todos los aspirantes a científicos de datos! 🚀
+
+¿Quieres aprender de la mano de un instructor experto y certificado por RStudio? ¡Esta es tu oportunidad!
+
+Este próximo **sábado 3 de agosto a las 10:00 a.m. (hora Costa Rica)**, iniciaremos nuestro curso exclusivo: "[Fundamentos de R y RStudio](https://aprendetidyverse.com/courses/fundamentos_R.html)".
+
+Imagina ser guiado paso a paso por un profesional que no solo domina R y RStudio, sino que también sabe cómo enseñarte a dominar estas herramientas de manera efectiva.
+
+🔍 ¿Por qué deberías unirte? 🔍
+
++ **Aprendizaje personalizado:** Obtén atención individualizada para asegurar tu éxito.
+
++ **Seguimiento semanal:** Recibe orientación semanal para aplicar lo que se ve en clase a tu área de expertise.
+
++ **Horario flexible:** Atiendo tus dudas en horarios que se adaptan a tu vida; puedes recibir asesoría en horario nocturno o fines de semana.
+
+
+No dejes pasar esta oportunidad de transformar tu carrera y adquirir habilidades que están en alta demanda.
+
+Inscríbete ahora y da el primer paso hacia tu futuro en la ciencia de datos.
+
+[📖 ¡Quiero saber más!](https://aprendetidyverse.com/courses/fundamentos_R.html)
+
+:::

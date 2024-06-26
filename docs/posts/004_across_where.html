@@ -154,7 +154,7 @@ cookieconsent.run({
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Borrador</div>
@@ -272,6 +272,7 @@ cookieconsent.run({
   <li><a href="#ejemplo-2-escalar-todas-las-variables-numéricas" id="toc-ejemplo-2-escalar-todas-las-variables-numéricas" class="nav-link" data-scroll-target="#ejemplo-2-escalar-todas-las-variables-numéricas">Ejemplo 2: Escalar todas las variables numéricas</a></li>
   <li><a href="#ejemplo-3-resumir-todas-la-variables-numéricas-calculando-la-media" id="toc-ejemplo-3-resumir-todas-la-variables-numéricas-calculando-la-media" class="nav-link" data-scroll-target="#ejemplo-3-resumir-todas-la-variables-numéricas-calculando-la-media">Ejemplo 3: Resumir todas la variables numéricas calculando la media</a></li>
   <li><a href="#ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana" id="toc-ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana" class="nav-link" data-scroll-target="#ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana">Ejemplo 4: Resumir todas la variables numéricas calculando la media y la mediana</a></li>
+  <li><a href="#ejemplos-5-convertir-todas-las-variables-de-tipo-character-en-factor" id="toc-ejemplos-5-convertir-todas-las-variables-de-tipo-character-en-factor" class="nav-link" data-scroll-target="#ejemplos-5-convertir-todas-las-variables-de-tipo-character-en-factor">Ejemplos 5 Convertir todas las variables de tipo character en Factor</a></li>
   </ul>
 </nav>
 </nav>
@@ -280,7 +281,7 @@ cookieconsent.run({
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -331,7 +332,7 @@ cookieconsent.run({
 <p>Estos escenarios se vuelven fáciles de escribir y leer cuando utilizamos las funciones <code>across</code> y <code>where</code> de <code>dplyr</code>. Con <code>across</code>, puedes aplicar una función a múltiples columnas simultáneamente, y con <code>where</code>, puedes filtrar columnas basándote en condiciones específicas, como su tipo de dato.</p>
 <p>La mejor forma de explicar esto es usando ejemplos concretos. A continuación, veamos una serie de casos y cómo resolverlos con estas funciones.</p>
 <p>Para estos ejemplos usaremos un dataset que me encanta, llamado pinguinos 🐧. Se presenta como una alternativa al típico dataset iris, el cual, no sé vos, pero al menos yo ya estoy un poco harto 💕. Originalmente presentado en el paquete <a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a> desarrollado por <a href="https://orcid.org/0000-0002-6047-5564">Allison Horst</a>, <a href="https://orcid.org/0000-0002-8082-1890">Alison Hill</a> y <a href="https://orcid.org/0000-0002-0258-9264">Kristen Gorman</a>, y luego traducido al español por el paquete <a href="https://cran.r-project.org/web/packages/datos/index.html">datos</a>, una hermosa contribución de <a href="https://orcid.org/0000-0002-1147-4135">Riva Quiroga</a>, Edgar Ruiz, Mauricio Vargas, <a href="https://orcid.org/0000-0002-1986-7988">Mauro Lepore</a>, Rayna Harris, Daniela Vasquez y Joshua Kunst.</p>
-<section id="ejemplo-1-seleccionar-solamente-las-variables-numéricas" class="level2">
+<section id="ejemplo-1-seleccionar-solamente-las-variables-numéricas" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="ejemplo-1-seleccionar-solamente-las-variables-numéricas">Ejemplo 1: Seleccionar solamente las variables numéricas</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -351,7 +352,7 @@ $ anio            &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 20
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>x <span class="ot">&lt;-</span> <span class="fu">select</span>(pinguinos,<span class="fu">where</span>(is.numeric))</span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>x <span class="ot">&lt;-</span> <span class="fu">select</span>(pinguinos, <span class="fu">where</span>(is.numeric))</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">glimpse</span>(x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 344
@@ -384,9 +385,13 @@ $ anio            &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 20
 # ℹ 334 more rows</code></pre>
 </div>
 </div>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>La forma abreviada <code>\(x) x + 1</code> se interpreta como <code>function(x) x + 1</code>. Puede ser útil para hacer que el código que contiene expresiones de funciones simples sea más legible.</p>
+</div></div></section>
 <section id="ejemplo-2-escalar-todas-las-variables-numéricas" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplo-2-escalar-todas-las-variables-numéricas">Ejemplo 2: Escalar todas las variables numéricas</h2>
+<p>En otro escenario, lo normal sería crear primero una tabla con todas las variables numéricas y escalarlas, ya que la función <code>scale</code> no soporta variables no numéricas. En este caso, podemos hacer que la función <code>scale</code> se aplique solamente a las variables numéricas, dejando las demás intactas.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>pinguinos <span class="sc">|&gt;</span> </span>
 <span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">mutate</span>(</span>
@@ -416,23 +421,14 @@ $ anio            &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 20
 </section>
 <section id="ejemplo-3-resumir-todas-la-variables-numéricas-calculando-la-media" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplo-3-resumir-todas-la-variables-numéricas-calculando-la-media">Ejemplo 3: Resumir todas la variables numéricas calculando la media</h2>
+<p>Otro caso muy común es querer aplicar un resumen a múltiples columnas. Cuando tenemos muchas columnas o estas pueden, por la naturaleza de nuestros datos, cambiar de nombre con frecuencia, podemos implementar una solución más genérica que calcule la media para cada variable numérica sin depender del nombre de las variables.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>pinguinos <span class="sc">|&gt;</span> </span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), mean,</span>
-<span id="cb9-3"><a href="#cb9-3"></a>    <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: There was 1 warning in `summarise()`.
-ℹ In argument: `across(where(is.numeric), mean, na.rm = TRUE)`.
-Caused by warning:
-! The `...` argument of `across()` is deprecated as of dplyr 1.1.0.
-Supply arguments directly to `.fns` through an anonymous function instead.
-
-  # Previously
-  across(a:b, mean, na.rm = TRUE)
-
-  # Now
-  across(a:b, \(x) mean(x, na.rm = TRUE))</code></pre>
-</div>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">across</span>(</span>
+<span id="cb9-4"><a href="#cb9-4"></a>    <span class="fu">where</span>(is.numeric), <span class="co"># solamente numéricas</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>    \(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="co"># calculamos la media para cada variable</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>  )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 5
   largo_pico_mm alto_pico_mm largo_aleta_mm masa_corporal_g  anio
@@ -441,17 +437,22 @@ Supply arguments directly to `.fns` through an anonymous function instead.
 </div>
 </div>
 </section>
-<section id="ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana" class="level2">
+<section id="ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="ejemplo-4-resumir-todas-la-variables-numéricas-calculando-la-media-y-la-mediana">Ejemplo 4: Resumir todas la variables numéricas calculando la media y la mediana</h2>
+<p>Ahora bien, si queremos aplicar más de una función de resumen, en lugar de pasar una sola función como parámetro, podemos pasar una lista con varias funciones. A cada una de las columnas indicadas por <code>where</code> se le aplicarán todas las funciones de la lista.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>x <span class="ot">&lt;-</span> pinguinos <span class="sc">|&gt;</span> </span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(</span>
-<span id="cb12-3"><a href="#cb12-3"></a>    <span class="at">.cols =</span> <span class="fu">where</span>(is.numeric),</span>
-<span id="cb12-4"><a href="#cb12-4"></a>    <span class="at">.fns =</span> <span class="fu">list</span>(<span class="at">media =</span> mean, <span class="at">mediana =</span> median),</span>
-<span id="cb12-5"><a href="#cb12-5"></a>    <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb12-6"><a href="#cb12-6"></a>  )</span>
-<span id="cb12-7"><a href="#cb12-7"></a></span>
-<span id="cb12-8"><a href="#cb12-8"></a><span class="fu">glimpse</span>(x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>x <span class="ot">&lt;-</span> pinguinos <span class="sc">|&gt;</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb11-3"><a href="#cb11-3"></a>    <span class="fu">across</span>(</span>
+<span id="cb11-4"><a href="#cb11-4"></a>      <span class="at">.cols =</span> <span class="fu">where</span>(is.numeric),</span>
+<span id="cb11-5"><a href="#cb11-5"></a>      <span class="at">.fns =</span> <span class="fu">list</span>(</span>
+<span id="cb11-6"><a href="#cb11-6"></a>              <span class="at">media =</span> \(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb11-7"><a href="#cb11-7"></a>              <span class="at">mediana =</span> \(x) <span class="fu">median</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb11-8"><a href="#cb11-8"></a>            )</span>
+<span id="cb11-9"><a href="#cb11-9"></a>    )</span>
+<span id="cb11-10"><a href="#cb11-10"></a>  )</span>
+<span id="cb11-11"><a href="#cb11-11"></a></span>
+<span id="cb11-12"><a href="#cb11-12"></a><span class="fu">glimpse</span>(x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 1
 Columns: 10
@@ -467,17 +468,60 @@ $ anio_media              &lt;dbl&gt; 2008.029
 $ anio_mediana            &lt;dbl&gt; 2008</code></pre>
 </div>
 </div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Para evitar confusiones, es posible que indiquemos los nombres de los parámetros de la función <code>across</code>. El primer parámetro es <code>.cols</code>, que contiene el where o las variables de la tabla que se van a utilizar, y el segundo parámetro es <code>.funs</code>, que puede ser una función o una lista de las funciones que se van a aplicar a cada una de las columnas.</p>
+</div></div></section>
+<section id="ejemplos-5-convertir-todas-las-variables-de-tipo-character-en-factor" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos-5-convertir-todas-las-variables-de-tipo-character-en-factor">Ejemplos 5 Convertir todas las variables de tipo character en Factor</h2>
+<p>Aunque para muchas operaciones podemos trabajar con textos sin problema, la mayoría de los modelos necesitan variables de tipo factor en lugar de textos para funcionar correctamente. En este caso, por ejemplo, si queremos convertir todos los textos en factores, podemos hacerlo de la siguiente manera.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>pinguinos <span class="sc">|&gt;</span> </span>
-<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="fu">list</span>(<span class="at">mean =</span> mean,<span class="at">media =</span> median), <span class="at">.names =</span> <span class="st">"{col}_{fn}"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>x <span class="ot">&lt;-</span> pinguinos <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb13-3"><a href="#cb13-3"></a>    <span class="fu">across</span>(</span>
+<span id="cb13-4"><a href="#cb13-4"></a>      <span class="fu">where</span>(is.character),</span>
+<span id="cb13-5"><a href="#cb13-5"></a>      as.factor</span>
+<span id="cb13-6"><a href="#cb13-6"></a>    )</span>
+<span id="cb13-7"><a href="#cb13-7"></a>  )</span>
+<span id="cb13-8"><a href="#cb13-8"></a></span>
+<span id="cb13-9"><a href="#cb13-9"></a><span class="fu">glimpse</span>(x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 10
-  largo_pico_mm_mean largo_pico_mm_media alto_pico_mm_mean alto_pico_mm_media
-               &lt;dbl&gt;               &lt;dbl&gt;             &lt;dbl&gt;              &lt;dbl&gt;
-1                 NA                  NA                NA                 NA
-# ℹ 6 more variables: largo_aleta_mm_mean &lt;dbl&gt;, largo_aleta_mm_media &lt;int&gt;,
-#   masa_corporal_g_mean &lt;dbl&gt;, masa_corporal_g_media &lt;int&gt;, anio_mean &lt;dbl&gt;,
-#   anio_media &lt;dbl&gt;</code></pre>
+<pre><code>Rows: 344
+Columns: 8
+$ especie         &lt;fct&gt; Adelia, Adelia, Adelia, Adelia, Adelia, Adelia, Adelia…
+$ isla            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgersen,…
+$ largo_pico_mm   &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, 42…
+$ alto_pico_mm    &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, 20…
+$ largo_aleta_mm  &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186, …
+$ masa_corporal_g &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, 42…
+$ sexo            &lt;fct&gt; macho, hembra, hembra, NA, hembra, macho, hembra, mach…
+$ anio            &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, …</code></pre>
+</div>
+</div>
+<p>Estas funciones nos ofrecen muchas ventajas. Para mí, la principal es poder diseñar scripts que dependen más de los tipos que de los nombres. No tener que conocer la cantidad ni el nombre de las variables para poder realizar operaciones se vuelve mucho más práctico. Como resultado, tenemos un código más sencillo de leer y fácil de mantener en el tiempo, ya que es posible que requiera menos cambios que otras alternativas.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante 🚨
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>🚀¡Atención a todos los aspirantes a científicos de datos! 🚀</p>
+<p>¿Quieres aprender de la mano de un instructor experto y certificado por RStudio? ¡Esta es tu oportunidad!</p>
+<p>Este próximo <strong>sábado 3 de agosto a las 10:00 a.m. (hora Costa Rica)</strong>, iniciaremos nuestro curso exclusivo: “<a href="https://aprendetidyverse.com/courses/fundamentos_R.html">Fundamentos de R y RStudio</a>”.</p>
+<p>Imagina ser guiado paso a paso por un profesional que no solo domina R y RStudio, sino que también sabe cómo enseñarte a dominar estas herramientas de manera efectiva.</p>
+<p>🔍 ¿Por qué deberías unirte? 🔍</p>
+<ul>
+<li><p><strong>Aprendizaje personalizado:</strong> Obtén atención individualizada para asegurar tu éxito.</p></li>
+<li><p><strong>Seguimiento semanal:</strong> Recibe orientación semanal para aplicar lo que se ve en clase a tu área de expertise.</p></li>
+<li><p><strong>Horario flexible:</strong> Atiendo tus dudas en horarios que se adaptan a tu vida; puedes recibir asesoría en horario nocturno o fines de semana.</p></li>
+</ul>
+<p>No dejes pasar esta oportunidad de transformar tu carrera y adquirir habilidades que están en alta demanda.</p>
+<p>Inscríbete ahora y da el primer paso hacia tu futuro en la ciencia de datos.</p>
+<p><a href="https://aprendetidyverse.com/courses/fundamentos_R.html">📖 ¡Quiero saber más!</a></p>
 </div>
 </div>
 
