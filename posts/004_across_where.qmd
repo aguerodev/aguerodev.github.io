@@ -133,7 +133,6 @@ glimpse(x)
 
 Estas funciones nos ofrecen muchas ventajas. Para mí, la principal es poder diseñar scripts que dependen más de los tipos que de los nombres. No tener que conocer la cantidad ni el nombre de las variables para poder realizar operaciones se vuelve mucho más práctico. Como resultado, tenemos un código más sencillo de leer y fácil de mantener en el tiempo, ya que es posible que requiera menos cambios que otras alternativas.
 
-
 ::: {.callout-warning}
 ## Importante 🚨
 

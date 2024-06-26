@@ -1,5 +1,4 @@
 website:
   drafts:
-    - posts/004_across_where.qmd 
     - posts/005_duckdb_intro.qmd 
   draft-mode: visible
