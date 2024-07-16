@@ -51,14 +51,14 @@ Este curso de 6 semanas te enseñará a extraer información de sitios web y API
 
 ::: {.column width="45%"}
 ## Inscríbete Ahora
-+ Inicio de lecciones: **23 de julio**
++ Inicio de lecciones: **sábado 3 de agosto 6:00 p.m (UTC-6)**
 + Clases en vivo
 + Grabaciones de las clases
 + Sesiones de seguimiento personalizadas
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Web%20Scraping%20y%20Automatización%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2023%20de%20julio&id=curso_web_scraping_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Web%20Scraping%20y%20Automatización%20con%20R&precio=%24200%20USD&fecha_inicio=sábado%2003%20de%20agosto&id=curso_web_scraping_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
