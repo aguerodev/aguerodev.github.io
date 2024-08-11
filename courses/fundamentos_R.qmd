@@ -57,7 +57,7 @@ Con nuestro curso no solo aprenderás los fundamentos de R, sino que también re
 ## Inscríbete Ahora
 + Próxima apertura:
     + **{{< var curso_fundamentos.fecha >}}**
-    + 10:00 a.m. Costa Rica
+    + 2:00 p.m. Costa Rica
 + Duración: 6 semanas
 + Clases en vivo
 + **Precio: $200 USD**
@@ -115,7 +115,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 ## Inscríbete Ahora
 + Próxima apertura:
     + **{{< var curso_fundamentos.fecha >}}**
-    + 10:00 a.m. Costa Rica
+    + 2:00 p.m. Costa Rica
 + Duración: 6 semanas
 + Clases en vivo
 + **Precio: $200 USD**

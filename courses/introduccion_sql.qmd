@@ -61,16 +61,14 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 
 ::: {.column width="45%"}
 ## Inscríbete Ahora
-+ Inicio de lecciones: **martes 5 de agosto de 2025**
++ Próxima apertura:
+    + **sábado 21 de septiembre**
+    + 6:00 p.m. Costa Rica
++ Duración: 6 semanas
 + Clases en vivo
-+ Grabaciones de las clases
-+ Sesiones de seguimiento personalizadas
-+ Acceso a una comunidad de aprendizaje
-+ Ayuda en minutos a través de Zoom o WhatsApp
-+ Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Introducción%20a%20SQL%20y%20su%20integración%20con%20R&precio=%24200%20USD&fecha_inicio=martes%205%20de%20agosto%20de%202025&id=curso_sql_integracion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Introducción%20a%20SQL%20y%20su%20integración%20con%20R&precio=%24200%20USD&fecha_inicio=domingo%2021%20de%20septiembre%20de%202025&id=curso_sql_integracion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -130,7 +128,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Introducción%20a%20SQL%20y%20su%20integración%20con%20R&precio=%24200%20USD&fecha_inicio=martes%205%20de%20agosto%20de%202025&id=curso_sql_integracion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Introducción%20a%20SQL%20y%20su%20integración%20con%20R&precio=%24200%20USD&fecha_inicio=domingo%2021%20de%20septiembre%20de%202025&id=curso_sql_integracion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 

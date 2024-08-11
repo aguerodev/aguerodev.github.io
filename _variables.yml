@@ -27,18 +27,18 @@ curso_webscraping:
   hora_col: "7:00 p.m."
   hora_arg: "9:00 p.m."
   precio: "$99 USD"
-  url_pago: "https://tally.so/r/mYQb4N?curso=Web%20Scraping%20y%20Automatización%20con%20R&precio=%2499%20USD&fecha_inicio=martes%2023%20de%20julio%20de%202024&precio_cr=50,000%20colones"
+  url_pago: "https://tally.so/r/mYQb4N?curso=Web%20Scraping%20y%20Automatización%20con%20R&precio=%2499%20USD&fecha_inicio=sábado%2021%20de%20septiembre%20de%202024&precio_cr=50,000%20colones"
   
 curso_shiny:
   fecha: "miércoles 3 de julio de 2024"
   dia: "Todos los miércoles"
-  hora_cr: "6:00 p.m."
-  hora_col: "7:00 p.m."
-  hora_arg: "9:00 p.m."
+  hora_cr: "2:00 p.m."
+  hora_col: "3:00 p.m."
+  hora_arg: "5:00 p.m."
   precio: "$99 USD"
   url_pago: "https://tally.so/r/mYQb4N?curso=Desarrollo%20de%20aplicaciones%20con%20shiny&precio=%2499%20USD&fecha_inicio=miércoles%203%20de%20julio%20de%202024&precio_cr=50,000%20colones"
   
 curso_fundamentos:
-  fecha: "sábado 3 de agosto"
-  url_pago: "https://tally.so/r/mYQb4N?curso=Fundamentos%20de%20R%20y%20RStudio&precio=%24200%20USD&fecha_inicio=sábado%203%20de%20agosto%20de%202024&id=curso_fundamentos_R&precio_cr=103,400%20colones"
+  fecha: "sábado 21 de septiembre"
+  url_pago: "https://tally.so/r/mYQb4N?curso=Fundamentos%20de%20R%20y%20RStudio&precio=%24200%20USD&fecha_inicio=sábado%2021%20de%20septiembre%20de%202024&id=curso_fundamentos_R&precio_cr=103,400%20colones"
   
