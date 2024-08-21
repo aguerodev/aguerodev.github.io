@@ -52,7 +52,7 @@ website:
           - text: "Visualización de datos con R"
             icon: "palette"
             href: courses/visualizacion_datos_R.qmd
-          - text: "Manipulación de datos con R"
+          - text: "Limpieza y Manipulación de datos con R"
             icon: "tools"
             href: courses/manipulacion_datos_R.qmd
           - text: "Introducción a SQL y su integración con R"

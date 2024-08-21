@@ -1,15 +1,15 @@
 ---
-title: "Manipulación de datos con R"
+title: "Limpieza y manipulación de datos con R"
 subtitle: ""
 description: "¿Quieres dominar la manipulación de datos en R y transformar tus habilidades de análisis? 🚀"
 toc: true
 lang: "es"
 author: ""
 pagetitle: "Manipulación de datos con R"
-image: ../images/data_wrangling.jpg
+image: ../images/data_cleaning.jpg
 ---
 
-![Foto de <a href="https://unsplash.com/es/@purzlbaum?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Claudio Schwarz</a> en <a href="https://unsplash.com/es/fotos/un-primer-plano-de-una-ventana-con-un-edificio-en-el-fondo-fyeOxvYvIyY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/data_wrangling.jpg)
+![Foto de <a href="https://unsplash.com/es/@pillepriske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pille R. Priske</a> en <a href="https://unsplash.com/es/fotos/polvo-amarillo-en-un-recipiente-de-vidrio-transparente-Y1JjwhHaPRM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/data_cleaning.jpg)
 
 
 Este curso de 6 semanas está diseñado para enseñarte cómo <mark>**manipular y preparar datos de manera eficiente utilizando R y el ecosistema tidyverse.**</mark> Aprenderás a importar, limpiar, transformar y resumir datos con herramientas como dplyr, tidyr y purrr. Cada semana se enfoca en diferentes aspectos de la manipulación de datos, asegurando una comprensión profunda y práctica.
