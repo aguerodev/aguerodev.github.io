@@ -45,33 +45,24 @@ website:
         file: index.qmd
       - text: "Cursos"
         menu:
-          - text: "Programa de completo 8 cursos"
+          - text: "Programa de completo 5 cursos"
           - text: "Fundamentos de R y Rstudio"
             icon: "bi-laptop"
             href: courses/fundamentos_R.qmd
           - text: "Visualización de datos con R"
             icon: "palette"
             href: courses/visualizacion_datos_R.qmd
-          - text: "Desarrollo de reportes y documentos"
-            icon: "bi-file-earmark-text"
-            href: courses/documentos_con_quarto.qmd
           - text: "Manipulación de datos con R"
             icon: "tools"
             href: courses/manipulacion_datos_R.qmd
-          - text: "Limpieza e inportación de datos"
-            icon: "bi-database"
-            href: courses/limpieza_importacion.qmd
           - text: "Introducción a SQL y su integración con R"
-            icon: "bi-server"
+            icon: "bi-database"
             href: courses/introduccion_sql.qmd
           - text: "Web Scraping y Automatización con R"
             icon: "bi-globe"
             href: courses/web_scraping.qmd
-          - text: "Organización y documentación de proyectos en RStudio"
-            icon: "bi-journal"
-            href: courses/desarrollo_proyectos_R.qmd
-      - text: "Foro de consultas"
-        href: https://forum.aprendetidyverse.com/public/
+      - text: "Sesiones de consulta"
+        href: domingos_pr.qmd
       - text: Blog
         file: posts.qmd
 

@@ -36,13 +36,27 @@ copyright: ""
 :::
 :::
 
+::: content-block
 
+
+## ¿Qué Dicen Nuestros Estudiantes?
+
+Nuestros estudiantes son la mejor prueba de lo mucho que amamos dar clases. Aquí tienes algunos de ellos:
+
+<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
+<iframe id='testimonialto-r-para-ciencia-de-datos-tag-all-light' src="https://embed-v2.testimonial.to/w/r-para-ciencia-de-datos?theme=light&card=large&loadMore=on&initialCount=20&randomize=on&tag=all" frameborder="0" scrolling="no" width="100%"></iframe>
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-r-para-ciencia-de-datos-tag-all-light');</script>
+
+::: learn-more
+## [Mira más comentarios en nuestro perfil de linkedin »](https://www.linkedin.com/in/carlos-aguero-cr/details/recommendations)
+:::
+:::
 
 
 
 ::: content-block
 
-## ¿Cómo Te Ayudaremos a Aprender R para Ciencia de Datos?
+## ¿Cómo le ayudaremos a aprender R para Ciencia de Datos?
 
 Nuestros cursos de 6 semanas están diseñados para guiarte desde la teoría hasta la práctica, <mark>**escribiendo código desde el primer día. Creemos que la mejor manera de aprender a programar es pensando y escribiendo código, no copiando y pegando.**
 
@@ -73,21 +87,7 @@ Al finalizar el curso, aplicarás lo aprendido en un proyecto real, seleccionand
 :::
 
 
-::: content-block
 
-
-## ¿Qué Dicen Nuestros Estudiantes?
-
-Nuestros estudiantes son la mejor prueba de lo mucho que amamos dar clases. Aquí tienes algunos de ellos:
-
-<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
-<iframe id='testimonialto-r-para-ciencia-de-datos-tag-all-light' src="https://embed-v2.testimonial.to/w/r-para-ciencia-de-datos?theme=light&card=large&loadMore=on&initialCount=20&randomize=on&tag=all" frameborder="0" scrolling="no" width="100%"></iframe>
-<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-r-para-ciencia-de-datos-tag-all-light');</script>
-
-::: learn-more
-## [Mira más comentarios en nuestro perfil de linkedin »](https://www.linkedin.com/in/carlos-aguero-cr/details/recommendations)
-:::
-:::
 
 
 ::: content-block
