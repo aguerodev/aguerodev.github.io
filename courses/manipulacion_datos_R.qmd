@@ -61,7 +61,9 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 
 ::: {.column width="45%"}
 ## Inscríbete Ahora
-+ Inicio de lecciones: **Fecha a definir**
++ Próxima apertura:
+    + **sábado 2 de noviembre**
+    + 10:00 a.m. Costa Rica
 + Clases en vivo
 + Grabaciones de las clases
 + Sesiones de seguimiento personalizadas
@@ -70,7 +72,7 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Manipulación%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2015%20de%20abril%20de%202025&id=curso_manipulacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Limpieza%20y%20manipulaci%C3%B3n%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=s%C3%A1bado%202%20de%20noviembre%20de%202024&id=curso_limpieza_manipulacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -121,7 +123,9 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 ::: {.column width="45%"}
 ## Inscríbete Ahora
 
-+ Inicio de lecciones: **martes 15 de abril de 2025**
++ Próxima apertura:
+    + **sábado 2 de noviembre**
+    + 10:00 a.m. Costa Rica
 + Clases en vivo
 + Grabaciones de las clases
 + Sesiones de seguimiento personalizadas
@@ -130,7 +134,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Manipulación%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2015%20de%20abril%20de%202025&id=curso_manipulacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Limpieza%20y%20manipulaci%C3%B3n%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=s%C3%A1bado%202%20de%20noviembre%20de%202024&id=curso_limpieza_manipulacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
