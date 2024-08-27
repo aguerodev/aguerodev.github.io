@@ -1216,5 +1216,33 @@
     "title": "Si usas dplyr, debes aprender a usar across y where",
     "section": "Ejemplos 5 Convertir todas las variables de tipo character en Factor",
     "text": "Ejemplos 5 Convertir todas las variables de tipo character en Factor\nAunque para muchas operaciones podemos trabajar con textos sin problema, la mayoría de los modelos necesitan variables de tipo factor en lugar de textos para funcionar correctamente. En este caso, por ejemplo, si queremos convertir todos los textos en factores, podemos hacerlo de la siguiente manera.\n\nx &lt;- pinguinos |&gt; \n  mutate(\n    across(\n      where(is.character),\n      as.factor\n    )\n  )\n\nglimpse(x)\n\nRows: 344\nColumns: 8\n$ especie         &lt;fct&gt; Adelia, Adelia, Adelia, Adelia, Adelia, Adelia, Adelia…\n$ isla            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgersen,…\n$ largo_pico_mm   &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, 42…\n$ alto_pico_mm    &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, 20…\n$ largo_aleta_mm  &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186, …\n$ masa_corporal_g &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, 42…\n$ sexo            &lt;fct&gt; macho, hembra, hembra, NA, hembra, macho, hembra, mach…\n$ anio            &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, …\n\n\nEstas funciones nos ofrecen muchas ventajas. Para mí, la principal es poder diseñar scripts que dependen más de los tipos que de los nombres. No tener que conocer la cantidad ni el nombre de las variables para poder realizar operaciones se vuelve mucho más práctico. Como resultado, tenemos un código más sencillo de leer y fácil de mantener en el tiempo, ya que es posible que requiera menos cambios que otras alternativas.\n\n\n\n\n\n\nImportante 🚨\n\n\n\n🚀¡Atención a todos los aspirantes a científicos de datos! 🚀\n¿Quieres aprender de la mano de un instructor experto y certificado por RStudio? ¡Esta es tu oportunidad!\nEste próximo sábado 3 de agosto a las 10:00 a.m. (hora Costa Rica), iniciaremos nuestro curso exclusivo: “Fundamentos de R y RStudio”.\nImagina ser guiado paso a paso por un profesional que no solo domina R y RStudio, sino que también sabe cómo enseñarte a dominar estas herramientas de manera efectiva.\n🔍 ¿Por qué deberías unirte? 🔍\n\nAprendizaje personalizado: Obtén atención individualizada para asegurar tu éxito.\nSeguimiento semanal: Recibe orientación semanal para aplicar lo que se ve en clase a tu área de expertise.\nHorario flexible: Atiendo tus dudas en horarios que se adaptan a tu vida; puedes recibir asesoría en horario nocturno o fines de semana.\n\nNo dejes pasar esta oportunidad de transformar tu carrera y adquirir habilidades que están en alta demanda.\nInscríbete ahora y da el primer paso hacia tu futuro en la ciencia de datos.\n📖 ¡Quiero saber más!"
+  },
+  {
+    "objectID": "donadores.html",
+    "href": "donadores.html",
+    "title": "Sostén el Proyecto Aprende Tidyverse",
+    "section": "",
+    "text": "Foto de Chris Montgomery en Unsplash\nAprende Tidyverse nació con el objetivo de utilizar el conocimiento en ciencia de datos para crear algo productivo y significativo, alejándose de un enfoque mecanicista y acercándose más a lo humano. Desde su inicio, este proyecto ha ofrecido clases de forma gratuita, financiadas íntegramente con recursos propios. Gracias a este esfuerzo, cientos de estudiantes han tenido la oportunidad de dar sus primeros pasos en el mundo de la ciencia de datos."
+  },
+  {
+    "objectID": "donadores.html#qué-dicen-nuestros-estudiantes",
+    "href": "donadores.html#qué-dicen-nuestros-estudiantes",
+    "title": "Sostén el Proyecto Aprende Tidyverse",
+    "section": "¿Qué Dicen Nuestros Estudiantes?",
+    "text": "¿Qué Dicen Nuestros Estudiantes?\nNuestros estudiantes son la mejor prueba de lo mucho que amamos dar clases. Aquí tienes algunos de ellos:"
+  },
+  {
+    "objectID": "donadores.html#nuestro-reto-actual",
+    "href": "donadores.html#nuestro-reto-actual",
+    "title": "Sostén el Proyecto Aprende Tidyverse",
+    "section": "Nuestro Reto Actual",
+    "text": "Nuestro Reto Actual\nSin embargo, hemos llegado a un punto crítico. Aprender a programar no es sencillo para la mayoría; requiere mucha asistencia, y la guía de un instructor capacitado es esencial. Por eso, nuestros estudiantes tienen acceso a una hora de seguimiento semanal, algo que realmente valoran. Pero con 25 estudiantes por curso y tres cursos abiertos cada mes, estamos hablando de más de 75 horas semanales dedicadas a este seguimiento. Esto ya es insostenible para una sola persona."
+  },
+  {
+    "objectID": "donadores.html#cómo-puedes-ayudar",
+    "href": "donadores.html#cómo-puedes-ayudar",
+    "title": "Sostén el Proyecto Aprende Tidyverse",
+    "section": "Cómo Puedes Ayudar",
+    "text": "Cómo Puedes Ayudar\nPara poder seguir adelante, necesitamos incorporar asistentes a los cursos. Es por eso que hemos habilitado la sección de donaciones, para que ex estudiantes y entusiastas de los datos puedan contribuir con una donación mensual o puntual, ayudándonos a sostener económicamente el proyecto.\nCon su apoyo, podremos seguir ofreciendo 12 de los 25 cupos de cada curso de forma completamente gratuita, enfocados en la comunidad universitaria y colaboradores de ONG. En esta página también encontrará información sobre la cantidad de estudiantes que, mes a mes, reciben clases gratuitas, el total de horas invertidas, así como testimonios e historias de estos estudiantes."
   }
 ]

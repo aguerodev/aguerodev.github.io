@@ -65,6 +65,8 @@ website:
         href: domingos_pr.qmd
       - text: Blog
         file: posts.qmd
+      - text: Donaciones
+        file: donadores.qmd
 
     right:
       - icon: twitter

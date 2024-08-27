@@ -1,0 +1,44 @@
+---
+title: "Sostén el Proyecto Aprende Tidyverse"
+subtitle: "Con tu aporte mensual, haz accesible el aprendizaje de la ciencia de datos para todos."
+description: ""
+lang: "es"
+toc: false
+comments: false
+author: ""
+date: ""
+pagetitle: Aprende Tidyverse - domingos de preguntas y respuestas
+image: /images/community3_og.jpg
+license: ""
+format:
+  html: 
+    grid:
+      body-width: 1000px
+---
+
+![Foto de <a href="https://unsplash.com/es/@cwmonty?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Montgomery</a> en <a href="https://unsplash.com/es/fotos/macbook-pro-displaying-group-of-people-smgTvepind4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/community3_og.jpg)
+
+Aprende Tidyverse nació con el objetivo de utilizar el conocimiento en ciencia de datos para crear algo productivo y significativo, alejándose de un enfoque mecanicista y acercándose más a lo humano. Desde su inicio, este proyecto ha ofrecido clases de forma gratuita, financiadas íntegramente con recursos propios. Gracias a este esfuerzo, cientos de estudiantes han tenido la oportunidad de dar sus primeros pasos en el mundo de la ciencia de datos.
+
+## Nuestro Reto Actual
+
+Sin embargo, hemos llegado a un punto crítico. Aprender a programar no es sencillo para la mayoría; requiere mucha asistencia, y la guía de un instructor capacitado es esencial. Por eso, nuestros estudiantes tienen acceso a una hora de seguimiento semanal, algo que realmente valoran. Pero con 25 estudiantes por curso y tres cursos abiertos cada mes, estamos hablando de más de 75 horas semanales dedicadas a este seguimiento. Esto ya es insostenible para una sola persona.
+
+## Cómo Puedes Ayudar
+
+Para poder seguir adelante, necesitamos incorporar asistentes a los cursos. Es por eso que hemos habilitado la sección de donaciones, para que ex estudiantes y entusiastas de los datos puedan contribuir con una donación mensual o puntual, ayudándonos a sostener económicamente el proyecto.
+
+Con su apoyo, podremos seguir ofreciendo 12 de los 25 cupos de cada curso de forma completamente gratuita, enfocados en la comunidad universitaria y colaboradores de ONG. En esta página también encontrará información sobre la cantidad de estudiantes que, mes a mes, reciben clases gratuitas, el total de horas invertidas, así como testimonios e historias de estos estudiantes.
+
+<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+<stripe-pricing-table pricing-table-id="prctbl_1PsIAqC6tjJiI7SzGmWpbotw"
+publishable-key="pk_live_51NDynTC6tjJiI7SzR88rTCnjXGqSbWqi9xDGQfncTNGhO2YMhzs9HKJJl1HBz6JPwQvKivW0lYq34IjRg8qDVkYg008vEpD9h1">
+</stripe-pricing-table>
+
+## ¿Qué Dicen Nuestros Estudiantes?
+
+Nuestros estudiantes son la mejor prueba de lo mucho que amamos dar clases. Aquí tienes algunos de ellos:
+
+<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
+<iframe id='testimonialto-r-para-ciencia-de-datos-tag-all-light' src="https://embed-v2.testimonial.to/w/r-para-ciencia-de-datos?theme=light&card=large&loadMore=on&initialCount=20&randomize=on&tag=all" frameborder="0" scrolling="no" width="100%"></iframe>
+<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-r-para-ciencia-de-datos-tag-all-light');</script>
