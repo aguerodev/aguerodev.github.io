@@ -62,13 +62,13 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 ::: {.column width="45%"}
 ## Inscríbete Ahora
 + Próxima apertura:
-    + **sábado 21 de septiembre**
+    + **sábado 28 de septiembre**
     + 6:00 p.m. Costa Rica
 + Duración: 6 semanas
 + Clases en vivo
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Introducci%C3%B3n+a+SQL+y+su+integraci%C3%B3n+con+R&precio=%24200%20USD&fecha_inicio=s%C3%A1bado+21+de+septiembre+de+2024&id=curso_sql_integracion_R&precio_cr=103%252C400+colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Introducci%C3%B3n+a+SQL+y+su+integraci%C3%B3n+con+R&precio=%24200%20USD&fecha_inicio=s%C3%A1bado+28+de+septiembre+de+2024&id=curso_sql_integracion_R&precio_cr=103%252C400+colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -128,7 +128,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Introducci%C3%B3n+a+SQL+y+su+integraci%C3%B3n+con+R&precio=%24200%20USD&fecha_inicio=s%C3%A1bado+21+de+septiembre+de+2024&id=curso_sql_integracion_R&precio_cr=103%252C400+colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Introducci%C3%B3n+a+SQL+y+su+integraci%C3%B3n+con+R&precio=%24200%20USD&fecha_inicio=s%C3%A1bado+28+de+septiembre+de+2024&id=curso_sql_integracion_R&precio_cr=103%252C400+colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
