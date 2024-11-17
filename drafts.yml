@@ -1,4 +1,6 @@
 website:
   drafts:
     - posts/005_duckdb_intro.qmd 
-  draft-mode: visible
+    - posts/004_across_where.qmd 
+    - posts/003_mapa_cantones_cr_p2.qmd 
+  draft-mode: gone

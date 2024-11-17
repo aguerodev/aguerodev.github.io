@@ -61,12 +61,10 @@ website:
           - text: "Web Scraping y Automatización con R"
             icon: "bi-globe"
             href: courses/web_scraping.qmd
-      - text: "Sesiones de consulta"
+      - text: "Ayuda con R"
         href: domingos_pr.qmd
       - text: Blog
         file: posts.qmd
-      - text: Donaciones
-        file: donadores.qmd
 
     right:
       - icon: twitter

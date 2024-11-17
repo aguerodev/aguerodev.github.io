@@ -1,7 +1,7 @@
 ---
 title: "Cómo crear leyendas personalizadas en tus gráficos utilizando ggplot2"
 description: "Explora las nuevas funcionalidades de ggplot2 3.5 y lleva tus gráficos al próximo nivel personalizando tus leyendas hasta el último detalle"
-date: 2024-04-16
+date: 2024-11-01
 author: "Carlos Aguero B"
 categories: ['Guías Paso a Paso', 'ggplot2']
 lang: "es"
