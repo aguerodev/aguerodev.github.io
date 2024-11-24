@@ -6,9 +6,6 @@ author: "Carlos Aguero B"
 categories: ['Guías Paso a Paso', 'ggplot2']
 lang: "es"
 image: images/legend_example.png
-comments:
-  utterances:
-    repo: aguerodev/aguerodev.github.io
 toc: true
 code-line-numbers: true
 code-copy: true
