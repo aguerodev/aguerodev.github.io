@@ -85,6 +85,7 @@ format:
       sidebar-width: 280px
     theme: seem.scss
     highlight-style: seem.theme
+    include-after-body: plausible.html
     metadata:
       pagetitle: "{{< meta title >}}"
       freeze: true

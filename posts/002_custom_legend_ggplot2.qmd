@@ -13,6 +13,8 @@ toc: true
 code-line-numbers: true
 code-copy: true
 toc-location: left
+execute: 
+  freeze: true
 editor_options: 
   chunk_output_type: console
 ---
@@ -618,25 +620,5 @@ Aunque hay diferencias notables, como el uso de las tipografías, colores y otro
 
 ---
 
-
-:::: {.columns}
-
-::: {.column width="50%"}
-![](../images/ggplot2_v2.jpg)
-:::
-
-::: {.column width="50%"}
-
-### Nuevo Curso: Visualización de Datos con ggplot2
-
-
-Si has llegado hasta aquí, permíteme hacerte una invitación a nuestro nuevo curso: '**Visualización de Datos con ggplot2**', que inicia el próximo **martes, 4 de junio de 2024**.
-
-Este curso está diseñado para aquellos que ya tienen experiencia en la creación de gráficos con ggplot2 y desean entender el paquete a fondo ademas de replicar hermosos gráficos que solemos ver en publicaciones como The Economist, The New York Times y otros medios reconocidos.
-
-[Ver el curso](https://aprendetidyverse.com/courses/avz_ggplot2.html){.btn .btn-outline-primary .btn role="button"} 
-:::
-
-::::
-
-
+<script defer src="https://rstudio-commentoplusplus.n5hlxm.easypanel.host/js/commento.js"></script>
+<div id="commento"></div>

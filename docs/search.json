@@ -46,7 +46,7 @@
     "href": "posts/002_custom_legend_ggplot2.html#conclusión",
     "title": "Cómo crear leyendas personalizadas en tus gráficos utilizando ggplot2",
     "section": "Conclusión",
-    "text": "Conclusión\nAunque hay diferencias notables, como el uso de las tipografías, colores y otros detalles, creo que logramos una similitud razonable. El gráfico original está hecho con la herramienta Datawrapper, muy usada por periodistas y una excelente alternativa si te quieres evitar tanto código, pero… como dije al inicio de este post, solo buscamos explorar las capacidades del paquete.\n\n\n\n\n\n\nNuevo Curso: Visualización de Datos con ggplot2\nSi has llegado hasta aquí, permíteme hacerte una invitación a nuestro nuevo curso: ‘Visualización de Datos con ggplot2’, que inicia el próximo martes, 4 de junio de 2024.\nEste curso está diseñado para aquellos que ya tienen experiencia en la creación de gráficos con ggplot2 y desean entender el paquete a fondo ademas de replicar hermosos gráficos que solemos ver en publicaciones como The Economist, The New York Times y otros medios reconocidos.\nVer el curso"
+    "text": "Conclusión\nAunque hay diferencias notables, como el uso de las tipografías, colores y otros detalles, creo que logramos una similitud razonable. El gráfico original está hecho con la herramienta Datawrapper, muy usada por periodistas y una excelente alternativa si te quieres evitar tanto código, pero… como dije al inicio de este post, solo buscamos explorar las capacidades del paquete."
   },
   {
     "objectID": "posts/002_custom_legend_ggplot2.html#footnotes",

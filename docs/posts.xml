@@ -2781,17 +2781,9 @@ font-style: inherit;">0.5</span>)</span>
 <h2 class="anchored" data-anchor-id="conclusión">Conclusión</h2>
 <p>Aunque hay diferencias notables, como el uso de las tipografías, colores y otros detalles, creo que logramos una similitud razonable. El gráfico original está hecho con la herramienta <a href="https://www.datawrapper.de">Datawrapper</a>, muy usada por periodistas y una excelente alternativa si te quieres evitar tanto código, pero… como dije al inicio de este post, solo buscamos explorar las capacidades del paquete.</p>
 <hr>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img src="https://aprendetidyverse.com/images/ggplot2_v2.jpg" class="img-fluid"></p>
-</div><div class="column" style="width:50%;">
-<section id="nuevo-curso-visualización-de-datos-con-ggplot2" class="level3">
-<h3 class="anchored" data-anchor-id="nuevo-curso-visualización-de-datos-con-ggplot2">Nuevo Curso: Visualización de Datos con ggplot2</h3>
-<p>Si has llegado hasta aquí, permíteme hacerte una invitación a nuestro nuevo curso: ‘<strong>Visualización de Datos con ggplot2</strong>’, que inicia el próximo <strong>martes, 4 de junio de 2024</strong>.</p>
-<p>Este curso está diseñado para aquellos que ya tienen experiencia en la creación de gráficos con ggplot2 y desean entender el paquete a fondo ademas de replicar hermosos gráficos que solemos ver en publicaciones como The Economist, The New York Times y otros medios reconocidos.</p>
-<p><a href="https://aprendetidyverse.com/courses/avz_ggplot2.html" class="btn btn-outline-primary">Ver el curso</a></p>
-</section>
-</div>
+<script defer="" src="https://rstudio-commentoplusplus.n5hlxm.easypanel.host/js/commento.js"></script>
+<div id="commento">
+
 </div>
 
 
@@ -2809,37 +2801,6 @@ font-style: inherit;">0.5</span>)</span>
   <guid>https://aprendetidyverse.com/posts/002_custom_legend_ggplot2.html</guid>
   <pubDate>Fri, 01 Nov 2024 06:00:00 GMT</pubDate>
   <media:content url="https://aprendetidyverse.com/posts/images/legend_example.png" medium="image" type="image/png" height="58" width="144"/>
-</item>
-<item>
-  <title>DuckDB: La Base de Datos que Simplemente Funciona 🚀</title>
-  <dc:creator>Carlos Aguero</dc:creator>
-  <link>https://aprendetidyverse.com/posts/006_dplyr_select_tutorial.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
-  author = {Aguero, Carlos},
-  title = {DuckDB: La Base de Datos que Simplemente Funciona 🚀},
-  date = {2024-05-31},
-  url = {https://aprendetidyverse.com/posts/006_dplyr_select_tutorial.html},
-  langid = {es}
-}
-</code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-aguero2024" class="csl-entry quarto-appendix-citeas">
-Aguero, Carlos. 2024. <span>“DuckDB: La Base de Datos que Simplemente
-Funciona 🚀.”</span> May 31, 2024. <a href="https://aprendetidyverse.com/posts/006_dplyr_select_tutorial.html">https://aprendetidyverse.com/posts/006_dplyr_select_tutorial.html</a>.
-</div></div></section></div> ]]></description>
-  <category>Guías Paso a Paso</category>
-  <category>duckdb</category>
-  <category>dplyr</category>
-  <category>DBI</category>
-  <guid>https://aprendetidyverse.com/posts/006_dplyr_select_tutorial.html</guid>
-  <pubDate>Fri, 31 May 2024 06:00:00 GMT</pubDate>
-  <media:content url="https://miro.medium.com/v2/resize:fit:1358/1*woaPPp2Hq10SJqN6sgH0yQ.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Actualizando el mapa de cantones de Costa Rica con R</title>
