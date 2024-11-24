@@ -429,4 +429,6 @@ Justo el día anterior 19 de febrero del 2024, en primer debate se aprobó el ex
 
 Así que menos mal que ya sabemos cómo tener el mapa actualizado, porque si por la fecha se saca el día, lo vamos a tener que hacer con frecuencia en los próximos años.
 
+<script defer src="https://rstudio-commentoplusplus.n5hlxm.easypanel.host/js/commento.js"></script>
+<div id="commento"></div>
 

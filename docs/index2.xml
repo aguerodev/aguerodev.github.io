@@ -2811,6 +2811,37 @@ font-style: inherit;">0.5</span>)</span>
   <media:content url="https://aprendetidyverse.com/posts/images/legend_example.png" medium="image" type="image/png" height="58" width="144"/>
 </item>
 <item>
+  <title>DuckDB: La Base de Datos que Simplemente Funciona 🚀</title>
+  <dc:creator>Carlos Aguero</dc:creator>
+  <link>https://aprendetidyverse.com/posts/006_dplyr_select_tutorial.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{aguero2024,
+  author = {Aguero, Carlos},
+  title = {DuckDB: La Base de Datos que Simplemente Funciona 🚀},
+  date = {2024-05-31},
+  url = {https://aprendetidyverse.com/posts/006_dplyr_select_tutorial.html},
+  langid = {es}
+}
+</code></pre><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-aguero2024" class="csl-entry quarto-appendix-citeas">
+Aguero, Carlos. 2024. <span>“DuckDB: La Base de Datos que Simplemente
+Funciona 🚀.”</span> May 31, 2024. <a href="https://aprendetidyverse.com/posts/006_dplyr_select_tutorial.html">https://aprendetidyverse.com/posts/006_dplyr_select_tutorial.html</a>.
+</div></div></section></div> ]]></description>
+  <category>Guías Paso a Paso</category>
+  <category>duckdb</category>
+  <category>dplyr</category>
+  <category>DBI</category>
+  <guid>https://aprendetidyverse.com/posts/006_dplyr_select_tutorial.html</guid>
+  <pubDate>Fri, 31 May 2024 06:00:00 GMT</pubDate>
+  <media:content url="https://miro.medium.com/v2/resize:fit:1358/1*woaPPp2Hq10SJqN6sgH0yQ.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>Actualizando el mapa de cantones de Costa Rica con R</title>
   <dc:creator>Carlos Aguero</dc:creator>
   <link>https://aprendetidyverse.com/posts/001_mapa_cantones_cr.html</link>
@@ -3618,6 +3649,10 @@ font-style: inherit;">"bottom"</span></span>
 <li><p>Expediente 22.874: Creación del Cantón Ojo de Agua, Cantón XVII de la Provincia de Alajuela.</p></li>
 </ol>
 <p>Así que menos mal que ya sabemos cómo tener el mapa actualizado, porque si por la fecha se saca el día, lo vamos a tener que hacer con frecuencia en los próximos años.</p>
+<script defer="" src="https://rstudio-commentoplusplus.n5hlxm.easypanel.host/js/commento.js"></script>
+<div id="commento">
+
+</div>
 
 
 </section>

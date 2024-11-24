@@ -1244,5 +1244,12 @@
     "title": "Apoya nuestro proyecto",
     "section": "Cómo Puedes Ayudar",
     "text": "Cómo Puedes Ayudar\nPara poder seguir adelante, necesitamos incorporar más instructores y asistentes a los cursos. Es por eso que hemos habilitado la sección de donaciones, para que estudiantes, amigos y entusiastas de los datos puedan contribuir con una donación mensual, ayudándonos a sostener económicamente el proyecto.\nCon su apoyo, podremos seguir ofreciendo el 50% de los cupos en cada curso de forma completamente gratuita y abierta, enfocados en la comunidad universitaria y colaboradores de ONG. Como donador recibirás cada mes un informe detallado sobre la cantidad de estudiantes que, mes a mes, reciben clases gratuitas, el total de horas invertidas, así como testimonios e historias de estos estudiantes."
+  },
+  {
+    "objectID": "posts/006_dplyr_select_tutorial.html",
+    "href": "posts/006_dplyr_select_tutorial.html",
+    "title": "DuckDB: La Base de Datos que Simplemente Funciona 🚀",
+    "section": "",
+    "text": "Cómo citarBibTeX@online{aguero2024,\n  author = {Aguero, Carlos},\n  title = {DuckDB: La Base de Datos que Simplemente Funciona 🚀},\n  date = {2024-05-31},\n  url = {https://aprendetidyverse.com/posts/006_dplyr_select_tutorial.html},\n  langid = {es}\n}\nPor favor, cita este trabajo como:\nAguero, Carlos. 2024. “DuckDB: La Base de Datos que Simplemente\nFunciona 🚀.” May 31, 2024. https://aprendetidyverse.com/posts/006_dplyr_select_tutorial.html."
   }
 ]
