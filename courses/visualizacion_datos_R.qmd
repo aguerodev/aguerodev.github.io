@@ -59,13 +59,13 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 ::: {.column width="45%"}
 ## Inscríbete Ahora
 + Próxima apertura:
-    + **sábado 21 de septiembre**
+    + **martes 14 de enero de 2025**
     + 10:00 a.m. Costa Rica
 + Duración: 6 semanas
 + Clases en vivo
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Visualización%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=sábado%2021%20de%20septiembre%20de%202024&id=curso_visualizacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Visualización%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2014%20de%20enero%20de%202025&id=curso_visualizacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -116,7 +116,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 ::: {.column width="45%"}
 ## Inscríbete Ahora
 
-+ Inicio de lecciones: **martes 26 de noviembre**
++ Inicio de lecciones:  **martes 14 de enero de 2025**
 + Clases en vivo
 + Grabaciones de las clases
 + Sesiones de seguimiento personalizadas
@@ -125,7 +125,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 + Certificado compatible con LinkedIn emitido por Certifier
 + **Precio: $200 USD**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Visualización%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=sábado%2021%20de%20septiembre%20de%202024&id=curso_visualizacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Visualización%20de%20datos%20con%20R&precio=%24200%20USD&fecha_inicio=martes%2014%20de%20enero%20de%202025&id=curso_visualizacion_R&precio_cr=103,400%20colones){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
