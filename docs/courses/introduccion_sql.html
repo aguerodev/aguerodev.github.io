@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,10 +40,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4f218ed4d3f96dc817bb3ed296f4db29.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-123c57eb50b74140f39276312ca2c945.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -328,14 +328,14 @@ La última semana está dedicada al proyecto final, donde los estudiantes aplica
 <ul>
 <li>Próxima apertura:
 <ul>
-<li><strong>sábado 28 de septiembre</strong></li>
+<li><strong>jueves 6 de marzo</strong></li>
 <li>6:00 p.m. Costa Rica</li>
 </ul></li>
 <li>Duración: 6 semanas</li>
 <li>Clases en vivo</li>
-<li><strong>Precio: $200 USD</strong></li>
+<li><strong>Precio: $80 USD</strong></li>
 </ul>
-<p><a href="https://tally.so/r/mYQb4N?curso=Introducci%C3%B3n+a+SQL+y+su+integraci%C3%B3n+con+R&amp;precio=%24200%20USD&amp;fecha_inicio=s%C3%A1bado+28+de+septiembre+de+2024&amp;id=curso_sql_integracion_R&amp;precio_cr=103%252C400+colones" class="btn btn-outline-primary" role="button">Inscribirte ahora</a></p>
+<p><a href="https://bit.ly/3EkNaJA" class="btn btn-outline-primary" role="button">Inscribirte ahora</a></p>
 </section>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -378,12 +378,10 @@ La última semana está dedicada al proyecto final, donde los estudiantes aplica
 <li>Clases en vivo</li>
 <li>Grabaciones de las clases</li>
 <li>Sesiones de seguimiento personalizadas</li>
-<li>Acceso a una comunidad de aprendizaje</li>
-<li>Ayuda en minutos a través de Zoom o WhatsApp</li>
-<li>Certificado compatible con LinkedIn emitido por Certifier</li>
-<li><strong>Precio: $200 USD</strong></li>
+<li>Certificado emitido por Certifier</li>
+<li><strong>Precio: $80 USD</strong></li>
 </ul>
-<p><a href="https://tally.so/r/mYQb4N?curso=Introducci%C3%B3n+a+SQL+y+su+integraci%C3%B3n+con+R&amp;precio=%24200%20USD&amp;fecha_inicio=s%C3%A1bado+28+de+septiembre+de+2024&amp;id=curso_sql_integracion_R&amp;precio_cr=103%252C400+colones" class="btn btn-outline-primary" role="button">Inscribirte ahora</a></p>
+<p><a href="https://bit.ly/3EkNaJA" class="btn btn-outline-primary" role="button">Inscribirte ahora</a></p>
 </section>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -487,8 +485,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -599,7 +595,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

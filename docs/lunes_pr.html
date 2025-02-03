@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.32">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="">
 <meta name="description" content="Cada domingo a las 6:00 p.m. hora de Costa Rica (UTC-6), te invitamos a resolver tus dudas sobre R en nuestras sesiones interactivas. Obtén asesoría personalizada y consejos prácticos que te ayudarán a avanzar en tu aprendizaje del lenguaje de programación R.">
 
-<title>Aprende Tidyverse – Aprende Tidyverse - domingos de preguntas y respuestas</title>
+<title>Aprende Tidyverse - domingos de preguntas y respuestas – Aprende Tidyverse</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,10 +40,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-4f218ed4d3f96dc817bb3ed296f4db29.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-123c57eb50b74140f39276312ca2c945.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -141,32 +141,37 @@ cookieconsent.run({
  <span class="menu-text">Cursos</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cursos">    
-        <li class="dropdown-header">Cursos de R</li>
+        <li class="dropdown-header">Programa de completo 5 cursos</li>
         <li>
-    <a class="dropdown-item" href="./courses/r4ds.html"><i class="bi bi-graph-up-arrow" role="img">
+    <a class="dropdown-item" href="./courses/fundamentos_R.html"><i class="bi bi-laptop" role="img">
 </i> 
- <span class="dropdown-text">R para ciencia de datos</span></a>
+ <span class="dropdown-text">Fundamentos de R y Rstudio</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./courses/intro_shiny.html"><i class="bi bi-window-split" role="img">
+    <a class="dropdown-item" href="./courses/visualizacion_datos_R.html"><i class="bi bi-palette" role="img">
 </i> 
- <span class="dropdown-text">Desarrollo de aplicaciones con shiny (intermedio)</span></a>
+ <span class="dropdown-text">Visualización de datos con R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./courses/web_scraping.html"><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="./courses/manipulacion_datos_R.html"><i class="bi bi-tools" role="img">
 </i> 
- <span class="dropdown-text">Web Scraping con R (avanzado)</span></a>
+ <span class="dropdown-text">Limpieza y Manipulación de datos con R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./courses/avz_ggplot2.html"><i class="bi bi-palette" role="img">
+    <a class="dropdown-item" href="./courses/introduccion_sql.html"><i class="bi bi-database" role="img">
 </i> 
- <span class="dropdown-text">Visualización de datos con ggplot2 (avanzado)</span></a>
+ <span class="dropdown-text">Introducción a SQL y su integración con R</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/web_scraping.html"><i class="bi bi-globe" role="img">
+</i> 
+ <span class="dropdown-text">Web Scraping y Automatización con R</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="./domingos_pr.html"> 
-<span class="menu-text">Sesiones de Consultas</span></a>
+<span class="menu-text">Ayuda con R</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./posts.html"> 
@@ -265,6 +270,7 @@ cookieconsent.run({
 </section>
 
 </main> <!-- /main -->
+<script defer="" data-domain="aprendetidyverse.com" src="https://rstudio-plausible.n5hlxm.easypanel.host/js/script.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -347,8 +353,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -459,7 +463,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
