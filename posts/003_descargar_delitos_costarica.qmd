@@ -1,0 +1,261 @@
+---
+title: "Automatización de la descarga de datos de delitos en Costa Rica"
+description: "En este post aprenderemos cómo automatizar desde R la descarga, unificación y limpieza de datos sobre delitos en Costa Rica, obtenidos desde la plataforma del Poder Judicial."
+date: 2025-03-04
+date-modified: 2025-03-04
+categories: ["webscraping", "selenider"] 
+lang: "es"
+image: images/oij.png
+toc: true
+code-line-numbers: true
+code-copy: true
+toc-location: left
+format: html
+editor_options: 
+  chunk_output_type: console
+execute: 
+  freeze: true
+author:
+  - name: Carlos Agüero B
+    affiliation: Aprende Tidyverse
+    affiliation-url: https://aprendetidyverse.com/
+citation: true
+---
+
+## Introducción: ¿Por qué hacer esto?
+
+Todos los días escuchamos en las noticias acerca del incremento en los homicidios y la inseguridad en Costa Rica, pero, siempre que lo oigo, y sobre todo cifras, lo primero que pienso es ¿y de dónde sacaron los datos? ¿Cómo hicieron el cálculo? (Cosa que, creo, los medios, por transparencia, siempre deberían publicar: los datasets y los cálculos, ya sea en un Excel, un notebook de Python o lo que sea). Es fundamental que, como ciudadanos, dispongamos de acceso a la información para que podamos comprobar de manera independiente lo que realmente sucede en el país.
+
+
+Con esa idea en mente, surge este mini tutorial, en el cual mostraré, paso a paso, cómo utilizar R para descargar, unificar y limpiar la información proporcionada por el Poder Judicial.
+
+## Reto 1: Automatizar la descarga
+
+El primer problema se presentó cuando noté que la plataforma solo permite descargar los datos un año a la vez (o, al menos, a mí me da error si intento descargar varios años juntos). Hacerlo manualmente para 10 años no era opción para mí. Soy de ese tipo de persona que prefiere pasar dos horas automatizando una tarea que podría hacerse en 15 minutos manualmente. Eso debe tener un nombre o, como mínimo, estar tipificado en el DSM-5.
+
+Para lograr esto, vamos a utilizar los paquetes [selenider](https://ashbythorpe.github.io/selenider/index.html) y [chromote](https://rstudio.github.io/chromote/), una combinación que nos permite hacer web scraping de forma sencilla y, además, resuelve muchos de los problemas que teníamos al trabajar con [RSelenium](https://docs.ropensci.org/RSelenium/).
+
+### Selenider en 1 minuto:
+
+1. Levantas una sesión que controla el navegador por defecto, Chrome.
+
+```{r}
+#| eval: false
+
+library(selenider)
+
+session <- selenider_session(
+  "chromote",
+  timeout = 10,
+  options = chromote_options(headless = FALSE)
+)
+```
+
+2. Abrir una url 
+
+```{r}
+#| eval: false
+open_url("https://www.r-project.org/")
+```
+
+3. Seleccionas elementos usando CSS o XPath.
+
+```{r}
+#| eval: false
+
+# selecciona los elementos con el id css rStudioHeader
+header <- s("#rStudioHeader") 
+```
+
+3. Realizas acciones como clic, llenar información, hacer scroll, etc.
+
+```{r}
+#| eval: false
+
+s(".claseBoton") |>
+  elem_click()
+```
+
+1. `elem_click()`
+
+Realiza un clic en el elemento especificado.
+
+2. `elem_right_click()`
+
+Ejecuta un clic derecho sobre el elemento.
+
+3. `elem_double_click()`
+
+Realiza un doble clic en el elemento.
+
+4. `elem_hover()`
+
+Posiciona el cursor sobre el elemento, simulando la acción de pasar el mouse por encima.
+
+5. `elem_scroll_to()`
+
+Desplaza la vista hasta el elemento indicado, lo cual es útil si el elemento no está visible antes de realizar un clic o interacción.
+
+
+Veamos cómo es el proceso manual para identificar qué es lo que debemos automatizar:
+
+1. Indicar las fechas de inicio y fin.
+
+![](images/fechas_oij.png){width=30%}
+
+2. Indicar el lugar del suceso.
+
+![](images/lugar_suceso.png){width=30%}
+
+3. Seleccionar la categoría delictiva.
+
+![](images/categoria_delictiva.png){width=30%}
+
+4. Indicar si se trata de víctima policial.
+
+![](images/victima_policial.png){width=30%}
+
+5. Hacer clic en el botón de descargar Excel.
+
+![](images/guardar_excel.png){width=25%}
+
+Código completo de la descargar limpieza de los datos
+
+```{r}
+#| code-fold: true
+#| eval: false
+
+library(rvest)
+library(selenider)
+library(lubridate)
+library(fs)
+library(purrr)
+library(janitor)
+library(glue)
+library(chromote)
+library(dplyr)
+library(readr)
+library(stringr)
+
+wait_for_download <- function(download_dir, filename, timeout = 60) {
+  start_time <- Sys.time()
+  file_path <- file.path(download_dir, filename)
+  while (
+    as.numeric(difftime(Sys.time(), start_time, units = "secs")) <= timeout
+  ) {
+    if (
+      file.exists(file_path) &&
+        length(list.files(download_dir, pattern = "\\.crdownload$")) == 0
+    ) {
+      return(TRUE)
+    }
+    Sys.sleep(1)
+  }
+  cli::cli_abort("Se acabó el tiempo de espera")
+}
+
+descargar_dataset_pj <- function(
+  date = lubridate::today(),
+  download_dir = "data",
+  filename = "Estadisticas.xls"
+) {
+  dir.create(download_dir, showWarnings = FALSE, recursive = TRUE)
+  full_path <- file.path(download_dir, filename)
+
+  session <- selenider_session(
+    "chromote",
+    timeout = 10,
+    options = chromote_options(headless = TRUE)
+  )
+  session$driver$Browser$setDownloadBehavior(
+    behavior = "allow",
+    downloadPath = normalizePath(download_dir)
+  )
+
+  open_url("https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/")
+
+  start_date <- format(date, "%d/%m/%Y")
+  end_date <- update(date, month = 12, day = 31)
+  end_date <- if_else(end_date > today(), today(), end_date)
+  end_date <- format(end_date, "%d/%m/%Y")
+
+  execute_js_expr(
+    "document.getElementById('txtFechaFinal').removeAttribute('readonly',0);"
+  )
+  execute_js_expr(glue(
+    "document.getElementById('txtFechaFinal').value = '{end_date}';",
+  ))
+
+  execute_js_expr(
+    "document.getElementById('txtFechaInicio').removeAttribute('readonly',0);"
+  )
+  execute_js_expr(glue(
+    "document.getElementById('txtFechaInicio').value = '{start_date}';",
+  ))
+
+  execute_js_expr("document.getElementById('chbTodoPais').click();")
+  execute_js_expr("document.getElementById('chbTodoDelitos').click();")
+  execute_js_expr("document.getElementById('chbTodaVictima').click();")
+
+  execute_js_expr("document.getElementById('btnExcel').click();")
+
+  wait_for_download(download_dir, filename)
+
+  new_filename <- paste0("delitos_", format(date, "%Y-%m-%d"), ".html")
+  new_path <- file.path(download_dir, new_filename)
+  fs::file_move(full_path, new_path)
+
+  return(new_path)
+}
+
+.years <- ymd("2025-01-01") - years(0:11)
+
+df <- map(
+  .years,
+  \(x) {
+    .file <- descargar_dataset_pj(date = x)
+    df <- read_html(.file) |>
+      html_table()
+    df <- df[[1]]
+    return(df)
+  },
+  .progress = TRUE
+) |>
+  list_rbind()
+
+df |>
+  clean_names() |>
+  mutate(
+    across(where(is.character), str_to_title),
+    fecha = ymd(fecha)
+  ) |>
+  readr::write_rds(glue("data/delitos_{today()}.rds"))
+```
+
+
+
+## Reto 2: Problemas con el archivo descargado
+
+Luego de realizar la descarga apareció un nuevo problema. Al intentar abrir desde R el archivo, me encontré con un error: el archivo parecía corrupto o mal formateado. Era raro, porque si abría el archivo directamente desde Excel, todo funcionaba bien.
+
+Revisando el código fuente de la web, pude encontrar que el archivo se genera a partir de una tabla HTML que se codifica en Base64, asignándole la extensión ".xls" y un MIME type de Excel (Excel viejito). Esto quiere decir que, aunque se pretende que sea un archivo de Excel, el contenido real es HTML y no el formato binario nativo de Excel (xls). Excel, que siempre que puede resuelve, logra detectar ese contenido y mostrar la tabla correctamente, pero el paquete readxl —que utiliza la librería libxls— requiere específicamente el formato binario de Excel para poder abrirlo. Por eso, al intentar abrirlo en R se produce el error *libxls error: Unable to open file*, porque, **sorpresa, ¡no es un archivo de Excel!**
+
+La solución fue sencilla, si se trata de un archivo `HTML`, basta con cambiarle la extensión a `.html` y usar la función `read_html` del paquete `rvest`. Una vez resuelto esto, quedó completamente automatizado el proceso de descarga de 10 años de registros en un clic.
+
+## Reto 3: Limpieza y normalización de los datos
+
+A partir de aquí, el trabajo de limpieza es muy corto. Se normalizan los nombres de las columnas y, además, se ajustan las variables de tipo texto para evitar tenerlas únicamente en mayúsculas.
+
+Aquí, alguien podría preguntarse: ¿por qué, entonces, no descargar directamente el archivo `.csv` y listo? Pasa que, por algún motivo que desconozco, al archivo CSV le falta la columna "distrito". Asumo que está relacionado con la forma en que se genera desde la tabla HTML original, pero, a decir verdad, no lo investigué.
+
+Puedes descargar los datos en el siguiente enlace [descargar datos](../data/delitos_2025-03-03.zip)
+
+## ¿Y ahora qué?
+
+Esta sería la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica, su evolución, y podremos salir de la duda que inició todo: ¿es realmente el aumento de la inseguridad solo un tema de percepción [(como hace un tiempo decía un ministro en un podcast)](https://www.crhoy.com/nacionales/nuevo-podcast-del-gobierno-plantea-crisis-de-homicidios-como-un-tema-de-percepcion/)? Spoiler:
+
+![](https://mystickermania.com/cdn/stickers/memes/bugs-bunnys-no-meme-512x512.png){width=25%}
+
+Finalmente, un reconocimiento especial al Poder Judicial por el esfuerzo y la transparencia de poner estos datos a disposición abierta de la ciudadanía; sin embargo, es importante mencionar que la plataforma todavía tiene puntos destacables de mejora en la web.
+
+¡Nos vemos en ese próximo post!

@@ -19,13 +19,6 @@ website:
     right: |
       Hecho con {{< fa heart >}} desde Costa Rica usando {{< fa brands r-project >}} y [Quarto](https://quarto.org/)<br>
       [Revisa el código fuente en {{< fa brands github >}} GitHub](https://github.com/aguerodev/aguerodev.github.io)
-  cookie-consent:
-    type: express
-    style: headline
-    palette: light
-  google-analytics:
-    tracking-id: "G-7HH46G4FS3"
-    anonymize-ip: true
   bread-crumbs: true
   open-graph:
     locale: es_ES
@@ -61,8 +54,6 @@ website:
           - text: "Web Scraping y Automatización con R"
             icon: "bi-globe"
             href: courses/web_scraping.qmd
-      - text: "Ayuda con R"
-        href: domingos_pr.qmd
       - text: Blog
         file: posts.qmd
 

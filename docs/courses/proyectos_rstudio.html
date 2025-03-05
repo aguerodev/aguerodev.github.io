@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.32">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="">
 <meta name="description" content="¿Estás listo para llevar tus proyectos de ciencia de datos al siguiente nivel? 🚀📊">
 
-<title>Aprende Tidyverse – Organización y documentación de proyectos en RStudio</title>
+<title>Organización y documentación de proyectos en RStudio – Aprende Tidyverse</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,17 +33,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../favicon.ico" rel="icon">
-<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-abf7f27472d8b8900bc5088ecf17f93b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-123c57eb50b74140f39276312ca2c945.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -73,33 +71,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7HH46G4FS3"></script>
-
-<script type="text/plain" cookie-consent="tracking">
-
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-7HH46G4FS3', { 'anonymize_ip': true});
-</script>
-
-<script type="text/javascript" charset="UTF-8">
-document.addEventListener('DOMContentLoaded', function () {
-cookieconsent.run({
-  "notice_banner_type":"headline",
-  "consent_type":"express",
-  "palette":"light",
-  "language":"en",
-  "page_load_consent_levels":["strictly-necessary"],
-  "notice_banner_reject_button_hide":false,
-  "preferences_center_close_button_hide":false,
-  "website_name":""
-  ,
-"language":"es"
-  });
-});
-</script> 
-  
 <meta property="og:title" content="Organización y documentación de proyectos en RStudio">
 <meta property="og:description" content="¿Estás listo para llevar tus proyectos de ciencia de datos al siguiente nivel? 🚀📊">
 <meta property="og:url" content="https://aprendetidyverse.com/courses/web_scraping.html">
@@ -112,13 +83,15 @@ cookieconsent.run({
 
 <meta property="og:title" content="Organización y documentación de proyectos en RStudio">
 <meta property="og:description" content="¿Estás listo para llevar tus proyectos de ciencia de datos al siguiente nivel? 🚀📊">
+<meta property="og:image" content="https://aprendetidyverse.com/images/web_scraping_v2.jpg">
 <meta property="og:site_name" content="aprendetidyverse.com">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:title" content="Organización y documentación de proyectos en RStudio">
 <meta name="twitter:description" content="¿Estás listo para llevar tus proyectos de ciencia de datos al siguiente nivel? 🚀📊">
+<meta name="twitter:image" content="https://aprendetidyverse.com/images/web_scraping_v2.jpg">
 <meta name="twitter:creator" content="@dev_aguero">
 <meta name="twitter:site" content="@dev_aguero">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -147,9 +120,9 @@ cookieconsent.run({
  <span class="menu-text">Cursos</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cursos">    
-        <li class="dropdown-header">R para ciencia de datos</li>
+        <li class="dropdown-header">Programa de completo 5 cursos</li>
         <li>
-    <a class="dropdown-item" href="../courses/fundamentos_R.html"><i class="bi bi-book" role="img">
+    <a class="dropdown-item" href="../courses/fundamentos_R.html"><i class="bi bi-laptop" role="img">
 </i> 
  <span class="dropdown-text">Fundamentos de R y Rstudio</span></a>
   </li>  
@@ -159,41 +132,22 @@ cookieconsent.run({
  <span class="dropdown-text">Visualización de datos con R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../courses/documentos_con_quarto.html"><i class="bi bi-book" role="img">
-</i> 
- <span class="dropdown-text">Desarrollo de reportes y documentos</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../courses/manipulacion_datos_R.html"><i class="bi bi-tools" role="img">
 </i> 
- <span class="dropdown-text">Manipulación de datos con R</span></a>
+ <span class="dropdown-text">Limpieza y Manipulación de datos con R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../courses/limpieza_importacion.html"><i class="bi bi-window-split" role="img">
-</i> 
- <span class="dropdown-text">Limpieza e inportación de datos</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../courses/introduccion_sql.html"><i class="bi bi-window-split" role="img">
+    <a class="dropdown-item" href="../courses/introduccion_sql.html"><i class="bi bi-database" role="img">
 </i> 
  <span class="dropdown-text">Introducción a SQL y su integración con R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../courses/web_scraping.html"><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="../courses/web_scraping.html"><i class="bi bi-globe" role="img">
 </i> 
  <span class="dropdown-text">Web Scraping y Automatización con R</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../courses/desarrollo_proyectos_R.html"><i class="bi bi-bug" role="img">
-</i> 
- <span class="dropdown-text">Organización y documentación de proyectos en RStudio</span></a>
-  </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../domingos_pr.html"> 
-<span class="menu-text">Sesiones de Consultas</span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../posts.html"> 
 <span class="menu-text">Blog</span></a>
@@ -242,8 +196,6 @@ cookieconsent.run({
   <li><a href="#tienes-dudas-hablemos-sin-compromiso" id="toc-tienes-dudas-hablemos-sin-compromiso" class="nav-link" data-scroll-target="#tienes-dudas-hablemos-sin-compromiso">¿Tienes dudas? Hablemos sin compromiso 😊</a></li>
   </ul></li>
   <li><a href="#conoce-lo-que-dicen-nuestros-estudiantes" id="toc-conoce-lo-que-dicen-nuestros-estudiantes" class="nav-link" data-scroll-target="#conoce-lo-que-dicen-nuestros-estudiantes">Conoce lo que dicen nuestros estudiantes</a></li>
-  <li><a href="#inscríbete-ahora-1" id="toc-inscríbete-ahora-1" class="nav-link" data-scroll-target="#inscríbete-ahora-1">Inscríbete Ahora</a></li>
-  <li><a href="#ponte-en-contacto" id="toc-ponte-en-contacto" class="nav-link" data-scroll-target="#ponte-en-contacto">Ponte en contacto</a></li>
   </ul>
 </nav>
     </div>
@@ -379,9 +331,8 @@ La última semana está dedicada a la automatización de procesos ETL (Extract, 
 </iframe>
 <script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
 <hr>
-<p>:::: {.columns} No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.</p>
-</section>
-<div class="column" style="width:45%;">
+<div class="columns">
+<p>No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.</p><div class="column" style="width:45%;">
 <section id="inscríbete-ahora-1" class="level2">
 <h2 class="anchored" data-anchor-id="inscríbete-ahora-1">Inscríbete Ahora</h2>
 <ul>
@@ -396,8 +347,7 @@ La última semana está dedicada a la automatización de procesos ETL (Extract, 
 </ul>
 <p><a href="https://tally.so/r/mYQb4N?curso=Web%20Scraping%20y%20Automatización%20con%20R&amp;precio=%24200%20USD&amp;fecha_inicio=martes%2030%20de%20septiembre&amp;id=curso_web_scraping_R&amp;precio_cr=103,400%20colones" class="btn btn-outline-primary" role="button">Inscribirte ahora</a></p>
 </section>
-</div>
-<div class="column" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../images/prof_v3.jpg" class="img-fluid figure-img"></p>
@@ -405,16 +355,18 @@ La última semana está dedicada a la automatización de procesos ETL (Extract, 
 </figure>
 </div>
 <p>::</p>
-</div>
-<section id="ponte-en-contacto" class="level2">
+</div><section id="ponte-en-contacto" class="level2">
 <h2 class="anchored" data-anchor-id="ponte-en-contacto">Ponte en contacto</h2>
 <p>La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible.</p>
 <p>Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en <a href="https://www.linkedin.com/in/carlos-aguero-cr">LinkedIn</a> o en <a href="https://twitter.com/dev_aguero">Twitter</a> (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!</p>
 
 
 </section>
+</div>
+</section>
 
 </main> <!-- /main -->
+<script defer="" data-domain="aprendetidyverse.com" src="https://rstudio-plausible.n5hlxm.easypanel.host/js/script.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -497,8 +449,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -609,7 +559,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -854,7 +803,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    </div>
     <div class="nav-footer-right">
 <p>Hecho con <i class="fa-solid fa-heart" aria-label="heart"></i> desde Costa Rica usando <i class="fa-brands fa-r-project" aria-label="r-project"></i> y <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/aguerodev/aguerodev.github.io">Revisa el código fuente en <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></p>
 </div>
