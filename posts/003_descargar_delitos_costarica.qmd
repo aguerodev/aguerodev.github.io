@@ -22,6 +22,24 @@ author:
 citation: true
 ---
 
+<meta property="og:title" content="Automatización de la descarga de datos de delitos en Costa Rica" />
+<meta property="og:description" content="En este post aprenderemos cómo automatizar desde R la descarga, unificación y limpieza de datos sobre delitos en Costa Rica, obtenidos desde la plataforma del Poder Judicial." />
+<meta property="og:type" content="video.other" />
+<meta property="og:url" content="https://aprendetidyverse.com/automatizacion-delitos" />
+<meta property="og:image" content="https://aprendetidyverse.com/images/oij.png" />
+<meta property="og:site_name" content="Aprende Tidyverse" />
+<meta property="og:locale" content="es_ES" />
+
+<meta property="article:published_time" content="2025-03-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-03-04T00:00:00+00:00" />
+
+<!-- Open Graph Video Preview -->
+<meta property="og:video" content="https://player.vimeo.com/video/710119524?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" />
+<meta property="og:video:secure_url" content="https://player.vimeo.com/video/710119524?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" />
+<meta property="og:video:type" content="text/html" />
+<meta property="og:video:width" content="1280" />
+<meta property="og:video:height" content="720" />
+
 ## Introducción: ¿Por qué hacer esto?
 
 Todos los días escuchamos en las noticias acerca del incremento en los homicidios y la inseguridad en Costa Rica, pero, siempre que lo oigo, y sobre todo cifras, lo primero que pienso es ¿y de dónde sacaron los datos? ¿Cómo hicieron el cálculo? (Cosa que, creo, los medios, por transparencia, siempre deberían publicar: los datasets y los cálculos, ya sea en un Excel, un notebook de Python o lo que sea). Es fundamental que, como ciudadanos, dispongamos de acceso a la información para que podamos comprobar de manera independiente lo que realmente sucede en el país.
@@ -118,6 +136,10 @@ Veamos cómo es el proceso manual para identificar qué es lo que debemos automa
 5. Hacer clic en el botón de descargar Excel.
 
 ![](images/guardar_excel.png){width=25%}
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/710119524?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="The Art of Work"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+
+
 
 Código completo de la descargar limpieza de los datos
 
