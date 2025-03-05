@@ -27,7 +27,7 @@ citation: true
 Todos los días escuchamos en las noticias acerca del incremento en los homicidios y la inseguridad en Costa Rica, pero, siempre que lo oigo, y sobre todo cifras, lo primero que pienso es ¿y de dónde sacaron los datos? ¿Cómo hicieron el cálculo? (Cosa que, creo, los medios, por transparencia, siempre deberían publicar: los datasets y los cálculos, ya sea en un Excel, un notebook de Python o lo que sea). Es fundamental que, como ciudadanos, dispongamos de acceso a la información para que podamos comprobar de manera independiente lo que realmente sucede en el país.
 
 
-Con esa idea en mente, surge este mini tutorial, en el cual mostraré, paso a paso, cómo utilizar R para descargar, unificar y limpiar la información proporcionada por el Poder Judicial.
+Con esa idea en mente, surge este mini tutorial, en el cual mostraré, paso a paso, cómo utilizar R para descargar, unificar y limpiar la información proporcionada por el [Poder Judicial](https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/).
 
 ## Reto 1: Automatizar la descarga
 
