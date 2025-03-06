@@ -41,7 +41,7 @@ bibliography: references.bib
 <meta property="og:video:width" content="1280" />
 <meta property="og:video:height" content="720" />
 
-::: {.callout-note}
+::: {.callout-warning}
 Este post está en construcción, puede tener cambios y no se garantiza que el código funcione.
 :::
 

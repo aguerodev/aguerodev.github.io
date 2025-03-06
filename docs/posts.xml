@@ -35,13 +35,26 @@
 <meta property="og:video:type" content="text/html">
 <meta property="og:video:width" content="1280">
 <meta property="og:video:height" content="720">
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Advertencia
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este post está en construcción, puede tener cambios y no se garantiza que el código funcione.</p>
+</div>
+</div>
 <section id="introducción-por-qué-hacer-esto" class="level2">
 <h2 class="anchored" data-anchor-id="introducción-por-qué-hacer-esto">Introducción: ¿Por qué hacer esto?</h2>
-<p>Todos los días escuchamos en las noticias acerca del incremento en los homicidios y la inseguridad en Costa Rica. Por un lado, la dice que la inseguridad está fatal, por otro, algunos sostienen que “es solo percepción” y que “se matan entre ellos” (refiriéndose a los delincuentes). Entre tantos <em>dimes y diretes</em>, creo que este extracto del libro la sociedad del cansancio representa cómo nos podemos sentir.</p>
+<p>Todos los días escuchamos en las noticias acerca del incremento en los homicidios y la inseguridad en Costa Rica. Por un lado, se dice que la inseguridad está fatal, por otro, algunos sostienen que “es solo percepción” y que “se matan entre ellos” (refiriéndose a los delincuentes). Entre tantos <em>dimes y diretes</em>, creo que este extracto del libro la sociedad del cansancio representa cómo nos podemos sentir.</p>
 <blockquote class="blockquote">
-<p>En la era digital, el exceso de información nos satura hasta el punto de la apatía; el bombardeo constante de datos nos impide distinguir lo esencial y nos sumerge en un estado de desconfianza generalizada. <span class="citation" data-cites="han2012">Han (2012)</span></p>
+<p>En la era digital, el exceso de información nos satura hasta el punto de la apatía; el bombardeo constante de datos nos impide distinguir lo esencial y nos sumerge en un estado de desconfianza generalizada. - Byung-Chul Han, la sociedad del cansancio (2012).</p>
 </blockquote>
-<p>Veamos algunos de esas noticias:</p>
+<p>Veamos algunas de esas noticias:</p>
 <br>
 <div class="iframely-embed">
 <div class="iframely-responsive" style="height: 140px; padding-bottom: 0;">
@@ -57,12 +70,12 @@
 </div>
 <script async="" src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 <p><br></p>
-<p>Creo que es fundamental que, como ciudadanos, tengamos acceso a la información para que podamos comprobar de manera independiente los datos que nos bombardean desde todas partes. No me malentiendan, no se trata de negar las instituciones ni de estar en contra de la prensa, para nada, sino de poder, dentro de lo posible, acceder a las fuentes y echar un vistazo a lo que pasa en el país, incluso más como un ejercicio de empatía que informativo.</p>
-<p>Con esa idea en mente, surge este mini tutorial, en el cual mostraré, paso a paso, cómo utilizar R para descargar y unificar la información proporcionada por el <a href="https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/">Poder Judicial</a>.</p>
+<p>Creo que es fundamental que, como ciudadanos, tengamos acceso a la información para que podamos comprobar de manera independiente los datos que nos bombardean desde todas partes. No me malentiendan, no se trata de negar las instituciones ni de estar en contra de la prensa, para nada, sino de poder, dentro de lo posible, acceder a las fuentes y echar un vistazo a lo que pasa en el país, incluso más como un ejercicio de empatía que de análisis de datos.</p>
+<p>Con esa idea en mente, surge este mini tutorial, en el cual veremos, paso a paso, cómo utilizar R para descargar y unificar la información proporcionada por el <a href="https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/">Poder Judicial</a>.</p>
 </section>
 <section id="automatizar-la-descarga" class="level2">
 <h2 class="anchored" data-anchor-id="automatizar-la-descarga">Automatizar la descarga</h2>
-<p>El primer problema se presentó cuando noté que la <a href="https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/">plataforma</a> solo permite descargar los datos un año a la vez (o al menos a mí me da error si intento descargar varios años juntos). Hacerlo manualmente para 10 años no era mi opción preferida. Soy de ese tipo de persona que prefiere pasar dos horas automatizando una tarea que podría hacerse en 15 minutos manualmente. Eso debe tener un nombre o, como mínimo, estar tipificado en el DSM-5.</p>
+<p>El primer <a href="https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/">plataforma</a> se presentó cuando noté que la plataforma solo permite descargar los datos un año a la vez (o al menos a mí me da error si intento descargar varios años juntos). Hacerlo manualmente para 10 años no era mi opción preferida, así que vamos a automatizarlo.</p>
 <p>Para lograr esto, vamos a utilizar los paquetes <a href="https://ashbythorpe.github.io/selenider/index.html">selenider</a> y <a href="https://rstudio.github.io/chromote/">chromote</a>, una combinación que he venido probando desde hace poco con muy buenos resultados, nos permite hacer web scraping de forma sencilla y, además, resuelve muchos de los problemas que teníamos al trabajar con <a href="https://docs.ropensci.org/RSelenium/">RSelenium</a>.</p>
 <section id="selenider-en-1-minuto" class="level3">
 <h3 class="anchored" data-anchor-id="selenider-en-1-minuto">Selenider en 1 minuto:</h3>
@@ -182,11 +195,7 @@ font-style: inherit;">elem_click</span>()</span></code></pre></div>
 <blockquote class="blockquote">
 <p>Acá me quedé pegado en un buen rato intentando como explicar el código, y llegué a la conclusión de que lo más razonable es un video corto.</p>
 </blockquote>
-<div style="padding:56.25% 0 0 0;position:relative;">
-<iframe src="https://player.vimeo.com/video/710119524?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="The Art of Work">
-</iframe>
-</div>
-<script src="https://player.vimeo.com/api/player.js"></script>
+<p><strong>aca va un video</strong></p>
 <hr>
 <div class="cell">
 <details class="code-fold">
@@ -644,20 +653,13 @@ font-style: inherit;">"data/delitos_{today()}.rds"</span>))</span></code></pre><
 </section>
 <section id="y-ahora-qué" class="level2">
 <h2 class="anchored" data-anchor-id="y-ahora-qué">¿Y ahora qué?</h2>
-<p>Esta sería la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica, su evolución, y podremos salir de la duda que inició todo: ¿es realmente el aumento de la inseguridad solo un tema de percepción (como hace un tiempo decía un ministro en un podcast) Spoiler:</p>
-<p><img src="https://mystickermania.com/cdn/stickers/memes/bugs-bunnys-no-meme-512x512.png" class="img-fluid" style="width:35.0%"></p>
-<p>Finalmente, un reconocimiento especial al Poder Judicial por el esfuerzo y la transparencia de poner estos datos a disposición de la ciudadanía, sin embargo, es importante mencionar que la plataforma todavía tiene puntos destacables de mejora.</p>
-<p>¡Nos vemos en ese próximo post!</p>
-
+<p>Esta sería la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica, su evolución, y podremos salir de la duda que inició todo: ¿es realmente el aumento de la inseguridad solo un tema de percepción (como hace un tiempo decía un ministro en un podcast) <strong>Spoiler: NO.</strong></p>
+<p>Finalmente, un reconocimiento especial al Poder Judicial por el esfuerzo y la transparencia de poner estos datos a disposición de la ciudadanía.</p>
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referencias</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
-<div id="ref-han2012" class="csl-entry">
-Han, Byung-Chul. 2012. <em>La sociedad del cansancio</em>. Barcelona: Herder Editorial.
-</div>
-</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{agüero_b2025,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{agüero_b2025,
   author = {Agüero B, Carlos},
   title = {Automatización de la descarga de datos de delitos en Costa
     Rica},
