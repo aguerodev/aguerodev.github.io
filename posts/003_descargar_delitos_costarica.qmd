@@ -41,6 +41,10 @@ bibliography: references.bib
 <meta property="og:video:width" content="1280" />
 <meta property="og:video:height" content="720" />
 
+::: {.callout-note}
+Este post está en construcción, puede tener cambios y no se garantiza que el código funcione.
+:::
+
 ## Introducción: ¿Por qué hacer esto?
 
 Todos los días escuchamos en las noticias acerca del incremento en los homicidios y la inseguridad en Costa Rica. Por un lado, la dice que la inseguridad está fatal, por otro, algunos sostienen que "es solo percepción" y que "se matan entre ellos" (refiriéndose a los delincuentes). Entre tantos *dimes y diretes*, creo que este extracto del libro la sociedad del cansancio representa cómo nos podemos sentir.
@@ -154,7 +158,7 @@ Veamos cómo es el proceso manual para identificar qué es lo que debemos automa
 
 > Acá me quedé pegado en un buen rato intentando como explicar el código, y llegué a la conclusión de que lo más razonable es un video corto.
 
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/710119524?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="The Art of Work"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+**aca va un video**
 
 ---
 
@@ -288,9 +292,8 @@ Puedes descargar los datos en el siguiente enlace [descargar datos](../data/deli
 
 ## ¿Y ahora qué?
 
-Esta sería la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica, su evolución, y podremos salir de la duda que inició todo: ¿es realmente el aumento de la inseguridad solo un tema de percepción (como hace un tiempo decía un ministro en un podcast) Spoiler:
+Esta sería la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica, su evolución, y podremos salir de la duda que inició todo: ¿es realmente el aumento de la inseguridad solo un tema de percepción (como hace un tiempo decía un ministro en un podcast) Spoiler: NO
 
-![](https://mystickermania.com/cdn/stickers/memes/bugs-bunnys-no-meme-512x512.png){width=35%}
 
 Finalmente, un reconocimiento especial al Poder Judicial por el esfuerzo y la transparencia de poner estos datos a disposición de la ciudadanía, sin embargo, es importante mencionar que la plataforma todavía tiene puntos destacables de mejora.
 
