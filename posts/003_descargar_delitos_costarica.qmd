@@ -47,11 +47,11 @@ Este post está en construcción, puede tener cambios y no se garantiza que el c
 
 ## Introducción: ¿Por qué hacer esto?
 
-Todos los días escuchamos en las noticias acerca del incremento en los homicidios y la inseguridad en Costa Rica. Por un lado, la dice que la inseguridad está fatal, por otro, algunos sostienen que "es solo percepción" y que "se matan entre ellos" (refiriéndose a los delincuentes). Entre tantos *dimes y diretes*, creo que este extracto del libro la sociedad del cansancio representa cómo nos podemos sentir.
+Todos los días escuchamos en las noticias acerca del incremento en los homicidios y la inseguridad en Costa Rica. Por un lado, se dice que la inseguridad está fatal, por otro, algunos sostienen que "es solo percepción" y que "se matan entre ellos" (refiriéndose a los delincuentes). Entre tantos *dimes y diretes*, creo que este extracto del libro la sociedad del cansancio representa cómo nos podemos sentir.
 
-> En la era digital, el exceso de información nos satura hasta el punto de la apatía; el bombardeo constante de datos nos impide distinguir lo esencial y nos sumerge en un estado de desconfianza generalizada. @han2012
+> En la era digital, el exceso de información nos satura hasta el punto de la apatía; el bombardeo constante de datos nos impide distinguir lo esencial y nos sumerge en un estado de desconfianza generalizada. - Byung-Chul Han, la sociedad del cansancio (2012). 
 
-Veamos algunos de esas noticias: 
+Veamos algunas de esas noticias: 
 
 <br>
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://semanariouniversidad.com/pais/con-880-homicidios-2024-cerro-como-el-segundo-ano-mas-violento-de-la-historia/" data-iframely-url="//cdn.iframe.ly/api/iframe?card=small&url=http%3A%2F%2Fsemanariouniversidad.com%2Fpais%2Fcon-880-homicidios-2024-cerro-como-el-segundo-ano-mas-violento-de-la-historia%2F&key=82791205449a6b87420b0f7a75017b28"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
@@ -62,14 +62,14 @@ Veamos algunos de esas noticias:
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.nacion.com/sucesos/crimenes/costa-rica-supera-100-homicidios-en-apenas-42-dias/4IYB2XIVJVHJDDLVONXBPHJR7E/story/" data-iframely-url="//cdn.iframe.ly/api/iframe?card=small&url=https%3A%2F%2Fwww.nacion.com%2Fsucesos%2Fcrimenes%2Fcosta-rica-supera-100-homicidios-en-apenas-42-dias%2F4IYB2XIVJVHJDDLVONXBPHJR7E%2Fstory%2F&key=82791205449a6b87420b0f7a75017b28"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 <br>
 
-Creo que es fundamental que, como ciudadanos, tengamos acceso a la información para que podamos comprobar de manera independiente los datos que nos bombardean desde todas partes. No me malentiendan, no se trata de negar las instituciones ni de estar en contra de la prensa, para nada, sino de poder, dentro de lo posible, acceder a las fuentes y echar un vistazo a lo que pasa en el país, incluso más como un ejercicio de empatía que informativo.
+Creo que es fundamental que, como ciudadanos, tengamos acceso a la información para que podamos comprobar de manera independiente los datos que nos bombardean desde todas partes. No me malentiendan, no se trata de negar las instituciones ni de estar en contra de la prensa, para nada, sino de poder, dentro de lo posible, acceder a las fuentes y echar un vistazo a lo que pasa en el país, incluso más como un ejercicio de empatía que de análisis de datos.
 
-Con esa idea en mente, surge este mini tutorial, en el cual mostraré, paso a paso, cómo utilizar R para descargar y unificar la información proporcionada por el [Poder Judicial](https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/).
+Con esa idea en mente, surge este mini tutorial, en el cual veremos, paso a paso, cómo utilizar R para descargar y unificar la información proporcionada por el [Poder Judicial](https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/).
 
 
 ## Automatizar la descarga
 
-El primer problema se presentó cuando noté que la [plataforma](https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/) solo permite descargar los datos un año a la vez (o al menos a mí me da error si intento descargar varios años juntos). Hacerlo manualmente para 10 años no era mi opción preferida. Soy de ese tipo de persona que prefiere pasar dos horas automatizando una tarea que podría hacerse en 15 minutos manualmente. Eso debe tener un nombre o, como mínimo, estar tipificado en el DSM-5.
+El primer [plataforma](https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/) se presentó cuando noté que la plataforma solo permite descargar los datos un año a la vez (o al menos a mí me da error si intento descargar varios años juntos). Hacerlo manualmente para 10 años no era mi opción preferida, así que vamos a automatizarlo.
 
 Para lograr esto, vamos a utilizar los paquetes [selenider](https://ashbythorpe.github.io/selenider/index.html) y [chromote](https://rstudio.github.io/chromote/), una combinación que he venido probando desde hace poco con muy buenos resultados, nos permite hacer web scraping de forma sencilla y, además, resuelve muchos de los problemas que teníamos al trabajar con [RSelenium](https://docs.ropensci.org/RSelenium/).
 
@@ -292,9 +292,6 @@ Puedes descargar los datos en el siguiente enlace [descargar datos](../data/deli
 
 ## ¿Y ahora qué?
 
-Esta sería la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica, su evolución, y podremos salir de la duda que inició todo: ¿es realmente el aumento de la inseguridad solo un tema de percepción (como hace un tiempo decía un ministro en un podcast) Spoiler: NO
+Esta sería la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica, su evolución, y podremos salir de la duda que inició todo: ¿es realmente el aumento de la inseguridad solo un tema de percepción (como hace un tiempo decía un ministro en un podcast) **Spoiler: NO.**
 
-
-Finalmente, un reconocimiento especial al Poder Judicial por el esfuerzo y la transparencia de poner estos datos a disposición de la ciudadanía, sin embargo, es importante mencionar que la plataforma todavía tiene puntos destacables de mejora.
-
-¡Nos vemos en ese próximo post!
+Finalmente, un reconocimiento especial al Poder Judicial por el esfuerzo y la transparencia de poner estos datos a disposición de la ciudadanía.
