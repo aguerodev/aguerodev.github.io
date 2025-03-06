@@ -105,7 +105,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
-<meta name="quarto:status" content="draft">
 
 
 <meta property="og:title" content="Automatización de la descarga de datos de delitos en Costa Rica">
@@ -128,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Borrador</div>
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -204,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#selenider-en-1-minuto" id="toc-selenider-en-1-minuto" class="nav-link" data-scroll-target="#selenider-en-1-minuto">Selenider en 1 minuto:</a></li>
   </ul></li>
-  <li><a href="#problemas-con-el-archivo-descargado" id="toc-problemas-con-el-archivo-descargado" class="nav-link" data-scroll-target="#problemas-con-el-archivo-descargado">Problemas con el archivo descargado 😢</a></li>
+  <li><a href="#problemas-con-el-archivo-descargado" id="toc-problemas-con-el-archivo-descargado" class="nav-link" data-scroll-target="#problemas-con-el-archivo-descargado">Problemas con el archivo descargado</a></li>
   <li><a href="#limpieza-y-normalización-de-los-datos" id="toc-limpieza-y-normalización-de-los-datos" class="nav-link" data-scroll-target="#limpieza-y-normalización-de-los-datos">Limpieza y normalización de los datos</a></li>
   <li><a href="#y-ahora-qué" id="toc-y-ahora-qué" class="nav-link" data-scroll-target="#y-ahora-qué">¿Y ahora qué?</a></li>
   </ul>
@@ -257,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Fecha de modificación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">4 de marzo de 2025</p>
+      <p class="date-modified">6 de marzo de 2025</p>
     </div>
   </div>
     
@@ -283,22 +282,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:video:type" content="text/html">
 <meta property="og:video:width" content="1280">
 <meta property="og:video:height" content="720">
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Advertencia
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Este post está en construcción, puede tener cambios y no se garantiza que el código funcione.</p>
-</div>
-</div>
 <section id="introducción-por-qué-hacer-esto" class="level2">
 <h2 class="anchored" data-anchor-id="introducción-por-qué-hacer-esto">Introducción: ¿Por qué hacer esto?</h2>
-<p>Todos los días escuchamos en las noticias acerca del incremento en los homicidios y la inseguridad en Costa Rica. Por un lado, se dice que la inseguridad está fatal, por otro, algunos sostienen que “es solo percepción” y que “se matan entre ellos” (refiriéndose a los delincuentes). Entre tantos <em>dimes y diretes</em>, creo que este extracto del libro la sociedad del cansancio representa cómo nos podemos sentir.</p>
+<p>Todos los días escuchamos en las noticias acerca del incremento en los homicidios y la inseguridad en Costa Rica. Por un lado, se dice que la inseguridad está fatal, por otro, que <em>“es solo percepción”</em> y que <em>“se matan entre ellos”</em> (refiriéndose a los delincuentes). Entre <em>dimes y diretes</em>, creo que este extracto del libro la sociedad del cansancio representa cómo nos podemos sentir.</p>
 <blockquote class="blockquote">
 <p>En la era digital, el exceso de información nos satura hasta el punto de la apatía; el bombardeo constante de datos nos impide distinguir lo esencial y nos sumerge en un estado de desconfianza generalizada. - Byung-Chul Han, la sociedad del cansancio (2012).</p>
 </blockquote>
@@ -383,27 +369,32 @@ Advertencia
 <ol type="1">
 <li>Indicar las fechas de inicio y fin.</li>
 </ol>
-<p><img src="images/fechas_oij.png" class="img-fluid" style="width:35.0%"></p>
+<p><img src="images/fechas_oij.png" class="img-fluid" style="width:50.0%"></p>
 <ol start="2" type="1">
 <li>Indicar el lugar del suceso.</li>
 </ol>
-<p><img src="images/lugar_suceso.png" class="img-fluid" style="width:35.0%"></p>
+<p><img src="images/lugar_suceso.png" class="img-fluid" style="width:50.0%"></p>
 <ol start="3" type="1">
 <li>Seleccionar la categoría delictiva.</li>
 </ol>
-<p><img src="images/categoria_delictiva.png" class="img-fluid" style="width:35.0%"></p>
+<p><img src="images/categoria_delictiva.png" class="img-fluid" style="width:50.0%"></p>
 <ol start="4" type="1">
 <li>Indicar si se trata de víctima policial.</li>
 </ol>
-<p><img src="images/victima_policial.png" class="img-fluid" style="width:35.0%"></p>
+<p><img src="images/victima_policial.png" class="img-fluid" style="width:50.0%"></p>
 <ol start="5" type="1">
 <li>Hacer clic en el botón de descargar Excel.</li>
 </ol>
-<p><img src="images/guardar_excel.png" class="img-fluid" style="width:35.0%"></p>
+<p><img src="images/guardar_excel.png" class="img-fluid" style="width:50.0%"></p>
 <blockquote class="blockquote">
 <p>Acá me quedé pegado en un buen rato intentando como explicar el código, y llegué a la conclusión de que lo más razonable es un video corto.</p>
 </blockquote>
-<p><strong>aca va un video</strong></p>
+<hr>
+<div style="padding:56.25% 0 0 0;position:relative;">
+<iframe src="https://player.vimeo.com/video/1063262719?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="GMT20250306-153558_Recording_1920x1080">
+</iframe>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
 <hr>
 <div class="cell">
 <details class="code-fold">
@@ -518,20 +509,20 @@ Advertencia
 </section>
 </section>
 <section id="problemas-con-el-archivo-descargado" class="level2">
-<h2 class="anchored" data-anchor-id="problemas-con-el-archivo-descargado">Problemas con el archivo descargado 😢</h2>
-<p>Luego de hacer la descarga apareció un problema. Al intentar abrir el archivo desde R, me encontré con un error, el archivo parecía corrupto o mal formateado. Era raro, porque si abría el archivo directamente desde Excel, todo funcionaba bien.</p>
-<p>Revisando el código fuente de la web, pude encontrar que el archivo se genera a partir de una tabla <code>HTML</code> que se codifica en <code>Base64</code>, asignándole la extensión <code>.xls</code> y un MIME type de Excel <em>(Excel viejito).</em> Esto quiere decir que, aunque se pretende que sea un archivo de Excel, el contenido real es HTML y no el formato binario nativo de Excel (xls). Excel, que siempre que puede resuelve, logra detectar ese contenido y mostrar la tabla correctamente, pero el paquete <code>readxl</code>, que utiliza la librería <code>libxls</code>, requiere específicamente el formato binario de Excel para poder abrirlo. Por eso, al intentar abrirlo en R se produce el error <em>libxls error: Unable to open file</em>, porque, <strong>sorpresa, ¡no es un archivo de Excel!</strong></p>
-<p>La solución fue sencilla, si se trata de un archivo <code>HTML</code>, basta con cambiarle la extensión de <code>.xls</code> a <code>.html</code> y usar la función <code>read_html</code> del paquete <code>rvest</code>. Una vez resuelto esto, quedó completamente automatizado el proceso de descarga de 10 años de registros en un clic.</p>
+<h2 class="anchored" data-anchor-id="problemas-con-el-archivo-descargado">Problemas con el archivo descargado</h2>
+<p>Despues de descargar los datos apareció un problema. al intentar abrir el archivo desde R, aparece un error, el archivo parecía corrupto o mal formateado. Raro, porque si abría el archivo directamente desde Excel, todo funcionaba bien.</p>
+<p>Revisando el código fuente de la web, pude encontrar que el archivo se genera a partir de una tabla <code>HTML</code> que se codifica en <code>Base64</code>, asignándole la extensión <code>.xls</code> <em>(Excel viejito)</em> y un MIME type de Excel. Esto quiere decir que, aunque aparenta ser un archivo de Excel, el contenido real es HTML y no el formato binario nativo de Excel (xls). Excel, que siempre que puede resuelve, logra detectar ese contenido y mostrar la tabla correctamente, pero el paquete <code>readxl</code>, que utiliza la librería <code>libxls</code>, necesita el formato binario de Excel para poder abrirlo. Por eso, al intentar abrirlo en R se produce el error <em>libxls error: Unable to open file</em>, porque, <strong>sorpresa, ¡no es un archivo de Excel!</strong></p>
+<p>La solución fue sencilla, si es un archivo <code>HTML</code>, basta con cambiarle la extensión de <code>.xls</code> a <code>.html</code> y usar la función <code>read_html</code> del paquete <code>rvest</code>. Una vez resuelto eso, queda completamente automatizada la descarga de 10 años de registros en un clic.</p>
 </section>
 <section id="limpieza-y-normalización-de-los-datos" class="level2">
 <h2 class="anchored" data-anchor-id="limpieza-y-normalización-de-los-datos">Limpieza y normalización de los datos</h2>
-<p>A partir de aquí, el trabajo de limpieza es muy corto. Se normalizan los nombres de las columnas y, además, se ajustan las variables de tipo texto para evitar tenerlas únicamente en mayúsculas.</p>
-<p>Aquí, alguien podría preguntarse: ¿por qué, entonces, no descargar directamente el archivo <code>.csv</code> y listo? Pasa que, por algún motivo, al archivo <code>CSV</code> le falta la columna <code>distrito</code>. Asumo que está relacionado con la forma en que se genera a partir de la tabla HTML original, pero, la verdad, no lo investigué.</p>
+<p>A partir de aquí, el trabajo de limpieza es muy corto. Se normalizan los nombres de las columnas y se ajustan las variables de tipo texto para evitar tener todo en mayúsculas.</p>
+<p>Aquí, alguien podría preguntarse: <em>¿por qué, entonces, no descargar directamente el archivo <code>.csv</code> y listo?</em> Pasa que, por algún motivo, al archivo <code>CSV</code> le falta la columna <code>distrito</code>. Asumo que está relacionado con la forma en que se genera a partir de la tabla HTML original, pero, la verdad, no lo investigué.</p>
 <p>Puedes descargar los datos en el siguiente enlace <a href="../data/delitos_2025-03-03.zip">descargar datos</a></p>
 </section>
 <section id="y-ahora-qué" class="level2">
 <h2 class="anchored" data-anchor-id="y-ahora-qué">¿Y ahora qué?</h2>
-<p>Esta sería la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica, su evolución, y podremos salir de la duda que inició todo: ¿es realmente el aumento de la inseguridad solo un tema de percepción (como hace un tiempo decía un ministro en un podcast) <strong>Spoiler: NO.</strong></p>
+<p>Esta es la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica, su evolución, a lo mejor salimos de la duda que inició todo: ¿es realmente el aumento de la inseguridad solo un tema de percepción (como hace un tiempo decía un ministro en un podcast) <strong>Spoiler: NO.</strong></p>
 <p>Finalmente, un reconocimiento especial al Poder Judicial por el esfuerzo y la transparencia de poner estos datos a disposición de la ciudadanía.</p>
 
 

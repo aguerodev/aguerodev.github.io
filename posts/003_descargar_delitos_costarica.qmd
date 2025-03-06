@@ -2,7 +2,7 @@
 title: "Automatización de la descarga de datos de delitos en Costa Rica"
 description: "En este post aprenderemos cómo automatizar desde R la descarga, unificación y limpieza de datos sobre delitos en Costa Rica, obtenidos desde la plataforma del Poder Judicial."
 date: 2025-03-04
-date-modified: 2025-03-04
+date-modified: 2025-03-06
 categories: ["webscraping", "selenider"] 
 lang: "es"
 image: images/oij.png
@@ -41,13 +41,10 @@ bibliography: references.bib
 <meta property="og:video:width" content="1280" />
 <meta property="og:video:height" content="720" />
 
-::: {.callout-warning}
-Este post está en construcción, puede tener cambios y no se garantiza que el código funcione.
-:::
 
 ## Introducción: ¿Por qué hacer esto?
 
-Todos los días escuchamos en las noticias acerca del incremento en los homicidios y la inseguridad en Costa Rica. Por un lado, se dice que la inseguridad está fatal, por otro, algunos sostienen que "es solo percepción" y que "se matan entre ellos" (refiriéndose a los delincuentes). Entre tantos *dimes y diretes*, creo que este extracto del libro la sociedad del cansancio representa cómo nos podemos sentir.
+Todos los días escuchamos en las noticias acerca del incremento en los homicidios y la inseguridad en Costa Rica. Por un lado, se dice que la inseguridad está fatal, por otro, que *"es solo percepción"* y que *"se matan entre ellos"* (refiriéndose a los delincuentes). Entre *dimes y diretes*, creo que este extracto del libro la sociedad del cansancio representa cómo nos podemos sentir.
 
 > En la era digital, el exceso de información nos satura hasta el punto de la apatía; el bombardeo constante de datos nos impide distinguir lo esencial y nos sumerge en un estado de desconfianza generalizada. - Byung-Chul Han, la sociedad del cansancio (2012). 
 
@@ -138,27 +135,29 @@ Veamos cómo es el proceso manual para identificar qué es lo que debemos automa
 
 1. Indicar las fechas de inicio y fin.
 
-![](images/fechas_oij.png){width=35%}
+![](images/fechas_oij.png){width=50%}
 
 2. Indicar el lugar del suceso.
 
-![](images/lugar_suceso.png){width=35%}
+![](images/lugar_suceso.png){width=50%}
 
 3. Seleccionar la categoría delictiva.
 
-![](images/categoria_delictiva.png){width=35%}
+![](images/categoria_delictiva.png){width=50%}
 
 4. Indicar si se trata de víctima policial.
 
-![](images/victima_policial.png){width=35%}
+![](images/victima_policial.png){width=50%}
 
 5. Hacer clic en el botón de descargar Excel.
 
-![](images/guardar_excel.png){width=35%}
+![](images/guardar_excel.png){width=50%}
 
 > Acá me quedé pegado en un buen rato intentando como explicar el código, y llegué a la conclusión de que lo más razonable es un video corto.
 
-**aca va un video**
+---
+
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1063262719?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="GMT20250306-153558_Recording_1920x1080"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ---
 
@@ -274,24 +273,24 @@ df |>
   readr::write_rds(glue("data/delitos_{today()}.rds"))
 ```
 
-## Problemas con el archivo descargado 😢
+## Problemas con el archivo descargado
 
-Luego de hacer la descarga apareció un problema. Al intentar abrir el archivo desde R, me encontré con un error, el archivo parecía corrupto o mal formateado. Era raro, porque si abría el archivo directamente desde Excel, todo funcionaba bien.
+Despues de descargar los datos apareció un problema. al intentar abrir el archivo desde R, aparece un error, el archivo parecía corrupto o mal formateado. Raro, porque si abría el archivo directamente desde Excel, todo funcionaba bien.
 
-Revisando el código fuente de la web, pude encontrar que el archivo se genera a partir de una tabla `HTML` que se codifica en `Base64`, asignándole la extensión `.xls` y un MIME type de Excel *(Excel viejito).* Esto quiere decir que, aunque se pretende que sea un archivo de Excel, el contenido real es HTML y no el formato binario nativo de Excel (xls). Excel, que siempre que puede resuelve, logra detectar ese contenido y mostrar la tabla correctamente, pero el paquete `readxl`, que utiliza la librería `libxls`, requiere específicamente el formato binario de Excel para poder abrirlo. Por eso, al intentar abrirlo en R se produce el error *libxls error: Unable to open file*, porque, **sorpresa, ¡no es un archivo de Excel!**
+Revisando el código fuente de la web, pude encontrar que el archivo se genera a partir de una tabla `HTML` que se codifica en `Base64`, asignándole la extensión `.xls` *(Excel viejito)* y un MIME type de Excel. Esto quiere decir que, aunque aparenta ser un archivo de Excel, el contenido real es HTML y no el formato binario nativo de Excel (xls). Excel, que siempre que puede resuelve, logra detectar ese contenido y mostrar la tabla correctamente, pero el paquete `readxl`, que utiliza la librería `libxls`, necesita el formato binario de Excel para poder abrirlo. Por eso, al intentar abrirlo en R se produce el error *libxls error: Unable to open file*, porque, **sorpresa, ¡no es un archivo de Excel!**
 
-La solución fue sencilla, si se trata de un archivo `HTML`, basta con cambiarle la extensión de `.xls` a `.html` y usar la función `read_html` del paquete `rvest`. Una vez resuelto esto, quedó completamente automatizado el proceso de descarga de 10 años de registros en un clic.
+La solución fue sencilla, si es un archivo `HTML`, basta con cambiarle la extensión de `.xls` a `.html` y usar la función `read_html` del paquete `rvest`. Una vez resuelto eso, queda completamente automatizada la descarga de 10 años de registros en un clic.
 
 ## Limpieza y normalización de los datos
 
-A partir de aquí, el trabajo de limpieza es muy corto. Se normalizan los nombres de las columnas y, además, se ajustan las variables de tipo texto para evitar tenerlas únicamente en mayúsculas.
+A partir de aquí, el trabajo de limpieza es muy corto. Se normalizan los nombres de las columnas y se ajustan las variables de tipo texto para evitar tener todo en mayúsculas.
 
-Aquí, alguien podría preguntarse: ¿por qué, entonces, no descargar directamente el archivo `.csv` y listo? Pasa que, por algún motivo, al archivo `CSV` le falta la columna `distrito`. Asumo que está relacionado con la forma en que se genera a partir de la tabla HTML original, pero, la verdad, no lo investigué.
+Aquí, alguien podría preguntarse: *¿por qué, entonces, no descargar directamente el archivo `.csv` y listo?* Pasa que, por algún motivo, al archivo `CSV` le falta la columna `distrito`. Asumo que está relacionado con la forma en que se genera a partir de la tabla HTML original, pero, la verdad, no lo investigué.
 
 Puedes descargar los datos en el siguiente enlace [descargar datos](../data/delitos_2025-03-03.zip)
 
 ## ¿Y ahora qué?
 
-Esta sería la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica, su evolución, y podremos salir de la duda que inició todo: ¿es realmente el aumento de la inseguridad solo un tema de percepción (como hace un tiempo decía un ministro en un podcast) **Spoiler: NO.**
+Esta es la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica, su evolución, a lo mejor salimos de la duda que inició todo: ¿es realmente el aumento de la inseguridad solo un tema de percepción (como hace un tiempo decía un ministro en un podcast) **Spoiler: NO.**
 
 Finalmente, un reconocimiento especial al Poder Judicial por el esfuerzo y la transparencia de poner estos datos a disposición de la ciudadanía.
