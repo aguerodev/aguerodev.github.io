@@ -62,8 +62,8 @@
 </section>
 <section id="automatizar-la-descarga" class="level2">
 <h2 class="anchored" data-anchor-id="automatizar-la-descarga">Automatizar la descarga</h2>
-<p>El primer <a href="https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/">plataforma</a> se presentó cuando noté que la plataforma solo permite descargar los datos un año a la vez (o al menos a mí me da error si intento descargar varios años juntos). Hacerlo manualmente para 10 años no era mi opción preferida, así que vamos a automatizarlo.</p>
-<p>Para lograr esto, vamos a utilizar los paquetes <a href="https://ashbythorpe.github.io/selenider/index.html">selenider</a> y <a href="https://rstudio.github.io/chromote/">chromote</a>, una combinación que he venido probando desde hace poco con muy buenos resultados, nos permite hacer web scraping de forma sencilla y, además, resuelve muchos de los problemas que teníamos al trabajar con <a href="https://docs.ropensci.org/RSelenium/">RSelenium</a>.</p>
+<p>El primer problema aparecio al ver que la <a href="https://pjenlinea3.poder-judicial.go.cr/estadisticasoij/">plataforma del poder judicial</a> sólo permite descargar los datos de un año por consulta (o al menos a mí me da error si intento descargar varios años juntos). Hacerlo manualmente para 10 años no era mi opción preferida, así que vamos a automatizarlo.</p>
+<p>Para lograr esto, vamos a utilizar los paquetes <a href="https://ashbythorpe.github.io/selenider/index.html">selenider</a> y <a href="https://rstudio.github.io/chromote/">chromote</a>, una combinación que he venido probando desde hace poco con muy buenos resultados, nos permite hacer web scraping de forma sencilla y resuelve muchos de los problemas que teníamos al trabajar con <a href="https://docs.ropensci.org/RSelenium/">RSelenium</a>.</p>
 <section id="selenider-en-1-minuto" class="level3">
 <h3 class="anchored" data-anchor-id="selenider-en-1-minuto">Selenider en 1 minuto:</h3>
 <ol type="1">
@@ -634,19 +634,19 @@ font-style: inherit;">"data/delitos_{today()}.rds"</span>))</span></code></pre><
 <section id="problemas-con-el-archivo-descargado" class="level2">
 <h2 class="anchored" data-anchor-id="problemas-con-el-archivo-descargado">Problemas con el archivo descargado</h2>
 <p>Despues de descargar los datos apareció un problema. al intentar abrir el archivo desde R, aparece un error, el archivo parecía corrupto o mal formateado. Raro, porque si abría el archivo directamente desde Excel, todo funcionaba bien.</p>
-<p>Revisando el código fuente de la web, pude encontrar que el archivo se genera a partir de una tabla <code>HTML</code> que se codifica en <code>Base64</code>, asignándole la extensión <code>.xls</code> <em>(Excel viejito)</em> y un MIME type de Excel. Esto quiere decir que, aunque aparenta ser un archivo de Excel, el contenido real es HTML y no el formato binario nativo de Excel (xls). Excel, que siempre que puede resuelve, logra detectar ese contenido y mostrar la tabla correctamente, pero el paquete <code>readxl</code>, que utiliza la librería <code>libxls</code>, necesita el formato binario de Excel para poder abrirlo. Por eso, al intentar abrirlo en R se produce el error <em>libxls error: Unable to open file</em>, porque, <strong>sorpresa, ¡no es un archivo de Excel!</strong></p>
+<p>Revisando el código fuente de la web, pude encontrar que el archivo se genera a partir de una tabla <code>HTML</code> que se codifica en <code>Base64</code>, asignándole la extensión <code>.xls</code> <em>(Excel viejito)</em> y un MIME type de Excel. Esto quiere decir que, aunque aparenta ser un archivo de Excel, el contenido real es HTML y no el formato binario nativo de Excel (xls). Excel, que siempre que puede resuelve, logra detectar el contenido y mostrar la tabla sin problema, pero el paquete <code>readxl</code>, que utiliza la librería <code>libxls</code>, necesita el formato binario de Excel para poder funcionar. Por eso, al intentar abrirlo en R se produce el error <em>libxls error: Unable to open file</em>, porque, <strong>sorpresa, ¡no es un archivo de Excel!</strong></p>
 <p>La solución fue sencilla, si es un archivo <code>HTML</code>, basta con cambiarle la extensión de <code>.xls</code> a <code>.html</code> y usar la función <code>read_html</code> del paquete <code>rvest</code>. Una vez resuelto eso, queda completamente automatizada la descarga de 10 años de registros en un clic.</p>
 </section>
 <section id="limpieza-y-normalización-de-los-datos" class="level2">
 <h2 class="anchored" data-anchor-id="limpieza-y-normalización-de-los-datos">Limpieza y normalización de los datos</h2>
 <p>A partir de aquí, el trabajo de limpieza es muy corto. Se normalizan los nombres de las columnas y se ajustan las variables de tipo texto para evitar tener todo en mayúsculas.</p>
-<p>Aquí, alguien podría preguntarse: <em>¿por qué, entonces, no descargar directamente el archivo <code>.csv</code> y listo?</em> Pasa que, por algún motivo, al archivo <code>CSV</code> le falta la columna <code>distrito</code>. Asumo que está relacionado con la forma en que se genera a partir de la tabla HTML original, pero, la verdad, no lo investigué.</p>
+<p>Aquí, alguien podría preguntarse: <em>¿por qué, entonces, no descargar directamente el archivo <code>.csv</code> en lugar del excel?</em> Pasa que, por algún motivo, al archivo <code>CSV</code> le falta la columna <code>distrito</code>. Asumo que está relacionado con la forma en que se genera a partir de la tabla HTML original, pero, la verdad, no lo investigué.</p>
 <p>Puedes descargar los datos en el siguiente enlace <a href="../data/delitos_2025-03-03.zip">descargar datos</a></p>
 </section>
 <section id="y-ahora-qué" class="level2">
 <h2 class="anchored" data-anchor-id="y-ahora-qué">¿Y ahora qué?</h2>
-<p>Esta es la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica, su evolución, a lo mejor salimos de la duda que inició todo: ¿es realmente el aumento de la inseguridad solo un tema de percepción (como hace un tiempo decía un ministro en un podcast) <strong>Spoiler: NO.</strong></p>
-<p>Finalmente, un reconocimiento especial al Poder Judicial por el esfuerzo y la transparencia de poner estos datos a disposición de la ciudadanía.</p>
+<p>Esta es la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica.</p>
+<p>Finalmente, un reconocimiento especial al Poder Judicial por el esfuerzo y la transparencia de poner estos datos a disposición de todos.</p>
 
 
 </section>
