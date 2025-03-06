@@ -38,22 +38,9 @@ website:
         file: index.qmd
       - text: "Cursos"
         menu:
-          - text: "Programa de completo 5 cursos"
           - text: "Fundamentos de R y Rstudio"
             icon: "bi-laptop"
             href: courses/fundamentos_R.qmd
-          - text: "Visualización de datos con R"
-            icon: "palette"
-            href: courses/visualizacion_datos_R.qmd
-          - text: "Limpieza y Manipulación de datos con R"
-            icon: "tools"
-            href: courses/manipulacion_datos_R.qmd
-          - text: "Introducción a SQL y su integración con R"
-            icon: "bi-database"
-            href: courses/introduccion_sql.qmd
-          - text: "Web Scraping y Automatización con R"
-            icon: "bi-globe"
-            href: courses/web_scraping.qmd
       - text: Blog
         file: posts.qmd
 

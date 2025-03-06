@@ -14,25 +14,23 @@ copyright: ""
 ::: hero-banner
 ::: content-block
 ::: hero-text
-# ¡Rompe las Barreras y Aprende Ciencia de Datos con R! 
+# ¡Inicia en el mundo de la ciencia de datos con R! 
 <br>
-**¿Piensas que aprender R es demasiado difícil?** ¡Piénsalo de nuevo! Con el enfoque y los recursos adecuados, cualquiera puede dominar R y aplicarlo a la ciencia de datos, sin importar tu experiencia previa.
+¿Crees que aprender R es complicado? En realidad no tiene por qué serlo. Con la guía correcta y materiales prácticos, usted también puede dominarlo. Este curso está diseñado para que aprendas paso a paso, con ejemplos claros y fáciles de seguir. 
 
--	**Inicia desde cero**: Aprende desde lo más básico, explicado con calma.
--	**A tu Ritmo y Horario**: Diferentes horarios y sesiones privadas cuando tú quieras.
--	**Instrucción Experta**: Aprende con un instructor experimentado.
--	**Aplicación Práctica**: Aplica lo aprendido a tus propios datos.
--	**Garantía de Satisfacción**: Reembolso del 100% si no estás satisfecho.
+-	**Desde cero**: Aprende desde lo más básico, explicado con calma.
+
+-	**En su horario**: Diferentes horarios y sesiones privadas cuando quiera.
+
+-	**Instrucción experta**: Aprende con un instructor experimentado.
+
+-	**Aplicación práctica**: Aplica lo aprendido a sus propios datos.
 
 ::: hero-buttons
 <a href="https://aprendetidyverse.com/courses/fundamentos_R.html" style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">¡Inscríbete Ahora!</a>
 :::
 :::
 
-
-::: hero-animation
-![](images/rstudio-desktop-screen.png)
-:::
 :::
 :::
 
@@ -53,21 +51,6 @@ Nuestros estudiantes son la mejor prueba de lo mucho que amamos dar clases. Aqu�
 :::
 
 
-
-::: content-block
-
-## ¿Cómo le ayudaremos a aprender R para Ciencia de Datos?
-
-Nuestros cursos de 6 semanas están diseñados para guiarte desde la teoría hasta la práctica, <mark>**escribiendo código desde el primer día. Creemos que la mejor manera de aprender a programar es pensando y escribiendo código, no copiando y pegando.**
-
-En nuestras clases grupales, dedicamos el 50% del tiempo a teoría y el 50% a práctica en grupos, permitiéndote interactuar y aprender de tus compañeros. Además, ofrecemos <mark>**sesiones privadas en vivo donde practicamos contigo y aclaramos dudas al momento.**</mark>
-
-Contamos con horarios flexibles, tanto entre semana como fines de semana, y <mark>**todas las sesiones quedan grabadas**</mark> para que las revises cuando lo necesites.
-
-Al finalizar el curso, aplicarás lo aprendido en un proyecto real, seleccionando un tema relevante para ti. Con la guía de Carlos Aguero, <mark>**instructor certificado por RStudio y Software Carpentry**</mark>, y nuestra garantía de satisfacción: si no estás satisfecho después de tres lecciones, <mark>**te reembolsamos el 100% sin más preguntas**</mark>, estamos comprometidos con tu éxito.
-
-:::
-
 ::: content-block
 ## Conoce al instructor
 
@@ -86,51 +69,6 @@ Al finalizar el curso, aplicarás lo aprendido en un proyecto real, seleccionand
 <p>Soy <a href="https://education.rstudio.com/trainers/" class="profile-link"><strong>instructor certificado por RStudio</strong></a>, especializado en <strong>Tidyverse</strong> y <strong>Shiny</strong>. En diciembre de 2023, tuve el honor de unirme a los instructores de la prestigiosa organización <a href="https://www.software-carpentry.org" class="profile-link"><strong>The Software Carpentry</strong></a>. En los últimos 8 años, he impartido **más de 50 cursos** relacionados con R y ciencia de datos, instruyendo a **más de 400 estudiantes** de toda América Latina.</p>
 :::
 
-
-
-
-
-::: content-block
-## Preguntas Frecuentes
-
-Aquí encontrarás respuestas a las preguntas más comunes sobre nuestro curso. Si tienes alguna otra duda, no dudes en contactarnos.
-
-<details open>
-<summary>¿Qué pasa si no me gusta un curso?</summary>
-<p>Si no estás satisfecho, ofrecemos un reembolso del 100%. Solo necesitas haber asistido a un mínimo de tres lecciones. Si después de tres lecciones no estás contento, puedes pedir un reembolso sin preguntas adicionales.</p>
-</details>
-
-<details>
-<summary>¿Qué pasa si no puedo estar en la clase en vivo?</summary>
-<p>No te preocupes. Si no puedes asistir a las clases en vivo, te enviaremos todos los códigos, materiales y la grabación de la clase automáticamente a tu correo electrónico o a tu WhatsApp. Además, puedes programar sesiones de seguimiento privadas de una hora con el instructor para discutir los temas y recibir ejercicios adicionales.</p>
-</details>
-
-<details>
-<summary>Necesito aplicar R a un área muy específica. No sé si el curso sea lo que necesito.</summary>
-<p>El curso incluye ejemplos y ejercicios prácticos adaptables a diversas áreas. Ofrecemos sesiones privadas de seguimiento de una hora donde trabajamos en tus proyectos específicos. También puedes programar una videollamada con el instructor antes de inscribirte para evaluar tus necesidades.</p>
-</details>
-
-<details>
-<summary>¿Se pueden descargar las presentaciones y los materiales? Además, ¿se pueden reutilizar?</summary>
-<p>Sí, todos los ejemplos, presentaciones y códigos se pueden descargar y reutilizar. Nuestra licencia permite el uso comercial de estos recursos, facilitándote la integración en tu propio trabajo.</p>
-</details>
-
-<details>
-<summary>¿Qué pasa si mi computadora falla? Si algo no sirve y no sé cómo arreglarlo o configurarlo.</summary>
-<p>Puedes escribirnos por WhatsApp o programar una videollamada en el sitio web. Nos conectaremos rápidamente para solucionar tu problema. No permitiremos que la frustración de tener problemas técnicos interrumpa o arruine tu aprendizaje.</p>
-</details>
-
-<details>
-<summary>¿Emiten certificados?</summary>
-<p>Sí, emitimos certificados digitales a través de Certifier, una plataforma utilizada por múltiples instituciones, empresas y universidades a nivel internacional. Perfecto para tu perfil de LinkedIn.</p>
-</details>
-
-<details>
-<summary>Estoy interesado en aprender pero la verdad en este momento no puedo costearme el curso, se sale de mi presupuesto.</summary>
-<p>Para estudiantes, académicos o colaboradores de organizaciones sin fines de lucro, habilitamos espacios gratuitos constantemente. Contáctanos a info@aprendetidyverse.com para presentar tu caso y estaremos encantados de ayudarte.</p>
-</details>
-
-:::
 
 
 :::content-block
