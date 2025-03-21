@@ -599,7 +599,7 @@
     "href": "courses/fundamentos_R.html",
     "title": "Aprende programación en R desde cero",
     "section": "",
-    "text": "Foto de Chris Montgomery en Unsplash\n¿Te imaginas pasar de no tener conocimientos de R a poder crear tus primeros reportes con gráficos, leyendo datos desde CSV y Excel para contestar las preguntas del negocio en tan solo 6 semanas? Con práctica y la guía adecuada, puedes mejorar tus habilidades. Es momento de comenzar.\nCon nuestro curso no solo aprenderás los fundamentos de R, sino que también recibirás soporte personalizado para asegurarte de que comprendas cada concepto y puedas aplicarlo en situaciones reales."
+    "text": "¿Te imaginas pasar de no tener conocimientos de R a poder crear tus primeros reportes con gráficos, leyendo datos desde CSV y Excel para contestar las preguntas del negocio en tan solo 6 semanas? Con práctica y la guía adecuada, puedes mejorar tus habilidades. Es momento de comenzar.\nCon nuestro curso no solo aprenderás los fundamentos de R, sino que también recibirás soporte personalizado para asegurarte de que comprendas cada concepto y puedas aplicarlo en situaciones reales."
   },
   {
     "objectID": "courses/fundamentos_R.html#lo-que-aprenderás",
@@ -620,7 +620,7 @@
     "href": "courses/fundamentos_R.html#conoce-al-instructor",
     "title": "Aprende programación en R desde cero",
     "section": "Conoce al instructor",
-    "text": "Conoce al instructor\n\n\n\n\n\n\n👋 Hola, soy Carlos Agüero\n\n\nDesde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R.\n\n\n📚 Formo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. En diciembre de 2023, tuve el gusto de unirme a los instructores de la organización The Software Carpentry.\n\n\n\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R.\n\n¿Tienes dudas? 🤔\n\nSi tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso Agenda tu reunión aquí."
+    "text": "Conoce al instructor\n\n\n\n\n\n\n👋 Hola, soy Carlos Agüero\n\n\nDesde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R.\n\n\n📚 Formo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. En diciembre de 2023, tuve el gusto de unirme a los instructores de la organización The Software Carpentry.\n\n\n\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R."
   },
   {
     "objectID": "courses/fundamentos_R.html#conoce-a-nuestros-estudiantes",
@@ -816,42 +816,42 @@
     "href": "courses/visualizacion_datos_R.html",
     "title": "Visualización de datos con R",
     "section": "",
-    "text": "Foto de Markus Spiske en Unsplash\nEn este curso de 6 semanas, te sumergirás en el mundo de la visualización de datos utilizando R y ggplot2. Aprenderás desde los fundamentos hasta técnicas avanzadas, incluyendo gráficos interactivos y manejo de datos geoespaciales para crear mapas. Al finalizar, serás capaz de crear visualizaciones efectivas y atractivas que comuniquen tus datos de manera clara y convincente."
+    "text": "En este curso de 6 semanas, se sumergirá en el mundo de la visualización de datos utilizando R. Aprenderá desde los fundamentos hasta técnicas avanzadas, incluyendo la creación de gráficos y el manejo de datos geoespaciales para elaborar mapas. Al finalizar, será capaz de crear visualizaciones efectivas y atractivas que comuniquen sus datos de manera clara y convincente."
   },
   {
     "objectID": "courses/visualizacion_datos_R.html#en-este-curso-aprenderás-a",
     "href": "courses/visualizacion_datos_R.html#en-este-curso-aprenderás-a",
     "title": "Visualización de datos con R",
     "section": "En este curso, aprenderás a:",
-    "text": "En este curso, aprenderás a:\n\n\nSemana 1: Fundamentos de ggplot2\n\n\nDurante la primera semana, aprenderás los fundamentos de ggplot2, comprendiendo la gramática de los gráficos y creando gráficos básicos como histogramas, gráficos de dispersión, líneas y cajas. También te familiarizarás con la personalización de elementos básicos del gráfico como títulos, etiquetas y temas.\n\n\n\n\nSemana 2: Escalas, Facetas y Personalización Avanzada\n\n\nEn la segunda semana, dominarás el uso de escalas y facetas para dividir datos y personalizar gráficos con colores, formas y tamaños. Además, aprenderás a ajustar temas y estilos avanzados para tus gráficos.\n\n\n\n\nSemana 3: Gráficos Interactivos con Plotly y Dygraph\n\n\nEn la tercera semana, te introducirás en la creación de gráficos interactivos utilizando Plotly y Dygraph. Aprenderás a convertir gráficos de ggplot2 a gráficos interactivos y a crear gráficos de series temporales interactivos desde cero.\n\n\n\n\nSemana 4: Fundamentos de Datos Geoespaciales y Creación de Mapas con ggplot2\n\n\nDurante la cuarta semana, te adentrarás en los conceptos básicos de datos geoespaciales y aprenderás a crear mapas estáticos usando ggplot2 y el paquete sf. También te centrarás en la personalización de mapas con diferentes capas y estéticas.\n\n\n\n\nSemana 5: Mapas Interactivos con Leaflet\n\n\nEn la quinta semana, aprenderás a crear mapas interactivos usando Leaflet. Añadirás marcadores, capas y controles a los mapas y aprenderás a integrar datos geoespaciales en tus mapas interactivos.\n\n\n\n\nSemana 6: Proyecto Final\n\n\nLa última semana está dedicada al proyecto final, donde aplicarás todos los conocimientos adquiridos a lo largo del curso. Desarrollarás un informe completo que incluirá la lectura de datos, su limpieza, transformación y presentación mediante gráficos y tablas. Este informe deberá contener gráficos interactivos y mapas de Costa Rica o tu país (en caso de ser extranjero), comunicando de forma efectiva tus resultados. Presentarás y discutirás tus resultados, demostrando así tus habilidades y conocimientos.\n\n\n\n¡No pierdas esta oportunidad! Inscribirte en nuestro curso vivir una experiencia de aprendizaje única.\n\nInscríbete Ahora\n\nPróxima apertura:\n\nmartes 14 de enero de 2025\n10:00 a.m. Costa Rica\n\nDuración: 6 semanas\nClases en vivo\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\n\n¡Hola estudiantes de pregrado! 📚👋 Si estás cursando tu primera carrera en alguna universidad, ya sea nacional o extranjera, contáctanos en info@aprendetidyverse.com. ¡Tenemos un regalo para ti! 🎁 Podrás llevar todos nuestros cursos de forma gratuita o con un descuento muy importante. 🎓✨ Evaluamos cada caso individualmente porque nuestra prioridad es darte acceso a educación de calidad, incluso si en este momento no puedes pagarlo. Creemos que la educación es un derecho de todos. 🌟"
+    "text": "En este curso, aprenderás a:"
   },
   {
     "objectID": "courses/visualizacion_datos_R.html#inscríbete-ahora",
     "href": "courses/visualizacion_datos_R.html#inscríbete-ahora",
     "title": "Visualización de datos con R",
     "section": "Inscríbete Ahora",
-    "text": "Inscríbete Ahora\n\nPróxima apertura:\n\nmartes 14 de enero de 2025\n10:00 a.m. Costa Rica\n\nDuración: 6 semanas\nClases en vivo\nPrecio: $200 USD\n\nInscribirte ahora"
+    "text": "Inscríbete Ahora\n\nPróxima apertura:\n\nmartes 22 de abril de 2025\n6:00 p.m. a 7:30 p.m. Costa Rica\n\nDuración: 6 semanas\nClases en vivo\nPrecio: $99 USD\n\nInscribirse Ahora"
   },
   {
     "objectID": "courses/visualizacion_datos_R.html#conoce-al-instructor",
     "href": "courses/visualizacion_datos_R.html#conoce-al-instructor",
     "title": "Visualización de datos con R",
     "section": "Conoce al instructor",
-    "text": "Conoce al instructor\nHola 👋🏼, soy Carlos Aguero. Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.\nFormo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. Recientemente, tuve el gusto de unirme a los instructores de la organización Software Carpentry 🚀.\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos.\n\n¿Tienes dudas? Hablemos sin compromiso 😊\nSi tienes dudas sobre si este curso es para ti, puedes programar una reunión conmigo sin ningún compromiso. 🗓️ Aquí podemos revisar todas tus inquietudes.\nMi objetivo no es venderte un curso que no vas a terminar, sino ayudarte a encontrar una solución que realmente te funcione, incluso si la respuesta es que no somos el curso que necesitas. 😊 No estamos aquí para vender, sino para enseñar. Programa tu reunión aquí: https://cal.com/aprendetidyverse/reuniones-1h."
+    "text": "Conoce al instructor\nHola 👋🏼, soy Carlos Aguero. Ingeniero en sistemas de información y, desde 2016, me dedico a enseñar a personas de todas las áreas y niveles de formación a programar en R 👨🏻‍💻.\nFormo parte del listado de instructores certificados por RStudio, enfocándome en Tidyverse y Shiny. Recientemente, tuve el gusto de unirme a los instructores de la organización Software Carpentry 🚀.\nA lo largo de los años, he tenido el privilegio de ayudar a más de 400 estudiantes en toda América Latina a descubrir el potencial del análisis de datos con R. Mi objetivo es ofrecerte una guía cercana y personalizada, similar a tener un instructor privado. Estoy aquí para asegurarte que tengas una experiencia de aprendizaje accesible y efectiva, ayudándote a superar cualquier obstáculo en tu camino hacia la dominio del lenguaje R para la ciencia de datos."
   },
   {
     "objectID": "courses/visualizacion_datos_R.html#conoce-lo-que-dicen-nuestros-estudiantes",
     "href": "courses/visualizacion_datos_R.html#conoce-lo-que-dicen-nuestros-estudiantes",
     "title": "Visualización de datos con R",
     "section": "Conoce lo que dicen nuestros estudiantes",
-    "text": "Conoce lo que dicen nuestros estudiantes\n\n\n\n\n\n\nNo esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 14 de enero de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash"
+    "text": "Conoce lo que dicen nuestros estudiantes\n\n\n\n\nNo esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para triunfar desde el primer día.\n\nInscríbete Ahora\n\nInicio de lecciones: martes 22 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $99 USD\n\nInscribirse Ahora\n\n\n\n\n\nFoto de Arlington Research en Unsplash"
   },
   {
     "objectID": "courses/visualizacion_datos_R.html#inscríbete-ahora-1",
     "href": "courses/visualizacion_datos_R.html#inscríbete-ahora-1",
     "title": "Visualización de datos con R",
     "section": "Inscríbete Ahora",
-    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 14 de enero de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $200 USD\n\nInscribirte ahora"
+    "text": "Inscríbete Ahora\n\nInicio de lecciones: martes 22 de abril de 2025\nClases en vivo\nGrabaciones de las clases\nSesiones de seguimiento personalizadas\nAcceso a una comunidad de aprendizaje\nAyuda en minutos a través de Zoom o WhatsApp\nCertificado compatible con LinkedIn emitido por Certifier\nPrecio: $99 USD\n\nInscribirse Ahora"
   },
   {
     "objectID": "courses/visualizacion_datos_R.html#ponte-en-contacto",
@@ -971,5 +971,12 @@
     "title": "Automatización de la descarga de datos de delitos en Costa Rica",
     "section": "¿Y ahora qué?",
     "text": "¿Y ahora qué?\nEsta es la primera parte del trabajo. Ahora que tenemos los datos, estamos listos para realizar un análisis. En el siguiente post hablaremos sobre el tema de los homicidios en Costa Rica.\nFinalmente, un reconocimiento especial al Poder Judicial por el esfuerzo y la transparencia de poner estos datos a disposición de todos."
+  },
+  {
+    "objectID": "courses/fundamentos_R.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "href": "courses/fundamentos_R.html#conoce-lo-que-dicen-nuestros-estudiantes",
+    "title": "Aprende programación en R desde cero",
+    "section": "Conoce lo que dicen nuestros estudiantes",
+    "text": "Conoce lo que dicen nuestros estudiantes\n\n\n\nNo esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del lenguaje R! Recibe el soporte que necesitas para comenzar a escribir código desde el primer día.\n\n\n\nFoto de Arlington Research en Unsplash\n\n\n\n\nInscríbete Ahora\n\nPróxima apertura:\n\njueves 17 de abril de 2025\n6:00 p.m. Costa Rica\n\nDuración: 6 semanas\nClases en vivo\nPrecio: $99 USD\n\nInscribirse Ahora"
   }
 ]

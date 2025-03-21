@@ -41,6 +41,9 @@ website:
           - text: "Fundamentos de R y Rstudio"
             icon: "bi-laptop"
             href: courses/fundamentos_R.qmd
+          - text: "Visualización de datos con R"
+            icon: "fa-palette"
+            href: courses/visualizacion_datos_R.qmd
       - text: Blog
         file: posts.qmd
 
