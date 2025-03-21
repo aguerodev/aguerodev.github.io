@@ -31,11 +31,11 @@ image: ../images/app_shiny2_v2.jpg
 
 Hasta hace poco tiempo, cuando un analista deseaba convertir sus modelos o análisis en una aplicación web, necesitaba colaborar estrechamente con un desarrollador web. Este proceso solía ser largo y tedioso, lleno de constantes intercambios hasta clarificar y concretar las ideas en una aplicación funcional.
 
-[Shiny](https://shiny.posit.co) es una herramienta gratuita y de código abierto que empodera a los analistas para crear aplicaciones web reactivas, elegantes y eficaces utilizando el lenguaje de programación que ya dominan. Con Shiny, puedes pasar rápidamente de tu idea a una aplicación totalmente funcional, aprovechando al máximo los recursos y códigos que ya has desarrollado. Para aprender más sobre Shiny y cómo puede transformar tu análisis en aplicaciones web interactivas, visita su [sitio web oficial](https://shiny.posit.co).
+[Shiny](https://shiny.posit.co) es una herramienta gratuita y de código abierto que empodera a los analistas para crear aplicaciones web reactivas, elegantes y eficaces utilizando el lenguaje de programación que ya dominan [sitio web oficial](https://shiny.posit.co).
 
-Este curso está diseñado para desarrolladores y entusiastas que deseen aprender a crear aplicaciones web interactivas utilizando Shiny, una poderosa herramienta para R. A lo largo de este curso de 6 semanas, explorarás los fundamentos de la programación reactiva y la integración de mapas y gráficos interactivos, así como el despliegue eficiente de aplicaciones en shinyapps.io. Desarrollarás aplicaciones clave que no solo exhibirán tus habilidades técnicas, sino también tu capacidad para manejar y presentar datos de manera efectiva.
+Este curso está diseñado para desarrolladores y entusiastas que deseen aprender a crear aplicaciones web interactivas utilizando Shiny, una poderosa herramienta para R. A lo largo de este curso de 6 semanas, explorarás los fundamentos de la programación reactiva y la integración de mapas y gráficos interactivos, así como el despliegue eficiente de aplicaciones en shinyapps.io. Desarrollarás aplicaciones clave que no solo exhibirán sus habilidades técnicas, sino también su capacidad para manejar y presentar datos de manera efectiva.
 
-## ¿Qué aprenderás?
+## ¿Qué aprenderá?
 
 + **Fundamentos de Shiny y programación reactiva**: Introducción a los conceptos básicos de Shiny y cómo manejar la interactividad en aplicaciones web.
 + **Integración de mapas y gráficos interactivos:** Aprenderás a visualizar datos de manera dinámica utilizando bibliotecas como Leaflet para mapas y Plotly para gráficos.
