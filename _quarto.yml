@@ -42,8 +42,11 @@ website:
             icon: "bi-laptop"
             href: courses/fundamentos_R.qmd
           - text: "Visualización de datos con R"
-            icon: "fa-palette"
+            icon: "palette"
             href: courses/visualizacion_datos_R.qmd
+          - text: "Desarrollo de aplicaciones con Shiny"
+            icon: "lightning"
+            href: courses/intro_shiny.qmd
       - text: Blog
         file: posts.qmd
 

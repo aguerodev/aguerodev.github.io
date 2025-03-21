@@ -36,9 +36,7 @@ Este curso está diseñado para desarrolladores y entusiastas que deseen aprende
 
 + Fecha: **{{< var curso_shiny.fecha >}}**
 + Lecciones: {{< var curso_shiny.dia >}}
-+ Costa Rica/México: {{< var curso_shiny.hora_cr >}}
-+ Colombia: {{< var curso_shiny.hora_col >}}
-+ Argentina: {{< var curso_shiny.hora_arg >}}
++ Costa Rica {{< var curso_shiny.hora_cr >}}
 
 :::: {.columns}
 
@@ -59,7 +57,7 @@ Este curso está diseñado para desarrolladores y entusiastas que deseen aprende
 + Acceso prioritario a cursos avanzados.
 + **Precio: {{< var curso_shiny.precio >}}**
 
-[Inscribirte ahora]({{< var curso_shiny.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
+<a href='{{< var curso_shiny.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora</a>
 
 :::
 
@@ -74,21 +72,11 @@ Mi nombre es [Carlos Agüero B](www.linkedin.com/in/carlos-aguero-cr), desde el 
 
 He tenido la increíble oportunidad de formarme como [instructor certificado por RStudio](https://education.rstudio.com/trainers/people/aguero+carlos/) para la enseñanza de [Tidyverse](https://www.tidyverse.org/) y [Shiny](https://shiny.posit.co/) y, recientemente, unirme la comunidad de instructores de [The Carpentries](https://carpentries.org/instructors/). En estos 8 años de experiencia, he impartido más de 70 cursos relacionados con el lenguaje R a más de 400 estudiantes a lo largo de toda América Latina. 
 
-### Si tienes dudas conversemos:
-
-Puedes programar una 🎥 videollamada de 15 minutos con el instructor para revisar tus dudas sobre el curso en el siguiente [enlace](https://cal.com/aprendetidyverse/15min).
-
 ## Conoce lo que dicen nuestros estudiantes
 
 ```{=html}
-<script type="text/javascript" src="https://testimonial.to/js/iframeResizer.min.js"></script>
-```
-<iframe id="testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light" src="https://embed-v2.testimonial.to/carousel/all/r-para-ciencia-de-datos?theme=light&amp;autoplay=off&amp;showmore=off&amp;one-row=off&amp;hideSource&amp;same-height=off&amp;tag=all&amp;arrowColor=9BA9B4" frameborder="0" scrolling="no" width="100%">
-
-</iframe>
-
-```{=html}
-<script type="text/javascript">iFrameResize({log: false, checkOrigin: false}, '#testimonialto-carousel-r-para-ciencia-de-datos-tag-all-light');</script>
+<script src="https://widget.senja.io/widget/fb06a6ac-2804-4eba-b249-8138840eae25/platform.js" type="text/javascript" async></script>
+<div class="senja-embed" data-id="fb06a6ac-2804-4eba-b249-8138840eae25" data-mode="shadow" data-lazyload="false" style="display: block; width: 100%;"></div>
 ```
 
 ## Contenido del curso 
@@ -154,7 +142,7 @@ Este programa proporcionará una base sólida en el desarrollo de aplicaciones w
 + Acceso prioritario a cursos avanzados.
 + **Precio: $99 USD.**
 
-[Inscribirte ahora]({{< var curso_shiny.url_pago >}}){.btn .btn-outline-primary .btn role="button"} 
+<a href='{{< var curso_shiny.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora</a>
 
 :::
 
