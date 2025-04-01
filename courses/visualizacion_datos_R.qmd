@@ -5,7 +5,7 @@ description: "Aprenda a presentar sus datos como un profesional con R. En este c
 toc: true
 lang: "es"
 author: ""
-pagetitle: "Visualización de datos con ggplot2"
+pagetitle: "Visualización de datos con R"
 image: ../images/ggplot2_v2.jpg
 ---
 
