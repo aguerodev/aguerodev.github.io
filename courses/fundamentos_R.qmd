@@ -44,7 +44,7 @@ Con nuestro curso no solo aprenderás los fundamentos de R, sino que también re
 </details>
 
 <details>
-<summary>Semana 3: Inicia en la visualización de Datos</summary>
+<summary>Semana 3: Inicia en la visualización de datos</summary>
 <p>Aquí, vas a llevar tus habilidades de visualización al siguiente nivel, usando <code>ggplot2</code> para crear tus primeros gráficos. Aprenderás sobre escalas, facetas, y cómo personalizar tus gráficos para que destaquen y se adapten a tus necesidades.</p>
 </details>
 
@@ -54,14 +54,16 @@ Con nuestro curso no solo aprenderás los fundamentos de R, sino que también re
 </details>
 
 <details>
-<summary>Semana 5: Creación de Informes con Quarto</summary>
-<p>Con <code>Quarto</code>, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.</p>
+<summary>Semana 5: Fundamentos de programación</summary>
+<p>Esta semana revisaremos los principios básicos de programación en R: compuertas lógicas, ciclos, condicionales, y funciones con sus parámetros. Además, abordaremos formalmente conceptos de programación funcional, pipes, variables, tipos de datos y el ciclo de ejecución del código.</p>
 </details>
 
 <details>
-<summary>Semana 6: Proyecto Final</summary>
-<p>En la última semana, aplicarás todo lo aprendido a lo largo del curso en un proyecto final. Deberás leer datos, limpiarlos, transformarlos y presentarlos utilizando gráficos y tablas. El objetivo es crear un informe completo que demuestre tus habilidades y conocimientos adquiridos.</p>
+<summary>Semana 6: Creación de reportes con Quarto</summary>
+<p>Con <code>Quarto</code>, aprenderás a combinar tu análisis con narrativas en reportes dinámicos, haciendo que tus hallazgos no solo sean comprensibles, sino también atractivos para tu audiencia. Es la habilidad de contar una historia cautivadora, donde los datos son los personajes principales.</p>
 </details>
+
+
 
 
 :::: {.columns}
@@ -74,9 +76,8 @@ Con nuestro curso no solo aprenderás los fundamentos de R, sino que también re
     + 6:00 p.m. Costa Rica
 + Duración: 6 semanas
 + Clases en vivo
-+ **Precio: $99 USD**
 
-<a href='{{< var curso_fundamentos.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora</a>
+<a href='{{< var curso_fundamentos.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora Gratis</a>
 
 :::
 
@@ -127,9 +128,8 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
     + 6:00 p.m. Costa Rica
 + Duración: 6 semanas
 + Clases en vivo
-+ **Precio: $99 USD**
 
-<a href='{{< var curso_fundamentos.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora</a>
+<a href='{{< var curso_fundamentos.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora Gratis</a>
 
 
 :::

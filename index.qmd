@@ -14,20 +14,19 @@ copyright: ""
 ::: hero-banner
 ::: content-block
 ::: hero-text
-# ¡Inicia en el mundo de la ciencia de datos con R! 
+
 <br>
-¿Crees que aprender R es complicado? En realidad no tiene por qué serlo. Con la guía correcta y materiales prácticos, usted también puede dominarlo. Este curso está diseñado para que aprendas paso a paso, con ejemplos claros y fáciles de seguir. 
 
--	**Desde cero**: Aprende desde lo más básico, explicado con calma.
+# ¿Quiere descubrir el poder de R?
+Inscríbase sin costo en **Fundamentos de R y RStudio** y consolide lo esencial, paso a paso.
 
--	**En su horario**: Diferentes horarios y sesiones privadas cuando quiera.
-
--	**Instrucción experta**: Aprende con un instructor experimentado.
-
--	**Aplicación práctica**: Aplica lo aprendido a sus propios datos.
+# ¿Ya domina R?
+Potencie sus habilidades con nuestros **Cursos Avanzados** y transforme sus proyectos en soluciones reales.
 
 ::: hero-buttons
-<a href="https://aprendetidyverse.com/courses/fundamentos_R.html" style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">¡Inscríbete Ahora!</a>
+<a href="https://aprendetidyverse.com/courses/fundamentos_R.html" style="background-color: #213448; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">¡Inicia desde cero Grátis!</a>
+<br><br>
+<a href="https://aprendetidyverse.com/courses/fundamentos_R.html" style="background-color: #547792; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Cursos avanzados</a>
 :::
 :::
 
@@ -77,6 +76,6 @@ copyright: ""
 La comunidad de usuarios de R me ha permitido conectar con personas interesantes de todo el mundo, algo que valoro enormemente. Si tienes una idea de proyecto, especialmente si está relacionado con datos de Costa Rica, me encantaría ayudarte en lo que sea posible. 
 
 
-Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr) o en [Twitter](https://twitter.com/dev_aguero) (sí, sé que ahora se llama X, pero me resisto a cambiarle el nombre; simplemente no me gusta). ¡Espero tu mensaje!
+Para charlar o preguntar, escríbeme a <a href="mailto:carlos.aguero@aprendetidyverse.com">carlos.aguero@aprendetidyverse.com</a>. También puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/carlos-aguero-cr).
 
 :::
