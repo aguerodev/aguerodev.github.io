@@ -1,4 +1,6 @@
-
+/* ================================
+   Bloques de contenido generales
+   ================================ */
 .content-block {
   padding-top: 20px;
   padding-bottom: 10px;
@@ -6,9 +8,9 @@
   margin-right: 30px;
 }
 
-
+/* Listado de anuncios/promociones */
 #listing-listing {
-position: relative;
+  position: relative;
   background-color: #EEF5FF;
   display: flex;
   justify-content: center;
@@ -18,88 +20,80 @@ position: relative;
   margin-right: 30px;
 }
 
-@media(min-width: 900px) {
-.content-block {
-  margin-left: 50px;
-  margin-right: 50px;
-}
+/* Márgenes en pantallas medianas */
+@media (min-width: 900px) {
+  .content-block {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
 
+/* Centrado de bloques muy anchos */
 @media (min-width: 1200px) {
-.content-block {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+  .content-block {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+
+/* ================================
+   Hero banners: fondo full‑width
+   y contenido alineado
+   ================================ */
+.hero-banner,
+.hero-banner2 {
+  display: block;
+  position: relative;
+  padding: 20px 0;         /* sólo top/bottom */
 }
 
 .hero-banner {
-  position: relative;
   background-color: #EEF5FF;
-  display: flex;
-  justify-content: center;
-}
-.hero-banner2 {
-  position: relative;
-  background-color: white;
-  display: flex;
-  justify-content: center;
 }
 
+.hero-banner2 {
+  background-color: white;
+}
+
+/* Contenedor interno con márgenes idénticos al resto */
+.hero-banner .content-block,
+.hero-banner2 .content-block {
+  margin: 0 30px;
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+}
+
+/* Márgenes en pantallas medianas */
+@media (min-width: 900px) {
+  .hero-banner .content-block,
+  .hero-banner2 .content-block {
+    margin: 0 50px;
+  }
+}
+
+/* Restricción de ancho y centrado en pantallas grandes */
+@media (min-width: 1200px) {
+  .hero-banner .content-block,
+  .hero-banner2 .content-block {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
+
+/* ================================
+   Estilos internos del hero‑banner
+   ================================ */
 .hero-banner h1 {
   color: #365486;
   font-size: 2.5rem;
 }
 
-
 .hero-banner .hero-image {
   position: absolute;
   display: none;
   height: auto;
-}
-
-.hero-banner .content-block {
-  display: flex;
-  flex-direction: row;
-}
-
-.hero-banner .content-block .hero-text {
-  width: 65%;
-}
-
-.hero-banner .content-block .hero-animation {
-  margin-left: 40px;
-  margin-top: 45px;
-  width: 350px;
-  height: 455px;
-}
-
-.hero-banner .content-block .hero-animation video {
-  width: 350px;
-  height: 455px;
-}
-
-@media (min-width: 1000px) {
-.hero-banner .hero-image {
-  display: initial;
-  width: 270px;
-}
-}
-
-@media (min-width: 1200px) {
-.hero-banner .hero-image {
-  width: 340px;
-}
-}
-
-@media (min-width: 1400px) {
-.hero-banner .hero-image {
-  width: 440px;
-}
-}
-
-.hero-banner .hero-image p {
-  margin-bottom: 0;
 }
 
 .hero-banner .hero-image-left {
@@ -112,51 +106,62 @@ position: relative;
   bottom: 0;
 }
 
-
-.hero-banner .content-block {
-  z-index: 2;
+@media (min-width: 1000px) {
+  .hero-banner .hero-image {
+    display: initial;
+    width: 100%;
+  }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (min-width: 1200px) {
+  .hero-banner .hero-image {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-banner .hero-image {
+    width: 100%;
+  }
+}
+
+.hero-banner .hero-image p {
+  margin-bottom: 0;
+}
+
+.hero-banner .content-block .hero-text {
+  width: 100%;
+}
+
+.hero-banner .content-block .hero-animation {
+  margin-left: 5px;
+  margin-top: 10px;
+  width: 100%;
+  height: 455px;
+}
+
+.hero-banner .content-block .hero-animation video {
+  width: 350px;
+  height: 455px;
+}
+
+/* Oculta animación en reduced‑motion y móviles */
+@media (prefers-reduced-motion: reduce),
+       (max-width: 1200px) {
   .hero-banner .content-block {
     max-width: 660px;
   }
   .hero-banner .content-block .hero-text {
     width: 100%;
   }
-  
   .hero-banner .content-block .hero-animation {
     display: none;
   }
 }
 
-@media (max-width: 1200px)  {
-  .hero-banner .content-block {
-    max-width: 660px;
-  }
-  .hero-banner .content-block .hero-text {
-    width: 100%;
-  }
-  
-  .hero-banner .content-block .hero-animation {
-    display: none;
-  }
-}
-
-
+/* Links y botones dentro del banner */
 .hero-banner a {
   text-decoration: none;
-}
-
-.hero-banner h3 {
-  color : #3D3B40;
-margin-top: 0.5rem;
-font-size: 20px;
-margin-bottom: 1.3rem;
-}
-
-.hero-banner h4 {
-  margin-top: 0;
 }
 
 .hero-banner a[role="button"] {
@@ -165,14 +170,21 @@ margin-bottom: 1.3rem;
   margin-bottom: 1.6rem;
 }
 
-
 .hero-banner #btn-guide {
   background-color: #959595 !important;
   border: none;
 }
 
+.hero-banner h3 {
+  color: #3D3B40;
+  margin-top: 0.5rem;
+  font-size: 20px;
+  margin-bottom: 1.3rem;
+}
 
-
+.hero-banner h4 {
+  margin-top: 0;
+}
 
 .hero-banner ul {
   padding-inline-start: 21px;
@@ -183,7 +195,9 @@ margin-bottom: 1.3rem;
   padding-bottom: 0.4rem;
 }
 
-
+/* ================================
+   Resto de estilos existentes
+   ================================ */
 .alt-background {
   background-color: rgb(247,249,251);
   border-top: 1px solid #dee2e6;
@@ -193,28 +207,28 @@ margin-bottom: 1.3rem;
 .hello-quarto {
   padding-bottom: 1rem;
 }
+
 li a {
-  color:#1679AB;
+  color: #1679AB;
 }
 
 @media (min-width: 600px) {
-.hello-quarto-banner {
-  display: inline-flex;
-  align-content: center;
-  justify-content: center;
+  .hello-quarto-banner {
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .hello-quarto-banner h1 {
+    margin-right: 40px;
+  }
 }
 
-.hello-quarto-banner h1 {
-  margin-right: 40px;
-}
-}
-
-.hello-quarto-banner .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.hello-quarto-banner .nav-pills .nav-link.active,
+.hello-quarto-banner .show>.nav-link {
   border: none;
   border-bottom: 2px solid #39729E !important;
   color: #39729E;
   background-color: transparent;
-  
 }
 
 .hello-quarto-banner .nav-pills button {
@@ -232,15 +246,30 @@ li a {
   margin-bottom: 1.5em;
 }
 
-.hello-quarto div.sourceCode {
+.hello-quarto div.sourceCode,
+.hello-output {
   background-color: white;
   border: 1px solid #dee2e6;
 }
 
-.hello-output {
-  background-color: white;
-  border: 1px solid #dee2e6;
-  max-height: 660px;
+.email {
+  padding: 20px 20%;
+  background-color: #3D3B40;
+}
+
+.email h2 {
+  color: white;
+  padding-right: 5%;
+}
+
+@media (max-width: 768px) {
+  .email {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .email h2 {
+    margin-top: 20px !important;
+  }
 }
 
 .features {
@@ -248,23 +277,23 @@ li a {
 }
 
 .feature {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;
   margin-top: 20px;
   padding: 10px;
 }
 
-@media (min-width: 800px) { 
-.features {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 0 0 0 -30px;
-  width: calc(100% + 30px);
-}
-.feature {
-  width: calc(33% - 30px);
-  margin: 20px 0 0 30px;
-}
+@media (min-width: 800px) {
+  .features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 0 0 -30px;
+    width: calc(100% + 30px);
+  }
+  .feature {
+    width: calc(33% - 30px);
+    margin: 20px 0 0 30px;
+  }
 }
 
 .feature h3 {
@@ -273,17 +302,17 @@ li a {
 
 .feature p:first-of-type {
   margin-bottom: 0.2rem;
-  color: rgb(84, 85, 85);
+  color: rgb(84,85,85);
 }
 
 .get-started {
-   text-align: center;
-   padding-bottom: 2rem;
+  text-align: center;
+  padding-bottom: 2rem;
 }
 
 .get-started h3 {
-   margin-top: 1rem;
-   margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 nav.page-navigation {
@@ -291,54 +320,23 @@ nav.page-navigation {
 }
 
 .nav-footer {
-  border-top: none !important; 
+  border-top: none !important;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
   color: #fff;
   background-color: #ff7518;
 }
 
-.btn-success{
+.btn-success {
   background-color: #1679AB;
-  color : white;
+  color: white;
   border: none;
 }
 
-.btn-success:hover {
-    background-color: #1679AB; /* Cambia este valor al color que desees */
-      color : white;
-}
-
+.btn-success:hover,
 .btn-success:active {
-    background-color: #1679AB !important; /* Cambia este valor al color que desees */
-      color : white !important;
-}
-
-
-.email{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20%;
-  padding-right: 20%;
-  background-color: #3D3B40;
-}
-
-.email h2{
-    color: white;
-    padding-right: 5%;
-}
-
-@media (max-width: 768px) {
-  .email{
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #3D3B40;
-}
-
-.email h2{
-  margin-top: 20px !important;
-    color: white;
-    padding-right: 5%;
-}
+  background-color: #1679AB !important;
+  color: white !important;
 }

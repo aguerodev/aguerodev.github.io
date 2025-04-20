@@ -11,11 +11,11 @@ license: ""
 copyright: ""
 ---
 
+
 ::: hero-banner
 ::: content-block
 ::: hero-text
 
-<br>
 
 # ¿Quiere descubrir el poder de R?
 Inscríbase sin costo en **Fundamentos de R y RStudio** y consolide lo esencial, paso a paso.
