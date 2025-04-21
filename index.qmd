@@ -11,7 +11,6 @@ license: ""
 copyright: ""
 ---
 
-
 ::: hero-banner
 ::: content-block
 ::: hero-text
@@ -24,9 +23,9 @@ Inscríbase sin costo en **Fundamentos de R y RStudio** y consolide lo esencial,
 Potencie sus habilidades con nuestros **Cursos Avanzados** y transforme sus proyectos en soluciones reales.
 
 ::: hero-buttons
-<a href="https://aprendetidyverse.com/courses/fundamentos_R.html" style="background-color: #213448; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">¡Inicia desde cero Grátis!</a>
-<br><br>
-<a href="https://aprendetidyverse.com/courses/fundamentos_R.html" style="background-color: #547792; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Cursos avanzados</a>
+<a href="https://aprendetidyverse.com/courses/fundamentos_R.html" style="background-color: #B771E5; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">¡Inicia desde cero Grátis!</a>
+
+<a href="https://aprendetidyverse.com/courses/visualizacion_datos_R.html" style="background-color: #547792; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Cursos avanzados</a>
 :::
 :::
 
@@ -35,6 +34,15 @@ Potencie sus habilidades con nuestros **Cursos Avanzados** y transforme sus proy
 :::
 
 ::: content-block
+
+::: content-block
+## ¿Por qué aprende con nosotros?
+
+- **Aprendizaje práctico:** Realice ejercicios con datos reales.  
+- **Flexibilidad horaria:** Clases en vivo y grabaciones disponibles 24/7.  
+- **Asesoría personalizada:** Resolución de dudas en sesiones privadas.  
+- **Instructor certificado:** Más de 8 años de experiencia, avalado por RStudio y The Carpentries.
+:::
 
 
 ## Conoce lo que dicen nuestros estudiantes

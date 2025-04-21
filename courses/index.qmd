@@ -9,6 +9,7 @@ image: ../images/community3_v2.jpg
 license: ""
 ---
 
+
 ![Foto de <a href="https://unsplash.com/es/@cwmonty?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Montgomery</a> en <a href="https://unsplash.com/es/fotos/macbook-pro-displaying-group-of-people-smgTvepind4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](../images/community3_v2.jpg)
 
 Queremos iniciar con una premisa fundamental: <mark>**cualquiera que te prometa convertirte en un experto en R o en cualquier lenguaje de programación en tan solo unos meses o semanas, simplemente no está siendo sincero.**</mark> Dominar una herramienta tan poderosa como R no es una tarea que se pueda tomar a la ligera; no hay atajos, solamente práctica, práctica y más práctica.
