@@ -76,8 +76,9 @@ Con nuestro curso no solo aprenderás los fundamentos de R, sino que también re
     + 6:00 p.m. Costa Rica
 + Duración: 6 semanas
 + Clases en vivo
++ **Precio: $99 USD**
 
-<a href='{{< var curso_fundamentos.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora Gratis</a>
+<a href='{{< var curso_fundamentos.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora</a>
 
 :::
 
@@ -128,8 +129,9 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
     + 6:00 p.m. Costa Rica
 + Duración: 6 semanas
 + Clases en vivo
++ **Precio: $99 USD**
 
-<a href='{{< var curso_fundamentos.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora Gratis</a>
+<a href='{{< var curso_fundamentos.url_pago >}}' style="background-color: #FF5F00; color: white; padding: 10px 20px; border: none; border-radius: 0px; text-decoration: none; font-size: 16px; font-weight: bold; display: inline-block; cursor: pointer; transition: background-color 0.3s ease;">Inscribirse Ahora </a>
 
 
 :::
