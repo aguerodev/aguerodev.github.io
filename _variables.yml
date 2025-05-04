@@ -12,13 +12,13 @@ curso_r4ds:
   url_pago_gratis: "https://tally.so/r/mYQb4N?curso=R%20para%20ciencia%20de%20datos%20-%20Descuento%20comunidad&gratis=si&fecha_inicio=jueves%2023%20de%20mayo%20de%202024"
   
 curso_ggplot2:
-  fecha: "martes 22 de abril de 2025"
+  fecha: "jueves 12 de junio de 2025"
   dia: "Todos los martes"
   hora_cr: "6:00 p.m."
   hora_col: "7:00 p.m."
   hora_arg: "9:00 p.m."
   precio: "$99 USD"
-  url_pago: "https://tally.so/r/mYQb4N?curso=visualizacion%20de%20datos%20con%20R&precio=%2499%20USD&fecha_inicio=martes%2022%20de%20abril&precio_cr=50,000%20colones"
+  url_pago: "https://tally.so/r/mYQb4N?curso=visualizacion%20de%20datos%20con%20R&precio=%2499%20USD&fecha_inicio=jueves%2012%20de%20junio&precio_cr=50,000%20colones"
   
 curso_webscraping:
   fecha: "martes 23 de julio de 2024"
