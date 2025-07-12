@@ -62,7 +62,7 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 ::: {.column width="45%"}
 ## Inscríbete Ahora
 + Próxima apertura:
-    + **jueves 02 de julio**
+    + **miércoles 16 de julio**
     + 6:00 p.m Costa Rica
 + Clases en vivo
 + Grabaciones de las clases
@@ -70,9 +70,9 @@ Para poder desenvolverte en el curso sin problemas, es importante cumplir con lo
 + Acceso a una comunidad de aprendizaje
 + Ayuda en minutos a través de Zoom o WhatsApp
 + Certificado compatible con LinkedIn emitido por Certifier
-+ **Precio: $99 USD**
++ **Precio: gratuito**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Limpieza%20y%20manipulaci%C3%B3n%20de%20datos%20con%20R&precio=%2499%20USD&fecha_inicio=jueves%2002%20de%20julio&id=curso_limpieza_manipulacion_R&precio_cr=50%2C000%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Limpieza%20y%20manipulaci%C3%B3n%20de%20datos%20con%20R&precio=%2499%20USD&fecha_inicio=jueves%2002%20de%20julio&id=curso_limpieza_manipulacion_R&precio_cr=50%2C000%20colones&gratis=si){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
@@ -124,7 +124,7 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 ## Inscríbete Ahora
 
 + Próxima apertura:
-    + **jueves 02 de julio**
+    + **miércoles 16 de julio**
     + 6:00 p.m Costa Rica
 + Clases en vivo
 + Grabaciones de las clases
@@ -132,9 +132,9 @@ No esperes más. ¡Inscríbete ahora y empieza tu camino hacia el dominio del le
 + Acceso a una comunidad de aprendizaje
 + Ayuda en minutos a través de Zoom o WhatsApp
 + Certificado compatible con LinkedIn emitido por Certifier
-+ **Precio: $99 USD**
++ **Precio: gratuito**
 
-[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Limpieza%20y%20manipulaci%C3%B3n%20de%20datos%20con%20R&precio=%2499%20USD&fecha_inicio=jueves%2002%20de%20julio&id=curso_limpieza_manipulacion_R&precio_cr=50%2C000%20colones){.btn .btn-outline-primary .btn role="button"} 
+[Inscribirte ahora](https://tally.so/r/mYQb4N?curso=Limpieza%20y%20manipulaci%C3%B3n%20de%20datos%20con%20R&precio=%2499%20USD&fecha_inicio=jueves%2002%20de%20julio&id=curso_limpieza_manipulacion_R&precio_cr=50%2C000%20colones&gratis=si){.btn .btn-outline-primary .btn role="button"} 
 
 :::
 
