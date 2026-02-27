@@ -1,0 +1,11 @@
+:root{--bg:#f6f8fb;--text:#0f172a;--muted:#475569;--primary:#0ea5e9;--border:#dbe3ef}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.landing{max-width:860px;margin:32px auto;padding:28px;background:#fff;border:1px solid var(--border);border-radius:16px}
+.badge{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:.85rem}
+h1{margin:.5rem 0 0;font-size:2rem}.lead{color:var(--muted);margin:.6rem 0 1rem}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap}.btn{padding:10px 16px;border-radius:10px;border:0;cursor:pointer;text-decoration:none;font-weight:600}
+.btn-primary{background:var(--primary);color:#fff}.btn-ghost{background:#fff;border:1px solid var(--border);color:var(--text)}
+.copy-msg{min-height:1.2em;color:var(--muted);font-size:.92rem}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin:16px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:12px;background:#fff}.card h2{font-size:1rem;margin:0 0 4px}
+ul{padding-left:1.1rem}.footer-cta{margin-top:20px;padding-top:10px;border-top:1px solid var(--border)}
