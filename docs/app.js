@@ -1,12 +1,24 @@
-const btn = document.getElementById('copyEmail');
-const msg = document.getElementById('copyMsg');
-if (btn) {
-  btn.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText('carlos.aguero@aprendetidyverse.com');
-      msg.textContent = 'Correo copiado ✅';
-    } catch {
-      msg.textContent = 'No se pudo copiar. Usa: carlos.aguero@aprendetidyverse.com';
-    }
-  });
-}
+const form = document.getElementById('enrollForm');
+const msg = document.getElementById('formMsg');
+
+form?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  msg.textContent = 'Enviando...';
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  try {
+    const res = await fetch('/api/inscripciones', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    });
+
+    const out = await res.json();
+    if (!res.ok) throw new Error(out.error || 'No se pudo guardar');
+    msg.textContent = '✅ Inscripción guardada. Te contactaremos por WhatsApp para completar el pago.';
+    form.reset();
+  } catch (err) {
+    msg.textContent = `⚠️ ${err.message}`;
+  }
+});
+
