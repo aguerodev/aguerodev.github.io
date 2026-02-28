@@ -1,4 +1,10 @@
-// Opcional: sobrescriba la URL del backend de inscripciones.
-// Ejemplo producción:
-// window.ENROLL_API_URL = 'https://su-backend.com/api/inscripciones';
-window.ENROLL_API_URL = window.ENROLL_API_URL || 'http://127.0.0.1:8790/api/inscripciones';
+// Configuración cliente (temporal) para formulario en GitHub Pages.
+// Nota: al estar en frontend, estos valores quedan visibles públicamente.
+window.ENROLL_CONFIG = {
+  evolutionBaseUrl: 'https://whatsapp-evolution-api.n5hlxm.easypanel.host',
+  evolutionInstance: 'aprende',
+  evolutionApiKey: 'CC53F3DCE12C-4AE7-8BB8-5873CBA328F6',
+  ownerNumber: '50686785640',
+  courseName: 'Limpieza y Manipulación de Datos con R',
+  priceUsd: 99
+};
