@@ -20,7 +20,6 @@
   <meta name="twitter:description" content="6 semanas · $99 USD · En vivo + ejercicios. Inscríbase y reciba por WhatsApp la información para completar la inscripción." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1640158615573-cd28feb1bf4e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/css/intlTelInput.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -47,9 +46,9 @@
         <h3>Reserve su cupo</h3>
         <p>Déjenos su correo y teléfono. Le enviaremos por <strong>WhatsApp</strong> la información para completar la inscripción.</p>
         <form id="enrollForm" class="form" autocomplete="on">
-          <label>Correo electrónico<input type="email" autocomplete="email" name="email" required /></label>
+          <label>Correo electrónico<input id="email" type="email" autocomplete="email" name="email" placeholder="nombre@correo.com" required /></label>
           <label>Teléfono / WhatsApp
-            <input id="phone" type="tel" inputmode="tel" autocomplete="tel" name="phone" placeholder="88887777" required />
+            <input id="phone" type="tel" inputmode="numeric" autocomplete="tel" name="phone" placeholder="8888-8888" pattern="^(?:6[0-4]|7[0-2]|8[3-9])[0-9]{2}-[0-9]{4}$" minlength="9" maxlength="9" required />
           </label>
           <button type="submit">Enviar inscripción</button>
         </form>
@@ -475,8 +474,7 @@ Su metodología pedagógica, combinada con ejemplos prácticos, facilitó una co
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/intlTelInput.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/utils.js"></script>
+  <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
