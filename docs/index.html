@@ -47,9 +47,9 @@
       <aside id="inscripcion" class="enroll-card">
         <h3>Reserve su cupo</h3>
         <p>Déjenos su correo y teléfono. Le enviaremos por <strong>WhatsApp</strong> la información para completar la inscripción.</p>
-        <form id="enrollForm" class="form">
-          <label>Correo electrónico<input type="email" name="email" required /></label>
-          <label>Teléfono / WhatsApp<input type="tel" inputmode="numeric" autocomplete="tel" name="whatsapp" placeholder="+506..." required /></label>
+        <form id="enrollForm" class="form" autocomplete="on">
+          <label>Correo electrónico<input type="email" autocomplete="email" name="email" required /></label>
+          <label>Teléfono / WhatsApp<input type="tel" inputmode="tel" autocomplete="tel" name="phone" placeholder="50688887777" required /></label>
           <button type="submit">Enviar inscripción</button>
         </form>
         <p id="formMsg" class="form-msg"></p>
