@@ -1,5 +1,0 @@
-website:
-  drafts:
-    - posts/005_duckdb_intro.qmd 
-    - posts/004_across_where.qmd 
-  draft-mode: visible
