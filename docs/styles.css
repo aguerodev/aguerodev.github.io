@@ -89,6 +89,7 @@ code{background:#eef4ff;color:#10377a;padding:1px 5px;border-radius:6px}
   .hero-grid{grid-template-columns:1fr}
 }
 @media (max-width:760px){
+  .lead{max-width:100%;font-size:1rem;line-height:1.55;overflow-wrap:anywhere}
   .instructor{grid-template-columns:1fr}
   .upcoming-grid{grid-template-columns:1fr}
   .marquee-track{animation-duration:65s}
