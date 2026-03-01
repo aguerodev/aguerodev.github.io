@@ -4,6 +4,45 @@ import './App.css'
 const PHONE_REGEX = /^(?:6[0-4]|7[0-2]|8[3-9])[0-9]{2}-[0-9]{4}$/
 const API_BASE = import.meta.env.VITE_API_BASE || 'https://aprende-inscripciones.aguero2707.workers.dev'
 
+const TESTIMONIALS = [
+  {
+    name: 'Oldemar Rodríguez',
+    tagline: 'CEO (Chief Executive Officer) PROMiDAT Iberoamericano S.A.',
+    img: 'https://senja-io.s3.us-west-1.amazonaws.com/public/media/ztwD85TIPlJME4v89fpJ5rg0.jpeg',
+    text: 'Carlos tiene amplios conocimientos en Programación R y experiencia real en proyectos de Ciencia de Datos. Excelente formador.'
+  },
+  {
+    name: 'Anthony García-Marín',
+    tagline: 'Researcher | Data Analyst | Professor',
+    img: 'https://senja-io.s3.us-west-1.amazonaws.com/public/media/sMKtIpTuIsgHprCrkBv93uRl.jpeg',
+    text: 'Destaca por su dominio de R y su capacidad de explicar conceptos complejos con claridad y ejemplos prácticos.'
+  },
+  {
+    name: 'Gabriel Jesús Barrios Arias',
+    tagline: 'Data Analyst Manager II @ Walmart Global Tech',
+    img: 'https://senja-io.s3.us-west-1.amazonaws.com/public/media/vWnX5SNmDQpqw4Vf0NZV0ZC7.jpeg',
+    text: 'Instructor excepcional, materiales muy bien elaborados y una metodología que mantiene la motivación por aprender.'
+  },
+  {
+    name: 'Diego Valladares-Sobrado',
+    tagline: 'IT Projects | Data | Research',
+    img: 'https://senja-io.s3.us-west-1.amazonaws.com/public/media/j1lNx9XIynn5ZBRahEIQ4Qgw.jpeg',
+    text: 'Pasión por el tema, experiencia y habilidad para enseñar.'
+  },
+  {
+    name: 'Esteban Navarro',
+    tagline: 'Psicólogo y estudiante de estadística',
+    img: 'https://senja-io.s3.us-west-1.amazonaws.com/public/avatar/ba0490a4-0038-4712-88f6-e719e2243574_ChatGPT%20Image%2028%20mar%202025%2C%2020_41_26.png',
+    text: 'Es de los cursos más completos y actualizados que he llevado en R.'
+  },
+  {
+    name: 'Verónica Cerdas Benavides',
+    tagline: 'Economista',
+    img: 'https://senja-io.s3.us-west-1.amazonaws.com/public/avatar/b35fff02-3f20-4785-907a-9fe012d8ea4d_1000235284.jpg',
+    text: 'Muy didáctico y con enfoque práctico. Altamente recomendado.'
+  }
+]
+
 function normalizePhoneInput(v) {
   const raw = (v || '').replace(/\D/g, '').slice(0, 8)
   return raw.length > 4 ? `${raw.slice(0, 4)}-${raw.slice(4)}` : raw
@@ -208,10 +247,40 @@ export default function App() {
         <section className="panel testimonials">
           <h2>Testimonios de estudiantes</h2>
           <p className="form-msg">Experiencias reales de personas que han llevado cursos conmigo.</p>
-          <div className="testimonials-grid">
-            <article className="testimonial-card"><h3>Oldemar Rodríguez</h3><p>Carlos tiene amplios conocimientos en Programación R y experiencia real en proyectos de Ciencia de Datos. Excelente formador.</p></article>
-            <article className="testimonial-card"><h3>Anthony García-Marín</h3><p>Destaca por su dominio de R y su capacidad de explicar conceptos complejos con claridad y ejemplos prácticos.</p></article>
-            <article className="testimonial-card"><h3>Gabriel J. Barrios</h3><p>Instructor excepcional, materiales muy bien elaborados y una metodología que mantiene la motivación por aprender.</p></article>
+
+          <div className="testimonials-marquee">
+            <div className="marquee-row">
+              <div className="marquee-track">
+                {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+                  <article className="testimonial-card" key={`t1-${i}`}>
+                    <div className="testimonial-head">
+                      <img src={t.img} alt={t.name} loading="lazy" referrerPolicy="no-referrer" />
+                      <div>
+                        <div className="testimonial-name">{t.name}</div>
+                        <div className="testimonial-tagline">{t.tagline}</div>
+                      </div>
+                    </div>
+                    <p className="testimonial-text">{t.text}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+            <div className="marquee-row reverse">
+              <div className="marquee-track">
+                {[...TESTIMONIALS.slice().reverse(), ...TESTIMONIALS.slice().reverse()].map((t, i) => (
+                  <article className="testimonial-card" key={`t2-${i}`}>
+                    <div className="testimonial-head">
+                      <img src={t.img} alt={t.name} loading="lazy" referrerPolicy="no-referrer" />
+                      <div>
+                        <div className="testimonial-name">{t.name}</div>
+                        <div className="testimonial-tagline">{t.tagline}</div>
+                      </div>
+                    </div>
+                    <p className="testimonial-text">{t.text}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
