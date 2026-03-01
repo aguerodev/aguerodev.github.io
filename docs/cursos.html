@@ -4,31 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Área de Cursos | Aprende Tidyverse</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body{margin:0;font-family:Inter,system-ui,sans-serif;background:#f4f7fb;color:#0f172a}
+    .wrap{max-width:900px;margin:0 auto;padding:24px}
+    .hero{background:#0f172a;color:#fff;padding:26px 0}
+    .btn{display:inline-block;background:#03c988;color:#032015;text-decoration:none;padding:10px 14px;border-radius:8px;font-weight:700}
+    .card{background:#fff;border:1px solid #dce4f4;padding:18px;margin-top:16px}
+  </style>
 </head>
 <body>
   <header class="hero">
-    <nav class="nav wrap">
-      <div class="brand">Aprende Tidyverse</div>
-      <div class="nav-actions">
-        <a href="index.html" class="nav-cta">Volver al inicio</a>
-      </div>
-    </nav>
     <div class="wrap">
-      <p class="eyebrow">SESIÓN ACTIVA</p>
-      <h1>Cursos</h1>
-      <p class="lead">Bienvenido al área de cursos. Aquí podrá ver sus contenidos y recursos disponibles.</p>
+      <h1>Área de Cursos</h1>
+      <p>Sesión iniciada correctamente.</p>
+      <a class="btn" href="/">Volver al inicio</a>
     </div>
   </header>
-
-  <main class="wrap sections">
-    <section class="panel">
+  <main class="wrap">
+    <div class="card">
       <h2>Contenido disponible</h2>
       <ul>
         <li>Limpieza y Manipulación de Datos con R</li>
-        <li>Materiales, ejercicios y recursos del curso</li>
+        <li>Materiales y recursos del curso</li>
       </ul>
-    </section>
+    </div>
   </main>
 </body>
 </html>
