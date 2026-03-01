@@ -3,43 +3,16 @@ const msg = document.getElementById('formMsg');
 const phoneInput = document.getElementById('phone');
 const emailInput = document.getElementById('email');
 
+const loginBtn = document.getElementById('loginBtn');
+const logoutBtn = document.getElementById('logoutBtn');
+const loginModal = document.getElementById('loginModal');
+const closeLogin = document.getElementById('closeLogin');
+const loginForm = document.getElementById('loginForm');
+const loginEmail = document.getElementById('loginEmail');
+const loginPassword = document.getElementById('loginPassword');
+const loginMsg = document.getElementById('loginMsg');
+
 const PHONE_REGEX = /^(?:6[0-4]|7[0-2]|8[3-9])[0-9]{2}-[0-9]{4}$/;
-
-const cfg = window.ENROLL_CONFIG || {};
-
-function normalizePhoneCR(v) {
-  return `506${(v || '').replace(/\D/g, '')}`;
-}
-
-async function getUsdCrcRate() {
-  const r = await fetch('https://open.er-api.com/v6/latest/USD');
-  const j = await r.json();
-  if (!j?.rates?.CRC) throw new Error('No se pudo obtener tipo de cambio USD/CRC.');
-  return Number(j.rates.CRC);
-}
-
-async function sendWhatsApp(number, text) {
-  const url = `${cfg.evolutionBaseUrl}/message/sendText/${cfg.evolutionInstance}`;
-  const payload = {
-    number,
-    text,
-    delay: 500,
-    linkPreview: false
-  };
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      apikey: cfg.evolutionApiKey
-    },
-    body: JSON.stringify(payload)
-  });
-  if (!res.ok) {
-    const t = await res.text();
-    throw new Error(`WhatsApp API error ${res.status}: ${t.slice(0, 120)}`);
-  }
-}
-
 phoneInput?.addEventListener('input', (e) => {
   const raw = e.target.value.replace(/\D/g, '').slice(0, 8);
   e.target.value = raw.length > 4 ? `${raw.slice(0, 4)}-${raw.slice(4)}` : raw;
@@ -69,11 +42,6 @@ form?.addEventListener('submit', async (e) => {
   e.preventDefault();
   msg.textContent = 'Enviando...';
 
-  if (!cfg.evolutionBaseUrl || !cfg.evolutionInstance || !cfg.evolutionApiKey) {
-    msg.textContent = '⚠️ Falta configuración de mensajería.';
-    return;
-  }
-
   const phoneOk = PHONE_REGEX.test(phoneInput?.value || '');
   if (!phoneOk) {
     phoneInput?.setCustomValidity('Use formato 8888-8888. Prefijos móviles válidos: 60-64, 70-72, 83-89.');
@@ -93,24 +61,28 @@ form?.addEventListener('submit', async (e) => {
     return;
   }
 
-  const phone = normalizePhoneCR(phoneInput.value);
+  const phone = phoneInput.value;
 
   try {
-    const rate = await getUsdCrcRate();
-    const crc = (Number(cfg.priceUsd || 99) * rate).toFixed(2);
+    const apiUrl = window.ENROLL_API_URL;
+    if (!apiUrl) throw new Error('Falta ENROLL_API_URL en config.js');
 
-    const ownerText = [
-      `📥 Nueva inscripción en ${cfg.courseName}`,
-      `Correo: ${emailValue}`,
-      `Teléfono: +${phone}`,
-      `Monto referencia: USD ${cfg.priceUsd || 99} ≈ ₡${Number(crc).toLocaleString('es-CR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-      `TC USD/CRC actual: ${rate.toFixed(2)}`
-    ].join('\n');
+    const res = await fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: emailValue,
+        phone
+      })
+    });
 
-    const userText = `Muchas gracias por inscribirse en el curso ${cfg.courseName}. Para confirmar su compra, por favor adjunte una captura del comprobante SINPE. El monto es USD ${cfg.priceUsd || 99}, equivalente aprox. a ₡${Number(crc).toLocaleString('es-CR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} al tipo de cambio del momento.`;
+    const raw = await res.text();
+    let out = {};
+    try { out = raw ? JSON.parse(raw) : {}; } catch { out = {}; }
 
-    await sendWhatsApp(cfg.ownerNumber, ownerText);
-    await sendWhatsApp(phone, userText);
+    if (!res.ok) {
+      throw new Error(out.error || `Error ${res.status} al enviar la inscripción.`);
+    }
 
     msg.textContent = '✅ Inscripción enviada correctamente. Le contactaremos por WhatsApp.';
     form.reset();
@@ -118,3 +90,46 @@ form?.addEventListener('submit', async (e) => {
     msg.textContent = `⚠️ ${err.message}`;
   }
 });
+
+loginBtn?.addEventListener('click', openLogin);
+closeLogin?.addEventListener('click', closeLoginModal);
+loginModal?.addEventListener('click', (e) => {
+  if (e.target === loginModal) closeLoginModal();
+});
+
+logoutBtn?.addEventListener('click', () => {
+  localStorage.removeItem('aprende_session');
+  setAuthUI();
+});
+
+loginForm?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  if (!loginMsg) return;
+  loginMsg.textContent = 'Validando...';
+
+  try {
+    const r = await fetch('users.json', { cache: 'no-store' });
+    if (!r.ok) throw new Error('No se pudo cargar la base de usuarios.');
+    const users = await r.json();
+    const email = (loginEmail?.value || '').trim().toLowerCase();
+    const pass = (loginPassword?.value || '').trim();
+
+    const user = (users || []).find((u) => (u.email || '').toLowerCase() === email && (u.password || '') === pass);
+    if (!user) {
+      loginMsg.textContent = '⚠️ Credenciales inválidas.';
+      return;
+    }
+
+    localStorage.setItem('aprende_session', JSON.stringify({ email: user.email, name: user.name || '' }));
+    loginMsg.textContent = '✅ Sesión iniciada. Redirigiendo...';
+    setTimeout(() => {
+      closeLoginModal();
+      setAuthUI();
+      window.location.href = 'cursos.html';
+    }, 350);
+  } catch (err) {
+    loginMsg.textContent = `⚠️ ${err.message}`;
+  }
+});
+
+setAuthUI();

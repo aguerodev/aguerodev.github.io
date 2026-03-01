@@ -17,7 +17,7 @@ body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-ser
 .nav{height:74px;display:flex;align-items:center;justify-content:space-between}
 .brand{font-weight:800;letter-spacing:.2px;font-size:1.22rem;line-height:1;display:flex;align-items:center}
 .nav-actions{display:flex;align-items:center;gap:10px}
-.nav-cta{background:transparent;color:var(--text);border:1px solid #ffffff33;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+.nav-cta{background:transparent;color:var(--text);border:1px solid #ffffff33;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;font-size:1rem;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
 
 .hero-grid{display:grid;grid-template-columns:1.2fr .9fr;gap:28px;align-items:start;padding-top:10px}
 .eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.11em;color:#79f2c0;margin:8px 0}
@@ -82,6 +82,11 @@ h1{font-size:clamp(2rem,4vw,3rem);line-height:1.05;margin:.2rem 0 0}
 .site-footer p{margin:6px 0;color:#c7d3f2}
 .site-footer a{color:#9ee8ff;text-decoration:none}
 .site-footer a:hover{text-decoration:underline}
+
+.modal{position:fixed;inset:0;background:rgba(2,8,23,.55);display:none;align-items:center;justify-content:center;z-index:2000;padding:16px}
+.modal.show{display:flex}
+.modal-card{width:min(420px,100%);background:#fff;border:1px solid #dce4f4;padding:18px;border-radius:12px}
+.modal-card h3{margin:0 0 10px}
 
 code{background:#eef4ff;color:#10377a;padding:1px 5px;border-radius:6px}
 

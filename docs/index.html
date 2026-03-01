@@ -26,7 +26,10 @@
   <header class="hero">
     <nav class="nav wrap">
       <div class="brand">Aprende Tidyverse</div>
-
+      <div class="nav-actions">
+        <button id="loginBtn" class="nav-cta" type="button">Iniciar sesión</button>
+        <button id="logoutBtn" class="nav-cta" type="button" style="display:none">Cerrar sesión</button>
+      </div>
     </nav>
 
     <div class="wrap hero-grid">
@@ -481,6 +484,23 @@ Su metodología pedagógica, combinada con ejemplos prácticos, facilitó una co
       </div>
     </div>
   </footer>
+
+  <div id="loginModal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <h3>Iniciar sesión</h3>
+      <form id="loginForm" class="form">
+        <label>Correo
+          <input id="loginEmail" type="email" required placeholder="nombre@correo.com" />
+        </label>
+        <label>Contraseña
+          <input id="loginPassword" type="password" required placeholder="********" />
+        </label>
+        <button type="submit">Entrar</button>
+      </form>
+      <p id="loginMsg" class="form-msg"></p>
+      <button id="closeLogin" type="button" class="upcoming-btn">Cerrar</button>
+    </div>
+  </div>
 
   <script src="config.js"></script>
   <script src="app.js"></script>
