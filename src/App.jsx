@@ -205,6 +205,16 @@ export default function App() {
           </div>
         </section>
 
+        <section className="panel testimonials">
+          <h2>Testimonios de estudiantes</h2>
+          <p className="form-msg">Experiencias reales de personas que han llevado cursos conmigo.</p>
+          <div className="testimonials-grid">
+            <article className="testimonial-card"><h3>Oldemar Rodríguez</h3><p>Carlos tiene amplios conocimientos en Programación R y experiencia real en proyectos de Ciencia de Datos. Excelente formador.</p></article>
+            <article className="testimonial-card"><h3>Anthony García-Marín</h3><p>Destaca por su dominio de R y su capacidad de explicar conceptos complejos con claridad y ejemplos prácticos.</p></article>
+            <article className="testimonial-card"><h3>Gabriel J. Barrios</h3><p>Instructor excepcional, materiales muy bien elaborados y una metodología que mantiene la motivación por aprender.</p></article>
+          </div>
+        </section>
+
         <section className="panel upcoming">
           <h2>Próximos cursos</h2>
           <div className="upcoming-grid">

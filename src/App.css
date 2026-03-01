@@ -52,6 +52,11 @@ h1{font-size:clamp(2rem,4vw,3rem);line-height:1.05;margin:.2rem 0 0}
 .instructor a{color:#0b4db6;text-decoration:none;font-weight:600}
 .instructor a:hover{text-decoration:underline}
 
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.testimonial-card{border:1px solid #e5ecf8;background:#fbfdff;border-radius:0;padding:14px}
+.testimonial-card h3{margin:0 0 8px;color:#0f2f5f;font-size:1rem}
+.testimonial-card p{margin:0;color:#475569;line-height:1.5}
+
 .upcoming-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .upcoming-card{border:1px solid #e5ecf8;background:#fbfdff;border-radius:0;padding:14px}
 .upcoming-card h3{margin:8px 0 6px}
@@ -81,6 +86,7 @@ code{background:#eef4ff;color:#10377a;padding:1px 5px;border-radius:6px}
   .week-card p,
   .upcoming-card p{display:block;-webkit-line-clamp:unset;-webkit-box-orient:unset;overflow:visible;min-height:0}
   .instructor{grid-template-columns:1fr}
+  .testimonials-grid{grid-template-columns:1fr}
   .upcoming-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
 }
